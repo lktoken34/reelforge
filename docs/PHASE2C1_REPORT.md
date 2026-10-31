@@ -66,8 +66,8 @@ UID 0. It is **not the Muse target**; no naturally low-memory window was tested.
 | Actual handled SIGTERM recovery | Exit 130, no observed encoder left, no incomplete final, successful sentinel preserved |
 | Fallback | Controlled fixtures including actual short encode/decode under mocked observations; **not actual VM evidence** |
 
-Strict supervisor-plus-descendants sampled peak was **102.29 MiB**. Existing video benchmark
-worker peaks were ~58.1 MiB at 360p and ~86.2 MiB at 720p. Sampled RSS is not a hard cap and
+Strict supervisor-plus-descendants sampled peak was **109.34 MiB**. Existing video benchmark
+worker peaks were ~58.2 MiB at 360p and up to ~89.8 MiB at 720p. Sampled RSS is not a hard cap and
 can miss transients/double-count shared pages. Full raw reports remain under ignored `outputs/`;
 committed compact reports retain metadata/resources and replace per-frame hash lists with digests.
 
@@ -95,10 +95,15 @@ passed. Historical failed attempts remain under ignored outputs and are not coun
 - [Explicitly simulated fallback evidence](../artifacts/phase2c1/fixture_evidence.json)
 - [Cloud-agent prompt and exact commands](TARGET_VM_PHASE2C1_PROMPT.md)
 
-CI builds a new `reelforge-v2-phase2c1-py312-ubuntu24-x86_64-wheelhouse` from this code,
-proves fresh offline installation/450-frame encode/full decode, and runs ordinary-user strict
-probe/recovery. Exact source commit, run and artifact ID are recorded in
-`artifacts/phase2c1/ci_evidence.json` after publication. Use that bundle, not the old 0.4.0 wheels.
+CI built and verified a new `reelforge-v2-phase2c1-py312-ubuntu24-x86_64-wheelhouse` from code commit
+`3aeb449aacde8313e19292fe0a263a025f70f3ce`. Both jobs in
+[CI run 41229189609](https://github.com/lktoken34/reelforge/actions/runs/41229189609) passed:
+188 Cairo tests, fresh offline install, 450-frame encode/full decode, strict probe and handled
+recovery under UID 1001. [Artifact 13053051936](https://github.com/lktoken34/reelforge/actions/runs/41229189609/artifacts/13053051936)
+is 778,056 bytes; its manifest identifies that exact source commit. Exact archive hash and
+provenance are in [ci_evidence.json](../artifacts/phase2c1/ci_evidence.json). Use that bundle,
+not the old 0.4.0 wheels. Follow-up commits update evidence/documentation only; runtime code
+and artifact source stay at the SHA above.
 
 The target sequence is: verify exact checkout/artifact; strict and explicitly authorized memory
 probes; offline install; doctor; short-only matrix; longer matrix only after short encoding,

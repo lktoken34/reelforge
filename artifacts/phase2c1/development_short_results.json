@@ -17,21 +17,21 @@
       "admission_memory": {
         "host": {
           "MemTotal": 10451427328,
-          "MemAvailable": 9822961664,
+          "MemAvailable": 9827827712,
           "SwapTotal": 0,
           "SwapFree": 0
         },
         "cgroup_root": "/sys/fs/cgroup",
         "cgroup": {
           "memory.max": 8589934592,
-          "memory.current": 400875520,
-          "memory.peak": 484581376,
+          "memory.current": 488501248,
+          "memory.peak": 549859328,
           "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
           "memory.swap.max": "max",
           "memory.swap.current": 0,
           "cpu.max": "800000 100000"
         },
-        "effective_available_bytes": 8189059072,
+        "effective_available_bytes": 8101433344,
         "memory_policy": "strict",
         "fallback_enabled": false,
         "fallback_used": false,
@@ -41,13 +41,13 @@
           {
             "path": "/sys/fs/cgroup",
             "limit": 8589934592,
-            "usage": 400875520
+            "usage": 488501248
           }
         ],
         "observations": {
           "/proc/meminfo": {
             "status": "present",
-            "value": "MemTotal:       10206472 kB\nMemFree:         9540112 kB\nMemAvailable:    9592736 kB\nBuffers:           16384 kB\nCached:           275792 kB\nSwapCached:            0 kB\nActive:            95884 kB\nInactive:         261960 kB\nActive(anon):        100 kB\nInactive(anon):    95484 kB\nActive(file):      95784 kB\nInactive(file):   166476 kB\nUnevictable:       29940 kB\nMlocked:              16 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              4240 kB\nWriteback:             0 kB\nAnonPages:         95688 kB\nMapped:            77496 kB\nShmem:                12 kB\nKReclaimable:      38928 kB\nSlab:              82864 kB\nSReclaimable:      38928 kB\nSUnreclaim:        43936 kB\nKernelStack:        3424 kB\nPageTables:         4104 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     480512 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4648 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      2048 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:       57344 kB\nDirectMap2M:     3444736 kB\nDirectMap1G:    17825792 kB"
+            "value": "MemTotal:       10206472 kB\nMemFree:         9471496 kB\nMemAvailable:    9597488 kB\nBuffers:           21020 kB\nCached:           337704 kB\nSwapCached:            0 kB\nActive:           150104 kB\nInactive:         279676 kB\nActive(anon):         52 kB\nInactive(anon):   100920 kB\nActive(file):     150052 kB\nInactive(file):   178756 kB\nUnevictable:       29924 kB\nMlocked:               0 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:               720 kB\nWriteback:             0 kB\nAnonPages:        101012 kB\nMapped:            77564 kB\nShmem:                12 kB\nKReclaimable:      52564 kB\nSlab:              99180 kB\nSReclaimable:      52564 kB\nSUnreclaim:        46616 kB\nKernelStack:        3336 kB\nPageTables:         4112 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     485652 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4600 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      2048 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      108544 kB\nDirectMap2M:     3393536 kB\nDirectMap1G:    17825792 kB"
           },
           "/proc/self/cgroup": {
             "status": "present",
@@ -71,11 +71,11 @@
           },
           "/sys/fs/cgroup/memory.current": {
             "status": "present",
-            "value": "400875520"
+            "value": "488501248"
           },
           "/sys/fs/cgroup/memory.peak": {
             "status": "present",
-            "value": "484581376"
+            "value": "549859328"
           },
           "/sys/fs/cgroup/memory.events": {
             "status": "present",
@@ -129,13 +129,13 @@
         },
         "deployment_gate_approved": false,
         "cpu_seconds": {
-          "renderer": 1.135038662,
-          "children_user": 1.3081450000000001,
-          "children_system": 0.11525099999999999
+          "renderer": 1.130620116,
+          "children_user": 1.22469,
+          "children_system": 0.193517
         },
         "workspace_preflight": {
-          "path": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-short-verified/360_150_1",
-          "free_bytes": 63876472832,
+          "path": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-final-short/360_150_1",
+          "free_bytes": 63809429504,
           "total_bytes": 67586535424,
           "minimum_free_bytes": 268435456,
           "write_probe": true,
@@ -177,13 +177,13 @@
           "oom_group_kill": 0
         },
         "transaction_clean": true,
-        "output": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-short-verified/360_150_1/diagnostic.mp4",
+        "output": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-final-short/360_150_1/diagnostic.mp4",
         "width": 360,
         "height": 640,
         "fps": 30,
         "frames": 150,
-        "render_encode_seconds": 1.1507161900000256,
-        "effective_encoded_fps": 130.35360178602915,
+        "render_encode_seconds": 1.1492008780001015,
+        "effective_encoded_fps": 130.52548329151793,
         "file_size_bytes": 536332,
         "encoder_exit_status": 0,
         "encoder_command": [
@@ -251,7 +251,7 @@
           "-f",
           "mp4",
           "-n",
-          "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-short-verified/360_150_1/.reelforge-encode-qvdmzmfu/pending.mp4"
+          "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-final-short/360_150_1/.reelforge-encode-egdsou9e/pending.mp4"
         ],
         "source_checkpoint_sha256": {
           "0": "d559d5a8b5d55a0b004b8bc87199a8d687a4e29d04d4e289f6fda7345a8a514f",
@@ -298,7 +298,7 @@
             "-threads",
             "1",
             "-i",
-            "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-short-verified/360_150_1/diagnostic.mp4",
+            "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-final-short/360_150_1/diagnostic.mp4",
             "-map",
             "0:v:0",
             "-an",
@@ -331,21 +331,21 @@
           "initial_memory": {
             "host": {
               "MemTotal": 10451427328,
-              "MemAvailable": 9813303296,
+              "MemAvailable": 9817321472,
               "SwapTotal": 0,
               "SwapFree": 0
             },
             "cgroup_root": "/sys/fs/cgroup",
             "cgroup": {
               "memory.max": 8589934592,
-              "memory.current": 411181056,
-              "memory.peak": 484581376,
+              "memory.current": 499113984,
+              "memory.peak": 549859328,
               "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
               "memory.swap.max": "max",
               "memory.swap.current": 0,
               "cpu.max": "800000 100000"
             },
-            "effective_available_bytes": 8178753536,
+            "effective_available_bytes": 8090820608,
             "memory_policy": "strict",
             "fallback_enabled": false,
             "fallback_used": false,
@@ -355,13 +355,13 @@
               {
                 "path": "/sys/fs/cgroup",
                 "limit": 8589934592,
-                "usage": 411181056
+                "usage": 499113984
               }
             ],
             "observations": {
               "/proc/meminfo": {
                 "status": "present",
-                "value": "MemTotal:       10206472 kB\nMemFree:         9530680 kB\nMemAvailable:    9583304 kB\nBuffers:           16384 kB\nCached:           275792 kB\nSwapCached:            0 kB\nActive:            95884 kB\nInactive:         271804 kB\nActive(anon):        100 kB\nInactive(anon):   105328 kB\nActive(file):      95784 kB\nInactive(file):   166476 kB\nUnevictable:       29956 kB\nMlocked:              32 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              4240 kB\nWriteback:             0 kB\nAnonPages:        105768 kB\nMapped:            78636 kB\nShmem:                12 kB\nKReclaimable:      38928 kB\nSlab:              82896 kB\nSReclaimable:      38928 kB\nSUnreclaim:        43968 kB\nKernelStack:        3392 kB\nPageTables:         3652 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     493176 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4648 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      2048 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:       57344 kB\nDirectMap2M:     3444736 kB\nDirectMap1G:    17825792 kB"
+                "value": "MemTotal:       10206472 kB\nMemFree:         9461236 kB\nMemAvailable:    9587228 kB\nBuffers:           21024 kB\nCached:           337700 kB\nSwapCached:            0 kB\nActive:           150104 kB\nInactive:         289480 kB\nActive(anon):         52 kB\nInactive(anon):   110724 kB\nActive(file):     150052 kB\nInactive(file):   178756 kB\nUnevictable:       29924 kB\nMlocked:               0 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:               720 kB\nWriteback:             0 kB\nAnonPages:        110816 kB\nMapped:            78704 kB\nShmem:                12 kB\nKReclaimable:      52564 kB\nSlab:              99180 kB\nSReclaimable:      52564 kB\nSUnreclaim:        46616 kB\nKernelStack:        3336 kB\nPageTables:         4112 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     498364 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4616 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      2048 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      108544 kB\nDirectMap2M:     3393536 kB\nDirectMap1G:    17825792 kB"
               },
               "/proc/self/cgroup": {
                 "status": "present",
@@ -385,11 +385,11 @@
               },
               "/sys/fs/cgroup/memory.current": {
                 "status": "present",
-                "value": "411181056"
+                "value": "499113984"
               },
               "/sys/fs/cgroup/memory.peak": {
                 "status": "present",
-                "value": "484581376"
+                "value": "549859328"
               },
               "/sys/fs/cgroup/memory.events": {
                 "status": "present",
@@ -420,21 +420,21 @@
           "final_memory": {
             "host": {
               "MemTotal": 10451427328,
-              "MemAvailable": 9786617856,
+              "MemAvailable": 9789169664,
               "SwapTotal": 0,
               "SwapFree": 0
             },
             "cgroup_root": "/sys/fs/cgroup",
             "cgroup": {
               "memory.max": 8589934592,
-              "memory.current": 414064640,
-              "memory.peak": 484581376,
+              "memory.current": 501374976,
+              "memory.peak": 549859328,
               "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
               "memory.swap.max": "max",
               "memory.swap.current": 0,
               "cpu.max": "800000 100000"
             },
-            "effective_available_bytes": 8175869952,
+            "effective_available_bytes": 8088559616,
             "memory_policy": "strict",
             "fallback_enabled": false,
             "fallback_used": false,
@@ -444,13 +444,13 @@
               {
                 "path": "/sys/fs/cgroup",
                 "limit": 8589934592,
-                "usage": 414064640
+                "usage": 501374976
               }
             ],
             "observations": {
               "/proc/meminfo": {
                 "status": "present",
-                "value": "MemTotal:       10206472 kB\nMemFree:         9504096 kB\nMemAvailable:    9557244 kB\nBuffers:           16384 kB\nCached:           276316 kB\nSwapCached:            0 kB\nActive:            96412 kB\nInactive:         273652 kB\nActive(anon):        116 kB\nInactive(anon):   107164 kB\nActive(file):      96296 kB\nInactive(file):   166488 kB\nUnevictable:       29988 kB\nMlocked:              64 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              4240 kB\nWriteback:             0 kB\nAnonPages:        107412 kB\nMapped:            79352 kB\nShmem:                12 kB\nKReclaimable:      38928 kB\nSlab:              82992 kB\nSReclaimable:      38928 kB\nSUnreclaim:        44064 kB\nKernelStack:        3520 kB\nPageTables:         4224 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     510972 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4744 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      2048 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:       57344 kB\nDirectMap2M:     3444736 kB\nDirectMap1G:    17825792 kB"
+                "value": "MemTotal:       10206472 kB\nMemFree:         9433204 kB\nMemAvailable:    9559736 kB\nBuffers:           21028 kB\nCached:           338232 kB\nSwapCached:            0 kB\nActive:           150688 kB\nInactive:         291492 kB\nActive(anon):        116 kB\nInactive(anon):   112724 kB\nActive(file):     150572 kB\nInactive(file):   178768 kB\nUnevictable:       29972 kB\nMlocked:              48 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:               876 kB\nWriteback:             0 kB\nAnonPages:        113100 kB\nMapped:            79668 kB\nShmem:                12 kB\nKReclaimable:      52580 kB\nSlab:              99000 kB\nSReclaimable:      52580 kB\nSUnreclaim:        46420 kB\nKernelStack:        3440 kB\nPageTables:         4336 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     499760 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4696 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      2048 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      108544 kB\nDirectMap2M:     3393536 kB\nDirectMap1G:    17825792 kB"
               },
               "/proc/self/cgroup": {
                 "status": "present",
@@ -474,11 +474,11 @@
               },
               "/sys/fs/cgroup/memory.current": {
                 "status": "present",
-                "value": "414064640"
+                "value": "501374976"
               },
               "/sys/fs/cgroup/memory.peak": {
                 "status": "present",
-                "value": "484581376"
+                "value": "549859328"
               },
               "/sys/fs/cgroup/memory.events": {
                 "status": "present",
@@ -506,24 +506,24 @@
             "kernel_memory_controller": null,
             "controller_version": "v2"
           },
-          "initial_renderer_rss_bytes": 16015360,
+          "initial_renderer_rss_bytes": 16056320,
           "final_renderer_rss_bytes": 17305600,
           "renderer_peak_rss_bytes": 17973248,
-          "waited_child_max_rss_bytes": 43257856,
-          "encoder_peak_rss_bytes": 42864640,
-          "all_children_peak_rss_bytes": 43659264,
-          "estimated_simultaneous_tree_peak_rss_bytes": 60932096,
+          "waited_child_max_rss_bytes": 43261952,
+          "encoder_peak_rss_bytes": 42860544,
+          "all_children_peak_rss_bytes": 43667456,
+          "estimated_simultaneous_tree_peak_rss_bytes": 60940288,
           "sampling_interval_seconds": 0.01,
-          "samples": 146,
+          "samples": 148,
           "job_budget_bytes": 268435456,
           "reserve_bytes": 67108864,
           "limit_reason": null,
-          "minimum_effective_available_bytes": 8154316800,
-          "maximum_effective_available_bytes": 8178753536,
+          "minimum_effective_available_bytes": 8066752512,
+          "maximum_effective_available_bytes": 8090820608,
           "memory_observations": 16,
-          "minimum_workspace_free_bytes": 63875936256,
+          "minimum_workspace_free_bytes": 63808892928,
           "disk_reserve_bytes": 67108864,
-          "wall_seconds": 1.706404574999965,
+          "wall_seconds": 1.7257978909999565,
           "caveat": "Sampled sum of RSS can miss transient peaks and double-count shared pages; cgroup counters are shared, not a dedicated job limit."
         },
         "environment": {
@@ -546,21 +546,21 @@
       "admission_memory": {
         "host": {
           "MemTotal": 10451427328,
-          "MemAvailable": 9795731456,
+          "MemAvailable": 9789014016,
           "SwapTotal": 0,
           "SwapFree": 0
         },
         "cgroup_root": "/sys/fs/cgroup",
         "cgroup": {
           "memory.max": 8589934592,
-          "memory.current": 403722240,
-          "memory.peak": 484581376,
+          "memory.current": 491249664,
+          "memory.peak": 549859328,
           "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
           "memory.swap.max": "max",
           "memory.swap.current": 0,
           "cpu.max": "800000 100000"
         },
-        "effective_available_bytes": 8186212352,
+        "effective_available_bytes": 8098684928,
         "memory_policy": "strict",
         "fallback_enabled": false,
         "fallback_used": false,
@@ -570,13 +570,13 @@
           {
             "path": "/sys/fs/cgroup",
             "limit": 8589934592,
-            "usage": 403722240
+            "usage": 491249664
           }
         ],
         "observations": {
           "/proc/meminfo": {
             "status": "present",
-            "value": "MemTotal:       10206472 kB\nMemFree:         9512996 kB\nMemAvailable:    9566144 kB\nBuffers:           16384 kB\nCached:           276316 kB\nSwapCached:            0 kB\nActive:            96412 kB\nInactive:         264248 kB\nActive(anon):        116 kB\nInactive(anon):    97760 kB\nActive(file):      96296 kB\nInactive(file):   166488 kB\nUnevictable:       29988 kB\nMlocked:              64 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              4240 kB\nWriteback:             0 kB\nAnonPages:         97776 kB\nMapped:            77848 kB\nShmem:                12 kB\nKReclaimable:      38928 kB\nSlab:              82992 kB\nSReclaimable:      38928 kB\nSUnreclaim:        44064 kB\nKernelStack:        3456 kB\nPageTables:         4080 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     482736 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4728 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      2048 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:       57344 kB\nDirectMap2M:     3444736 kB\nDirectMap1G:    17825792 kB"
+            "value": "MemTotal:       10206472 kB\nMemFree:         9433048 kB\nMemAvailable:    9559584 kB\nBuffers:           21028 kB\nCached:           338232 kB\nSwapCached:            0 kB\nActive:           150684 kB\nInactive:         282016 kB\nActive(anon):        108 kB\nInactive(anon):   103248 kB\nActive(file):     150576 kB\nInactive(file):   178768 kB\nUnevictable:       29972 kB\nMlocked:              48 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:               876 kB\nWriteback:             0 kB\nAnonPages:        103536 kB\nMapped:            77696 kB\nShmem:                12 kB\nKReclaimable:      52580 kB\nSlab:              98988 kB\nSReclaimable:      52580 kB\nSUnreclaim:        46408 kB\nKernelStack:        3408 kB\nPageTables:         4240 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     471868 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4712 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      2048 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      108544 kB\nDirectMap2M:     3393536 kB\nDirectMap1G:    17825792 kB"
           },
           "/proc/self/cgroup": {
             "status": "present",
@@ -600,11 +600,11 @@
           },
           "/sys/fs/cgroup/memory.current": {
             "status": "present",
-            "value": "403722240"
+            "value": "491249664"
           },
           "/sys/fs/cgroup/memory.peak": {
             "status": "present",
-            "value": "484581376"
+            "value": "549859328"
           },
           "/sys/fs/cgroup/memory.events": {
             "status": "present",
@@ -658,13 +658,13 @@
         },
         "deployment_gate_approved": false,
         "cpu_seconds": {
-          "renderer": 1.159062986,
-          "children_user": 1.218286,
-          "children_system": 0.15455
+          "renderer": 1.051090273,
+          "children_user": 1.219371,
+          "children_system": 0.134079
         },
         "workspace_preflight": {
-          "path": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-short-verified/360_150_2",
-          "free_bytes": 63875895296,
+          "path": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-final-short/360_150_2",
+          "free_bytes": 63808851968,
           "total_bytes": 67586535424,
           "minimum_free_bytes": 268435456,
           "write_probe": true,
@@ -706,13 +706,13 @@
           "oom_group_kill": 0
         },
         "transaction_clean": true,
-        "output": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-short-verified/360_150_2/diagnostic.mp4",
+        "output": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-final-short/360_150_2/diagnostic.mp4",
         "width": 360,
         "height": 640,
         "fps": 30,
         "frames": 150,
-        "render_encode_seconds": 1.1815007049999622,
-        "effective_encoded_fps": 126.95718196799959,
+        "render_encode_seconds": 1.0941257659999337,
+        "effective_encoded_fps": 137.09575686933331,
         "file_size_bytes": 536332,
         "encoder_exit_status": 0,
         "encoder_command": [
@@ -780,7 +780,7 @@
           "-f",
           "mp4",
           "-n",
-          "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-short-verified/360_150_2/.reelforge-encode-5i0oc53j/pending.mp4"
+          "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-final-short/360_150_2/.reelforge-encode-eo1bd11r/pending.mp4"
         ],
         "source_checkpoint_sha256": {
           "0": "d559d5a8b5d55a0b004b8bc87199a8d687a4e29d04d4e289f6fda7345a8a514f",
@@ -827,7 +827,7 @@
             "-threads",
             "1",
             "-i",
-            "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-short-verified/360_150_2/diagnostic.mp4",
+            "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-final-short/360_150_2/diagnostic.mp4",
             "-map",
             "0:v:0",
             "-an",
@@ -860,21 +860,21 @@
           "initial_memory": {
             "host": {
               "MemTotal": 10451427328,
-              "MemAvailable": 9788424192,
+              "MemAvailable": 9778872320,
               "SwapTotal": 0,
               "SwapFree": 0
             },
             "cgroup_root": "/sys/fs/cgroup",
             "cgroup": {
               "memory.max": 8589934592,
-              "memory.current": 414420992,
-              "memory.peak": 484581376,
+              "memory.current": 501866496,
+              "memory.peak": 549859328,
               "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
               "memory.swap.max": "max",
               "memory.swap.current": 0,
               "cpu.max": "800000 100000"
             },
-            "effective_available_bytes": 8175513600,
+            "effective_available_bytes": 8088068096,
             "memory_policy": "strict",
             "fallback_enabled": false,
             "fallback_used": false,
@@ -884,13 +884,13 @@
               {
                 "path": "/sys/fs/cgroup",
                 "limit": 8589934592,
-                "usage": 414420992
+                "usage": 501866496
               }
             ],
             "observations": {
               "/proc/meminfo": {
                 "status": "present",
-                "value": "MemTotal:       10206472 kB\nMemFree:         9505856 kB\nMemAvailable:    9559008 kB\nBuffers:           16384 kB\nCached:           276320 kB\nSwapCached:            0 kB\nActive:            96412 kB\nInactive:         274016 kB\nActive(anon):        108 kB\nInactive(anon):   107532 kB\nActive(file):      96304 kB\nInactive(file):   166484 kB\nUnevictable:       29988 kB\nMlocked:              64 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              4244 kB\nWriteback:             0 kB\nAnonPages:        107876 kB\nMapped:            78904 kB\nShmem:                12 kB\nKReclaimable:      38928 kB\nSlab:              83024 kB\nSReclaimable:      38928 kB\nSUnreclaim:        44096 kB\nKernelStack:        3456 kB\nPageTables:         3840 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     495400 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4744 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      2048 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:       57344 kB\nDirectMap2M:     3444736 kB\nDirectMap1G:    17825792 kB"
+                "value": "MemTotal:       10206472 kB\nMemFree:         9423144 kB\nMemAvailable:    9549680 kB\nBuffers:           21028 kB\nCached:           338232 kB\nSwapCached:            0 kB\nActive:           150688 kB\nInactive:         292028 kB\nActive(anon):        108 kB\nInactive(anon):   113264 kB\nActive(file):     150580 kB\nInactive(file):   178764 kB\nUnevictable:       29988 kB\nMlocked:              64 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:               876 kB\nWriteback:             0 kB\nAnonPages:        113556 kB\nMapped:            78844 kB\nShmem:                12 kB\nKReclaimable:      52580 kB\nSlab:              99008 kB\nSReclaimable:      52580 kB\nSUnreclaim:        46428 kB\nKernelStack:        3360 kB\nPageTables:         4020 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     484580 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4696 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      2048 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      108544 kB\nDirectMap2M:     3393536 kB\nDirectMap1G:    17825792 kB"
               },
               "/proc/self/cgroup": {
                 "status": "present",
@@ -914,11 +914,11 @@
               },
               "/sys/fs/cgroup/memory.current": {
                 "status": "present",
-                "value": "414420992"
+                "value": "501866496"
               },
               "/sys/fs/cgroup/memory.peak": {
                 "status": "present",
-                "value": "484581376"
+                "value": "549859328"
               },
               "/sys/fs/cgroup/memory.events": {
                 "status": "present",
@@ -949,21 +949,21 @@
           "final_memory": {
             "host": {
               "MemTotal": 10451427328,
-              "MemAvailable": 9751638016,
+              "MemAvailable": 9755770880,
               "SwapTotal": 0,
               "SwapFree": 0
             },
             "cgroup_root": "/sys/fs/cgroup",
             "cgroup": {
               "memory.max": 8589934592,
-              "memory.current": 414224384,
-              "memory.peak": 484581376,
+              "memory.current": 500944896,
+              "memory.peak": 549859328,
               "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
               "memory.swap.max": "max",
               "memory.swap.current": 0,
               "cpu.max": "800000 100000"
             },
-            "effective_available_bytes": 8175710208,
+            "effective_available_bytes": 8088989696,
             "memory_policy": "strict",
             "fallback_enabled": false,
             "fallback_used": false,
@@ -973,13 +973,13 @@
               {
                 "path": "/sys/fs/cgroup",
                 "limit": 8589934592,
-                "usage": 414224384
+                "usage": 500944896
               }
             ],
             "observations": {
               "/proc/meminfo": {
                 "status": "present",
-                "value": "MemTotal:       10206472 kB\nMemFree:         9469380 kB\nMemAvailable:    9523084 kB\nBuffers:           16384 kB\nCached:           276876 kB\nSwapCached:            0 kB\nActive:            96936 kB\nInactive:         273596 kB\nActive(anon):        116 kB\nInactive(anon):   107076 kB\nActive(file):      96820 kB\nInactive(file):   166520 kB\nUnevictable:       29988 kB\nMlocked:              64 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              4276 kB\nWriteback:             0 kB\nAnonPages:        106964 kB\nMapped:            79576 kB\nShmem:                12 kB\nKReclaimable:      38928 kB\nSlab:              83040 kB\nSReclaimable:      38928 kB\nSUnreclaim:        44112 kB\nKernelStack:        3520 kB\nPageTables:         4232 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     510312 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4760 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      2048 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:       57344 kB\nDirectMap2M:     3444736 kB\nDirectMap1G:    17825792 kB"
+                "value": "MemTotal:       10206472 kB\nMemFree:         9400000 kB\nMemAvailable:    9527120 kB\nBuffers:           21032 kB\nCached:           338792 kB\nSwapCached:            0 kB\nActive:           151212 kB\nInactive:         291076 kB\nActive(anon):        116 kB\nInactive(anon):   112264 kB\nActive(file):     151096 kB\nInactive(file):   178812 kB\nUnevictable:       30004 kB\nMlocked:              80 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:               956 kB\nWriteback:             0 kB\nAnonPages:        112384 kB\nMapped:            79548 kB\nShmem:                12 kB\nKReclaimable:      52624 kB\nSlab:              99068 kB\nSReclaimable:      52624 kB\nSUnreclaim:        46444 kB\nKernelStack:        3456 kB\nPageTables:         4384 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     499096 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4712 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      2048 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      108544 kB\nDirectMap2M:     3393536 kB\nDirectMap1G:    17825792 kB"
               },
               "/proc/self/cgroup": {
                 "status": "present",
@@ -1003,11 +1003,11 @@
               },
               "/sys/fs/cgroup/memory.current": {
                 "status": "present",
-                "value": "414224384"
+                "value": "500944896"
               },
               "/sys/fs/cgroup/memory.peak": {
                 "status": "present",
-                "value": "484581376"
+                "value": "549859328"
               },
               "/sys/fs/cgroup/memory.events": {
                 "status": "present",
@@ -1035,24 +1035,24 @@
             "kernel_memory_controller": null,
             "controller_version": "v2"
           },
-          "initial_renderer_rss_bytes": 16011264,
-          "final_renderer_rss_bytes": 17272832,
-          "renderer_peak_rss_bytes": 17944576,
-          "waited_child_max_rss_bytes": 43253760,
+          "initial_renderer_rss_bytes": 16060416,
+          "final_renderer_rss_bytes": 17297408,
+          "renderer_peak_rss_bytes": 17977344,
+          "waited_child_max_rss_bytes": 43257856,
           "encoder_peak_rss_bytes": 42844160,
-          "all_children_peak_rss_bytes": 43646976,
-          "estimated_simultaneous_tree_peak_rss_bytes": 60887040,
+          "all_children_peak_rss_bytes": 43667456,
+          "estimated_simultaneous_tree_peak_rss_bytes": 60940288,
           "sampling_interval_seconds": 0.01,
-          "samples": 143,
+          "samples": 138,
           "job_budget_bytes": 268435456,
           "reserve_bytes": 67108864,
           "limit_reason": null,
-          "minimum_effective_available_bytes": 8153542656,
-          "maximum_effective_available_bytes": 8175710208,
-          "memory_observations": 16,
-          "minimum_workspace_free_bytes": 63875358720,
+          "minimum_effective_available_bytes": 8064929792,
+          "maximum_effective_available_bytes": 8088989696,
+          "memory_observations": 15,
+          "minimum_workspace_free_bytes": 63808315392,
           "disk_reserve_bytes": 67108864,
-          "wall_seconds": 1.6845555339999692,
+          "wall_seconds": 1.6244531920001464,
           "caveat": "Sampled sum of RSS can miss transient peaks and double-count shared pages; cgroup counters are shared, not a dedicated job limit."
         },
         "environment": {
@@ -1075,21 +1075,21 @@
       "admission_memory": {
         "host": {
           "MemTotal": 10451427328,
-          "MemAvailable": 9769689088,
+          "MemAvailable": 9755160576,
           "SwapTotal": 0,
           "SwapFree": 0
         },
         "cgroup_root": "/sys/fs/cgroup",
         "cgroup": {
           "memory.max": 8589934592,
-          "memory.current": 403152896,
-          "memory.peak": 484581376,
+          "memory.current": 489541632,
+          "memory.peak": 549859328,
           "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
           "memory.swap.max": "max",
           "memory.swap.current": 0,
           "cpu.max": "800000 100000"
         },
-        "effective_available_bytes": 8186781696,
+        "effective_available_bytes": 8100392960,
         "memory_policy": "strict",
         "fallback_enabled": false,
         "fallback_used": false,
@@ -1099,13 +1099,13 @@
           {
             "path": "/sys/fs/cgroup",
             "limit": 8589934592,
-            "usage": 403152896
+            "usage": 489541632
           }
         ],
         "observations": {
           "/proc/meminfo": {
             "status": "present",
-            "value": "MemTotal:       10206472 kB\nMemFree:         9487008 kB\nMemAvailable:    9540712 kB\nBuffers:           16384 kB\nCached:           276876 kB\nSwapCached:            0 kB\nActive:            96928 kB\nInactive:         262512 kB\nActive(anon):        108 kB\nInactive(anon):    95992 kB\nActive(file):      96820 kB\nInactive(file):   166520 kB\nUnevictable:       29988 kB\nMlocked:              64 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              4276 kB\nWriteback:             0 kB\nAnonPages:         96104 kB\nMapped:            77556 kB\nShmem:                12 kB\nKReclaimable:      38928 kB\nSlab:              83028 kB\nSReclaimable:      38928 kB\nSUnreclaim:        44100 kB\nKernelStack:        3472 kB\nPageTables:         4032 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     480760 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4776 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      2048 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:       57344 kB\nDirectMap2M:     3444736 kB\nDirectMap1G:    17825792 kB"
+            "value": "MemTotal:       10206472 kB\nMemFree:         9399404 kB\nMemAvailable:    9526524 kB\nBuffers:           21032 kB\nCached:           338792 kB\nSwapCached:            0 kB\nActive:           151204 kB\nInactive:         279920 kB\nActive(anon):        108 kB\nInactive(anon):   101108 kB\nActive(file):     151096 kB\nInactive(file):   178812 kB\nUnevictable:       30004 kB\nMlocked:              80 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:               956 kB\nWriteback:             0 kB\nAnonPages:        101504 kB\nMapped:            77528 kB\nShmem:                12 kB\nKReclaimable:      52624 kB\nSlab:              99052 kB\nSReclaimable:      52624 kB\nSUnreclaim:        46428 kB\nKernelStack:        3376 kB\nPageTables:         3952 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     469496 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4696 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      2048 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      108544 kB\nDirectMap2M:     3393536 kB\nDirectMap1G:    17825792 kB"
           },
           "/proc/self/cgroup": {
             "status": "present",
@@ -1129,11 +1129,11 @@
           },
           "/sys/fs/cgroup/memory.current": {
             "status": "present",
-            "value": "403152896"
+            "value": "489541632"
           },
           "/sys/fs/cgroup/memory.peak": {
             "status": "present",
-            "value": "484581376"
+            "value": "549859328"
           },
           "/sys/fs/cgroup/memory.events": {
             "status": "present",
@@ -1162,9 +1162,7 @@
         "controller_version": "v2"
       },
       "exit_status": 0,
-      "supervisor_reconciled": [
-        "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-short-verified/720_150_1/.reelforge-encode-523kn970/pending.mp4"
-      ],
+      "supervisor_reconciled": [],
       "report": {
         "technical_rendering_success": true,
         "memory_observability": {
@@ -1189,13 +1187,13 @@
         },
         "deployment_gate_approved": false,
         "cpu_seconds": {
-          "renderer": 2.497338616,
-          "children_user": 4.063665,
-          "children_system": 0.257976
+          "renderer": 2.3715865779999996,
+          "children_user": 4.104637,
+          "children_system": 0.234899
         },
         "workspace_preflight": {
-          "path": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-short-verified/720_150_1",
-          "free_bytes": 63875321856,
+          "path": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-final-short/720_150_1",
+          "free_bytes": 63808278528,
           "total_bytes": 67586535424,
           "minimum_free_bytes": 268435456,
           "write_probe": true,
@@ -1236,14 +1234,14 @@
           "oom_kill": 0,
           "oom_group_kill": 0
         },
-        "transaction_clean": false,
-        "output": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-short-verified/720_150_1/diagnostic.mp4",
+        "transaction_clean": true,
+        "output": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-final-short/720_150_1/diagnostic.mp4",
         "width": 720,
         "height": 1280,
         "fps": 30,
         "frames": 150,
-        "render_encode_seconds": 2.404268659999957,
-        "effective_encoded_fps": 62.389034343608955,
+        "render_encode_seconds": 2.2879113599999528,
+        "effective_encoded_fps": 65.56198051309256,
         "file_size_bytes": 1415235,
         "encoder_exit_status": 0,
         "encoder_command": [
@@ -1311,7 +1309,7 @@
           "-f",
           "mp4",
           "-n",
-          "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-short-verified/720_150_1/.reelforge-encode-523kn970/pending.mp4"
+          "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-final-short/720_150_1/.reelforge-encode-9s4yzzkp/pending.mp4"
         ],
         "source_checkpoint_sha256": {
           "0": "4eb71dfaa4cb117de071543f0e92dfcfa4618a71ff3f9e70975852afeb6449df",
@@ -1358,7 +1356,7 @@
             "-threads",
             "1",
             "-i",
-            "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-short-verified/720_150_1/diagnostic.mp4",
+            "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-final-short/720_150_1/diagnostic.mp4",
             "-map",
             "0:v:0",
             "-an",
@@ -1391,21 +1389,21 @@
           "initial_memory": {
             "host": {
               "MemTotal": 10451427328,
-              "MemAvailable": 9769689088,
+              "MemAvailable": 9744408576,
               "SwapTotal": 0,
               "SwapFree": 0
             },
             "cgroup_root": "/sys/fs/cgroup",
             "cgroup": {
               "memory.max": 8589934592,
-              "memory.current": 412938240,
-              "memory.peak": 484581376,
+              "memory.current": 500178944,
+              "memory.peak": 549859328,
               "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
               "memory.swap.max": "max",
               "memory.swap.current": 0,
               "cpu.max": "800000 100000"
             },
-            "effective_available_bytes": 8176996352,
+            "effective_available_bytes": 8089755648,
             "memory_policy": "strict",
             "fallback_enabled": false,
             "fallback_used": false,
@@ -1415,13 +1413,13 @@
               {
                 "path": "/sys/fs/cgroup",
                 "limit": 8589934592,
-                "usage": 412938240
+                "usage": 500178944
               }
             ],
             "observations": {
               "/proc/meminfo": {
                 "status": "present",
-                "value": "MemTotal:       10206472 kB\nMemFree:         9487008 kB\nMemAvailable:    9540712 kB\nBuffers:           16384 kB\nCached:           276876 kB\nSwapCached:            0 kB\nActive:            96928 kB\nInactive:         272540 kB\nActive(anon):        108 kB\nInactive(anon):   106020 kB\nActive(file):      96820 kB\nInactive(file):   166520 kB\nUnevictable:       30004 kB\nMlocked:              80 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              4276 kB\nWriteback:             0 kB\nAnonPages:        106132 kB\nMapped:            78696 kB\nShmem:                12 kB\nKReclaimable:      38928 kB\nSlab:              83000 kB\nSReclaimable:      38928 kB\nSUnreclaim:        44072 kB\nKernelStack:        3424 kB\nPageTables:         3812 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     493424 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4760 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      2048 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:       57344 kB\nDirectMap2M:     3444736 kB\nDirectMap1G:    17825792 kB"
+                "value": "MemTotal:       10206472 kB\nMemFree:         9388876 kB\nMemAvailable:    9516024 kB\nBuffers:           21032 kB\nCached:           338824 kB\nSwapCached:            0 kB\nActive:           151196 kB\nInactive:         289924 kB\nActive(anon):        100 kB\nInactive(anon):   111088 kB\nActive(file):     151096 kB\nInactive(file):   178836 kB\nUnevictable:       30004 kB\nMlocked:              80 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:               988 kB\nWriteback:             0 kB\nAnonPages:        111488 kB\nMapped:            78668 kB\nShmem:                12 kB\nKReclaimable:      52628 kB\nSlab:              99044 kB\nSReclaimable:      52628 kB\nSUnreclaim:        46416 kB\nKernelStack:        3392 kB\nPageTables:         3800 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     482208 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4696 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      2048 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      108544 kB\nDirectMap2M:     3393536 kB\nDirectMap1G:    17825792 kB"
               },
               "/proc/self/cgroup": {
                 "status": "present",
@@ -1445,11 +1443,11 @@
               },
               "/sys/fs/cgroup/memory.current": {
                 "status": "present",
-                "value": "412938240"
+                "value": "500178944"
               },
               "/sys/fs/cgroup/memory.peak": {
                 "status": "present",
-                "value": "484581376"
+                "value": "549859328"
               },
               "/sys/fs/cgroup/memory.events": {
                 "status": "present",
@@ -1480,21 +1478,21 @@
           "final_memory": {
             "host": {
               "MemTotal": 10451427328,
-              "MemAvailable": 9709027328,
+              "MemAvailable": 9701937152,
               "SwapTotal": 0,
               "SwapFree": 0
             },
             "cgroup_root": "/sys/fs/cgroup",
             "cgroup": {
               "memory.max": 8589934592,
-              "memory.current": 415895552,
-              "memory.peak": 484581376,
+              "memory.current": 503627776,
+              "memory.peak": 561901568,
               "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
               "memory.swap.max": "max",
               "memory.swap.current": 0,
               "cpu.max": "800000 100000"
             },
-            "effective_available_bytes": 8174039040,
+            "effective_available_bytes": 8086306816,
             "memory_policy": "strict",
             "fallback_enabled": false,
             "fallback_used": false,
@@ -1504,13 +1502,13 @@
               {
                 "path": "/sys/fs/cgroup",
                 "limit": 8589934592,
-                "usage": 415895552
+                "usage": 503627776
               }
             ],
             "observations": {
               "/proc/meminfo": {
                 "status": "present",
-                "value": "MemTotal:       10206472 kB\nMemFree:         9426324 kB\nMemAvailable:    9481472 kB\nBuffers:           16384 kB\nCached:           278296 kB\nSwapCached:            0 kB\nActive:            98380 kB\nInactive:         273344 kB\nActive(anon):        116 kB\nInactive(anon):   106844 kB\nActive(file):      98264 kB\nInactive(file):   166500 kB\nUnevictable:       29956 kB\nMlocked:              32 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              4312 kB\nWriteback:             0 kB\nAnonPages:        107208 kB\nMapped:            79600 kB\nShmem:                12 kB\nKReclaimable:      38964 kB\nSlab:              82980 kB\nSReclaimable:      38964 kB\nSUnreclaim:        44016 kB\nKernelStack:        3472 kB\nPageTables:         4288 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     510320 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4712 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      2048 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:       57344 kB\nDirectMap2M:     3444736 kB\nDirectMap1G:    17825792 kB"
+                "value": "MemTotal:       10206472 kB\nMemFree:         9345208 kB\nMemAvailable:    9474548 kB\nBuffers:           21040 kB\nCached:           340980 kB\nSwapCached:            0 kB\nActive:           152684 kB\nInactive:         291900 kB\nActive(anon):        116 kB\nInactive(anon):   112364 kB\nActive(file):     152568 kB\nInactive(file):   179536 kB\nUnevictable:       29956 kB\nMlocked:              32 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              1772 kB\nWriteback:             0 kB\nAnonPages:        112556 kB\nMapped:            79556 kB\nShmem:                12 kB\nKReclaimable:      52672 kB\nSlab:              99040 kB\nSReclaimable:      52672 kB\nSUnreclaim:        46368 kB\nKernelStack:        3424 kB\nPageTables:         4448 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     499104 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4696 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      2048 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      108544 kB\nDirectMap2M:     3393536 kB\nDirectMap1G:    17825792 kB"
               },
               "/proc/self/cgroup": {
                 "status": "present",
@@ -1534,11 +1532,11 @@
               },
               "/sys/fs/cgroup/memory.current": {
                 "status": "present",
-                "value": "415895552"
+                "value": "503627776"
               },
               "/sys/fs/cgroup/memory.peak": {
                 "status": "present",
-                "value": "484581376"
+                "value": "561901568"
               },
               "/sys/fs/cgroup/memory.events": {
                 "status": "present",
@@ -1566,24 +1564,24 @@
             "kernel_memory_controller": null,
             "controller_version": "v2"
           },
-          "initial_renderer_rss_bytes": 16015360,
-          "final_renderer_rss_bytes": 17297408,
-          "renderer_peak_rss_bytes": 20942848,
-          "waited_child_max_rss_bytes": 71913472,
-          "encoder_peak_rss_bytes": 69525504,
-          "all_children_peak_rss_bytes": 72216576,
-          "estimated_simultaneous_tree_peak_rss_bytes": 90447872,
+          "initial_renderer_rss_bytes": 16064512,
+          "final_renderer_rss_bytes": 17346560,
+          "renderer_peak_rss_bytes": 20963328,
+          "waited_child_max_rss_bytes": 76537856,
+          "encoder_peak_rss_bytes": 76869632,
+          "all_children_peak_rss_bytes": 76869632,
+          "estimated_simultaneous_tree_peak_rss_bytes": 97611776,
           "sampling_interval_seconds": 0.01,
-          "samples": 361,
+          "samples": 346,
           "job_budget_bytes": 268435456,
           "reserve_bytes": 67108864,
           "limit_reason": null,
-          "minimum_effective_available_bytes": 8121262080,
-          "maximum_effective_available_bytes": 8176996352,
-          "memory_observations": 38,
-          "minimum_workspace_free_bytes": 63873896448,
+          "minimum_effective_available_bytes": 8028561408,
+          "maximum_effective_available_bytes": 8089755648,
+          "memory_observations": 36,
+          "minimum_workspace_free_bytes": 63806066688,
           "disk_reserve_bytes": 67108864,
-          "wall_seconds": 4.10336388799999,
+          "wall_seconds": 3.971579970999983,
           "caveat": "Sampled sum of RSS can miss transient peaks and double-count shared pages; cgroup counters are shared, not a dedicated job limit."
         },
         "environment": {
@@ -1606,21 +1604,21 @@
       "admission_memory": {
         "host": {
           "MemTotal": 10451427328,
-          "MemAvailable": 9708658688,
+          "MemAvailable": 9701220352,
           "SwapTotal": 0,
           "SwapFree": 0
         },
         "cgroup_root": "/sys/fs/cgroup",
         "cgroup": {
           "memory.max": 8589934592,
-          "memory.current": 404643840,
-          "memory.peak": 484581376,
+          "memory.current": 491368448,
+          "memory.peak": 561901568,
           "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
           "memory.swap.max": "max",
           "memory.swap.current": 0,
           "cpu.max": "800000 100000"
         },
-        "effective_available_bytes": 8185290752,
+        "effective_available_bytes": 8098566144,
         "memory_policy": "strict",
         "fallback_enabled": false,
         "fallback_used": false,
@@ -1630,13 +1628,13 @@
           {
             "path": "/sys/fs/cgroup",
             "limit": 8589934592,
-            "usage": 404643840
+            "usage": 491368448
           }
         ],
         "observations": {
           "/proc/meminfo": {
             "status": "present",
-            "value": "MemTotal:       10206472 kB\nMemFree:         9425964 kB\nMemAvailable:    9481112 kB\nBuffers:           16384 kB\nCached:           278296 kB\nSwapCached:            0 kB\nActive:            98380 kB\nInactive:         262796 kB\nActive(anon):        116 kB\nInactive(anon):    96296 kB\nActive(file):      98264 kB\nInactive(file):   166500 kB\nUnevictable:       29956 kB\nMlocked:              32 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              4312 kB\nWriteback:             0 kB\nAnonPages:         96456 kB\nMapped:            77624 kB\nShmem:                12 kB\nKReclaimable:      38964 kB\nSlab:              82980 kB\nSReclaimable:      38964 kB\nSUnreclaim:        44016 kB\nKernelStack:        3440 kB\nPageTables:         4128 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     480764 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4744 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      2048 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:       57344 kB\nDirectMap2M:     3444736 kB\nDirectMap1G:    17825792 kB"
+            "value": "MemTotal:       10206472 kB\nMemFree:         9345276 kB\nMemAvailable:    9473848 kB\nBuffers:           21040 kB\nCached:           340212 kB\nSwapCached:            0 kB\nActive:           152676 kB\nInactive:         280400 kB\nActive(anon):        108 kB\nInactive(anon):   101632 kB\nActive(file):     152568 kB\nInactive(file):   178768 kB\nUnevictable:       29956 kB\nMlocked:              32 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              1004 kB\nWriteback:             0 kB\nAnonPages:        101816 kB\nMapped:            77752 kB\nShmem:                12 kB\nKReclaimable:      52672 kB\nSlab:              99020 kB\nSReclaimable:      52672 kB\nSUnreclaim:        46348 kB\nKernelStack:        3392 kB\nPageTables:         4012 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     469500 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4680 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      2048 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      108544 kB\nDirectMap2M:     3393536 kB\nDirectMap1G:    17825792 kB"
           },
           "/proc/self/cgroup": {
             "status": "present",
@@ -1660,11 +1658,11 @@
           },
           "/sys/fs/cgroup/memory.current": {
             "status": "present",
-            "value": "404643840"
+            "value": "491368448"
           },
           "/sys/fs/cgroup/memory.peak": {
             "status": "present",
-            "value": "484581376"
+            "value": "561901568"
           },
           "/sys/fs/cgroup/memory.events": {
             "status": "present",
@@ -1693,9 +1691,7 @@
         "controller_version": "v2"
       },
       "exit_status": 0,
-      "supervisor_reconciled": [
-        "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-short-verified/720_150_2/.reelforge-encode-05si58vv/pending.mp4"
-      ],
+      "supervisor_reconciled": [],
       "report": {
         "technical_rendering_success": true,
         "memory_observability": {
@@ -1720,13 +1716,13 @@
         },
         "deployment_gate_approved": false,
         "cpu_seconds": {
-          "renderer": 2.23259805,
-          "children_user": 4.029361,
-          "children_system": 0.243836
+          "renderer": 2.299698259,
+          "children_user": 3.967107,
+          "children_system": 0.250837
         },
         "workspace_preflight": {
-          "path": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-short-verified/720_150_2",
-          "free_bytes": 63873867776,
+          "path": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-final-short/720_150_2",
+          "free_bytes": 63806824448,
           "total_bytes": 67586535424,
           "minimum_free_bytes": 268435456,
           "write_probe": true,
@@ -1767,14 +1763,14 @@
           "oom_kill": 0,
           "oom_group_kill": 0
         },
-        "transaction_clean": false,
-        "output": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-short-verified/720_150_2/diagnostic.mp4",
+        "transaction_clean": true,
+        "output": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-final-short/720_150_2/diagnostic.mp4",
         "width": 720,
         "height": 1280,
         "fps": 30,
         "frames": 150,
-        "render_encode_seconds": 2.159093420999966,
-        "effective_encoded_fps": 69.47360338420593,
+        "render_encode_seconds": 2.2110340940000697,
+        "effective_encoded_fps": 67.84155902753587,
         "file_size_bytes": 1415235,
         "encoder_exit_status": 0,
         "encoder_command": [
@@ -1842,7 +1838,7 @@
           "-f",
           "mp4",
           "-n",
-          "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-short-verified/720_150_2/.reelforge-encode-05si58vv/pending.mp4"
+          "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-final-short/720_150_2/.reelforge-encode-aj1uksdl/pending.mp4"
         ],
         "source_checkpoint_sha256": {
           "0": "4eb71dfaa4cb117de071543f0e92dfcfa4618a71ff3f9e70975852afeb6449df",
@@ -1889,7 +1885,7 @@
             "-threads",
             "1",
             "-i",
-            "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-short-verified/720_150_2/diagnostic.mp4",
+            "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-final-short/720_150_2/diagnostic.mp4",
             "-map",
             "0:v:0",
             "-an",
@@ -1922,21 +1918,21 @@
           "initial_memory": {
             "host": {
               "MemTotal": 10451427328,
-              "MemAvailable": 9700020224,
+              "MemAvailable": 9701208064,
               "SwapTotal": 0,
               "SwapFree": 0
             },
             "cgroup_root": "/sys/fs/cgroup",
             "cgroup": {
               "memory.max": 8589934592,
-              "memory.current": 414564352,
-              "memory.peak": 484581376,
+              "memory.current": 501424128,
+              "memory.peak": 561901568,
               "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
               "memory.swap.max": "max",
               "memory.swap.current": 0,
               "cpu.max": "800000 100000"
             },
-            "effective_available_bytes": 8175370240,
+            "effective_available_bytes": 8088510464,
             "memory_policy": "strict",
             "fallback_enabled": false,
             "fallback_used": false,
@@ -1946,13 +1942,13 @@
               {
                 "path": "/sys/fs/cgroup",
                 "limit": 8589934592,
-                "usage": 414564352
+                "usage": 501424128
               }
             ],
             "observations": {
               "/proc/meminfo": {
                 "status": "present",
-                "value": "MemTotal:       10206472 kB\nMemFree:         9417528 kB\nMemAvailable:    9472676 kB\nBuffers:           16384 kB\nCached:           278296 kB\nSwapCached:            0 kB\nActive:            98376 kB\nInactive:         272732 kB\nActive(anon):        108 kB\nInactive(anon):   106236 kB\nActive(file):      98268 kB\nInactive(file):   166496 kB\nUnevictable:       29956 kB\nMlocked:              32 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              4312 kB\nWriteback:             0 kB\nAnonPages:        106332 kB\nMapped:            78712 kB\nShmem:                12 kB\nKReclaimable:      38964 kB\nSlab:              82960 kB\nSReclaimable:      38964 kB\nSUnreclaim:        43996 kB\nKernelStack:        3408 kB\nPageTables:         3808 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     493428 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4728 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      2048 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:       57344 kB\nDirectMap2M:     3444736 kB\nDirectMap1G:    17825792 kB"
+                "value": "MemTotal:       10206472 kB\nMemFree:         9345264 kB\nMemAvailable:    9473836 kB\nBuffers:           21040 kB\nCached:           340212 kB\nSwapCached:            0 kB\nActive:           152684 kB\nInactive:         290232 kB\nActive(anon):        108 kB\nInactive(anon):   111472 kB\nActive(file):     152576 kB\nInactive(file):   178760 kB\nUnevictable:       29956 kB\nMlocked:              32 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              1004 kB\nWriteback:             0 kB\nAnonPages:        111672 kB\nMapped:            78892 kB\nShmem:                12 kB\nKReclaimable:      52672 kB\nSlab:              99040 kB\nSReclaimable:      52672 kB\nSUnreclaim:        46368 kB\nKernelStack:        3360 kB\nPageTables:         3964 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     482212 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4680 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      2048 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      108544 kB\nDirectMap2M:     3393536 kB\nDirectMap1G:    17825792 kB"
               },
               "/proc/self/cgroup": {
                 "status": "present",
@@ -1976,11 +1972,11 @@
               },
               "/sys/fs/cgroup/memory.current": {
                 "status": "present",
-                "value": "414564352"
+                "value": "501424128"
               },
               "/sys/fs/cgroup/memory.peak": {
                 "status": "present",
-                "value": "484581376"
+                "value": "561901568"
               },
               "/sys/fs/cgroup/memory.events": {
                 "status": "present",
@@ -2011,21 +2007,21 @@
           "final_memory": {
             "host": {
               "MemTotal": 10451427328,
-              "MemAvailable": 9685213184,
+              "MemAvailable": 9682640896,
               "SwapTotal": 0,
               "SwapFree": 0
             },
             "cgroup_root": "/sys/fs/cgroup",
             "cgroup": {
               "memory.max": 8589934592,
-              "memory.current": 417050624,
-              "memory.peak": 484581376,
+              "memory.current": 504664064,
+              "memory.peak": 564924416,
               "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
               "memory.swap.max": "max",
               "memory.swap.current": 0,
               "cpu.max": "800000 100000"
             },
-            "effective_available_bytes": 8172883968,
+            "effective_available_bytes": 8085270528,
             "memory_policy": "strict",
             "fallback_enabled": false,
             "fallback_used": false,
@@ -2035,13 +2031,13 @@
               {
                 "path": "/sys/fs/cgroup",
                 "limit": 8589934592,
-                "usage": 417050624
+                "usage": 504664064
               }
             ],
             "observations": {
               "/proc/meminfo": {
                 "status": "present",
-                "value": "MemTotal:       10206472 kB\nMemFree:         9401636 kB\nMemAvailable:    9458216 kB\nBuffers:           16384 kB\nCached:           279712 kB\nSwapCached:            0 kB\nActive:            99796 kB\nInactive:         273672 kB\nActive(anon):        116 kB\nInactive(anon):   107172 kB\nActive(file):      99680 kB\nInactive(file):   166500 kB\nUnevictable:       29972 kB\nMlocked:              48 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              4480 kB\nWriteback:             0 kB\nAnonPages:        107316 kB\nMapped:            79608 kB\nShmem:                12 kB\nKReclaimable:      38996 kB\nSlab:              82940 kB\nSReclaimable:      38996 kB\nSUnreclaim:        43944 kB\nKernelStack:        3456 kB\nPageTables:         4304 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     510320 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4744 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      2048 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:       57344 kB\nDirectMap2M:     3444736 kB\nDirectMap1G:    17825792 kB"
+                "value": "MemTotal:       10206472 kB\nMemFree:         9325700 kB\nMemAvailable:    9455704 kB\nBuffers:           21044 kB\nCached:           341628 kB\nSwapCached:            0 kB\nActive:           154104 kB\nInactive:         291244 kB\nActive(anon):        116 kB\nInactive(anon):   112484 kB\nActive(file):     153988 kB\nInactive(file):   178760 kB\nUnevictable:       29988 kB\nMlocked:              64 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              1168 kB\nWriteback:             0 kB\nAnonPages:        112588 kB\nMapped:            79564 kB\nShmem:                12 kB\nKReclaimable:      52708 kB\nSlab:              99032 kB\nSReclaimable:      52708 kB\nSUnreclaim:        46324 kB\nKernelStack:        3424 kB\nPageTables:         4460 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     499104 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4680 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      2048 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      108544 kB\nDirectMap2M:     3393536 kB\nDirectMap1G:    17825792 kB"
               },
               "/proc/self/cgroup": {
                 "status": "present",
@@ -2065,11 +2061,11 @@
               },
               "/sys/fs/cgroup/memory.current": {
                 "status": "present",
-                "value": "417050624"
+                "value": "504664064"
               },
               "/sys/fs/cgroup/memory.peak": {
                 "status": "present",
-                "value": "484581376"
+                "value": "564924416"
               },
               "/sys/fs/cgroup/memory.events": {
                 "status": "present",
@@ -2097,24 +2093,24 @@
             "kernel_memory_controller": null,
             "controller_version": "v2"
           },
-          "initial_renderer_rss_bytes": 16003072,
-          "final_renderer_rss_bytes": 17301504,
-          "renderer_peak_rss_bytes": 20942848,
-          "waited_child_max_rss_bytes": 71868416,
-          "encoder_peak_rss_bytes": 69525504,
-          "all_children_peak_rss_bytes": 72220672,
-          "estimated_simultaneous_tree_peak_rss_bytes": 90447872,
+          "initial_renderer_rss_bytes": 16097280,
+          "final_renderer_rss_bytes": 17330176,
+          "renderer_peak_rss_bytes": 20963328,
+          "waited_child_max_rss_bytes": 76537856,
+          "encoder_peak_rss_bytes": 76869632,
+          "all_children_peak_rss_bytes": 76869632,
+          "estimated_simultaneous_tree_peak_rss_bytes": 97832960,
           "sampling_interval_seconds": 0.01,
-          "samples": 337,
+          "samples": 339,
           "job_budget_bytes": 268435456,
           "reserve_bytes": 67108864,
           "limit_reason": null,
-          "minimum_effective_available_bytes": 8119222272,
-          "maximum_effective_available_bytes": 8175370240,
+          "minimum_effective_available_bytes": 8031768576,
+          "maximum_effective_available_bytes": 8088510464,
           "memory_observations": 35,
-          "minimum_workspace_free_bytes": 63872442368,
+          "minimum_workspace_free_bytes": 63805399040,
           "disk_reserve_bytes": 67108864,
-          "wall_seconds": 3.846610026999997,
+          "wall_seconds": 3.9009416459998647,
           "caveat": "Sampled sum of RSS can miss transient peaks and double-count shared pages; cgroup counters are shared, not a dedicated job limit."
         },
         "environment": {
@@ -2137,7 +2133,7 @@
     "reserve_mib": 64,
     "long_launch_minimum_mib": 384
   },
-  "run_directory": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-short-verified",
+  "run_directory": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-final-short",
   "readiness": {
     "schema": "reelforge.deployment.v1",
     "ok": true,
@@ -2174,21 +2170,21 @@
     "memory": {
       "host": {
         "MemTotal": 10451427328,
-        "MemAvailable": 9826775040,
+        "MemAvailable": 9820033024,
         "SwapTotal": 0,
         "SwapFree": 0
       },
       "cgroup_root": "/sys/fs/cgroup",
       "cgroup": {
         "memory.max": 8589934592,
-        "memory.current": 400265216,
-        "memory.peak": 484581376,
+        "memory.current": 487829504,
+        "memory.peak": 549859328,
         "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
         "memory.swap.max": "max",
         "memory.swap.current": 0,
         "cpu.max": "800000 100000"
       },
-      "effective_available_bytes": 8189669376,
+      "effective_available_bytes": 8102105088,
       "memory_policy": "strict",
       "fallback_enabled": false,
       "fallback_used": false,
@@ -2198,13 +2194,13 @@
         {
           "path": "/sys/fs/cgroup",
           "limit": 8589934592,
-          "usage": 400265216
+          "usage": 487829504
         }
       ],
       "observations": {
         "/proc/meminfo": {
           "status": "present",
-          "value": "MemTotal:       10206472 kB\nMemFree:         9543836 kB\nMemAvailable:    9596460 kB\nBuffers:           16384 kB\nCached:           275792 kB\nSwapCached:            0 kB\nActive:            95836 kB\nInactive:         261216 kB\nActive(anon):         52 kB\nInactive(anon):    94740 kB\nActive(file):      95784 kB\nInactive(file):   166476 kB\nUnevictable:       29924 kB\nMlocked:               0 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              4228 kB\nWriteback:             0 kB\nAnonPages:         94800 kB\nMapped:            76924 kB\nShmem:                12 kB\nKReclaimable:      38928 kB\nSlab:              82844 kB\nSReclaimable:      38928 kB\nSUnreclaim:        43916 kB\nKernelStack:        3308 kB\nPageTables:         3764 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     472172 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4584 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      2048 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:       57344 kB\nDirectMap2M:     3444736 kB\nDirectMap1G:    17825792 kB"
+          "value": "MemTotal:       10206472 kB\nMemFree:         9463884 kB\nMemAvailable:    9589876 kB\nBuffers:           21020 kB\nCached:           337704 kB\nSwapCached:            0 kB\nActive:           150104 kB\nInactive:         278764 kB\nActive(anon):         52 kB\nInactive(anon):   100008 kB\nActive(file):     150052 kB\nInactive(file):   178756 kB\nUnevictable:       29924 kB\nMlocked:               0 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:               720 kB\nWriteback:             0 kB\nAnonPages:        100100 kB\nMapped:            76880 kB\nShmem:                12 kB\nKReclaimable:      52564 kB\nSlab:              98952 kB\nSReclaimable:      52564 kB\nSUnreclaim:        46388 kB\nKernelStack:        3276 kB\nPageTables:         3656 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     477312 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4536 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      2048 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      108544 kB\nDirectMap2M:     3393536 kB\nDirectMap1G:    17825792 kB"
         },
         "/proc/self/cgroup": {
           "status": "present",
@@ -2228,11 +2224,11 @@
         },
         "/sys/fs/cgroup/memory.current": {
           "status": "present",
-          "value": "400265216"
+          "value": "487829504"
         },
         "/sys/fs/cgroup/memory.peak": {
           "status": "present",
-          "value": "484581376"
+          "value": "549859328"
         },
         "/sys/fs/cgroup/memory.events": {
           "status": "present",
@@ -2295,7 +2291,7 @@
     },
     "workspace": {
       "path": "/workspace/scratch/6ba0d4b7730a/reelforge-v2",
-      "free_bytes": 63876476928,
+      "free_bytes": 63809433600,
       "total_bytes": 67586535424,
       "minimum_free_bytes": 268435456,
       "write_probe": true,
@@ -2319,7 +2315,7 @@
     },
     "tmp": {
       "total_bytes": 67586535424,
-      "free_bytes": 63876476928
+      "free_bytes": 63809433600
     },
     "cgroup_capabilities": {
       "path": "/sys/fs/cgroup",
@@ -2349,21 +2345,21 @@
   "memory_before": {
     "host": {
       "MemTotal": 10451427328,
-      "MemAvailable": 9826775040,
+      "MemAvailable": 9820033024,
       "SwapTotal": 0,
       "SwapFree": 0
     },
     "cgroup_root": "/sys/fs/cgroup",
     "cgroup": {
       "memory.max": 8589934592,
-      "memory.current": 400265216,
-      "memory.peak": 484581376,
+      "memory.current": 487829504,
+      "memory.peak": 549859328,
       "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
       "memory.swap.max": "max",
       "memory.swap.current": 0,
       "cpu.max": "800000 100000"
     },
-    "effective_available_bytes": 8189669376,
+    "effective_available_bytes": 8102105088,
     "memory_policy": "strict",
     "fallback_enabled": false,
     "fallback_used": false,
@@ -2373,13 +2369,13 @@
       {
         "path": "/sys/fs/cgroup",
         "limit": 8589934592,
-        "usage": 400265216
+        "usage": 487829504
       }
     ],
     "observations": {
       "/proc/meminfo": {
         "status": "present",
-        "value": "MemTotal:       10206472 kB\nMemFree:         9543836 kB\nMemAvailable:    9596460 kB\nBuffers:           16384 kB\nCached:           275792 kB\nSwapCached:            0 kB\nActive:            95836 kB\nInactive:         261216 kB\nActive(anon):         52 kB\nInactive(anon):    94740 kB\nActive(file):      95784 kB\nInactive(file):   166476 kB\nUnevictable:       29924 kB\nMlocked:               0 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              4228 kB\nWriteback:             0 kB\nAnonPages:         94800 kB\nMapped:            76924 kB\nShmem:                12 kB\nKReclaimable:      38928 kB\nSlab:              82844 kB\nSReclaimable:      38928 kB\nSUnreclaim:        43916 kB\nKernelStack:        3308 kB\nPageTables:         3764 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     472172 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4584 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      2048 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:       57344 kB\nDirectMap2M:     3444736 kB\nDirectMap1G:    17825792 kB"
+        "value": "MemTotal:       10206472 kB\nMemFree:         9463884 kB\nMemAvailable:    9589876 kB\nBuffers:           21016 kB\nCached:           337708 kB\nSwapCached:            0 kB\nActive:           150104 kB\nInactive:         278764 kB\nActive(anon):         52 kB\nInactive(anon):   100008 kB\nActive(file):     150052 kB\nInactive(file):   178756 kB\nUnevictable:       29924 kB\nMlocked:               0 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:               720 kB\nWriteback:             0 kB\nAnonPages:        100100 kB\nMapped:            76880 kB\nShmem:                12 kB\nKReclaimable:      52564 kB\nSlab:              98952 kB\nSReclaimable:      52564 kB\nSUnreclaim:        46388 kB\nKernelStack:        3276 kB\nPageTables:         3656 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     477312 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4536 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      2048 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      108544 kB\nDirectMap2M:     3393536 kB\nDirectMap1G:    17825792 kB"
       },
       "/proc/self/cgroup": {
         "status": "present",
@@ -2403,11 +2399,11 @@
       },
       "/sys/fs/cgroup/memory.current": {
         "status": "present",
-        "value": "400265216"
+        "value": "487829504"
       },
       "/sys/fs/cgroup/memory.peak": {
         "status": "present",
-        "value": "484581376"
+        "value": "549859328"
       },
       "/sys/fs/cgroup/memory.events": {
         "status": "present",
@@ -2438,21 +2434,21 @@
   "memory_after": {
     "host": {
       "MemTotal": 10451427328,
-      "MemAvailable": 9707692032,
+      "MemAvailable": 9682108416,
       "SwapTotal": 0,
       "SwapFree": 0
     },
     "cgroup_root": "/sys/fs/cgroup",
     "cgroup": {
       "memory.max": 8589934592,
-      "memory.current": 405852160,
-      "memory.peak": 484581376,
+      "memory.current": 493072384,
+      "memory.peak": 564924416,
       "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
       "memory.swap.max": "max",
       "memory.swap.current": 0,
       "cpu.max": "800000 100000"
     },
-    "effective_available_bytes": 8184082432,
+    "effective_available_bytes": 8096862208,
     "memory_policy": "strict",
     "fallback_enabled": false,
     "fallback_used": false,
@@ -2462,13 +2458,13 @@
       {
         "path": "/sys/fs/cgroup",
         "limit": 8589934592,
-        "usage": 405852160
+        "usage": 493072384
       }
     ],
     "observations": {
       "/proc/meminfo": {
         "status": "present",
-        "value": "MemTotal:       10206472 kB\nMemFree:         9423588 kB\nMemAvailable:    9480168 kB\nBuffers:           16384 kB\nCached:           279712 kB\nSwapCached:            0 kB\nActive:            99796 kB\nInactive:         262620 kB\nActive(anon):        108 kB\nInactive(anon):    96128 kB\nActive(file):      99688 kB\nInactive(file):   166492 kB\nUnevictable:       29972 kB\nMlocked:              48 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              4480 kB\nWriteback:             0 kB\nAnonPages:         96384 kB\nMapped:            77804 kB\nShmem:                12 kB\nKReclaimable:      38996 kB\nSlab:              82956 kB\nSReclaimable:      38996 kB\nSUnreclaim:        43960 kB\nKernelStack:        3392 kB\nPageTables:         4188 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     480748 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4776 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      2048 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:       57344 kB\nDirectMap2M:     3444736 kB\nDirectMap1G:    17825792 kB"
+        "value": "MemTotal:       10206472 kB\nMemFree:         9325180 kB\nMemAvailable:    9455184 kB\nBuffers:           21044 kB\nCached:           341628 kB\nSwapCached:            0 kB\nActive:           154096 kB\nInactive:         280200 kB\nActive(anon):        108 kB\nInactive(anon):   101440 kB\nActive(file):     153988 kB\nInactive(file):   178760 kB\nUnevictable:       29988 kB\nMlocked:              64 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              1168 kB\nWriteback:             0 kB\nAnonPages:        101656 kB\nMapped:            77760 kB\nShmem:                12 kB\nKReclaimable:      52708 kB\nSlab:              99004 kB\nSReclaimable:      52708 kB\nSUnreclaim:        46296 kB\nKernelStack:        3376 kB\nPageTables:         4168 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     469484 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4680 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      2048 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      108544 kB\nDirectMap2M:     3393536 kB\nDirectMap1G:    17825792 kB"
       },
       "/proc/self/cgroup": {
         "status": "present",
@@ -2492,11 +2488,11 @@
       },
       "/sys/fs/cgroup/memory.current": {
         "status": "present",
-        "value": "405852160"
+        "value": "493072384"
       },
       "/sys/fs/cgroup/memory.peak": {
         "status": "present",
-        "value": "484581376"
+        "value": "564924416"
       },
       "/sys/fs/cgroup/memory.events": {
         "status": "present",
@@ -2561,21 +2557,21 @@
     "initial_memory": {
       "host": {
         "MemTotal": 10451427328,
-        "MemAvailable": 9822961664,
+        "MemAvailable": 9827827712,
         "SwapTotal": 0,
         "SwapFree": 0
       },
       "cgroup_root": "/sys/fs/cgroup",
       "cgroup": {
         "memory.max": 8589934592,
-        "memory.current": 400875520,
-        "memory.peak": 484581376,
+        "memory.current": 488501248,
+        "memory.peak": 549859328,
         "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
         "memory.swap.max": "max",
         "memory.swap.current": 0,
         "cpu.max": "800000 100000"
       },
-      "effective_available_bytes": 8189059072,
+      "effective_available_bytes": 8101433344,
       "memory_policy": "strict",
       "fallback_enabled": false,
       "fallback_used": false,
@@ -2585,13 +2581,13 @@
         {
           "path": "/sys/fs/cgroup",
           "limit": 8589934592,
-          "usage": 400875520
+          "usage": 488501248
         }
       ],
       "observations": {
         "/proc/meminfo": {
           "status": "present",
-          "value": "MemTotal:       10206472 kB\nMemFree:         9540112 kB\nMemAvailable:    9592736 kB\nBuffers:           16384 kB\nCached:           275792 kB\nSwapCached:            0 kB\nActive:            95884 kB\nInactive:         261960 kB\nActive(anon):        100 kB\nInactive(anon):    95484 kB\nActive(file):      95784 kB\nInactive(file):   166476 kB\nUnevictable:       29940 kB\nMlocked:              16 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              4240 kB\nWriteback:             0 kB\nAnonPages:         95688 kB\nMapped:            77496 kB\nShmem:                12 kB\nKReclaimable:      38928 kB\nSlab:              82864 kB\nSReclaimable:      38928 kB\nSUnreclaim:        43936 kB\nKernelStack:        3424 kB\nPageTables:         4104 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     472172 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4632 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      2048 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:       57344 kB\nDirectMap2M:     3444736 kB\nDirectMap1G:    17825792 kB"
+          "value": "MemTotal:       10206472 kB\nMemFree:         9471496 kB\nMemAvailable:    9597488 kB\nBuffers:           21020 kB\nCached:           337704 kB\nSwapCached:            0 kB\nActive:           150104 kB\nInactive:         279676 kB\nActive(anon):         52 kB\nInactive(anon):   100920 kB\nActive(file):     150052 kB\nInactive(file):   178756 kB\nUnevictable:       29924 kB\nMlocked:               0 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:               720 kB\nWriteback:             0 kB\nAnonPages:        101012 kB\nMapped:            77564 kB\nShmem:                12 kB\nKReclaimable:      52564 kB\nSlab:              99180 kB\nSReclaimable:      52564 kB\nSUnreclaim:        46616 kB\nKernelStack:        3336 kB\nPageTables:         4340 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     477312 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4584 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      2048 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      108544 kB\nDirectMap2M:     3393536 kB\nDirectMap1G:    17825792 kB"
         },
         "/proc/self/cgroup": {
           "status": "present",
@@ -2615,11 +2611,11 @@
         },
         "/sys/fs/cgroup/memory.current": {
           "status": "present",
-          "value": "400875520"
+          "value": "488501248"
         },
         "/sys/fs/cgroup/memory.peak": {
           "status": "present",
-          "value": "484581376"
+          "value": "549859328"
         },
         "/sys/fs/cgroup/memory.events": {
           "status": "present",
@@ -2650,21 +2646,21 @@
     "final_memory": {
       "host": {
         "MemTotal": 10451427328,
-        "MemAvailable": 9707692032,
+        "MemAvailable": 9682108416,
         "SwapTotal": 0,
         "SwapFree": 0
       },
       "cgroup_root": "/sys/fs/cgroup",
       "cgroup": {
         "memory.max": 8589934592,
-        "memory.current": 405852160,
-        "memory.peak": 484581376,
+        "memory.current": 493072384,
+        "memory.peak": 564924416,
         "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
         "memory.swap.max": "max",
         "memory.swap.current": 0,
         "cpu.max": "800000 100000"
       },
-      "effective_available_bytes": 8184082432,
+      "effective_available_bytes": 8096862208,
       "memory_policy": "strict",
       "fallback_enabled": false,
       "fallback_used": false,
@@ -2674,13 +2670,13 @@
         {
           "path": "/sys/fs/cgroup",
           "limit": 8589934592,
-          "usage": 405852160
+          "usage": 493072384
         }
       ],
       "observations": {
         "/proc/meminfo": {
           "status": "present",
-          "value": "MemTotal:       10206472 kB\nMemFree:         9423588 kB\nMemAvailable:    9480168 kB\nBuffers:           16384 kB\nCached:           279712 kB\nSwapCached:            0 kB\nActive:            99796 kB\nInactive:         262620 kB\nActive(anon):        108 kB\nInactive(anon):    96128 kB\nActive(file):      99688 kB\nInactive(file):   166492 kB\nUnevictable:       29972 kB\nMlocked:              48 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              4480 kB\nWriteback:             0 kB\nAnonPages:         96384 kB\nMapped:            77804 kB\nShmem:                12 kB\nKReclaimable:      38996 kB\nSlab:              82956 kB\nSReclaimable:      38996 kB\nSUnreclaim:        43960 kB\nKernelStack:        3392 kB\nPageTables:         4188 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     480748 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4776 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      2048 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:       57344 kB\nDirectMap2M:     3444736 kB\nDirectMap1G:    17825792 kB"
+          "value": "MemTotal:       10206472 kB\nMemFree:         9325180 kB\nMemAvailable:    9455184 kB\nBuffers:           21044 kB\nCached:           341628 kB\nSwapCached:            0 kB\nActive:           154096 kB\nInactive:         280200 kB\nActive(anon):        108 kB\nInactive(anon):   101440 kB\nActive(file):     153988 kB\nInactive(file):   178760 kB\nUnevictable:       29988 kB\nMlocked:              64 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              1168 kB\nWriteback:             0 kB\nAnonPages:        101656 kB\nMapped:            77760 kB\nShmem:                12 kB\nKReclaimable:      52708 kB\nSlab:              99004 kB\nSReclaimable:      52708 kB\nSUnreclaim:        46296 kB\nKernelStack:        3376 kB\nPageTables:         4168 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     469484 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4680 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      2048 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      108544 kB\nDirectMap2M:     3393536 kB\nDirectMap1G:    17825792 kB"
         },
         "/proc/self/cgroup": {
           "status": "present",
@@ -2704,11 +2700,11 @@
         },
         "/sys/fs/cgroup/memory.current": {
           "status": "present",
-          "value": "405852160"
+          "value": "493072384"
         },
         "/sys/fs/cgroup/memory.peak": {
           "status": "present",
-          "value": "484581376"
+          "value": "564924416"
         },
         "/sys/fs/cgroup/memory.events": {
           "status": "present",
@@ -2736,27 +2732,27 @@
       "kernel_memory_controller": null,
       "controller_version": "v2"
     },
-    "initial_renderer_rss_bytes": 16171008,
-    "final_renderer_rss_bytes": 16879616,
-    "renderer_peak_rss_bytes": 16838656,
-    "waited_child_max_rss_bytes": 71913472,
+    "initial_renderer_rss_bytes": 16187392,
+    "final_renderer_rss_bytes": 16896000,
+    "renderer_peak_rss_bytes": 16846848,
+    "waited_child_max_rss_bytes": 76537856,
     "encoder_peak_rss_bytes": 0,
-    "all_children_peak_rss_bytes": 90447872,
-    "estimated_simultaneous_tree_peak_rss_bytes": 107253760,
+    "all_children_peak_rss_bytes": 97832960,
+    "estimated_simultaneous_tree_peak_rss_bytes": 114647040,
     "sampling_interval_seconds": 0.01,
-    "samples": 1076,
+    "samples": 1065,
     "job_budget_bytes": 268435456,
     "reserve_bytes": 67108864,
     "limit_reason": null,
-    "minimum_effective_available_bytes": 8119345152,
-    "maximum_effective_available_bytes": 8189059072,
-    "memory_observations": 109,
-    "minimum_workspace_free_bytes": 63872442368,
+    "minimum_effective_available_bytes": 8028528640,
+    "maximum_effective_available_bytes": 8101433344,
+    "memory_observations": 108,
+    "minimum_workspace_free_bytes": 63805394944,
     "disk_reserve_bytes": 67108864,
-    "wall_seconds": 11.832609408000053,
+    "wall_seconds": 11.712742530000014,
     "caveat": "Sampled sum of RSS can miss transient peaks and double-count shared pages; cgroup counters are shared, not a dedicated job limit.",
     "root_role": "validation_supervisor; per-job renderer/encoder are in job reports"
   },
-  "wall_seconds": 12.028956145000052,
-  "evidence_note": "Development-host measured short matrix; per-frame hash lists replaced with digest/count, raw data retained in ignored outputs."
+  "wall_seconds": 11.915320648000034,
+  "evidence_note": "Final code development-host short matrix; all worker cleanup confirmed. Per-frame hashes represented by digest/count; raw reports in ignored outputs."
 }

@@ -1,0 +1,36 @@
+{
+  "schema": "reelforge.phase2c1-ci.v1",
+  "source_commit": "3aeb449aacde8313e19292fe0a263a025f70f3ce",
+  "source_tree": "179ff22354aa69a17b1b152045f1bec15a852d44",
+  "branch": "phase2c-vm-memory-compat",
+  "run_id": 41229189609,
+  "run_url": "https://github.com/lktoken34/reelforge/actions/runs/41229189609",
+  "jobs": {
+    "checks": {
+      "id": 124619591088,
+      "conclusion": "success"
+    },
+    "cairo-checks": {
+      "id": 124619590873,
+      "conclusion": "success"
+    }
+  },
+  "cairo_test_results": "188 passed in 10.15s",
+  "runtime_install": "fresh offline verified binary wheelhouse installation passed",
+  "installed_runtime_smoke": "450-frame encode/full decode passed",
+  "strict_probe_and_handled_recovery": "passed",
+  "ci_uid": 1001,
+  "artifact": {
+    "id": 13053051936,
+    "name": "reelforge-v2-phase2c1-py312-ubuntu24-x86_64-wheelhouse",
+    "bytes": 778056,
+    "zip_sha256": "26f958e494912d88e001e40f1f7c3fcd91c0066d2399df5ee974dc2b4488c092",
+    "url": "https://github.com/lktoken34/reelforge/actions/runs/41229189609/artifacts/13053051936",
+    "manifest_source_commit": "3aeb449aacde8313e19292fe0a263a025f70f3ce",
+    "retention_days": 30
+  },
+  "scope": "Development CI runner, not Muse Spark target",
+  "target_vm_verified": false,
+  "target_compat_retest": "pending",
+  "deployment_gate_approved": false
+}

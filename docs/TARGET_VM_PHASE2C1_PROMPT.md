@@ -3,7 +3,7 @@
 Run only on the intended Muse Spark guest VM, sequentially as an ordinary user. Do not edit
 engine source, lower thresholds, add swap, change cgroups or manufacture memory pressure.
 Rendering is still diagnostic only; deployment approval remains false. Use the exact source
-commit/artifact in `artifacts/phase2c1/ci_evidence.json` (added after successful CI), not the old
+commit/artifact in `artifacts/phase2c1/ci_evidence.json` (from successful CI), not the old
 0.4.0 wheelhouse. Record `id` and `git rev-parse HEAD`. If the current shell is root, arrange
 an existing ordinary-user session without changing host policy, or report unprivileged testing
 blocked. Stop on refusal or failed checks; return the evidence instead of applying workarounds.
@@ -11,6 +11,12 @@ blocked. Stop on refusal or failed checks; return the evidence instead of applyi
 The following flag is explicit authorization to use guest procfs **only if the detector's
 eligibility checks pass**. It asserts the operator has identified this as the intended VM.
 It does not ignore discoverable limits or authorize an arbitrary container fallback.
+
+Verified bundle: [artifact 13053051936](https://github.com/lktoken34/reelforge/actions/runs/41229189609/artifacts/13053051936)
+from exact source commit `3aeb449aacde8313e19292fe0a263a025f70f3ce`.
+Archive SHA256: `26f958e494912d88e001e40f1f7c3fcd91c0066d2399df5ee974dc2b4488c092`.
+The wheelhouse manifest must identify that source commit. Artifact retention is 30 days.
+If it has expired, request a new CI artifact and provenance; do not substitute older wheels.
 
 ## 1. Prepare source and pre-install probes
 
