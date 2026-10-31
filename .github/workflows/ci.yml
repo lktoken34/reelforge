@@ -74,3 +74,15 @@ jobs:
           path: outputs/wheelhouse/
           retention-days: 30
           if-no-files-found: error
+
+      - name: Phase 3A development character proof
+        run: |
+          uv run --frozen --extra renderer python tools/validate_character.py examples/characters/rowan_walk.json
+          uv run --frozen --extra renderer python tools/render_character.py --output-dir outputs/ci-character --stills-only
+          uv run --frozen --extra renderer python tools/render_character.py --output-dir outputs/ci-character
+      - uses: actions/upload-artifact@v4
+        with:
+          name: phase3a-character-visual-review
+          path: outputs/ci-character/
+          retention-days: 30
+          if-no-files-found: error

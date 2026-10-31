@@ -1,0 +1,8 @@
+{
+  "character": "rowan_01",
+  "action": "walk",
+  "direction": "right",
+  "speed": 1.0,
+  "expression": "concerned",
+  "intensity": 1.0
+}

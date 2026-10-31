@@ -1,6 +1,6 @@
 # ReelForge V2
 
-Phase 2C.1 builds on the approved Phase 1/2A foundation for an agent-operated, code-only 2D/2.5D
+Phase 3A builds on the approved Phase 1/2A foundation for an agent-operated, code-only 2D/2.5D
 animation engine. An internal, trusted-Python Cairo vector backend and bounded FFmpeg pipe now produce
 diagnostic MP4s. They are not connected to episode manifests.
 **No character rigs, environments, animation timelines, lighting, audio synchronization,
@@ -141,3 +141,23 @@ strict remains default and real limits always apply. No safety thresholds were l
 [Exact cloud-operator steps](docs/TARGET_VM_PHASE2C1_PROMPT.md) start with a stdlib-only probe,
 then new prebuilt wheels and short tests before long tests. Missing OOM telemetry yields an
 observability-limited result, not deployment approval. See [Phase 2C.1 report](docs/PHASE2C1_REPORT.md).
+
+## Phase 3A character study
+
+One original character, **Rowan Vale**, now uses a shared 17-joint hierarchy and trusted
+idle/walk/run presets. [Design and rig contract](docs/CHARACTER_RIG.md),
+[agent preset](examples/characters/rowan_walk.json), and [measured/visual report](docs/PHASE3A_REPORT.md).
+The episode CLI/manifest still advertise no general rendering capability. This is a
+separate experimental preset interface, validated without importing native Cairo.
+
+```bash
+uv run --frozen python tools/validate_character.py examples/characters/rowan_walk.json
+mkdir -p outputs/rowan-review
+uv run --frozen --extra renderer python tools/render_character.py --output-dir outputs/rowan-review --stills-only
+uv run --frozen --extra renderer python tools/render_character.py --output-dir outputs/rowan-review
+```
+
+Review proofs in `artifacts/phase3a/`: pose sheet, three full-resolution frames and a silent
+5-second 720p MP4. Artistic acceptance is external; passing technical tests does not prove
+reference-level quality. Target Muse Spark deployment remains blocked; its policies are
+unchanged. **Stop after Phase 3A for review.**

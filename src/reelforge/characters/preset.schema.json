@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:reelforge:character-preset:0.1",
+  "title": "Experimental trusted character preset; not an episode manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["character", "action", "direction", "speed", "expression", "intensity"],
+  "properties": {
+    "character": {"const": "rowan_01"},
+    "action": {"enum": ["idle", "walk", "run"]},
+    "direction": {"enum": ["left", "right"]},
+    "speed": {"type": "number", "minimum": 0.5, "maximum": 1.5},
+    "intensity": {"type": "number", "minimum": 0.5, "maximum": 1.0},
+    "expression": {"enum": ["calm", "concerned", "focused"]}
+  }
+}

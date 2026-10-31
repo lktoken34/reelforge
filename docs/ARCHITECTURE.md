@@ -9,6 +9,10 @@ Phase 2C implementation is approved. Phase 2C.1 adds explicit engineering memory
 observability policies without changing rendering or episode contracts; see
 [MEMORY_OBSERVABILITY.md](MEMORY_OBSERVABILITY.md). Target deployment approval remains pending.
 
+Phase 3A adds a `characters` boundary for one immutable skeleton, local artwork and pure
+motion presets. It returns existing DrawPath values and imports no native graphics objects.
+It is independent of episode planning and deployed-resource policy. See CHARACTER_RIG.md.
+
 ## Boundaries and ownership
 
 The authoring agent chooses from published capabilities and writes declarative JSON. A

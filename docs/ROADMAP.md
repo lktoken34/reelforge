@@ -1,3 +1,7 @@
+Phase 3A update: approved development baseline 84eee4a. One original character rig and
+three presets are implemented for external visual review. Target deployment remains blocked;
+no new deployment or later-engine scope is authorized. See PHASE3A_REPORT.md.
+
 # Incremental roadmap
 
 Phase 1 is approved with changes. Phase 2A was approved at c70d2f2. Phase 2B was approved at 7133f244. Phase 2C implementation was approved; target validation was blocked before rendering. Phase 2C.1 memory compatibility awaits target evidence and review.
@@ -13,7 +17,8 @@ implement a later phase during Phase 1. Phase numbers after Phase 2 are provisio
 | 2B — bounded CPU video (approved) | Cairo-to-FFmpeg raw pipe, fixed motion fixture, verification and process-tree evidence | Silent 5s MP4s, failure tests, decoded-repeat comparison and review |
 | 2C — cloud deployment gate (current) | Prebuilt installation, sequential short/long validation, resource/recovery evidence | Actual target-VM results and external architectural approval; development host is supplementary |
 | 2C.1 — VM memory compatibility (current) | Read-only topology discovery and explicitly authorized guest procfs policy | Strict/fixture regressions, new wheelhouse, actual VM re-test and external review |
-| 3 — code-authored catalog foundations | One reusable character definition/rig and one small environment recipe, approved IDs and parameter limits | Identity/geometry contracts and static compositions; independent review before animation |
+| 3A — first character (current) | One original reusable rig, bounded presets, pose sheet and 720p clip | Artistic review, hierarchy/contact/determinism tests and whole-job evidence |
+| 3 — code-authored catalog foundations (remaining) | One reusable character definition/rig and one small environment recipe, approved IDs and parameter limits | Identity/geometry contracts and static compositions; independent review before animation |
 | 4 — deterministic animation | Frame-index evaluation, one articulated action, camera/depth basics | Timing/pose invariants, out-of-order frame equivalence and movement review |
 | 5 — scene composition/style | Reusable environment system, bounded lights/effects, shot templates and typography | Consistent look, mobile readability and measured scene memory |
 | 6 — media/timing | Bounded FFmpeg process adapter, supplied audio/timestamp contracts and synchronization | Failure/cleanup tests, process-tree budget, frame/audio timing evidence |

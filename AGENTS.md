@@ -21,8 +21,8 @@ local input in a later contract version, not a feature of this manifest.
 
 Episode restrictions above do not prevent an engineer from changing engine code for an
 explicit engine-development task. Read architecture, hardware constraints and roadmap first.
-Current approved engineering scope is Phase 2C.1: read-only memory topology detection,
-explicit guest fallback compatibility, propagation, regression tests and target evidence. Keep drawing/video
+Current approved engineering scope is Phase 3A: one original code-authored character,
+reusable articulated rig, bounded idle/walk/run presets and development-host visual proofs. Keep drawing/video
 commands out of manifests and the installed CLI. Do not begin the next milestone without a new
 assignment following external review. Do not delegate to other agents unless explicitly requested.
 
@@ -42,10 +42,12 @@ assignment following external review. Do not delegate to other agents unless exp
   installed wheel from outside the checkout when package resources or packaging change.
 - Document actual evidence and remaining uncertainty. Technical success does not prove art quality.
 
-Phase 2B was approved at 7133f244. Phase 2C does not authorize visual systems.
+Phase 2C.1 is approved at 84eee4a; target deployment remains blocked. Phase 3A is
+development-host work only; no deployment/security/resource-policy changes are authorized.
 Read docs/TARGET_VM_DEPLOYMENT.md before cloud tests. Never manufacture memory pressure,
 lower safety thresholds to pass, change host swap/memory controls, or run competing jobs.
 Actual target-VM evidence and external review remain required; development results do not
 certify deployment. Read docs/MEMORY_OBSERVABILITY.md and
 docs/TARGET_VM_PHASE2C1_PROMPT.md before target work. Use strict policy by default; the
-explicit guest fallback flag never ignores a discovered limit. Stop after Phase 2C.1.
+explicit guest fallback flag never ignores a discovered limit. Do not deploy to Muse Spark
+during Phase 3A. Review docs/CHARACTER_RIG.md. Stop after Phase 3A for artistic/architectural review.
