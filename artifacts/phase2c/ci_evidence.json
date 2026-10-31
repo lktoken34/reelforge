@@ -1,0 +1,15 @@
+{
+  "schema": "reelforge.ci-evidence.v1",
+  "commit": "7327751c4576313c1ba2389d1686f375e829e59b",
+  "run_url": "https://github.com/lktoken34/reelforge/actions/runs/41223535497",
+  "foundation_job": "success",
+  "cairo_job": "success",
+  "fresh_offline_install_and_450_frame_full_decode": "passed",
+  "wheelhouse_artifact": {
+    "id": 13050374982,
+    "name": "reelforge-v2-py312-ubuntu24-x86_64-wheelhouse",
+    "bytes": 772390,
+    "url": "https://github.com/lktoken34/reelforge/actions/runs/41223535497/artifacts/13050374982"
+  },
+  "scope": "Ubuntu 24.04 development CI runner; not Muse Spark target VM"
+}

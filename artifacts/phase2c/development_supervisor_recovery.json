@@ -1,0 +1,16 @@
+{
+  "scope": "development",
+  "signal": "SIGTERM to validation supervisor during active encode",
+  "exit_status": 2,
+  "observed_surviving_pids": [],
+  "pending_transactions": [],
+  "published_outputs": [],
+  "technical_run_passed": false,
+  "errors": [
+    {
+      "code": "INTERRUPTED",
+      "message": "Validation interrupted"
+    }
+  ],
+  "passed": true
+}

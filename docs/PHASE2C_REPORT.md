@@ -18,7 +18,8 @@ successful target deployment or authorization for visual/character systems.
 
 Machine-readable evidence: [readiness](../artifacts/phase2c/development_readiness.json),
 [measured results](../artifacts/phase2c/development_results.json),
-[recovery](../artifacts/phase2c/development_recovery.json), and
+[worker recovery](../artifacts/phase2c/development_recovery.json),
+[supervisor interruption](../artifacts/phase2c/development_supervisor_recovery.json), and
 [target status](../artifacts/phase2c/target_vm_status.json).
 The compact committed report retains full resource/metadata records but replaces each long
 frame-hash list with its count and SHA256 of newline-joined hashes. The complete raw lists
@@ -104,11 +105,19 @@ existing-environment protection, mocked low-memory/disk refusal, monitor cancell
 workspace locks, transaction reconciliation and an actual 450-frame CLI render/full decode.
 Existing regressions cover missing encoder/tools, early exit, broken pipe, timeout, cancellation,
 write failures, surface cleanup, deterministic geometry, dimensions/stride/byte counts, output
-protection and metadata. Ruff lint/format and package/base-install checks are recorded in CI.
+protection and metadata. Ruff lint/format and package/base-install checks passed in CI.
+[CI run 41223535497](https://github.com/lktoken34/reelforge/actions/runs/41223535497)
+passed both jobs, including fresh offline install and a 450-frame full-decode check.
+The [prebuilt runtime artifact](https://github.com/lktoken34/reelforge/actions/runs/41223535497/artifacts/13050374982)
+is 772,390 bytes; [machine-readable CI evidence](../artifacts/phase2c/ci_evidence.json)
+records its source commit. Follow-up changes only add recovery/CI evidence documentation.
 
 Actual recovery: SIGTERM during active 720p encoding returned worker exit **130**,
 no observed live encoder remained, no incomplete final MP4 was published, private transactions
-were cleaned and the existing-output sentinel was unchanged. Mocked scarcity tests do not
+were cleaned and the existing-output sentinel was unchanged. A separate real SIGTERM to the validation
+supervisor during active encoding also exited nonzero, left no observed descendants, pending
+transactions or published outputs, and recorded INTERRUPTED rather than a technical pass.
+Mocked scarcity tests do not
 claim real low-memory/low-disk target validation. A first development harness attempt exposed
 an erroneous tool timeout argument passed to verification; it was corrected and the actual
 long CLI regression now covers that path. Only the subsequent complete successful run is evidence.
