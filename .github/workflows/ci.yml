@@ -1,0 +1,27 @@
+name: foundation
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  checks:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: '0.13.4'
+          python-version: '3.12'
+      - run: uv sync --frozen
+      - run: uv run --frozen ruff check .
+      - run: uv run --frozen ruff format --check .
+      - run: uv run --frozen pytest
+      - run: uv run --frozen python -m build --no-isolation
+      - name: Verify installed wheel outside checkout
+        shell: bash
+        run: |
+          uv venv /tmp/reelforge-wheel
+          uv pip install --python /tmp/reelforge-wheel/bin/python dist/*.whl
+          cd /tmp
+          /tmp/reelforge-wheel/bin/reelforge capabilities
+          /tmp/reelforge-wheel/bin/reelforge schema
+          /tmp/reelforge-wheel/bin/reelforge validate "$GITHUB_WORKSPACE/examples/foundation/project.json"

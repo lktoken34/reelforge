@@ -1,0 +1,10 @@
+{
+  "schema_version": "2.0-draft1",
+  "project_id": "foundation_example",
+  "seed": 7,
+  "output": {"profile": "preview_360p", "fps": 30},
+  "scenes": [
+    {"id": "arrival", "duration_frames": 90, "intent": "Establish the farm at dusk."},
+    {"id": "reaction", "duration_frames": 60, "intent": "Hold on the survivor noticing a sound."}
+  ]
+}
