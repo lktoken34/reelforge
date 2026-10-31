@@ -26,6 +26,7 @@ resource management and implementation details a weaker agent should not control
 | `core` | Diagnostic values; future time/value types | Standard library only | Issue/InputError implemented |
 | `contracts` | Versioned JSON, loading, structural/semantic validation | core + jsonschema; no render imports | Implemented minimal draft |
 | `cli` | Discover features, emit schema, validate files | contracts/core; no system processes | Implemented |
+| `characters` | One original cutout, generic rigid hierarchy and deterministic presets | core/rendering values; no native objects, media or episode dependencies | Phase 3A experimental implementation |
 | `catalog` | Versioned code recipes for character/environment/prop identities | core; no CLI/media | Documentation only |
 | `planning` | Resolve IDs, validate references, compile immutable intermediate representation | core/contracts/catalog; no raster backend | Documentation only |
 | `animation` | Evaluate approved action templates at exact frame indices | core/compiled plan; no filesystem | Documentation only |

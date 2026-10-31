@@ -51,3 +51,12 @@ certify deployment. Read docs/MEMORY_OBSERVABILITY.md and
 docs/TARGET_VM_PHASE2C1_PROMPT.md before target work. Use strict policy by default; the
 explicit guest fallback flag never ignores a discovered limit. Do not deploy to Muse Spark
 during Phase 3A. Review docs/CHARACTER_RIG.md. Stop after Phase 3A for artistic/architectural review.
+
+## Experimental character-preset work
+
+When explicitly assigned a character study, use the six-field data contract in
+`docs/CHARACTER_RIG.md` and `examples/characters/rowan_walk.json`. Validate with
+`python tools/validate_character.py PATH` in the installed project environment. Select only
+published IDs/actions/bounds; do not supply joint mathematics or alter artwork/engine source.
+This validation does not make an episode render-ready. The fixed render_character.py proof
+is an engineering tool, and no production episode rendering command is advertised.

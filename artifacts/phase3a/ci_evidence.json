@@ -1,0 +1,32 @@
+{
+  "schema": "reelforge.phase3a-ci.v1",
+  "implementation_commit": "23cfb629d6cbae49a43aa8693105ce67bef43d4b",
+  "branch": "phase3a-character-rig",
+  "approved_parent": "84eee4af27a38644e1a7461b4fb0a699eee4bfbb",
+  "run_url": "https://github.com/lktoken34/reelforge/actions/runs/41233219906",
+  "jobs": {
+    "checks": {
+      "id": 124631540333,
+      "conclusion": "success"
+    },
+    "cairo-checks": {
+      "id": 124631540191,
+      "conclusion": "success"
+    }
+  },
+  "native_suite": "232 passed",
+  "character_cases": 44,
+  "previous_cases_preserved": 188,
+  "development_base_installed_wheel_suite": "172 passed, 8 skipped",
+  "character_proof_render_and_full_decode": "passed",
+  "visual_review_artifact": {
+    "id": 13054666767,
+    "bytes": 1520581,
+    "url": "https://github.com/lktoken34/reelforge/actions/runs/41233219906/artifacts/13054666767",
+    "retention_days": 30
+  },
+  "artistic_approval": false,
+  "target_vm_tested": false,
+  "deployment_gate_approved": false,
+  "note": "Following commit adds documentation/evidence only. Media are also committed directly under artifacts/phase3a."
+}

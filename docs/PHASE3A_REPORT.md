@@ -83,6 +83,17 @@ UID 0. Native/software renderer and CPU encoder only. This is not target-VM evid
 low-available-memory benchmark. The accepted 256 MiB job/64 MiB reserve policy remains strict.
 No resource-security source file was changed; no controller/swap/host setting was modified.
 
+## CI and exact implementation provenance
+
+Implementation/media commit: `23cfb629d6cbae49a43aa8693105ce67bef43d4b`. Both jobs passed in
+[CI run 41233219906](https://github.com/lktoken34/reelforge/actions/runs/41233219906), including 232 tests,
+package/base checks, native dependency setup and fresh character proof rendering/full decoding.
+[Visual review artifact 13054666767](https://github.com/lktoken34/reelforge/actions/runs/41233219906/artifacts/13054666767)
+contains the CI-generated pose sheet, three frames, MP4 and measured report (30-day retention).
+The development-host media are also committed directly in this repository. See
+[CI evidence JSON](../artifacts/phase3a/ci_evidence.json). The following commit adds only
+review documentation/evidence; runtime/artwork remain at the exact implementation SHA above.
+
 ## Visual limitations and review request
 
 The pose sheet is not a 3D turnaround: left is a mirrored three-quarter cutout. Limbs are rigid

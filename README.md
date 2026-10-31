@@ -2,9 +2,10 @@
 
 Phase 3A builds on the approved Phase 1/2A foundation for an agent-operated, code-only 2D/2.5D
 animation engine. An internal, trusted-Python Cairo vector backend and bounded FFmpeg pipe now produce
-diagnostic MP4s. They are not connected to episode manifests.
-**No character rigs, environments, animation timelines, lighting, audio synchronization,
-story-to-video production or advanced artistic QA is implemented.**
+diagnostic MP4s, including one original articulated character with bounded motion presets.
+They are not connected to episode manifests.
+**No full cast, environment catalog, general animation timeline, lighting system, audio
+synchronization, story-to-video production or advanced artistic QA is implemented.**
 
 The long-term target is cinematic portrait storytelling on Ubuntu with 4 vCPUs, no GPU,
 and only 0.4–1.0 GiB available RAM. The reference is an artistic target, not an achieved
@@ -101,6 +102,7 @@ future scene complexity remain separate gates.
 | `src/reelforge/contracts/` | Implemented schema, bounded loading and validation |
 | `src/reelforge/core/` | Implemented diagnostic primitive |
 | `src/reelforge/cli.py` | Implemented JSON CLI |
+| `src/reelforge/characters/` | Original Rowan artwork, reusable skeleton, bounded motion and experimental preset schema |
 | `src/reelforge/rendering/` | Trusted vector values, interface, Cairo adapter and diagnostic fixture |
 | `tools/` | Engineering-only PNG and benchmark scripts |
 | `artifacts/phase2a/` | Two diagnostic PNGs and raw six-trial benchmark JSON |
