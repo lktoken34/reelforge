@@ -1,0 +1,14 @@
+{
+  "schema": "reelforge.target-status.v1",
+  "target_vm_verified": false,
+  "status": "pending_no_target_vm_access",
+  "deployment_gate_approved": false,
+  "reason": "No Muse Spark target VM session or remote execution access was available. Development measurements are supplementary.",
+  "required_evidence": [
+    "target readiness.json",
+    "target validation results.json and job reports",
+    "target recovery.json",
+    "unprivileged execution confirmation",
+    "low-available-memory window observations without inducing pressure"
+  ]
+}

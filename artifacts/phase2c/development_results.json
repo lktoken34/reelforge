@@ -1,0 +1,2583 @@
+{
+  "schema": "reelforge.cloud-validation.v1",
+  "scope": "development",
+  "target_vm_verified": false,
+  "target_vm_status": "pending_no_target_vm_access",
+  "technical_run_passed": true,
+  "deployment_gate_approved": false,
+  "jobs": [
+    {
+      "width": 360,
+      "frames": 150,
+      "repeat": 1,
+      "admission_memory": {
+        "host": {
+          "MemTotal": 10451427328,
+          "MemAvailable": 9824956416,
+          "SwapTotal": 0,
+          "SwapFree": 0
+        },
+        "cgroup_root": "/sys/fs/cgroup",
+        "cgroup": {
+          "memory.max": 8589934592,
+          "memory.current": 425230336,
+          "memory.peak": 827715584,
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+          "memory.swap.max": "max",
+          "memory.swap.current": 0,
+          "cpu.max": "800000 100000"
+        },
+        "effective_available_bytes": 8164704256
+      },
+      "exit_status": 0,
+      "supervisor_reconciled": [],
+      "report": {
+        "cpu_seconds": {
+          "renderer": 1.273372211,
+          "children_user": 1.385437,
+          "children_system": 0.158611
+        },
+        "workspace_preflight": {
+          "path": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final/360_150_1",
+          "free_bytes": 63859740672,
+          "total_bytes": 67586535424,
+          "minimum_free_bytes": 268435456,
+          "write_probe": true,
+          "uid": 0,
+          "root_not_required": true
+        },
+        "pressure_before": {
+          "memory": null,
+          "cpu": null,
+          "io": null,
+          "vmstat": {
+            "pswpin": 0,
+            "pswpout": 0,
+            "pgmajfault": 0,
+            "balloon_inflate": 0,
+            "balloon_deflate": 0
+          },
+          "balloon_note": "Guest balloon counters only when exposed; lack of counters does not prove ballooning or host pressure is absent."
+        },
+        "pressure_after": {
+          "memory": null,
+          "cpu": null,
+          "io": null,
+          "vmstat": {
+            "pswpin": 0,
+            "pswpout": 0,
+            "pgmajfault": 0,
+            "balloon_inflate": 0,
+            "balloon_deflate": 0
+          },
+          "balloon_note": "Guest balloon counters only when exposed; lack of counters does not prove ballooning or host pressure is absent."
+        },
+        "cgroup_memory_event_delta": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0
+        },
+        "transaction_clean": true,
+        "output": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final/360_150_1/diagnostic.mp4",
+        "width": 360,
+        "height": 640,
+        "fps": 30,
+        "frames": 150,
+        "render_encode_seconds": 1.2940644010013784,
+        "effective_encoded_fps": 115.91386014786154,
+        "file_size_bytes": 536332,
+        "encoder_exit_status": 0,
+        "encoder_command": [
+          "/usr/bin/ffmpeg",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-nostats",
+          "-nostdin",
+          "-max_alloc",
+          "67108864",
+          "-threads",
+          "1",
+          "-filter_threads",
+          "1",
+          "-filter_complex_threads",
+          "1",
+          "-f",
+          "rawvideo",
+          "-pixel_format",
+          "bgra",
+          "-video_size",
+          "360x640",
+          "-framerate",
+          "30",
+          "-i",
+          "pipe:0",
+          "-an",
+          "-sn",
+          "-dn",
+          "-frames:v",
+          "150",
+          "-c:v",
+          "libx264",
+          "-preset",
+          "veryfast",
+          "-tune",
+          "zerolatency",
+          "-threads:v",
+          "1",
+          "-x264-params",
+          "threads=1:lookahead_threads=1:sync-lookahead=0:rc-lookahead=0:bframes=0:ref=1",
+          "-profile:v",
+          "main",
+          "-level:v",
+          "3.1",
+          "-crf",
+          "20",
+          "-vf",
+          "scale=in_range=full:out_range=tv:out_color_matrix=bt709,format=yuv420p",
+          "-pix_fmt",
+          "yuv420p",
+          "-colorspace",
+          "bt709",
+          "-color_primaries",
+          "bt709",
+          "-color_trc",
+          "bt709",
+          "-color_range",
+          "tv",
+          "-tag:v",
+          "avc1",
+          "-movflags",
+          "+faststart",
+          "-f",
+          "mp4",
+          "-n",
+          "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final/360_150_1/.reelforge-encode-te67dicq/pending.mp4"
+        ],
+        "source_checkpoint_sha256": {
+          "0": "d559d5a8b5d55a0b004b8bc87199a8d687a4e29d04d4e289f6fda7345a8a514f",
+          "75": "4b18a0f73067ee7e61d691131aade7a0c7f65c00173dc15715099da7c245b3ba",
+          "149": "1ee195068ec06058fd5f006574ca072ac31ec620244a1d7119fb2e118182db34"
+        },
+        "verification": {
+          "passed": true,
+          "mp4_top_level_boxes": [
+            "ftyp",
+            "moov",
+            "free",
+            "mdat"
+          ],
+          "metadata": {
+            "programs": [],
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_tag_string": "avc1",
+                "width": 360,
+                "height": 640,
+                "pix_fmt": "yuv420p",
+                "avg_frame_rate": "30/1",
+                "nb_read_frames": "150"
+              }
+            ],
+            "format": {
+              "duration": "5.000000",
+              "size": "536332"
+            }
+          },
+          "decoded_frames": 150,
+          "unique_decoded_frames": 150,
+          "decode_exit_status": 0,
+          "decode_command": [
+            "/usr/bin/ffmpeg",
+            "-hide_banner",
+            "-loglevel",
+            "error",
+            "-xerror",
+            "-err_detect",
+            "explode",
+            "-threads",
+            "1",
+            "-i",
+            "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final/360_150_1/diagnostic.mp4",
+            "-map",
+            "0:v:0",
+            "-an",
+            "-sn",
+            "-dn",
+            "-threads:v",
+            "1",
+            "-filter_threads",
+            "1",
+            "-pix_fmt",
+            "rgb24",
+            "-fps_mode",
+            "passthrough",
+            "-f",
+            "framehash",
+            "-hash",
+            "sha256",
+            "pipe:1"
+          ],
+          "comparison_scope": "Exact decoded RGB24 hashes on the same native FFmpeg build",
+          "decoded_rgb_sha256_list_digest": "6da10d3cea475a273ab6f7c3ebff153ef798a94a77af042d4543fb7152569652",
+          "decoded_hash_count": 150
+        },
+        "whole_job_memory": {
+          "initial_memory": {
+            "host": {
+              "MemTotal": 10451427328,
+              "MemAvailable": 9815048192,
+              "SwapTotal": 0,
+              "SwapFree": 0
+            },
+            "cgroup_root": "/sys/fs/cgroup",
+            "cgroup": {
+              "memory.max": 8589934592,
+              "memory.current": 435232768,
+              "memory.peak": 827715584,
+              "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+              "memory.swap.max": "max",
+              "memory.swap.current": 0,
+              "cpu.max": "800000 100000"
+            },
+            "effective_available_bytes": 8154701824
+          },
+          "final_memory": {
+            "host": {
+              "MemTotal": 10451427328,
+              "MemAvailable": 9781432320,
+              "SwapTotal": 0,
+              "SwapFree": 0
+            },
+            "cgroup_root": "/sys/fs/cgroup",
+            "cgroup": {
+              "memory.max": 8589934592,
+              "memory.current": 438525952,
+              "memory.peak": 827715584,
+              "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+              "memory.swap.max": "max",
+              "memory.swap.current": 0,
+              "cpu.max": "800000 100000"
+            },
+            "effective_available_bytes": 8151408640
+          },
+          "initial_renderer_rss_bytes": 15773696,
+          "final_renderer_rss_bytes": 17047552,
+          "renderer_peak_rss_bytes": 17698816,
+          "waited_child_max_rss_bytes": 43483136,
+          "encoder_peak_rss_bytes": 43761664,
+          "all_children_peak_rss_bytes": 43761664,
+          "estimated_simultaneous_tree_peak_rss_bytes": 61460480,
+          "sampling_interval_seconds": 0.01,
+          "samples": 157,
+          "job_budget_bytes": 268435456,
+          "reserve_bytes": 67108864,
+          "limit_reason": null,
+          "minimum_effective_available_bytes": 8129318912,
+          "maximum_effective_available_bytes": 8154701824,
+          "memory_observations": 17,
+          "minimum_workspace_free_bytes": 63859204096,
+          "disk_reserve_bytes": 67108864,
+          "wall_seconds": 1.8590651859994978,
+          "caveat": "Sampled sum of RSS can miss transient peaks and double-count shared pages; cgroup counters are shared, not a dedicated job limit."
+        },
+        "environment": {
+          "python": "3.12.14",
+          "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+          "distribution": "Ubuntu 24.04.3 LTS",
+          "ffmpeg_version": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+          "pycairo": "1.29.2",
+          "cairo": "1.18.0"
+        },
+        "resource_scope": "Renderer worker and child tools from preflight through full decode. CPU-only; host swap counters are recorded; not a target-VM certification."
+      },
+      "status": "passed",
+      "repeat_content_matches": true
+    },
+    {
+      "width": 360,
+      "frames": 150,
+      "repeat": 2,
+      "admission_memory": {
+        "host": {
+          "MemTotal": 10451427328,
+          "MemAvailable": 9780928512,
+          "SwapTotal": 0,
+          "SwapFree": 0
+        },
+        "cgroup_root": "/sys/fs/cgroup",
+        "cgroup": {
+          "memory.max": 8589934592,
+          "memory.current": 426041344,
+          "memory.peak": 827715584,
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+          "memory.swap.max": "max",
+          "memory.swap.current": 0,
+          "cpu.max": "800000 100000"
+        },
+        "effective_available_bytes": 8163893248
+      },
+      "exit_status": 0,
+      "supervisor_reconciled": [],
+      "report": {
+        "cpu_seconds": {
+          "renderer": 1.0504832849999999,
+          "children_user": 1.180251,
+          "children_system": 0.16825099999999998
+        },
+        "workspace_preflight": {
+          "path": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final/360_150_2",
+          "free_bytes": 63859179520,
+          "total_bytes": 67586535424,
+          "minimum_free_bytes": 268435456,
+          "write_probe": true,
+          "uid": 0,
+          "root_not_required": true
+        },
+        "pressure_before": {
+          "memory": null,
+          "cpu": null,
+          "io": null,
+          "vmstat": {
+            "pswpin": 0,
+            "pswpout": 0,
+            "pgmajfault": 0,
+            "balloon_inflate": 0,
+            "balloon_deflate": 0
+          },
+          "balloon_note": "Guest balloon counters only when exposed; lack of counters does not prove ballooning or host pressure is absent."
+        },
+        "pressure_after": {
+          "memory": null,
+          "cpu": null,
+          "io": null,
+          "vmstat": {
+            "pswpin": 0,
+            "pswpout": 0,
+            "pgmajfault": 0,
+            "balloon_inflate": 0,
+            "balloon_deflate": 0
+          },
+          "balloon_note": "Guest balloon counters only when exposed; lack of counters does not prove ballooning or host pressure is absent."
+        },
+        "cgroup_memory_event_delta": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0
+        },
+        "transaction_clean": true,
+        "output": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final/360_150_2/diagnostic.mp4",
+        "width": 360,
+        "height": 640,
+        "fps": 30,
+        "frames": 150,
+        "render_encode_seconds": 1.103342230000635,
+        "effective_encoded_fps": 135.95056540155602,
+        "file_size_bytes": 536332,
+        "encoder_exit_status": 0,
+        "encoder_command": [
+          "/usr/bin/ffmpeg",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-nostats",
+          "-nostdin",
+          "-max_alloc",
+          "67108864",
+          "-threads",
+          "1",
+          "-filter_threads",
+          "1",
+          "-filter_complex_threads",
+          "1",
+          "-f",
+          "rawvideo",
+          "-pixel_format",
+          "bgra",
+          "-video_size",
+          "360x640",
+          "-framerate",
+          "30",
+          "-i",
+          "pipe:0",
+          "-an",
+          "-sn",
+          "-dn",
+          "-frames:v",
+          "150",
+          "-c:v",
+          "libx264",
+          "-preset",
+          "veryfast",
+          "-tune",
+          "zerolatency",
+          "-threads:v",
+          "1",
+          "-x264-params",
+          "threads=1:lookahead_threads=1:sync-lookahead=0:rc-lookahead=0:bframes=0:ref=1",
+          "-profile:v",
+          "main",
+          "-level:v",
+          "3.1",
+          "-crf",
+          "20",
+          "-vf",
+          "scale=in_range=full:out_range=tv:out_color_matrix=bt709,format=yuv420p",
+          "-pix_fmt",
+          "yuv420p",
+          "-colorspace",
+          "bt709",
+          "-color_primaries",
+          "bt709",
+          "-color_trc",
+          "bt709",
+          "-color_range",
+          "tv",
+          "-tag:v",
+          "avc1",
+          "-movflags",
+          "+faststart",
+          "-f",
+          "mp4",
+          "-n",
+          "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final/360_150_2/.reelforge-encode-g5z9s6q7/pending.mp4"
+        ],
+        "source_checkpoint_sha256": {
+          "0": "d559d5a8b5d55a0b004b8bc87199a8d687a4e29d04d4e289f6fda7345a8a514f",
+          "75": "4b18a0f73067ee7e61d691131aade7a0c7f65c00173dc15715099da7c245b3ba",
+          "149": "1ee195068ec06058fd5f006574ca072ac31ec620244a1d7119fb2e118182db34"
+        },
+        "verification": {
+          "passed": true,
+          "mp4_top_level_boxes": [
+            "ftyp",
+            "moov",
+            "free",
+            "mdat"
+          ],
+          "metadata": {
+            "programs": [],
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_tag_string": "avc1",
+                "width": 360,
+                "height": 640,
+                "pix_fmt": "yuv420p",
+                "avg_frame_rate": "30/1",
+                "nb_read_frames": "150"
+              }
+            ],
+            "format": {
+              "duration": "5.000000",
+              "size": "536332"
+            }
+          },
+          "decoded_frames": 150,
+          "unique_decoded_frames": 150,
+          "decode_exit_status": 0,
+          "decode_command": [
+            "/usr/bin/ffmpeg",
+            "-hide_banner",
+            "-loglevel",
+            "error",
+            "-xerror",
+            "-err_detect",
+            "explode",
+            "-threads",
+            "1",
+            "-i",
+            "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final/360_150_2/diagnostic.mp4",
+            "-map",
+            "0:v:0",
+            "-an",
+            "-sn",
+            "-dn",
+            "-threads:v",
+            "1",
+            "-filter_threads",
+            "1",
+            "-pix_fmt",
+            "rgb24",
+            "-fps_mode",
+            "passthrough",
+            "-f",
+            "framehash",
+            "-hash",
+            "sha256",
+            "pipe:1"
+          ],
+          "comparison_scope": "Exact decoded RGB24 hashes on the same native FFmpeg build",
+          "decoded_rgb_sha256_list_digest": "6da10d3cea475a273ab6f7c3ebff153ef798a94a77af042d4543fb7152569652",
+          "decoded_hash_count": 150
+        },
+        "whole_job_memory": {
+          "initial_memory": {
+            "host": {
+              "MemTotal": 10451427328,
+              "MemAvailable": 9780969472,
+              "SwapTotal": 0,
+              "SwapFree": 0
+            },
+            "cgroup_root": "/sys/fs/cgroup",
+            "cgroup": {
+              "memory.max": 8589934592,
+              "memory.current": 435949568,
+              "memory.peak": 827715584,
+              "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+              "memory.swap.max": "max",
+              "memory.swap.current": 0,
+              "cpu.max": "800000 100000"
+            },
+            "effective_available_bytes": 8153985024
+          },
+          "final_memory": {
+            "host": {
+              "MemTotal": 10451427328,
+              "MemAvailable": 9766428672,
+              "SwapTotal": 0,
+              "SwapFree": 0
+            },
+            "cgroup_root": "/sys/fs/cgroup",
+            "cgroup": {
+              "memory.max": 8589934592,
+              "memory.current": 437796864,
+              "memory.peak": 827715584,
+              "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+              "memory.swap.max": "max",
+              "memory.swap.current": 0,
+              "cpu.max": "800000 100000"
+            },
+            "effective_available_bytes": 8152137728
+          },
+          "initial_renderer_rss_bytes": 15765504,
+          "final_renderer_rss_bytes": 17043456,
+          "renderer_peak_rss_bytes": 17702912,
+          "waited_child_max_rss_bytes": 43487232,
+          "encoder_peak_rss_bytes": 43765760,
+          "all_children_peak_rss_bytes": 43765760,
+          "estimated_simultaneous_tree_peak_rss_bytes": 61468672,
+          "sampling_interval_seconds": 0.01,
+          "samples": 140,
+          "job_budget_bytes": 268435456,
+          "reserve_bytes": 67108864,
+          "limit_reason": null,
+          "minimum_effective_available_bytes": 8129359872,
+          "maximum_effective_available_bytes": 8153985024,
+          "memory_observations": 16,
+          "minimum_workspace_free_bytes": 63858638848,
+          "disk_reserve_bytes": 67108864,
+          "wall_seconds": 1.6322170309995272,
+          "caveat": "Sampled sum of RSS can miss transient peaks and double-count shared pages; cgroup counters are shared, not a dedicated job limit."
+        },
+        "environment": {
+          "python": "3.12.14",
+          "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+          "distribution": "Ubuntu 24.04.3 LTS",
+          "ffmpeg_version": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+          "pycairo": "1.29.2",
+          "cairo": "1.18.0"
+        },
+        "resource_scope": "Renderer worker and child tools from preflight through full decode. CPU-only; host swap counters are recorded; not a target-VM certification."
+      },
+      "status": "passed",
+      "repeat_content_matches": true
+    },
+    {
+      "width": 360,
+      "frames": 600,
+      "repeat": 1,
+      "admission_memory": {
+        "host": {
+          "MemTotal": 10451427328,
+          "MemAvailable": 9766379520,
+          "SwapTotal": 0,
+          "SwapFree": 0
+        },
+        "cgroup_root": "/sys/fs/cgroup",
+        "cgroup": {
+          "memory.max": 8589934592,
+          "memory.current": 426913792,
+          "memory.peak": 827715584,
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+          "memory.swap.max": "max",
+          "memory.swap.current": 0,
+          "cpu.max": "800000 100000"
+        },
+        "effective_available_bytes": 8163020800
+      },
+      "exit_status": 0,
+      "supervisor_reconciled": [],
+      "report": {
+        "cpu_seconds": {
+          "renderer": 4.0585595219999995,
+          "children_user": 3.654516,
+          "children_system": 0.25397
+        },
+        "workspace_preflight": {
+          "path": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final/360_600_1",
+          "free_bytes": 63858618368,
+          "total_bytes": 67586535424,
+          "minimum_free_bytes": 268435456,
+          "write_probe": true,
+          "uid": 0,
+          "root_not_required": true
+        },
+        "pressure_before": {
+          "memory": null,
+          "cpu": null,
+          "io": null,
+          "vmstat": {
+            "pswpin": 0,
+            "pswpout": 0,
+            "pgmajfault": 0,
+            "balloon_inflate": 0,
+            "balloon_deflate": 0
+          },
+          "balloon_note": "Guest balloon counters only when exposed; lack of counters does not prove ballooning or host pressure is absent."
+        },
+        "pressure_after": {
+          "memory": null,
+          "cpu": null,
+          "io": null,
+          "vmstat": {
+            "pswpin": 0,
+            "pswpout": 0,
+            "pgmajfault": 0,
+            "balloon_inflate": 0,
+            "balloon_deflate": 0
+          },
+          "balloon_note": "Guest balloon counters only when exposed; lack of counters does not prove ballooning or host pressure is absent."
+        },
+        "cgroup_memory_event_delta": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0
+        },
+        "transaction_clean": true,
+        "output": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final/360_600_1/diagnostic.mp4",
+        "width": 360,
+        "height": 640,
+        "fps": 30,
+        "frames": 600,
+        "render_encode_seconds": 3.998365396999361,
+        "effective_encoded_fps": 150.0613226720799,
+        "file_size_bytes": 1302089,
+        "encoder_exit_status": 0,
+        "encoder_command": [
+          "/usr/bin/ffmpeg",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-nostats",
+          "-nostdin",
+          "-max_alloc",
+          "67108864",
+          "-threads",
+          "1",
+          "-filter_threads",
+          "1",
+          "-filter_complex_threads",
+          "1",
+          "-f",
+          "rawvideo",
+          "-pixel_format",
+          "bgra",
+          "-video_size",
+          "360x640",
+          "-framerate",
+          "30",
+          "-i",
+          "pipe:0",
+          "-an",
+          "-sn",
+          "-dn",
+          "-frames:v",
+          "600",
+          "-c:v",
+          "libx264",
+          "-preset",
+          "veryfast",
+          "-tune",
+          "zerolatency",
+          "-threads:v",
+          "1",
+          "-x264-params",
+          "threads=1:lookahead_threads=1:sync-lookahead=0:rc-lookahead=0:bframes=0:ref=1",
+          "-profile:v",
+          "main",
+          "-level:v",
+          "3.1",
+          "-crf",
+          "20",
+          "-vf",
+          "scale=in_range=full:out_range=tv:out_color_matrix=bt709,format=yuv420p",
+          "-pix_fmt",
+          "yuv420p",
+          "-colorspace",
+          "bt709",
+          "-color_primaries",
+          "bt709",
+          "-color_trc",
+          "bt709",
+          "-color_range",
+          "tv",
+          "-tag:v",
+          "avc1",
+          "-movflags",
+          "+faststart",
+          "-f",
+          "mp4",
+          "-n",
+          "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final/360_600_1/.reelforge-encode-eraiy9gt/pending.mp4"
+        ],
+        "source_checkpoint_sha256": {
+          "0": "d559d5a8b5d55a0b004b8bc87199a8d687a4e29d04d4e289f6fda7345a8a514f",
+          "300": "94c0a17ef3be891b02d528abc3dcaddd9a9c5ee5fc60adeadeb91827da5b2f4c",
+          "599": "1ee195068ec06058fd5f006574ca072ac31ec620244a1d7119fb2e118182db34"
+        },
+        "verification": {
+          "passed": true,
+          "mp4_top_level_boxes": [
+            "ftyp",
+            "moov",
+            "free",
+            "mdat"
+          ],
+          "metadata": {
+            "programs": [],
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_tag_string": "avc1",
+                "width": 360,
+                "height": 640,
+                "pix_fmt": "yuv420p",
+                "avg_frame_rate": "30/1",
+                "nb_read_frames": "600"
+              }
+            ],
+            "format": {
+              "duration": "20.000000",
+              "size": "1302089"
+            }
+          },
+          "decoded_frames": 600,
+          "unique_decoded_frames": 600,
+          "decode_exit_status": 0,
+          "decode_command": [
+            "/usr/bin/ffmpeg",
+            "-hide_banner",
+            "-loglevel",
+            "error",
+            "-xerror",
+            "-err_detect",
+            "explode",
+            "-threads",
+            "1",
+            "-i",
+            "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final/360_600_1/diagnostic.mp4",
+            "-map",
+            "0:v:0",
+            "-an",
+            "-sn",
+            "-dn",
+            "-threads:v",
+            "1",
+            "-filter_threads",
+            "1",
+            "-pix_fmt",
+            "rgb24",
+            "-fps_mode",
+            "passthrough",
+            "-f",
+            "framehash",
+            "-hash",
+            "sha256",
+            "pipe:1"
+          ],
+          "comparison_scope": "Exact decoded RGB24 hashes on the same native FFmpeg build",
+          "decoded_rgb_sha256_list_digest": "bc9e401af3bfcba577ab7328c5434c00fab183e5398f4c4013506af804be0f26",
+          "decoded_hash_count": 600
+        },
+        "whole_job_memory": {
+          "initial_memory": {
+            "host": {
+              "MemTotal": 10451427328,
+              "MemAvailable": 9759600640,
+              "SwapTotal": 0,
+              "SwapFree": 0
+            },
+            "cgroup_root": "/sys/fs/cgroup",
+            "cgroup": {
+              "memory.max": 8589934592,
+              "memory.current": 436809728,
+              "memory.peak": 827715584,
+              "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+              "memory.swap.max": "max",
+              "memory.swap.current": 0,
+              "cpu.max": "800000 100000"
+            },
+            "effective_available_bytes": 8153124864
+          },
+          "final_memory": {
+            "host": {
+              "MemTotal": 10451427328,
+              "MemAvailable": 9742462976,
+              "SwapTotal": 0,
+              "SwapFree": 0
+            },
+            "cgroup_root": "/sys/fs/cgroup",
+            "cgroup": {
+              "memory.max": 8589934592,
+              "memory.current": 439177216,
+              "memory.peak": 827715584,
+              "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+              "memory.swap.max": "max",
+              "memory.swap.current": 0,
+              "cpu.max": "800000 100000"
+            },
+            "effective_available_bytes": 8150757376
+          },
+          "initial_renderer_rss_bytes": 15773696,
+          "final_renderer_rss_bytes": 17244160,
+          "renderer_peak_rss_bytes": 17915904,
+          "waited_child_max_rss_bytes": 43405312,
+          "encoder_peak_rss_bytes": 42950656,
+          "all_children_peak_rss_bytes": 43782144,
+          "estimated_simultaneous_tree_peak_rss_bytes": 60866560,
+          "sampling_interval_seconds": 0.01,
+          "samples": 480,
+          "job_budget_bytes": 268435456,
+          "reserve_bytes": 67108864,
+          "limit_reason": null,
+          "minimum_effective_available_bytes": 8126685184,
+          "maximum_effective_available_bytes": 8153124864,
+          "memory_observations": 50,
+          "minimum_workspace_free_bytes": 63857315840,
+          "disk_reserve_bytes": 67108864,
+          "wall_seconds": 5.509675772000264,
+          "caveat": "Sampled sum of RSS can miss transient peaks and double-count shared pages; cgroup counters are shared, not a dedicated job limit."
+        },
+        "environment": {
+          "python": "3.12.14",
+          "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+          "distribution": "Ubuntu 24.04.3 LTS",
+          "ffmpeg_version": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+          "pycairo": "1.29.2",
+          "cairo": "1.18.0"
+        },
+        "resource_scope": "Renderer worker and child tools from preflight through full decode. CPU-only; host swap counters are recorded; not a target-VM certification."
+      },
+      "status": "passed",
+      "repeat_content_matches": true
+    },
+    {
+      "width": 360,
+      "frames": 600,
+      "repeat": 2,
+      "admission_memory": {
+        "host": {
+          "MemTotal": 10451427328,
+          "MemAvailable": 9742360576,
+          "SwapTotal": 0,
+          "SwapFree": 0
+        },
+        "cgroup_root": "/sys/fs/cgroup",
+        "cgroup": {
+          "memory.max": 8589934592,
+          "memory.current": 428441600,
+          "memory.peak": 827715584,
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+          "memory.swap.max": "max",
+          "memory.swap.current": 0,
+          "cpu.max": "800000 100000"
+        },
+        "effective_available_bytes": 8161492992
+      },
+      "exit_status": 0,
+      "supervisor_reconciled": [],
+      "report": {
+        "cpu_seconds": {
+          "renderer": 4.448816429,
+          "children_user": 3.952876,
+          "children_system": 0.23389
+        },
+        "workspace_preflight": {
+          "path": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final/360_600_2",
+          "free_bytes": 63857258496,
+          "total_bytes": 67586535424,
+          "minimum_free_bytes": 268435456,
+          "write_probe": true,
+          "uid": 0,
+          "root_not_required": true
+        },
+        "pressure_before": {
+          "memory": null,
+          "cpu": null,
+          "io": null,
+          "vmstat": {
+            "pswpin": 0,
+            "pswpout": 0,
+            "pgmajfault": 0,
+            "balloon_inflate": 0,
+            "balloon_deflate": 0
+          },
+          "balloon_note": "Guest balloon counters only when exposed; lack of counters does not prove ballooning or host pressure is absent."
+        },
+        "pressure_after": {
+          "memory": null,
+          "cpu": null,
+          "io": null,
+          "vmstat": {
+            "pswpin": 0,
+            "pswpout": 0,
+            "pgmajfault": 0,
+            "balloon_inflate": 0,
+            "balloon_deflate": 0
+          },
+          "balloon_note": "Guest balloon counters only when exposed; lack of counters does not prove ballooning or host pressure is absent."
+        },
+        "cgroup_memory_event_delta": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0
+        },
+        "transaction_clean": true,
+        "output": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final/360_600_2/diagnostic.mp4",
+        "width": 360,
+        "height": 640,
+        "fps": 30,
+        "frames": 600,
+        "render_encode_seconds": 4.336168416999499,
+        "effective_encoded_fps": 138.3710092181296,
+        "file_size_bytes": 1302089,
+        "encoder_exit_status": 0,
+        "encoder_command": [
+          "/usr/bin/ffmpeg",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-nostats",
+          "-nostdin",
+          "-max_alloc",
+          "67108864",
+          "-threads",
+          "1",
+          "-filter_threads",
+          "1",
+          "-filter_complex_threads",
+          "1",
+          "-f",
+          "rawvideo",
+          "-pixel_format",
+          "bgra",
+          "-video_size",
+          "360x640",
+          "-framerate",
+          "30",
+          "-i",
+          "pipe:0",
+          "-an",
+          "-sn",
+          "-dn",
+          "-frames:v",
+          "600",
+          "-c:v",
+          "libx264",
+          "-preset",
+          "veryfast",
+          "-tune",
+          "zerolatency",
+          "-threads:v",
+          "1",
+          "-x264-params",
+          "threads=1:lookahead_threads=1:sync-lookahead=0:rc-lookahead=0:bframes=0:ref=1",
+          "-profile:v",
+          "main",
+          "-level:v",
+          "3.1",
+          "-crf",
+          "20",
+          "-vf",
+          "scale=in_range=full:out_range=tv:out_color_matrix=bt709,format=yuv420p",
+          "-pix_fmt",
+          "yuv420p",
+          "-colorspace",
+          "bt709",
+          "-color_primaries",
+          "bt709",
+          "-color_trc",
+          "bt709",
+          "-color_range",
+          "tv",
+          "-tag:v",
+          "avc1",
+          "-movflags",
+          "+faststart",
+          "-f",
+          "mp4",
+          "-n",
+          "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final/360_600_2/.reelforge-encode-77ziu6b3/pending.mp4"
+        ],
+        "source_checkpoint_sha256": {
+          "0": "d559d5a8b5d55a0b004b8bc87199a8d687a4e29d04d4e289f6fda7345a8a514f",
+          "300": "94c0a17ef3be891b02d528abc3dcaddd9a9c5ee5fc60adeadeb91827da5b2f4c",
+          "599": "1ee195068ec06058fd5f006574ca072ac31ec620244a1d7119fb2e118182db34"
+        },
+        "verification": {
+          "passed": true,
+          "mp4_top_level_boxes": [
+            "ftyp",
+            "moov",
+            "free",
+            "mdat"
+          ],
+          "metadata": {
+            "programs": [],
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_tag_string": "avc1",
+                "width": 360,
+                "height": 640,
+                "pix_fmt": "yuv420p",
+                "avg_frame_rate": "30/1",
+                "nb_read_frames": "600"
+              }
+            ],
+            "format": {
+              "duration": "20.000000",
+              "size": "1302089"
+            }
+          },
+          "decoded_frames": 600,
+          "unique_decoded_frames": 600,
+          "decode_exit_status": 0,
+          "decode_command": [
+            "/usr/bin/ffmpeg",
+            "-hide_banner",
+            "-loglevel",
+            "error",
+            "-xerror",
+            "-err_detect",
+            "explode",
+            "-threads",
+            "1",
+            "-i",
+            "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final/360_600_2/diagnostic.mp4",
+            "-map",
+            "0:v:0",
+            "-an",
+            "-sn",
+            "-dn",
+            "-threads:v",
+            "1",
+            "-filter_threads",
+            "1",
+            "-pix_fmt",
+            "rgb24",
+            "-fps_mode",
+            "passthrough",
+            "-f",
+            "framehash",
+            "-hash",
+            "sha256",
+            "pipe:1"
+          ],
+          "comparison_scope": "Exact decoded RGB24 hashes on the same native FFmpeg build",
+          "decoded_rgb_sha256_list_digest": "bc9e401af3bfcba577ab7328c5434c00fab183e5398f4c4013506af804be0f26",
+          "decoded_hash_count": 600
+        },
+        "whole_job_memory": {
+          "initial_memory": {
+            "host": {
+              "MemTotal": 10451427328,
+              "MemAvailable": 9742336000,
+              "SwapTotal": 0,
+              "SwapFree": 0
+            },
+            "cgroup_root": "/sys/fs/cgroup",
+            "cgroup": {
+              "memory.max": 8589934592,
+              "memory.current": 438296576,
+              "memory.peak": 827715584,
+              "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+              "memory.swap.max": "max",
+              "memory.swap.current": 0,
+              "cpu.max": "800000 100000"
+            },
+            "effective_available_bytes": 8151638016
+          },
+          "final_memory": {
+            "host": {
+              "MemTotal": 10451427328,
+              "MemAvailable": 9741586432,
+              "SwapTotal": 0,
+              "SwapFree": 0
+            },
+            "cgroup_root": "/sys/fs/cgroup",
+            "cgroup": {
+              "memory.max": 8589934592,
+              "memory.current": 440868864,
+              "memory.peak": 827715584,
+              "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+              "memory.swap.max": "max",
+              "memory.swap.current": 0,
+              "cpu.max": "800000 100000"
+            },
+            "effective_available_bytes": 8149065728
+          },
+          "initial_renderer_rss_bytes": 15769600,
+          "final_renderer_rss_bytes": 17207296,
+          "renderer_peak_rss_bytes": 17915904,
+          "waited_child_max_rss_bytes": 43405312,
+          "encoder_peak_rss_bytes": 43044864,
+          "all_children_peak_rss_bytes": 43786240,
+          "estimated_simultaneous_tree_peak_rss_bytes": 60862464,
+          "sampling_interval_seconds": 0.01,
+          "samples": 503,
+          "job_budget_bytes": 268435456,
+          "reserve_bytes": 67108864,
+          "limit_reason": null,
+          "minimum_effective_available_bytes": 8125489152,
+          "maximum_effective_available_bytes": 8151638016,
+          "memory_observations": 52,
+          "minimum_workspace_free_bytes": 63855955968,
+          "disk_reserve_bytes": 67108864,
+          "wall_seconds": 5.891704364999896,
+          "caveat": "Sampled sum of RSS can miss transient peaks and double-count shared pages; cgroup counters are shared, not a dedicated job limit."
+        },
+        "environment": {
+          "python": "3.12.14",
+          "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+          "distribution": "Ubuntu 24.04.3 LTS",
+          "ffmpeg_version": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+          "pycairo": "1.29.2",
+          "cairo": "1.18.0"
+        },
+        "resource_scope": "Renderer worker and child tools from preflight through full decode. CPU-only; host swap counters are recorded; not a target-VM certification."
+      },
+      "status": "passed",
+      "repeat_content_matches": true
+    },
+    {
+      "width": 720,
+      "frames": 150,
+      "repeat": 1,
+      "admission_memory": {
+        "host": {
+          "MemTotal": 10451427328,
+          "MemAvailable": 9741520896,
+          "SwapTotal": 0,
+          "SwapFree": 0
+        },
+        "cgroup_root": "/sys/fs/cgroup",
+        "cgroup": {
+          "memory.max": 8589934592,
+          "memory.current": 429600768,
+          "memory.peak": 827715584,
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+          "memory.swap.max": "max",
+          "memory.swap.current": 0,
+          "cpu.max": "800000 100000"
+        },
+        "effective_available_bytes": 8160333824
+      },
+      "exit_status": 0,
+      "supervisor_reconciled": [
+        "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final/720_150_1/.reelforge-encode-6s5ptkl8/pending.mp4"
+      ],
+      "report": {
+        "cpu_seconds": {
+          "renderer": 2.293931761,
+          "children_user": 3.798737,
+          "children_system": 0.343085
+        },
+        "workspace_preflight": {
+          "path": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final/720_150_1",
+          "free_bytes": 63855898624,
+          "total_bytes": 67586535424,
+          "minimum_free_bytes": 268435456,
+          "write_probe": true,
+          "uid": 0,
+          "root_not_required": true
+        },
+        "pressure_before": {
+          "memory": null,
+          "cpu": null,
+          "io": null,
+          "vmstat": {
+            "pswpin": 0,
+            "pswpout": 0,
+            "pgmajfault": 0,
+            "balloon_inflate": 0,
+            "balloon_deflate": 0
+          },
+          "balloon_note": "Guest balloon counters only when exposed; lack of counters does not prove ballooning or host pressure is absent."
+        },
+        "pressure_after": {
+          "memory": null,
+          "cpu": null,
+          "io": null,
+          "vmstat": {
+            "pswpin": 0,
+            "pswpout": 0,
+            "pgmajfault": 0,
+            "balloon_inflate": 0,
+            "balloon_deflate": 0
+          },
+          "balloon_note": "Guest balloon counters only when exposed; lack of counters does not prove ballooning or host pressure is absent."
+        },
+        "cgroup_memory_event_delta": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0
+        },
+        "transaction_clean": false,
+        "output": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final/720_150_1/diagnostic.mp4",
+        "width": 720,
+        "height": 1280,
+        "fps": 30,
+        "frames": 150,
+        "render_encode_seconds": 2.243128607999097,
+        "effective_encoded_fps": 66.87088714623553,
+        "file_size_bytes": 1415235,
+        "encoder_exit_status": 0,
+        "encoder_command": [
+          "/usr/bin/ffmpeg",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-nostats",
+          "-nostdin",
+          "-max_alloc",
+          "67108864",
+          "-threads",
+          "1",
+          "-filter_threads",
+          "1",
+          "-filter_complex_threads",
+          "1",
+          "-f",
+          "rawvideo",
+          "-pixel_format",
+          "bgra",
+          "-video_size",
+          "720x1280",
+          "-framerate",
+          "30",
+          "-i",
+          "pipe:0",
+          "-an",
+          "-sn",
+          "-dn",
+          "-frames:v",
+          "150",
+          "-c:v",
+          "libx264",
+          "-preset",
+          "veryfast",
+          "-tune",
+          "zerolatency",
+          "-threads:v",
+          "1",
+          "-x264-params",
+          "threads=1:lookahead_threads=1:sync-lookahead=0:rc-lookahead=0:bframes=0:ref=1",
+          "-profile:v",
+          "main",
+          "-level:v",
+          "3.1",
+          "-crf",
+          "20",
+          "-vf",
+          "scale=in_range=full:out_range=tv:out_color_matrix=bt709,format=yuv420p",
+          "-pix_fmt",
+          "yuv420p",
+          "-colorspace",
+          "bt709",
+          "-color_primaries",
+          "bt709",
+          "-color_trc",
+          "bt709",
+          "-color_range",
+          "tv",
+          "-tag:v",
+          "avc1",
+          "-movflags",
+          "+faststart",
+          "-f",
+          "mp4",
+          "-n",
+          "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final/720_150_1/.reelforge-encode-6s5ptkl8/pending.mp4"
+        ],
+        "source_checkpoint_sha256": {
+          "0": "4eb71dfaa4cb117de071543f0e92dfcfa4618a71ff3f9e70975852afeb6449df",
+          "75": "d568810f9c64fabe6ee719d8f45a32a5663663f909a833f32e0453545ec786cb",
+          "149": "67eab8e4f9e7291b7d2c28f71e6e7d3b23c2edbc1c19ccd27773d28024b68a59"
+        },
+        "verification": {
+          "passed": true,
+          "mp4_top_level_boxes": [
+            "ftyp",
+            "moov",
+            "free",
+            "mdat"
+          ],
+          "metadata": {
+            "programs": [],
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_tag_string": "avc1",
+                "width": 720,
+                "height": 1280,
+                "pix_fmt": "yuv420p",
+                "avg_frame_rate": "30/1",
+                "nb_read_frames": "150"
+              }
+            ],
+            "format": {
+              "duration": "5.000000",
+              "size": "1415235"
+            }
+          },
+          "decoded_frames": 150,
+          "unique_decoded_frames": 150,
+          "decode_exit_status": 0,
+          "decode_command": [
+            "/usr/bin/ffmpeg",
+            "-hide_banner",
+            "-loglevel",
+            "error",
+            "-xerror",
+            "-err_detect",
+            "explode",
+            "-threads",
+            "1",
+            "-i",
+            "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final/720_150_1/diagnostic.mp4",
+            "-map",
+            "0:v:0",
+            "-an",
+            "-sn",
+            "-dn",
+            "-threads:v",
+            "1",
+            "-filter_threads",
+            "1",
+            "-pix_fmt",
+            "rgb24",
+            "-fps_mode",
+            "passthrough",
+            "-f",
+            "framehash",
+            "-hash",
+            "sha256",
+            "pipe:1"
+          ],
+          "comparison_scope": "Exact decoded RGB24 hashes on the same native FFmpeg build",
+          "decoded_rgb_sha256_list_digest": "50c6bec9c9172fea34a4f923f304a6052a2619ffdcbb81f79038bdfa4ff06371",
+          "decoded_hash_count": 150
+        },
+        "whole_job_memory": {
+          "initial_memory": {
+            "host": {
+              "MemTotal": 10451427328,
+              "MemAvailable": 9741340672,
+              "SwapTotal": 0,
+              "SwapFree": 0
+            },
+            "cgroup_root": "/sys/fs/cgroup",
+            "cgroup": {
+              "memory.max": 8589934592,
+              "memory.current": 439697408,
+              "memory.peak": 827715584,
+              "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+              "memory.swap.max": "max",
+              "memory.swap.current": 0,
+              "cpu.max": "800000 100000"
+            },
+            "effective_available_bytes": 8150237184
+          },
+          "final_memory": {
+            "host": {
+              "MemTotal": 10451427328,
+              "MemAvailable": 9708634112,
+              "SwapTotal": 0,
+              "SwapFree": 0
+            },
+            "cgroup_root": "/sys/fs/cgroup",
+            "cgroup": {
+              "memory.max": 8589934592,
+              "memory.current": 442204160,
+              "memory.peak": 827715584,
+              "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+              "memory.swap.max": "max",
+              "memory.swap.current": 0,
+              "cpu.max": "800000 100000"
+            },
+            "effective_available_bytes": 8147730432
+          },
+          "initial_renderer_rss_bytes": 15773696,
+          "final_renderer_rss_bytes": 17063936,
+          "renderer_peak_rss_bytes": 20701184,
+          "waited_child_max_rss_bytes": 71749632,
+          "encoder_peak_rss_bytes": 69529600,
+          "all_children_peak_rss_bytes": 72228864,
+          "estimated_simultaneous_tree_peak_rss_bytes": 90210304,
+          "sampling_interval_seconds": 0.01,
+          "samples": 345,
+          "job_budget_bytes": 268435456,
+          "reserve_bytes": 67108864,
+          "limit_reason": null,
+          "minimum_effective_available_bytes": 8094916608,
+          "maximum_effective_available_bytes": 8150237184,
+          "memory_observations": 36,
+          "minimum_workspace_free_bytes": 63854473216,
+          "disk_reserve_bytes": 67108864,
+          "wall_seconds": 3.896760413001175,
+          "caveat": "Sampled sum of RSS can miss transient peaks and double-count shared pages; cgroup counters are shared, not a dedicated job limit."
+        },
+        "environment": {
+          "python": "3.12.14",
+          "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+          "distribution": "Ubuntu 24.04.3 LTS",
+          "ffmpeg_version": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+          "pycairo": "1.29.2",
+          "cairo": "1.18.0"
+        },
+        "resource_scope": "Renderer worker and child tools from preflight through full decode. CPU-only; host swap counters are recorded; not a target-VM certification."
+      },
+      "status": "passed",
+      "repeat_content_matches": true
+    },
+    {
+      "width": 720,
+      "frames": 150,
+      "repeat": 2,
+      "admission_memory": {
+        "host": {
+          "MemTotal": 10451427328,
+          "MemAvailable": 9709576192,
+          "SwapTotal": 0,
+          "SwapFree": 0
+        },
+        "cgroup_root": "/sys/fs/cgroup",
+        "cgroup": {
+          "memory.max": 8589934592,
+          "memory.current": 431001600,
+          "memory.peak": 827715584,
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+          "memory.swap.max": "max",
+          "memory.swap.current": 0,
+          "cpu.max": "800000 100000"
+        },
+        "effective_available_bytes": 8158932992
+      },
+      "exit_status": 0,
+      "supervisor_reconciled": [
+        "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final/720_150_2/.reelforge-encode-p9p44hh1/pending.mp4"
+      ],
+      "report": {
+        "cpu_seconds": {
+          "renderer": 2.362734111,
+          "children_user": 3.853816,
+          "children_system": 0.24445999999999998
+        },
+        "workspace_preflight": {
+          "path": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final/720_150_2",
+          "free_bytes": 63854456832,
+          "total_bytes": 67586535424,
+          "minimum_free_bytes": 268435456,
+          "write_probe": true,
+          "uid": 0,
+          "root_not_required": true
+        },
+        "pressure_before": {
+          "memory": null,
+          "cpu": null,
+          "io": null,
+          "vmstat": {
+            "pswpin": 0,
+            "pswpout": 0,
+            "pgmajfault": 0,
+            "balloon_inflate": 0,
+            "balloon_deflate": 0
+          },
+          "balloon_note": "Guest balloon counters only when exposed; lack of counters does not prove ballooning or host pressure is absent."
+        },
+        "pressure_after": {
+          "memory": null,
+          "cpu": null,
+          "io": null,
+          "vmstat": {
+            "pswpin": 0,
+            "pswpout": 0,
+            "pgmajfault": 0,
+            "balloon_inflate": 0,
+            "balloon_deflate": 0
+          },
+          "balloon_note": "Guest balloon counters only when exposed; lack of counters does not prove ballooning or host pressure is absent."
+        },
+        "cgroup_memory_event_delta": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0
+        },
+        "transaction_clean": false,
+        "output": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final/720_150_2/diagnostic.mp4",
+        "width": 720,
+        "height": 1280,
+        "fps": 30,
+        "frames": 150,
+        "render_encode_seconds": 2.3157879579994187,
+        "effective_encoded_fps": 64.77276966652128,
+        "file_size_bytes": 1415235,
+        "encoder_exit_status": 0,
+        "encoder_command": [
+          "/usr/bin/ffmpeg",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-nostats",
+          "-nostdin",
+          "-max_alloc",
+          "67108864",
+          "-threads",
+          "1",
+          "-filter_threads",
+          "1",
+          "-filter_complex_threads",
+          "1",
+          "-f",
+          "rawvideo",
+          "-pixel_format",
+          "bgra",
+          "-video_size",
+          "720x1280",
+          "-framerate",
+          "30",
+          "-i",
+          "pipe:0",
+          "-an",
+          "-sn",
+          "-dn",
+          "-frames:v",
+          "150",
+          "-c:v",
+          "libx264",
+          "-preset",
+          "veryfast",
+          "-tune",
+          "zerolatency",
+          "-threads:v",
+          "1",
+          "-x264-params",
+          "threads=1:lookahead_threads=1:sync-lookahead=0:rc-lookahead=0:bframes=0:ref=1",
+          "-profile:v",
+          "main",
+          "-level:v",
+          "3.1",
+          "-crf",
+          "20",
+          "-vf",
+          "scale=in_range=full:out_range=tv:out_color_matrix=bt709,format=yuv420p",
+          "-pix_fmt",
+          "yuv420p",
+          "-colorspace",
+          "bt709",
+          "-color_primaries",
+          "bt709",
+          "-color_trc",
+          "bt709",
+          "-color_range",
+          "tv",
+          "-tag:v",
+          "avc1",
+          "-movflags",
+          "+faststart",
+          "-f",
+          "mp4",
+          "-n",
+          "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final/720_150_2/.reelforge-encode-p9p44hh1/pending.mp4"
+        ],
+        "source_checkpoint_sha256": {
+          "0": "4eb71dfaa4cb117de071543f0e92dfcfa4618a71ff3f9e70975852afeb6449df",
+          "75": "d568810f9c64fabe6ee719d8f45a32a5663663f909a833f32e0453545ec786cb",
+          "149": "67eab8e4f9e7291b7d2c28f71e6e7d3b23c2edbc1c19ccd27773d28024b68a59"
+        },
+        "verification": {
+          "passed": true,
+          "mp4_top_level_boxes": [
+            "ftyp",
+            "moov",
+            "free",
+            "mdat"
+          ],
+          "metadata": {
+            "programs": [],
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_tag_string": "avc1",
+                "width": 720,
+                "height": 1280,
+                "pix_fmt": "yuv420p",
+                "avg_frame_rate": "30/1",
+                "nb_read_frames": "150"
+              }
+            ],
+            "format": {
+              "duration": "5.000000",
+              "size": "1415235"
+            }
+          },
+          "decoded_frames": 150,
+          "unique_decoded_frames": 150,
+          "decode_exit_status": 0,
+          "decode_command": [
+            "/usr/bin/ffmpeg",
+            "-hide_banner",
+            "-loglevel",
+            "error",
+            "-xerror",
+            "-err_detect",
+            "explode",
+            "-threads",
+            "1",
+            "-i",
+            "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final/720_150_2/diagnostic.mp4",
+            "-map",
+            "0:v:0",
+            "-an",
+            "-sn",
+            "-dn",
+            "-threads:v",
+            "1",
+            "-filter_threads",
+            "1",
+            "-pix_fmt",
+            "rgb24",
+            "-fps_mode",
+            "passthrough",
+            "-f",
+            "framehash",
+            "-hash",
+            "sha256",
+            "pipe:1"
+          ],
+          "comparison_scope": "Exact decoded RGB24 hashes on the same native FFmpeg build",
+          "decoded_rgb_sha256_list_digest": "50c6bec9c9172fea34a4f923f304a6052a2619ffdcbb81f79038bdfa4ff06371",
+          "decoded_hash_count": 150
+        },
+        "whole_job_memory": {
+          "initial_memory": {
+            "host": {
+              "MemTotal": 10451427328,
+              "MemAvailable": 9709449216,
+              "SwapTotal": 0,
+              "SwapFree": 0
+            },
+            "cgroup_root": "/sys/fs/cgroup",
+            "cgroup": {
+              "memory.max": 8589934592,
+              "memory.current": 441352192,
+              "memory.peak": 827715584,
+              "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+              "memory.swap.max": "max",
+              "memory.swap.current": 0,
+              "cpu.max": "800000 100000"
+            },
+            "effective_available_bytes": 8148582400
+          },
+          "final_memory": {
+            "host": {
+              "MemTotal": 10451427328,
+              "MemAvailable": 9666265088,
+              "SwapTotal": 0,
+              "SwapFree": 0
+            },
+            "cgroup_root": "/sys/fs/cgroup",
+            "cgroup": {
+              "memory.max": 8589934592,
+              "memory.current": 444276736,
+              "memory.peak": 827715584,
+              "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+              "memory.swap.max": "max",
+              "memory.swap.current": 0,
+              "cpu.max": "800000 100000"
+            },
+            "effective_available_bytes": 8145657856
+          },
+          "initial_renderer_rss_bytes": 15769600,
+          "final_renderer_rss_bytes": 17068032,
+          "renderer_peak_rss_bytes": 20697088,
+          "waited_child_max_rss_bytes": 71868416,
+          "encoder_peak_rss_bytes": 69525504,
+          "all_children_peak_rss_bytes": 72220672,
+          "estimated_simultaneous_tree_peak_rss_bytes": 90202112,
+          "sampling_interval_seconds": 0.01,
+          "samples": 348,
+          "job_budget_bytes": 268435456,
+          "reserve_bytes": 67108864,
+          "limit_reason": null,
+          "minimum_effective_available_bytes": 8092917760,
+          "maximum_effective_available_bytes": 8148582400,
+          "memory_observations": 36,
+          "minimum_workspace_free_bytes": 63853031424,
+          "disk_reserve_bytes": 67108864,
+          "wall_seconds": 3.904336161000174,
+          "caveat": "Sampled sum of RSS can miss transient peaks and double-count shared pages; cgroup counters are shared, not a dedicated job limit."
+        },
+        "environment": {
+          "python": "3.12.14",
+          "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+          "distribution": "Ubuntu 24.04.3 LTS",
+          "ffmpeg_version": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+          "pycairo": "1.29.2",
+          "cairo": "1.18.0"
+        },
+        "resource_scope": "Renderer worker and child tools from preflight through full decode. CPU-only; host swap counters are recorded; not a target-VM certification."
+      },
+      "status": "passed",
+      "repeat_content_matches": true
+    },
+    {
+      "width": 720,
+      "frames": 600,
+      "repeat": 1,
+      "admission_memory": {
+        "host": {
+          "MemTotal": 10451427328,
+          "MemAvailable": 9659117568,
+          "SwapTotal": 0,
+          "SwapFree": 0
+        },
+        "cgroup_root": "/sys/fs/cgroup",
+        "cgroup": {
+          "memory.max": 8589934592,
+          "memory.current": 432738304,
+          "memory.peak": 827715584,
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+          "memory.swap.max": "max",
+          "memory.swap.current": 0,
+          "cpu.max": "800000 100000"
+        },
+        "effective_available_bytes": 8157196288
+      },
+      "exit_status": 0,
+      "supervisor_reconciled": [],
+      "report": {
+        "cpu_seconds": {
+          "renderer": 8.709349877,
+          "children_user": 12.911433,
+          "children_system": 0.735494
+        },
+        "workspace_preflight": {
+          "path": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final/720_600_1",
+          "free_bytes": 63853015040,
+          "total_bytes": 67586535424,
+          "minimum_free_bytes": 268435456,
+          "write_probe": true,
+          "uid": 0,
+          "root_not_required": true
+        },
+        "pressure_before": {
+          "memory": null,
+          "cpu": null,
+          "io": null,
+          "vmstat": {
+            "pswpin": 0,
+            "pswpout": 0,
+            "pgmajfault": 0,
+            "balloon_inflate": 0,
+            "balloon_deflate": 0
+          },
+          "balloon_note": "Guest balloon counters only when exposed; lack of counters does not prove ballooning or host pressure is absent."
+        },
+        "pressure_after": {
+          "memory": null,
+          "cpu": null,
+          "io": null,
+          "vmstat": {
+            "pswpin": 0,
+            "pswpout": 0,
+            "pgmajfault": 0,
+            "balloon_inflate": 0,
+            "balloon_deflate": 0
+          },
+          "balloon_note": "Guest balloon counters only when exposed; lack of counters does not prove ballooning or host pressure is absent."
+        },
+        "cgroup_memory_event_delta": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0
+        },
+        "transaction_clean": true,
+        "output": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final/720_600_1/diagnostic.mp4",
+        "width": 720,
+        "height": 1280,
+        "fps": 30,
+        "frames": 600,
+        "render_encode_seconds": 8.38672180499998,
+        "effective_encoded_fps": 71.54166001336698,
+        "file_size_bytes": 3534995,
+        "encoder_exit_status": 0,
+        "encoder_command": [
+          "/usr/bin/ffmpeg",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-nostats",
+          "-nostdin",
+          "-max_alloc",
+          "67108864",
+          "-threads",
+          "1",
+          "-filter_threads",
+          "1",
+          "-filter_complex_threads",
+          "1",
+          "-f",
+          "rawvideo",
+          "-pixel_format",
+          "bgra",
+          "-video_size",
+          "720x1280",
+          "-framerate",
+          "30",
+          "-i",
+          "pipe:0",
+          "-an",
+          "-sn",
+          "-dn",
+          "-frames:v",
+          "600",
+          "-c:v",
+          "libx264",
+          "-preset",
+          "veryfast",
+          "-tune",
+          "zerolatency",
+          "-threads:v",
+          "1",
+          "-x264-params",
+          "threads=1:lookahead_threads=1:sync-lookahead=0:rc-lookahead=0:bframes=0:ref=1",
+          "-profile:v",
+          "main",
+          "-level:v",
+          "3.1",
+          "-crf",
+          "20",
+          "-vf",
+          "scale=in_range=full:out_range=tv:out_color_matrix=bt709,format=yuv420p",
+          "-pix_fmt",
+          "yuv420p",
+          "-colorspace",
+          "bt709",
+          "-color_primaries",
+          "bt709",
+          "-color_trc",
+          "bt709",
+          "-color_range",
+          "tv",
+          "-tag:v",
+          "avc1",
+          "-movflags",
+          "+faststart",
+          "-f",
+          "mp4",
+          "-n",
+          "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final/720_600_1/.reelforge-encode-h42kjvul/pending.mp4"
+        ],
+        "source_checkpoint_sha256": {
+          "0": "4eb71dfaa4cb117de071543f0e92dfcfa4618a71ff3f9e70975852afeb6449df",
+          "300": "a7a5593875c9c3783a9f0da378023ab7759ffa43130e0ae82b1d1ba3336dd82d",
+          "599": "67eab8e4f9e7291b7d2c28f71e6e7d3b23c2edbc1c19ccd27773d28024b68a59"
+        },
+        "verification": {
+          "passed": true,
+          "mp4_top_level_boxes": [
+            "ftyp",
+            "moov",
+            "free",
+            "mdat"
+          ],
+          "metadata": {
+            "programs": [],
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_tag_string": "avc1",
+                "width": 720,
+                "height": 1280,
+                "pix_fmt": "yuv420p",
+                "avg_frame_rate": "30/1",
+                "nb_read_frames": "600"
+              }
+            ],
+            "format": {
+              "duration": "20.000000",
+              "size": "3534995"
+            }
+          },
+          "decoded_frames": 600,
+          "unique_decoded_frames": 600,
+          "decode_exit_status": 0,
+          "decode_command": [
+            "/usr/bin/ffmpeg",
+            "-hide_banner",
+            "-loglevel",
+            "error",
+            "-xerror",
+            "-err_detect",
+            "explode",
+            "-threads",
+            "1",
+            "-i",
+            "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final/720_600_1/diagnostic.mp4",
+            "-map",
+            "0:v:0",
+            "-an",
+            "-sn",
+            "-dn",
+            "-threads:v",
+            "1",
+            "-filter_threads",
+            "1",
+            "-pix_fmt",
+            "rgb24",
+            "-fps_mode",
+            "passthrough",
+            "-f",
+            "framehash",
+            "-hash",
+            "sha256",
+            "pipe:1"
+          ],
+          "comparison_scope": "Exact decoded RGB24 hashes on the same native FFmpeg build",
+          "decoded_rgb_sha256_list_digest": "47d581ad3d59a95d89f02fed19634ff17f5126db965d3cd6a3996b6cffc8367b",
+          "decoded_hash_count": 600
+        },
+        "whole_job_memory": {
+          "initial_memory": {
+            "host": {
+              "MemTotal": 10451427328,
+              "MemAvailable": 9658871808,
+              "SwapTotal": 0,
+              "SwapFree": 0
+            },
+            "cgroup_root": "/sys/fs/cgroup",
+            "cgroup": {
+              "memory.max": 8589934592,
+              "memory.current": 443039744,
+              "memory.peak": 827715584,
+              "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+              "memory.swap.max": "max",
+              "memory.swap.current": 0,
+              "cpu.max": "800000 100000"
+            },
+            "effective_available_bytes": 8146894848
+          },
+          "final_memory": {
+            "host": {
+              "MemTotal": 10451427328,
+              "MemAvailable": 9738801152,
+              "SwapTotal": 0,
+              "SwapFree": 0
+            },
+            "cgroup_root": "/sys/fs/cgroup",
+            "cgroup": {
+              "memory.max": 8589934592,
+              "memory.current": 449183744,
+              "memory.peak": 827715584,
+              "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+              "memory.swap.max": "max",
+              "memory.swap.current": 0,
+              "cpu.max": "800000 100000"
+            },
+            "effective_available_bytes": 8140750848
+          },
+          "initial_renderer_rss_bytes": 15781888,
+          "final_renderer_rss_bytes": 17268736,
+          "renderer_peak_rss_bytes": 20713472,
+          "waited_child_max_rss_bytes": 72536064,
+          "encoder_peak_rss_bytes": 69632000,
+          "all_children_peak_rss_bytes": 72818688,
+          "estimated_simultaneous_tree_peak_rss_bytes": 90324992,
+          "sampling_interval_seconds": 0.01,
+          "samples": 1232,
+          "job_budget_bytes": 268435456,
+          "reserve_bytes": 67108864,
+          "limit_reason": null,
+          "minimum_effective_available_bytes": 8088309760,
+          "maximum_effective_available_bytes": 8146894848,
+          "memory_observations": 125,
+          "minimum_workspace_free_bytes": 63849476096,
+          "disk_reserve_bytes": 67108864,
+          "wall_seconds": 14.01271552199978,
+          "caveat": "Sampled sum of RSS can miss transient peaks and double-count shared pages; cgroup counters are shared, not a dedicated job limit."
+        },
+        "environment": {
+          "python": "3.12.14",
+          "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+          "distribution": "Ubuntu 24.04.3 LTS",
+          "ffmpeg_version": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+          "pycairo": "1.29.2",
+          "cairo": "1.18.0"
+        },
+        "resource_scope": "Renderer worker and child tools from preflight through full decode. CPU-only; host swap counters are recorded; not a target-VM certification."
+      },
+      "status": "passed",
+      "repeat_content_matches": true
+    },
+    {
+      "width": 720,
+      "frames": 600,
+      "repeat": 2,
+      "admission_memory": {
+        "host": {
+          "MemTotal": 10451427328,
+          "MemAvailable": 9739722752,
+          "SwapTotal": 0,
+          "SwapFree": 0
+        },
+        "cgroup_root": "/sys/fs/cgroup",
+        "cgroup": {
+          "memory.max": 8589934592,
+          "memory.current": 437215232,
+          "memory.peak": 827715584,
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+          "memory.swap.max": "max",
+          "memory.swap.current": 0,
+          "cpu.max": "800000 100000"
+        },
+        "effective_available_bytes": 8152719360
+      },
+      "exit_status": 0,
+      "supervisor_reconciled": [],
+      "report": {
+        "cpu_seconds": {
+          "renderer": 8.441693622999999,
+          "children_user": 12.593297,
+          "children_system": 0.744906
+        },
+        "workspace_preflight": {
+          "path": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final/720_600_2",
+          "free_bytes": 63849418752,
+          "total_bytes": 67586535424,
+          "minimum_free_bytes": 268435456,
+          "write_probe": true,
+          "uid": 0,
+          "root_not_required": true
+        },
+        "pressure_before": {
+          "memory": null,
+          "cpu": null,
+          "io": null,
+          "vmstat": {
+            "pswpin": 0,
+            "pswpout": 0,
+            "pgmajfault": 0,
+            "balloon_inflate": 0,
+            "balloon_deflate": 0
+          },
+          "balloon_note": "Guest balloon counters only when exposed; lack of counters does not prove ballooning or host pressure is absent."
+        },
+        "pressure_after": {
+          "memory": null,
+          "cpu": null,
+          "io": null,
+          "vmstat": {
+            "pswpin": 0,
+            "pswpout": 0,
+            "pgmajfault": 0,
+            "balloon_inflate": 0,
+            "balloon_deflate": 0
+          },
+          "balloon_note": "Guest balloon counters only when exposed; lack of counters does not prove ballooning or host pressure is absent."
+        },
+        "cgroup_memory_event_delta": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0
+        },
+        "transaction_clean": true,
+        "output": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final/720_600_2/diagnostic.mp4",
+        "width": 720,
+        "height": 1280,
+        "fps": 30,
+        "frames": 600,
+        "render_encode_seconds": 8.19881134500065,
+        "effective_encoded_fps": 73.18133992262905,
+        "file_size_bytes": 3534995,
+        "encoder_exit_status": 0,
+        "encoder_command": [
+          "/usr/bin/ffmpeg",
+          "-hide_banner",
+          "-loglevel",
+          "error",
+          "-nostats",
+          "-nostdin",
+          "-max_alloc",
+          "67108864",
+          "-threads",
+          "1",
+          "-filter_threads",
+          "1",
+          "-filter_complex_threads",
+          "1",
+          "-f",
+          "rawvideo",
+          "-pixel_format",
+          "bgra",
+          "-video_size",
+          "720x1280",
+          "-framerate",
+          "30",
+          "-i",
+          "pipe:0",
+          "-an",
+          "-sn",
+          "-dn",
+          "-frames:v",
+          "600",
+          "-c:v",
+          "libx264",
+          "-preset",
+          "veryfast",
+          "-tune",
+          "zerolatency",
+          "-threads:v",
+          "1",
+          "-x264-params",
+          "threads=1:lookahead_threads=1:sync-lookahead=0:rc-lookahead=0:bframes=0:ref=1",
+          "-profile:v",
+          "main",
+          "-level:v",
+          "3.1",
+          "-crf",
+          "20",
+          "-vf",
+          "scale=in_range=full:out_range=tv:out_color_matrix=bt709,format=yuv420p",
+          "-pix_fmt",
+          "yuv420p",
+          "-colorspace",
+          "bt709",
+          "-color_primaries",
+          "bt709",
+          "-color_trc",
+          "bt709",
+          "-color_range",
+          "tv",
+          "-tag:v",
+          "avc1",
+          "-movflags",
+          "+faststart",
+          "-f",
+          "mp4",
+          "-n",
+          "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final/720_600_2/.reelforge-encode-l3wvesfh/pending.mp4"
+        ],
+        "source_checkpoint_sha256": {
+          "0": "4eb71dfaa4cb117de071543f0e92dfcfa4618a71ff3f9e70975852afeb6449df",
+          "300": "a7a5593875c9c3783a9f0da378023ab7759ffa43130e0ae82b1d1ba3336dd82d",
+          "599": "67eab8e4f9e7291b7d2c28f71e6e7d3b23c2edbc1c19ccd27773d28024b68a59"
+        },
+        "verification": {
+          "passed": true,
+          "mp4_top_level_boxes": [
+            "ftyp",
+            "moov",
+            "free",
+            "mdat"
+          ],
+          "metadata": {
+            "programs": [],
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_tag_string": "avc1",
+                "width": 720,
+                "height": 1280,
+                "pix_fmt": "yuv420p",
+                "avg_frame_rate": "30/1",
+                "nb_read_frames": "600"
+              }
+            ],
+            "format": {
+              "duration": "20.000000",
+              "size": "3534995"
+            }
+          },
+          "decoded_frames": 600,
+          "unique_decoded_frames": 600,
+          "decode_exit_status": 0,
+          "decode_command": [
+            "/usr/bin/ffmpeg",
+            "-hide_banner",
+            "-loglevel",
+            "error",
+            "-xerror",
+            "-err_detect",
+            "explode",
+            "-threads",
+            "1",
+            "-i",
+            "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final/720_600_2/diagnostic.mp4",
+            "-map",
+            "0:v:0",
+            "-an",
+            "-sn",
+            "-dn",
+            "-threads:v",
+            "1",
+            "-filter_threads",
+            "1",
+            "-pix_fmt",
+            "rgb24",
+            "-fps_mode",
+            "passthrough",
+            "-f",
+            "framehash",
+            "-hash",
+            "sha256",
+            "pipe:1"
+          ],
+          "comparison_scope": "Exact decoded RGB24 hashes on the same native FFmpeg build",
+          "decoded_rgb_sha256_list_digest": "47d581ad3d59a95d89f02fed19634ff17f5126db965d3cd6a3996b6cffc8367b",
+          "decoded_hash_count": 600
+        },
+        "whole_job_memory": {
+          "initial_memory": {
+            "host": {
+              "MemTotal": 10451427328,
+              "MemAvailable": 9733963776,
+              "SwapTotal": 0,
+              "SwapFree": 0
+            },
+            "cgroup_root": "/sys/fs/cgroup",
+            "cgroup": {
+              "memory.max": 8589934592,
+              "memory.current": 446869504,
+              "memory.peak": 827715584,
+              "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+              "memory.swap.max": "max",
+              "memory.swap.current": 0,
+              "cpu.max": "800000 100000"
+            },
+            "effective_available_bytes": 8143065088
+          },
+          "final_memory": {
+            "host": {
+              "MemTotal": 10451427328,
+              "MemAvailable": 9755922432,
+              "SwapTotal": 0,
+              "SwapFree": 0
+            },
+            "cgroup_root": "/sys/fs/cgroup",
+            "cgroup": {
+              "memory.max": 8589934592,
+              "memory.current": 451846144,
+              "memory.peak": 827715584,
+              "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+              "memory.swap.max": "max",
+              "memory.swap.current": 0,
+              "cpu.max": "800000 100000"
+            },
+            "effective_available_bytes": 8138088448
+          },
+          "initial_renderer_rss_bytes": 15773696,
+          "final_renderer_rss_bytes": 17256448,
+          "renderer_peak_rss_bytes": 20701184,
+          "waited_child_max_rss_bytes": 72548352,
+          "encoder_peak_rss_bytes": 69607424,
+          "all_children_peak_rss_bytes": 72814592,
+          "estimated_simultaneous_tree_peak_rss_bytes": 90308608,
+          "sampling_interval_seconds": 0.01,
+          "samples": 1210,
+          "job_budget_bytes": 268435456,
+          "reserve_bytes": 67108864,
+          "limit_reason": null,
+          "minimum_effective_available_bytes": 8084480000,
+          "maximum_effective_available_bytes": 8143065088,
+          "memory_observations": 123,
+          "minimum_workspace_free_bytes": 63845879808,
+          "disk_reserve_bytes": 67108864,
+          "wall_seconds": 13.676437972000713,
+          "caveat": "Sampled sum of RSS can miss transient peaks and double-count shared pages; cgroup counters are shared, not a dedicated job limit."
+        },
+        "environment": {
+          "python": "3.12.14",
+          "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+          "distribution": "Ubuntu 24.04.3 LTS",
+          "ffmpeg_version": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+          "pycairo": "1.29.2",
+          "cairo": "1.18.0"
+        },
+        "resource_scope": "Renderer worker and child tools from preflight through full decode. CPU-only; host swap counters are recorded; not a target-VM certification."
+      },
+      "status": "passed",
+      "repeat_content_matches": true
+    }
+  ],
+  "errors": [],
+  "policy": {
+    "job_budget_mib": 256,
+    "reserve_mib": 64,
+    "long_launch_minimum_mib": 384
+  },
+  "run_directory": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c-dev-600-final",
+  "readiness": {
+    "schema": "reelforge.deployment.v1",
+    "ok": true,
+    "errors": [],
+    "warnings": [
+      "Observed machine does not match every supplied target-VM characteristic.",
+      "This run is root; unprivileged operation on the target remains unverified."
+    ],
+    "python": "3.12.14",
+    "uid": 0,
+    "distribution": {
+      "NAME": "Ubuntu",
+      "ID": "ubuntu",
+      "PRETTY_NAME": "Ubuntu 24.04.3 LTS",
+      "VERSION_ID": "24.04",
+      "VERSION": "24.04.3 LTS (Noble Numbat)",
+      "VERSION_CODENAME": "noble",
+      "ID_LIKE": "debian",
+      "HOME_URL": "https://www.ubuntu.com/",
+      "SUPPORT_URL": "https://help.ubuntu.com/",
+      "BUG_REPORT_URL": "https://bugs.launchpad.net/ubuntu/",
+      "PRIVACY_POLICY_URL": "https://www.ubuntu.com/legal/terms-and-policies/privacy-policy",
+      "UBUNTU_CODENAME": "noble",
+      "LOGO": "ubuntu-logo"
+    },
+    "cpu": {
+      "architecture": "x86_64",
+      "logical_cpus": 9,
+      "affinity_cpus": 9,
+      "effective_cpu_upper_bound": 8.0,
+      "cpu_max": "800000 100000",
+      "model": "AMD EPYC 9V74 80-Core Processor"
+    },
+    "memory": {
+      "host": {
+        "MemTotal": 10451427328,
+        "MemAvailable": 9826418688,
+        "SwapTotal": 0,
+        "SwapFree": 0
+      },
+      "cgroup_root": "/sys/fs/cgroup",
+      "cgroup": {
+        "memory.max": 8589934592,
+        "memory.current": 424640512,
+        "memory.peak": 827715584,
+        "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+        "memory.swap.max": "max",
+        "memory.swap.current": 0,
+        "cpu.max": "800000 100000"
+      },
+      "effective_available_bytes": 8165294080
+    },
+    "pressure": {
+      "memory": null,
+      "cpu": null,
+      "io": null,
+      "vmstat": {
+        "pswpin": 0,
+        "pswpout": 0,
+        "pgmajfault": 0,
+        "balloon_inflate": 0,
+        "balloon_deflate": 0
+      },
+      "balloon_note": "Guest balloon counters only when exposed; lack of counters does not prove ballooning or host pressure is absent."
+    },
+    "workspace": {
+      "path": "/workspace/scratch/6ba0d4b7730a/reelforge-v2",
+      "free_bytes": 63859744768,
+      "total_bytes": 67586535424,
+      "minimum_free_bytes": 268435456,
+      "write_probe": true,
+      "uid": 0,
+      "root_not_required": true
+    },
+    "native": {
+      "pycairo": "1.29.2",
+      "cairo": "1.18.0"
+    },
+    "media_tools": {
+      "ffmpeg": {
+        "path": "/usr/bin/ffmpeg",
+        "version": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers"
+      },
+      "ffprobe": {
+        "path": "/usr/bin/ffprobe",
+        "version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers"
+      },
+      "libx264": true
+    },
+    "tmp": {
+      "total_bytes": 67586535424,
+      "free_bytes": 63859744768
+    },
+    "cgroup_capabilities": {
+      "path": "/sys/fs/cgroup",
+      "hard_enforcement": "not_configured",
+      "delegation": "not_assumed",
+      "controls_modified": false,
+      "cgroup.controllers": "cpuset cpu io memory hugetlb pids",
+      "cgroup.subtree_control": "",
+      "cgroup.type": "domain",
+      "mount_read_only": true,
+      "directory_write_access": false,
+      "note": "Read/access checks are not proof of delegated unprivileged memory controls. No subgroup, memory.max, swap setting or cgroup.procs is changed."
+    },
+    "target_characteristics": {
+      "ubuntu_24_04": true,
+      "x86_64": true,
+      "four_effective_cpus": false,
+      "no_host_swap": true,
+      "reported_ram_near_7_7_gib": false,
+      "tmp_near_512_mib": false
+    },
+    "target_identity_matches": false,
+    "target_vm_verified": false,
+    "note": "Host characteristics are diagnostics, not proof that this is the intended VM."
+  },
+  "low_available_window_observed": false,
+  "memory_before": {
+    "host": {
+      "MemTotal": 10451427328,
+      "MemAvailable": 9826418688,
+      "SwapTotal": 0,
+      "SwapFree": 0
+    },
+    "cgroup_root": "/sys/fs/cgroup",
+    "cgroup": {
+      "memory.max": 8589934592,
+      "memory.current": 424640512,
+      "memory.peak": 827715584,
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+      "memory.swap.max": "max",
+      "memory.swap.current": 0,
+      "cpu.max": "800000 100000"
+    },
+    "effective_available_bytes": 8165294080
+  },
+  "memory_after": {
+    "host": {
+      "MemTotal": 10451427328,
+      "MemAvailable": 9755709440,
+      "SwapTotal": 0,
+      "SwapFree": 0
+    },
+    "cgroup_root": "/sys/fs/cgroup",
+    "cgroup": {
+      "memory.max": 8589934592,
+      "memory.current": 440528896,
+      "memory.peak": 827715584,
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+      "memory.swap.max": "max",
+      "memory.swap.current": 0,
+      "cpu.max": "800000 100000"
+    },
+    "effective_available_bytes": 8149405696
+  },
+  "cgroup_memory_event_delta": {
+    "low": 0,
+    "high": 0,
+    "max": 0,
+    "oom": 0,
+    "oom_kill": 0,
+    "oom_group_kill": 0
+  },
+  "supervisor_and_descendants_memory": {
+    "initial_memory": {
+      "host": {
+        "MemTotal": 10451427328,
+        "MemAvailable": 9824956416,
+        "SwapTotal": 0,
+        "SwapFree": 0
+      },
+      "cgroup_root": "/sys/fs/cgroup",
+      "cgroup": {
+        "memory.max": 8589934592,
+        "memory.current": 425230336,
+        "memory.peak": 827715584,
+        "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+        "memory.swap.max": "max",
+        "memory.swap.current": 0,
+        "cpu.max": "800000 100000"
+      },
+      "effective_available_bytes": 8164704256
+    },
+    "final_memory": {
+      "host": {
+        "MemTotal": 10451427328,
+        "MemAvailable": 9755709440,
+        "SwapTotal": 0,
+        "SwapFree": 0
+      },
+      "cgroup_root": "/sys/fs/cgroup",
+      "cgroup": {
+        "memory.max": 8589934592,
+        "memory.current": 440528896,
+        "memory.peak": 827715584,
+        "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+        "memory.swap.max": "max",
+        "memory.swap.current": 0,
+        "cpu.max": "800000 100000"
+      },
+      "effective_available_bytes": 8149405696
+    },
+    "initial_renderer_rss_bytes": 15917056,
+    "final_renderer_rss_bytes": 16945152,
+    "renderer_peak_rss_bytes": 17555456,
+    "waited_child_max_rss_bytes": 72548352,
+    "encoder_peak_rss_bytes": 0,
+    "all_children_peak_rss_bytes": 90324992,
+    "estimated_simultaneous_tree_peak_rss_bytes": 107864064,
+    "sampling_interval_seconds": 0.01,
+    "samples": 4736,
+    "job_budget_bytes": 268435456,
+    "reserve_bytes": 67108864,
+    "limit_reason": null,
+    "minimum_effective_available_bytes": 8084402176,
+    "maximum_effective_available_bytes": 8164704256,
+    "memory_observations": 475,
+    "minimum_workspace_free_bytes": 63845879808,
+    "disk_reserve_bytes": 67108864,
+    "wall_seconds": 51.36663614800091,
+    "caveat": "Sampled sum of RSS can miss transient peaks and double-count shared pages; cgroup counters are shared, not a dedicated job limit.",
+    "root_role": "validation_supervisor; per-job renderer/encoder are in job reports"
+  },
+  "wall_seconds": 51.572928182000396,
+  "evidence_note": "Compact measured report: per-frame SHA256 lists replaced with count and digest of newline-joined hashes; full raw reports remain in the local run directory and are regenerated by the harness."
+}

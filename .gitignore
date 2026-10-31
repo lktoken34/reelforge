@@ -11,3 +11,5 @@ outputs/
 
 # Encoder transaction directories are never source/review artifacts.
 .reelforge-encode-*/
+
+.reelforge-validation.lock

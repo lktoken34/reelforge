@@ -45,3 +45,27 @@ jobs:
         run: |
           mkdir -p outputs/ci-video
           uv run --frozen --extra renderer python tools/render_video.py --width 360 --output outputs/ci-video/demo.mp4 --report outputs/ci-video/demo.json
+
+      - name: Build sealed prebuilt runtime bundle on roomy builder
+        shell: bash
+        run: |
+          uv run --frozen --extra renderer python -m build --no-isolation
+          uv export --frozen --extra renderer --no-dev --no-emit-project --no-hashes --format requirements-txt --output-file outputs/runtime-pins.txt
+          uv venv --seed outputs/wheel-builder
+          mkdir -p outputs/wheelhouse outputs/build-tmp
+          TMPDIR="$PWD/outputs/build-tmp" outputs/wheel-builder/bin/python -m pip wheel --no-deps --config-settings=setup-args=-Dno-x11=true --wheel-dir outputs/wheelhouse pycairo==1.29.2
+          outputs/wheel-builder/bin/python -m pip wheel --only-binary=:all: --find-links outputs/wheelhouse --wheel-dir outputs/wheelhouse -r outputs/runtime-pins.txt
+          cp dist/reelforge_v2-*.whl outputs/wheelhouse/
+          uv run --frozen --extra renderer python tools/wheelhouse.py seal --directory outputs/wheelhouse
+      - name: Verify fresh offline runtime without compilation
+        shell: bash
+        run: |
+          uv run --frozen --extra renderer python tools/wheelhouse.py install --directory outputs/wheelhouse --venv outputs/offline-proof
+          outputs/offline-proof/bin/python tools/deployment_check.py --workspace "$GITHUB_WORKSPACE" --report outputs/offline-readiness.json
+          outputs/offline-proof/bin/python tools/render_video.py --width 360 --frames 450 --output outputs/offline-proof-video/demo.mp4 --report outputs/offline-proof-video/demo.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reelforge-v2-py312-ubuntu24-x86_64-wheelhouse
+          path: outputs/wheelhouse/
+          retention-days: 30
+          if-no-files-found: error

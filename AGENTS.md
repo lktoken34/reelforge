@@ -21,8 +21,8 @@ local input in a later contract version, not a feature of this manifest.
 
 Episode restrictions above do not prevent an engineer from changing engine code for an
 explicit engine-development task. Read architecture, hardware constraints and roadmap first.
-Current approved engineering scope is Phase 2B: bounded CPU Cairo-to-FFmpeg streaming,
-fixed diagnostic motion, technical verification and whole-job monitoring. Keep drawing/video
+Current approved engineering scope is Phase 2C: deployment diagnostics, sequential
+low-memory validation, recovery checks and evidence for the actual target VM. Keep drawing/video
 commands out of manifests and the installed CLI. Do not begin the next milestone without a new
 assignment following external review. Do not delegate to other agents unless explicitly requested.
 
@@ -42,5 +42,8 @@ assignment following external review. Do not delegate to other agents unless exp
   installed wheel from outside the checkout when package resources or packaging change.
 - Document actual evidence and remaining uncertainty. Technical success does not prove art quality.
 
-Phase 2B may generate diagnostic MP4s and review contact sheets; no episode pipeline or
-production artistic approval is implemented. External review of Phase 2B is the next gate.
+Phase 2B was approved at 7133f244. Phase 2C does not authorize visual systems.
+Read docs/TARGET_VM_DEPLOYMENT.md before cloud tests. Never manufacture memory pressure,
+lower safety thresholds to pass, change host swap/memory controls, or run competing jobs.
+Actual target-VM evidence and external review remain required; development results do not
+certify deployment. Stop after Phase 2C.

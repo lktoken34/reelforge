@@ -2,6 +2,7 @@
 
 import os
 import resource
+import shutil
 import threading
 import time
 from pathlib import Path
@@ -125,6 +126,8 @@ class JobMonitor:
         budget_bytes: int = 256 * MIB,
         reserve_bytes: int = 64 * MIB,
         cancelled: threading.Event | None = None,
+        workspace: Path | None = None,
+        disk_reserve_bytes: int = 64 * MIB,
     ):
         self.pid = procfs_pid()
         self.budget_bytes, self.reserve_bytes = budget_bytes, reserve_bytes
@@ -134,6 +137,11 @@ class JobMonitor:
         self.encoder_pid: int | None = None
         self.limit_reason: str | None = None
         self.samples = 0
+        self.workspace = workspace
+        self.disk_reserve_bytes = disk_reserve_bytes
+        self.available_min = self.available_max = 0
+        self.memory_observations = 0
+        self.disk_free_min: int | None = None
         self._thread = threading.Thread(target=self._run, name="job-rss", daemon=True)
 
     def sample(self) -> None:
@@ -159,21 +167,37 @@ class JobMonitor:
             self.limit_reason = "sampled process-tree RSS exceeded the budget"
             self.cancelled.set()
         if self.samples % 10 == 0:
-            if memory_snapshot()["effective_available_bytes"] < self.reserve_bytes:
+            available = memory_snapshot()["effective_available_bytes"]
+            self.available_min = min(self.available_min, available)
+            self.available_max = max(self.available_max, available)
+            self.memory_observations += 1
+            if available < self.reserve_bytes:
                 self.limit_reason = "available memory fell below the reserve"
                 self.cancelled.set()
+            if self.workspace is not None:
+                free = shutil.disk_usage(self.workspace).free
+                self.disk_free_min = (
+                    free if self.disk_free_min is None else min(self.disk_free_min, free)
+                )
+                if free < self.disk_reserve_bytes:
+                    self.limit_reason = "workspace disk free space fell below reserve"
+                    self.cancelled.set()
 
     def _run(self) -> None:
         while not self.stop.wait(0.01):
             try:
                 self.sample()
-            except OSError:
+            except (OSError, ValueError, KeyError):
                 self.limit_reason = "memory monitoring became unavailable"
                 self.cancelled.set()
                 return
 
     def __enter__(self):
         self.initial = memory_snapshot()
+        self.available_min = self.available_max = self.initial["effective_available_bytes"]
+        self.memory_observations = 1
+        if self.workspace is not None:
+            self.disk_free_min = shutil.disk_usage(self.workspace).free
         self.initial_renderer_rss = process_rss(self.pid)
         self.started = time.perf_counter()
         self._thread.start()
@@ -185,7 +209,12 @@ class JobMonitor:
         self.sample()
         self.seconds = time.perf_counter() - self.started
         self.final = memory_snapshot()
+        self.available_min = min(self.available_min, self.final["effective_available_bytes"])
+        self.available_max = max(self.available_max, self.final["effective_available_bytes"])
+        self.memory_observations += 1
         self.final_renderer_rss = process_rss(self.pid)
+        if self.limit_reason:
+            raise OperationError("RESOURCE_GUARD", self.limit_reason)
 
     def report(self) -> dict:
         return {
@@ -204,6 +233,11 @@ class JobMonitor:
             "job_budget_bytes": self.budget_bytes,
             "reserve_bytes": self.reserve_bytes,
             "limit_reason": self.limit_reason,
+            "minimum_effective_available_bytes": self.available_min,
+            "maximum_effective_available_bytes": self.available_max,
+            "memory_observations": self.memory_observations,
+            "minimum_workspace_free_bytes": self.disk_free_min,
+            "disk_reserve_bytes": self.disk_reserve_bytes if self.workspace is not None else None,
             "wall_seconds": self.seconds,
             "caveat": "Sampled sum of RSS can miss transient peaks and double-count shared pages; "
             "cgroup counters are shared, not a dedicated job limit.",

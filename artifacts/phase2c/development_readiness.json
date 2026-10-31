@@ -1,0 +1,117 @@
+{
+  "schema": "reelforge.deployment.v1",
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    "Observed machine does not match every supplied target-VM characteristic.",
+    "This run is root; unprivileged operation on the target remains unverified."
+  ],
+  "python": "3.12.14",
+  "uid": 0,
+  "distribution": {
+    "NAME": "Ubuntu",
+    "ID": "ubuntu",
+    "PRETTY_NAME": "Ubuntu 24.04.3 LTS",
+    "VERSION_ID": "24.04",
+    "VERSION": "24.04.3 LTS (Noble Numbat)",
+    "VERSION_CODENAME": "noble",
+    "ID_LIKE": "debian",
+    "HOME_URL": "https://www.ubuntu.com/",
+    "SUPPORT_URL": "https://help.ubuntu.com/",
+    "BUG_REPORT_URL": "https://bugs.launchpad.net/ubuntu/",
+    "PRIVACY_POLICY_URL": "https://www.ubuntu.com/legal/terms-and-policies/privacy-policy",
+    "UBUNTU_CODENAME": "noble",
+    "LOGO": "ubuntu-logo"
+  },
+  "cpu": {
+    "architecture": "x86_64",
+    "logical_cpus": 9,
+    "affinity_cpus": 9,
+    "effective_cpu_upper_bound": 8.0,
+    "cpu_max": "800000 100000",
+    "model": "AMD EPYC 9V74 80-Core Processor"
+  },
+  "memory": {
+    "host": {
+      "MemTotal": 10451427328,
+      "MemAvailable": 9762615296,
+      "SwapTotal": 0,
+      "SwapFree": 0
+    },
+    "cgroup_root": "/sys/fs/cgroup",
+    "cgroup": {
+      "memory.max": 8589934592,
+      "memory.current": 466198528,
+      "memory.peak": 827715584,
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+      "memory.swap.max": "max",
+      "memory.swap.current": 0,
+      "cpu.max": "800000 100000"
+    },
+    "effective_available_bytes": 8123736064
+  },
+  "pressure": {
+    "memory": null,
+    "cpu": null,
+    "io": null,
+    "vmstat": {
+      "pswpin": 0,
+      "pswpout": 0,
+      "pgmajfault": 0,
+      "balloon_inflate": 0,
+      "balloon_deflate": 0
+    },
+    "balloon_note": "Guest balloon counters only when exposed; lack of counters does not prove ballooning or host pressure is absent."
+  },
+  "workspace": {
+    "path": "/workspace/scratch/6ba0d4b7730a/reelforge-v2",
+    "free_bytes": 63824093184,
+    "total_bytes": 67586535424,
+    "minimum_free_bytes": 268435456,
+    "write_probe": true,
+    "uid": 0,
+    "root_not_required": true
+  },
+  "native": {
+    "pycairo": "1.29.2",
+    "cairo": "1.18.0"
+  },
+  "media_tools": {
+    "ffmpeg": {
+      "path": "/usr/bin/ffmpeg",
+      "version": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers"
+    },
+    "ffprobe": {
+      "path": "/usr/bin/ffprobe",
+      "version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers"
+    },
+    "libx264": true
+  },
+  "tmp": {
+    "total_bytes": 67586535424,
+    "free_bytes": 63824093184
+  },
+  "cgroup_capabilities": {
+    "path": "/sys/fs/cgroup",
+    "hard_enforcement": "not_configured",
+    "delegation": "not_assumed",
+    "controls_modified": false,
+    "cgroup.controllers": "cpuset cpu io memory hugetlb pids",
+    "cgroup.subtree_control": "",
+    "cgroup.type": "domain",
+    "mount_read_only": true,
+    "directory_write_access": false,
+    "note": "Read/access checks are not proof of delegated unprivileged memory controls. No subgroup, memory.max, swap setting or cgroup.procs is changed."
+  },
+  "target_characteristics": {
+    "ubuntu_24_04": true,
+    "x86_64": true,
+    "four_effective_cpus": false,
+    "no_host_swap": true,
+    "reported_ram_near_7_7_gib": false,
+    "tmp_near_512_mib": false
+  },
+  "target_identity_matches": false,
+  "target_vm_verified": false,
+  "note": "Host characteristics are diagnostics, not proof that this is the intended VM."
+}

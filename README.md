@@ -1,6 +1,6 @@
 # ReelForge V2
 
-Phase 2B builds on the approved Phase 1/2A foundation for an agent-operated, code-only 2D/2.5D
+Phase 2C builds on the approved Phase 1/2A foundation for an agent-operated, code-only 2D/2.5D
 animation engine. An internal, trusted-Python Cairo vector backend and bounded FFmpeg pipe now produce
 diagnostic MP4s. They are not connected to episode manifests.
 **No character rigs, environments, animation timelines, lighting, audio synchronization,
@@ -42,7 +42,7 @@ Only `capabilities`, `schema` and `validate PATH` are supported. See
 The supplied JSON describes ordered scene IDs, integer frame durations and human-readable
 intent. Intent is documentation; it does not generate visual content.
 Validation reports a manifest hash and **`render_ready: false`**. Output profiles are target
-sizes, not measured hardware feasibility promises. No command produces a video.
+sizes, not measured hardware feasibility promises. No installed agent-facing command produces a video.
 
 ## Phase 2A engineering tools (retained)
 
@@ -79,10 +79,10 @@ The sampler measures the renderer **and** child tools; renderer-only memory is n
 
 ## Architecture decision
 
-Python 3.12 + JSON Schema Draft 2020-12 now; recommend Pycairo/Cairo software image surfaces
-for the later vector backend and a bounded raw-frame pipe to FFmpeg/libx264 for later
-encoding. Keep both adapters replaceable. Cairo has passed the Phase 2A primitive experiment on this session host; actual target-VM
-and future encoder/scene complexity remain separate gates.
+Python 3.12 + JSON Schema Draft 2020-12, Pycairo/Cairo software image surfaces, and a
+bounded raw-frame pipe to FFmpeg/libx264. Both adapters remain replaceable. Cairo drawing
+and diagnostic encoding passed the earlier feasibility gates; actual target-VM safety and
+future scene complexity remain separate gates.
 
 - [Architecture and module boundaries](docs/ARCHITECTURE.md)
 - [V1 source audit and reuse decisions](docs/V1_AUDIT.md)
@@ -116,5 +116,18 @@ and future encoder/scene complexity remain separate gates.
 V1 code and the reference video are not embedded in this repository. The audit records
 provenance. No V1 implementation is copied into the V2 runtime. No open-source distribution
 license is assigned in this phase; the owner must choose one before external distribution.
-Phase 1 was approved with changes; Phase 2A addresses those changes and adds the renderer
-experiment. **Phase 2A was approved. Stop after Phase 2B for external review.**
+Phase 2A and Phase 2B were approved. **Phase 2C tooling is complete; actual target-VM
+validation is pending. Stop for external review after collecting that evidence.**
+
+## Phase 2C deployment gate
+
+Use [target deployment and exact commands](docs/TARGET_VM_DEPLOYMENT.md) and the
+[Phase 2C evidence report](docs/PHASE2C_REPORT.md). The sequential harness checks both
+sizes with 150/600 frames, repeats decoded-content comparisons, and records renderer,
+encoder and supervisor memory. It retains the 256 MiB job / 64 MiB reserve policy.
+Prebuilt, hashed wheelhouses are produced by the Ubuntu 24.04 CI job so the target need
+not compile Pycairo. Native Cairo, FFmpeg/libx264 and Python 3.12 must already be available.
+
+Development evidence is under `artifacts/phase2c/`. It does **not** demonstrate the actual
+Muse Spark VM or operation in its 0.4–1.0 GiB available-memory window. No hard cgroup
+limit is configured; the observed development cgroup mount is read-only.
