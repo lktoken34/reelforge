@@ -1,5 +1,4 @@
 # media
 
-Future bounded encoder process adapter and supplied-audio integration. No encoding or audio implementation.
-
-See docs/ARCHITECTURE.md for boundaries. This directory is intentionally documentation only.
+Phase 2B implements bounded FFmpeg streaming, process lifecycle and technical verification.
+No audio, episode compiler or production story pipeline. See docs/VIDEO_PIPELINE.md.

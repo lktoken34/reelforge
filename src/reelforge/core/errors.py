@@ -17,3 +17,11 @@ class InputError(ValueError):
     def __init__(self, issue: Issue):
         super().__init__(issue.message)
         self.issue = issue
+
+
+class OperationError(RuntimeError):
+    """Stable category for engineering I/O/resource failures, separate from manifest errors."""
+
+    def __init__(self, code: str, message: str):
+        super().__init__(message)
+        self.code = code

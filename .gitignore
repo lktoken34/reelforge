@@ -8,3 +8,6 @@ build/
 *.egg-info/
 outputs/
 .coverage
+
+# Encoder transaction directories are never source/review artifacts.
+.reelforge-encode-*/

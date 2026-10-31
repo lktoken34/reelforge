@@ -128,3 +128,11 @@ external review before Phase 2B.
 Sources consulted: [Pycairo surfaces](https://pycairo.readthedocs.io/en/latest/reference/surfaces.html),
 [context/state](https://pycairo.readthedocs.io/en/latest/reference/context.html), and
 [Cairo image format/stride](https://cairographics.org/manual/cairo-Image-Surfaces.html).
+
+## Phase 2B extension
+
+The accepted drawing API remains intact. Surfaces now expose a read-only `opaque` proof flag
+and `write_opaque_bgra(fd, deadline=..., cancelled=...)`, returning only a byte count.
+No native buffer is returned. Compatible opaque targets can be streamed without a Python
+full-frame copy; unsupported layouts/alpha are rejected. See VIDEO_PIPELINE.md for transfer
+semantics and ownership. The engine still does not render agent-authored episode manifests.

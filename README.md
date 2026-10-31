@@ -1,10 +1,10 @@
 # ReelForge V2
 
-Phase 2A builds on the approved Phase 1 foundation for an agent-operated, code-only 2D/2.5D
-animation engine. An internal, trusted-Python Cairo vector backend is implemented for static
-primitive diagnostics and feasibility testing. It is not connected to episode manifests.
+Phase 2B builds on the approved Phase 1/2A foundation for an agent-operated, code-only 2D/2.5D
+animation engine. An internal, trusted-Python Cairo vector backend and bounded FFmpeg pipe now produce
+diagnostic MP4s. They are not connected to episode manifests.
 **No character rigs, environments, animation timelines, lighting, audio synchronization,
-production video or advanced artistic QA is implemented.**
+story-to-video production or advanced artistic QA is implemented.**
 
 The long-term target is cinematic portrait storytelling on Ubuntu with 4 vCPUs, no GPU,
 and only 0.4–1.0 GiB available RAM. The reference is an artistic target, not an achieved
@@ -44,7 +44,7 @@ intent. Intent is documentation; it does not generate visual content.
 Validation reports a manifest hash and **`render_ready: false`**. Output profiles are target
 sizes, not measured hardware feasibility promises. No command produces a video.
 
-## Phase 2A engineering tools
+## Phase 2A engineering tools (retained)
 
 Read [NATIVE_SETUP.md](docs/NATIVE_SETUP.md) for native setup, then:
 
@@ -61,6 +61,21 @@ uv run --frozen --extra renderer python tools/benchmark_renderer.py --frames 500
 weak agents still have only capabilities/schema/validate and `render_ready: false`.
 CLI `phase: 1` continues to describe the exposed foundation interface, not this internal
 engineering milestone. The renderer draws the same fixed 121-command scene at both sizes.
+
+## Phase 2B video feasibility
+
+[Pipeline contract and reproduction](docs/VIDEO_PIPELINE.md) ·
+[Completion report](docs/PHASE2B_REPORT.md) · [Hardware measurements](docs/PHASE2B_HARDWARE.md)
+
+```bash
+mkdir -p outputs/phase2b
+uv run --frozen --extra renderer python tools/render_video.py --width 720 --output outputs/phase2b/demo.mp4 --report outputs/phase2b/demo.json
+uv run --frozen --extra renderer pytest --basetemp outputs/test-temp
+```
+
+FFmpeg with libx264 and ffprobe are required for this optional engineering workflow.
+Sample 360p/720p MP4s, contact sheets and raw reports are under `artifacts/phase2b/`.
+The sampler measures the renderer **and** child tools; renderer-only memory is not a job total.
 
 ## Architecture decision
 
@@ -89,7 +104,10 @@ and future encoder/scene complexity remain separate gates.
 | `src/reelforge/rendering/` | Trusted vector values, interface, Cairo adapter and diagnostic fixture |
 | `tools/` | Engineering-only PNG and benchmark scripts |
 | `artifacts/phase2a/` | Two diagnostic PNGs and raw six-trial benchmark JSON |
-| `src/reelforge/{catalog,planning,animation,media,resources,quality}/` | Documented future boundaries only |
+| `src/reelforge/media/` | Bounded encoder/process wrapper and technical verification |
+| `src/reelforge/resources/` | Conservative Linux preflight and sampled process-tree metrics |
+| `artifacts/phase2b/` | Diagnostic MP4s, checkpoints and measured job reports |
+| `src/reelforge/{catalog,planning,animation,quality}/` | Documented future boundaries only |
 | `examples/foundation/project.json` | Valid foundation manifest; no render claim |
 | `tests/` | Validation, CLI and packaging-resource smoke tests |
 | `docs/` | Audit, decisions, contracts, budgets and roadmap |
@@ -99,4 +117,4 @@ V1 code and the reference video are not embedded in this repository. The audit r
 provenance. No V1 implementation is copied into the V2 runtime. No open-source distribution
 license is assigned in this phase; the owner must choose one before external distribution.
 Phase 1 was approved with changes; Phase 2A addresses those changes and adds the renderer
-experiment. **Stop for external review before Phase 2B.**
+experiment. **Phase 2A was approved. Stop after Phase 2B for external review.**

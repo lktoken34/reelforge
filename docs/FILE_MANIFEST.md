@@ -1,7 +1,6 @@
-# Current source file manifest — Phase 2A
+# Current source manifest — Phase 2B
 
-The Phase 1 creation inventory contained 35 files; the paths below describe the current
-repository. See PHASE2A_CHANGES.md for this milestone's modified/new files.
+See PHASE2B_CHANGES.md for exact modified/added paths.
 
 - `.github/workflows/ci.yml`
 - `.gitignore`
@@ -12,6 +11,11 @@ repository. See PHASE2A_CHANGES.md for this milestone's modified/new files.
 - `artifacts/phase2a/benchmark_results.json`
 - `artifacts/phase2a/diagnostic_360x640.png`
 - `artifacts/phase2a/diagnostic_720x1280.png`
+- `artifacts/phase2b/benchmark_results.json`
+- `artifacts/phase2b/checkpoints_360.png`
+- `artifacts/phase2b/checkpoints_720.png`
+- `artifacts/phase2b/diagnostic_360x640.mp4`
+- `artifacts/phase2b/diagnostic_720x1280.mp4`
 - `docs/AGENT_CONTRACT.md`
 - `docs/ARCHITECTURE.md`
 - `docs/CAIRO_BACKEND.md`
@@ -21,10 +25,14 @@ repository. See PHASE2A_CHANGES.md for this milestone's modified/new files.
 - `docs/PHASE1_HANDOFF.md`
 - `docs/PHASE2A_CHANGES.md`
 - `docs/PHASE2A_REPORT.md`
+- `docs/PHASE2B_CHANGES.md`
+- `docs/PHASE2B_HARDWARE.md`
+- `docs/PHASE2B_REPORT.md`
 - `docs/REFERENCE_STYLE.md`
 - `docs/ROADMAP.md`
 - `docs/V1_AUDIT.md`
 - `docs/VERIFICATION.md`
+- `docs/VIDEO_PIPELINE.md`
 - `docs/decisions/0001-foundation-stack.md`
 - `examples/foundation/project.json`
 - `pyproject.toml`
@@ -38,7 +46,12 @@ repository. See PHASE2A_CHANGES.md for this milestone's modified/new files.
 - `src/reelforge/contracts/project.schema.json`
 - `src/reelforge/core/__init__.py`
 - `src/reelforge/core/errors.py`
+- `src/reelforge/core/streams.py`
 - `src/reelforge/media/README.md`
+- `src/reelforge/media/__init__.py`
+- `src/reelforge/media/encoder.py`
+- `src/reelforge/media/process.py`
+- `src/reelforge/media/verify.py`
 - `src/reelforge/planning/README.md`
 - `src/reelforge/quality/README.md`
 - `src/reelforge/rendering/README.md`
@@ -48,13 +61,20 @@ repository. See PHASE2A_CHANGES.md for this milestone's modified/new files.
 - `src/reelforge/rendering/diagnostic.py`
 - `src/reelforge/rendering/interface.py`
 - `src/reelforge/rendering/model.py`
+- `src/reelforge/rendering/video_diagnostic.py`
 - `src/reelforge/resources/README.md`
+- `src/reelforge/resources/__init__.py`
+- `src/reelforge/resources/monitor.py`
 - `tests/test_cli.py`
 - `tests/test_contract.py`
 - `tests/test_renderer.py`
+- `tests/test_resources.py`
+- `tests/test_video_integration.py`
+- `tests/test_video_pipeline.py`
 - `tools/benchmark_renderer.py`
+- `tools/benchmark_video.py`
 - `tools/render_diagnostics.py`
+- `tools/render_video.py`
 - `uv.lock`
 
-Environments, caches, native SDK and reference media are excluded. Diagnostic PNGs and
-benchmark observations are explicitly included as review artifacts.
+SDK, environments, caches, build outputs, transactions and repeat/intermediate media are excluded.

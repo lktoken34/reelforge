@@ -1,4 +1,4 @@
-name: foundation-and-cairo
+name: foundation-cairo-video
 on: [push, pull_request]
 permissions:
   contents: read
@@ -35,7 +35,11 @@ jobs:
           version: '0.13.4'
           python-version: '3.12'
       - run: sudo apt-get update
-      - run: sudo apt-get install -y --no-install-recommends libcairo2-dev pkg-config python3-dev build-essential
+      - run: sudo apt-get install -y --no-install-recommends libcairo2-dev pkg-config python3-dev build-essential ffmpeg
       - run: uv sync --frozen --extra renderer
-      - run: uv run --frozen --extra renderer pytest
+      - run: uv run --frozen --extra renderer pytest --basetemp outputs/test-temp
       - run: uv run --frozen --extra renderer python tools/render_diagnostics.py --output-dir /tmp/reelforge-diagnostics
+      - name: Five-second stream and decode smoke
+        run: |
+          mkdir -p outputs/ci-video
+          uv run --frozen --extra renderer python tools/render_video.py --width 360 --output outputs/ci-video/demo.mp4 --report outputs/ci-video/demo.json

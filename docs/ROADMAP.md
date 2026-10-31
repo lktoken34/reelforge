@@ -1,7 +1,7 @@
 # Incremental roadmap
 
-Phase 1 is approved with changes. Phase 2A is implemented and awaits external review.
-No Phase 2B work is authorized by this document.
+Phase 1 is approved with changes. Phase 2A was approved at c70d2f2. Phase 2B streaming is complete and awaits external review.
+No next-milestone implementation is authorized by this document.
 
 Each phase ends in evidence and architectural review. Nothing below is authorization to
 implement a later phase during Phase 1. Phase numbers after Phase 2 are provisional.
@@ -9,7 +9,8 @@ implement a later phase during Phase 1. Phase numbers after Phase 2 are provisio
 | Phase | Small deliverable | Exit evidence |
 | --- | --- | --- |
 | 1 — foundation (complete) | V1 audit, hardware study, stack decision, modular skeleton, strict minimal manifest, CLI and tests | Tests/lint/package smoke; reviewer accepts boundaries and unresolved risks |
-| 2A — minimal software drawing feasibility (current) | Primitive-only backend adapter and bounded single-frame surface lifecycle; static diagnostic fixtures | Inspected curves/alpha/clips, repeated-frame memory, 360p/720p measurements, deterministic hashes; no rigs/world/audio/video |
+| 2A — minimal software drawing feasibility (approved) | Primitive-only backend adapter and bounded single-frame surface lifecycle; static diagnostic fixtures | Inspected curves/alpha/clips, repeated-frame memory, 360p/720p measurements, deterministic hashes; no rigs/world/audio/video |
+| 2B — bounded CPU video (current) | Cairo-to-FFmpeg raw pipe, fixed motion fixture, verification and process-tree evidence | Silent 5s MP4s, failure tests, decoded-repeat comparison and review |
 | 3 — code-authored catalog foundations | One reusable character definition/rig and one small environment recipe, approved IDs and parameter limits | Identity/geometry contracts and static compositions; independent review before animation |
 | 4 — deterministic animation | Frame-index evaluation, one articulated action, camera/depth basics | Timing/pose invariants, out-of-order frame equivalence and movement review |
 | 5 — scene composition/style | Reusable environment system, bounded lights/effects, shot templates and typography | Consistent look, mobile readability and measured scene memory |
@@ -44,4 +45,4 @@ explicit later gate unless the architect separately authorizes a minimal encodin
 - Should fps/profile scope change before stabilization? Are frame timing and error contracts clear?
 - Which text shaping/font and redistribution licenses should later phases adopt?
 
-Review outcome should explicitly accept, revise or reject decisions. Stop after Phase 2A until its external review.
+Review outcome should explicitly accept, revise or reject decisions. Stop after Phase 2B until its external review.

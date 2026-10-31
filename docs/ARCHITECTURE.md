@@ -1,8 +1,9 @@
 # ReelForge V2 architecture
 
 Status: Phase 1 foundation approved with changes. Phase 2A implements a minimal trusted-code
-Cairo vector experiment; all scene/rig/animation/media systems remain planned. External
-review is required before Phase 2B. See CAIRO_BACKEND.md and PHASE2A_REPORT.md.
+Cairo vector experiment; scene/rig/animation systems remain planned. External
+Phase 2A is approved; Phase 2B adds a bounded diagnostic video path. Review is required before
+the next milestone. See VIDEO_PIPELINE.md and PHASE2B_REPORT.md.
 
 ## Boundaries and ownership
 
@@ -21,8 +22,8 @@ resource management and implementation details a weaker agent should not control
 | `planning` | Resolve IDs, validate references, compile immutable intermediate representation | core/contracts/catalog; no raster backend | Documentation only |
 | `animation` | Evaluate approved action templates at exact frame indices | core/compiled plan; no filesystem | Documentation only |
 | `rendering` | Draw trusted vector commands into owned software surfaces | standalone value/protocol boundary; optional native adapter | Primitive-only Cairo experiment implemented |
-| `resources` | Preflight budgets, byte-bounded caches, buffer lifetime accounting | core; no story logic | Documentation only |
-| `media` | Bounded encoder pipe, process lifecycle, later supplied audio | core; consumes frames, no catalogs | Documentation only |
+| `resources` | Memory preflight and sampled process-tree accounting; future caches | core; no story logic/media dependency | Conservative Linux diagnostic policy implemented |
+| `media` | Bounded encoder pipe, process lifecycle and verification; audio deferred | core + Surface protocol; no Cairo/catalog imports | Phase 2B engineering path implemented |
 | `quality` | Later technical checks and review artifacts | core + media metadata; never approves art automatically | Documentation only |
 
 Dependencies point from orchestration to independent components. Catalog declarations must
@@ -67,12 +68,12 @@ or describe the encoder input format; check stride/padding. Budget any conversio
 Use a fixed sRGB-like output convention initially, document compositing behavior, and review
 color/alpha goldens before claiming backend parity. Wide-gamut/linear-light grading is deferred.
 
-Proposed media boundary: consume one frame at a time through a bounded pipe with backpressure.
+Media boundary: consume one frame at a time through a bounded pipe with backpressure.
 No frame list or unlimited queue. Future FFmpeg invocation uses an argument list, one codec
 thread initially, explicit filter-thread settings, bounded diagnostics, timeout/cancellation,
 cleanup, and temporary output + atomic rename after success. No partial output should look
 final. Encoder failure must propagate a stable domain error, not an opaque BrokenPipeError.
-No subprocess or encoder is present in this phase.
+This boundary is implemented narrowly in Phase 2B; no episode compiler or audio exists.
 
 ## Determinism policy
 
@@ -120,3 +121,11 @@ inside that adapter. Explicit target byte accounting is implemented; whole-job r
 preflight is still planned. Linear gradients and per-path source-over alpha are supported.
 The agent contract/schema/CLI remain unchanged except that JSON numeric overflow is rejected
 consistently before validation. Foundation `render_ready` remains false.
+
+## Phase 2B implementation delta
+
+The Surface protocol adds opaque BGRA fd transfer without exposing native buffers. The media
+module validates layout/count, owns FFmpeg and publishes only a completed encode. Core pipe
+utilities handle finite waits and borrowed views. Resources owns Linux admission/measurement
+without importing media. The fixed diagnostic frame function is not a general animation engine.
+See VIDEO_PIPELINE.md for exact contracts and PHASE2B_HARDWARE.md for measured whole-job scope.

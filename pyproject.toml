@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "reelforge-v2"
-version = "0.2.0"
-description = "Strict agent contracts and a trusted CPU vector drawing experiment"
+version = "0.3.0"
+description = "Agent contracts and bounded CPU vector-to-video feasibility"
 readme = "README.md"
 requires-python = ">=3.12,<3.13"
 dependencies = ["jsonschema==4.25.1"]

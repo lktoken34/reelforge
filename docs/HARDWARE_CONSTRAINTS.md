@@ -115,3 +115,6 @@ Fonts/shaping and bundled licenses; Cairo-to-encoder copy cost and color handlin
 availability; weak-agent scene complexity; encoder memory; cache lifetime and partial failures;
 shared-host memory pressure; portable determinism. Phase 1 deliberately does not pretend these
 are solved by having a JSON schema and a successful unit test suite.
+
+Phase 2B update: renderer+encoder+verification measurements and conservative admission policy
+are now in PHASE2B_HARDWARE.md. Renderer-only Phase 2A RSS is not a whole-job estimate.

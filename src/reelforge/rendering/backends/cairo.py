@@ -3,10 +3,12 @@
 import hashlib
 import sys
 from pathlib import Path
+from threading import Event
 from typing import Self
 
 import cairo
 
+from reelforge.core.streams import write_all
 from reelforge.rendering.interface import PixelLayout, Surface
 from reelforge.rendering.model import (
     Color,
@@ -25,6 +27,7 @@ class _OwnedSurface:
     def __init__(self, owner: "CairoRenderer", layout: PixelLayout):
         self._owner = owner
         self._layout = layout
+        self._opaque = False
         self._native = cairo.ImageSurface(cairo.FORMAT_ARGB32, layout.width, layout.height)
 
     @property
@@ -34,6 +37,10 @@ class _OwnedSurface:
     @property
     def closed(self) -> bool:
         return self._native is None
+
+    @property
+    def opaque(self) -> bool:
+        return not self.closed and self._opaque
 
     def _open(self) -> cairo.ImageSurface:
         if self._native is None:
@@ -95,6 +102,22 @@ class _OwnedSurface:
     def write_png(self, path: Path) -> None:
         self._open().write_to_png(str(path))
 
+    def write_opaque_bgra(self, fd: int, *, deadline: float, cancelled: Event | None = None) -> int:
+        native = self._open()
+        layout = self.layout
+        if (layout.format, layout.byte_order, layout.premultiplied) != ("ARGB32", "little", True):
+            raise RenderError("BGRA transfer requires little-endian premultiplied ARGB32")
+        if layout.stride != layout.width * 4:
+            raise RenderError("BGRA transfer requires tightly packed rows")
+        if not self.opaque:
+            raise RenderError("BGRA transfer requires a proven opaque background")
+        native.flush()
+        view = native.get_data()
+        try:
+            return write_all(fd, view, deadline=deadline, cancelled=cancelled)
+        finally:
+            view.release()
+
 
 class CairoRenderer:
     """Single-threaded adapter; budget accounts for all simultaneously open owned targets."""
@@ -144,6 +167,7 @@ class CairoRenderer:
         if any(v <= 0 for v in logical_size):
             raise RenderError("Logical dimensions must be positive")
         context = cairo.Context(native)
+        target._opaque = False
         try:
             context.set_antialias(cairo.ANTIALIAS_GRAY)
             context.set_tolerance(0.1)
@@ -156,6 +180,7 @@ class CairoRenderer:
             )
             for command in commands:  # Tuple order is the complete painter's order.
                 self._draw_path(context, command)
+            target._opaque = background.a == 1
         finally:
             context = None  # Release target-retaining context before surface.close().
 

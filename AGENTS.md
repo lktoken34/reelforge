@@ -21,9 +21,9 @@ local input in a later contract version, not a feature of this manifest.
 
 Episode restrictions above do not prevent an engineer from changing engine code for an
 explicit engine-development task. Read architecture, hardware constraints and roadmap first.
-Current approved engineering scope is Phase 2A: minimal trusted-code Cairo diagnostics and
-feasibility tests, plus the overflow bug fix and reference analysis. Keep drawing commands out
-of manifests and the installed CLI. Do not begin Phase 2B or other later modules without a new
+Current approved engineering scope is Phase 2B: bounded CPU Cairo-to-FFmpeg streaming,
+fixed diagnostic motion, technical verification and whole-job monitoring. Keep drawing/video
+commands out of manifests and the installed CLI. Do not begin the next milestone without a new
 assignment following external review. Do not delegate to other agents unless explicitly requested.
 
 - Keep contract validation independent of rendering and system executables.
@@ -42,5 +42,5 @@ assignment following external review. Do not delegate to other agents unless exp
   installed wheel from outside the checkout when package resources or packaging change.
 - Document actual evidence and remaining uncertainty. Technical success does not prove art quality.
 
-No production video is part of Phase 2A. Static diagnostic PNGs are expected.
-External review of Phase 2A is the next project gate.
+Phase 2B may generate diagnostic MP4s and review contact sheets; no episode pipeline or
+production artistic approval is implemented. External review of Phase 2B is the next gate.
