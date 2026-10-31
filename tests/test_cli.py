@@ -74,3 +74,12 @@ def test_help_is_conventional_text():
     result = run("--help")
     assert result.returncode == 0
     assert "usage:" in result.stdout
+
+
+def test_overflow_is_a_loader_error_before_schema_validation(tmp_path):
+    path = tmp_path / "overflow.json"
+    path.write_text('{"unknown": [1e309]}')
+    result = run("validate", path)
+    assert result.returncode == 2
+    assert json.loads(result.stdout)["errors"][0]["code"] == "JSON_NONFINITE"
+    assert result.stderr == ""

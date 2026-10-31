@@ -113,6 +113,17 @@ wheels = [
 ]
 
 [[package]]
+name = "pycairo"
+version = "1.29.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/bb/5e/19ab2572981a996ce96b853a189d2dcced40506b67d9555a7568457abcf2/pycairo-1.29.2.tar.gz", hash = "sha256:3e69fff74fe64f5ba2dfa31f67c6bdf26413342574047437d2ac520d35e9a489", size = 666308, upload-time = "2026-10-04T19:11:03.81Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/0f/be/5433f918a50238f848e7f6e4d9662331f4c556a01e2e8dc58945c2af440f/pycairo-1.29.2-cp312-cp312-win32.whl", hash = "sha256:75b1b6ff515b6bcb89e86c5f2bb4762c46f0fcbde6c444ea035c8fecd1bc8b55", size = 752061, upload-time = "2026-10-04T19:11:31.193Z" },
+    { url = "https://files.pythonhosted.org/packages/7e/0e/1571890c2ab04a6e4b59758ffbeab3c141fe08f909fb0d2f6e8cacfbe47a/pycairo-1.29.2-cp312-cp312-win_amd64.whl", hash = "sha256:b97fd674dea445eae40387353f32665dbe19080a2ef63df97fd81273afc6e9d1", size = 846938, upload-time = "2026-10-04T19:11:32.717Z" },
+    { url = "https://files.pythonhosted.org/packages/80/07/890c5d83d4f7d4972c496f6966c1257a46384fb93fbbfb8c207daea92e57/pycairo-1.29.2-cp312-cp312-win_arm64.whl", hash = "sha256:a9ed77de6f9ba148d493360d1b2a93be8a785c8ae855d4fd6e8df293ed58ddd8", size = 695598, upload-time = "2026-10-04T19:11:34.111Z" },
+]
+
+[[package]]
 name = "pygments"
 version = "2.21.0"
 source = { registry = "https://pypi.org/simple" }
@@ -148,10 +159,15 @@ wheels = [
 
 [[package]]
 name = "reelforge-v2"
-version = "0.1.0"
+version = "0.2.0"
 source = { editable = "." }
 dependencies = [
     { name = "jsonschema" },
+]
+
+[package.optional-dependencies]
+renderer = [
+    { name = "pycairo" },
 ]
 
 [package.dev-dependencies]
@@ -163,7 +179,11 @@ dev = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "jsonschema", specifier = "==4.25.1" }]
+requires-dist = [
+    { name = "jsonschema", specifier = "==4.25.1" },
+    { name = "pycairo", marker = "extra == 'renderer'", specifier = "==1.29.2" },
+]
+provides-extras = ["renderer"]
 
 [package.metadata.requires-dev]
 dev = [

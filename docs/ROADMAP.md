@@ -1,21 +1,24 @@
 # Incremental roadmap
 
+Phase 1 is approved with changes. Phase 2A is implemented and awaits external review.
+No Phase 2B work is authorized by this document.
+
 Each phase ends in evidence and architectural review. Nothing below is authorization to
 implement a later phase during Phase 1. Phase numbers after Phase 2 are provisional.
 
 | Phase | Small deliverable | Exit evidence |
 | --- | --- | --- |
-| 1 — foundation (current) | V1 audit, hardware study, stack decision, modular skeleton, strict minimal manifest, CLI and tests | Tests/lint/package smoke; reviewer accepts boundaries and unresolved risks |
-| 2 — minimal software drawing feasibility | Primitive-only backend adapter and bounded single-frame surface lifecycle; static diagnostic fixtures | Inspected curves/alpha/clips, repeated-frame memory, 360p/720p measurements, deterministic hashes; no rigs/world/audio/video |
+| 1 — foundation (complete) | V1 audit, hardware study, stack decision, modular skeleton, strict minimal manifest, CLI and tests | Tests/lint/package smoke; reviewer accepts boundaries and unresolved risks |
+| 2A — minimal software drawing feasibility (current) | Primitive-only backend adapter and bounded single-frame surface lifecycle; static diagnostic fixtures | Inspected curves/alpha/clips, repeated-frame memory, 360p/720p measurements, deterministic hashes; no rigs/world/audio/video |
 | 3 — code-authored catalog foundations | One reusable character definition/rig and one small environment recipe, approved IDs and parameter limits | Identity/geometry contracts and static compositions; independent review before animation |
 | 4 — deterministic animation | Frame-index evaluation, one articulated action, camera/depth basics | Timing/pose invariants, out-of-order frame equivalence and movement review |
 | 5 — scene composition/style | Reusable environment system, bounded lights/effects, shot templates and typography | Consistent look, mobile readability and measured scene memory |
 | 6 — media/timing | Bounded FFmpeg process adapter, supplied audio/timestamp contracts and synchronization | Failure/cleanup tests, process-tree budget, frame/audio timing evidence |
 | 7 — production orchestration/review | Preview workflow, technical output checks, selected visual checks and explicit artistic review | Original short reel compared with reference dimensions; no automatic art-quality guarantee |
 
-## Suggested Phase 2 assignment
+## Phase 2A assignment (implemented; see report)
 
-Start only after Phase 1 review. Confirm the chosen software backend on Ubuntu before building
+Phase 1 review authorized this milestone. Confirm the chosen software backend on Ubuntu before building
 expensive systems around it. Install one candidate binding in a separate measured development
 environment; pin native versions and record setup. Define a narrow drawing/surface ownership
 protocol based on actual primitive needs. Implement lines, filled paths, basic transforms,
@@ -41,4 +44,4 @@ explicit later gate unless the architect separately authorizes a minimal encodin
 - Should fps/profile scope change before stabilization? Are frame timing and error contracts clear?
 - Which text shaping/font and redistribution licenses should later phases adopt?
 
-Review outcome should explicitly accept, revise or reject decisions. Stop here until that review.
+Review outcome should explicitly accept, revise or reject decisions. Stop after Phase 2A until its external review.

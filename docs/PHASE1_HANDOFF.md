@@ -1,4 +1,4 @@
-# Phase 1 architectural review handoff
+# Phase 1 architectural review handoff (historical)
 
 ## 1. Architecture and rationale
 

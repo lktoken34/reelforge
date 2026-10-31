@@ -2,6 +2,7 @@
 
 import hashlib
 import json
+import math
 from importlib.resources import files
 from itertools import islice
 from pathlib import Path
@@ -36,6 +37,13 @@ def _nonfinite(value: str) -> None:
     raise InputError(Issue("JSON_NONFINITE", "", f"Non-finite number {value} is forbidden"))
 
 
+def _finite_float(value: str) -> float:
+    number = float(value)
+    if not math.isfinite(number):
+        raise InputError(Issue("JSON_NONFINITE", "", "Numeric overflow is forbidden"))
+    return number
+
+
 def _check_nesting(text: str) -> None:
     """Bound container nesting before parsing; ignore brackets inside JSON strings."""
     depth = 0
@@ -68,7 +76,9 @@ def load_project(path: Path) -> Any:
     try:
         text = raw.decode("utf-8")
         _check_nesting(text)
-        return json.loads(text, object_pairs_hook=_object, parse_constant=_nonfinite)
+        return json.loads(
+            text, object_pairs_hook=_object, parse_constant=_nonfinite, parse_float=_finite_float
+        )
     except (ValueError, UnicodeError, RecursionError) as error:
         if isinstance(error, InputError):
             raise

@@ -1,4 +1,4 @@
-name: foundation
+name: foundation-and-cairo
 on: [push, pull_request]
 permissions:
   contents: read
@@ -20,8 +20,22 @@ jobs:
         shell: bash
         run: |
           uv venv /tmp/reelforge-wheel
-          uv pip install --python /tmp/reelforge-wheel/bin/python dist/*.whl
+          uv pip install --python /tmp/reelforge-wheel/bin/python dist/reelforge_v2-*.whl
           cd /tmp
           /tmp/reelforge-wheel/bin/reelforge capabilities
           /tmp/reelforge-wheel/bin/reelforge schema
           /tmp/reelforge-wheel/bin/reelforge validate "$GITHUB_WORKSPACE/examples/foundation/project.json"
+
+  cairo-checks:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: '0.13.4'
+          python-version: '3.12'
+      - run: sudo apt-get update
+      - run: sudo apt-get install -y --no-install-recommends libcairo2-dev pkg-config python3-dev build-essential
+      - run: uv sync --frozen --extra renderer
+      - run: uv run --frozen --extra renderer pytest
+      - run: uv run --frozen --extra renderer python tools/render_diagnostics.py --output-dir /tmp/reelforge-diagnostics

@@ -1,4 +1,4 @@
-# Phase 1 verification record
+# Phase 1 verification record (historical)
 
 Date: 2026-10-31. Actual execution host: Ubuntu 24.04.3 LTS, Linux x86_64,
 CPython 3.12.14, uv 0.13.4. This host was not constrained to 4 vCPUs/0.4 GiB for these checks.
@@ -42,3 +42,6 @@ production render, character/world implementation or advanced visual QA was perf
 The V1 image smoke is not a V2 rendering implementation. No claim of reference quality or
 rendering feasibility follows from the foundation tests. Native/system reproducibility remains
 unverified. `/usr/bin/time` was unavailable in this host; no GNU time result is claimed.
+
+For the current Phase 2A results, see PHASE2A_REPORT.md. This file preserves the original
+foundation evidence and does not describe the newer optional backend tests.

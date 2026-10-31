@@ -34,8 +34,8 @@ implicit per-shot rounding. Future intervals will be contiguous and half-open. I
 1–2000 characters with at least one non-whitespace character. It is retained for humans;
 Phase 1 never converts it to art or animation. Validation is structural, not creative.
 
-Files must be UTF-8 JSON, at most 1048576 bytes. Duplicate keys and NaN/Infinity literals are
-rejected. Malformed JSON or nesting beyond 32 containers is reported as JSON_INVALID; this is a bounded
+Files must be UTF-8 JSON, at most 1048576 bytes. Duplicate keys, NaN/Infinity literals and numeric overflow such as `1e309` are
+rejected before schema validation. Malformed JSON or nesting beyond 32 containers is reported as JSON_INVALID; this is a bounded
 local-file tool, not a hardened server for hostile input. Do not pass FIFOs, devices or network
 mounts as manifests. Error count is capped at 32; fix reported issues and revalidate to reveal
 additional errors. Schema checks precede semantic checks. A path points to the failing value
@@ -74,3 +74,6 @@ new reviewed capability, not invented JSON. No artistic quality score is emitted
 Future drafts will add catalog IDs, parameters, camera/action templates, captions and local
 audio references when those systems exist. The same staged validation/diagnostics contract
 should remain, but this draft must not be represented as a complete future scene language.
+
+Phase 2A note: the optional trusted-Python drawing backend is deliberately absent from these
+commands and this schema. Existing manifests are still not render-ready.

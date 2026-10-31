@@ -1,5 +1,9 @@
 # CPU-only feasibility and hardware constraints
 
+Phase 2A update: actual primitive-only measurements now appear in PHASE2A_REPORT.md and
+artifacts/phase2a/benchmark_results.json. The Phase 1 analysis below remains the design baseline;
+its proposed budgets have not become a production admission scheduler.
+
 ## Target and evidence limits
 
 Design target: Ubuntu 24.04 LTS, Linux x86_64, 4 vCPUs, no GPU, often only **0.4–1.0 GiB

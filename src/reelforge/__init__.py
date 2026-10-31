@@ -1,3 +1,3 @@
-"""ReelForge V2: foundation only; no rendering capabilities in Phase 1."""
+"""ReelForge V2: foundation contracts and an internal Phase 2A drawing backend."""
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"

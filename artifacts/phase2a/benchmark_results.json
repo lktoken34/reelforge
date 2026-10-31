@@ -1,0 +1,1026 @@
+{
+  "milestone": "2A",
+  "results": [
+    {
+      "after_warmup_memory": {
+        "Threads": 1,
+        "VmHWM": 16424,
+        "VmRSS": 16424,
+        "VmSwap": 0
+      },
+      "allocation_draw_fps": 296.6836806170936,
+      "below_256_mib_rss": true,
+      "command_count": 121,
+      "draw_allocation_seconds": 1.6852966060014296,
+      "environment": {
+        "affinity_cpus": 9,
+        "architecture": "x86_64",
+        "cairo": "1.18.0",
+        "cgroup_observations_shared_not_job_peaks": {
+          "cpu.max": "800000 100000",
+          "memory.current": "360435712",
+          "memory.max": "8589934592",
+          "memory.peak": "827715584"
+        },
+        "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+        "distribution": "Ubuntu 24.04.3 LTS",
+        "logical_cpus_visible": 9,
+        "memory_kib": {
+          "MemAvailable": 9576972,
+          "MemTotal": 10206472,
+          "SwapFree": 0,
+          "SwapTotal": 0
+        },
+        "os": "Linux-6.18.57-x86_64-with-glibc2.39",
+        "pycairo": "1.29.2",
+        "python": "3.12.14"
+      },
+      "final_memory": {
+        "Threads": 1,
+        "VmHWM": 16436,
+        "VmRSS": 16436,
+        "VmSwap": 0
+      },
+      "final_minus_initial_rss_kib": 1420,
+      "final_minus_warm_rss_kib": 12,
+      "first_pixel_sha256": "ab7c0bad67cc6bd486b12abd583fd8070a77a2de2b73c1230decff50761815fb",
+      "frames": 500,
+      "gc_enabled": true,
+      "hash_mismatches": 0,
+      "height": 640,
+      "initial_memory": {
+        "Threads": 1,
+        "VmHWM": 15016,
+        "VmRSS": 15016,
+        "VmSwap": 0
+      },
+      "last_pixel_sha256": "ab7c0bad67cc6bd486b12abd583fd8070a77a2de2b73c1230decff50761815fb",
+      "live_surfaces_final": 0,
+      "loop_including_hash_fps": 250.06391758762823,
+      "loop_including_hash_seconds": 1.999488790000214,
+      "owned_surface_bytes_final": 0,
+      "peak_rss_kib": 16436,
+      "released_rss_tail_delta_kib": 0,
+      "released_rss_tail_range_kib": 0,
+      "rusage_peak_rss_kib": 16360,
+      "samples": [
+        {
+          "frame": 25,
+          "live_rss_kib": 16432,
+          "released_rss_kib": 16432
+        },
+        {
+          "frame": 50,
+          "live_rss_kib": 16432,
+          "released_rss_kib": 16432
+        },
+        {
+          "frame": 75,
+          "live_rss_kib": 16432,
+          "released_rss_kib": 16432
+        },
+        {
+          "frame": 100,
+          "live_rss_kib": 16432,
+          "released_rss_kib": 16432
+        },
+        {
+          "frame": 125,
+          "live_rss_kib": 16432,
+          "released_rss_kib": 16432
+        },
+        {
+          "frame": 150,
+          "live_rss_kib": 16432,
+          "released_rss_kib": 16436
+        },
+        {
+          "frame": 175,
+          "live_rss_kib": 16436,
+          "released_rss_kib": 16436
+        },
+        {
+          "frame": 200,
+          "live_rss_kib": 16436,
+          "released_rss_kib": 16436
+        },
+        {
+          "frame": 225,
+          "live_rss_kib": 16436,
+          "released_rss_kib": 16436
+        },
+        {
+          "frame": 250,
+          "live_rss_kib": 16436,
+          "released_rss_kib": 16436
+        },
+        {
+          "frame": 275,
+          "live_rss_kib": 16436,
+          "released_rss_kib": 16436
+        },
+        {
+          "frame": 300,
+          "live_rss_kib": 16436,
+          "released_rss_kib": 16436
+        },
+        {
+          "frame": 325,
+          "live_rss_kib": 16436,
+          "released_rss_kib": 16436
+        },
+        {
+          "frame": 350,
+          "live_rss_kib": 16436,
+          "released_rss_kib": 16436
+        },
+        {
+          "frame": 375,
+          "live_rss_kib": 16436,
+          "released_rss_kib": 16436
+        },
+        {
+          "frame": 400,
+          "live_rss_kib": 16436,
+          "released_rss_kib": 16436
+        },
+        {
+          "frame": 425,
+          "live_rss_kib": 16436,
+          "released_rss_kib": 16436
+        },
+        {
+          "frame": 450,
+          "live_rss_kib": 16436,
+          "released_rss_kib": 16436
+        },
+        {
+          "frame": 475,
+          "live_rss_kib": 16436,
+          "released_rss_kib": 16436
+        },
+        {
+          "frame": 500,
+          "live_rss_kib": 16436,
+          "released_rss_kib": 16436
+        }
+      ],
+      "scope": "single renderer process and its native allocations; no children or encoder",
+      "surface_bytes": 921600,
+      "warmup_frames": 10,
+      "width": 360,
+      "repeat": 1
+    },
+    {
+      "after_warmup_memory": {
+        "Threads": 1,
+        "VmHWM": 16424,
+        "VmRSS": 16424,
+        "VmSwap": 0
+      },
+      "allocation_draw_fps": 308.53553378740935,
+      "below_256_mib_rss": true,
+      "command_count": 121,
+      "draw_allocation_seconds": 1.620558882998921,
+      "environment": {
+        "affinity_cpus": 9,
+        "architecture": "x86_64",
+        "cairo": "1.18.0",
+        "cgroup_observations_shared_not_job_peaks": {
+          "cpu.max": "800000 100000",
+          "memory.current": "361394176",
+          "memory.max": "8589934592",
+          "memory.peak": "827715584"
+        },
+        "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+        "distribution": "Ubuntu 24.04.3 LTS",
+        "logical_cpus_visible": 9,
+        "memory_kib": {
+          "MemAvailable": 9574712,
+          "MemTotal": 10206472,
+          "SwapFree": 0,
+          "SwapTotal": 0
+        },
+        "os": "Linux-6.18.57-x86_64-with-glibc2.39",
+        "pycairo": "1.29.2",
+        "python": "3.12.14"
+      },
+      "final_memory": {
+        "Threads": 1,
+        "VmHWM": 16432,
+        "VmRSS": 16432,
+        "VmSwap": 0
+      },
+      "final_minus_initial_rss_kib": 1452,
+      "final_minus_warm_rss_kib": 8,
+      "first_pixel_sha256": "ab7c0bad67cc6bd486b12abd583fd8070a77a2de2b73c1230decff50761815fb",
+      "frames": 500,
+      "gc_enabled": true,
+      "hash_mismatches": 0,
+      "height": 640,
+      "initial_memory": {
+        "Threads": 1,
+        "VmHWM": 14980,
+        "VmRSS": 14980,
+        "VmSwap": 0
+      },
+      "last_pixel_sha256": "ab7c0bad67cc6bd486b12abd583fd8070a77a2de2b73c1230decff50761815fb",
+      "live_surfaces_final": 0,
+      "loop_including_hash_fps": 260.41316492340513,
+      "loop_including_hash_seconds": 1.9200258179998855,
+      "owned_surface_bytes_final": 0,
+      "peak_rss_kib": 16432,
+      "released_rss_tail_delta_kib": 0,
+      "released_rss_tail_range_kib": 0,
+      "rusage_peak_rss_kib": 16360,
+      "samples": [
+        {
+          "frame": 25,
+          "live_rss_kib": 16428,
+          "released_rss_kib": 16428
+        },
+        {
+          "frame": 50,
+          "live_rss_kib": 16428,
+          "released_rss_kib": 16428
+        },
+        {
+          "frame": 75,
+          "live_rss_kib": 16428,
+          "released_rss_kib": 16428
+        },
+        {
+          "frame": 100,
+          "live_rss_kib": 16428,
+          "released_rss_kib": 16428
+        },
+        {
+          "frame": 125,
+          "live_rss_kib": 16428,
+          "released_rss_kib": 16432
+        },
+        {
+          "frame": 150,
+          "live_rss_kib": 16432,
+          "released_rss_kib": 16432
+        },
+        {
+          "frame": 175,
+          "live_rss_kib": 16432,
+          "released_rss_kib": 16432
+        },
+        {
+          "frame": 200,
+          "live_rss_kib": 16432,
+          "released_rss_kib": 16432
+        },
+        {
+          "frame": 225,
+          "live_rss_kib": 16432,
+          "released_rss_kib": 16432
+        },
+        {
+          "frame": 250,
+          "live_rss_kib": 16432,
+          "released_rss_kib": 16432
+        },
+        {
+          "frame": 275,
+          "live_rss_kib": 16432,
+          "released_rss_kib": 16432
+        },
+        {
+          "frame": 300,
+          "live_rss_kib": 16432,
+          "released_rss_kib": 16432
+        },
+        {
+          "frame": 325,
+          "live_rss_kib": 16432,
+          "released_rss_kib": 16432
+        },
+        {
+          "frame": 350,
+          "live_rss_kib": 16432,
+          "released_rss_kib": 16432
+        },
+        {
+          "frame": 375,
+          "live_rss_kib": 16432,
+          "released_rss_kib": 16432
+        },
+        {
+          "frame": 400,
+          "live_rss_kib": 16432,
+          "released_rss_kib": 16432
+        },
+        {
+          "frame": 425,
+          "live_rss_kib": 16432,
+          "released_rss_kib": 16432
+        },
+        {
+          "frame": 450,
+          "live_rss_kib": 16432,
+          "released_rss_kib": 16432
+        },
+        {
+          "frame": 475,
+          "live_rss_kib": 16432,
+          "released_rss_kib": 16432
+        },
+        {
+          "frame": 500,
+          "live_rss_kib": 16432,
+          "released_rss_kib": 16432
+        }
+      ],
+      "scope": "single renderer process and its native allocations; no children or encoder",
+      "surface_bytes": 921600,
+      "warmup_frames": 10,
+      "width": 360,
+      "repeat": 2
+    },
+    {
+      "after_warmup_memory": {
+        "Threads": 1,
+        "VmHWM": 16428,
+        "VmRSS": 16428,
+        "VmSwap": 0
+      },
+      "allocation_draw_fps": 298.14997908144943,
+      "below_256_mib_rss": true,
+      "command_count": 121,
+      "draw_allocation_seconds": 1.6770083350011191,
+      "environment": {
+        "affinity_cpus": 9,
+        "architecture": "x86_64",
+        "cairo": "1.18.0",
+        "cgroup_observations_shared_not_job_peaks": {
+          "cpu.max": "800000 100000",
+          "memory.current": "360460288",
+          "memory.max": "8589934592",
+          "memory.peak": "827715584"
+        },
+        "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+        "distribution": "Ubuntu 24.04.3 LTS",
+        "logical_cpus_visible": 9,
+        "memory_kib": {
+          "MemAvailable": 9572448,
+          "MemTotal": 10206472,
+          "SwapFree": 0,
+          "SwapTotal": 0
+        },
+        "os": "Linux-6.18.57-x86_64-with-glibc2.39",
+        "pycairo": "1.29.2",
+        "python": "3.12.14"
+      },
+      "final_memory": {
+        "Threads": 1,
+        "VmHWM": 16436,
+        "VmRSS": 16436,
+        "VmSwap": 0
+      },
+      "final_minus_initial_rss_kib": 1452,
+      "final_minus_warm_rss_kib": 8,
+      "first_pixel_sha256": "ab7c0bad67cc6bd486b12abd583fd8070a77a2de2b73c1230decff50761815fb",
+      "frames": 500,
+      "gc_enabled": true,
+      "hash_mismatches": 0,
+      "height": 640,
+      "initial_memory": {
+        "Threads": 1,
+        "VmHWM": 14984,
+        "VmRSS": 14984,
+        "VmSwap": 0
+      },
+      "last_pixel_sha256": "ab7c0bad67cc6bd486b12abd583fd8070a77a2de2b73c1230decff50761815fb",
+      "live_surfaces_final": 0,
+      "loop_including_hash_fps": 252.5511818785904,
+      "loop_including_hash_seconds": 1.9797967139998036,
+      "owned_surface_bytes_final": 0,
+      "peak_rss_kib": 16436,
+      "released_rss_tail_delta_kib": 0,
+      "released_rss_tail_range_kib": 0,
+      "rusage_peak_rss_kib": 16364,
+      "samples": [
+        {
+          "frame": 25,
+          "live_rss_kib": 16432,
+          "released_rss_kib": 16432
+        },
+        {
+          "frame": 50,
+          "live_rss_kib": 16432,
+          "released_rss_kib": 16436
+        },
+        {
+          "frame": 75,
+          "live_rss_kib": 16436,
+          "released_rss_kib": 16436
+        },
+        {
+          "frame": 100,
+          "live_rss_kib": 16436,
+          "released_rss_kib": 16436
+        },
+        {
+          "frame": 125,
+          "live_rss_kib": 16436,
+          "released_rss_kib": 16436
+        },
+        {
+          "frame": 150,
+          "live_rss_kib": 16436,
+          "released_rss_kib": 16436
+        },
+        {
+          "frame": 175,
+          "live_rss_kib": 16436,
+          "released_rss_kib": 16436
+        },
+        {
+          "frame": 200,
+          "live_rss_kib": 16436,
+          "released_rss_kib": 16436
+        },
+        {
+          "frame": 225,
+          "live_rss_kib": 16436,
+          "released_rss_kib": 16436
+        },
+        {
+          "frame": 250,
+          "live_rss_kib": 16436,
+          "released_rss_kib": 16436
+        },
+        {
+          "frame": 275,
+          "live_rss_kib": 16436,
+          "released_rss_kib": 16436
+        },
+        {
+          "frame": 300,
+          "live_rss_kib": 16436,
+          "released_rss_kib": 16436
+        },
+        {
+          "frame": 325,
+          "live_rss_kib": 16436,
+          "released_rss_kib": 16436
+        },
+        {
+          "frame": 350,
+          "live_rss_kib": 16436,
+          "released_rss_kib": 16436
+        },
+        {
+          "frame": 375,
+          "live_rss_kib": 16436,
+          "released_rss_kib": 16436
+        },
+        {
+          "frame": 400,
+          "live_rss_kib": 16436,
+          "released_rss_kib": 16436
+        },
+        {
+          "frame": 425,
+          "live_rss_kib": 16436,
+          "released_rss_kib": 16436
+        },
+        {
+          "frame": 450,
+          "live_rss_kib": 16436,
+          "released_rss_kib": 16436
+        },
+        {
+          "frame": 475,
+          "live_rss_kib": 16436,
+          "released_rss_kib": 16436
+        },
+        {
+          "frame": 500,
+          "live_rss_kib": 16436,
+          "released_rss_kib": 16436
+        }
+      ],
+      "scope": "single renderer process and its native allocations; no children or encoder",
+      "surface_bytes": 921600,
+      "warmup_frames": 10,
+      "width": 360,
+      "repeat": 3
+    },
+    {
+      "after_warmup_memory": {
+        "Threads": 1,
+        "VmHWM": 19124,
+        "VmRSS": 19124,
+        "VmSwap": 0
+      },
+      "allocation_draw_fps": 111.7113379670266,
+      "below_256_mib_rss": true,
+      "command_count": 121,
+      "draw_allocation_seconds": 4.475821426000493,
+      "environment": {
+        "affinity_cpus": 9,
+        "architecture": "x86_64",
+        "cairo": "1.18.0",
+        "cgroup_observations_shared_not_job_peaks": {
+          "cpu.max": "800000 100000",
+          "memory.current": "365592576",
+          "memory.max": "8589934592",
+          "memory.peak": "827715584"
+        },
+        "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+        "distribution": "Ubuntu 24.04.3 LTS",
+        "logical_cpus_visible": 9,
+        "memory_kib": {
+          "MemAvailable": 9566096,
+          "MemTotal": 10206472,
+          "SwapFree": 0,
+          "SwapTotal": 0
+        },
+        "os": "Linux-6.18.57-x86_64-with-glibc2.39",
+        "pycairo": "1.29.2",
+        "python": "3.12.14"
+      },
+      "final_memory": {
+        "Threads": 1,
+        "VmHWM": 19136,
+        "VmRSS": 19136,
+        "VmSwap": 0
+      },
+      "final_minus_initial_rss_kib": 4160,
+      "final_minus_warm_rss_kib": 12,
+      "first_pixel_sha256": "49f65e59085d15a9a1134c39979ae592aba33f0f9f794f16a8f0548ef8f5c962",
+      "frames": 500,
+      "gc_enabled": true,
+      "hash_mismatches": 0,
+      "height": 1280,
+      "initial_memory": {
+        "Threads": 1,
+        "VmHWM": 14976,
+        "VmRSS": 14976,
+        "VmSwap": 0
+      },
+      "last_pixel_sha256": "49f65e59085d15a9a1134c39979ae592aba33f0f9f794f16a8f0548ef8f5c962",
+      "live_surfaces_final": 0,
+      "loop_including_hash_fps": 87.59722208073579,
+      "loop_including_hash_seconds": 5.707943563999834,
+      "owned_surface_bytes_final": 0,
+      "peak_rss_kib": 19136,
+      "released_rss_tail_delta_kib": 0,
+      "released_rss_tail_range_kib": 0,
+      "rusage_peak_rss_kib": 19056,
+      "samples": [
+        {
+          "frame": 25,
+          "live_rss_kib": 19132,
+          "released_rss_kib": 19132
+        },
+        {
+          "frame": 50,
+          "live_rss_kib": 19132,
+          "released_rss_kib": 19132
+        },
+        {
+          "frame": 75,
+          "live_rss_kib": 19132,
+          "released_rss_kib": 19132
+        },
+        {
+          "frame": 100,
+          "live_rss_kib": 19132,
+          "released_rss_kib": 19132
+        },
+        {
+          "frame": 125,
+          "live_rss_kib": 19132,
+          "released_rss_kib": 19132
+        },
+        {
+          "frame": 150,
+          "live_rss_kib": 19132,
+          "released_rss_kib": 19136
+        },
+        {
+          "frame": 175,
+          "live_rss_kib": 19136,
+          "released_rss_kib": 19136
+        },
+        {
+          "frame": 200,
+          "live_rss_kib": 19136,
+          "released_rss_kib": 19136
+        },
+        {
+          "frame": 225,
+          "live_rss_kib": 19136,
+          "released_rss_kib": 19136
+        },
+        {
+          "frame": 250,
+          "live_rss_kib": 19136,
+          "released_rss_kib": 19136
+        },
+        {
+          "frame": 275,
+          "live_rss_kib": 19136,
+          "released_rss_kib": 19136
+        },
+        {
+          "frame": 300,
+          "live_rss_kib": 19136,
+          "released_rss_kib": 19136
+        },
+        {
+          "frame": 325,
+          "live_rss_kib": 19136,
+          "released_rss_kib": 19136
+        },
+        {
+          "frame": 350,
+          "live_rss_kib": 19136,
+          "released_rss_kib": 19136
+        },
+        {
+          "frame": 375,
+          "live_rss_kib": 19136,
+          "released_rss_kib": 19136
+        },
+        {
+          "frame": 400,
+          "live_rss_kib": 19136,
+          "released_rss_kib": 19136
+        },
+        {
+          "frame": 425,
+          "live_rss_kib": 19136,
+          "released_rss_kib": 19136
+        },
+        {
+          "frame": 450,
+          "live_rss_kib": 19136,
+          "released_rss_kib": 19136
+        },
+        {
+          "frame": 475,
+          "live_rss_kib": 19136,
+          "released_rss_kib": 19136
+        },
+        {
+          "frame": 500,
+          "live_rss_kib": 19136,
+          "released_rss_kib": 19136
+        }
+      ],
+      "scope": "single renderer process and its native allocations; no children or encoder",
+      "surface_bytes": 3686400,
+      "warmup_frames": 10,
+      "width": 720,
+      "repeat": 1
+    },
+    {
+      "after_warmup_memory": {
+        "Threads": 1,
+        "VmHWM": 19136,
+        "VmRSS": 19136,
+        "VmSwap": 0
+      },
+      "allocation_draw_fps": 120.5887586287464,
+      "below_256_mib_rss": true,
+      "command_count": 121,
+      "draw_allocation_seconds": 4.146323469000436,
+      "environment": {
+        "affinity_cpus": 9,
+        "architecture": "x86_64",
+        "cairo": "1.18.0",
+        "cgroup_observations_shared_not_job_peaks": {
+          "cpu.max": "800000 100000",
+          "memory.current": "365305856",
+          "memory.max": "8589934592",
+          "memory.peak": "827715584"
+        },
+        "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+        "distribution": "Ubuntu 24.04.3 LTS",
+        "logical_cpus_visible": 9,
+        "memory_kib": {
+          "MemAvailable": 9568108,
+          "MemTotal": 10206472,
+          "SwapFree": 0,
+          "SwapTotal": 0
+        },
+        "os": "Linux-6.18.57-x86_64-with-glibc2.39",
+        "pycairo": "1.29.2",
+        "python": "3.12.14"
+      },
+      "final_memory": {
+        "Threads": 1,
+        "VmHWM": 19140,
+        "VmRSS": 19140,
+        "VmSwap": 0
+      },
+      "final_minus_initial_rss_kib": 4160,
+      "final_minus_warm_rss_kib": 4,
+      "first_pixel_sha256": "49f65e59085d15a9a1134c39979ae592aba33f0f9f794f16a8f0548ef8f5c962",
+      "frames": 500,
+      "gc_enabled": true,
+      "hash_mismatches": 0,
+      "height": 1280,
+      "initial_memory": {
+        "Threads": 1,
+        "VmHWM": 14980,
+        "VmRSS": 14980,
+        "VmSwap": 0
+      },
+      "last_pixel_sha256": "49f65e59085d15a9a1134c39979ae592aba33f0f9f794f16a8f0548ef8f5c962",
+      "live_surfaces_final": 0,
+      "loop_including_hash_fps": 94.2873595672728,
+      "loop_including_hash_seconds": 5.302937767000003,
+      "owned_surface_bytes_final": 0,
+      "peak_rss_kib": 19140,
+      "released_rss_tail_delta_kib": 0,
+      "released_rss_tail_range_kib": 0,
+      "rusage_peak_rss_kib": 19064,
+      "samples": [
+        {
+          "frame": 25,
+          "live_rss_kib": 19140,
+          "released_rss_kib": 19140
+        },
+        {
+          "frame": 50,
+          "live_rss_kib": 19140,
+          "released_rss_kib": 19140
+        },
+        {
+          "frame": 75,
+          "live_rss_kib": 19140,
+          "released_rss_kib": 19140
+        },
+        {
+          "frame": 100,
+          "live_rss_kib": 19140,
+          "released_rss_kib": 19140
+        },
+        {
+          "frame": 125,
+          "live_rss_kib": 19140,
+          "released_rss_kib": 19140
+        },
+        {
+          "frame": 150,
+          "live_rss_kib": 19140,
+          "released_rss_kib": 19140
+        },
+        {
+          "frame": 175,
+          "live_rss_kib": 19140,
+          "released_rss_kib": 19140
+        },
+        {
+          "frame": 200,
+          "live_rss_kib": 19140,
+          "released_rss_kib": 19140
+        },
+        {
+          "frame": 225,
+          "live_rss_kib": 19140,
+          "released_rss_kib": 19140
+        },
+        {
+          "frame": 250,
+          "live_rss_kib": 19140,
+          "released_rss_kib": 19140
+        },
+        {
+          "frame": 275,
+          "live_rss_kib": 19140,
+          "released_rss_kib": 19140
+        },
+        {
+          "frame": 300,
+          "live_rss_kib": 19140,
+          "released_rss_kib": 19140
+        },
+        {
+          "frame": 325,
+          "live_rss_kib": 19140,
+          "released_rss_kib": 19140
+        },
+        {
+          "frame": 350,
+          "live_rss_kib": 19140,
+          "released_rss_kib": 19140
+        },
+        {
+          "frame": 375,
+          "live_rss_kib": 19140,
+          "released_rss_kib": 19140
+        },
+        {
+          "frame": 400,
+          "live_rss_kib": 19140,
+          "released_rss_kib": 19140
+        },
+        {
+          "frame": 425,
+          "live_rss_kib": 19140,
+          "released_rss_kib": 19140
+        },
+        {
+          "frame": 450,
+          "live_rss_kib": 19140,
+          "released_rss_kib": 19140
+        },
+        {
+          "frame": 475,
+          "live_rss_kib": 19140,
+          "released_rss_kib": 19140
+        },
+        {
+          "frame": 500,
+          "live_rss_kib": 19140,
+          "released_rss_kib": 19140
+        }
+      ],
+      "scope": "single renderer process and its native allocations; no children or encoder",
+      "surface_bytes": 3686400,
+      "warmup_frames": 10,
+      "width": 720,
+      "repeat": 2
+    },
+    {
+      "after_warmup_memory": {
+        "Threads": 1,
+        "VmHWM": 19136,
+        "VmRSS": 19136,
+        "VmSwap": 0
+      },
+      "allocation_draw_fps": 121.17333373095248,
+      "below_256_mib_rss": true,
+      "command_count": 121,
+      "draw_allocation_seconds": 4.1263204089950705,
+      "environment": {
+        "affinity_cpus": 9,
+        "architecture": "x86_64",
+        "cairo": "1.18.0",
+        "cgroup_observations_shared_not_job_peaks": {
+          "cpu.max": "800000 100000",
+          "memory.current": "365305856",
+          "memory.max": "8589934592",
+          "memory.peak": "827715584"
+        },
+        "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+        "distribution": "Ubuntu 24.04.3 LTS",
+        "logical_cpus_visible": 9,
+        "memory_kib": {
+          "MemAvailable": 9564916,
+          "MemTotal": 10206472,
+          "SwapFree": 0,
+          "SwapTotal": 0
+        },
+        "os": "Linux-6.18.57-x86_64-with-glibc2.39",
+        "pycairo": "1.29.2",
+        "python": "3.12.14"
+      },
+      "final_memory": {
+        "Threads": 1,
+        "VmHWM": 19144,
+        "VmRSS": 19144,
+        "VmSwap": 0
+      },
+      "final_minus_initial_rss_kib": 4160,
+      "final_minus_warm_rss_kib": 8,
+      "first_pixel_sha256": "49f65e59085d15a9a1134c39979ae592aba33f0f9f794f16a8f0548ef8f5c962",
+      "frames": 500,
+      "gc_enabled": true,
+      "hash_mismatches": 0,
+      "height": 1280,
+      "initial_memory": {
+        "Threads": 1,
+        "VmHWM": 14984,
+        "VmRSS": 14984,
+        "VmSwap": 0
+      },
+      "last_pixel_sha256": "49f65e59085d15a9a1134c39979ae592aba33f0f9f794f16a8f0548ef8f5c962",
+      "live_surfaces_final": 0,
+      "loop_including_hash_fps": 94.64690155774797,
+      "loop_including_hash_seconds": 5.2827931159999935,
+      "owned_surface_bytes_final": 0,
+      "peak_rss_kib": 19144,
+      "released_rss_tail_delta_kib": 0,
+      "released_rss_tail_range_kib": 0,
+      "rusage_peak_rss_kib": 19064,
+      "samples": [
+        {
+          "frame": 25,
+          "live_rss_kib": 19140,
+          "released_rss_kib": 19140
+        },
+        {
+          "frame": 50,
+          "live_rss_kib": 19140,
+          "released_rss_kib": 19140
+        },
+        {
+          "frame": 75,
+          "live_rss_kib": 19140,
+          "released_rss_kib": 19140
+        },
+        {
+          "frame": 100,
+          "live_rss_kib": 19140,
+          "released_rss_kib": 19144
+        },
+        {
+          "frame": 125,
+          "live_rss_kib": 19144,
+          "released_rss_kib": 19144
+        },
+        {
+          "frame": 150,
+          "live_rss_kib": 19144,
+          "released_rss_kib": 19144
+        },
+        {
+          "frame": 175,
+          "live_rss_kib": 19144,
+          "released_rss_kib": 19144
+        },
+        {
+          "frame": 200,
+          "live_rss_kib": 19144,
+          "released_rss_kib": 19144
+        },
+        {
+          "frame": 225,
+          "live_rss_kib": 19144,
+          "released_rss_kib": 19144
+        },
+        {
+          "frame": 250,
+          "live_rss_kib": 19144,
+          "released_rss_kib": 19144
+        },
+        {
+          "frame": 275,
+          "live_rss_kib": 19144,
+          "released_rss_kib": 19144
+        },
+        {
+          "frame": 300,
+          "live_rss_kib": 19144,
+          "released_rss_kib": 19144
+        },
+        {
+          "frame": 325,
+          "live_rss_kib": 19144,
+          "released_rss_kib": 19144
+        },
+        {
+          "frame": 350,
+          "live_rss_kib": 19144,
+          "released_rss_kib": 19144
+        },
+        {
+          "frame": 375,
+          "live_rss_kib": 19144,
+          "released_rss_kib": 19144
+        },
+        {
+          "frame": 400,
+          "live_rss_kib": 19144,
+          "released_rss_kib": 19144
+        },
+        {
+          "frame": 425,
+          "live_rss_kib": 19144,
+          "released_rss_kib": 19144
+        },
+        {
+          "frame": 450,
+          "live_rss_kib": 19144,
+          "released_rss_kib": 19144
+        },
+        {
+          "frame": 475,
+          "live_rss_kib": 19144,
+          "released_rss_kib": 19144
+        },
+        {
+          "frame": 500,
+          "live_rss_kib": 19144,
+          "released_rss_kib": 19144
+        }
+      ],
+      "scope": "single renderer process and its native allocations; no children or encoder",
+      "surface_bytes": 3686400,
+      "warmup_frames": 10,
+      "width": 720,
+      "repeat": 3
+    }
+  ],
+  "note": "Harness is outside measured renderer worker; cgroup values are shared. No 4-vCPU/0.4-GiB VM or cgroup restriction was imposed."
+}

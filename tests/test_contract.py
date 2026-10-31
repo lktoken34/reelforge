@@ -93,6 +93,8 @@ def test_hash_is_stable_and_sensitive(manifest):
     [
         (b'{"seed": 1, "seed": 2}', "JSON_DUPLICATE_KEY"),
         (b'{"seed": NaN}', "JSON_NONFINITE"),
+        (b'{"seed": 1e309}', "JSON_NONFINITE"),
+        (b'{"nested": [-1e309]}', "JSON_NONFINITE"),
         (b'{"seed": Infinity}', "JSON_NONFINITE"),
         (b'{"seed": -Infinity}', "JSON_NONFINITE"),
         (b"{", "JSON_INVALID"),
@@ -127,3 +129,9 @@ def test_nesting_check_ignores_quoted_brackets(tmp_path, manifest):
     path = tmp_path / "quoted.json"
     path.write_text(json.dumps(manifest))
     assert validate_project(load_project(path)) == []
+
+
+def test_finite_float_json_remains_accepted(tmp_path):
+    path = tmp_path / "finite.json"
+    path.write_text('{"x": 1e308, "y": 30.0, "z": 1e-309}')
+    assert load_project(path) == {"x": 1e308, "y": 30.0, "z": 1e-309}

@@ -1,7 +1,8 @@
-# Phase 1 architecture
+# ReelForge V2 architecture
 
-Status: foundation implemented; all visual/media modules are planned. The external AI
-architect/reviewer should review this proposal before any Phase 2 implementation.
+Status: Phase 1 foundation approved with changes. Phase 2A implements a minimal trusted-code
+Cairo vector experiment; all scene/rig/animation/media systems remain planned. External
+review is required before Phase 2B. See CAIRO_BACKEND.md and PHASE2A_REPORT.md.
 
 ## Boundaries and ownership
 
@@ -11,7 +12,7 @@ evaluates it at an integer frame index, draws bounded surfaces and streams frame
 encoder. An operator reviews artistic quality. This separates creative decisions from
 resource management and implementation details a weaker agent should not control.
 
-| Module | Responsibility | Dependency rule | Phase 1 status |
+| Module | Responsibility | Dependency rule | Current status |
 | --- | --- | --- | --- |
 | `core` | Diagnostic values; future time/value types | Standard library only | Issue/InputError implemented |
 | `contracts` | Versioned JSON, loading, structural/semantic validation | core + jsonschema; no render imports | Implemented minimal draft |
@@ -19,7 +20,7 @@ resource management and implementation details a weaker agent should not control
 | `catalog` | Versioned code recipes for character/environment/prop identities | core; no CLI/media | Documentation only |
 | `planning` | Resolve IDs, validate references, compile immutable intermediate representation | core/contracts/catalog; no raster backend | Documentation only |
 | `animation` | Evaluate approved action templates at exact frame indices | core/compiled plan; no filesystem | Documentation only |
-| `rendering` | Draw evaluated vector commands into owned software surfaces | core; backend behind adapter | Documentation only |
+| `rendering` | Draw trusted vector commands into owned software surfaces | standalone value/protocol boundary; optional native adapter | Primitive-only Cairo experiment implemented |
 | `resources` | Preflight budgets, byte-bounded caches, buffer lifetime accounting | core; no story logic | Documentation only |
 | `media` | Bounded encoder pipe, process lifecycle, later supplied audio | core; consumes frames, no catalogs | Documentation only |
 | `quality` | Later technical checks and review artifacts | core + media metadata; never approves art automatically | Documentation only |
@@ -51,9 +52,9 @@ the renderer itself will never call a model. A separate trusted engineering work
 the catalog when new story elements are needed. This is the key limit on arbitrary script
 coverage by weaker agents.
 
-## Proposed backend and frame boundary (not implemented)
+## Primitive backend and future frame/media boundary
 
-Prefer Cairo image surfaces via Pycairo: CPU vector curves, strokes, transforms, clipping and
+The Phase 2A experiment uses Cairo image surfaces via Pycairo: CPU vector curves, strokes, transforms, clipping and
 alpha composition suit code-authored cutout art. Backend-native objects must stay inside the
 adapter. A later backend protocol should take an evaluated draw-list and an owned target
 surface, and release all temporary surfaces before returning. Typed commands should cover
@@ -106,7 +107,16 @@ are accepted in the current manifest.
 
 ## Open architectural decisions
 
-Confirm Cairo versus Skia on the constrained host; decide text shaping/font packaging and
+Cairo passed the primitive experiment on the available larger host; still confirm it on the constrained target host; decide text shaping/font packaging and
 whether a Cairo/Pillow conversion dependency is needed. Approve future draw-command and
 catalog contracts only after a minimal backend experiment. Choose redistribution license,
 font licenses and native build pinning policy before shipping the engine outside the project.
+
+## Phase 2A implementation delta
+
+The implemented Renderer/Surface protocols, immutable path/paint/transform values and Cairo
+adapter are documented in CAIRO_BACKEND.md. Native objects and short-lived memoryviews remain
+inside that adapter. Explicit target byte accounting is implemented; whole-job resource
+preflight is still planned. Linear gradients and per-path source-over alpha are supported.
+The agent contract/schema/CLI remain unchanged except that JSON numeric overflow is rejected
+consistently before validation. Foundation `render_ready` remains false.

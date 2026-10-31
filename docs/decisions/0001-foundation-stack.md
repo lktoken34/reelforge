@@ -1,6 +1,7 @@
 # ADR 0001 — Small Python foundation, replaceable native CPU drawing
 
-Status: proposed architecture; foundation implementation complete, pending external review.
+Status: foundation approved with changes; Cairo primitive experiment complete in Phase 2A,
+with continued deployment gates. See ../PHASE2A_REPORT.md.
 Date: 2026-10-31.
 
 ## Context
@@ -18,7 +19,8 @@ plugin loader. A conventional local CLI is portable across agent vendors and eas
 
 Recommend Pycairo/Cairo image surfaces for later CPU vector rendering. Keep the draw-list and
 owned-frame boundary independent of that backend. Recommend a bounded FFmpeg/libx264 pipe for
-later encoding. Neither Cairo nor FFmpeg is a Phase 1 dependency or implemented adapter.
+later encoding. Neither Cairo nor FFmpeg was a Phase 1 dependency or adapter. Phase 2A now adds optional
+Pycairo and a primitive-only adapter; FFmpeg remains unimplemented.
 
 JSON Schema is selected over a handwritten validator alone for a machine-readable contract
 agents/editors can discover. Semantic checks complement it. Pydantic is a viable alternative,

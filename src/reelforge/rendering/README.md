@@ -1,5 +1,7 @@
 # rendering
 
-Future replaceable CPU backend, explicit owned surfaces and draw commands. No raster backend implemented.
+Phase 2A implements backend-neutral frozen drawing values, Renderer/Surface protocols, a
+Cairo image-surface adapter and a trusted static diagnostic fixture. No episode renderer,
+characters, environments or animation systems.
 
-See docs/ARCHITECTURE.md for boundaries. This directory is intentionally documentation only.
+See docs/CAIRO_BACKEND.md and docs/PHASE2A_REPORT.md for contracts, measurements and limits.

@@ -8,7 +8,7 @@
 4. Run `reelforge validate PATH`. Parse stdout JSON and inspect the process exit code.
 5. Repair the field at each error's JSON Pointer path. Retry at most three times; if a
    feature is unavailable, report it to the operator with the diagnostics.
-6. In Phase 1, deliver the validated manifest and stop. `render_ready: false` is expected.
+6. For the currently exposed foundation interface, deliver the validated manifest and stop. `render_ready: false` is expected.
    Do not call hypothetical render commands or claim video output/artistic quality.
 
 Do not edit `src/`, schemas, dependency files or tests to make an episode validate. Do not
@@ -21,8 +21,10 @@ local input in a later contract version, not a feature of this manifest.
 
 Episode restrictions above do not prevent an engineer from changing engine code for an
 explicit engine-development task. Read architecture, hardware constraints and roadmap first.
-Current scope is Phase 1 only. Do not implement the later modules without a new assignment
-following architectural review. Do not delegate to other agents unless explicitly requested.
+Current approved engineering scope is Phase 2A: minimal trusted-code Cairo diagnostics and
+feasibility tests, plus the overflow bug fix and reference analysis. Keep drawing commands out
+of manifests and the installed CLI. Do not begin Phase 2B or other later modules without a new
+assignment following external review. Do not delegate to other agents unless explicitly requested.
 
 - Keep contract validation independent of rendering and system executables.
 - Use typed public functions, narrow modules, snake_case IDs and explicit errors.
@@ -35,8 +37,10 @@ following architectural review. Do not delegate to other agents unless explicitl
   caches. Every future allocation/cache needs a documented budget.
 - Bump draft contract IDs for incompatible changes and update example, docs and tests together.
 - Add dependencies through `uv add` or edit pyproject + `uv lock`; commit the lock, not `.venv`.
-- Run `uv sync --frozen`, pytest, Ruff lint/format checks, and wheel/sdist build. Check the
+- Run `uv sync --frozen --extra renderer`, pytest, Ruff lint/format checks, and wheel/sdist build.
+  Also verify the base installation works without Cairo. Check the
   installed wheel from outside the checkout when package resources or packaging change.
 - Document actual evidence and remaining uncertainty. Technical success does not prove art quality.
 
-No production media is part of Phase 1. Architecture review is the next project gate.
+No production video is part of Phase 2A. Static diagnostic PNGs are expected.
+External review of Phase 2A is the next project gate.
