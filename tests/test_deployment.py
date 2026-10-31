@@ -130,7 +130,7 @@ def test_low_memory_doctor_never_starts_native_probes(persistent_workspace, monk
     monkeypatch.setattr(
         deployment_check,
         "memory_snapshot",
-        lambda: {"effective_available_bytes": 319 * monitor.MIB},
+        lambda **kwargs: {"effective_available_bytes": 319 * monitor.MIB},
     )
 
     def forbid(*args, **kwargs):
@@ -187,7 +187,7 @@ def test_supervisor_reconciles_only_reaped_private_transactions(persistent_works
 def test_resource_pressure_is_mocked_and_cancels_cleanly(monkeypatch):
     counter = 0
 
-    def snapshot():
+    def snapshot(**kwargs):
         nonlocal counter
         counter += 1
         return {"effective_available_bytes": (700 if counter == 1 else 32) * monitor.MIB}

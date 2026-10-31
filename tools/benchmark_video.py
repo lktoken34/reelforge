@@ -6,10 +6,12 @@ import sys
 from pathlib import Path
 
 from reelforge.media.process import run_bounded
+from reelforge.resources.memory import add_memory_policy_argument
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
+    add_memory_policy_argument(parser)
     parser.add_argument("--output-dir", type=Path, default=Path("artifacts/phase2b"))
     parser.add_argument("--scratch-dir", type=Path, default=Path("outputs/phase2b-repeats"))
     args = parser.parse_args()
@@ -26,6 +28,8 @@ def main() -> None:
                 [
                     sys.executable,
                     str(Path(__file__).with_name("render_video.py").resolve()),
+                    "--memory-policy",
+                    args.memory_policy,
                     "--width",
                     str(width),
                     "--output",

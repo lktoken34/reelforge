@@ -8,60 +8,26 @@ import time
 from pathlib import Path
 
 from reelforge.core.errors import OperationError
+from reelforge.resources.memory import check_policy, observe_memory, oom_counts
 
 MIB = 1024 * 1024
 
 
-def memory_snapshot() -> dict:
-    mem = {}
-    for line in Path("/proc/meminfo").read_text().splitlines():
-        if line.split()[0] in {"MemAvailable:", "MemTotal:", "SwapTotal:", "SwapFree:"}:
-            mem[line.split(":")[0]] = int(line.split()[1]) * 1024
-    counters = {}
-    root = Path("/sys/fs/cgroup")
-    relative = next(
-        (
-            line.split("::", 1)[1]
-            for line in Path("/proc/self/cgroup").read_text().splitlines()
-            if "::" in line
-        ),
-        "",
-    )
-    nested = root / relative.lstrip("/")
-    if (nested / "memory.max").is_file():
-        root = nested
-    for name in (
-        "memory.max",
-        "memory.current",
-        "memory.peak",
-        "memory.events",
-        "memory.swap.max",
-        "memory.swap.current",
-        "cpu.max",
-    ):
-        try:
-            value = (root / name).read_text().strip()
-            counters[name] = int(value) if value.isdigit() else value
-        except OSError:
-            counters[name] = None
-    available = mem.get("MemAvailable", 0)
-    maximum, current = counters["memory.max"], counters["memory.current"]
-    if isinstance(maximum, int) and isinstance(current, int):
-        available = min(available, max(0, maximum - current))
-    elif maximum != "max":
-        available = 0  # Unknown container capacity is not evidence of safe headroom.
-    return {
-        "host": mem,
-        "cgroup_root": str(root),
-        "cgroup": counters,
-        "effective_available_bytes": available,
-    }
+def memory_snapshot(*, memory_policy: str = "strict") -> dict:
+    return observe_memory(policy=memory_policy)
 
 
 def preflight_memory(
-    *, budget_bytes: int = 256 * MIB, reserve_bytes: int = 64 * MIB, snapshot: dict | None = None
+    *,
+    budget_bytes: int = 256 * MIB,
+    reserve_bytes: int = 64 * MIB,
+    snapshot: dict | None = None,
+    memory_policy: str = "strict",
 ) -> dict:
-    snapshot = memory_snapshot() if snapshot is None else snapshot
+    check_policy(memory_policy)
+    snapshot = memory_snapshot(memory_policy=memory_policy) if snapshot is None else snapshot
+    if snapshot.get("memory_policy", memory_policy) != memory_policy:
+        raise OperationError("MEMORY_POLICY", "Snapshot and requested memory policy differ")
     if budget_bytes <= 0 or reserve_bytes < 0:
         raise OperationError("MEMORY_CONFIG", "Invalid memory budget/reserve")
     if snapshot["effective_available_bytes"] < budget_bytes + reserve_bytes:
@@ -128,7 +94,11 @@ class JobMonitor:
         cancelled: threading.Event | None = None,
         workspace: Path | None = None,
         disk_reserve_bytes: int = 64 * MIB,
+        memory_policy: str = "strict",
     ):
+        self.memory_policy = check_policy(memory_policy)
+        self.memory_sources: set[str] = set()
+        self.oom_telemetry_continuous = True
         self.pid = procfs_pid()
         self.budget_bytes, self.reserve_bytes = budget_bytes, reserve_bytes
         self.cancelled = cancelled if cancelled is not None else threading.Event()
@@ -143,6 +113,21 @@ class JobMonitor:
         self.memory_observations = 0
         self.disk_free_min: int | None = None
         self._thread = threading.Thread(target=self._run, name="job-rss", daemon=True)
+
+    def observe(self, observation: dict) -> int:
+        source = observation.get("memory_source", "unavailable")
+        if "guest_and_cgroup" in self.memory_sources and source != "guest_and_cgroup":
+            self.limit_reason = "previously visible memory controller became unavailable"
+            self.cancelled.set()
+        old_paths = {c["path"] for c in getattr(self, "initial", {}).get("constraints", [])}
+        new_paths = {c["path"] for c in observation.get("constraints", [])}
+        if not old_paths <= new_paths:
+            self.limit_reason = "previously visible ancestor accounting disappeared"
+            self.cancelled.set()
+        self.memory_sources.add(source)
+        events = oom_counts(observation.get("cgroup", {}).get("memory.events"))
+        self.oom_telemetry_continuous &= {"oom", "oom_kill"} <= events.keys()
+        return observation["effective_available_bytes"]
 
     def sample(self) -> None:
         pids = process_tree(self.pid)
@@ -167,7 +152,8 @@ class JobMonitor:
             self.limit_reason = "sampled process-tree RSS exceeded the budget"
             self.cancelled.set()
         if self.samples % 10 == 0:
-            available = memory_snapshot()["effective_available_bytes"]
+            observation = memory_snapshot(memory_policy=self.memory_policy)
+            available = self.observe(observation)
             self.available_min = min(self.available_min, available)
             self.available_max = max(self.available_max, available)
             self.memory_observations += 1
@@ -193,7 +179,14 @@ class JobMonitor:
                 return
 
     def __enter__(self):
-        self.initial = memory_snapshot()
+        self.initial = memory_snapshot(memory_policy=self.memory_policy)
+        preflight_memory(
+            snapshot=self.initial,
+            memory_policy=self.memory_policy,
+            budget_bytes=self.budget_bytes,
+            reserve_bytes=self.reserve_bytes,
+        )
+        self.observe(self.initial)
         self.available_min = self.available_max = self.initial["effective_available_bytes"]
         self.memory_observations = 1
         if self.workspace is not None:
@@ -208,7 +201,11 @@ class JobMonitor:
         self._thread.join(timeout=2)
         self.sample()
         self.seconds = time.perf_counter() - self.started
-        self.final = memory_snapshot()
+        self.final = memory_snapshot(memory_policy=self.memory_policy)
+        self.observe(self.final)
+        if self.final["effective_available_bytes"] < self.reserve_bytes:
+            self.limit_reason = "available memory fell below the reserve"
+            self.cancelled.set()
         self.available_min = min(self.available_min, self.final["effective_available_bytes"])
         self.available_max = max(self.available_max, self.final["effective_available_bytes"])
         self.memory_observations += 1
@@ -218,6 +215,9 @@ class JobMonitor:
 
     def report(self) -> dict:
         return {
+            "oom_telemetry_continuous": self.oom_telemetry_continuous,
+            "memory_policy": self.memory_policy,
+            "observed_memory_sources": sorted(self.memory_sources),
             "initial_memory": self.initial,
             "final_memory": self.final,
             "initial_renderer_rss_bytes": self.initial_renderer_rss,

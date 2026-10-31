@@ -46,7 +46,9 @@ def wheel_details(path: Path) -> dict:
     }
 
 
-def seal(directory: Path) -> dict:
+def seal(directory: Path, *, source_commit: str | None = None) -> dict:
+    if source_commit is not None and not re.fullmatch(r"[0-9a-f]{40}", source_commit):
+        raise ValueError("source_commit must be an exact lowercase Git commit SHA")
     directory = directory.resolve()
     wheels = sorted(directory.glob("*.whl"))
     if not wheels or any(p.is_symlink() for p in wheels):
@@ -67,6 +69,7 @@ def seal(directory: Path) -> dict:
     lock.write_text(requirements)
     result = {
         "schema": "reelforge.wheelhouse.v1",
+        "source_commit": source_commit,
         "files": entries,
         "requirements_sha256": digest(lock),
         "built_for": {
@@ -112,7 +115,7 @@ def verify(directory: Path) -> dict:
     return manifest
 
 
-def install(directory: Path, venv: Path) -> None:
+def install(directory: Path, venv: Path, *, memory_policy: str = "strict") -> dict:
     verify(directory)
     if sys.version_info[:2] != (3, 12):
         raise ValueError("Install with CPython 3.12 on the matching Linux architecture")
@@ -122,17 +125,33 @@ def install(directory: Path, venv: Path) -> None:
     venv.parent.mkdir(parents=True, exist_ok=True)
     sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
     from reelforge.resources.deployment import check_workspace
-    from reelforge.resources.monitor import preflight_memory
+    from reelforge.resources.monitor import JobMonitor, preflight_memory
 
-    preflight_memory()
+    admission = preflight_memory(memory_policy=memory_policy)
     check_workspace(venv.parent)
-    with tempfile.TemporaryDirectory(
-        prefix=".reelforge-wheel-install-", dir=venv.parent
-    ) as temporary:
+    with (
+        JobMonitor(workspace=venv.parent, memory_policy=memory_policy) as guard,
+        tempfile.TemporaryDirectory(
+            prefix=".reelforge-wheel-install-", dir=venv.parent
+        ) as temporary,
+    ):
         environment = dict(os.environ, TMPDIR=temporary)
-        subprocess.run([sys.executable, "-m", "venv", str(venv)], check=True, env=environment)
+        from reelforge.media.process import run_bounded
+
+        # Both bounded subprocesses share the monitor cancellation token.
+        rc, out, err = run_bounded(
+            [sys.executable, "-m", "venv", str(venv)],
+            timeout=60,
+            cancelled=guard.cancelled,
+            env=environment,
+        )
+        if rc:
+            raise RuntimeError(
+                "venv creation failed; provision python3.12-venv: "
+                + err.decode(errors="replace")[-2048:]
+            )
         python = venv / "bin/python"
-        subprocess.run(
+        rc, out, err = run_bounded(
             [
                 str(python),
                 "-m",
@@ -146,28 +165,44 @@ def install(directory: Path, venv: Path) -> None:
                 "-r",
                 str(directory.resolve() / "requirements.lock"),
             ],
-            check=True,
-            env=environment,
             timeout=300,
+            cancelled=guard.cancelled,
+            env=environment,
         )
+
+        if rc:
+            raise RuntimeError(
+                "Offline pip install failed: " + err.decode(errors="replace")[-2048:]
+            )
+    return {
+        "installed": True,
+        "venv": str(venv),
+        "admission_memory": admission,
+        "whole_install_memory": guard.report(),
+    }
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+    from reelforge.resources.memory import add_memory_policy_argument
+
+    add_memory_policy_argument(parser)
     parser.add_argument("action", choices=("seal", "verify", "install"))
     parser.add_argument("--directory", type=Path, required=True)
     parser.add_argument("--venv", type=Path)
+    parser.add_argument("--report", type=Path, help="Persistent install/verification evidence")
+    parser.add_argument("--source-commit", help="Builder commit provenance for seal")
     args = parser.parse_args()
     try:
         if args.action == "seal":
-            result = seal(args.directory)
+            result = seal(args.directory, source_commit=args.source_commit)
         elif args.action == "verify":
             result = verify(args.directory)
         else:
             if args.venv is None:
                 parser.error("--venv is required for install")
-            install(args.directory, args.venv)
-            result = {"installed": True, "venv": str(args.venv)}
+            result = install(args.directory, args.venv, memory_policy=args.memory_policy)
     except (
         ValueError,
         OSError,
@@ -176,18 +211,32 @@ def main() -> None:
         zipfile.BadZipFile,
         subprocess.CalledProcessError,
         subprocess.TimeoutExpired,
+        KeyboardInterrupt,
     ) as error:
-        print(
-            json.dumps(
-                {
-                    "ok": False,
-                    "message": str(error),
-                    "action": "Check wheelhouse hashes/platform and python3.12-venv availability.",
-                }
-            )
-        )
+        from reelforge.resources.monitor import memory_snapshot
+
+        report = {
+            "ok": False,
+            "code": getattr(
+                error,
+                "code",
+                "INTERRUPTED" if isinstance(error, KeyboardInterrupt) else "INSTALL_FAILED",
+            ),
+            "message": str(error),
+            "memory": memory_snapshot(memory_policy=args.memory_policy),
+            "action": "Inspect memory evidence and wheelhouse platform/hashes; "
+            "never lower thresholds.",
+        }
+        if args.report:
+            args.report.parent.mkdir(parents=True, exist_ok=True)
+            args.report.write_text(json.dumps(report, indent=2) + "\n")
+        print(json.dumps(report))
         raise SystemExit(2) from error
-    print(json.dumps({"ok": True, "result": result}))
+    report = {"ok": True, "result": result}
+    if args.report:
+        args.report.parent.mkdir(parents=True, exist_ok=True)
+        args.report.write_text(json.dumps(report, indent=2) + "\n")
+    print(json.dumps(report))
 
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
 # ReelForge V2
 
-Phase 2C builds on the approved Phase 1/2A foundation for an agent-operated, code-only 2D/2.5D
+Phase 2C.1 builds on the approved Phase 1/2A foundation for an agent-operated, code-only 2D/2.5D
 animation engine. An internal, trusted-Python Cairo vector backend and bounded FFmpeg pipe now produce
 diagnostic MP4s. They are not connected to episode manifests.
 **No character rigs, environments, animation timelines, lighting, audio synchronization,
@@ -131,3 +131,13 @@ not compile Pycairo. Native Cairo, FFmpeg/libx264 and Python 3.12 must already b
 Development evidence is under `artifacts/phase2c/`. It does **not** demonstrate the actual
 Muse Spark VM or operation in its 0.4–1.0 GiB available-memory window. No hard cgroup
 limit is configured; the observed development cgroup mount is read-only.
+
+## Phase 2C.1 memory compatibility
+
+Phase 2C implementation was approved; the real VM attempt was blocked before rendering
+because memory-controller telemetry was absent. [Memory policy and detection](docs/MEMORY_OBSERVABILITY.md)
+adds an explicit, screened `--memory-policy guest_procfs_fallback` for the target guest;
+strict remains default and real limits always apply. No safety thresholds were lowered.
+[Exact cloud-operator steps](docs/TARGET_VM_PHASE2C1_PROMPT.md) start with a stdlib-only probe,
+then new prebuilt wheels and short tests before long tests. Missing OOM telemetry yields an
+observability-limited result, not deployment approval. See [Phase 2C.1 report](docs/PHASE2C1_REPORT.md).

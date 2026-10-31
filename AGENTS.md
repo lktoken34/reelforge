@@ -21,8 +21,8 @@ local input in a later contract version, not a feature of this manifest.
 
 Episode restrictions above do not prevent an engineer from changing engine code for an
 explicit engine-development task. Read architecture, hardware constraints and roadmap first.
-Current approved engineering scope is Phase 2C: deployment diagnostics, sequential
-low-memory validation, recovery checks and evidence for the actual target VM. Keep drawing/video
+Current approved engineering scope is Phase 2C.1: read-only memory topology detection,
+explicit guest fallback compatibility, propagation, regression tests and target evidence. Keep drawing/video
 commands out of manifests and the installed CLI. Do not begin the next milestone without a new
 assignment following external review. Do not delegate to other agents unless explicitly requested.
 
@@ -46,4 +46,6 @@ Phase 2B was approved at 7133f244. Phase 2C does not authorize visual systems.
 Read docs/TARGET_VM_DEPLOYMENT.md before cloud tests. Never manufacture memory pressure,
 lower safety thresholds to pass, change host swap/memory controls, or run competing jobs.
 Actual target-VM evidence and external review remain required; development results do not
-certify deployment. Stop after Phase 2C.
+certify deployment. Read docs/MEMORY_OBSERVABILITY.md and
+docs/TARGET_VM_PHASE2C1_PROMPT.md before target work. Use strict policy by default; the
+explicit guest fallback flag never ignores a discovered limit. Stop after Phase 2C.1.

@@ -7,6 +7,7 @@ import tempfile
 from pathlib import Path
 
 from reelforge.core.errors import OperationError
+from reelforge.resources.memory import oom_counts
 from reelforge.resources.monitor import MIB, memory_snapshot, preflight_memory
 
 
@@ -34,13 +35,7 @@ def pressure_snapshot() -> dict:
 
 
 def event_counts(snapshot: dict) -> dict[str, int]:
-    raw = snapshot.get("cgroup", {}).get("memory.events")
-    if not isinstance(raw, str):
-        return {}
-    try:
-        return {line.split()[0]: int(line.split()[1]) for line in raw.splitlines()}
-    except (ValueError, IndexError):
-        return {}
+    return oom_counts(snapshot.get("cgroup", {}).get("memory.events"))
 
 
 def event_delta(before: dict, after: dict) -> dict[str, int] | None:
@@ -51,13 +46,21 @@ def event_delta(before: dict, after: dict) -> dict[str, int] | None:
 
 
 def cgroup_capabilities(snapshot: dict) -> dict:
-    root = Path(snapshot["cgroup_root"])
+    mapped = snapshot.get("cgroup_root")
     info = {
-        "path": str(root),
+        "path": mapped,
         "hard_enforcement": "not_configured",
         "delegation": "not_assumed",
         "controls_modified": False,
     }
+    if mapped is None:
+        info.update(
+            mount_read_only=None,
+            directory_write_access=False,
+            note="No mapped cgroup mount; no delegation or enforcement assumed",
+        )
+        return info
+    root = Path(mapped)
     for name in ("cgroup.controllers", "cgroup.subtree_control", "cgroup.type"):
         try:
             info[name] = (root / name).read_text().strip()
@@ -146,13 +149,36 @@ def check_workspace(
     }
 
 
-def resource_readiness(workspace: Path) -> dict:
-    snapshot = memory_snapshot()
-    preflight_memory(snapshot=snapshot)
+def resource_readiness(workspace: Path, *, memory_policy: str = "strict") -> dict:
+    snapshot = memory_snapshot(memory_policy=memory_policy)
+    preflight_memory(snapshot=snapshot, memory_policy=memory_policy)
     return {
         "memory": snapshot,
         "cpu": cpu_snapshot(snapshot),
         "pressure": pressure_snapshot(),
         "workspace": check_workspace(workspace),
         "cgroup_capabilities": cgroup_capabilities(snapshot),
+    }
+
+
+def memory_observability(before: dict, after: dict) -> dict:
+    """Unknown OOM telemetry is uncertainty, never zero events or deployment approval."""
+    delta = event_delta(before, after)
+    oom_keys = {"oom", "oom_kill", "oom_group_kill"}
+    sufficient = delta is not None and {"oom", "oom_kill"} <= delta.keys()
+    changed = sufficient and any(delta.get(k, 0) != 0 for k in oom_keys)
+    return {
+        "policy": before.get("memory_policy", "strict"),
+        "initial_source": before.get("memory_source", "unavailable"),
+        "final_source": after.get("memory_source", "unavailable"),
+        "fallback_enabled": before.get("fallback_enabled", False),
+        "fallback_used": before.get("fallback_used", False) or after.get("fallback_used", False),
+        "oom_counters_available": sufficient,
+        "oom_event_delta": delta,
+        "oom_events_changed": bool(changed) if sufficient else None,
+        "sufficient_for_technical_validation": bool(sufficient and not changed),
+        "limitations": []
+        if sufficient
+        else ["Cgroup OOM counters unavailable or incomplete; no zero-OOM claim is possible."],
+        "deployment_gate_approved": False,
     }

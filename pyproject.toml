@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "reelforge-v2"
-version = "0.4.0"
+version = "0.4.1"
 description = "Agent contracts and bounded CPU vector-to-video feasibility"
 readme = "README.md"
 requires-python = ">=3.12,<3.13"

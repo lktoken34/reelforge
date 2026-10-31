@@ -5,6 +5,10 @@ Cairo vector experiment; scene/rig/animation systems remain planned. External
 Phase 2A is approved; Phase 2B adds a bounded diagnostic video path. Review is required before
 the next milestone. See VIDEO_PIPELINE.md and PHASE2B_REPORT.md.
 
+Phase 2C implementation is approved. Phase 2C.1 adds explicit engineering memory
+observability policies without changing rendering or episode contracts; see
+[MEMORY_OBSERVABILITY.md](MEMORY_OBSERVABILITY.md). Target deployment approval remains pending.
+
 ## Boundaries and ownership
 
 The authoring agent chooses from published capabilities and writes declarative JSON. A

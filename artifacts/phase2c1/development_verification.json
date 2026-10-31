@@ -1,0 +1,75 @@
+{
+  "scope": "Development only",
+  "cairo_tests": "188 passed",
+  "base_installed_wheel_tests": "129 passed, 7 skipped (Cairo unavailable)",
+  "lint": "passed",
+  "format": "passed",
+  "wheel_and_sdist": "passed",
+  "cairo_diagnostic_pixel_sha256": {
+    "360x640": "ab7c0bad67cc6bd486b12abd583fd8070a77a2de2b73c1230decff50761815fb",
+    "720x1280": "49f65e59085d15a9a1134c39979ae592aba33f0f9f794f16a8f0548ef8f5c962"
+  },
+  "phase2b_repeat_match": true,
+  "video_runs": [
+    {
+      "width": 360,
+      "height": 640,
+      "repeat": 1,
+      "frames": 150,
+      "render_encode_seconds": 1.2207535689999531,
+      "effective_encoded_fps": 122.87492235052868,
+      "file_size_bytes": 536332,
+      "encoder_exit_status": 0,
+      "worker_tree_peak_rss_bytes": 60944384,
+      "decoded_frames": 150,
+      "verification_passed": true
+    },
+    {
+      "width": 360,
+      "height": 640,
+      "repeat": 2,
+      "frames": 150,
+      "render_encode_seconds": 1.1869347929999776,
+      "effective_encoded_fps": 126.37593984491347,
+      "file_size_bytes": 536332,
+      "encoder_exit_status": 0,
+      "worker_tree_peak_rss_bytes": 60891136,
+      "decoded_frames": 150,
+      "verification_passed": true
+    },
+    {
+      "width": 720,
+      "height": 1280,
+      "repeat": 1,
+      "frames": 150,
+      "render_encode_seconds": 2.224607739000021,
+      "effective_encoded_fps": 67.42761762908647,
+      "file_size_bytes": 1415235,
+      "encoder_exit_status": 0,
+      "worker_tree_peak_rss_bytes": 90435584,
+      "decoded_frames": 150,
+      "verification_passed": true
+    },
+    {
+      "width": 720,
+      "height": 1280,
+      "repeat": 2,
+      "frames": 150,
+      "render_encode_seconds": 2.1015348319999703,
+      "effective_encoded_fps": 71.37640438595506,
+      "file_size_bytes": 1415235,
+      "encoder_exit_status": 0,
+      "worker_tree_peak_rss_bytes": 90411008,
+      "decoded_frames": 150,
+      "verification_passed": true
+    }
+  ],
+  "target_vm_verified": false,
+  "deployment_gate_approved": false,
+  "source_sha256": {
+    "src/reelforge/resources/memory.py": "35b5b1cece569e04df14568cd21d0695f55874ff07d4c3f74ab4f9a53679004c",
+    "src/reelforge/resources/monitor.py": "d8dfdfe06b23819e7080bf16153c84f902a0230aeba076892611c41113426754",
+    "tools/cloud_validate.py": "4211b2ebcb3af7e26b162ee8312b841a54d3475dc7a7c3b2a0e4476a4646f9a5",
+    "tools/render_video.py": "ab7e8dc967bc0390bdad8763910f786925324c3492838cfa39b77972ad61d022"
+  }
+}

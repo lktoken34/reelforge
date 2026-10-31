@@ -12,6 +12,7 @@ from pathlib import Path
 from cloud_validate import reconcile_case, workspace_lock
 
 from reelforge.resources.deployment import check_workspace
+from reelforge.resources.memory import add_memory_policy_argument
 from reelforge.resources.monitor import (
     namespace_pid,
     preflight_memory,
@@ -20,10 +21,10 @@ from reelforge.resources.monitor import (
 )
 
 
-def check_recovery(workspace: Path) -> dict:
+def check_recovery(workspace: Path, *, memory_policy: str = "strict") -> dict:
     workspace = workspace.resolve()
     check_workspace(workspace)
-    preflight_memory()
+    preflight_memory(memory_policy=memory_policy)
     with workspace_lock(workspace):
         case = workspace / f"recovery-{time.time_ns()}"
         case.mkdir()
@@ -36,6 +37,8 @@ def check_recovery(workspace: Path) -> dict:
             [
                 sys.executable,
                 str(Path(__file__).with_name("render_video.py")),
+                "--memory-policy",
+                memory_policy,
                 "--width",
                 "720",
                 "--frames",
@@ -81,6 +84,7 @@ def check_recovery(workspace: Path) -> dict:
         live_encoder_pids = [pid for pid in encoder_pids if Path(f"/proc/{pid}").exists()]
         error_report = json.loads(report.read_text()) if report.is_file() else None
         result = {
+            "memory_policy": memory_policy,
             "passed": (
                 status != 0
                 and not output.exists()
@@ -104,11 +108,12 @@ def check_recovery(workspace: Path) -> dict:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
+    add_memory_policy_argument(parser)
     parser.add_argument("--workspace", type=Path, required=True)
     parser.add_argument("--report", type=Path, required=True)
     args = parser.parse_args()
     try:
-        result = check_recovery(args.workspace)
+        result = check_recovery(args.workspace, memory_policy=args.memory_policy)
     except (OSError, RuntimeError, subprocess.TimeoutExpired) as error:
         result = {"passed": False, "message": str(error)}
     args.report.parent.mkdir(parents=True, exist_ok=True)

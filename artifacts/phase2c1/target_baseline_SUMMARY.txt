@@ -1,0 +1,11 @@
+ReelForge V2 Phase 2C Target VM Validation — BLOCKED at install/doctor
+Date: 2026-10-31, Asia/Calcutta (IST)
+Checkout: 5aa5958e7a9ddf525dde3bfe392c30d922932cdb, branch phase2c-cloud-validation, repo https://github.com/lktoken34/reelforge
+Wheelhouse source: operator-uploaded ZIP in this chat (reelforge-v2-py312-ubuntu24-x86_64-wheelhouse.zip), extracted to $HOME/reelforge-wheelhouse; all 8 wheels match manifest.json hashes, verify exit 0.
+VM: Ubuntu 24.04.5 LTS x86_64, 4 vCPUs (AMD EPYC 9D64), no GPU (/dev/dri absent), no swap, MemTotal 7.7 GiB, host MemAvailable observed 653-818 MiB, Python 3.12.3, ffmpeg/ffprobe 8.1.2 with libx264, libcairo.so.2 present, $HOME 147 GiB free, /tmp 512 MiB.
+BLOCKER: /sys/fs/cgroup has no memory.max/memory.current/memory.peak/memory.events/cpu.max; cgroup.controllers is empty. Engine monitor.py therefore sets effective_available_bytes=0 (unknown capacity != "max"), regardless of host MemAvailable >320 MiB threshold. No thresholds lowered, no source edited, no cgroup modified.
+Exit codes: git clone 0, git checkout 0, unzip 0, wheelhouse verify 0, wheelhouse install 2 (MEMORY_PREFLIGHT), deployment_check 2 (MEMORY_PREFLIGHT), cloud_validate NOT RUN (readiness failed), recovery_check NOT RUN (benchmark did not complete).
+Flags left unchanged: target_vm_verified=false, deployment_gate_approved not set/changed (remains false per engine design).
+No venv created at $HOME/reelforge-runtime, no benchmark MP4s produced, no MP4 decode to confirm, no process-tree RSS measured (no job admitted), no OOM kill observed; cgroup OOM counters unavailable (memory.events null).
+Original readiness.json preserved at: $HOME/reelforge-work/reelforge/outputs/target-evidence/readiness.json
+Next step for operator/architectural review: run on a host where cgroup v2 memory controller files are visible/delegated, or have provider enable them; do not bypass preflight.

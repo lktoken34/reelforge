@@ -1,0 +1,31 @@
+{
+  "schema": "reelforge.deployment.v1",
+  "ok": false,
+  "errors": [
+    {
+      "code": "MEMORY_PREFLIGHT",
+      "message": "Need 256 MiB job headroom plus 64 MiB reserve under the default policy; memory capacity may be unavailable"
+    }
+  ],
+  "memory": {
+    "host": {
+      "MemTotal": 8319901696,
+      "MemAvailable": 686460928,
+      "SwapTotal": 0,
+      "SwapFree": 0
+    },
+    "cgroup_root": "/sys/fs/cgroup",
+    "cgroup": {
+      "memory.max": null,
+      "memory.current": null,
+      "memory.peak": null,
+      "memory.events": null,
+      "memory.swap.max": null,
+      "memory.swap.current": null,
+      "cpu.max": null
+    },
+    "effective_available_bytes": 0
+  },
+  "target_vm_verified": false,
+  "native_checks": "skipped_due_to_memory_refusal"
+}

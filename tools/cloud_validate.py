@@ -13,7 +13,8 @@ from deployment_check import inspect_deployment
 
 from reelforge.core.errors import OperationError
 from reelforge.media.process import run_bounded
-from reelforge.resources.deployment import check_workspace, event_delta
+from reelforge.resources.deployment import check_workspace, event_delta, memory_observability
+from reelforge.resources.memory import add_memory_policy_argument
 from reelforge.resources.monitor import MIB, JobMonitor, memory_snapshot, preflight_memory
 
 
@@ -40,7 +41,9 @@ def reconcile_case(directory: Path) -> list[str]:
             raise OperationError("TRANSACTION_PATH", "Refusing a symlink transaction directory")
         for item in transaction.iterdir():
             if item.name != "pending.mp4" or item.is_symlink():
-                raise OperationError("TRANSACTION_PATH", "Unexpected transaction content")
+                raise OperationError(
+                    "TRANSACTION_PATH", f"Unexpected transaction content: {item.name!r}"
+                )
             item.unlink()
             removed.append(str(item))
         transaction.rmdir()
@@ -48,7 +51,14 @@ def reconcile_case(directory: Path) -> list[str]:
 
 
 def validate(
-    workspace: Path, run_directory: Path, *, scope: str, long_frames: int, timeout: float
+    workspace: Path,
+    run_directory: Path,
+    *,
+    scope: str,
+    long_frames: int,
+    timeout: float,
+    memory_policy: str = "strict",
+    short_only: bool = False,
 ) -> dict:
     workspace = workspace.resolve()
     run_directory = run_directory.resolve()
@@ -65,6 +75,10 @@ def validate(
         if scope == "development"
         else "operator_reported_target_requires_review",
         "technical_run_passed": False,
+        "technical_rendering_success": False,
+        "validation_status": "not_completed",
+        "memory_policy": memory_policy,
+        "short_only": short_only,
         "deployment_gate_approved": False,
         "jobs": [],
         "errors": [],
@@ -72,12 +86,12 @@ def validate(
         "run_directory": str(run_directory),
     }
     monitor = None
-    before = memory_snapshot()
+    before = memory_snapshot(memory_policy=memory_policy)
     started = time.perf_counter()
     with workspace_lock(workspace):
         run_directory.mkdir(parents=True, exist_ok=False)
         try:
-            doctor = inspect_deployment(workspace)
+            doctor = inspect_deployment(workspace, memory_policy=memory_policy)
             result["readiness"] = doctor
             if not doctor["ok"]:
                 raise OperationError(
@@ -87,13 +101,13 @@ def validate(
                 raise OperationError(
                     "TARGET_IDENTITY", "Observed host differs from supplied target characteristics"
                 )
-            with JobMonitor(workspace=workspace) as monitor:
+            with JobMonitor(workspace=workspace, memory_policy=memory_policy) as monitor:
                 for width in (360, 720):
-                    for frames in (150, long_frames):
+                    for frames in (150,) if short_only else (150, long_frames):
                         reference_hashes = None
                         for repeat in (1, 2):
-                            snapshot = memory_snapshot()
-                            preflight_memory(snapshot=snapshot)
+                            snapshot = memory_snapshot(memory_policy=memory_policy)
+                            preflight_memory(snapshot=snapshot, memory_policy=memory_policy)
                             if frames > 150 and snapshot["effective_available_bytes"] < 384 * MIB:
                                 result["jobs"].append(
                                     {
@@ -111,6 +125,8 @@ def validate(
                             command = [
                                 sys.executable,
                                 str(Path(__file__).with_name("render_video.py").resolve()),
+                                "--memory-policy",
+                                memory_policy,
                                 "--width",
                                 str(width),
                                 "--frames",
@@ -149,6 +165,14 @@ def validate(
                                     "WORKER_FAILED",
                                     "Worker failed; inspect its bounded error report",
                                 )
+                            if data.get("transaction_clean") is not True:
+                                raise OperationError(
+                                    "TRANSACTION_CLEANUP", "Worker cleanup was not confirmed"
+                                )
+                            if data["memory_observability"]["policy"] != memory_policy:
+                                raise OperationError(
+                                    "MEMORY_POLICY", "Worker policy differs from supervisor"
+                                )
                             if data["whole_job_memory"]["encoder_peak_rss_bytes"] <= 0:
                                 raise OperationError(
                                     "METRICS_MISSING", "Encoder RSS was not observed"
@@ -173,7 +197,8 @@ def validate(
                                 flush=True,
                             )
             completed = [j for j in result["jobs"] if j["status"] == "passed"]
-            result["technical_run_passed"] = len(completed) == 8
+            result["technical_rendering_success"] = len(completed) == (4 if short_only else 8)
+            result["technical_run_passed"] = result["technical_rendering_success"]
             result["low_available_window_observed"] = any(
                 j["admission_memory"]["effective_available_bytes"] <= 1024 * MIB for j in completed
             )
@@ -182,7 +207,14 @@ def validate(
                 if scope == "development"
                 else "operator_target_evidence_pending_architect_review"
             )
-        except (OperationError, OSError, ValueError, KeyboardInterrupt) as error:
+        except (
+            OperationError,
+            OSError,
+            ValueError,
+            KeyError,
+            TypeError,
+            KeyboardInterrupt,
+        ) as error:
             result["errors"].append(
                 {
                     "code": getattr(
@@ -194,22 +226,39 @@ def validate(
                 }
             )
         finally:
-            after = memory_snapshot()
+            after = memory_snapshot(memory_policy=memory_policy)
             result["memory_before"], result["memory_after"] = before, after
             result["cgroup_memory_event_delta"] = event_delta(before, after)
-            if result["cgroup_memory_event_delta"] is None:
-                result["technical_run_passed"] = False
-                result["errors"].append(
-                    {"code": "OOM_COUNTERS_UNKNOWN", "message": "OOM counters were unavailable"}
+            observability = memory_observability(before, after)
+            if monitor is not None and not monitor.oom_telemetry_continuous:
+                observability["sufficient_for_technical_validation"] = False
+                observability["limitations"].append(
+                    "OOM telemetry was not continuous during sampling"
                 )
-            elif any(
-                result["cgroup_memory_event_delta"].get(k, 0) != 0
-                for k in ("oom", "oom_kill", "oom_group_kill")
+            if any(
+                not (j.get("report") or {})
+                .get("memory_observability", {})
+                .get("sufficient_for_technical_validation", False)
+                for j in result["jobs"]
             ):
-                result["technical_run_passed"] = False
-                result["errors"].append(
-                    {"code": "OOM_EVENTS", "message": "Cgroup OOM counters changed"}
+                observability["sufficient_for_technical_validation"] = False
+                observability["limitations"].append(
+                    "At least one worker lacks complete OOM observability"
                 )
+            result["memory_observability"] = observability
+            # Retain uncertainty without conflating completed video with missing OOM telemetry.
+            result["technical_run_passed"] = (
+                result["technical_rendering_success"]
+                and observability["sufficient_for_technical_validation"]
+                and not result["errors"]
+            )
+            result["validation_status"] = (
+                "validated"
+                if result["technical_run_passed"]
+                else "rendered_with_observability_limitations"
+                if result["technical_rendering_success"] and not result["errors"]
+                else "failed_or_incomplete"
+            )
             if monitor is not None and hasattr(monitor, "final"):
                 metrics = monitor.report()
                 metrics["root_role"] = (
@@ -223,6 +272,12 @@ def validate(
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
+    add_memory_policy_argument(parser)
+    parser.add_argument(
+        "--short-only",
+        action="store_true",
+        help="Run both 150-frame profiles before authorizing long jobs",
+    )
     parser.add_argument("--workspace", type=Path, required=True)
     parser.add_argument("--run-directory", type=Path, required=True)
     parser.add_argument("--scope", choices=("development", "target_vm"), required=True)
@@ -243,12 +298,18 @@ def main() -> None:
             scope=args.scope,
             long_frames=args.long_frames,
             timeout=args.timeout,
+            memory_policy=args.memory_policy,
+            short_only=args.short_only,
         )
     except (OperationError, OSError) as error:
         print(
             json.dumps(
                 {
                     "technical_run_passed": False,
+                    "technical_rendering_success": False,
+                    "validation_status": "not_completed",
+                    "memory_policy": args.memory_policy,
+                    "short_only": args.short_only,
                     "target_vm_verified": False,
                     "error": {
                         "code": getattr(error, "code", "VALIDATION_IO"),
@@ -262,12 +323,20 @@ def main() -> None:
         json.dumps(
             {
                 "technical_run_passed": result["technical_run_passed"],
+                "technical_rendering_success": result["technical_rendering_success"],
+                "validation_status": result["validation_status"],
                 "target_vm_status": result["target_vm_status"],
                 "results": str(args.run_directory / "results.json"),
             }
         )
     )
-    raise SystemExit(0 if result["technical_run_passed"] else 2)
+    raise SystemExit(
+        0
+        if result["technical_run_passed"]
+        else 3
+        if result["technical_rendering_success"] and not result["errors"]
+        else 2
+    )
 
 
 if __name__ == "__main__":

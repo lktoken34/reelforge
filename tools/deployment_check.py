@@ -35,24 +35,28 @@ from reelforge.resources.deployment import (
     cgroup_capabilities,
     check_workspace,
     cpu_snapshot,
+    memory_observability,
     pressure_snapshot,
 )
+from reelforge.resources.memory import add_memory_policy_argument
 from reelforge.resources.monitor import memory_snapshot, preflight_memory
 
 
-def inspect_deployment(workspace: Path) -> dict:
+def inspect_deployment(workspace: Path, *, memory_policy: str = "strict") -> dict:
     errors, warnings = [], []
-    snapshot = memory_snapshot()
+    snapshot = memory_snapshot(memory_policy=memory_policy)
     try:
-        preflight_memory(snapshot=snapshot)
+        preflight_memory(snapshot=snapshot, memory_policy=memory_policy)
     except OperationError as error:
         return {
             "schema": "reelforge.deployment.v1",
             "ok": False,
             "errors": [{"code": error.code, "message": str(error)}],
             "memory": snapshot,
+            "memory_observability": memory_observability(snapshot, snapshot),
             "target_vm_verified": False,
             "native_checks": "skipped_due_to_memory_refusal",
+            "pressure": pressure_snapshot(),
         }
     cpu = cpu_snapshot(snapshot)
     try:
@@ -146,7 +150,7 @@ def inspect_deployment(workspace: Path) -> dict:
     except OperationError as error:
         errors.append({"code": error.code, "message": str(error)})
     try:
-        preflight_memory(snapshot=snapshot)
+        preflight_memory(snapshot=snapshot, memory_policy=memory_policy)
     except OperationError as error:
         errors.append({"code": error.code, "message": str(error)})
     temporary = shutil.disk_usage("/tmp")
@@ -175,6 +179,7 @@ def inspect_deployment(workspace: Path) -> dict:
         "distribution": distribution,
         "cpu": cpu,
         "memory": snapshot,
+        "memory_observability": memory_observability(snapshot, snapshot),
         "pressure": pressure_snapshot(),
         "workspace": filesystem,
         "native": native,
@@ -190,11 +195,12 @@ def inspect_deployment(workspace: Path) -> dict:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
+    add_memory_policy_argument(parser)
     parser.add_argument("--workspace", type=Path, required=True)
     parser.add_argument("--report", type=Path)
     args = parser.parse_args()
     try:
-        result = inspect_deployment(args.workspace)
+        result = inspect_deployment(args.workspace, memory_policy=args.memory_policy)
     except (OperationError, OSError) as error:
         result = {
             "ok": False,

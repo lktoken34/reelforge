@@ -42,11 +42,13 @@ def run_bounded(
     timeout: float = 15,
     max_bytes: int = 1_048_576,
     cancelled: Event | None = None,
+    env: dict[str, str] | None = None,
 ) -> tuple[int, bytes, bytes]:
     """Drain both pipes while bounding combined output; no shell and no input stream."""
     try:
         proc = subprocess.Popen(
             args,
+            env=env,
             stdin=subprocess.DEVNULL,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,

@@ -1,0 +1,22 @@
+{
+  "memory_policy": "strict",
+  "passed": true,
+  "case_directory": "/workspace/scratch/6ba0d4b7730a/reelforge-v2/outputs/phase2c1-recovery/recovery-1793470377868562967",
+  "worker_exit_status": 130,
+  "live_encoder_pids_after": [],
+  "incomplete_final_published": false,
+  "existing_output_unchanged": true,
+  "supervisor_reconciled": [],
+  "worker_error_report": {
+    "ok": false,
+    "technical_rendering_success": false,
+    "memory_policy": "strict",
+    "deployment_gate_approved": false,
+    "error": {
+      "code": "INTERRUPTED",
+      "message": "Diagnostic worker interrupted"
+    },
+    "render_ready": false
+  },
+  "scope": "Handled SIGTERM; external SIGKILL/host loss is not covered."
+}

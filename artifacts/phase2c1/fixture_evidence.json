@@ -1,0 +1,269 @@
+{
+  "scope": "Synthetic fixture observations on development host; NOT actual Muse VM",
+  "simulation": true,
+  "strict_absent": {
+    "host": {
+      "MemTotal": 8314880000,
+      "MemAvailable": 734003200,
+      "SwapTotal": 0,
+      "SwapFree": 0
+    },
+    "cgroup_root": "/cg",
+    "cgroup": {
+      "memory.max": null,
+      "memory.current": null,
+      "memory.peak": null,
+      "memory.events": null,
+      "memory.swap.max": null,
+      "memory.swap.current": null,
+      "cpu.max": null
+    },
+    "effective_available_bytes": 0,
+    "memory_policy": "strict",
+    "fallback_enabled": false,
+    "fallback_used": false,
+    "memory_source": "unavailable",
+    "controller_state": "unavailable_in_observed_guest",
+    "constraints": [],
+    "observations": {
+      "/proc/meminfo": {
+        "status": "present",
+        "value": "MemTotal: 8120000 kB\nMemAvailable: 716800 kB\nSwapTotal: 0 kB\nSwapFree: 0 kB"
+      },
+      "/proc/self/cgroup": {
+        "status": "present",
+        "value": "0::/"
+      },
+      "/proc/self/mountinfo": {
+        "status": "present",
+        "value": "1 0 0:1 / / rw - ext4 /dev/vda rw\n10 1 0:2 / /cg ro - cgroup2 cgroup2 rw"
+      },
+      "/proc/cgroups": {
+        "status": "present",
+        "value": "#subsys_name hierarchy num_cgroups enabled\ncpu 0 2 1"
+      },
+      "/cg/cgroup.controllers": {
+        "status": "present",
+        "value": "cpu"
+      },
+      "/cg/memory.max": {
+        "status": "missing"
+      },
+      "/cg/memory.current": {
+        "status": "missing"
+      },
+      "/cg/memory.peak": {
+        "status": "missing"
+      },
+      "/cg/memory.events": {
+        "status": "missing"
+      },
+      "/cg/memory.swap.max": {
+        "status": "missing"
+      },
+      "/cg/memory.swap.current": {
+        "status": "missing"
+      },
+      "/cg/cpu.max": {
+        "status": "missing"
+      }
+    },
+    "errors": [
+      "Memory controller unavailable; strict policy denies admission"
+    ],
+    "limitations": [
+      "Visible namespaces cannot prove absence of hidden ancestor limits.",
+      "Guest availability may change suddenly with ballooning/external contention.",
+      "Software RSS/reserve monitoring is not a dedicated memory cgroup."
+    ],
+    "kernel_memory_controller": null,
+    "controller_version": "v2"
+  },
+  "authorized_guest_absent": {
+    "host": {
+      "MemTotal": 8314880000,
+      "MemAvailable": 734003200,
+      "SwapTotal": 0,
+      "SwapFree": 0
+    },
+    "cgroup_root": "/cg",
+    "cgroup": {
+      "memory.max": null,
+      "memory.current": null,
+      "memory.peak": null,
+      "memory.events": null,
+      "memory.swap.max": null,
+      "memory.swap.current": null,
+      "cpu.max": null
+    },
+    "effective_available_bytes": 734003200,
+    "memory_policy": "guest_procfs_fallback",
+    "fallback_enabled": true,
+    "fallback_used": true,
+    "memory_source": "guest_procfs",
+    "controller_state": "unavailable_in_observed_guest",
+    "constraints": [],
+    "observations": {
+      "/proc/meminfo": {
+        "status": "present",
+        "value": "MemTotal: 8120000 kB\nMemAvailable: 716800 kB\nSwapTotal: 0 kB\nSwapFree: 0 kB"
+      },
+      "/proc/self/cgroup": {
+        "status": "present",
+        "value": "0::/"
+      },
+      "/proc/self/mountinfo": {
+        "status": "present",
+        "value": "1 0 0:1 / / rw - ext4 /dev/vda rw\n10 1 0:2 / /cg ro - cgroup2 cgroup2 rw"
+      },
+      "/proc/cgroups": {
+        "status": "present",
+        "value": "#subsys_name hierarchy num_cgroups enabled\ncpu 0 2 1"
+      },
+      "/cg/cgroup.controllers": {
+        "status": "present",
+        "value": "cpu"
+      },
+      "/cg/memory.max": {
+        "status": "missing"
+      },
+      "/cg/memory.current": {
+        "status": "missing"
+      },
+      "/cg/memory.peak": {
+        "status": "missing"
+      },
+      "/cg/memory.events": {
+        "status": "missing"
+      },
+      "/cg/memory.swap.max": {
+        "status": "missing"
+      },
+      "/cg/memory.swap.current": {
+        "status": "missing"
+      },
+      "/cg/cpu.max": {
+        "status": "missing"
+      },
+      "/.dockerenv": {
+        "status": "missing"
+      },
+      "/run/.containerenv": {
+        "status": "missing"
+      },
+      "/run/systemd/container": {
+        "status": "missing"
+      },
+      "/proc/cpuinfo": {
+        "status": "present",
+        "value": "flags: hypervisor"
+      },
+      "/sys/class/dmi/id/product_name": {
+        "status": "present",
+        "value": "KVM"
+      }
+    },
+    "errors": [],
+    "limitations": [
+      "Visible namespaces cannot prove absence of hidden ancestor limits.",
+      "Guest availability may change suddenly with ballooning/external contention.",
+      "Software RSS/reserve monitoring is not a dedicated memory cgroup."
+    ],
+    "kernel_memory_controller": null,
+    "controller_version": "v2",
+    "guest_checks": {
+      "ubuntu_24_04_x86_64": true,
+      "four_affinity_cpus": true,
+      "reported_ram_near_target": true,
+      "no_guest_swap": true,
+      "no_known_container_markers": true,
+      "virtualization_evidence": true,
+      "ordinary_guest_root_filesystem": true
+    }
+  },
+  "authorized_but_real_limit": {
+    "host": {
+      "MemTotal": 8314880000,
+      "MemAvailable": 734003200,
+      "SwapTotal": 0,
+      "SwapFree": 0
+    },
+    "cgroup_root": "/cg",
+    "cgroup": {
+      "memory.max": 100663296,
+      "memory.current": 67108864,
+      "memory.peak": null,
+      "memory.events": null,
+      "memory.swap.max": null,
+      "memory.swap.current": null,
+      "cpu.max": null
+    },
+    "effective_available_bytes": 33554432,
+    "memory_policy": "guest_procfs_fallback",
+    "fallback_enabled": true,
+    "fallback_used": false,
+    "memory_source": "guest_and_cgroup",
+    "controller_state": "observable",
+    "constraints": [
+      {
+        "path": "/cg",
+        "limit": 100663296,
+        "usage": 67108864
+      }
+    ],
+    "observations": {
+      "/proc/meminfo": {
+        "status": "present",
+        "value": "MemTotal: 8120000 kB\nMemAvailable: 716800 kB\nSwapTotal: 0 kB\nSwapFree: 0 kB"
+      },
+      "/proc/self/cgroup": {
+        "status": "present",
+        "value": "0::/"
+      },
+      "/proc/self/mountinfo": {
+        "status": "present",
+        "value": "1 0 0:1 / / rw - ext4 /dev/vda rw\n10 1 0:2 / /cg ro - cgroup2 cgroup2 rw"
+      },
+      "/proc/cgroups": {
+        "status": "present",
+        "value": "#subsys_name hierarchy num_cgroups enabled\ncpu 0 2 1"
+      },
+      "/cg/cgroup.controllers": {
+        "status": "present",
+        "value": "cpu"
+      },
+      "/cg/memory.max": {
+        "status": "present",
+        "value": "100663296"
+      },
+      "/cg/memory.current": {
+        "status": "present",
+        "value": "67108864"
+      },
+      "/cg/memory.peak": {
+        "status": "missing"
+      },
+      "/cg/memory.events": {
+        "status": "missing"
+      },
+      "/cg/memory.swap.max": {
+        "status": "missing"
+      },
+      "/cg/memory.swap.current": {
+        "status": "missing"
+      },
+      "/cg/cpu.max": {
+        "status": "missing"
+      }
+    },
+    "errors": [],
+    "limitations": [
+      "Visible namespaces cannot prove absence of hidden ancestor limits.",
+      "Guest availability may change suddenly with ballooning/external contention.",
+      "Software RSS/reserve monitoring is not a dedicated memory cgroup."
+    ],
+    "kernel_memory_controller": null,
+    "controller_version": "v2"
+  },
+  "deployment_gate_approved": false
+}

@@ -1,5 +1,11 @@
 # Target VM deployment and validation
 
+**Phase 2C.1 update:** the original target attempt was blocked at admission; no render ran.
+Use [the updated cloud prompt](TARGET_VM_PHASE2C1_PROMPT.md) and
+[memory-observability contract](MEMORY_OBSERVABILITY.md) for the new explicit guest policy
+and wheelhouse. Commands below document the original strict Phase 2C workflow.
+
+
 Phase 2C is engineering tooling only. Phase 2B baseline: `7133f244`.
 The Muse Spark VM has **not** been tested from this workspace. Development evidence is
 supplementary. Neither matching host characteristics nor a zero exit code authenticates
@@ -91,7 +97,7 @@ remain false until independent review. A target operator must attest where/how i
 
 - Keep the accepted 256 MiB job envelope plus 64 MiB available-memory reserve: admission
   needs at least **320 MiB effective available** (minimum of host MemAvailable and current
-  cgroup headroom). Unknown cgroup capacity refuses admission.
+  cgroup headroom). Unknown cgroup capacity refuses admission under strict policy.
 - Long jobs additionally require **384 MiB** at launch. If insufficient, report a skip and
   no overall technical pass. This is extra caution, not a reduced threshold.
 - Sample tree RSS every ~10 ms; available memory/disk about every 100 ms plus endpoints.
@@ -108,7 +114,8 @@ If the provider offers a delegated job scope, investigate and review its account
 An exact 256 MiB cgroup cap conflicts with the current 320 MiB admission rule when the reserve
 is counted inside that cap; do not bypass admission to make this experiment pass. Hard
 per-job enforcement is **not implemented** in this milestone. OOM/kill counter changes or
-unavailable OOM counters prevent a technical pass.
+unavailable OOM counters prevent a technical pass; Phase 2C.1 separately records successful
+rendering with telemetry limitations (supervisor exit 3).
 
 ## Recovery and evidence handoff
 

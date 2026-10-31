@@ -22,6 +22,7 @@ jobs:
           uv venv /tmp/reelforge-wheel
           uv pip install --python /tmp/reelforge-wheel/bin/python dist/reelforge_v2-*.whl
           cd /tmp
+          /tmp/reelforge-wheel/bin/python -c 'from reelforge.resources.memory import observe_memory; d=observe_memory(); assert d["memory_policy"] == "strict"; print(d["memory_source"])'
           /tmp/reelforge-wheel/bin/reelforge capabilities
           /tmp/reelforge-wheel/bin/reelforge schema
           /tmp/reelforge-wheel/bin/reelforge validate "$GITHUB_WORKSPACE/examples/foundation/project.json"
@@ -46,6 +47,10 @@ jobs:
           mkdir -p outputs/ci-video
           uv run --frozen --extra renderer python tools/render_video.py --width 360 --output outputs/ci-video/demo.mp4 --report outputs/ci-video/demo.json
 
+      - name: Strict memory probe and handled recovery
+        run: |
+          uv run --frozen --extra renderer python -S tools/memory_probe.py --report outputs/ci-memory.json
+          uv run --frozen --extra renderer python tools/recovery_check.py --workspace "$GITHUB_WORKSPACE" --report outputs/ci-recovery.json
       - name: Build sealed prebuilt runtime bundle on roomy builder
         shell: bash
         run: |
@@ -56,7 +61,7 @@ jobs:
           TMPDIR="$PWD/outputs/build-tmp" outputs/wheel-builder/bin/python -m pip wheel --no-deps --config-settings=setup-args=-Dno-x11=true --wheel-dir outputs/wheelhouse pycairo==1.29.2
           outputs/wheel-builder/bin/python -m pip wheel --only-binary=:all: --find-links outputs/wheelhouse --wheel-dir outputs/wheelhouse -r outputs/runtime-pins.txt
           cp dist/reelforge_v2-*.whl outputs/wheelhouse/
-          uv run --frozen --extra renderer python tools/wheelhouse.py seal --directory outputs/wheelhouse
+          uv run --frozen --extra renderer python tools/wheelhouse.py seal --directory outputs/wheelhouse --source-commit "$GITHUB_SHA"
       - name: Verify fresh offline runtime without compilation
         shell: bash
         run: |
@@ -65,7 +70,7 @@ jobs:
           outputs/offline-proof/bin/python tools/render_video.py --width 360 --frames 450 --output outputs/offline-proof-video/demo.mp4 --report outputs/offline-proof-video/demo.json
       - uses: actions/upload-artifact@v4
         with:
-          name: reelforge-v2-py312-ubuntu24-x86_64-wheelhouse
+          name: reelforge-v2-phase2c1-py312-ubuntu24-x86_64-wheelhouse
           path: outputs/wheelhouse/
           retention-days: 30
           if-no-files-found: error

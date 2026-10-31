@@ -1,6 +1,6 @@
 # Incremental roadmap
 
-Phase 1 is approved with changes. Phase 2A was approved at c70d2f2. Phase 2B was approved at 7133f244. Phase 2C tooling is complete; actual target-VM validation is pending.
+Phase 1 is approved with changes. Phase 2A was approved at c70d2f2. Phase 2B was approved at 7133f244. Phase 2C implementation was approved; target validation was blocked before rendering. Phase 2C.1 memory compatibility awaits target evidence and review.
 No next-milestone implementation is authorized by this document.
 
 Each phase ends in evidence and architectural review. Nothing below is authorization to
@@ -12,6 +12,7 @@ implement a later phase during Phase 1. Phase numbers after Phase 2 are provisio
 | 2A — minimal software drawing feasibility (approved) | Primitive-only backend adapter and bounded single-frame surface lifecycle; static diagnostic fixtures | Inspected curves/alpha/clips, repeated-frame memory, 360p/720p measurements, deterministic hashes; no rigs/world/audio/video |
 | 2B — bounded CPU video (approved) | Cairo-to-FFmpeg raw pipe, fixed motion fixture, verification and process-tree evidence | Silent 5s MP4s, failure tests, decoded-repeat comparison and review |
 | 2C — cloud deployment gate (current) | Prebuilt installation, sequential short/long validation, resource/recovery evidence | Actual target-VM results and external architectural approval; development host is supplementary |
+| 2C.1 — VM memory compatibility (current) | Read-only topology discovery and explicitly authorized guest procfs policy | Strict/fixture regressions, new wheelhouse, actual VM re-test and external review |
 | 3 — code-authored catalog foundations | One reusable character definition/rig and one small environment recipe, approved IDs and parameter limits | Identity/geometry contracts and static compositions; independent review before animation |
 | 4 — deterministic animation | Frame-index evaluation, one articulated action, camera/depth basics | Timing/pose invariants, out-of-order frame equivalence and movement review |
 | 5 — scene composition/style | Reusable environment system, bounded lights/effects, shot templates and typography | Consistent look, mobile readability and measured scene memory |
@@ -46,4 +47,4 @@ explicit later gate unless the architect separately authorizes a minimal encodin
 - Should fps/profile scope change before stabilization? Are frame timing and error contracts clear?
 - Which text shaping/font and redistribution licenses should later phases adopt?
 
-Review outcome should explicitly accept, revise or reject decisions. Stop after Phase 2C for external review. Do not begin catalog foundations before the deployment gate is accepted.
+Review outcome should explicitly accept, revise or reject decisions. Stop after Phase 2C.1 for external review. Do not begin catalog foundations before the deployment gate is accepted.
