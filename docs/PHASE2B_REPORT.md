@@ -140,3 +140,7 @@ also reconciles only the known transaction path of each successfully reaped work
 exploratory leftovers were manually removed; source/review artifacts exclude transactions. A
 fresh real render and a later filesystem audit passed. Abrupt external SIGKILL/host interruption
 has no automatic recovery/scavenger in this milestone. Final benchmark rows above include this fix.
+
+CI setup correction: the first remote Cairo/video job lacked the ignored outputs/ parent for
+pytest --basetemp. The workflow now creates it explicitly before tests; no runtime/codec
+change was required. Foundation checks passed on the initial run.

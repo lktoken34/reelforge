@@ -37,6 +37,8 @@ jobs:
       - run: sudo apt-get update
       - run: sudo apt-get install -y --no-install-recommends libcairo2-dev pkg-config python3-dev build-essential ffmpeg
       - run: uv sync --frozen --extra renderer
+      - name: Create workspace scratch parent
+        run: mkdir -p outputs
       - run: uv run --frozen --extra renderer pytest --basetemp outputs/test-temp
       - run: uv run --frozen --extra renderer python tools/render_diagnostics.py --output-dir /tmp/reelforge-diagnostics
       - name: Five-second stream and decode smoke

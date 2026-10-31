@@ -35,3 +35,6 @@ The local source repository is delivered for review; CI execution on GitHub is n
 Phase 2B adds real FFmpeg tests when ffmpeg/ffprobe are available; install Ubuntu `ffmpeg`
 for the complete suite. Use `--basetemp outputs/test-temp` to keep test media in the workspace.
 Video engineering scripts must preserve the installed foundation CLI and non-renderable manifest.
+
+On a clean checkout, run `mkdir -p outputs` before passing
+`--basetemp outputs/test-temp` to pytest; pytest creates the final directory, not its parent.
