@@ -1,0 +1,129 @@
+name: phase5c-independent-diagnostic
+
+on:
+  push:
+    branches:
+      - diagnostic-phase5c-novel-geometry
+  workflow_dispatch:
+
+jobs:
+  diagnostic:
+    runs-on: ubuntu-24.04
+    env:
+      UV_PYTHON: "3.12"
+      UV_CACHE_DIR: ${{ github.workspace }}/.uv-cache
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.13.4"
+          python-version: "3.12"
+
+      - name: Install native dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libcairo2-dev pkg-config python3-dev build-essential ffmpeg
+
+      - name: Sync pinned dependencies
+        run: uv sync --frozen --extra renderer
+
+      - name: Run three fresh full suites
+        shell: bash
+        run: |
+          set -o pipefail
+          mkdir -p outputs/diagnostic
+          overall=0
+          for run in 1 2 3; do
+            base="outputs/diagnostic/pytest-run-${run}"
+            mkdir -p "$base"
+            uv run --frozen --extra renderer pytest \
+              --basetemp "$base/basetemp" \
+              --junitxml "$base/junit.xml" \
+              2>&1 | tee "$base/pytest.log"
+            rc=${PIPESTATUS[0]}
+            printf '{"run":%s,"exit_code":%s}\n' "$run" "$rc" > "$base/exit.json"
+            [ "$rc" -eq 0 ] || overall=1
+            uv run python -c 'import json,sys,xml.etree.ElementTree as ET; root=ET.parse(sys.argv[1]).getroot(); suites=[root] if root.tag=="testsuite" else list(root.findall("testsuite")); total=sum(int(s.attrib.get("tests","0")) for s in suites); failures=sum(int(s.attrib.get("failures","0")) for s in suites); errors=sum(int(s.attrib.get("errors","0")) for s in suites); skipped=sum(int(s.attrib.get("skipped","0")) for s in suites); result={"tests":total,"failures":failures,"errors":errors,"skipped":skipped}; open(sys.argv[2],"w").write(json.dumps(result,indent=2)+"\n"); raise SystemExit(0 if total==795 and failures==0 and errors==0 and skipped==0 else 1)' \
+              "$base/junit.xml" "$base/summary.json" || overall=1
+          done
+          uv run python -c 'import json,glob,sys; p=[]; [p.append(json.load(open(x))) for x in glob.glob("outputs/diagnostic/pytest-run-*/summary.json")]; json.dump(p,open("outputs/diagnostic/suite-summary.json","w"),indent=2); raise SystemExit(0 if len(p)==3 and all(x=={"tests":795,"failures":0,"errors":0,"skipped":0} for x in p) else 1)' || overall=1
+          exit "$overall"
+
+      - name: Validate geometry security boundary
+        if: always()
+        run: |
+          set -o pipefail
+          mkdir -p outputs/diagnostic/security
+          uv run --frozen python tools/geometry.py validate examples/geometry/survival_objects.json \
+            > outputs/diagnostic/security/survival-validate.json
+          uv run --frozen python tools/geometry.py validate examples/geometry/heldout_wash_station.json \
+            > outputs/diagnostic/security/heldout-validate.json
+          uv run --frozen python tools/geometry.py inspect examples/geometry/survival_objects.json \
+            > outputs/diagnostic/security/survival-inspect.json
+          uv run --frozen python tools/geometry.py inspect examples/geometry/heldout_wash_station.json \
+            > outputs/diagnostic/security/heldout-inspect.json
+          rm -rf artifacts/phase5c/proofs
+          uv run --frozen --extra renderer python tools/review_geometry.py \
+            2>&1 | tee outputs/diagnostic/security/review-geometry.log
+
+      - name: Validate all compositions
+        if: always()
+        run: |
+          set -euo pipefail
+          mkdir -p outputs/diagnostic/compositions
+          for name in woodland_relay settlement_checkpoint shelter_supply orchard_checkpoint heldout_station; do
+            uv run --frozen python tools/geometry.py validate-composition \
+              "examples/compositions/${name}.json" \
+              > "outputs/diagnostic/compositions/${name}-validate.json"
+            uv run --frozen python tools/geometry.py inspect-composition \
+              "examples/compositions/${name}.json" \
+              > "outputs/diagnostic/compositions/${name}-inspect.json"
+          done
+
+      - name: Verify archived audiovisual proofs
+        if: always()
+        run: |
+          set -euo pipefail
+          mkdir -p outputs/diagnostic/av
+          overall=0
+          for video in artifacts/phase5c/proofs/woodland_relay_video/scene.mp4 \
+                       artifacts/phase5c/proofs/settlement_checkpoint_video/scene.mp4 \
+                       artifacts/phase5c/proofs/settlement_repeat/scene.mp4; do
+            family=$(basename "$(dirname "$video")")
+            ffprobe -v error -count_frames -select_streams v:0 \
+              -show_entries stream=codec_name,pix_fmt,width,height,avg_frame_rate,nb_frames,nb_read_frames,duration \
+              -of json "$video" > "outputs/diagnostic/av/${family}.json" || overall=1
+            ffmpeg -v error -i "$video" -f null - \
+              > "outputs/diagnostic/av/${family}-decode.log" 2>&1 || overall=1
+          done
+          uv run python -c 'import json,glob,sys; ok=True; out={}; [out.__setitem__(p,json.load(open(p))) for p in glob.glob("outputs/diagnostic/av/*.json") if not p.endswith("-status.json")]; [out.__setitem__(p,out[p]) for p in []]; [None for p in []]; json.dump({"archived_probe_files":len(out)},open("outputs/diagnostic/av/summary.json","w"),indent=2); raise SystemExit(0 if len(out)==3 else 1)' || overall=1
+          exit "$overall"
+
+      - name: Verify legacy checkpoints and audio
+        if: always()
+        run: |
+          set -o pipefail
+          mkdir -p outputs/diagnostic/legacy
+          uv run --frozen --extra renderer python tools/legacy_scene_checkpoints.py \
+            --output outputs/diagnostic/legacy/current-pixels.json \
+            2>&1 | tee outputs/diagnostic/legacy/checkpoints.log
+          rc=${PIPESTATUS[0]}
+          [ "$rc" -eq 0 ] || exit "$rc"
+          uv run --frozen python tools/verify_scene_legacy_audio.py \
+            2>&1 | tee outputs/diagnostic/legacy/audio.log
+          rc=${PIPESTATUS[0]}
+          [ "$rc" -eq 0 ] || exit "$rc"
+          uv run --frozen python tools/review_story.py \
+            2>&1 | tee outputs/diagnostic/legacy/story-review.log
+
+      - name: Upload diagnostic evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase5c-independent-diagnostic
+          path: |
+            outputs/diagnostic/
+            artifacts/phase5c/
+          if-no-files-found: error
+          retention-days: 30
