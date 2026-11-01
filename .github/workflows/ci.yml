@@ -75,14 +75,17 @@ jobs:
           retention-days: 30
           if-no-files-found: error
 
-      - name: Phase 3A development character proof
+      - name: Phase 3A.1 development character quality proofs
         run: |
           uv run --frozen --extra renderer python tools/validate_character.py examples/characters/rowan_walk.json
           uv run --frozen --extra renderer python tools/render_character.py --output-dir outputs/ci-character --stills-only
           uv run --frozen --extra renderer python tools/render_character.py --output-dir outputs/ci-character
+          uv run --frozen --extra renderer python tools/review_character_polish.py --output-dir outputs/ci-polish-review --after outputs/ci-character/rowan_idle_walk_run.mp4
       - uses: actions/upload-artifact@v4
         with:
-          name: phase3a-character-visual-review
-          path: outputs/ci-character/
+          name: phase3a1-character-visual-review
+          path: |
+            outputs/ci-character/
+            outputs/ci-polish-review/
           retention-days: 30
           if-no-files-found: error

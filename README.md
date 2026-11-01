@@ -1,6 +1,6 @@
 # ReelForge V2
 
-Phase 3A builds on the approved Phase 1/2A foundation for an agent-operated, code-only 2D/2.5D
+Phase 3A.1 builds on the approved Phase 1/2A foundation for an agent-operated, code-only 2D/2.5D
 animation engine. An internal, trusted-Python Cairo vector backend and bounded FFmpeg pipe now produce
 diagnostic MP4s, including one original articulated character with bounded motion presets.
 They are not connected to episode manifests.
@@ -163,3 +163,16 @@ Review proofs in `artifacts/phase3a/`: pose sheet, three full-resolution frames 
 5-second 720p MP4. Artistic acceptance is external; passing technical tests does not prove
 reference-level quality. Target Muse Spark deployment remains blocked; its policies are
 unchanged. **Stop after Phase 3A for review.**
+
+## Phase 3A.1 motion quality review
+
+Rowan now has planted transition contacts, heel/toe roll, torso/arm weight cues, bounded
+satchel/hat/strap follow-through, and closed-menu acting additions. [Design and contract](docs/CHARACTER_POLISH.md)
+· [report, measurements and remaining limits](docs/PHASE3A1_REPORT.md).
+Compare [original left / refined right](artifacts/phase3a1/before_after.mp4),
+[refined vertical clip](artifacts/phase3a1/rowan_refined.mp4) and
+[annotated corrections](artifacts/phase3a1/review_sheet.png).
+The original clip and 17-joint rig are preserved. The same six preset fields accept the
+added look_around/react actions and surprised/frightened/determined expressions.
+Artistic/catalog acceptance is pending independent review. Target deployment remains blocked;
+no memory/security policy changed. Stop after Phase 3A.1.

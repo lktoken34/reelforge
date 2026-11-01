@@ -1,0 +1,8 @@
+{
+  "character": "rowan_01",
+  "action": "react",
+  "direction": "right",
+  "speed": 1.0,
+  "expression": "frightened",
+  "intensity": 1.0
+}

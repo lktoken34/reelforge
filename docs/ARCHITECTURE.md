@@ -13,6 +13,10 @@ Phase 3A adds a `characters` boundary for one immutable skeleton, local artwork 
 motion presets. It returns existing DrawPath values and imports no native graphics objects.
 It is independent of episode planning and deployed-resource policy. See CHARACTER_RIG.md.
 
+Phase 3A.1 refines this same rig via planar contact solving, a continuous cadence/contact
+clock, bounded analytical secondary roles and additive acting presets. No native/media/resource
+boundary changed. See CHARACTER_POLISH.md and PHASE3A1_REPORT.md for review status.
+
 ## Boundaries and ownership
 
 The authoring agent chooses from published capabilities and writes declarative JSON. A

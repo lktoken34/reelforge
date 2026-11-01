@@ -1,4 +1,4 @@
-"""Trusted Phase 3A proof renderer; strict resource policy; no episode integration."""
+"""Trusted Phase 3A.1 proof renderer; strict resource policy; no episode integration."""
 
 import argparse
 import json
@@ -84,7 +84,7 @@ def render(output_dir: Path, *, stills_only=False):
         raise OperationError("OOM_EVENTS", "OOM counters changed during character proof")
     after = resource.getrusage(resource.RUSAGE_CHILDREN)
     report = {
-        "scope": "Phase 3A development-host character proof; not target VM",
+        "scope": "Phase 3A.1 development-host character polish; not target VM",
         "versions": backend_versions(),
         "technical_rendering_success": True,
         "artistic_approval": False,

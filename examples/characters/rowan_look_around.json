@@ -1,0 +1,8 @@
+{
+  "character": "rowan_01",
+  "action": "look_around",
+  "direction": "right",
+  "speed": 1.0,
+  "expression": "calm",
+  "intensity": 1.0
+}

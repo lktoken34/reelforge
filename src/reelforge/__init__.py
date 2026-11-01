@@ -1,3 +1,3 @@
 """ReelForge V2: foundation contracts and an internal CPU drawing/video engineering tools."""
 
-__version__ = "0.5.0"
+__version__ = "0.6.0"

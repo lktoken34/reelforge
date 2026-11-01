@@ -1,5 +1,9 @@
 # First character rig — Phase 3A
 
+Phase 3A baseline record: engineering approved, artistic refinement required. Current
+contact/secondary/acting refinements and additive contract options are documented in
+[CHARACTER_POLISH.md](CHARACTER_POLISH.md); the original baseline behavior below is historical.
+
 Approved development baseline: `84eee4af27a38644e1a7461b4fb0a699eee4bfbb`.
 Scope: one original character, an articulated cutout rig and three bounded locomotion presets.
 No deployed-resource policy or episode contract is changed. Native Cairo objects remain inside

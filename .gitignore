@@ -13,3 +13,5 @@ outputs/
 .reelforge-encode-*/
 
 .reelforge-validation.lock
+
+.reelforge-comparison-*/

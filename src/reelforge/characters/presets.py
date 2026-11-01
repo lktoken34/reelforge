@@ -5,7 +5,8 @@ from dataclasses import dataclass
 
 from reelforge.rendering.model import RenderError, finite
 
-from .rig import Joint, Pose, Rigid, Skeleton, two_bone
+from .contact import FootPlacement, foot_roll, plant_feet
+from .rig import Joint, Pose, Rigid, Skeleton
 
 UPPER_LEG, LOWER_LEG = 42.0, 45.0
 WALK_STRIDE, RUN_STRIDE = 64.0, 164.0
@@ -31,8 +32,8 @@ SKELETON = Skeleton(
         Joint("near_hand", "near_forearm", (0, 29)),
     )
 )
-ACTIONS = ("idle", "walk", "run")
-EXPRESSIONS = ("calm", "concerned", "focused")
+ACTIONS = ("idle", "walk", "run", "look_around", "react")
+EXPRESSIONS = ("calm", "concerned", "focused", "surprised", "frightened", "determined")
 
 
 @dataclass(frozen=True)
@@ -46,9 +47,9 @@ class CharacterPreset:
 
     def __post_init__(self):
         if self.character != "rowan_01" or self.action not in ACTIONS:
-            raise RenderError("Unknown character/action; use rowan_01 and idle/walk/run")
+            raise RenderError("Unknown character/action; use rowan_01 and a published action")
         if self.direction not in ("left", "right") or self.expression not in EXPRESSIONS:
-            raise RenderError("Use left/right and calm/concerned/focused")
+            raise RenderError("Use left/right and a published expression")
         finite(self.speed, self.intensity)
         if not 0.5 <= self.speed <= 1.5 or not 0.5 <= self.intensity <= 1.0:
             raise RenderError("Speed must be 0.5..1.5; intensity 0.5..1.0")
@@ -89,7 +90,7 @@ def foot_target(action: str, phase: float, intensity: float = 1) -> tuple[float,
     # Hermite X keeps the same velocity at toe-off and heel strike as stance.
     h = u * u * (3 - 2 * u)
     x = -reach + 2 * reach * h - stride * (1 - duty) * (u * u * u - 1.5 * u * u + 0.5 * u) * 2
-    return x, lift * math.sin(math.pi * u) ** 2, False
+    return x, lift * math.sin(math.pi * u) ** 2 * (1 + 0.18 * math.sin(math.tau * u)), False
 
 
 def sample_pose(preset: CharacterPreset, seconds: float, *, travel: bool = True) -> Pose:
@@ -98,69 +99,91 @@ def sample_pose(preset: CharacterPreset, seconds: float, *, travel: bool = True)
         raise RenderError("Time must be 0..600 seconds; travel is a boolean")
     t = seconds * preset.speed
     angles = {}
-    if preset.action == "idle":
+    acting = preset.action in ("look_around", "react")
+    if preset.action == "idle" or acting:
         breath = math.sin(t * math.tau / 3)
-        height = 93 + 0.65 * breath * preset.intensity
+        balance = -1 + 0.45 * math.sin(t * 1.2)
+        height = 94.5 + 0.4 * breath * preset.intensity
         angles.update(
-            torso=0.012 * breath, head=0.025 * math.sin(t * 1.7), scarf=0.04 * math.sin(t * 2.1)
+            torso=0.008 * breath,
+            head=0.018 * math.sin(t * 1.7),
+            neck=-0.006 * breath,
+            scarf=0.035 * math.sin(t * 2.1 - 0.5),
         )
         for side in ("far", "near"):
-            dx = 2 if side == "near" else -2
-            a, b = two_bone(dx, height - 10, UPPER_LEG, LOWER_LEG)
             angles.update(
                 {
-                    f"{side}_thigh": a,
-                    f"{side}_shin": b,
-                    f"{side}_foot": -a - b,
-                    f"{side}_arm": 0.04 * breath + (0.12 if side == "far" else -0.12),
-                    f"{side}_forearm": -0.12,
-                    f"{side}_hand": 0.08,
+                    side + "_arm": (0.10 if side == "far" else -0.10) + 0.015 * breath,
+                    side + "_forearm": -0.16,
+                    side + "_hand": 0.06 * breath,
                 }
             )
-        return Pose(Rigid(0, -height), tuple(angles.items()))
+        if preset.action == "look_around":
+            angles.update(
+                head=-0.12 * math.sin(t * 1.7) * preset.intensity,
+                neck=0.035 * math.sin(t * 1.7 - 0.4),
+                near_arm=-0.25,
+                near_forearm=-0.65,
+            )
+        if preset.action == "react":
+            # Finite anticipation/recoil/settle, evaluated directly from supplied time.
+            recoil = smooth(t / 0.25) * (1 - 0.32 * smooth((t - 0.45) / 0.65)) * preset.intensity
+            angles.update(
+                torso=-0.15 * recoil,
+                head=0.13 * recoil,
+                near_arm=-0.72 * recoil,
+                near_forearm=-1.0 * recoil,
+                far_arm=0.45 * recoil,
+                far_forearm=-1.2 * recoil,
+                near_hand=-0.25 * recoil,
+            )
+            height -= 3 * recoil
+            balance -= 3 * recoil
+        pose = Pose(Rigid(balance, -height), tuple(angles.items()))
+        return plant_feet(pose, (FootPlacement(9), FootPlacement(-9)), SKELETON)
     cycle = WALK_CYCLE if preset.action == "walk" else RUN_CYCLE
-    cycles, running = t / cycle, preset.action == "run"
+    cycles = t / cycle
+    running = preset.action == "run"
     stride = (RUN_STRIDE if running else WALK_STRIDE) * preset.intensity
+    balance = (1.0 if running else 1.6) * math.sin(cycles * math.tau - 0.3)
     height = (
-        81.5 + 3.5 * math.cos(cycles * math.tau * 2)
+        82.2 - 3.4 * math.cos((cycles - 0.19) * math.tau * 2)
         if running
-        else 86.5 + 1.2 * math.cos(cycles * math.tau * 2)
+        else 90.8 - 1.5 * math.cos(cycles * math.tau * 2)
     )
-    lean = 0.22 if running else 0.035
+    lean = (
+        0.26 + 0.04 * math.sin(cycles * math.tau * 2 - 0.3)
+        if running
+        else 0.045 + 0.035 * math.sin(cycles * math.tau - 0.4)
+    )
     angles.update(
         torso=lean,
-        head=-lean * 0.7 + 0.025 * math.sin(cycles * math.tau),
-        scarf=-0.35 if running else -0.12,
+        neck=-0.025 * math.sin(cycles * math.tau - 0.5),
+        head=-lean * 0.83 + 0.018 * math.sin(cycles * math.tau - 0.7),
+        scarf=(-0.3 if running else -0.08)
+        + (0.13 if running else 0.06) * math.sin(cycles * math.tau - 0.8),
     )
-    for side, offset in (("near", 0), ("far", 0.5)):
+    distance = cycles * stride if travel else 0
+    feet = []
+    for side, offset, hip in (("near", 0, 7), ("far", 0.5, -7)):
         phase = (cycles + offset) % 1
-        dx, lift, stance = foot_target(preset.action, phase, preset.intensity)
-        a, b = two_bone(dx, height - 10 - lift, UPPER_LEG, LOWER_LEG)
+        dx, lift, _ = foot_target(preset.action, phase, preset.intensity)
+        pitch, pivot, state = foot_roll(phase, 0.38 if running else 0.62)
+        feet.append(FootPlacement(distance + hip + dx, lift, pitch, pivot, state))
+        swing = math.cos(phase * math.tau + 0.16)
         angles.update(
             {
-                f"{side}_thigh": a,
-                f"{side}_shin": b,
-                f"{side}_foot": -a
-                - b
-                + (
-                    0
-                    if stance
-                    else -0.23
-                    * math.sin(
-                        math.pi
-                        * (phase - (0.38 if running else 0.62))
-                        / (0.62 if running else 0.38)
-                    )
-                    ** 2
+                side + "_arm": (0.98 if running else 0.50) * swing * preset.intensity - lean * 0.35,
+                side + "_forearm": (
+                    -1.12 - 0.2 * math.sin(phase * math.tau - 0.4)
+                    if running
+                    else -0.18 - 0.22 * (0.5 - 0.5 * swing)
                 ),
-                f"{side}_arm": (0.85 if running else 0.4)
-                * math.cos(phase * math.tau)
-                * preset.intensity,
-                f"{side}_forearm": -1.25 if running else -0.3 - 0.18 * math.sin(phase * math.tau),
-                f"{side}_hand": 0.12,
+                side + "_hand": -0.12 * math.sin(phase * math.tau - 0.3),
             }
         )
-    return Pose(Rigid(cycles * stride if travel else 0, -height), tuple(angles.items()))
+    pose = Pose(Rigid(distance + balance, -height), tuple(angles.items()))
+    return plant_feet(pose, tuple(feet), SKELETON)
 
 
 def blend(a: Pose, b: Pose, weight: float) -> Pose:

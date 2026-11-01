@@ -15,6 +15,7 @@ from reelforge.rendering.model import (
 
 from .presets import EXPRESSIONS, SKELETON
 from .rig import Pose, Skeleton
+from .secondary import SecondaryMotion, around, cubic_attachment
 
 INK = color("302d29")
 RUST, RUST_LIGHT, RUST_DARK = color("a6583c"), color("c77b51"), color("663c32")
@@ -44,6 +45,8 @@ class Part:
     joint: str
     order: int
     commands: tuple[DrawPath, ...]
+    accessory: str = ""
+    accessory_pivot: tuple[float, float] = (0, 0)
 
 
 # Local geometry pivots align with skeleton attachments. Sleeves/cuffs overlap by 2..5 units.
@@ -95,14 +98,6 @@ TORSO = (
         width=0.6,
     ),
     line(path(("M", -14, -21), ("L", -7, -20)), color("d6a17b"), 0.5),
-    shape(
-        path(("M", -10, -53), ("L", -6, -55), ("L", 17, -4), ("L", 13, -2), ("Z",)),
-        LEATHER,
-        width=0.65,
-    ),
-    shape(
-        path(("M", 2, -30), ("L", 7, -32), ("L", 10, -25), ("L", 5, -23), ("Z",)), OCHRE, width=0.65
-    ),
     DrawPath(ellipse(7, -15, 1, 1), OCHRE),
     DrawPath(ellipse(7, -5, 1, 1), OCHRE),
 )
@@ -315,6 +310,7 @@ def forearm(far=False):
             ),
             color("754731") if far else RUST,
         ),
+        DrawPath(ellipse(0, 1, 4.8, 3.6), color("754731") if far else RUST),
         line(path(("M", -3, 2), ("L", -2, 24)), color("a46644") if far else color("ca8b5e"), 0.65),
         shape(
             path(("M", -5, 25), ("L", 6, 25), ("L", 6, 31), ("L", -4, 31), ("Z",)),
@@ -331,7 +327,7 @@ def hand(far=False):
                 ("M", -4, -1),
                 ("C", -6, 4, -4, 11, 0, 12),
                 ("C", 5, 14, 8, 9, 6, 5),
-                ("C", 12, 8, 12, 1, 7, 0),
+                ("C", 10, 6, 10, 1, 6, 0),
                 ("L", 4, -2),
                 ("Z",),
             ),
@@ -415,6 +411,41 @@ def foot(far=False):
     )
 
 
+BAG_PIVOT = (-17.0, -37.0)
+HAT_PIVOT = (0.0, -57.0)
+
+
+def strap(state: SecondaryMotion):
+    """Ribbon attached to a shoulder and the actual moving satchel flap anchor."""
+    x, y = around(BAG_PIVOT, state.bag_angle, state.bag_y).point((-23, -22))
+    sag = state.strap_sag
+    mount = cubic_attachment(
+        ((10, -51), (6 + sag, -43), (x + 13 + sag, y - 9), (x + 1.5, y + 1)), 0.48
+    )
+    outer = [mount.point(p) for p in ((-3.6, -2.7), (3.6, -2.7), (3.6, 2.7), (-3.6, 2.7))]
+    inner = [mount.point(p) for p in ((-1.9, -1.1), (1.9, -1.1), (1.9, 1.1), (-1.9, 1.1))]
+    return (
+        shape(
+            path(
+                ("M", 8, -52),
+                ("C", 4 + sag, -44, x + 12 + sag, y - 10, x, y),
+                ("L", x + 3, y + 2),
+                ("C", x + 15 + sag, y - 8, 8 + sag, -43, 12, -51),
+                ("Z",),
+            ),
+            LEATHER,
+            width=0.65,
+        ),
+        line(
+            path(("M", 10, -51), ("C", 6 + sag, -43, x + 13 + sag, y - 9, x + 1.5, y + 1)),
+            color("bb9160"),
+            0.5,
+        ),
+        shape(path(("M", *outer[0]), *(("L", *p) for p in outer[1:]), ("Z",)), OCHRE, width=0.65),
+        DrawPath(path(("M", *inner[0]), *(("L", *p) for p in inner[1:]), ("Z",)), LEATHER),
+    )
+
+
 PARTS = tuple(
     [
         Part("far_thigh", 10, thigh(True)),
@@ -426,42 +457,86 @@ PARTS = tuple(
         Part("far_arm", 30, arm(True)),
         Part("far_forearm", 31, forearm(True)),
         Part("far_hand", 32, hand(True)),
-        Part("torso", 35, BAG),
+        Part("torso", 35, BAG, "satchel", BAG_PIVOT),
         Part("neck", 40, NECK),
         Part("scarf", 41, SCARF),
         Part("torso", 50, TORSO),
+        Part("torso", 55, strap(SecondaryMotion()), "strap"),
         Part("near_arm", 60, arm()),
         Part("near_forearm", 61, forearm()),
         Part("near_hand", 62, hand()),
         Part("head", 70, HEAD),
-        Part("head", 80, HAT),
+        Part("head", 80, HAT, "hat", HAT_PIVOT),
     ]
 )
 
 
-def face(expression: str, blink: bool):
+def face(expression: str, blink: bool, gaze: float = 0):
     if expression not in EXPRESSIONS or type(blink) is not bool:
         raise RenderError("Unknown expression or nonboolean blink")
+    finite(gaze)
+    if abs(gaze) > 1:
+        raise RenderError("Gaze must be within -1..1")
+    lift = {
+        "calm": 0,
+        "concerned": 2,
+        "focused": -1,
+        "determined": -2,
+        "surprised": 3.3,
+        "frightened": 4,
+    }[expression]
+    tall = {
+        "calm": 2.15,
+        "concerned": 2.4,
+        "focused": 1.7,
+        "determined": 1.55,
+        "surprised": 3.2,
+        "frightened": 3.5,
+    }[expression]
+    dx = 2.4 * gaze
     eyes = (
-        [
-            line(path(("M", -2, -34), ("L", 2, -34)), width=1.2),
-            line(path(("M", 11, -34), ("L", 16, -34)), width=1.2),
-        ]
+        (
+            line(path(("M", -2 + dx, -34), ("L", 2 + dx, -34)), width=1.2),
+            line(path(("M", 11 + dx, -34), ("L", 16 + dx, -34)), width=1.2),
+        )
         if blink
-        else [DrawPath(ellipse(0, -34, 1.65, 2.15), INK), DrawPath(ellipse(14, -34, 1.9, 2.4), INK)]
+        else (
+            DrawPath(ellipse(dx, -34, 1.65, tall), INK),
+            DrawPath(ellipse(14 + dx, -34, 1.9, tall), INK),
+        )
     )
-    lift = 2 if expression == "concerned" else -1 if expression == "focused" else 0
-    return tuple(eyes) + (
-        line(path(("M", -4, -41 + lift), ("L", 3, -41 - lift * 0.4)), width=1),
-        line(path(("M", 10, -41 - lift * 0.4), ("L", 17, -41 + lift)), width=1),
-        line(
-            path(
-                ("M", 3, -16), ("C", 6, -18 if expression == "concerned" else -14, 9, -17, 11, -16)
+    brows = (
+        line(path(("M", -4, -41 + lift), ("L", 3, -41 - lift * 0.4)), width=1.1),
+        line(path(("M", 10, -41 - lift * 0.4), ("L", 17, -41 + lift)), width=1.1),
+    )
+    if expression in ("surprised", "frightened"):
+        mouth = (
+            DrawPath(
+                ellipse(7, -16, 2.3 if expression == "surprised" else 4, 3.3), color("604537")
             ),
-            color("785445"),
-            0.85,
-        ),
-    )
+        )
+        if expression == "frightened":
+            mouth += (line(path(("M", 4, -17), ("L", 10, -17)), CREAM, 1),)
+    elif expression == "determined":
+        mouth = (
+            line(path(("M", 2, -16), ("L", 11, -17)), color("785445"), 1.1),
+            line(path(("M", 4, -14), ("L", 9, -14)), color("a47b61"), 0.6),
+        )
+    else:
+        mouth = (
+            line(
+                path(
+                    ("M", 3, -16),
+                    ("C", 6, -18 if expression == "concerned" else -14, 9, -17, 11, -16),
+                ),
+                color("785445"),
+                0.85,
+            ),
+        )
+    return eyes + brows + mouth
+
+
+REST_SECONDARY = SecondaryMotion()
 
 
 def draw_character(
@@ -474,19 +549,27 @@ def draw_character(
     blink=False,
     skeleton: Skeleton = SKELETON,
     artwork: tuple[Part, ...] = PARTS,
+    secondary: SecondaryMotion = REST_SECONDARY,
 ) -> tuple[DrawPath, ...]:
     finite(*position, scale)
     if not 0.1 <= scale <= 4 or direction not in ("left", "right"):
         raise RenderError("Character scale .1..4; direction left/right")
     worlds = skeleton.evaluate(pose)
     sign = 1 if direction == "right" else -1
-    parts = (*artwork, Part("head", 75, face(expression, blink)))
+    parts = (*artwork, Part("head", 75, face(expression, blink, secondary.gaze)))
     commands = []
     for part in sorted(parts, key=lambda p: p.order):
         if part.joint not in worlds:
             raise RenderError("Artwork refers to an unknown joint")
         w = worlds[part.joint]
-        for command in part.commands:
+        commands_for_part = part.commands
+        if part.accessory == "satchel":
+            w = w.compose(around(part.accessory_pivot, secondary.bag_angle, secondary.bag_y))
+        elif part.accessory == "hat":
+            w = w.compose(around(part.accessory_pivot, secondary.hat_angle, secondary.hat_y))
+        elif part.accessory == "strap":
+            commands_for_part = strap(secondary)
+        for command in commands_for_part:
             if command.transform != Transform():
                 raise RenderError("Artwork is local geometry; joint transform owns placement")
             commands.append(
@@ -510,6 +593,7 @@ def preset_commands(data: dict, frame_index: int) -> tuple[DrawPath, ...]:
     A future trusted compositor handles camera/framing. No supplied geometry/code is accepted.
     """
     from .presets import CharacterPreset, sample_pose
+    from .secondary import preset_secondary
 
     if type(frame_index) is not int or not 0 <= frame_index < 18000:
         raise RenderError("Preset frame must be an integer in 0..17999 at fixed 30 FPS")
@@ -518,4 +602,26 @@ def preset_commands(data: dict, frame_index: int) -> tuple[DrawPath, ...]:
         sample_pose(preset, frame_index / 30),
         direction=preset.direction,
         expression=preset.expression,
+        secondary=preset_secondary(preset, frame_index / 30),
     )
+
+
+def contact_shadows(pose: Pose, *, position=(180, 538), scale=1.32):
+    """Small vector contact cues for a flat proof stage; no lighting/effect system."""
+    worlds = SKELETON.evaluate(pose)
+    commands = []
+    for side in ("near", "far"):
+        foot = worlds[side + "_foot"]
+        ends = [foot.point(p) for p in ((-8, 10), (19, 10))]
+        ground = max(p[1] for p in ends)
+        if abs(ground) < 0.2:
+            point = ends[0] if ends[0][1] > ends[1][1] else ends[1]
+            if abs(ends[0][1] - ends[1][1]) < 0.05:
+                point = foot.point((5, 10))
+            commands.append(
+                DrawPath(
+                    ellipse(position[0] + scale * point[0], position[1] + 0.8, 10, 1.9),
+                    color("071d20", 0.30),
+                )
+            )
+    return tuple(commands)

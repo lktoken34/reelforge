@@ -1,0 +1,8 @@
+{
+  "character": "rowan_01",
+  "action": "run",
+  "direction": "right",
+  "speed": 1.0,
+  "expression": "determined",
+  "intensity": 1.0
+}

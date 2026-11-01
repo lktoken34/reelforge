@@ -4,16 +4,10 @@ from reelforge.rendering.diagnostic import color, ellipse
 from reelforge.rendering.model import DrawPath, LinearGradient, RenderError, Stroke, Transform
 
 from .presets import (
-    RUN_CYCLE,
-    RUN_STRIDE,
-    WALK_CYCLE,
-    WALK_STRIDE,
     CharacterPreset,
-    blend,
     sample_pose,
-    smooth,
 )
-from .rowan import draw_character, path
+from .rowan import contact_shadows, draw_character, path
 
 BACKGROUND = color("173235")
 # Hand-authored monoline proof labels only; no fonts, subtitles, shaping or agent-supplied text.
@@ -51,6 +45,9 @@ GLYPHS = {
     "4": ((3, 7, 3, 0, 0, 5, 4, 5),),
     "5": ((4, 0, 0, 0, 0, 3, 3, 3, 4, 4, 4, 6, 3, 7, 0, 7),),
     "6": ((4, 0, 1, 0, 0, 2, 0, 6, 1, 7, 3, 7, 4, 6, 4, 4, 3, 3, 0, 3),),
+    "7": ((0, 0, 4, 0, 1, 7),),
+    "8": ((1, 0, 3, 0, 4, 1, 4, 2, 0, 5, 0, 6, 1, 7, 3, 7, 4, 6, 4, 5, 0, 2, 0, 1, 1, 0),),
+    "9": ((4, 4, 1, 4, 0, 3, 0, 1, 1, 0, 3, 0, 4, 1, 4, 6, 3, 7, 0, 7),),
     "/": ((0, 7, 4, 0),),
     "-": ((0, 3, 4, 3),),
     ".": ((2, 7, 2, 6.9),),
@@ -88,18 +85,14 @@ def integral_step(t, start, duration):
 def demo_pose(frame_index: int):
     if type(frame_index) is not int or not 0 <= frame_index < 150:
         raise RenderError("Character study is exactly frames 0..149 at 30 FPS")
-    t = frame_index / 30
-    idle = sample_pose(CharacterPreset(action="idle"), t, travel=False)
-    walk = sample_pose(CharacterPreset(action="walk"), max(0, t - 0.85), travel=False)
-    run = sample_pose(CharacterPreset(action="run"), max(0, t - 2.85), travel=False)
-    pose = blend(blend(idle, walk, smooth((t - 0.85) / 0.3)), run, smooth((t - 2.85) / 0.3))
-    travel = (WALK_STRIDE / WALK_CYCLE) * integral_step(t, 0.85, 0.3) + (
-        RUN_STRIDE / RUN_CYCLE - WALK_STRIDE / WALK_CYCLE
-    ) * integral_step(t, 2.85, 0.3)
-    return pose, travel
+    from .transition import transition_pose
+
+    return transition_pose(frame_index / 30)
 
 
 def character_frame(frame_index: int):
+    from .transition import transition_secondary
+
     pose, travel = demo_pose(frame_index)
     commands = [
         DrawPath(
@@ -132,7 +125,7 @@ def character_frame(frame_index: int):
             ),
             color("203c3b"),
         ),
-        DrawPath(ellipse(180, 546, 39, 7), color("071d20", 0.32)),
+        DrawPath(ellipse(180, 541, 37, 4.5), color("071d20", 0.24)),
     ]
     offset = (travel * 1.32) % 72
     for i in range(-1, 7):
@@ -142,12 +135,14 @@ def character_frame(frame_index: int):
                 path(("M", x, 558), ("L", x + 16, 558)), stroke=Stroke(color("9aa184", 0.22), 0.65)
             )
         )
+    commands.extend(contact_shadows(pose))
     commands.extend(
         draw_character(
             pose,
             position=(180, 538),
             scale=1.32,
             blink=abs(frame_index - 17) < 2 or abs(frame_index - 126) < 2,
+            secondary=transition_secondary(frame_index / 30),
         )
     )
     commands.extend(label("ROWAN VALE", 28, 48, 2.1))
@@ -176,23 +171,28 @@ def pose_sheet():
         )
     )
     poses = (
-        ("IDLE / CONCERNED", "idle", 0.4, "right"),
-        ("WALK / CONTACT", "walk", 0.02, "right"),
-        ("WALK / PASSING", "walk", 0.41, "right"),
-        ("RUN / DRIVE", "run", 0.06, "right"),
-        ("RUN / FLIGHT", "run", 0.27, "right"),
-        ("IDLE / LEFT", "idle", 0.9, "left"),
+        ("IDLE / BALANCED", "idle", 0.4, "right", "concerned"),
+        ("WALK / SUPPORT", "walk", 0.19, "right", "concerned"),
+        ("RUN / RECOVERY", "run", 0.35, "right", "determined"),
+        ("LOOK AROUND / CALM", "look_around", 0.9, "left", "calm"),
+        ("REACT / FRIGHTENED", "react", 0.35, "right", "frightened"),
+        ("REACT / SURPRISED", "react", 0.22, "right", "surprised"),
     )
-    for index, (name, action, t, direction) in enumerate(poses):
+    for index, (name, action, t, direction, expression) in enumerate(poses):
         x = 240 + (index % 3) * 480
         y = 605 + (index // 3) * 565
         commands.append(DrawPath(ellipse(x, y + 4, 72, 10), color("a89f85", 0.18)))
+        from .secondary import preset_secondary
+
+        preset = CharacterPreset(action=action, expression=expression)
         commands.extend(
             draw_character(
-                sample_pose(CharacterPreset(action=action), t, travel=False),
+                sample_pose(preset, t, travel=False),
                 position=(x, y),
                 scale=1.65,
                 direction=direction,
+                expression=expression,
+                secondary=preset_secondary(preset, t),
             )
         )
         commands.extend(label(name, x - 165, y + 32, 1.8, color("405651")))
