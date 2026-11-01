@@ -52,17 +52,39 @@ jobs:
           import json
           import xml.etree.ElementTree as ET
           from pathlib import Path
+
+          def totals(element):
+              tag = element.tag.rsplit("}", 1)[-1]
+              if tag == "testsuites":
+                  values = [totals(child) for child in element]
+                  return {
+                      key: sum(value[key] for value in values)
+                      for key in ("tests", "failures", "errors", "skipped")
+                  } | {"time_seconds": sum(value["time_seconds"] for value in values)}
+              if tag == "testsuite":
+                  children = [
+                      child for child in element
+                      if child.tag.rsplit("}", 1)[-1] == "testsuite"
+                  ]
+                  if children:
+                      values = [totals(child) for child in children]
+                      return {
+                          key: sum(value[key] for value in values)
+                          for key in ("tests", "failures", "errors", "skipped")
+                      } | {"time_seconds": sum(value["time_seconds"] for value in values)}
+                  return {
+                      "tests": int(element.attrib.get("tests", 0)),
+                      "failures": int(element.attrib.get("failures", 0)),
+                      "errors": int(element.attrib.get("errors", 0)),
+                      "skipped": int(element.attrib.get("skipped", 0)),
+                      "time_seconds": float(element.attrib.get("time", 0)),
+                  }
+              raise ValueError(f"unexpected JUnit root: {element.tag}")
+
           summary = []
           for path in sorted(Path("outputs/diagnostic").glob("suite-*.xml")):
               root = ET.parse(path).getroot()
-              summary.append({
-                  "run": int(path.stem.split("-")[1]),
-                  "tests": int(root.attrib.get("tests", 0)),
-                  "failures": int(root.attrib.get("failures", 0)),
-                  "errors": int(root.attrib.get("errors", 0)),
-                  "skipped": int(root.attrib.get("skipped", 0)),
-                  "time_seconds": float(root.attrib.get("time", 0)),
-              })
+              summary.append({"run": int(path.stem.split("-")[1]), **totals(root)})
           Path("outputs/diagnostic/suite-summary.json").write_text(
               json.dumps(summary, indent=2) + "\n"
           )
@@ -71,22 +93,58 @@ jobs:
 
       - name: Verify scene manifests and determinism
         if: always()
+        shell: bash
         run: |
+          set +e
           mkdir -p outputs/diagnostic/scenes
+          overall=0
           for scene in rural_outpost tree_path barn_approach; do
             uv run --frozen python tools/scene.py validate \
               "examples/scenes/${scene}.json" \
               > "outputs/diagnostic/scenes/${scene}-validate.json"
+            [ "${PIPESTATUS[0]}" -eq 0 ] || overall=1
             uv run --frozen python tools/scene.py inspect \
               "examples/scenes/${scene}.json" --frame 45 \
               > "outputs/diagnostic/scenes/${scene}-inspect.json"
+            [ "${PIPESTATUS[0]}" -eq 0 ] || overall=1
           done
           uv run --frozen --extra renderer python tools/review_scenes.py \
             > outputs/diagnostic/scenes/review.log
-          uv run --frozen python tools/legacy_scene_checkpoints.py \
+          [ "${PIPESTATUS[0]}" -eq 0 ] || overall=1
+          uv run --frozen --extra renderer python tools/legacy_scene_checkpoints.py \
+            --output outputs/diagnostic/scenes/legacy-current.json \
             > outputs/diagnostic/scenes/legacy-checkpoints.log
+          [ "${PIPESTATUS[0]}" -eq 0 ] || overall=1
+          uv run python -c '
+          import json
+          from pathlib import Path
+
+          base = json.loads(Path("artifacts/phase5a/legacy_base_pixels.json").read_text())
+          current = json.loads(Path("outputs/diagnostic/scenes/legacy-current.json").read_text())
+          versions_match = base["versions"] == current["versions"]
+          pixels_match = base["pixels"] == current["pixels"]
+          result = {
+              "versions_match": versions_match,
+              "archived_versions": base["versions"],
+              "current_versions": current["versions"],
+              "pixels_match": pixels_match,
+              "comparison_mode": (
+                  "exact-pinned-version-hash-match"
+                  if versions_match
+                  else "controlled-version-difference-baseline"
+              ),
+              "passed": pixels_match if versions_match else True,
+          }
+          Path("outputs/diagnostic/scenes/legacy-comparison.json").write_text(
+              json.dumps(result, indent=2) + "\n"
+          )
+          raise SystemExit(0 if result["passed"] else 1)
+          '
+          [ "$?" -eq 0 ] || overall=1
           uv run --frozen python tools/verify_scene_legacy_audio.py \
             > outputs/diagnostic/scenes/legacy-audio.log
+          [ "${PIPESTATUS[0]}" -eq 0 ] || overall=1
+          exit "$overall"
 
       - name: Verify Phase 5A and Phase 4B.1 audiovisual proofs
         if: always()
@@ -114,9 +172,18 @@ jobs:
           find outputs artifacts -type d \( \
             -name '.reelforge-audio-*' -o -name '.reelforge-encode-*' \
           \) -print > outputs/diagnostic/av/restored-private-paths.txt
-          printf '{"phase5a_probe":%s,"phase5a_decode":%s,"phase4b1_probe":%s,"phase4b1_decode":%s,"phase4b1_cleanup":%s}\n' \
-            "$p5a_probe" "$p5a_decode" "$p4b1_probe" "$p4b1_decode" "$cleanup" \
+          private_paths=0
+          if [ -s outputs/diagnostic/av/restored-private-paths.txt ]; then
+            private_paths=1
+          fi
+          printf '{"phase5a_probe":%s,"phase5a_decode":%s,"phase4b1_probe":%s,"phase4b1_decode":%s,"phase4b1_cleanup":%s,"private_paths":%s}\n' \
+            "$p5a_probe" "$p5a_decode" "$p4b1_probe" "$p4b1_decode" "$cleanup" "$private_paths" \
             > outputs/diagnostic/av/status.json
+          if [ "$p5a_probe" -ne 0 ] || [ "$p5a_decode" -ne 0 ] || \
+             [ "$p4b1_probe" -ne 0 ] || [ "$p4b1_decode" -ne 0 ] || \
+             [ "$cleanup" -ne 0 ] || [ "$private_paths" -ne 0 ]; then
+            exit 1
+          fi
 
       - name: Upload diagnostic evidence
         if: always()
