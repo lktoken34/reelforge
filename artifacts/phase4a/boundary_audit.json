@@ -1,0 +1,60 @@
+{
+  "boundaries": [
+    {
+      "global_frame": 0,
+      "shot": "quiet_orchard",
+      "local_frame": 0,
+      "progress": 0.0,
+      "action_seconds": 0.0,
+      "environment_seconds": 0.0,
+      "matches_encoded_source": true
+    },
+    {
+      "global_frame": 119,
+      "shot": "quiet_orchard",
+      "local_frame": 119,
+      "progress": 1.0,
+      "action_seconds": 3.966666666666667,
+      "environment_seconds": 3.966666666666667,
+      "matches_encoded_source": true
+    },
+    {
+      "global_frame": 120,
+      "shot": "rowan_notices",
+      "local_frame": 0,
+      "progress": 0.0,
+      "action_seconds": 0.0,
+      "environment_seconds": 4.0,
+      "matches_encoded_source": true
+    },
+    {
+      "global_frame": 239,
+      "shot": "rowan_notices",
+      "local_frame": 119,
+      "progress": 1.0,
+      "action_seconds": 3.966666666666667,
+      "environment_seconds": 7.966666666666667,
+      "matches_encoded_source": true
+    },
+    {
+      "global_frame": 240,
+      "shot": "dark_entrance",
+      "local_frame": 0,
+      "progress": 0.0,
+      "action_seconds": 0.0,
+      "environment_seconds": 8.0,
+      "matches_encoded_source": true
+    },
+    {
+      "global_frame": 359,
+      "shot": "dark_entrance",
+      "local_frame": 119,
+      "progress": 1.0,
+      "action_seconds": 3.966666666666667,
+      "environment_seconds": 11.966666666666667,
+      "matches_encoded_source": true
+    }
+  ],
+  "terminal_frame_360_rejected": true,
+  "all_boundary_source_pixels_match": true
+}

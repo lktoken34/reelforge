@@ -192,3 +192,18 @@ See [refinement contract](docs/ENVIRONMENT_POLISH.md),
 [review and measurements](docs/PHASE3B1_REPORT.md), and [visual proofs](artifacts/phase3b1/).
 The main A/B keeps the original framing/timing; the suspense demonstration is separate.
 No production rendering, target deployment or later phase is approved.
+
+### Phase 4A experimental multi-shot timelines
+
+A weak agent can select existing assets, acting and three bounded compositions in JSON,
+validate a contiguous integer-frame schedule, and stream one silent cinematic study:
+
+```sh
+python tools/validate_story.py examples/stories/last_farm.json
+python tools/render_story.py examples/stories/last_farm.json --output-dir outputs/last-farm
+```
+
+See [timeline contract and workflow](docs/SHOT_TIMELINE.md),
+[engineering/artistic review](docs/PHASE4A_REPORT.md) and [proofs](artifacts/phase4a/).
+This experimental tool does not make the production episode CLI render-ready. No target
+deployment or later milestone is approved.

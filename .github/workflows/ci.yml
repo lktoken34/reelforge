@@ -15,6 +15,7 @@ jobs:
       - run: uv run --frozen ruff check .
       - run: uv run --frozen ruff format --check .
       - run: uv run --frozen pytest
+      - run: uv run --frozen python tools/validate_story.py examples/stories/last_farm.json
       - run: uv run --frozen python -m build --no-isolation
       - name: Verify installed wheel outside checkout
         shell: bash
@@ -100,5 +101,17 @@ jobs:
         with:
           name: phase3b-environment-visual-review
           path: outputs/ci-environment/
+          retention-days: 30
+          if-no-files-found: error
+
+      - name: Phase 4A experimental three-shot story proof
+        run: |
+          uv run --frozen --extra renderer python tools/validate_story.py examples/stories/last_farm.json
+          uv run --frozen --extra renderer python tools/render_story.py examples/stories/last_farm.json --output-dir outputs/ci-story
+          uv run --frozen --extra renderer python tools/review_story.py examples/stories/last_farm.json --output-dir outputs/ci-story --repeat-dir outputs/ci-story-repeat
+      - uses: actions/upload-artifact@v4
+        with:
+          name: phase4a-three-shot-review
+          path: outputs/ci-story/
           retention-days: 30
           if-no-files-found: error

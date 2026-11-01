@@ -72,8 +72,32 @@ def transform_command(command: DrawPath, parent: Transform) -> DrawPath:
 
 
 def layers_at(preset: EnvironmentPreset, frame: int) -> tuple[Layer, ...]:
-    camera = camera_at(preset, frame)  # validate before generating geometry
-    t = frame / 30
+    return compose_layers(
+        preset,
+        camera_at(preset, frame),
+        frame / 30,
+        CharacterPreset(action="look_around", expression="concerned"),
+    )
+
+
+def compose_layers(
+    preset: EnvironmentPreset,
+    camera: Camera,
+    seconds: float,
+    character: CharacterPreset,
+    *,
+    acting_seconds: float | None = None,
+) -> tuple[Layer, ...]:
+    """Existing orchard composition with independent camera, atmosphere and acting clocks.
+
+    The legacy six-second wrapper supplies the identical camera/character/time as before.
+    Story orchestration supplies bounded shot cameras and two explicit analytical times.
+    """
+    t = seconds
+    acting = t if acting_seconds is None else acting_seconds
+    finite(t, acting)
+    if not 0 <= t <= 600 or not 0 <= acting <= 600:
+        raise RenderError("Environment/acting time must be in [0, 600] seconds")
     orchard = []
     for x, y, s in (
         (-15, 405, 0.72),
@@ -97,8 +121,7 @@ def layers_at(preset: EnvironmentPreset, frame: int) -> tuple[Layer, ...]:
             art.polygon(((283, 450), (281, 457), (284, 457), (286, 450)), color("263c34")),
         ]
     )
-    character = CharacterPreset(action="look_around", expression="concerned")
-    pose = sample_pose(character, t)
+    pose = sample_pose(character, acting)
     rowan = [
         DrawPath(ellipse(165, 499, 19, 3), color("122c2d", 0.13)),
         DrawPath(ellipse(165, 499, 12, 1.6), color("10272a", 0.22)),
@@ -122,7 +145,8 @@ def layers_at(preset: EnvironmentPreset, frame: int) -> tuple[Layer, ...]:
             position=(165, 498),
             scale=0.69,
             expression=character.expression,
-            secondary=preset_secondary(character, t),
+            secondary=preset_secondary(character, acting),
+            direction=character.direction,
         )
     )
 

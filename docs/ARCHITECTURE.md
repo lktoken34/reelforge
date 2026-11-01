@@ -155,3 +155,17 @@ bounded vector recipes, fixed immutable templates and material grading; scene co
 projects threshold light between existing depth planes. The existing six input fields are
 unchanged; `orchard_suspense` is an additive trusted shot ID. Backend/media/resources/rig
 are unchanged. See ENVIRONMENT_POLISH.md and PHASE3B1_REPORT.md; stop for external review.
+
+## Phase 4A experimental sequencing boundary
+
+`stories/contract.py` validates a versioned, bounded JSON timeline into immutable Story/Shot
+values. It reuses existing strict JSON loading and preset validators, with no native/media
+imports. `stories/sampling.py` resolves an integer global frame to one end-exclusive shot,
+normalized camera progress, local action time and global atmosphere time. Three trusted
+compositions reuse Camera.transform and the existing depth/painter order.
+
+The environment's old six-second layers_at wrapper now delegates to compose_layers with
+its identical actor, camera and time. Only the new story path supplies independent clocks.
+No old camera equation, drawing recipe, rig, backend, encoder or policy changed.
+`tools/render_story.py` streams one surface into one FFmpegEncoder across all hard cuts;
+review/benchmark tools remain outside the installed production CLI. See SHOT_TIMELINE.md.

@@ -1,0 +1,15 @@
+Using CPython 3.12.14 interpreter at: /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12
+Creating virtual environment at: outputs/phase4a-base-wheel
+Using Python 3.12.14 environment at: outputs/phase4a-base-wheel
+Resolved 7 packages in 28ms
+Prepared 1 package in 19ms
+Installed 7 packages in 6ms
+ + attrs==26.1.0
+ + jsonschema==4.25.1
+ + jsonschema-specifications==2025.9.1
+ + reelforge-v2==0.6.0 (from file:///workspace/scratch/2a96718c6b46/reelforge/dist/reelforge_v2-0.6.0-py3-none-any.whl)
+ + referencing==0.37.0
+ + rpds-py==2026.9.1
+ + typing-extensions==4.16.0
+Installed wheel outside checkout: story validation/sampling/geometry passed; Cairo absent.
+{"commands": ["capabilities", "schema", "validate"], "engine_version": "0.6.0", "limits": {"input_bytes": 1048576, "issues": 32, "nesting": 32, "total_frames": 18000}, "ok": true, "phase": 1, "profiles": {"preview_360p": [360, 640], "target_720p": [720, 1280]}, "render_available": false, "schema_versions": ["2.0-draft1"]}

@@ -1,0 +1,70 @@
+{
+  "scope": "Phase 4A local experimental sequencing candidate; external review pending",
+  "approved_base_commit": "b8aa300b06e1123eeafd300f87fa553d34b58e3d",
+  "branch": "phase4a-shot-sequencing",
+  "schema_version": "story-0.1",
+  "tests_passed": 412,
+  "existing_tests_preserved": 325,
+  "new_tests": 87,
+  "frames": 360,
+  "fps": 30,
+  "duration_seconds": 12,
+  "resolution": [
+    720,
+    1280
+  ],
+  "cut_frames": [
+    120,
+    240
+  ],
+  "end_exclusive_frame": 360,
+  "encoder_invocations_per_film": 1,
+  "all_source_and_decoded_frames_repeat_equal": true,
+  "legacy_16_checkpoints_equal": true,
+  "all_frame_pts_verified": true,
+  "protected_source_areas_unchanged": [
+    "src/reelforge/rendering",
+    "src/reelforge/media",
+    "src/reelforge/resources",
+    "src/reelforge/characters",
+    "src/reelforge/contracts",
+    "src/reelforge/cli.py",
+    "pyproject.toml",
+    "uv.lock"
+  ],
+  "main_render_encode_seconds": 28.824524313999063,
+  "main_encoded_fps": 12.489364822758258,
+  "render_timings": {
+    "geometry_seconds": 11.39897194002151,
+    "draw_seconds": 13.152928169025472,
+    "stream_write_seconds": 2.9884226659851265
+  },
+  "main_cpu_seconds": {
+    "renderer": 28.812008945,
+    "children_user": 14.182726,
+    "children_system": 1.42322
+  },
+  "repeat_render_encode_seconds": 26.256397582999853,
+  "repeat_encoded_fps": 13.71094411798091,
+  "peak_commands": 1259,
+  "peak_path_and_clip_operations": 9704,
+  "rss_peaks_bytes": {
+    "main": 103297024,
+    "repeat": 112132096,
+    "proof": 88096768
+  },
+  "memory_policy": "strict",
+  "job_budget_bytes": 268435456,
+  "reserve_bytes": 67108864,
+  "audio_streams": 0,
+  "artistic_approval": false,
+  "deployment_gate_approved": false,
+  "missing_required_artifacts": [],
+  "limitations": [
+    "Hard cuts restart acting; no blending or actor state transfer",
+    "Restricted three compositions, one environment/character and stationary acting",
+    "Dark-doorway reveal implies a threat without showing one",
+    "Illustrated 2.5D parallax and approximate lighting; no full storytelling-quality parity",
+    "Development host with sampled RSS; not target-VM certification"
+  ]
+}

@@ -21,8 +21,8 @@ local input in a later contract version, not a feature of this manifest.
 
 Episode restrictions above do not prevent an engineer from changing engine code for an
 explicit engine-development task. Read architecture, hardware constraints and roadmap first.
-Current assigned engineering scope is Phase 3B.1: refine the accepted orchard artwork,
-lighting and bounded camera presets, preserving Rowan, renderer, encoder and resource policy. Keep drawing/video
+Current assigned engineering scope is Phase 4A: restricted declarative multi-shot sequencing,
+reusing the accepted orchard, Rowan, renderer, encoder and resource policy. Keep drawing/video
 commands out of manifests and the installed CLI. Do not begin the next milestone without a new
 assignment following external review. Do not delegate to other agents unless explicitly requested.
 
@@ -50,7 +50,7 @@ Actual target-VM evidence and external review remain required; development resul
 certify deployment. Read docs/MEMORY_OBSERVABILITY.md and
 docs/TARGET_VM_PHASE2C1_PROMPT.md before target work. Use strict policy by default; the
 explicit guest fallback flag never ignores a discovered limit. Do not deploy to Muse Spark
-during Phase 3A. Review docs/CHARACTER_RIG.md. Stop after Phase 3B.1 for independent artistic/architectural review.
+during Phase 3A. Review docs/CHARACTER_RIG.md. Stop after Phase 4A for independent architectural/visual review.
 
 ## Experimental character-preset work
 
@@ -67,7 +67,16 @@ Read `docs/CINEMATIC_ENVIRONMENT.md` and copy `examples/environments/orchard_pus
 Validate with `python tools/validate_environment.py PATH`. Select only published environment,
 shot IDs and numeric bounds; never author paths/camera equations in scene data. The fixed
 render_environment.py quality proof is engineering tooling, not a production episode command.
-Phase 3B engineering passed review; Phase 3B.1 artistic/architectural acceptance is pending.
+Phase 3B.1 passed external engineering/artistic review. Phase 4A awaits independent review.
 Read docs/ENVIRONMENT_POLISH.md. Use --basetemp outputs/pytest-phase3b1 for pytest so
 media integration tests satisfy the existing persistent-workspace policy. No GitHub push
 or individual source/binary publishing is authorized for this local export assignment.
+
+## Experimental story timeline workflow
+
+Read docs/SHOT_TIMELINE.md. Copy examples/stories/last_farm.json and change only supported
+fields/IDs. Validate with python tools/validate_story.py PATH; render the experimental
+study with python tools/render_story.py PATH --output-dir outputs/NAME. Keep the installed
+production episode CLI not render-ready. Timeline JSON cannot contain paths, code, equations,
+audio, arbitrary assets or policy overrides. Use pytest --basetemp outputs/pytest-phase4a.
+Stop after Phase 4A; no push or deployment is authorized.

@@ -1,0 +1,49 @@
+{
+  "approved_base_commit": "b8aa300b06e1123eeafd300f87fa553d34b58e3d",
+  "before_versions": {
+    "pycairo": "1.29.2",
+    "cairo": "1.18.0"
+  },
+  "after_versions": {
+    "pycairo": "1.29.2",
+    "cairo": "1.18.0"
+  },
+  "all_16_legacy_checkpoints_equal": true,
+  "before": {
+    "locked:0": "098202d471e111169524087769bb916e2e505f2c08db0edc0175105bc2595b41",
+    "locked:60": "b9cf79e15090c284e0ad31165bdc5f5c23158d8e24ce2eb00c10069d4063ffff",
+    "locked:120": "7505a7114e4326fb3a42df44b465d093941985a3a4bd6f22ae84c27691590b1c",
+    "locked:179": "245ef325f457a27f313a28ff2e8c2ab2f42136f00c5d0bc034e2c088832097af",
+    "orchard_push:0": "30920483ad85d7fd6ea8b948ab437d84fb535a1a7dba724969a8c519429fb1b3",
+    "orchard_push:60": "8c1878184026f463a6f53f4b0a194fa45caa6ba982fc59c773e07729f6e570ff",
+    "orchard_push:120": "47df32ed8884e90156c40fc866d9dc886b416c70fd3331f9221d4545a9af81c5",
+    "orchard_push:179": "53effbfac0526b28ce148fcc54c185ed34378d3246cc63311e5613d71c701811",
+    "orchard_pan:0": "f4f33fe31c2cef860af3582a2a027b67083aae231a7345dc38ea5be274b78490",
+    "orchard_pan:60": "2ebfd1b6cc9da03ce7addb05159d7277bd866d3ec3eaf3d5b07c71120076eb5f",
+    "orchard_pan:120": "62bfb12867511632f72f08bf9732bf4ff5aaa4769f1cfbdb74f0db4ec9bac032",
+    "orchard_pan:179": "ada97ea94e57f486c122cca3ba043a107090671f93a192581ad0db5b23271d18",
+    "orchard_suspense:0": "30920483ad85d7fd6ea8b948ab437d84fb535a1a7dba724969a8c519429fb1b3",
+    "orchard_suspense:60": "6d8eed4a8d218ad1fb04854e5635ebd679f2869051efbfbe2555d4907bcf5fc0",
+    "orchard_suspense:120": "c1a405a4b1b5990b581ff83aad9b1c4cce7cd12af9d711be72abe893ec11cf87",
+    "orchard_suspense:179": "74058e42cacc75c8bffe899877984d84da8cce64fe81477ba2d89cc12449cee0"
+  },
+  "after": {
+    "locked:0": "098202d471e111169524087769bb916e2e505f2c08db0edc0175105bc2595b41",
+    "locked:60": "b9cf79e15090c284e0ad31165bdc5f5c23158d8e24ce2eb00c10069d4063ffff",
+    "locked:120": "7505a7114e4326fb3a42df44b465d093941985a3a4bd6f22ae84c27691590b1c",
+    "locked:179": "245ef325f457a27f313a28ff2e8c2ab2f42136f00c5d0bc034e2c088832097af",
+    "orchard_push:0": "30920483ad85d7fd6ea8b948ab437d84fb535a1a7dba724969a8c519429fb1b3",
+    "orchard_push:60": "8c1878184026f463a6f53f4b0a194fa45caa6ba982fc59c773e07729f6e570ff",
+    "orchard_push:120": "47df32ed8884e90156c40fc866d9dc886b416c70fd3331f9221d4545a9af81c5",
+    "orchard_push:179": "53effbfac0526b28ce148fcc54c185ed34378d3246cc63311e5613d71c701811",
+    "orchard_pan:0": "f4f33fe31c2cef860af3582a2a027b67083aae231a7345dc38ea5be274b78490",
+    "orchard_pan:60": "2ebfd1b6cc9da03ce7addb05159d7277bd866d3ec3eaf3d5b07c71120076eb5f",
+    "orchard_pan:120": "62bfb12867511632f72f08bf9732bf4ff5aaa4769f1cfbdb74f0db4ec9bac032",
+    "orchard_pan:179": "ada97ea94e57f486c122cca3ba043a107090671f93a192581ad0db5b23271d18",
+    "orchard_suspense:0": "30920483ad85d7fd6ea8b948ab437d84fb535a1a7dba724969a8c519429fb1b3",
+    "orchard_suspense:60": "6d8eed4a8d218ad1fb04854e5635ebd679f2869051efbfbe2555d4907bcf5fc0",
+    "orchard_suspense:120": "c1a405a4b1b5990b581ff83aad9b1c4cce7cd12af9d711be72abe893ec11cf87",
+    "orchard_suspense:179": "74058e42cacc75c8bffe899877984d84da8cce64fe81477ba2d89cc12449cee0"
+  },
+  "scope": "Same-host/native build, captured before and after the clock refactor"
+}
