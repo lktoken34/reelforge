@@ -1,0 +1,96 @@
+............................................F........................... [ 10%]
+........................................................................ [ 20%]
+........................................................................ [ 31%]
+........................................................................ [ 41%]
+........................................................................ [ 52%]
+........................................................................ [ 62%]
+........................................................................ [ 72%]
+........................................................................ [ 83%]
+...................................................................F.... [ 93%]
+............................................                             [100%]
+=================================== FAILURES ===================================
+__________________ test_real_pcm_mix_aac_mux_repeat_and_clock __________________
+
+tmp_path = PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase5b-handoff/test_real_pcm_mix_aac_mux_repe0')
+audio_data = {'audio': {'bitrate': 128000, 'channels': 2, 'codec': 'aac', 'cues': [{'asset_id': 'diag_fence', 'gain': 0.25, 'start_...'react', 'character': 'rowan_01', 'direction': 'right', 'expression': 'frightened', ...}, 'end_frame': 360, ...}], ...}
+
+    def test_real_pcm_mix_aac_mux_repeat_and_clock(tmp_path, audio_data):
+        if not NATIVE:
+            pytest.skip("optional Cairo/FFmpeg")
+        import subprocess
+    
+        data = copy.deepcopy(audio_data)
+        data["shots"] = data["shots"][:1]
+        data["shots"][0]["end_frame"] = data["output"]["frames"] = 30
+        data["audio"]["narration"].update(start_frame=1, gain=0.3)
+        data["audio"]["cues"][0].update(start_frame=15, gain=0.1)
+        data["audio"]["cues"][1].update(start_frame=24, gain=0.2)
+        manifest = tmp_path / "story.json"
+        manifest.write_text(json.dumps(data))
+        reports = []
+        for name in ("first", "repeat"):
+            directory = tmp_path / name
+            result = subprocess.run(
+                [
+                    sys.executable,
+                    str(ROOT / "tools/render_story.py"),
+                    str(manifest),
+                    "--output-dir",
+                    str(directory),
+                ],
+                capture_output=True,
+                text=True,
+                timeout=60,
+            )
+>           assert result.returncode == 0, result.stdout + result.stderr
+E           AssertionError: {"ok": false, "render_ready": false, "error": {"code": "TRANSACTION_CLEANUP", "message": "Completed transaction path reappeared: /workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase5b-handoff/test_real_pcm_mix_aac_mux_repe0/first/.reelforge-audio-lzeiyshf/video/.reelforge-encode-2riwvspx"}}
+E             
+E           assert 1 == 0
+E            +  where 1 = CompletedProcess(args=['/workspace/scratch/2a96718c6b46/reelforge/.venv/bin/python', '/workspace/scratch/2a96718c6b46/...doff/test_real_pcm_mix_aac_mux_repe0/first/.reelforge-audio-lzeiyshf/video/.reelforge-encode-2riwvspx"}}\n', stderr='').returncode
+
+tests/test_audio.py:324: AssertionError
+_____________ test_real_continuous_story_encode_decode_and_repeat ______________
+
+tmp_path = PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase5b-handoff/test_real_continuous_story_enc0')
+worker = <module 'render_story' from '/workspace/scratch/2a96718c6b46/reelforge/tools/render_story.py'>
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7fb05da6ab40>
+
+    def test_real_continuous_story_encode_decode_and_repeat(tmp_path, worker, monkeypatch):
+        from reelforge.media import encoder as media
+    
+        original = media.FFmpegEncoder
+        encoders = []
+    
+        def tracked(*args, **kwargs):
+            obj = original(*args, **kwargs)
+            encoders.append(obj)
+            return obj
+    
+        monkeypatch.setattr(media, "FFmpegEncoder", tracked)
+        story = short_story()
+>       first = worker.render(story, tmp_path / "first")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_story_rendering.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tools/render_story.py:114: in render
+    encoder.confirm_cleanup()
+src/reelforge/media/encoder.py:294: in confirm_cleanup
+    self._transaction.assert_absent()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <reelforge.core.transaction.OwnedDirectory object at 0x7fb05da6b230>
+
+    def assert_absent(self) -> None:
+        if self.path.exists() or self.path.is_symlink():
+>           raise OperationError(
+                "TRANSACTION_CLEANUP", f"Completed transaction path reappeared: {self.path}"
+            )
+E           reelforge.core.errors.OperationError: Completed transaction path reappeared: /workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase5b-handoff/test_real_continuous_story_enc0/first/.reelforge-encode-l90zr257
+
+src/reelforge/core/transaction.py:29: OperationError
+- generated xml file: /workspace/scratch/2a96718c6b46/reelforge/outputs/phase5b-handoff-tests.xml -
+=========================== short test summary info ============================
+FAILED tests/test_audio.py::test_real_pcm_mix_aac_mux_repeat_and_clock - Asse...
+FAILED tests/test_story_rendering.py::test_real_continuous_story_encode_decode_and_repeat
+2 failed, 690 passed in 61.76s (0:01:01)

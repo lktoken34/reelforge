@@ -1,0 +1,577 @@
+{
+  "scope": "Phase 5B source, parameters, reports and visual proofs; inventory excludes itself and private transactions",
+  "files": {
+    "artifacts/phase5b/build.txt": {
+      "bytes": 237,
+      "sha256": "097eb48f7fb15697e9461998bc43c5d21a121674896292ec2b1cc9047b025f34"
+    },
+    "artifacts/phase5b/camera_contact_sheet.png": {
+      "bytes": 462909,
+      "sha256": "657593226ed34bb2a7a40d2694f4a3741d7d819b5d8c7f4e84308f25e0b72aca"
+    },
+    "artifacts/phase5b/capabilities.json": {
+      "bytes": 924,
+      "sha256": "5b5e85755f9cfa4e4284831976b8d1e6e30c0639a7e459096b9892233ec2435b"
+    },
+    "artifacts/phase5b/cli_inspection.json": {
+      "bytes": 11144,
+      "sha256": "1ad3f4836dd2e590d6c33b4edaf774209b51cf097d7a95b1f55802d03b0ee08d"
+    },
+    "artifacts/phase5b/cli_validation.json": {
+      "bytes": 111,
+      "sha256": "cd0662c02dbfd22b60359cbe5d0687f44c51256e4776213c275b49f491659740"
+    },
+    "artifacts/phase5b/decoded_camera_contact_sheet.png": {
+      "bytes": 748800,
+      "sha256": "13a8dcb9edbc5bf8be8ca5d0b9e201582f81630ad70f8cf94dcb3af093ed012f"
+    },
+    "artifacts/phase5b/determinism_report.json": {
+      "bytes": 20675,
+      "sha256": "00331095c3a4246b9987514bc626d50ebec47c2e1b18767ab9fc1febe7fc1f0f"
+    },
+    "artifacts/phase5b/environment-0.1.schema.json": {
+      "bytes": 1440,
+      "sha256": "20b9c07649b87aa827d510b1f79dad3f8313fd234d3f9d07c78f32819f5e4c6e"
+    },
+    "artifacts/phase5b/final_full_tests.txt": {
+      "bytes": 7386,
+      "sha256": "2cca4ecba461ba770c1702f1e1561eff74d88f0f54d4276804d2dac48dff1412"
+    },
+    "artifacts/phase5b/final_test_execution.json": {
+      "bytes": 281,
+      "sha256": "3e828ba2067cc191732296bbfc03ccbe8b5284c928f3dfd1b13f0afce74ffb8e"
+    },
+    "artifacts/phase5b/final_tests.xml": {
+      "bytes": 1142183,
+      "sha256": "888928ae732cf85207542806517971c6e4879e896ded1218470e50fe0b62f469"
+    },
+    "artifacts/phase5b/framing_refresh_execution.json": {
+      "bytes": 3231,
+      "sha256": "130b180b3cc1bcaa9c56a6ca9cb71e4332da4ed76422afc4cedfd2bf809f1e51"
+    },
+    "artifacts/phase5b/full_tests.txt": {
+      "bytes": 5413,
+      "sha256": "0926b64e289548313e8c12b6ae16acc864696db5076e8cd4f617e4ad922dd33f"
+    },
+    "artifacts/phase5b/full_tests_before_road_refinement.txt": {
+      "bytes": 7584,
+      "sha256": "4d2799ca7397db781df580041469e25e1c1d338286f2f597896ea558bde95b4d"
+    },
+    "artifacts/phase5b/handoff_full_tests.txt": {
+      "bytes": 5508,
+      "sha256": "d7a45c632bd5ca6c05294eb7a4d24bee7f4a80a7964a6c3875aad486fb284d4f"
+    },
+    "artifacts/phase5b/handoff_legacy_pixels.json": {
+      "bytes": 1169,
+      "sha256": "eede8cf5f61dcf1d5bdadf693d7e22dbfea0faba9f8df1f643ebf25ee8ba9f3c"
+    },
+    "artifacts/phase5b/handoff_lint.txt": {
+      "bytes": 48,
+      "sha256": "dc4024d6a41615662896f9ff09e413375f0b854a0ee9b6aabc29a9bf18d10030"
+    },
+    "artifacts/phase5b/handoff_media_verification.json": {
+      "bytes": 34674,
+      "sha256": "db917ad76c72fd6ec59ebc57a8971f849ed4cc3a7deb65804020268997bcaa06"
+    },
+    "artifacts/phase5b/handoff_test_execution.json": {
+      "bytes": 253,
+      "sha256": "5e54604bed6a0c45e1ca5e06406bfe156f2193db0699ecc4a957fa96e1ecce9a"
+    },
+    "artifacts/phase5b/historical_handoff_media_verification.json": {
+      "bytes": 34471,
+      "sha256": "1a073c940d4879c397fdf907fe79da7933638521504b3d5b0d53038dfbcba21c"
+    },
+    "artifacts/phase5b/historical_rocky_render_report.json": {
+      "bytes": 38646,
+      "sha256": "90fd1adbee8152ab38a1d1736d39866d156ea54b17659720f3623d8834c53b4a"
+    },
+    "artifacts/phase5b/historical_rocky_repeat_job.json": {
+      "bytes": 14081,
+      "sha256": "b83161e44523e85550295ed716c084041ac3b017712d4c037a2950f1b46b4bab"
+    },
+    "artifacts/phase5b/installed_wheel_smoke.json": {
+      "bytes": 6412,
+      "sha256": "6fd7c70b0471e1093adc7dbf7c449ea8e37cd8fa3c2a02ac51a2310dcaf3d76e"
+    },
+    "artifacts/phase5b/legacy_compatibility.json": {
+      "bytes": 639,
+      "sha256": "eb5bd4e9b18409a847181b3e20fe9a91e59e7bd43d70411f3d14dcff065be209"
+    },
+    "artifacts/phase5b/legacy_current_pixels.json": {
+      "bytes": 1118,
+      "sha256": "8665f859974548738b0ce8d2c9b5a63d0f8442004822f4dc10a9650eccf523d8"
+    },
+    "artifacts/phase5b/lint.txt": {
+      "bytes": 47,
+      "sha256": "4a4814071a4c256e300d4487eea7b43e8b0417f5a3ebd5b93a008fbaf2911b6b"
+    },
+    "artifacts/phase5b/performance_summary.json": {
+      "bytes": 3403,
+      "sha256": "709b9e1b579518ba2bea4d355ad9e01eaeb523e8aa6612cc4ba88b6327099fcd"
+    },
+    "artifacts/phase5b/rocky_repeat_job.json": {
+      "bytes": 14244,
+      "sha256": "74590f2e9c4a0da48534ae6079da0629248222b9b99e18d907aef921c445abf9"
+    },
+    "artifacts/phase5b/rocky_repeat_report.json": {
+      "bytes": 38665,
+      "sha256": "fd0adcb4005089fbe1adc237d282079aca0709d97fa8f7cc41ce1144e7dc2524"
+    },
+    "artifacts/phase5b/rocky_shelter_3/environment_job.json": {
+      "bytes": 14782,
+      "sha256": "5de2acde05c0edde412a73b7a874a0add01d38f782799d84801e949db1535716"
+    },
+    "artifacts/phase5b/rocky_shelter_3/frame_000.png": {
+      "bytes": 118226,
+      "sha256": "4145cc8760cd050af8231953b1e3ea159eee7980ede7ede373c3f3f866cdc056"
+    },
+    "artifacts/phase5b/rocky_shelter_3/frame_045.png": {
+      "bytes": 117518,
+      "sha256": "3d0996f978d2d3b29faa2973ae9b63884b568198aaf972a272e2fc6c2d744a40"
+    },
+    "artifacts/phase5b/rocky_shelter_3/frame_089.png": {
+      "bytes": 117416,
+      "sha256": "0740961788d37527b559a84a1e37dc03ca0da3ffd97c31fa7e60ebcf7123ccef"
+    },
+    "artifacts/phase5b/rocky_shelter_3/generation.json": {
+      "bytes": 16260,
+      "sha256": "41fc2ec58c6a0ec4eebfc235242b1b8c453e1ebdf2d3903e4b201c1317ca2648"
+    },
+    "artifacts/phase5b/rocky_shelter_3/layer_layer_backdrop.png": {
+      "bytes": 13768,
+      "sha256": "61240aeea7ef04cfd54fa0fde87044300fc9aeddc9bdbc7e56d7ab2b3b56a7cf"
+    },
+    "artifacts/phase5b/rocky_shelter_3/layer_layer_distance.png": {
+      "bytes": 17830,
+      "sha256": "8f79fdd0bc6d25bba0304fc91916c731cf86411dd5507fe8c760fc9b52ca97ef"
+    },
+    "artifacts/phase5b/rocky_shelter_3/layer_layer_foreground.png": {
+      "bytes": 29531,
+      "sha256": "7c203be8248745acdce545d57de6bfb73f92705a812143952fb6045454aa2d49"
+    },
+    "artifacts/phase5b/rocky_shelter_3/layer_layer_ground.png": {
+      "bytes": 48402,
+      "sha256": "04ac0d659640d84a4c3d79f6d8f24d9848a87c3a58dedcf90985d6724aea3157"
+    },
+    "artifacts/phase5b/rocky_shelter_3/layer_layer_objects.png": {
+      "bytes": 66112,
+      "sha256": "ed9d83b5b3373474b9eefae9decbe88eb522e120f03aaa264a8d0889a26838e7"
+    },
+    "artifacts/phase5b/rocky_shelter_3/layer_layer_people.png": {
+      "bytes": 26068,
+      "sha256": "da7a30a16a2fffcc44a7bbcb72d732da8f1d479bdaee489c1a3d9bc73e37c455"
+    },
+    "artifacts/phase5b/rocky_shelter_3/layer_layer_sky.png": {
+      "bytes": 15087,
+      "sha256": "34b7da41595ee8f7fd5d80de66b3a1c09d792f8556c5dcc87018927c4ea5002d"
+    },
+    "artifacts/phase5b/rocky_shelter_3/stills_report.json": {
+      "bytes": 23633,
+      "sha256": "fee7dce92ef8eb2ece1b3a9304fc4eb4cc99204428b81d8599191903ec9020fe"
+    },
+    "artifacts/phase5b/rocky_shelter_417/environment_job.json": {
+      "bytes": 14784,
+      "sha256": "4179196f5841f34972828c8bf84aa08f88b238d452715b1eabd5b900cf12e370"
+    },
+    "artifacts/phase5b/rocky_shelter_417/frame_000.png": {
+      "bytes": 122340,
+      "sha256": "66355292f90f0db6efdc7f80c44bbb3a437ac485381db792c6760550278cee83"
+    },
+    "artifacts/phase5b/rocky_shelter_417/frame_045.png": {
+      "bytes": 120415,
+      "sha256": "78b0808d4f221e88b1f5c6223ba61b57f990dccdaa8fc28455cf414d05a4cae0"
+    },
+    "artifacts/phase5b/rocky_shelter_417/frame_089.png": {
+      "bytes": 118583,
+      "sha256": "c0fd14f282ad5dd51dcd5152e86c0075c0e8fa96253f064d2263c3abe26b0720"
+    },
+    "artifacts/phase5b/rocky_shelter_417/generation.json": {
+      "bytes": 16257,
+      "sha256": "ff45a5625034a88311d0b809bb05121aa7f6a90dc508f51b1615e7324f50cb3d"
+    },
+    "artifacts/phase5b/rocky_shelter_417/layer_layer_backdrop.png": {
+      "bytes": 14968,
+      "sha256": "f273e594ae6f061c5e9096856ae7b56de24165e86b7cdf4ef38e5b15ab6a3bc8"
+    },
+    "artifacts/phase5b/rocky_shelter_417/layer_layer_distance.png": {
+      "bytes": 18121,
+      "sha256": "5dc6d4b1b63e022bf0f1ade2115ff3119689c4b389cf562f55a9dd0c9a15549f"
+    },
+    "artifacts/phase5b/rocky_shelter_417/layer_layer_foreground.png": {
+      "bytes": 27027,
+      "sha256": "9d79f64e5861e9ed962034767ba4c92edaf357fd24062c5e83d1c815d589ae1d"
+    },
+    "artifacts/phase5b/rocky_shelter_417/layer_layer_ground.png": {
+      "bytes": 43990,
+      "sha256": "b5f264aa469967034d24ccdd576c80e11715211dc7943fa97f942fd0a04e1f6b"
+    },
+    "artifacts/phase5b/rocky_shelter_417/layer_layer_objects.png": {
+      "bytes": 73349,
+      "sha256": "abb830fb5a26c08d32fc8a3b2b33fc99885e1781e1d153a32a207644d29986e9"
+    },
+    "artifacts/phase5b/rocky_shelter_417/layer_layer_people.png": {
+      "bytes": 26196,
+      "sha256": "0edc3823aa551bd4349ad28ea0cfeade780444e425ca7cc6a2ecd2e7e206598a"
+    },
+    "artifacts/phase5b/rocky_shelter_417/layer_layer_sky.png": {
+      "bytes": 14881,
+      "sha256": "a9d6eaee3d197a5c35b5b68f5a8916f698e0c3a60aa2e29b997eee34455403ed"
+    },
+    "artifacts/phase5b/rocky_shelter_417/stills_report.json": {
+      "bytes": 23623,
+      "sha256": "c5b5137db69c2b97a35e146487f6083bcfc4ffa210dbf7e3960589565e168155"
+    },
+    "artifacts/phase5b/rocky_video/environment_job.json": {
+      "bytes": 14798,
+      "sha256": "677f9a1e07962ea50a1126abf0c4926f5b5fc6903a6ea1860f06cadecdf170b2"
+    },
+    "artifacts/phase5b/rocky_video/generation.json": {
+      "bytes": 16257,
+      "sha256": "ff45a5625034a88311d0b809bb05121aa7f6a90dc508f51b1615e7324f50cb3d"
+    },
+    "artifacts/phase5b/rocky_video/render_report.json": {
+      "bytes": 38467,
+      "sha256": "8c5e180f77e1e7e5fba45088f4db9e4cd45e6664acc70d93d622af62a1ce9079"
+    },
+    "artifacts/phase5b/rocky_video/scene.mp4": {
+      "bytes": 668550,
+      "sha256": "ef3ac4e30614261f6a7ac914572c0320f3f6d8ff42e9f2188c8129a6e895cb40"
+    },
+    "artifacts/phase5b/seed_contact_sheet.png": {
+      "bytes": 340496,
+      "sha256": "675f243027f3912dc8618dcf2203e6c46dfa68e000b30ba566048a40c9b51d82"
+    },
+    "artifacts/phase5b/settlement_repeat_job.json": {
+      "bytes": 14249,
+      "sha256": "bb4f9ca9ce517181db6b0c3e42f0439725e1e52726798ff9ee68ee8a1076512a"
+    },
+    "artifacts/phase5b/settlement_repeat_report.json": {
+      "bytes": 39079,
+      "sha256": "3d98623b4f4bec6930b81feb86af1c126ae1e1d6b9f7411fcfc366796fa596d1"
+    },
+    "artifacts/phase5b/settlement_street_33/environment_job.json": {
+      "bytes": 14785,
+      "sha256": "29f4f4d1dc68f24a339fc4c799534391b201bc972f5123b32c917340e5728e2b"
+    },
+    "artifacts/phase5b/settlement_street_33/frame_000.png": {
+      "bytes": 111936,
+      "sha256": "9384ff5504a53af4bdabb6dbf16007fdfec2cee3b868a85f2106467dd556b47f"
+    },
+    "artifacts/phase5b/settlement_street_33/frame_045.png": {
+      "bytes": 112973,
+      "sha256": "9ed60ec8647b3e44b7334cdf7ce93ede75ff17b6e24cbe0333c7430e3dc25e87"
+    },
+    "artifacts/phase5b/settlement_street_33/frame_089.png": {
+      "bytes": 113237,
+      "sha256": "c5956ad992ed01b5b934e8de3f07c9947948293a8dc1776218592253ff68c95e"
+    },
+    "artifacts/phase5b/settlement_street_33/generation.json": {
+      "bytes": 17181,
+      "sha256": "d6a7baf76651920c1ce278e6f649b6937065a8428fa296ac90471a9cc43e602c"
+    },
+    "artifacts/phase5b/settlement_street_33/layer_layer_backdrop.png": {
+      "bytes": 17243,
+      "sha256": "173e12a51b1a8cefd329fb8565a6619493d1ddcf4e20c2609cfc7a444b7408a0"
+    },
+    "artifacts/phase5b/settlement_street_33/layer_layer_distance.png": {
+      "bytes": 11477,
+      "sha256": "02b1c60960ef81f6a2ecd7768663b31205390e0f95ba6885814da8b45380be9f"
+    },
+    "artifacts/phase5b/settlement_street_33/layer_layer_foreground.png": {
+      "bytes": 7138,
+      "sha256": "e7d8e83b4524d6cc973f8f3625f9d060496714282aba2c9648ed56026575c963"
+    },
+    "artifacts/phase5b/settlement_street_33/layer_layer_ground.png": {
+      "bytes": 48454,
+      "sha256": "dfc28f5bccb02dddc4810636de90fad2abcd19de85f4c84e463ed25c3601a11b"
+    },
+    "artifacts/phase5b/settlement_street_33/layer_layer_objects.png": {
+      "bytes": 57834,
+      "sha256": "49b8b06db296d7a351be0780ddc2c30cb112c5ee9885008e8a308b04e75d581f"
+    },
+    "artifacts/phase5b/settlement_street_33/layer_layer_people.png": {
+      "bytes": 25461,
+      "sha256": "cbd3456d3eef936531d5e40add2a9b998614e2ee91fc5993ea2c50827b669d75"
+    },
+    "artifacts/phase5b/settlement_street_33/layer_layer_sky.png": {
+      "bytes": 15214,
+      "sha256": "8caf2718e51ae4bfbf4536288ba372e07ae0b7805bd705627fed2dd61b929392"
+    },
+    "artifacts/phase5b/settlement_street_33/stills_report.json": {
+      "bytes": 24017,
+      "sha256": "11784f94fddd306a90838b15b29ec3e9415950fe73df5f729e8603e9661ad525"
+    },
+    "artifacts/phase5b/settlement_street_417/environment_job.json": {
+      "bytes": 14774,
+      "sha256": "12298b93c5beb620647a5fb28b605932c6de4441efc22ee7749cc4ebc1afd3a7"
+    },
+    "artifacts/phase5b/settlement_street_417/frame_000.png": {
+      "bytes": 100222,
+      "sha256": "81578ad1d6b6dac77d4e4ee06cdbd81bb29d16534eca617d65e3e4f83f3d222e"
+    },
+    "artifacts/phase5b/settlement_street_417/frame_045.png": {
+      "bytes": 100696,
+      "sha256": "d322bdff969d2813f87bebdb6f1c48d86af9d267976ea42951148239ed3027cc"
+    },
+    "artifacts/phase5b/settlement_street_417/frame_089.png": {
+      "bytes": 102195,
+      "sha256": "bd5a0fa3476da192159e015cc0ebd53046805e03df25dfc7ef943a69782c7648"
+    },
+    "artifacts/phase5b/settlement_street_417/generation.json": {
+      "bytes": 17209,
+      "sha256": "83651d9395b6467048599ebee7a237bec506bdb6082a6a1853b4d33ac0929512"
+    },
+    "artifacts/phase5b/settlement_street_417/layer_layer_backdrop.png": {
+      "bytes": 16372,
+      "sha256": "3430b1470af03dc36748b57267ef28647ba279a2faae22a08ea07928b03c743a"
+    },
+    "artifacts/phase5b/settlement_street_417/layer_layer_distance.png": {
+      "bytes": 11532,
+      "sha256": "508f4f79af02755e6b8c72b476ef746dcd71b7a56eaa492a28cb5050e0b865d9"
+    },
+    "artifacts/phase5b/settlement_street_417/layer_layer_foreground.png": {
+      "bytes": 7138,
+      "sha256": "e7d8e83b4524d6cc973f8f3625f9d060496714282aba2c9648ed56026575c963"
+    },
+    "artifacts/phase5b/settlement_street_417/layer_layer_ground.png": {
+      "bytes": 45247,
+      "sha256": "afaaa86ee554f6d56488cc2e2e81c3e029f43a3930c30029b30e42c932fba244"
+    },
+    "artifacts/phase5b/settlement_street_417/layer_layer_objects.png": {
+      "bytes": 48152,
+      "sha256": "9634a3ead4fc2b9d5ca189fcc615c0229e49c41f184b90af9bbfd6079a6317af"
+    },
+    "artifacts/phase5b/settlement_street_417/layer_layer_people.png": {
+      "bytes": 25470,
+      "sha256": "6296fe3cc29f12c710fa4ce82dcbd1abb7f204f5cbeab9074b06d859c21b7339"
+    },
+    "artifacts/phase5b/settlement_street_417/layer_layer_sky.png": {
+      "bytes": 15308,
+      "sha256": "c4294e605a3c233a55f1e6e9678b73968266f9c15b2954eeac4fb380a8f07b7e"
+    },
+    "artifacts/phase5b/settlement_street_417/stills_report.json": {
+      "bytes": 24028,
+      "sha256": "e0d11d9a2f1269ffb2d49ad2337560d0116d9291b6005db22eebc7a919b42d10"
+    },
+    "artifacts/phase5b/settlement_video/render_report.json": {
+      "bytes": 39059,
+      "sha256": "aff35280b8e621b4ff8f117d1d9e0bc95c5950294391337eddc51f3ceb01a988"
+    },
+    "artifacts/phase5b/settlement_video/scene.mp4": {
+      "bytes": 695649,
+      "sha256": "9c94dfbaa37225cb80bfc5e3342feeed74be98c7c1b31069a7b409b66bcac554"
+    },
+    "artifacts/phase5b/targeted_tests.txt": {
+      "bytes": 181,
+      "sha256": "07abb39453227e8b4ac9a00f4879273645a769eff62ef0c796d211667c7efc43"
+    },
+    "artifacts/phase5b/test_execution.json": {
+      "bytes": 345,
+      "sha256": "46a78aa033d2fde45351c7c150faff1208cc931332a100eb0e17e99a01757a4f"
+    },
+    "artifacts/phase5b/tests.xml": {
+      "bytes": 1139512,
+      "sha256": "9ae0fa4e959d769d05ea96f1c94d2d8d38af891af122ff870cc4fcca70906e2d"
+    },
+    "artifacts/phase5b/video_repeat_consistency.json": {
+      "bytes": 956,
+      "sha256": "1fb6fdf42aa39e952878df3be3129aa099afcf8e8880d6d2449a5010dfaaf617"
+    },
+    "artifacts/phase5b/woodland_trail_417/frame_000.png": {
+      "bytes": 149745,
+      "sha256": "5c3020c65e81019aa146dfe19f0bca991f68223272d04589e4886f3adb3483c7"
+    },
+    "artifacts/phase5b/woodland_trail_417/frame_045.png": {
+      "bytes": 152629,
+      "sha256": "2ecbbf333e277ce71856612ab5f6b051a2dad77f0666c6080f4e9cce9d060994"
+    },
+    "artifacts/phase5b/woodland_trail_417/frame_089.png": {
+      "bytes": 151489,
+      "sha256": "bd575a48f139a11ad998a7da6d0a6f95047babce4f4594950c4fe66087119135"
+    },
+    "artifacts/phase5b/woodland_trail_417/generation.json": {
+      "bytes": 17210,
+      "sha256": "6119a505ed0f8eed440c10d748d8d36c13d06b2df5722b60974c98a38119f733"
+    },
+    "artifacts/phase5b/woodland_trail_417/layer_layer_backdrop.png": {
+      "bytes": 17419,
+      "sha256": "2431436b06c4250a28ac9198cc4a5264533dd35d8515883f2528addf9a828e73"
+    },
+    "artifacts/phase5b/woodland_trail_417/layer_layer_distance.png": {
+      "bytes": 42134,
+      "sha256": "57460b0619507c2f5de5d2449f8102587d75cfb468108209a0a5cf0638507094"
+    },
+    "artifacts/phase5b/woodland_trail_417/layer_layer_foreground.png": {
+      "bytes": 25365,
+      "sha256": "d4618efcb216187ee601e50e305ee146da0e755b19ccc40fd7590d605a5cd95e"
+    },
+    "artifacts/phase5b/woodland_trail_417/layer_layer_ground.png": {
+      "bytes": 44939,
+      "sha256": "924db85d3634d8065ebd4bf2eebf90566a6d61e4246fe15cd1c46df515da97df"
+    },
+    "artifacts/phase5b/woodland_trail_417/layer_layer_objects.png": {
+      "bytes": 100275,
+      "sha256": "0f2e7ef0888e64953af66148a9d8af6f1cb7b2acfc4a3a6663e0afd70bed8f4a"
+    },
+    "artifacts/phase5b/woodland_trail_417/layer_layer_people.png": {
+      "bytes": 25774,
+      "sha256": "43f8605136b6c3a1abfde807ec050c16d63944432cf36435b7a11bb339122937"
+    },
+    "artifacts/phase5b/woodland_trail_417/layer_layer_sky.png": {
+      "bytes": 15502,
+      "sha256": "649964cb78be19a62dcaa23790d6ed5f40b27297e0cf41e6649ef1ccabc92e3c"
+    },
+    "artifacts/phase5b/woodland_trail_417/stills_report.json": {
+      "bytes": 24039,
+      "sha256": "6dadf38b8d0736e5689fd4297275005e86cc247f714a88b6cbc81191c67645a3"
+    },
+    "artifacts/phase5b/woodland_trail_9/frame_000.png": {
+      "bytes": 157216,
+      "sha256": "442cfa9e96a249ae16f8d022691eba7936c6c8212f04780a0bc4c2d26b81e164"
+    },
+    "artifacts/phase5b/woodland_trail_9/frame_045.png": {
+      "bytes": 158429,
+      "sha256": "12cb5ee52ea0f8d9457216a6b8adfe0947d05f71b9370b0ede9a776d84db7266"
+    },
+    "artifacts/phase5b/woodland_trail_9/frame_089.png": {
+      "bytes": 157194,
+      "sha256": "aa21a1ead798003c4f0bf6d804215971318b78b6d295044c690b9c2fa3f1959e"
+    },
+    "artifacts/phase5b/woodland_trail_9/generation.json": {
+      "bytes": 17205,
+      "sha256": "aa8250a4b1868628f88ec4f9f65e44975df1c2559f902ba3d196fc584ee80c33"
+    },
+    "artifacts/phase5b/woodland_trail_9/layer_layer_backdrop.png": {
+      "bytes": 16400,
+      "sha256": "bb30f1708d71b7aa4c2c588e394a083f1adc8652c5d88411448db93c3cc5d9ae"
+    },
+    "artifacts/phase5b/woodland_trail_9/layer_layer_distance.png": {
+      "bytes": 40765,
+      "sha256": "cc9dfcdb1c95f5cd2e850cc0a5e4c9fe59113123fc13fa21106e2292084327c4"
+    },
+    "artifacts/phase5b/woodland_trail_9/layer_layer_foreground.png": {
+      "bytes": 30921,
+      "sha256": "54a4ee0546f8ac42049d39ab3d8195377d2f4211113d15c69b8da4bad0a6ff6f"
+    },
+    "artifacts/phase5b/woodland_trail_9/layer_layer_ground.png": {
+      "bytes": 46525,
+      "sha256": "42d9d20a835afe3715827804939255bc7a09de6b03817cf2494e14f005bf6efb"
+    },
+    "artifacts/phase5b/woodland_trail_9/layer_layer_objects.png": {
+      "bytes": 108062,
+      "sha256": "fd9ffd0f6627d89e0f0e56f69dd085881dd5dc6ea874afe9dd3b7840a7a58517"
+    },
+    "artifacts/phase5b/woodland_trail_9/layer_layer_people.png": {
+      "bytes": 25492,
+      "sha256": "512d13f173ce936267c1346a8e062644b138344b00e01a5202af8450c1ebddd6"
+    },
+    "artifacts/phase5b/woodland_trail_9/layer_layer_sky.png": {
+      "bytes": 15522,
+      "sha256": "7fbc0121591d7af155e7380fb0bc098a817cdb48803cee3d6544a67e0aa4cb27"
+    },
+    "artifacts/phase5b/woodland_trail_9/stills_report.json": {
+      "bytes": 24047,
+      "sha256": "ef6b08875dcae9398f819cc397351a49e5c736896a23e2706bcb843817fd5105"
+    },
+    "artifacts/phase5b/woodland_video/environment_job.json": {
+      "bytes": 14792,
+      "sha256": "a82b6349ab6d4714c0ac94c153ff0a3585799e997084da07570640f8a8cdd505"
+    },
+    "artifacts/phase5b/woodland_video/generation.json": {
+      "bytes": 17210,
+      "sha256": "6119a505ed0f8eed440c10d748d8d36c13d06b2df5722b60974c98a38119f733"
+    },
+    "artifacts/phase5b/woodland_video/render_report.json": {
+      "bytes": 38886,
+      "sha256": "10e15d461a2d21100300db70ca883782707f44b3e74a0b0fc7ea106cc06954c8"
+    },
+    "artifacts/phase5b/woodland_video/scene.mp4": {
+      "bytes": 677888,
+      "sha256": "a10f730783520253cf3ad58cd054d4c71891c36e771b57350c270bd50ab4df51"
+    },
+    "docs/PHASE5B_ASSIGNMENT.md": {
+      "bytes": 13509,
+      "sha256": "78ce04217144d556081f4b30b2e490449c1ca44a8e37efbef79396ce670f712d"
+    },
+    "docs/PHASE5B_REPORT.md": {
+      "bytes": 11869,
+      "sha256": "127ff1432008c40880e39a06835ea6484f94faba54067b4e0d030820bd52f707"
+    },
+    "docs/PROCEDURAL_ENVIRONMENTS.md": {
+      "bytes": 9060,
+      "sha256": "b202d378bfb03ee287253034aa0442dcb3bd8cf38cc33d4520798a7f57fd53ba"
+    },
+    "examples/procedural/rocky_shelter_3.json": {
+      "bytes": 415,
+      "sha256": "92c56680ef2d1606a148b1fddba1b171d791ee8bdedcb591709d90b1213110a2"
+    },
+    "examples/procedural/rocky_shelter_417.json": {
+      "bytes": 419,
+      "sha256": "f13b4d92d788a6a934547258e513a48003a438a78f4b447f1e7bf10902f1b4cd"
+    },
+    "examples/procedural/settlement_street_33.json": {
+      "bytes": 425,
+      "sha256": "ba54116861ef7d7daf47f78c7c3fcc00dd7983bca3d6e64f75b0d454c3e62f09"
+    },
+    "examples/procedural/settlement_street_417.json": {
+      "bytes": 427,
+      "sha256": "5d2ef6e41132f2d0f12870da72b844788102c625d4681a8d064f4adfdcdcb2e0"
+    },
+    "examples/procedural/woodland_trail_417.json": {
+      "bytes": 421,
+      "sha256": "938ecdb600c5ee2fac299c9ba83b8eecf6acef2b64c510510e30baa3b509e5c9"
+    },
+    "examples/procedural/woodland_trail_9.json": {
+      "bytes": 417,
+      "sha256": "70e51cdf0307f2ea0ec65c2a9399111ce37d3337cb1c7e760f3a62c361bdb46e"
+    },
+    "src/reelforge/procedural/__init__.py": {
+      "bytes": 81,
+      "sha256": "9a0f1e4d828b6dac6960c0c893b1619369d7c02cb3e4c9caad426070a3b7bf8c"
+    },
+    "src/reelforge/procedural/compiler.py": {
+      "bytes": 4060,
+      "sha256": "67ad7053daecb90a89525b95bd90cb00c71d2547395c2c15fca08a1c9a0f9e9a"
+    },
+    "src/reelforge/procedural/contract.py": {
+      "bytes": 3249,
+      "sha256": "12ed080a3a3b476c1907f4e9a5bd9cd4fc41a3034f04cba8ef5df1b3d6e7d77f"
+    },
+    "src/reelforge/procedural/drawing.py": {
+      "bytes": 4227,
+      "sha256": "db3f59a77825e9562d46924bcd6b7030b29e2251bf71544e7d96ccfc723f5069"
+    },
+    "src/reelforge/procedural/planning.py": {
+      "bytes": 5324,
+      "sha256": "4d4c6188866b0bfa9d2d2b7bdc536d70d7490c1d659d5e1ca191a7759c3f4406"
+    },
+    "src/reelforge/procedural/recipes.py": {
+      "bytes": 20139,
+      "sha256": "8823d6c964eeb4f9a589e479437a4a080e62167c15d2f77b8e4bad3d95bab643"
+    },
+    "src/reelforge/procedural/schema.py": {
+      "bytes": 1728,
+      "sha256": "9bcddf0b4b204179ee4ba283c26e7d15774bc6aafbcd5d90dcc55e4a2cac7a13"
+    },
+    "src/reelforge/scenes/geometry.py": {
+      "bytes": 1846,
+      "sha256": "e6b13f3fbcfd66d848827cbc47a23743cdd00522b93f382403f43f5fecf054b4"
+    },
+    "src/reelforge/scenes/graph.py": {
+      "bytes": 10576,
+      "sha256": "00f23e1b7ed08588e9b75a1dbffc1cdd8977bba682fa476ea9d0769c7c5482c7"
+    },
+    "tests/test_procedural.py": {
+      "bytes": 18062,
+      "sha256": "8478fd048abd84f6b17a8a886429b67f3d535a0ce5bffa8db0505091fdef7cbe"
+    },
+    "tools/procedural_environment.py": {
+      "bytes": 6323,
+      "sha256": "61a8adfe152c9d37482a77bf200c738c96ea0e7aa48ce827959dbc9e0bb2c81c"
+    },
+    "tools/review_procedural.py": {
+      "bytes": 6990,
+      "sha256": "7e70cf2ce017a961ace1be674f4e46d2861adf573236af958d2d79006fbaeb70"
+    }
+  }
+}

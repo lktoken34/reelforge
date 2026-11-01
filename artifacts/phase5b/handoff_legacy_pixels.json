@@ -1,0 +1,27 @@
+{
+  "all_12_checkpoints_match_saved_baseline": true,
+  "versions": {
+    "pycairo": "1.29.2",
+    "cairo": "1.18.0"
+  },
+  "pixels": {
+    "orchard": {
+      "0": "30920483ad85d7fd6ea8b948ab437d84fb535a1a7dba724969a8c519429fb1b3",
+      "90": "c91244acbc290a66a5b4f0de9372ea216ec5a133ebe8cc88a7450e533366c798",
+      "179": "53effbfac0526b28ce148fcc54c185ed34378d3246cc63311e5613d71c701811"
+    },
+    "rowan": {
+      "0": "d85d3bfa369e901c0c18f86d08bb31b1b77d0f61c3063fd842427fcd933f15c6",
+      "74": "0076ca69146002b6f31ebe3d9af8ca96ff9f98f84c91be1ed393582d8952dd69",
+      "149": "fc3f0cbde2d09c76b802d8aadc3cf658c0b611dc973b27c6afacc89aec2437c0"
+    },
+    "story": {
+      "0": "43b7d2e55ec3995032aa1f17f6e3df43284d1085310d23acd7ff7a5834b7b1a5",
+      "119": "3a4bc15cb4161457604ab5b9bcf9eee4c9e679d3aae1f59171c2a03d8303bdfd",
+      "120": "7268782fb3c137940128f3514652e3aa503df9bd78cee12cabba029c94bec785",
+      "239": "ceaded19149234940ea87599e01b05161ed57a39040b356d07c3c78bf1663443",
+      "240": "21063e65e5a4ddc0eb426b941cbc3894d5b3729badd1ddd9f740f01824352411",
+      "359": "3faf08cbfeff2a0302dc0f2b404a8eaae2a778f2a6b121d44fb9fc194dec0064"
+    }
+  }
+}

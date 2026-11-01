@@ -1,0 +1,15 @@
+{
+  "returncode": 1,
+  "command": [
+    "/workspace/scratch/2a96718c6b46/reelforge/.venv/bin/python",
+    "-m",
+    "pytest",
+    "--basetemp",
+    "outputs/pytest-phase5b-final",
+    "--junitxml=outputs/phase5b-final-tests.xml",
+    "-q"
+  ],
+  "stdout_bytes": 5413,
+  "stderr_bytes": 0,
+  "capture": "Bounded pipe, saved after child reaped"
+}

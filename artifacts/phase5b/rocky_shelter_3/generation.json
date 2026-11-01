@@ -1,0 +1,689 @@
+{
+  "contract": "environment-0.1",
+  "request": {
+    "title": "Rocky Shelter \u2014 seed 3",
+    "family": "rocky_shelter",
+    "seed": 3,
+    "density": 2,
+    "alignment": 0,
+    "structure": 0.7,
+    "framing": 0.8,
+    "detail": "rich",
+    "lighting": "dusk",
+    "atmosphere": 0.7,
+    "rowan": true,
+    "action": "look_around",
+    "side": "left"
+  },
+  "plan": {
+    "request": {
+      "title": "Rocky Shelter \u2014 seed 3",
+      "family": "rocky_shelter",
+      "seed": 3,
+      "density": 2,
+      "alignment": 0,
+      "structure": 0.7,
+      "framing": 0.8,
+      "detail": "rich",
+      "lighting": "dusk",
+      "atmosphere": 0.7,
+      "rowan": true,
+      "action": "look_around",
+      "side": "left"
+    },
+    "horizon": 312.32506735785205,
+    "vanishing_x": 216.38175248827218,
+    "bend": -61.919845429286745,
+    "objects": [
+      {
+        "id": "sky",
+        "recipe": "sky",
+        "layer": "sky",
+        "x": 0,
+        "y": 0,
+        "scale": 1
+      },
+      {
+        "id": "backdrop",
+        "recipe": "backdrop",
+        "layer": "backdrop",
+        "x": 0,
+        "y": 0,
+        "scale": 1
+      },
+      {
+        "id": "ground",
+        "recipe": "ground",
+        "layer": "ground",
+        "x": 180,
+        "y": 510,
+        "scale": 1
+      },
+      {
+        "id": "distance",
+        "recipe": "distance",
+        "layer": "distance",
+        "x": 0,
+        "y": 0,
+        "scale": 1
+      },
+      {
+        "id": "rock_left_0",
+        "recipe": "rock",
+        "layer": "objects",
+        "x": 36.29546060710068,
+        "y": 370.71055965758404,
+        "scale": 0.63451523593951
+      },
+      {
+        "id": "rock_left_2",
+        "recipe": "rock",
+        "layer": "objects",
+        "x": 55.514108492332184,
+        "y": 410.4067623551138,
+        "scale": 0.8224141115626749
+      },
+      {
+        "id": "rock_left_4",
+        "recipe": "rock",
+        "layer": "objects",
+        "x": 34.715846663501466,
+        "y": 462.66950431687235,
+        "scale": 1.0339218332734514
+      },
+      {
+        "id": "rock_left_1",
+        "recipe": "rock",
+        "layer": "objects",
+        "x": 44.735804639740294,
+        "y": 388.11572259021904,
+        "scale": 0.7385527268389053
+      },
+      {
+        "id": "rock_right_0",
+        "recipe": "rock",
+        "layer": "objects",
+        "x": 303.9555232958252,
+        "y": 365.11983690199645,
+        "scale": 0.6416139867272909
+      },
+      {
+        "id": "rock_right_2",
+        "recipe": "rock",
+        "layer": "objects",
+        "x": 298.70355867103683,
+        "y": 416.82369590863203,
+        "scale": 0.8139396428902819
+      },
+      {
+        "id": "rock_right_4",
+        "recipe": "rock",
+        "layer": "objects",
+        "x": 288.8299769435946,
+        "y": 466.70313338385944,
+        "scale": 1.0413289414678608
+      },
+      {
+        "id": "rock_right_1",
+        "recipe": "rock",
+        "layer": "objects",
+        "x": 309.97182634096873,
+        "y": 390.0521319903518,
+        "scale": 0.6955341681814178
+      },
+      {
+        "id": "shelter",
+        "recipe": "entrance",
+        "layer": "objects",
+        "x": 238.38175248827218,
+        "y": 425,
+        "scale": 1
+      },
+      {
+        "id": "dry_tree",
+        "recipe": "tree",
+        "layer": "objects",
+        "x": 78,
+        "y": 505,
+        "scale": 0.25
+      },
+      {
+        "id": "foreground",
+        "recipe": "foreground",
+        "layer": "foreground",
+        "x": 0,
+        "y": 0,
+        "scale": 1
+      }
+    ],
+    "actor_x": 119.35046789252215,
+    "actor_y": 525,
+    "path_allowance": 1700,
+    "operation_allowance": 29600,
+    "node_allowance": 24,
+    "instance_allowance": 16
+  },
+  "graph": {
+    "schema_version": "scene-0.1",
+    "title": "Rocky Shelter \u2014 seed 3",
+    "frame": 45,
+    "hierarchy": [
+      {
+        "id": "root",
+        "parent": null,
+        "kind": "root",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": null,
+        "depth": null
+      },
+      {
+        "id": "layer_sky",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_sky",
+        "depth": 0
+      },
+      {
+        "id": "sky",
+        "parent": "layer_sky",
+        "kind": "background",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_sky",
+        "depth": 0
+      },
+      {
+        "id": "layer_backdrop",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_backdrop",
+        "depth": 0.18
+      },
+      {
+        "id": "backdrop",
+        "parent": "layer_backdrop",
+        "kind": "background",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_backdrop",
+        "depth": 0.18
+      },
+      {
+        "id": "layer_ground",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_ground",
+        "depth": 1
+      },
+      {
+        "id": "ground",
+        "parent": "layer_ground",
+        "kind": "environment",
+        "world": {
+          "x": 180.0,
+          "y": 510.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_ground",
+        "depth": 1
+      },
+      {
+        "id": "layer_distance",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_distance",
+        "depth": 0.48
+      },
+      {
+        "id": "distance",
+        "parent": "layer_distance",
+        "kind": "background",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_distance",
+        "depth": 0.48
+      },
+      {
+        "id": "layer_objects",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "rock_right_0",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 303.9555232958252,
+          "y": 365.11983690199645,
+          "scale": 0.6416139867272909,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "rock_left_0",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 36.29546060710068,
+          "y": 370.71055965758404,
+          "scale": 0.63451523593951,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "rock_left_1",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 44.735804639740294,
+          "y": 388.11572259021904,
+          "scale": 0.7385527268389053,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "rock_right_1",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 309.97182634096873,
+          "y": 390.0521319903518,
+          "scale": 0.6955341681814178,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "rock_left_2",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 55.514108492332184,
+          "y": 410.4067623551138,
+          "scale": 0.8224141115626749,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "rock_right_2",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 298.70355867103683,
+          "y": 416.82369590863203,
+          "scale": 0.8139396428902819,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "shelter",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 238.38175248827218,
+          "y": 425.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "rock_left_4",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 34.715846663501466,
+          "y": 462.66950431687235,
+          "scale": 1.0339218332734514,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "rock_right_4",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 288.8299769435946,
+          "y": 466.70313338385944,
+          "scale": 1.0413289414678608,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "dry_tree",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 78.0,
+          "y": 505.0,
+          "scale": 0.25,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "layer_people",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_people",
+        "depth": 1
+      },
+      {
+        "id": "rowan",
+        "parent": "layer_people",
+        "kind": "character",
+        "world": {
+          "x": 119.35046789252215,
+          "y": 525.0,
+          "scale": 0.47,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_people",
+        "depth": 1
+      },
+      {
+        "id": "layer_foreground",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_foreground",
+        "depth": 1.4
+      },
+      {
+        "id": "foreground",
+        "parent": "layer_foreground",
+        "kind": "asset",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_foreground",
+        "depth": 1.4
+      }
+    ],
+    "painter_ids": [
+      "sky",
+      "backdrop",
+      "ground",
+      "distance",
+      "rock_right_0",
+      "rock_left_0",
+      "rock_left_1",
+      "rock_right_1",
+      "rock_left_2",
+      "rock_right_2",
+      "shelter",
+      "rock_left_4",
+      "rock_right_4",
+      "dry_tree",
+      "rowan",
+      "foreground"
+    ],
+    "path_allowance": 1700,
+    "operation_allowance": 29600,
+    "character_ground_contacts": {
+      "rowan": {
+        "ground_id": "ground",
+        "world": [
+          119.35046789252215,
+          525.0
+        ],
+        "screen": [
+          103.65581720831088,
+          525.7815997937497
+        ]
+      }
+    },
+    "camera": {
+      "x": 12.626399174999184,
+      "y": 5.542133058333062,
+      "zoom": 1.0505898628166628
+    }
+  },
+  "generated_assets": [
+    {
+      "id": "generated_backdrop",
+      "paths": 3,
+      "operations": 48,
+      "path_bound": 96,
+      "operation_bound": 1400,
+      "geometry_sha256": "bf51d87e874bfb54392db2eb19e9ec88757b3234809d1b4774dc63c44e22911b",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_distance",
+      "paths": 6,
+      "operations": 35,
+      "path_bound": 200,
+      "operation_bound": 3000,
+      "geometry_sha256": "3ea697bf71b9edb5ac8e7afceeb77657bd48c27520a1172eda20ed77b9e01819",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_foreground",
+      "paths": 46,
+      "operations": 502,
+      "path_bound": 200,
+      "operation_bound": 5000,
+      "geometry_sha256": "0f73284f2b5e0f5d47c8c496ed6914c0bdd72924ab4359f087194e0c23eed444",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_sky",
+      "paths": 7,
+      "operations": 46,
+      "path_bound": 40,
+      "operation_bound": 800,
+      "geometry_sha256": "36edac982bb8f2c9af478003a2a2bb134ef3f22996a21646a392c98dd1406499",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_rock_right_0",
+      "paths": 22,
+      "operations": 247,
+      "path_bound": 64,
+      "operation_bound": 900,
+      "geometry_sha256": "afd39bdde658e1aacc085048f449fb38dc14f9c80bb49b1dc65d657e2edec70e",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_rock_left_0",
+      "paths": 22,
+      "operations": 247,
+      "path_bound": 64,
+      "operation_bound": 900,
+      "geometry_sha256": "0f48d2ae0435b0808b6f1d192d3aef8c18bb1c8763a283ea7a2b26bc7e0928b1",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_rock_left_1",
+      "paths": 22,
+      "operations": 247,
+      "path_bound": 64,
+      "operation_bound": 900,
+      "geometry_sha256": "b722212fc46b87f1e93feba39da9132e8e85dea9195b428cfcc133ae2899abb9",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_rock_right_1",
+      "paths": 22,
+      "operations": 247,
+      "path_bound": 64,
+      "operation_bound": 900,
+      "geometry_sha256": "f6714422625a23949e3efbaff697da6171b231031267fd35d17305fb709d3327",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_rock_left_2",
+      "paths": 22,
+      "operations": 247,
+      "path_bound": 64,
+      "operation_bound": 900,
+      "geometry_sha256": "430aa6978ae65048e079617ff9de7dbae56270cf99622f7877295140271295bb",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_rock_right_2",
+      "paths": 22,
+      "operations": 247,
+      "path_bound": 64,
+      "operation_bound": 900,
+      "geometry_sha256": "ccaf53ff90ee0baaabadd155e1ba2db5718d9df4a97a24b8dd0bf69af1843367",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_shelter",
+      "paths": 20,
+      "operations": 63,
+      "path_bound": 96,
+      "operation_bound": 1600,
+      "geometry_sha256": "b1573e100d492fa8bbedba368eebf2350b85c5bdaa78f5066a39e95c8ad60741",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_rock_left_4",
+      "paths": 22,
+      "operations": 247,
+      "path_bound": 64,
+      "operation_bound": 900,
+      "geometry_sha256": "93a32bbe9f340e440812cc3737f917841ca68667a2c4d4a8d1264640068da3b7",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_rock_right_4",
+      "paths": 22,
+      "operations": 247,
+      "path_bound": 64,
+      "operation_bound": 900,
+      "geometry_sha256": "7716b8a5f837ef18da7618dec18920957492e4f05f5becb7e88bb5089311f9bf",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_dry_tree",
+      "paths": 15,
+      "operations": 41,
+      "path_bound": 80,
+      "operation_bound": 2000,
+      "geometry_sha256": "019355a8ae4529872f878a46ee34615e3130b94ff8ecb788c192079f5a68f1c4",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_ground",
+      "paths": 80,
+      "operations": 866,
+      "path_bound": 220,
+      "operation_bound": 2600,
+      "geometry_sha256": "11866b483d896d20c2fe16c6fd9d2ac12d3f102fee48e3cf2705e740a5d92082",
+      "support_envelope": [
+        -175,
+        -75,
+        175,
+        130
+      ]
+    }
+  ]
+}

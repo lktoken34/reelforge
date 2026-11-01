@@ -105,3 +105,13 @@ Preserve all ownership, media, resource, legacy contract and artwork behavior. R
 test. Workspace restoration is an environment limitation: never weaken assertions or add speculative
 cleanup patches. No agent delegation was authorized. No GitHub push, deployment, Phase 5B/5C or
 script interpreter is authorized. Stop after local commit and Phase 5A ZIP for independent review.
+
+## Current Phase 5B assignment
+
+The approved baseline is e9a38b12806c2bbaa396b9d3577f3342b379d364. Explicit user Phase 5B
+authorization supersedes historical phase-stop notes above. Work is limited to bounded
+environment-0.1 procedural generators on phase5b-procedural-environments. Read
+docs/PROCEDURAL_ENVIRONMENTS.md and docs/PHASE5B_REPORT.md. Preserve scene-0.1,
+legacy artwork, audio/video, transaction ownership and resource policy; retain all tests.
+Keep development-host restoration failures visible. No agent delegation, GitHub push,
+deployment, or Phase 5C is authorized. Stop after local commit and complete ZIP export.

@@ -1,0 +1,95 @@
+{
+  "scope": "Final framing geometry, sampled measurements; earlier runs retained separately",
+  "families": {
+    "woodland_trail": {
+      "render_success": true,
+      "cleanup_error": null,
+      "frames": 90,
+      "decoded_frames": 90,
+      "encoded_fps": 13.081767945347009,
+      "geometry_sampling_seconds": 1.322974748974957,
+      "raster_seconds": 4.480578999995487,
+      "stream_seconds": 0.6436578690008901,
+      "render_decode_wall_seconds": 9.061353166998742,
+      "render_cpu_seconds": {
+        "parent": 7.436992983,
+        "children_user": 4.196997,
+        "children_system": 0.5630029999999999
+      },
+      "paths": 755,
+      "operations": 5866,
+      "render_tree_peak_mib": 97.78515625,
+      "geometry_job": {
+        "planning_seconds": 0.00014154800010146573,
+        "geometry_generation_seconds": 0.02174119499977678,
+        "wall_seconds": 9.103029124002205
+      },
+      "whole_job_peak_mib": 97.78515625
+    },
+    "settlement_street": {
+      "render_success": false,
+      "cleanup_error": {
+        "code": "TRANSACTION_CLEANUP",
+        "message": "Completed transaction path reappeared: /workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5b/settlement_video/.reelforge-encode-geyddryf"
+      },
+      "frames": 90,
+      "decoded_frames": 90,
+      "encoded_fps": 34.962151809961576,
+      "geometry_sampling_seconds": 0.8348088650006957,
+      "raster_seconds": 1.1682053580004776,
+      "stream_seconds": 0.26748490199815933,
+      "render_decode_wall_seconds": 3.5256816460000664,
+      "render_cpu_seconds": {
+        "parent": 2.764530546,
+        "children_user": 2.380336,
+        "children_system": 0.16296
+      },
+      "paths": 616,
+      "operations": 3439,
+      "render_tree_peak_mib": 96.53125,
+      "geometry_job": null,
+      "whole_job_peak_mib": null,
+      "controlled_repeat": {
+        "wall_seconds": 3.9721348320001653,
+        "whole_job_peak_mib": 96.921875,
+        "error": {
+          "code": "TRANSACTION_CLEANUP",
+          "message": "Completed transaction path reappeared: /workspace/scratch/2a96718c6b46/reelforge/outputs/phase5b-framing-repeat-settlement/.reelforge-encode-grggfiji"
+        }
+      }
+    },
+    "rocky_shelter": {
+      "render_success": true,
+      "cleanup_error": null,
+      "frames": 90,
+      "decoded_frames": 90,
+      "encoded_fps": 38.54251821944536,
+      "geometry_sampling_seconds": 0.5012394569996559,
+      "raster_seconds": 1.3302867120009978,
+      "stream_seconds": 0.22476786700099183,
+      "render_decode_wall_seconds": 3.3166646659999515,
+      "render_cpu_seconds": {
+        "parent": 2.6337876270000002,
+        "children_user": 2.269286,
+        "children_system": 0.180592
+      },
+      "paths": 438,
+      "operations": 3960,
+      "render_tree_peak_mib": 96.16015625,
+      "geometry_job": {
+        "planning_seconds": 9.108699987336877e-05,
+        "geometry_generation_seconds": 0.008838002999937089,
+        "wall_seconds": 3.3384431260001293
+      },
+      "whole_job_peak_mib": 96.16015625,
+      "controlled_repeat": {
+        "wall_seconds": 4.419474527000148,
+        "whole_job_peak_mib": 99.71875,
+        "error": {
+          "code": "TRANSACTION_CLEANUP",
+          "message": "Completed transaction path reappeared: /workspace/scratch/2a96718c6b46/reelforge/outputs/phase5b-framing-repeat-rocky/.reelforge-encode-s7nhzc3p"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,721 @@
+{
+  "contract": "environment-0.1",
+  "request": {
+    "title": "Woodland Trail \u2014 seed 9",
+    "family": "woodland_trail",
+    "seed": 9,
+    "density": 2,
+    "alignment": 0,
+    "structure": 0.7,
+    "framing": 0.8,
+    "detail": "rich",
+    "lighting": "dusk",
+    "atmosphere": 0.7,
+    "rowan": true,
+    "action": "look_around",
+    "side": "left"
+  },
+  "plan": {
+    "request": {
+      "title": "Woodland Trail \u2014 seed 9",
+      "family": "woodland_trail",
+      "seed": 9,
+      "density": 2,
+      "alignment": 0,
+      "structure": 0.7,
+      "framing": 0.8,
+      "detail": "rich",
+      "lighting": "dusk",
+      "atmosphere": 0.7,
+      "rowan": true,
+      "action": "look_around",
+      "side": "left"
+    },
+    "horizon": 313.93748679095245,
+    "vanishing_x": 211.8301939239934,
+    "bend": -55.04566390638433,
+    "objects": [
+      {
+        "id": "sky",
+        "recipe": "sky",
+        "layer": "sky",
+        "x": 0,
+        "y": 0,
+        "scale": 1
+      },
+      {
+        "id": "backdrop",
+        "recipe": "backdrop",
+        "layer": "backdrop",
+        "x": 0,
+        "y": 0,
+        "scale": 1
+      },
+      {
+        "id": "ground",
+        "recipe": "ground",
+        "layer": "ground",
+        "x": 180,
+        "y": 510,
+        "scale": 1
+      },
+      {
+        "id": "distance",
+        "recipe": "distance",
+        "layer": "distance",
+        "x": 0,
+        "y": 0,
+        "scale": 1
+      },
+      {
+        "id": "tree_left_0",
+        "recipe": "tree",
+        "layer": "objects",
+        "x": 44.80584233678979,
+        "y": 367.28872955237614,
+        "scale": 0.6571530207607525
+      },
+      {
+        "id": "tree_left_2",
+        "recipe": "tree",
+        "layer": "objects",
+        "x": 58.07568088634511,
+        "y": 413.29303858354757,
+        "scale": 0.8147346750723723
+      },
+      {
+        "id": "tree_left_4",
+        "recipe": "tree",
+        "layer": "objects",
+        "x": 69.8671363937899,
+        "y": 468.62382771065063,
+        "scale": 1.077481624380133
+      },
+      {
+        "id": "tree_left_1",
+        "recipe": "tree",
+        "layer": "objects",
+        "x": 49.974235186957216,
+        "y": 394.52737991675616,
+        "scale": 0.7567935907658567
+      },
+      {
+        "id": "tree_left_3",
+        "recipe": "tree",
+        "layer": "objects",
+        "x": 70.78441831640458,
+        "y": 441.6936789499029,
+        "scale": 0.9357932984623836
+      },
+      {
+        "id": "tree_right_0",
+        "recipe": "tree",
+        "layer": "objects",
+        "x": 308.51558143401945,
+        "y": 369.5083131912216,
+        "scale": 0.6362538120484632
+      },
+      {
+        "id": "tree_right_2",
+        "recipe": "tree",
+        "layer": "objects",
+        "x": 303.69991646564597,
+        "y": 419.64405225272395,
+        "scale": 0.8218551457360512
+      },
+      {
+        "id": "tree_right_4",
+        "recipe": "tree",
+        "layer": "objects",
+        "x": 285.8516725815374,
+        "y": 460.0580001558643,
+        "scale": 1.0553197759140562
+      },
+      {
+        "id": "tree_right_1",
+        "recipe": "tree",
+        "layer": "objects",
+        "x": 310.38387333489555,
+        "y": 395.0248430691952,
+        "scale": 0.7611216847615907
+      },
+      {
+        "id": "tree_right_3",
+        "recipe": "tree",
+        "layer": "objects",
+        "x": 299.21032819594524,
+        "y": 442.3343149835683,
+        "scale": 0.9101909446180202
+      },
+      {
+        "id": "trail_boulder",
+        "recipe": "rock",
+        "layer": "objects",
+        "x": 65,
+        "y": 530,
+        "scale": 0.25
+      },
+      {
+        "id": "foreground",
+        "recipe": "foreground",
+        "layer": "foreground",
+        "x": 0,
+        "y": 0,
+        "scale": 1
+      }
+    ],
+    "actor_x": 123.95844023478432,
+    "actor_y": 525,
+    "path_allowance": 1876,
+    "operation_allowance": 39700,
+    "node_allowance": 25,
+    "instance_allowance": 17
+  },
+  "graph": {
+    "schema_version": "scene-0.1",
+    "title": "Woodland Trail \u2014 seed 9",
+    "frame": 45,
+    "hierarchy": [
+      {
+        "id": "root",
+        "parent": null,
+        "kind": "root",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": null,
+        "depth": null
+      },
+      {
+        "id": "layer_sky",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_sky",
+        "depth": 0
+      },
+      {
+        "id": "sky",
+        "parent": "layer_sky",
+        "kind": "background",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_sky",
+        "depth": 0
+      },
+      {
+        "id": "layer_backdrop",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_backdrop",
+        "depth": 0.18
+      },
+      {
+        "id": "backdrop",
+        "parent": "layer_backdrop",
+        "kind": "background",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_backdrop",
+        "depth": 0.18
+      },
+      {
+        "id": "layer_ground",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_ground",
+        "depth": 1
+      },
+      {
+        "id": "ground",
+        "parent": "layer_ground",
+        "kind": "environment",
+        "world": {
+          "x": 180.0,
+          "y": 510.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_ground",
+        "depth": 1
+      },
+      {
+        "id": "layer_distance",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_distance",
+        "depth": 0.48
+      },
+      {
+        "id": "distance",
+        "parent": "layer_distance",
+        "kind": "background",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_distance",
+        "depth": 0.48
+      },
+      {
+        "id": "layer_objects",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "tree_left_0",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 44.80584233678979,
+          "y": 367.28872955237614,
+          "scale": 0.6571530207607525,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "tree_right_0",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 308.51558143401945,
+          "y": 369.5083131912216,
+          "scale": 0.6362538120484632,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "tree_left_1",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 49.974235186957216,
+          "y": 394.52737991675616,
+          "scale": 0.7567935907658567,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "tree_right_1",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 310.38387333489555,
+          "y": 395.0248430691952,
+          "scale": 0.7611216847615907,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "tree_left_2",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 58.07568088634511,
+          "y": 413.29303858354757,
+          "scale": 0.8147346750723723,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "tree_right_2",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 303.69991646564597,
+          "y": 419.64405225272395,
+          "scale": 0.8218551457360512,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "tree_left_3",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 70.78441831640458,
+          "y": 441.6936789499029,
+          "scale": 0.9357932984623836,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "tree_right_3",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 299.21032819594524,
+          "y": 442.3343149835683,
+          "scale": 0.9101909446180202,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "tree_right_4",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 285.8516725815374,
+          "y": 460.0580001558643,
+          "scale": 1.0553197759140562,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "tree_left_4",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 69.8671363937899,
+          "y": 468.62382771065063,
+          "scale": 1.077481624380133,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "trail_boulder",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 65.0,
+          "y": 530.0,
+          "scale": 0.25,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "layer_people",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_people",
+        "depth": 1
+      },
+      {
+        "id": "rowan",
+        "parent": "layer_people",
+        "kind": "character",
+        "world": {
+          "x": 123.95844023478432,
+          "y": 525.0,
+          "scale": 0.47,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_people",
+        "depth": 1
+      },
+      {
+        "id": "layer_foreground",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_foreground",
+        "depth": 1.4
+      },
+      {
+        "id": "foreground",
+        "parent": "layer_foreground",
+        "kind": "asset",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_foreground",
+        "depth": 1.4
+      }
+    ],
+    "painter_ids": [
+      "sky",
+      "backdrop",
+      "ground",
+      "distance",
+      "tree_left_0",
+      "tree_right_0",
+      "tree_left_1",
+      "tree_right_1",
+      "tree_left_2",
+      "tree_right_2",
+      "tree_left_3",
+      "tree_right_3",
+      "tree_right_4",
+      "tree_left_4",
+      "trail_boulder",
+      "rowan",
+      "foreground"
+    ],
+    "path_allowance": 1876,
+    "operation_allowance": 39700,
+    "character_ground_contacts": {
+      "rowan": {
+        "ground_id": "ground",
+        "world": [
+          123.95844023478432,
+          525.0
+        ],
+        "screen": [
+          122.30437198970822,
+          529.4806863847914
+        ]
+      }
+    },
+    "camera": {
+      "x": 0.10111933999934752,
+      "y": -1.0168532233332246,
+      "zoom": 1.0277106652916652
+    }
+  },
+  "generated_assets": [
+    {
+      "id": "generated_backdrop",
+      "paths": 3,
+      "operations": 51,
+      "path_bound": 96,
+      "operation_bound": 1400,
+      "geometry_sha256": "e9c19df0d8add253bd3d90b66fc776c245d45830f1b3a20e0165b05050d7893c",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_distance",
+      "paths": 35,
+      "operations": 158,
+      "path_bound": 200,
+      "operation_bound": 3000,
+      "geometry_sha256": "c6be52ec73a866c0882044eb2d7832a0cc438f834451dbf645d7dd4581e2caba",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_foreground",
+      "paths": 74,
+      "operations": 660,
+      "path_bound": 200,
+      "operation_bound": 5000,
+      "geometry_sha256": "6b6fa5907c01babac3162f7f2ad491e139e1f642f91525a8266ebc66d0726d81",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_sky",
+      "paths": 7,
+      "operations": 46,
+      "path_bound": 40,
+      "operation_bound": 800,
+      "geometry_sha256": "9dee866396bcad4f5047b947f1055b958a7fd89a895d3abc84191ff5c7b43c25",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_tree_left_0",
+      "paths": 45,
+      "operations": 346,
+      "path_bound": 80,
+      "operation_bound": 2000,
+      "geometry_sha256": "dd58eaf726148db8779d8dbc2749a06a42969a0d4bcd6876eb0e047503c55dbe",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_tree_right_0",
+      "paths": 45,
+      "operations": 346,
+      "path_bound": 80,
+      "operation_bound": 2000,
+      "geometry_sha256": "0df08c8dbef179b223fe8cbcd56e2f762619a6725f27070cc33029efa50737ec",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_tree_left_1",
+      "paths": 45,
+      "operations": 346,
+      "path_bound": 80,
+      "operation_bound": 2000,
+      "geometry_sha256": "078c1a73224082d41867e7670355e94852f7f770c323dafe001c6b983541c7c8",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_tree_right_1",
+      "paths": 45,
+      "operations": 346,
+      "path_bound": 80,
+      "operation_bound": 2000,
+      "geometry_sha256": "e5d88c53f72085639f5ba80bb19e24770145f7b9e2ec76a4c3fc97964e0839a5",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_tree_left_2",
+      "paths": 45,
+      "operations": 346,
+      "path_bound": 80,
+      "operation_bound": 2000,
+      "geometry_sha256": "63209276fa5d979c86c3e6b56c0d5854eb50d2271f94af00e8dea76fd1c452ed",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_tree_right_2",
+      "paths": 45,
+      "operations": 346,
+      "path_bound": 80,
+      "operation_bound": 2000,
+      "geometry_sha256": "1feca4925f971283324e4cf1d3307d3c81b4f5d371a538b71f75030a84e0a263",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_tree_left_3",
+      "paths": 45,
+      "operations": 346,
+      "path_bound": 80,
+      "operation_bound": 2000,
+      "geometry_sha256": "5abf348fb8ff0add2e2269c6e6248db4329d1386f3dbe9fad9713b291615382c",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_tree_right_3",
+      "paths": 45,
+      "operations": 346,
+      "path_bound": 80,
+      "operation_bound": 2000,
+      "geometry_sha256": "6bde11956a05debe3f575940ba3cb2fb542ff4df41b8ae2cbb062748aba3600e",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_tree_right_4",
+      "paths": 45,
+      "operations": 346,
+      "path_bound": 80,
+      "operation_bound": 2000,
+      "geometry_sha256": "9f44cde87ea73962b2a9b8094f84123f4d9a5b06e569015ff0054b20ac336e65",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_tree_left_4",
+      "paths": 45,
+      "operations": 346,
+      "path_bound": 80,
+      "operation_bound": 2000,
+      "geometry_sha256": "763a11efa323ec331ea41f0ff7e0de54f9cf156887ea95b1d8efefeb348086bc",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_ground",
+      "paths": 79,
+      "operations": 861,
+      "path_bound": 220,
+      "operation_bound": 2600,
+      "geometry_sha256": "2fe66c4812f804f45cd42b9489673380928d9864c3b51b4e76406687019c058a",
+      "support_envelope": [
+        -175,
+        -75,
+        175,
+        130
+      ]
+    },
+    {
+      "id": "generated_trail_boulder",
+      "paths": 22,
+      "operations": 247,
+      "path_bound": 64,
+      "operation_bound": 900,
+      "geometry_sha256": "d69791e2b7c43138f2f0b0a2920101b1f2bc2d742bf6216ed3bc5478f4760dcd",
+      "support_envelope": null
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "pytest",
+    "--basetemp",
+    "outputs/pytest-phase5b-handoff",
+    "--junitxml=outputs/phase5b-handoff-tests.xml",
+    "-q"
+  ],
+  "returncode": 1,
+  "capture": "pipe saved after child reaped"
+}

@@ -1,0 +1,84 @@
+[
+  {
+    "command": [
+      "/workspace/scratch/2a96718c6b46/reelforge/.venv/bin/python",
+      "tools/procedural_environment.py",
+      "render",
+      "examples/procedural/settlement_street_417.json",
+      "--output-dir",
+      "/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5b/settlement_street_417",
+      "--stills-only"
+    ],
+    "returncode": 0,
+    "stdout": "{\"success\": true, \"frames\": 90, \"report\": \"/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5b/settlement_street_417\"}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/scratch/2a96718c6b46/reelforge/.venv/bin/python",
+      "tools/procedural_environment.py",
+      "render",
+      "examples/procedural/settlement_street_33.json",
+      "--output-dir",
+      "/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5b/settlement_street_33",
+      "--stills-only"
+    ],
+    "returncode": 0,
+    "stdout": "{\"success\": true, \"frames\": 90, \"report\": \"/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5b/settlement_street_33\"}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/scratch/2a96718c6b46/reelforge/.venv/bin/python",
+      "tools/procedural_environment.py",
+      "render",
+      "examples/procedural/settlement_street_417.json",
+      "--output-dir",
+      "/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5b/settlement_video"
+    ],
+    "returncode": 1,
+    "stdout": "{\"ok\": false, \"error\": {\"code\": \"TRANSACTION_CLEANUP\", \"message\": \"Completed transaction path reappeared: /workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5b/settlement_video/.reelforge-encode-geyddryf\"}}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/scratch/2a96718c6b46/reelforge/.venv/bin/python",
+      "tools/procedural_environment.py",
+      "render",
+      "examples/procedural/rocky_shelter_417.json",
+      "--output-dir",
+      "/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5b/rocky_shelter_417",
+      "--stills-only"
+    ],
+    "returncode": 0,
+    "stdout": "{\"success\": true, \"frames\": 90, \"report\": \"/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5b/rocky_shelter_417\"}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/scratch/2a96718c6b46/reelforge/.venv/bin/python",
+      "tools/procedural_environment.py",
+      "render",
+      "examples/procedural/rocky_shelter_3.json",
+      "--output-dir",
+      "/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5b/rocky_shelter_3",
+      "--stills-only"
+    ],
+    "returncode": 0,
+    "stdout": "{\"success\": true, \"frames\": 90, \"report\": \"/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5b/rocky_shelter_3\"}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/scratch/2a96718c6b46/reelforge/.venv/bin/python",
+      "tools/procedural_environment.py",
+      "render",
+      "examples/procedural/rocky_shelter_417.json",
+      "--output-dir",
+      "/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5b/rocky_video"
+    ],
+    "returncode": 0,
+    "stdout": "{\"success\": true, \"frames\": 90, \"report\": \"/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5b/rocky_video\"}\n",
+    "stderr": ""
+  }
+]

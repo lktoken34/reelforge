@@ -1,0 +1,13 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "pytest",
+    "--basetemp",
+    "outputs/pytest-phase5b-final-framing",
+    "--junitxml=outputs/phase5b-final-framing.xml",
+    "-q"
+  ],
+  "returncode": 1,
+  "capture": "Pipe saved after child reaped; final framing source"
+}
