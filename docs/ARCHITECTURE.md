@@ -142,3 +142,10 @@ module validates layout/count, owns FFmpeg and publishes only a completed encode
 utilities handle finite waits and borrowed views. Resources owns Linux admission/measurement
 without importing media. The fixed diagnostic frame function is not a general animation engine.
 See VIDEO_PIPELINE.md for exact contracts and PHASE2B_HARDWARE.md for measured whole-job scope.
+
+## Phase 3B environment boundary
+
+`environments` now owns one pure vector orchard recipe, explicit immutable depth layers,
+bounded camera math and a native-free six-field preset. It returns the existing DrawPath
+vocabulary. No episode schema, backend, encoder or resource-policy boundary changed.
+See CINEMATIC_ENVIRONMENT.md and PHASE3B_REPORT.md; external review is pending.

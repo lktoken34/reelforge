@@ -89,3 +89,16 @@ jobs:
             outputs/ci-polish-review/
           retention-days: 30
           if-no-files-found: error
+
+      - name: Phase 3B development environment quality proofs
+        run: |
+          uv run --frozen --extra renderer python tools/validate_environment.py examples/environments/orchard_push.json
+          uv run --frozen --extra renderer python tools/render_environment.py --output-dir outputs/ci-environment --stills-only
+          uv run --frozen --extra renderer python tools/render_environment.py --output-dir outputs/ci-environment
+          uv run --frozen --extra renderer python tools/environment_review.py --output-dir outputs/ci-environment --repeat-dir outputs/ci-environment-repeat
+      - uses: actions/upload-artifact@v4
+        with:
+          name: phase3b-environment-visual-review
+          path: outputs/ci-environment/
+          retention-days: 30
+          if-no-files-found: error

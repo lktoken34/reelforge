@@ -176,3 +176,10 @@ The original clip and 17-joint rig are preserved. The same six preset fields acc
 added look_around/react actions and surprised/frightened/determined expressions.
 Artistic/catalog acceptance is pending independent review. Target deployment remains blocked;
 no memory/security policy changed. Stop after Phase 3A.1.
+
+### Phase 3B review candidate
+
+One original code-authored orchard environment, bounded shot presets and six-second Rowan
+integration are available for external review. See [environment contract](docs/CINEMATIC_ENVIRONMENT.md),
+[technical/artistic assessment](docs/PHASE3B_REPORT.md) and [visual artifacts](artifacts/phase3b/).
+Production episode rendering remains unavailable; target deployment remains blocked.

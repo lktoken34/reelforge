@@ -21,8 +21,8 @@ local input in a later contract version, not a feature of this manifest.
 
 Episode restrictions above do not prevent an engineer from changing engine code for an
 explicit engine-development task. Read architecture, hardware constraints and roadmap first.
-Current approved engineering scope is Phase 3A.1: refine Rowan motion/contact, bounded
-secondary motion, expressive acting and matched visual comparison on development hardware. Keep drawing/video
+Current assigned engineering scope is Phase 3B: one original farm/orchard environment,
+bounded layers/camera/atmosphere, existing Rowan preset integration and visual proofs on development hardware. Keep drawing/video
 commands out of manifests and the installed CLI. Do not begin the next milestone without a new
 assignment following external review. Do not delegate to other agents unless explicitly requested.
 
@@ -50,7 +50,7 @@ Actual target-VM evidence and external review remain required; development resul
 certify deployment. Read docs/MEMORY_OBSERVABILITY.md and
 docs/TARGET_VM_PHASE2C1_PROMPT.md before target work. Use strict policy by default; the
 explicit guest fallback flag never ignores a discovered limit. Do not deploy to Muse Spark
-during Phase 3A. Review docs/CHARACTER_RIG.md. Stop after Phase 3A.1 for independent artistic/architectural review.
+during Phase 3A. Review docs/CHARACTER_RIG.md. Stop after Phase 3B for independent artistic/architectural review.
 
 ## Experimental character-preset work
 
@@ -60,3 +60,11 @@ When explicitly assigned a character study, use the six-field data contract in
 published IDs/actions/bounds; do not supply joint mathematics or alter artwork/engine source.
 This validation does not make an episode render-ready. The fixed render_character.py proof
 is an engineering tool, and no production episode rendering command is advertised.
+
+## Experimental environment presets
+
+Read `docs/CINEMATIC_ENVIRONMENT.md` and copy `examples/environments/orchard_push.json`.
+Validate with `python tools/validate_environment.py PATH`. Select only published environment,
+shot IDs and numeric bounds; never author paths/camera equations in scene data. The fixed
+render_environment.py quality proof is engineering tooling, not a production episode command.
+The environment has not passed external artistic or architectural review yet.
