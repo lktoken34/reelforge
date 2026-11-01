@@ -229,3 +229,11 @@ transforms, layers, ground binding and camera references. See [authoring contrac
 [proofs](artifacts/phase5a/). Run python tools/scene.py capabilities, then validate/inspect/render.
 Legacy story/audio contracts and the production episode CLI are unchanged. All new scene tests
 pass locally; full-suite cleanup failures on this host still require isolated validation.
+
+## Experimental procedural environments (Phase 5B)
+
+Three original bounded environment families compile environment-0.1 requests into the
+accepted scene graph. See [the authoring guide](docs/PROCEDURAL_ENVIRONMENTS.md) for
+capabilities, exact fields and CLI examples, and [the review report](docs/PHASE5B_REPORT.md)
+for visual evidence, measured costs and development-host validation limitations.
+The production episode interface remains not render-ready.

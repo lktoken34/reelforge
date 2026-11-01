@@ -1,0 +1,22 @@
+{
+  "schema_version": "environment-0.1",
+  "title": "Woodland Trail \u2014 seed 417",
+  "family": "woodland_trail",
+  "seed": 417,
+  "composition": {
+    "density": 2,
+    "path_alignment": 0,
+    "structure": 0.7,
+    "framing": 0.8,
+    "detail": "rich"
+  },
+  "art_direction": {
+    "lighting": "dusk",
+    "atmosphere": 0.7
+  },
+  "rowan": {
+    "enabled": true,
+    "action": "look_around",
+    "side": "left"
+  }
+}

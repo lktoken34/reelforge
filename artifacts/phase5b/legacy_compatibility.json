@@ -1,0 +1,12 @@
+{
+  "base": "e9a38b12806c2bbaa396b9d3577f3342b379d364",
+  "all_12_legacy_pixel_checkpoints_equal": true,
+  "phase5a_9_scene_checkpoints": "Covered by new regression test against accepted stored hashes",
+  "original_videos_sha256": {
+    "artifacts/phase4a/story.mp4": "46e9ed06b457b36401612de61b0edb73fa968efb38ed856bd763f5f08376f622",
+    "artifacts/phase4b/story.mp4": "fbe626a8371c8c8a1584d7c220adcf7799d0ec41d50758e43d5b33f658f831cd",
+    "artifacts/phase4b1/av-first/story.mp4": "fbe626a8371c8c8a1584d7c220adcf7799d0ec41d50758e43d5b33f658f831cd"
+  },
+  "scene_01_contract_unchanged": true,
+  "story_audio_contracts_unchanged": true
+}

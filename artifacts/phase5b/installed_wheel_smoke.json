@@ -1,0 +1,90 @@
+{
+  "passed": true,
+  "outside_checkout": true,
+  "dependency_setup": "Fresh venv; pinned runtime distributions copied from existing accepted no-Cairo environment because offline cache lacked jsonschema. Newly built project wheel installed separately with --no-deps; uv pip check passed.",
+  "initial_offline_resolution": "Unavailable jsonschema cache; not a package defect",
+  "checks": [
+    {
+      "command": [
+        "uv",
+        "pip",
+        "install",
+        "--no-deps",
+        "--python",
+        "/workspace/scratch/2a96718c6b46/reelforge/outputs/phase5b-wheel-handoff/bin/python",
+        "/workspace/scratch/2a96718c6b46/reelforge/dist/reelforge_v2-0.6.0-py3-none-any.whl"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "Using Python 3.12.14 environment at: outputs/phase5b-wheel-handoff\nResolved 1 package in 1ms\nPrepared 1 package in 7ms\nInstalled 1 package in 2ms\n + reelforge-v2==0.6.0 (from file:///workspace/scratch/2a96718c6b46/reelforge/dist/reelforge_v2-0.6.0-py3-none-any.whl)\n"
+    },
+    {
+      "command": [
+        "uv",
+        "pip",
+        "check",
+        "--python",
+        "/workspace/scratch/2a96718c6b46/reelforge/outputs/phase5b-wheel-handoff/bin/python"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "Using Python 3.12.14 environment at: /workspace/scratch/2a96718c6b46/reelforge/outputs/phase5b-wheel-handoff\nChecked 7 packages in 0.47ms\nAll installed packages are compatible\n"
+    },
+    {
+      "command": [
+        "/workspace/scratch/2a96718c6b46/reelforge/outputs/phase5b-wheel-handoff/bin/reelforge",
+        "capabilities"
+      ],
+      "returncode": 0,
+      "stdout": "{\"commands\": [\"capabilities\", \"schema\", \"validate\"], \"engine_version\": \"0.6.0\", \"limits\": {\"input_bytes\": 1048576, \"issues\": 32, \"nesting\": 32, \"total_frames\": 18000}, \"ok\": true, \"phase\": 1, \"profiles\": {\"preview_360p\": [360, 640], \"target_720p\": [720, 1280]}, \"render_available\": false, \"schema_versions\": [\"2.0-draft1\"]}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/2a96718c6b46/reelforge/outputs/phase5b-wheel-handoff/bin/reelforge",
+        "schema"
+      ],
+      "returncode": 0,
+      "stdout": "{\"$id\": \"urn:reelforge:project:2.0-draft1\", \"$schema\": \"https://json-schema.org/draft/2020-12/schema\", \"additionalProperties\": false, \"properties\": {\"output\": {\"additionalProperties\": false, \"properties\": {\"fps\": {\"enum\": [24, 25, 30], \"type\": \"integer\"}, \"profile\": {\"enum\": [\"preview_360p\", \"target_720p\"]}}, \"required\": [\"profile\", \"fps\"], \"type\": \"object\"}, \"project_id\": {\"pattern\": \"^[a-z][a-z0-9_]{0,63}(?![\\\\s\\\\S])\", \"type\": \"string\"}, \"scenes\": {\"items\": {\"additionalProperties\": false, \"properties\": {\"duration_frames\": {\"maximum\": 1800, \"minimum\": 1, \"type\": \"integer\"}, \"id\": {\"pattern\": \"^[a-z][a-z0-9_]{0,63}(?![\\\\s\\\\S])\", \"type\": \"string\"}, \"intent\": {\"maxLength\": 2000, \"minLength\": 1, \"pattern\": \"\\\\S\", \"type\": \"string\"}}, \"required\": [\"id\", \"duration_frames\", \"intent\"], \"type\": \"object\"}, \"maxItems\": 256, \"minItems\": 1, \"type\": \"array\"}, \"schema_version\": {\"const\": \"2.0-draft1\"}, \"seed\": {\"maximum\": 2147483647, \"minimum\": 0, \"type\": \"integer\"}}, \"required\": [\"schema_version\", \"project_id\", \"seed\", \"output\", \"scenes\"], \"title\": \"ReelForge foundation manifest; not a renderable scene language\", \"type\": \"object\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/2a96718c6b46/reelforge/outputs/phase5b-wheel-handoff/bin/reelforge",
+        "validate",
+        "/workspace/scratch/2a96718c6b46/reelforge/examples/foundation/project.json"
+      ],
+      "returncode": 0,
+      "stdout": "{\"manifest_sha256\": \"3bfca4a208d36926c78335c6e2441a2c7bbb55456b35bfec4ea2631b4972f983\", \"ok\": true, \"render_ready\": false, \"scene_count\": 2, \"schema_version\": \"2.0-draft1\", \"total_frames\": 150}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/2a96718c6b46/reelforge/outputs/phase5b-wheel-handoff/bin/python",
+        "-c",
+        "import importlib.util,json,sys\nfrom pathlib import Path\nimport reelforge\nfrom reelforge.procedural.contract import load_environment\nfrom reelforge.procedural.compiler import compile_environment\nassert importlib.util.find_spec('cairo') is None\nassert 'site-packages' in reelforge.__file__\nroot=Path(sys.argv[1]);out={}\nfor p in (root/'examples/procedural').glob('*.json'):\n plan,c=compile_environment(load_environment(p));out[p.name]={'nodes':len(c.scene.nodes),'paths':c.path_allowance}\nassert len(out)==6\nassert 'cairo' not in sys.modules\nprint(json.dumps({'installed_module':reelforge.__file__,'cairo_installed':False,'all_six_native_free_compilations':out}))\n",
+        "/workspace/scratch/2a96718c6b46/reelforge"
+      ],
+      "returncode": 0,
+      "stdout": "{\"installed_module\": \"/workspace/scratch/2a96718c6b46/reelforge/outputs/phase5b-wheel-handoff/lib/python3.12/site-packages/reelforge/__init__.py\", \"cairo_installed\": false, \"all_six_native_free_compilations\": {\"woodland_trail_417.json\": {\"nodes\": 25, \"paths\": 1876}, \"woodland_trail_9.json\": {\"nodes\": 25, \"paths\": 1876}, \"settlement_street_417.json\": {\"nodes\": 25, \"paths\": 2152}, \"settlement_street_33.json\": {\"nodes\": 25, \"paths\": 2152}, \"rocky_shelter_417.json\": {\"nodes\": 24, \"paths\": 1700}, \"rocky_shelter_3.json\": {\"nodes\": 24, \"paths\": 1700}}}\n",
+      "stderr": ""
+    }
+  ],
+  "final_source_reinstall": {
+    "command": [
+      "uv",
+      "pip",
+      "install",
+      "--reinstall-package",
+      "reelforge-v2",
+      "--no-deps",
+      "--python",
+      "/workspace/scratch/2a96718c6b46/reelforge/outputs/phase5b-wheel-handoff/bin/python",
+      "/workspace/scratch/2a96718c6b46/reelforge/dist/reelforge_v2-0.6.0-py3-none-any.whl"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "Using Python 3.12.14 environment at: outputs/phase5b-wheel-handoff\nResolved 1 package in 1ms\nPrepared 1 package in 9ms\nUninstalled 1 package in 4ms\nInstalled 1 package in 2ms\n ~ reelforge-v2==0.6.0 (from file:///workspace/scratch/2a96718c6b46/reelforge/dist/reelforge_v2-0.6.0-py3-none-any.whl)\n"
+  },
+  "final_source_verified": true
+}

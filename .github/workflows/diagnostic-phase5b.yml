@@ -1,0 +1,252 @@
+name: phase5b-independent-diagnostic
+
+on:
+  push:
+    branches:
+      - diagnostic-phase5b-procedural-environments
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diagnostic:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.13.4"
+          python-version: "3.12"
+
+      - name: Install native dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            libcairo2-dev pkg-config python3-dev build-essential ffmpeg
+
+      - name: Sync pinned dependencies
+        run: uv sync --frozen --extra renderer
+
+      - name: Run three fresh full suites
+        shell: bash
+        run: |
+          set +e
+          mkdir -p outputs/diagnostic
+          overall=0
+          for run in 1 2 3; do
+            base="outputs/diagnostic/pytest-run-${run}"
+            log="outputs/diagnostic/suite-${run}.log"
+            junit="outputs/diagnostic/suite-${run}.xml"
+            uv run --frozen --extra renderer pytest \
+              --basetemp "$base" \
+              --junitxml "$junit" 2>&1 | tee "$log"
+            code=${PIPESTATUS[0]}
+            printf 'exit_code=%s\n' "$code" | tee -a "$log"
+            if [ "$code" -ne 0 ]; then
+              overall=1
+            fi
+          done
+          uv run python -c '
+          import json
+          import xml.etree.ElementTree as ET
+          from pathlib import Path
+
+          def totals(element):
+              tag = element.tag.rsplit("}", 1)[-1]
+              children = [
+                  child for child in element
+                  if child.tag.rsplit("}", 1)[-1] == "testsuite"
+              ]
+              if tag in {"testsuites", "testsuite"} and children:
+                  values = [totals(child) for child in children]
+                  return {
+                      key: sum(value[key] for value in values)
+                      for key in ("tests", "failures", "errors", "skipped")
+                  } | {"time_seconds": sum(value["time_seconds"] for value in values)}
+              if tag != "testsuite":
+                  raise ValueError(f"unexpected JUnit root: {element.tag}")
+              return {
+                  "tests": int(element.attrib.get("tests", 0)),
+                  "failures": int(element.attrib.get("failures", 0)),
+                  "errors": int(element.attrib.get("errors", 0)),
+                  "skipped": int(element.attrib.get("skipped", 0)),
+                  "time_seconds": float(element.attrib.get("time", 0)),
+              }
+
+          summary = []
+          for path in sorted(Path("outputs/diagnostic").glob("suite-*.xml")):
+              root = ET.parse(path).getroot()
+              summary.append({"run": int(path.stem.split("-")[1]), **totals(root)})
+          Path("outputs/diagnostic/suite-summary.json").write_text(
+              json.dumps(summary, indent=2) + "\n"
+          )
+          if len(summary) != 3 or any(
+              item["tests"] != 692
+              or item["failures"]
+              or item["errors"]
+              or item["skipped"]
+              for item in summary
+          ):
+              raise SystemExit("JUnit suite gate failed")
+          '
+          parser_code=$?
+          if [ "$parser_code" -ne 0 ]; then
+            overall=1
+          fi
+          exit "$overall"
+
+      - name: Validate procedural manifests and determinism
+        if: always()
+        shell: bash
+        run: |
+          set +e
+          mkdir -p outputs/diagnostic/procedural
+          overall=0
+          for name in woodland_trail_9 woodland_trail_417 \
+            settlement_street_33 settlement_street_417 \
+            rocky_shelter_3 rocky_shelter_417; do
+            uv run --frozen python tools/procedural_environment.py validate \
+              "examples/procedural/${name}.json" \
+              > "outputs/diagnostic/procedural/${name}-validate.json"
+            [ "${PIPESTATUS[0]}" -eq 0 ] || overall=1
+            uv run --frozen python tools/procedural_environment.py inspect \
+              "examples/procedural/${name}.json" \
+              > "outputs/diagnostic/procedural/${name}-inspect.json"
+            [ "${PIPESTATUS[0]}" -eq 0 ] || overall=1
+          done
+          uv run --frozen --extra renderer python tools/review_procedural.py \
+            > outputs/diagnostic/procedural/review.log
+          [ "${PIPESTATUS[0]}" -eq 0 ] || overall=1
+          uv run python -c '
+          import json
+          from pathlib import Path
+
+          names = (
+              "woodland_trail_9", "woodland_trail_417",
+              "settlement_street_33", "settlement_street_417",
+              "rocky_shelter_3", "rocky_shelter_417",
+          )
+          report = json.loads(Path("artifacts/phase5b/determinism_report.json").read_text())
+          examples = report["examples"]
+          pairs = (
+              ("woodland_trail_9", "woodland_trail_417"),
+              ("settlement_street_33", "settlement_street_417"),
+              ("rocky_shelter_3", "rocky_shelter_417"),
+          )
+          bounds = {"nodes": 64, "instances": 32, "paths": 4096, "operations": 80000}
+          failures = []
+          for name in names:
+              item = examples[name]
+              if not item["deterministic_out_of_order"]:
+                  failures.append(f"{name}: out-of-order determinism")
+              for frame, values in item["actual_paths_ops"].items():
+                  if values[0] > bounds["paths"] or values[1] > bounds["operations"]:
+                      failures.append(f"{name}:{frame}: path/operation bound")
+              if item["nodes"] > bounds["nodes"] or item["instances"] > bounds["instances"]:
+                  failures.append(f"{name}: node/instance bound")
+          for left, right in pairs:
+              if examples[left]["geometry_sha256"] == examples[right]["geometry_sha256"]:
+                  failures.append(f"{left}/{right}: seed geometry did not differ")
+          Path("outputs/diagnostic/procedural/determinism-summary.json").write_text(
+              json.dumps({"passed": not failures, "failures": failures, "bounds": bounds},
+                         indent=2) + "\n"
+          )
+          raise SystemExit(1 if failures else 0)
+          '
+          [ "$?" -eq 0 ] || overall=1
+          exit "$overall"
+
+      - name: Render one clean proof per environment family
+        if: always()
+        shell: bash
+        run: |
+          set +e
+          mkdir -p outputs/diagnostic/renders
+          overall=0
+          for family in woodland settlement rocky; do
+            case "$family" in
+              woodland) request=woodland_trail_417 ;;
+              settlement) request=settlement_street_417 ;;
+              rocky) request=rocky_shelter_417 ;;
+            esac
+            uv run --frozen --extra renderer python tools/procedural_environment.py render \
+              "examples/procedural/${request}.json" \
+              --output-dir "outputs/diagnostic/renders/${family}" \
+              > "outputs/diagnostic/renders/${family}.log" 2>&1
+            [ "${PIPESTATUS[0]}" -eq 0 ] || overall=1
+          done
+          exit "$overall"
+
+      - name: Verify procedural videos, legacy regressions and cleanup
+        if: always()
+        shell: bash
+        run: |
+          set +e
+          mkdir -p outputs/diagnostic/av outputs/diagnostic/legacy
+          overall=0
+          for pair in \
+            "woodland:artifacts/phase5b/woodland_video/scene.mp4" \
+            "settlement:artifacts/phase5b/settlement_video/scene.mp4" \
+            "rocky:artifacts/phase5b/rocky_video/scene.mp4"; do
+            family="${pair%%:*}"
+            video="${pair#*:}"
+            ffprobe -v error -count_frames -show_streams -show_format -of json "$video" \
+              > "outputs/diagnostic/av/${family}-ffprobe.json"
+            probe=$?
+            ffmpeg -v error -i "$video" -f null - \
+              > "outputs/diagnostic/av/${family}-decode.log" 2>&1
+            decode=$?
+            uv run python -c '
+            import json, sys
+            from pathlib import Path
+            data = json.loads(Path(sys.argv[1]).read_text())
+            streams = data["streams"]
+            video = next(item for item in streams if item["codec_type"] == "video")
+            ok = (
+                video["codec_name"] == "h264"
+                and video["pix_fmt"] == "yuv420p"
+                and video["width"] == 720 and video["height"] == 1280
+                and video["avg_frame_rate"] == "30/1"
+                and video.get("nb_read_frames", video.get("nb_frames")) == "90"
+                and video["duration"] == "3.000000"
+            )
+            raise SystemExit(0 if ok else 1)
+            ' "outputs/diagnostic/av/${family}-ffprobe.json"
+            metadata=$?
+            printf '{"probe":%s,"decode":%s,"metadata":%s}\n' "$probe" "$decode" "$metadata" \
+              > "outputs/diagnostic/av/${family}-status.json"
+            [ "$probe" -eq 0 ] && [ "$decode" -eq 0 ] && [ "$metadata" -eq 0 ] || overall=1
+          done
+          uv run --frozen --extra renderer python tools/legacy_scene_checkpoints.py \
+            --output outputs/diagnostic/legacy/legacy-current.json \
+            > outputs/diagnostic/legacy/checkpoints.log
+          [ "${PIPESTATUS[0]}" -eq 0 ] || overall=1
+          uv run --frozen python tools/verify_scene_legacy_audio.py \
+            > outputs/diagnostic/legacy/audio.log
+          [ "${PIPESTATUS[0]}" -eq 0 ] || overall=1
+          uv run --frozen --extra renderer python tools/review_scenes.py \
+            > outputs/diagnostic/legacy/phase5a-scenes.log
+          [ "${PIPESTATUS[0]}" -eq 0 ] || overall=1
+          find artifacts outputs -type d \( \
+            -name '.reelforge-audio-*' -o -name '.reelforge-encode-*' \
+          \) -not -path 'outputs/diagnostic/pytest-run-*' -print \
+            > outputs/diagnostic/av/restored-private-paths.txt
+          private_paths=0
+          [ -s outputs/diagnostic/av/restored-private-paths.txt ] && private_paths=1
+          printf '{"private_paths":%s}\n' "$private_paths" \
+            > outputs/diagnostic/av/cleanup-status.json
+          [ "$private_paths" -eq 0 ] || overall=1
+          exit "$overall"
+
+      - name: Upload diagnostic evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase5b-independent-diagnostic
+          path: |
+            outputs/diagnostic/
+            artifacts/phase5b/
+          retention-days: 30
+          if-no-files-found: error

@@ -1,0 +1,25 @@
+{
+  "scope": "Final framing geometry; media consistency separate from cleanup acceptance",
+  "families": {
+    "settlement": {
+      "all_90_source_and_decoded_frames_equal": true,
+      "first_job_success": false,
+      "repeat_job_success": false,
+      "repeat_error": {
+        "code": "TRANSACTION_CLEANUP",
+        "message": "Completed transaction path reappeared: /workspace/scratch/2a96718c6b46/reelforge/outputs/phase5b-framing-repeat-settlement/.reelforge-encode-grggfiji"
+      },
+      "repeat_peak_mib": 96.921875
+    },
+    "rocky": {
+      "all_90_source_and_decoded_frames_equal": true,
+      "first_job_success": true,
+      "repeat_job_success": false,
+      "repeat_error": {
+        "code": "TRANSACTION_CLEANUP",
+        "message": "Completed transaction path reappeared: /workspace/scratch/2a96718c6b46/reelforge/outputs/phase5b-framing-repeat-rocky/.reelforge-encode-s7nhzc3p"
+      },
+      "repeat_peak_mib": 99.71875
+    }
+  }
+}

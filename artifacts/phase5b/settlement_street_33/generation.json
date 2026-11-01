@@ -1,0 +1,721 @@
+{
+  "contract": "environment-0.1",
+  "request": {
+    "title": "Settlement Street \u2014 seed 33",
+    "family": "settlement_street",
+    "seed": 33,
+    "density": 2,
+    "alignment": 0,
+    "structure": 0.7,
+    "framing": 0.8,
+    "detail": "rich",
+    "lighting": "dusk",
+    "atmosphere": 0.7,
+    "rowan": true,
+    "action": "look_around",
+    "side": "left"
+  },
+  "plan": {
+    "request": {
+      "title": "Settlement Street \u2014 seed 33",
+      "family": "settlement_street",
+      "seed": 33,
+      "density": 2,
+      "alignment": 0,
+      "structure": 0.7,
+      "framing": 0.8,
+      "detail": "rich",
+      "lighting": "dusk",
+      "atmosphere": 0.7,
+      "rowan": true,
+      "action": "look_around",
+      "side": "left"
+    },
+    "horizon": 321.1186953762573,
+    "vanishing_x": 206.69454283967755,
+    "bend": 53.62567742654484,
+    "objects": [
+      {
+        "id": "sky",
+        "recipe": "sky",
+        "layer": "sky",
+        "x": 0,
+        "y": 0,
+        "scale": 1
+      },
+      {
+        "id": "backdrop",
+        "recipe": "backdrop",
+        "layer": "backdrop",
+        "x": 0,
+        "y": 0,
+        "scale": 1
+      },
+      {
+        "id": "ground",
+        "recipe": "ground",
+        "layer": "ground",
+        "x": 180,
+        "y": 510,
+        "scale": 1
+      },
+      {
+        "id": "distance",
+        "recipe": "distance",
+        "layer": "distance",
+        "x": 0,
+        "y": 0,
+        "scale": 1
+      },
+      {
+        "id": "building_left_0",
+        "recipe": "building",
+        "layer": "objects",
+        "x": 35.00720233901919,
+        "y": 375.4866685867922,
+        "scale": 0.6145189334042083
+      },
+      {
+        "id": "building_left_2",
+        "recipe": "building",
+        "layer": "objects",
+        "x": 65.3006176308237,
+        "y": 426.20990662669243,
+        "scale": 0.8021393944987845
+      },
+      {
+        "id": "building_left_4",
+        "recipe": "building",
+        "layer": "objects",
+        "x": 64.9462531348699,
+        "y": 468.1094675550801,
+        "scale": 1.0110728869187127
+      },
+      {
+        "id": "building_left_1",
+        "recipe": "building",
+        "layer": "objects",
+        "x": 39.93763638744326,
+        "y": 404.1820491980046,
+        "scale": 0.7292334976882323
+      },
+      {
+        "id": "building_right_0",
+        "recipe": "building",
+        "layer": "objects",
+        "x": 334.5664716196955,
+        "y": 375.7831368462033,
+        "scale": 0.63387793291742
+      },
+      {
+        "id": "building_right_2",
+        "recipe": "building",
+        "layer": "objects",
+        "x": 354.0231787276574,
+        "y": 427.2819835695268,
+        "scale": 0.8405534011353435
+      },
+      {
+        "id": "building_right_4",
+        "recipe": "building",
+        "layer": "objects",
+        "x": 365.46814932222196,
+        "y": 473.0398784339975,
+        "scale": 1.022082381578683
+      },
+      {
+        "id": "building_right_1",
+        "recipe": "building",
+        "layer": "objects",
+        "x": 343.5256422356173,
+        "y": 397.2561374729856,
+        "scale": 0.6990444163093209
+      },
+      {
+        "id": "street_crate",
+        "recipe": "prop",
+        "layer": "objects",
+        "x": 95,
+        "y": 500,
+        "scale": 1
+      },
+      {
+        "id": "street_barrel",
+        "recipe": "prop",
+        "layer": "objects",
+        "x": 306,
+        "y": 470,
+        "scale": 0.8
+      },
+      {
+        "id": "regrowth",
+        "recipe": "tree",
+        "layer": "objects",
+        "x": 350,
+        "y": 475,
+        "scale": 0.38
+      },
+      {
+        "id": "foreground",
+        "recipe": "foreground",
+        "layer": "foreground",
+        "x": 0,
+        "y": 0,
+        "scale": 1
+      }
+    ],
+    "actor_x": 222.08652814355816,
+    "actor_y": 525,
+    "path_allowance": 2152,
+    "operation_allowance": 36400,
+    "node_allowance": 25,
+    "instance_allowance": 17
+  },
+  "graph": {
+    "schema_version": "scene-0.1",
+    "title": "Settlement Street \u2014 seed 33",
+    "frame": 45,
+    "hierarchy": [
+      {
+        "id": "root",
+        "parent": null,
+        "kind": "root",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": null,
+        "depth": null
+      },
+      {
+        "id": "layer_sky",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_sky",
+        "depth": 0
+      },
+      {
+        "id": "sky",
+        "parent": "layer_sky",
+        "kind": "background",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_sky",
+        "depth": 0
+      },
+      {
+        "id": "layer_backdrop",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_backdrop",
+        "depth": 0.18
+      },
+      {
+        "id": "backdrop",
+        "parent": "layer_backdrop",
+        "kind": "background",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_backdrop",
+        "depth": 0.18
+      },
+      {
+        "id": "layer_ground",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_ground",
+        "depth": 1
+      },
+      {
+        "id": "ground",
+        "parent": "layer_ground",
+        "kind": "environment",
+        "world": {
+          "x": 180.0,
+          "y": 510.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_ground",
+        "depth": 1
+      },
+      {
+        "id": "layer_distance",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_distance",
+        "depth": 0.48
+      },
+      {
+        "id": "distance",
+        "parent": "layer_distance",
+        "kind": "background",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_distance",
+        "depth": 0.48
+      },
+      {
+        "id": "layer_objects",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "building_left_0",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 35.00720233901919,
+          "y": 375.4866685867922,
+          "scale": 0.6145189334042083,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "building_right_0",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 334.5664716196955,
+          "y": 375.7831368462033,
+          "scale": 0.63387793291742,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "building_right_1",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 343.5256422356173,
+          "y": 397.2561374729856,
+          "scale": 0.6990444163093209,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "building_left_1",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 39.93763638744326,
+          "y": 404.1820491980046,
+          "scale": 0.7292334976882323,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "building_left_2",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 65.3006176308237,
+          "y": 426.20990662669243,
+          "scale": 0.8021393944987845,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "building_right_2",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 354.0231787276574,
+          "y": 427.2819835695268,
+          "scale": 0.8405534011353435,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "building_left_4",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 64.9462531348699,
+          "y": 468.1094675550801,
+          "scale": 1.0110728869187127,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "street_barrel",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 306.0,
+          "y": 470.0,
+          "scale": 0.8,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "building_right_4",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 365.46814932222196,
+          "y": 473.0398784339975,
+          "scale": 1.022082381578683,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "regrowth",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 350.0,
+          "y": 475.0,
+          "scale": 0.38,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "street_crate",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 95.0,
+          "y": 500.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "layer_people",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_people",
+        "depth": 1
+      },
+      {
+        "id": "rowan",
+        "parent": "layer_people",
+        "kind": "character",
+        "world": {
+          "x": 222.08652814355816,
+          "y": 525.0,
+          "scale": 0.47,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_people",
+        "depth": 1
+      },
+      {
+        "id": "layer_foreground",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_foreground",
+        "depth": 1.4
+      },
+      {
+        "id": "foreground",
+        "parent": "layer_foreground",
+        "kind": "asset",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_foreground",
+        "depth": 1.4
+      }
+    ],
+    "painter_ids": [
+      "sky",
+      "backdrop",
+      "ground",
+      "distance",
+      "building_left_0",
+      "building_right_0",
+      "building_right_1",
+      "building_left_1",
+      "building_left_2",
+      "building_right_2",
+      "building_left_4",
+      "street_barrel",
+      "building_right_4",
+      "regrowth",
+      "street_crate",
+      "rowan",
+      "foreground"
+    ],
+    "path_allowance": 2152,
+    "operation_allowance": 36400,
+    "character_ground_contacts": {
+      "rowan": {
+        "ground_id": "ground",
+        "world": [
+          222.08652814355816,
+          525.0
+        ],
+        "screen": [
+          223.1516544982332,
+          529.4806863847914
+        ]
+      }
+    },
+    "camera": {
+      "x": 0.10111933999934752,
+      "y": -1.0168532233332246,
+      "zoom": 1.0277106652916652
+    }
+  },
+  "generated_assets": [
+    {
+      "id": "generated_backdrop",
+      "paths": 3,
+      "operations": 51,
+      "path_bound": 96,
+      "operation_bound": 1400,
+      "geometry_sha256": "779ae65527e5d545177ec3bfe49c8f80d985b0eeffb88d8a5a8f57d624be8650",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_distance",
+      "paths": 15,
+      "operations": 68,
+      "path_bound": 200,
+      "operation_bound": 3000,
+      "geometry_sha256": "73713d9a2d4c57fa8f1015c35899df43c3edf7e3bfc35b3886557eda686c4aa7",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_foreground",
+      "paths": 4,
+      "operations": 22,
+      "path_bound": 200,
+      "operation_bound": 5000,
+      "geometry_sha256": "6afa5452a8f0999e131760ee72d13ab2ef0808277099e83d80dc57cc6fe3efdc",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_sky",
+      "paths": 7,
+      "operations": 46,
+      "path_bound": 40,
+      "operation_bound": 800,
+      "geometry_sha256": "2b593c139359d2d962cf81a97e6802a6644bd1ba9d17e141ee2585ff951ca305",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_building_left_0",
+      "paths": 48,
+      "operations": 278,
+      "path_bound": 120,
+      "operation_bound": 1800,
+      "geometry_sha256": "49bcec95c474a9d36bbdf047997622cf05c8c7b162beb34992e6e14c4a2b0df5",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_building_right_0",
+      "paths": 48,
+      "operations": 277,
+      "path_bound": 120,
+      "operation_bound": 1800,
+      "geometry_sha256": "79d32ec1bd8761c4debc7f7faec987b99ae2b39f8408049b9fa4cd92b380267b",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_building_right_1",
+      "paths": 48,
+      "operations": 277,
+      "path_bound": 120,
+      "operation_bound": 1800,
+      "geometry_sha256": "330db7afc7c4df8eb87bacb7c88e5343041ed3df489ca825fc5a36815142afad",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_building_left_1",
+      "paths": 47,
+      "operations": 275,
+      "path_bound": 120,
+      "operation_bound": 1800,
+      "geometry_sha256": "feb5263e0001fc337b6ec228f05256a4491233f284b7338b92394ace40f93b7c",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_building_left_2",
+      "paths": 49,
+      "operations": 280,
+      "path_bound": 120,
+      "operation_bound": 1800,
+      "geometry_sha256": "fe0229c2d26212716ace37629276cbc36670743571268772ef82720e305df8e9",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_building_right_2",
+      "paths": 47,
+      "operations": 275,
+      "path_bound": 120,
+      "operation_bound": 1800,
+      "geometry_sha256": "3dfe24fa467c831f7685964725def0ec5401cadfff36799102a934fe827d1afc",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_building_left_4",
+      "paths": 49,
+      "operations": 279,
+      "path_bound": 120,
+      "operation_bound": 1800,
+      "geometry_sha256": "498b6a100ef7c621eebc011b8a029ac05d511b005fc0839341221fad268bf88d",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_street_barrel",
+      "paths": 9,
+      "operations": 29,
+      "path_bound": 50,
+      "operation_bound": 600,
+      "geometry_sha256": "bd7661fc9ca7f520e950c08284bed06db2f3a0f2a9f2f3d69ca22ca16da1340a",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_building_right_4",
+      "paths": 48,
+      "operations": 277,
+      "path_bound": 120,
+      "operation_bound": 1800,
+      "geometry_sha256": "3bcf16ce1a3e6b017469f20822cecfec7f1ea68fc0a09c426a7fc2a898145243",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_regrowth",
+      "paths": 20,
+      "operations": 106,
+      "path_bound": 80,
+      "operation_bound": 2000,
+      "geometry_sha256": "fd04c6e0a5c222c96822f36b4a34f155e1529b2b7e1d2fac33dface01c00dca8",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_street_crate",
+      "paths": 6,
+      "operations": 21,
+      "path_bound": 50,
+      "operation_bound": 600,
+      "geometry_sha256": "9acf84d5e3dc02732588de3e6d47dacb26ef040bcc04382eac1730edd36dbfc3",
+      "support_envelope": null
+    },
+    {
+      "id": "generated_ground",
+      "paths": 79,
+      "operations": 485,
+      "path_bound": 220,
+      "operation_bound": 2600,
+      "geometry_sha256": "a4c5942ef3221ce42b8cee0bb2b43e4096bdbd252765f53f0b829dfca4e5a7a8",
+      "support_envelope": [
+        -175,
+        -75,
+        175,
+        130
+      ]
+    }
+  ]
+}

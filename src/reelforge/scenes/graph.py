@@ -18,6 +18,7 @@ from .contract import (
     Scene,
     fail,
 )
+from .geometry import GeneratedGeometry
 from .transforms import Placement
 
 
@@ -39,6 +40,7 @@ class CompiledScene:
     painter_ids: tuple[str, ...]
     path_allowance: int
     operation_allowance: int
+    generated: tuple[GeneratedGeometry, ...] = ()
 
 
 @dataclass(frozen=True)
@@ -49,7 +51,26 @@ class EvaluatedLayer:
     instance_ids: tuple[str, ...]
 
 
-def compile_scene(scene: Scene) -> CompiledScene:
+def compile_scene(scene: Scene, *, generated: tuple[GeneratedGeometry, ...] = ()) -> CompiledScene:
+    # Only trusted native-free planners can provide sealed geometry. scene-0.1 JSON
+    # continues to resolve exclusively through its original registered catalog.
+    if not isinstance(generated, tuple) or len(generated) > MAX_INSTANCES:
+        fail("/nodes", "Generated geometry catalog exceeds instance budget", "SCENE_BUDGET")
+    if any(not isinstance(g, GeneratedGeometry) for g in generated):
+        fail("/nodes", "Only sealed trusted geometry is supported")
+    if len({g.asset.id for g in generated}) != len(generated):
+        fail("/nodes", "Duplicate generated asset IDs")
+
+    def resolve(asset_id):
+        return next((g.asset for g in generated if g.asset.id == asset_id), None) or asset_by_id(
+            asset_id
+        )
+
+    for i, node in enumerate(scene.nodes):
+        if node.asset_id:
+            asset = resolve(node.asset_id)
+            if asset is None or asset.kind != node.kind or node.variant not in asset.variants:
+                fail(f"/nodes/{i}/asset_id", "Unknown or incompatible trusted asset", "SCENE_ASSET")
     if not 1 <= len(scene.nodes) <= MAX_NODES:
         fail("/nodes", "Node count exceeds the graph budget", "SCENE_BUDGET")
     lookup, indices = {}, {}
@@ -112,7 +133,7 @@ def compile_scene(scene: Scene) -> CompiledScene:
         if n.asset_id:
             if layer is None:
                 fail(p + "/parent", "Visual instances must descend from a layer")
-            asset = asset_by_id(n.asset_id)
+            asset = resolve(n.asset_id)
             if asset.upright and abs(world.angle) > 1e-12:
                 fail(p + "/transform", f"{asset.id} requires zero composed rotation")
         visible = inherited_visible and n.visible
@@ -127,7 +148,7 @@ def compile_scene(scene: Scene) -> CompiledScene:
             continue
         p = f"/nodes/{indices[n.id]}/ground_id"
         ground = lookup.get(n.ground_id)
-        support = asset_by_id(ground.asset_id) if ground is not None else None
+        support = resolve(ground.asset_id) if ground is not None else None
         if support is None or support.support_envelope is None:
             fail(p, "Reference a registered supporting-ground instance")
         actor, floor = worlds[n.id], worlds[ground.id]
@@ -141,8 +162,8 @@ def compile_scene(scene: Scene) -> CompiledScene:
     instances = [n for n in scene.nodes if n.asset_id]
     if len(instances) > MAX_INSTANCES:
         fail("/nodes", f"At most {MAX_INSTANCES} visual instances", "SCENE_BUDGET")
-    paths = sum(asset_by_id(n.asset_id).max_paths for n in instances)
-    ops = sum(asset_by_id(n.asset_id).max_ops for n in instances)
+    paths = sum(resolve(n.asset_id).max_paths for n in instances)
+    ops = sum(resolve(n.asset_id).max_ops for n in instances)
     if paths > MAX_PATHS or ops > MAX_OPS:
         fail(
             "/nodes",
@@ -155,7 +176,7 @@ def compile_scene(scene: Scene) -> CompiledScene:
         for r in resolved
         if r.layer == layer.id and lookup[r.id].asset_id
     )
-    return CompiledScene(scene, tuple(resolved), painter, paths, ops)
+    return CompiledScene(scene, tuple(resolved), painter, paths, ops, generated)
 
 
 def camera_at(compiled: CompiledScene, frame: int) -> Camera:
@@ -187,17 +208,22 @@ def evaluate_layers(compiled: CompiledScene, frame: int) -> tuple[EvaluatedLayer
             if r.layer != layer.id or not r.visible:
                 continue
             n = lookup[name]
-            asset = asset_by_id(n.asset_id)
+            sealed = next((g for g in compiled.generated if g.asset.id == n.asset_id), None)
+            asset = sealed.asset if sealed else asset_by_id(n.asset_id)
             world = camera_world.compose(r.world)
             emitted.append(name)
-            local = recipe(
-                asset,
-                n.variant,
-                scene.warmth,
-                scene.atmosphere,
-                scene.breeze,
-                frame / 30,
-                n.character,
+            local = (
+                sealed.commands
+                if sealed
+                else recipe(
+                    asset,
+                    n.variant,
+                    scene.warmth,
+                    scene.atmosphere,
+                    scene.breeze,
+                    frame / 30,
+                    n.character,
+                )
             )
             commands.extend(world.command(c) for c in local)
         layers.append(EvaluatedLayer(layer.id, layer.depth, tuple(commands), tuple(emitted)))
