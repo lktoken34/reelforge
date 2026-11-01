@@ -7,8 +7,6 @@ import signal
 import time
 from pathlib import Path
 
-from render_video import confirm_transaction_cleanup
-
 from reelforge.characters.study import BACKGROUND, character_frame, pose_sheet
 from reelforge.core.errors import OperationError
 from reelforge.media.encoder import FFmpegEncoder
@@ -73,7 +71,7 @@ def render(output_dir: Path, *, stills_only=False):
         verification = verify_video(
             output, width=720, height=1280, frames=150, cancelled=monitor.cancelled
         )
-        confirm_transaction_cleanup(Path(encoder.command[-1]), output)
+        encoder.confirm_cleanup()
     if renderer.active_surfaces or renderer.allocated_bytes:
         raise OperationError("SURFACE_LEAK", "Character proof retained surfaces")
     observability = memory_observability(monitor.initial, monitor.final)

@@ -10,6 +10,8 @@ from reelforge.contracts.project import load_project
 from reelforge.core.errors import InputError, Issue
 from reelforge.environments.presets import EnvironmentPreset
 
+from .audio_contract import AudioPlan, audio_from_data
+
 VERSION = "story-0.1"
 CAMERAS = ("establishing_wide", "character_reaction", "suspense_reveal")
 MAX_SHOTS, MAX_FRAMES = 8, 900
@@ -62,11 +64,12 @@ class Story:
     title: str
     output: Output
     shots: tuple[Shot, ...]
+    audio: AudioPlan | None = None
 
     def to_data(self) -> dict:
         from dataclasses import asdict
 
-        return {
+        result = {
             "schema_version": self.schema_version,
             "title": self.title,
             "output": asdict(self.output),
@@ -87,12 +90,25 @@ class Story:
                 for s in self.shots
             ],
         }
+        if self.schema_version == "story-0.2":
+            result["audio"] = asdict(self.audio) if self.audio else None
+            if self.audio:
+                result["audio"]["cues"] = list(result["audio"]["cues"])
+        return result
 
 
 def validate_story(data: Any) -> Story:
-    fields(data, {"schema_version", "title", "output", "shots"}, "")
-    if data["schema_version"] != VERSION:
-        fail("/schema_version", f"Use {VERSION}", "STORY_VERSION")
+    if not isinstance(data, dict):
+        fail("", "Expected a story object")
+    version = data.get("schema_version")
+    fields(
+        data,
+        {"schema_version", "title", "output", "shots"}
+        | ({"audio"} if version == "story-0.2" else set()),
+        "",
+    )
+    if version not in (VERSION, "story-0.2"):
+        fail("/schema_version", "Use story-0.1 or story-0.2", "STORY_VERSION")
     if not isinstance(data["title"], str) or (
         not data["title"].strip() or len(data["title"]) > 120
     ):
@@ -176,7 +192,8 @@ def validate_story(data: Any) -> Story:
         fail(
             "/output/frames", f"Must equal the final end_frame ({expected_start})", "STORY_DURATION"
         )
-    return Story(VERSION, data["title"], Output(**out), tuple(shots))
+    audio = audio_from_data(data["audio"], out["frames"]) if version == "story-0.2" else None
+    return Story(version, data["title"], Output(**out), tuple(shots), audio)
 
 
 def load_story(path: Path) -> Story:

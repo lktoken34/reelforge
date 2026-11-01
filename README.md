@@ -207,3 +207,15 @@ See [timeline contract and workflow](docs/SHOT_TIMELINE.md),
 [engineering/artistic review](docs/PHASE4A_REPORT.md) and [proofs](artifacts/phase4a/).
 This experimental tool does not make the production episode CLI render-ready. No target
 deployment or later milestone is approved.
+
+### Phase 4B audio review candidate — cleanup gate blocked
+
+Versioned story-0.2 JSON can select registered narration/effects, frame-grid trims and gains,
+then stream-copy the H.264 video into a verified AAC MP4. Existing story-0.1 stays silent.
+See [audio contract/workflow](docs/AUDIO_SYNC.md), [review report](docs/PHASE4B_REPORT.md),
+and [audio evidence](artifacts/phase4b/). The local post-repeat temporary-file cleanup test
+still fails; this is not an accepted Phase 4B gate or a production/batch rendering API.
+
+Phase 4B.1 cleanup investigation remains blocked: see [CLEANUP_REPAIR.md](docs/CLEANUP_REPAIR.md)
+for verified inode restoration, safety hardening and all three failed suite results. The ZIP is
+a committed review checkpoint, not an approved reliability repair.

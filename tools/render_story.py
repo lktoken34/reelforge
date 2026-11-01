@@ -14,9 +14,11 @@ from reelforge.stories.sampling import sample_story, story_frame
 
 
 def render(story: Story, output_dir: Path) -> dict:
-    # Validation in main happens before optional/native imports or output-directory creation.
-    from render_video import confirm_transaction_cleanup
+    if story.audio is not None:
+        from render_audio_story import render_with_audio
 
+        return render_with_audio(story, output_dir, render_silent=render)
+    # Validation in main happens before optional/native imports or output-directory creation.
     from reelforge.media.encoder import FFmpegEncoder
     from reelforge.media.process import run_bounded
     from reelforge.media.verify import verify_video
@@ -109,7 +111,7 @@ def render(story: Story, output_dir: Path) -> dict:
             raise OperationError(
                 "STORY_STREAMS", "Expected one video stream and no audio/subtitle tracks"
             )
-        confirm_transaction_cleanup(Path(encoder.command[-1]), output)
+        encoder.confirm_cleanup()
     if renderer.active_surfaces or renderer.allocated_bytes:
         raise OperationError("SURFACE_LEAK", "Story rendering retained surfaces")
     observability = memory_observability(monitor.initial, monitor.final)

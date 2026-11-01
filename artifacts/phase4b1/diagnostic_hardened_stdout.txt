@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/2a96718c6b46/reelforge/tools/diagnose_transactions.py", line 237, in <module>
+    diagnose(args.output_dir, args.cycles)
+  File "/workspace/scratch/2a96718c6b46/reelforge/tools/diagnose_transactions.py", line 196, in diagnose
+    render(validate_story(data), output / f"render-{cycle}")
+  File "/workspace/scratch/2a96718c6b46/reelforge/tools/render_story.py", line 20, in render
+    return render_with_audio(story, output_dir, render_silent=render)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/2a96718c6b46/reelforge/tools/render_audio_story.py", line 101, in render_with_audio
+    video_report = render_silent(silent, private / "video")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/2a96718c6b46/reelforge/tools/render_story.py", line 114, in render
+    encoder.confirm_cleanup()
+  File "/workspace/scratch/2a96718c6b46/reelforge/src/reelforge/media/encoder.py", line 294, in confirm_cleanup
+    self._transaction.assert_absent()
+  File "/workspace/scratch/2a96718c6b46/reelforge/src/reelforge/core/transaction.py", line 29, in assert_absent
+    raise OperationError(
+reelforge.core.errors.OperationError: Completed transaction path reappeared: /workspace/scratch/2a96718c6b46/reelforge/outputs/phase4b1-diagnostic-hardened/render-0/.reelforge-audio-pyltp588/video/.reelforge-encode-0w5tv6qh

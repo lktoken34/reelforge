@@ -1,0 +1,469 @@
+.............................................EEEEEEEEE.................. [ 15%]
+........................................................................ [ 30%]
+........................................................................ [ 45%]
+........................................................................ [ 60%]
+........................................................................ [ 75%]
+........................................................................ [ 91%]
+..........................................                               [100%]
+==================================== ERRORS ====================================
+_______ ERROR at setup of test_existing_output_is_protected_before_work ________
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-s...ce/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-suite'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope="module")
+    def template(tmp_path_factory):
+        if not NATIVE:
+            pytest.skip("optional Cairo/FFmpeg")
+        sys.path.insert(0, str(ROOT / "tools"))
+        from render_story import render
+
+        data = load_story(ROOT / "examples/stories/last_farm.json").to_data()
+        data["shots"] = data["shots"][:1]
+        data["shots"][0]["end_frame"] = 30
+        data["output"]["frames"] = 30
+        story = validate_story(data)
+        directory = tmp_path_factory.mktemp("audio-silent-template")
+>       report = render(story, directory)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_audio.py:262:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools/render_story.py:116: in render
+    confirm_transaction_cleanup(Path(encoder.command[-1]), output)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+pending = PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-suite/audio-silent-template0/.reelforge-encode-c1o854t_/pending.mp4')
+output = PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-suite/audio-silent-template0/story.mp4')
+
+    def confirm_transaction_cleanup(pending: Path, output: Path) -> None:
+        """Reconcile only this reaped encoder's private path; never sweep another job's files."""
+        directory = pending.parent
+        if (
+            pending.name != "pending.mp4"
+            or directory.parent != output.parent
+            or not directory.name.startswith(".reelforge-encode-")
+        ):
+            raise OperationError("TRANSACTION_PATH", "Encoder reported an unexpected transaction path")
+        if directory.is_symlink() or pending.is_symlink():
+            raise OperationError("TRANSACTION_PATH", "Refusing symlinked encoder transaction")
+        if directory.exists():
+            # Some checkpointed filesystems retain child-created paths after native cleanup.
+            # The encoder has exited; reconcile only its known pending file, then an empty dir.
+            if any(item != pending for item in directory.iterdir()):
+>               raise OperationError(
+                    "TRANSACTION_PATH", "Unexpected content in private encoder directory"
+                )
+E               reelforge.core.errors.OperationError: Unexpected content in private encoder directory
+
+tools/render_video.py:44: OperationError
+___ ERROR at setup of test_unexpected_stage_failure_removes_private_mp4[mix] ___
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-s...ce/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-suite'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope="module")
+    def template(tmp_path_factory):
+        if not NATIVE:
+            pytest.skip("optional Cairo/FFmpeg")
+        sys.path.insert(0, str(ROOT / "tools"))
+        from render_story import render
+
+        data = load_story(ROOT / "examples/stories/last_farm.json").to_data()
+        data["shots"] = data["shots"][:1]
+        data["shots"][0]["end_frame"] = 30
+        data["output"]["frames"] = 30
+        story = validate_story(data)
+        directory = tmp_path_factory.mktemp("audio-silent-template")
+>       report = render(story, directory)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_audio.py:262:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools/render_story.py:116: in render
+    confirm_transaction_cleanup(Path(encoder.command[-1]), output)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+pending = PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-suite/audio-silent-template0/.reelforge-encode-c1o854t_/pending.mp4')
+output = PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-suite/audio-silent-template0/story.mp4')
+
+    def confirm_transaction_cleanup(pending: Path, output: Path) -> None:
+        """Reconcile only this reaped encoder's private path; never sweep another job's files."""
+        directory = pending.parent
+        if (
+            pending.name != "pending.mp4"
+            or directory.parent != output.parent
+            or not directory.name.startswith(".reelforge-encode-")
+        ):
+            raise OperationError("TRANSACTION_PATH", "Encoder reported an unexpected transaction path")
+        if directory.is_symlink() or pending.is_symlink():
+            raise OperationError("TRANSACTION_PATH", "Refusing symlinked encoder transaction")
+        if directory.exists():
+            # Some checkpointed filesystems retain child-created paths after native cleanup.
+            # The encoder has exited; reconcile only its known pending file, then an empty dir.
+            if any(item != pending for item in directory.iterdir()):
+>               raise OperationError(
+                    "TRANSACTION_PATH", "Unexpected content in private encoder directory"
+                )
+E               reelforge.core.errors.OperationError: Unexpected content in private encoder directory
+
+tools/render_video.py:44: OperationError
+___ ERROR at setup of test_unexpected_stage_failure_removes_private_mp4[mux] ___
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-s...ce/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-suite'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope="module")
+    def template(tmp_path_factory):
+        if not NATIVE:
+            pytest.skip("optional Cairo/FFmpeg")
+        sys.path.insert(0, str(ROOT / "tools"))
+        from render_story import render
+
+        data = load_story(ROOT / "examples/stories/last_farm.json").to_data()
+        data["shots"] = data["shots"][:1]
+        data["shots"][0]["end_frame"] = 30
+        data["output"]["frames"] = 30
+        story = validate_story(data)
+        directory = tmp_path_factory.mktemp("audio-silent-template")
+>       report = render(story, directory)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_audio.py:262:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools/render_story.py:116: in render
+    confirm_transaction_cleanup(Path(encoder.command[-1]), output)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+pending = PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-suite/audio-silent-template0/.reelforge-encode-c1o854t_/pending.mp4')
+output = PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-suite/audio-silent-template0/story.mp4')
+
+    def confirm_transaction_cleanup(pending: Path, output: Path) -> None:
+        """Reconcile only this reaped encoder's private path; never sweep another job's files."""
+        directory = pending.parent
+        if (
+            pending.name != "pending.mp4"
+            or directory.parent != output.parent
+            or not directory.name.startswith(".reelforge-encode-")
+        ):
+            raise OperationError("TRANSACTION_PATH", "Encoder reported an unexpected transaction path")
+        if directory.is_symlink() or pending.is_symlink():
+            raise OperationError("TRANSACTION_PATH", "Refusing symlinked encoder transaction")
+        if directory.exists():
+            # Some checkpointed filesystems retain child-created paths after native cleanup.
+            # The encoder has exited; reconcile only its known pending file, then an empty dir.
+            if any(item != pending for item in directory.iterdir()):
+>               raise OperationError(
+                    "TRANSACTION_PATH", "Unexpected content in private encoder directory"
+                )
+E               reelforge.core.errors.OperationError: Unexpected content in private encoder directory
+
+tools/render_video.py:44: OperationError
+_ ERROR at setup of test_unexpected_stage_failure_removes_private_mp4[verify] __
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-s...ce/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-suite'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope="module")
+    def template(tmp_path_factory):
+        if not NATIVE:
+            pytest.skip("optional Cairo/FFmpeg")
+        sys.path.insert(0, str(ROOT / "tools"))
+        from render_story import render
+
+        data = load_story(ROOT / "examples/stories/last_farm.json").to_data()
+        data["shots"] = data["shots"][:1]
+        data["shots"][0]["end_frame"] = 30
+        data["output"]["frames"] = 30
+        story = validate_story(data)
+        directory = tmp_path_factory.mktemp("audio-silent-template")
+>       report = render(story, directory)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_audio.py:262:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools/render_story.py:116: in render
+    confirm_transaction_cleanup(Path(encoder.command[-1]), output)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+pending = PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-suite/audio-silent-template0/.reelforge-encode-c1o854t_/pending.mp4')
+output = PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-suite/audio-silent-template0/story.mp4')
+
+    def confirm_transaction_cleanup(pending: Path, output: Path) -> None:
+        """Reconcile only this reaped encoder's private path; never sweep another job's files."""
+        directory = pending.parent
+        if (
+            pending.name != "pending.mp4"
+            or directory.parent != output.parent
+            or not directory.name.startswith(".reelforge-encode-")
+        ):
+            raise OperationError("TRANSACTION_PATH", "Encoder reported an unexpected transaction path")
+        if directory.is_symlink() or pending.is_symlink():
+            raise OperationError("TRANSACTION_PATH", "Refusing symlinked encoder transaction")
+        if directory.exists():
+            # Some checkpointed filesystems retain child-created paths after native cleanup.
+            # The encoder has exited; reconcile only its known pending file, then an empty dir.
+            if any(item != pending for item in directory.iterdir()):
+>               raise OperationError(
+                    "TRANSACTION_PATH", "Unexpected content in private encoder directory"
+                )
+E               reelforge.core.errors.OperationError: Unexpected content in private encoder directory
+
+tools/render_video.py:44: OperationError
+_ ERROR at setup of test_audio_cancellation_reaps_actual_child_and_removes_candidate _
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-s...ce/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-suite'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope="module")
+    def template(tmp_path_factory):
+        if not NATIVE:
+            pytest.skip("optional Cairo/FFmpeg")
+        sys.path.insert(0, str(ROOT / "tools"))
+        from render_story import render
+
+        data = load_story(ROOT / "examples/stories/last_farm.json").to_data()
+        data["shots"] = data["shots"][:1]
+        data["shots"][0]["end_frame"] = 30
+        data["output"]["frames"] = 30
+        story = validate_story(data)
+        directory = tmp_path_factory.mktemp("audio-silent-template")
+>       report = render(story, directory)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_audio.py:262:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools/render_story.py:116: in render
+    confirm_transaction_cleanup(Path(encoder.command[-1]), output)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+pending = PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-suite/audio-silent-template0/.reelforge-encode-c1o854t_/pending.mp4')
+output = PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-suite/audio-silent-template0/story.mp4')
+
+    def confirm_transaction_cleanup(pending: Path, output: Path) -> None:
+        """Reconcile only this reaped encoder's private path; never sweep another job's files."""
+        directory = pending.parent
+        if (
+            pending.name != "pending.mp4"
+            or directory.parent != output.parent
+            or not directory.name.startswith(".reelforge-encode-")
+        ):
+            raise OperationError("TRANSACTION_PATH", "Encoder reported an unexpected transaction path")
+        if directory.is_symlink() or pending.is_symlink():
+            raise OperationError("TRANSACTION_PATH", "Refusing symlinked encoder transaction")
+        if directory.exists():
+            # Some checkpointed filesystems retain child-created paths after native cleanup.
+            # The encoder has exited; reconcile only its known pending file, then an empty dir.
+            if any(item != pending for item in directory.iterdir()):
+>               raise OperationError(
+                    "TRANSACTION_PATH", "Unexpected content in private encoder directory"
+                )
+E               reelforge.core.errors.OperationError: Unexpected content in private encoder directory
+
+tools/render_video.py:44: OperationError
+_________ ERROR at setup of test_keyboard_interrupt_cleans_transaction _________
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-s...ce/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-suite'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope="module")
+    def template(tmp_path_factory):
+        if not NATIVE:
+            pytest.skip("optional Cairo/FFmpeg")
+        sys.path.insert(0, str(ROOT / "tools"))
+        from render_story import render
+
+        data = load_story(ROOT / "examples/stories/last_farm.json").to_data()
+        data["shots"] = data["shots"][:1]
+        data["shots"][0]["end_frame"] = 30
+        data["output"]["frames"] = 30
+        story = validate_story(data)
+        directory = tmp_path_factory.mktemp("audio-silent-template")
+>       report = render(story, directory)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_audio.py:262:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools/render_story.py:116: in render
+    confirm_transaction_cleanup(Path(encoder.command[-1]), output)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+pending = PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-suite/audio-silent-template0/.reelforge-encode-c1o854t_/pending.mp4')
+output = PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-suite/audio-silent-template0/story.mp4')
+
+    def confirm_transaction_cleanup(pending: Path, output: Path) -> None:
+        """Reconcile only this reaped encoder's private path; never sweep another job's files."""
+        directory = pending.parent
+        if (
+            pending.name != "pending.mp4"
+            or directory.parent != output.parent
+            or not directory.name.startswith(".reelforge-encode-")
+        ):
+            raise OperationError("TRANSACTION_PATH", "Encoder reported an unexpected transaction path")
+        if directory.is_symlink() or pending.is_symlink():
+            raise OperationError("TRANSACTION_PATH", "Refusing symlinked encoder transaction")
+        if directory.exists():
+            # Some checkpointed filesystems retain child-created paths after native cleanup.
+            # The encoder has exited; reconcile only its known pending file, then an empty dir.
+            if any(item != pending for item in directory.iterdir()):
+>               raise OperationError(
+                    "TRANSACTION_PATH", "Unexpected content in private encoder directory"
+                )
+E               reelforge.core.errors.OperationError: Unexpected content in private encoder directory
+
+tools/render_video.py:44: OperationError
+____________ ERROR at setup of test_disk_preflight_prevents_render _____________
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-s...ce/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-suite'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope="module")
+    def template(tmp_path_factory):
+        if not NATIVE:
+            pytest.skip("optional Cairo/FFmpeg")
+        sys.path.insert(0, str(ROOT / "tools"))
+        from render_story import render
+
+        data = load_story(ROOT / "examples/stories/last_farm.json").to_data()
+        data["shots"] = data["shots"][:1]
+        data["shots"][0]["end_frame"] = 30
+        data["output"]["frames"] = 30
+        story = validate_story(data)
+        directory = tmp_path_factory.mktemp("audio-silent-template")
+>       report = render(story, directory)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_audio.py:262:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools/render_story.py:116: in render
+    confirm_transaction_cleanup(Path(encoder.command[-1]), output)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+pending = PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-suite/audio-silent-template0/.reelforge-encode-c1o854t_/pending.mp4')
+output = PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-suite/audio-silent-template0/story.mp4')
+
+    def confirm_transaction_cleanup(pending: Path, output: Path) -> None:
+        """Reconcile only this reaped encoder's private path; never sweep another job's files."""
+        directory = pending.parent
+        if (
+            pending.name != "pending.mp4"
+            or directory.parent != output.parent
+            or not directory.name.startswith(".reelforge-encode-")
+        ):
+            raise OperationError("TRANSACTION_PATH", "Encoder reported an unexpected transaction path")
+        if directory.is_symlink() or pending.is_symlink():
+            raise OperationError("TRANSACTION_PATH", "Refusing symlinked encoder transaction")
+        if directory.exists():
+            # Some checkpointed filesystems retain child-created paths after native cleanup.
+            # The encoder has exited; reconcile only its known pending file, then an empty dir.
+            if any(item != pending for item in directory.iterdir()):
+>               raise OperationError(
+                    "TRANSACTION_PATH", "Unexpected content in private encoder directory"
+                )
+E               reelforge.core.errors.OperationError: Unexpected content in private encoder directory
+
+tools/render_video.py:44: OperationError
+__ ERROR at setup of test_resource_cancellation_at_final_exit_cannot_publish ___
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-s...ce/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-suite'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope="module")
+    def template(tmp_path_factory):
+        if not NATIVE:
+            pytest.skip("optional Cairo/FFmpeg")
+        sys.path.insert(0, str(ROOT / "tools"))
+        from render_story import render
+
+        data = load_story(ROOT / "examples/stories/last_farm.json").to_data()
+        data["shots"] = data["shots"][:1]
+        data["shots"][0]["end_frame"] = 30
+        data["output"]["frames"] = 30
+        story = validate_story(data)
+        directory = tmp_path_factory.mktemp("audio-silent-template")
+>       report = render(story, directory)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_audio.py:262:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools/render_story.py:116: in render
+    confirm_transaction_cleanup(Path(encoder.command[-1]), output)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+pending = PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-suite/audio-silent-template0/.reelforge-encode-c1o854t_/pending.mp4')
+output = PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-suite/audio-silent-template0/story.mp4')
+
+    def confirm_transaction_cleanup(pending: Path, output: Path) -> None:
+        """Reconcile only this reaped encoder's private path; never sweep another job's files."""
+        directory = pending.parent
+        if (
+            pending.name != "pending.mp4"
+            or directory.parent != output.parent
+            or not directory.name.startswith(".reelforge-encode-")
+        ):
+            raise OperationError("TRANSACTION_PATH", "Encoder reported an unexpected transaction path")
+        if directory.is_symlink() or pending.is_symlink():
+            raise OperationError("TRANSACTION_PATH", "Refusing symlinked encoder transaction")
+        if directory.exists():
+            # Some checkpointed filesystems retain child-created paths after native cleanup.
+            # The encoder has exited; reconcile only its known pending file, then an empty dir.
+            if any(item != pending for item in directory.iterdir()):
+>               raise OperationError(
+                    "TRANSACTION_PATH", "Unexpected content in private encoder directory"
+                )
+E               reelforge.core.errors.OperationError: Unexpected content in private encoder directory
+
+tools/render_video.py:44: OperationError
+_______________ ERROR at setup of test_racing_output_protection ________________
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-s...ce/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-suite'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope="module")
+    def template(tmp_path_factory):
+        if not NATIVE:
+            pytest.skip("optional Cairo/FFmpeg")
+        sys.path.insert(0, str(ROOT / "tools"))
+        from render_story import render
+
+        data = load_story(ROOT / "examples/stories/last_farm.json").to_data()
+        data["shots"] = data["shots"][:1]
+        data["shots"][0]["end_frame"] = 30
+        data["output"]["frames"] = 30
+        story = validate_story(data)
+        directory = tmp_path_factory.mktemp("audio-silent-template")
+>       report = render(story, directory)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_audio.py:262:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools/render_story.py:116: in render
+    confirm_transaction_cleanup(Path(encoder.command[-1]), output)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+pending = PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-suite/audio-silent-template0/.reelforge-encode-c1o854t_/pending.mp4')
+output = PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b-isolated-suite/audio-silent-template0/story.mp4')
+
+    def confirm_transaction_cleanup(pending: Path, output: Path) -> None:
+        """Reconcile only this reaped encoder's private path; never sweep another job's files."""
+        directory = pending.parent
+        if (
+            pending.name != "pending.mp4"
+            or directory.parent != output.parent
+            or not directory.name.startswith(".reelforge-encode-")
+        ):
+            raise OperationError("TRANSACTION_PATH", "Encoder reported an unexpected transaction path")
+        if directory.is_symlink() or pending.is_symlink():
+            raise OperationError("TRANSACTION_PATH", "Refusing symlinked encoder transaction")
+        if directory.exists():
+            # Some checkpointed filesystems retain child-created paths after native cleanup.
+            # The encoder has exited; reconcile only its known pending file, then an empty dir.
+            if any(item != pending for item in directory.iterdir()):
+>               raise OperationError(
+                    "TRANSACTION_PATH", "Unexpected content in private encoder directory"
+                )
+E               reelforge.core.errors.OperationError: Unexpected content in private encoder directory
+
+tools/render_video.py:44: OperationError
+=========================== short test summary info ============================
+ERROR tests/test_audio.py::test_existing_output_is_protected_before_work - re...
+ERROR tests/test_audio.py::test_unexpected_stage_failure_removes_private_mp4[mix]
+ERROR tests/test_audio.py::test_unexpected_stage_failure_removes_private_mp4[mux]
+ERROR tests/test_audio.py::test_unexpected_stage_failure_removes_private_mp4[verify]
+ERROR tests/test_audio.py::test_audio_cancellation_reaps_actual_child_and_removes_candidate
+ERROR tests/test_audio.py::test_keyboard_interrupt_cleans_transaction - reelf...
+ERROR tests/test_audio.py::test_disk_preflight_prevents_render - reelforge.co...
+ERROR tests/test_audio.py::test_resource_cancellation_at_final_exit_cannot_publish
+ERROR tests/test_audio.py::test_racing_output_protection - reelforge.core.err...
+465 passed, 9 errors in 47.85s

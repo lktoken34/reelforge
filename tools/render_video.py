@@ -113,7 +113,7 @@ def render_job(
         raise OperationError(
             "OOM_EVENTS", "Cgroup OOM counters changed during job; result is not a pass"
         )
-    confirm_transaction_cleanup(Path(encoder.command[-1]), output)
+    encoder.confirm_cleanup()
     transaction_clean = not Path(encoder.command[-1]).parent.exists()
     if not transaction_clean:
         raise OperationError(

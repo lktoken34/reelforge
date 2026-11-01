@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "retained_transactions": {
+    "/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase4b1/av-first": [],
+    "/workspace/scratch/2a96718c6b46/reelforge/outputs/phase4b1-av-repeat": []
+  },
+  "scope": "Post-repeat and post-visualization filesystem check; no prior-job sweep"
+}

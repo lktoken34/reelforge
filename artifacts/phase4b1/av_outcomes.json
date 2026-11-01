@@ -1,0 +1,15 @@
+{
+  "scope": "Fresh audio processing and full AV verification; archived silent video reused",
+  "outcomes": [
+    {
+      "directory": "/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase4b1/av-first",
+      "success": true,
+      "wall_seconds": 11.219407612000168
+    },
+    {
+      "directory": "/workspace/scratch/2a96718c6b46/reelforge/outputs/phase4b1-av-repeat",
+      "success": true,
+      "wall_seconds": 10.445523285000036
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "baseline_lifecycle.jsonl": {
+    "event_count": 277,
+    "final_event": "child_started",
+    "reappearances": [
+      {
+        "event_index": 96,
+        "event": "child_reaped",
+        "root": "/workspace/scratch/2a96718c6b46/reelforge/outputs/phase4b1-diagnostic-baseline/render-0/.reelforge-audio-cj7hyf4p/video/.reelforge-encode-d4wn4_rt",
+        "created_identity": {
+          "type": "dir",
+          "inode": 917809,
+          "device": 27,
+          "mode": 16832,
+          "bytes": 4096,
+          "mtime_ns": 1793528622399934596,
+          "ctime_ns": 1793528622399934596
+        },
+        "restored_identity": {
+          "type": "dir",
+          "inode": 917814,
+          "device": 27,
+          "mode": 16832,
+          "bytes": 4096,
+          "mtime_ns": 1793528625877206530,
+          "ctime_ns": 1793528625877206530
+        },
+        "entries": [
+          ".rsync-tmp",
+          ".rsync-tmp/pending.mp4"
+        ]
+      },
+      {
+        "event_index": 233,
+        "event": "child_reaped",
+        "root": "/workspace/scratch/2a96718c6b46/reelforge/outputs/phase4b1-diagnostic-baseline/render-0/.reelforge-audio-cj7hyf4p",
+        "created_identity": {
+          "type": "dir",
+          "inode": 917803,
+          "device": 27,
+          "mode": 16832,
+          "bytes": 4096,
+          "mtime_ns": 1793528621503973535,
+          "ctime_ns": 1793528621503973535
+        },
+        "restored_identity": {
+          "type": "dir",
+          "inode": 917822,
+          "device": 27,
+          "mode": 16832,
+          "bytes": 4096,
+          "mtime_ns": 1793528626075774877,
+          "ctime_ns": 1793528629591622250
+        },
+        "entries": [
+          "assets",
+          "assets/diag_fence.wav",
+          "assets/diag_opening.wav",
+          "assets/diag_suspense.wav",
+          "decoded.f32",
+          "pending.mp4",
+          "reference.f32",
+          "video",
+          "video/.reelforge-encode-d4wn4_rt",
+          "video/.reelforge-encode-d4wn4_rt/pending.mp4",
+          "video/report.json",
+          "video/story.mp4"
+        ]
+      },
+      {
+        "event_index": 233,
+        "event": "child_reaped",
+        "root": "/workspace/scratch/2a96718c6b46/reelforge/outputs/phase4b1-diagnostic-baseline/render-0/.reelforge-audio-cj7hyf4p/video/.reelforge-encode-d4wn4_rt",
+        "created_identity": {
+          "type": "dir",
+          "inode": 917809,
+          "device": 27,
+          "mode": 16832,
+          "bytes": 4096,
+          "mtime_ns": 1793528622399934596,
+          "ctime_ns": 1793528622399934596
+        },
+        "restored_identity": {
+          "type": "dir",
+          "inode": 917825,
+          "device": 27,
+          "mode": 16832,
+          "bytes": 4096,
+          "mtime_ns": 1793528622491930598,
+          "ctime_ns": 1793528629591622250
+        },
+        "entries": [
+          "pending.mp4"
+        ]
+      },
+      {
+        "event_index": 259,
+        "event": "child_reaped",
+        "root": "/workspace/scratch/2a96718c6b46/reelforge/outputs/phase4b1-diagnostic-baseline/render-1/.reelforge-audio-a0qi038m/video/.reelforge-encode-n1tmf0bc",
+        "created_identity": {
+          "type": "dir",
+          "inode": 917820,
+          "device": 27,
+          "mode": 16832,
+          "bytes": 4096,
+          "mtime_ns": 1793528628371675220,
+          "ctime_ns": 1793528628371675220
+        },
+        "restored_identity": {
+          "type": "dir",
+          "inode": 917843,
+          "device": 27,
+          "mode": 16832,
+          "bytes": 4096,
+          "mtime_ns": 1793528632211508470,
+          "ctime_ns": 1793528632211508470
+        },
+        "entries": [
+          "pending.mp4"
+        ]
+      }
+    ],
+    "reaped_children": 58,
+    "surviving_groups_observed": [],
+    "errors": []
+  },
+  "hardened_lifecycle.jsonl": {
+    "event_count": 82,
+    "final_event": "render_error",
+    "reappearances": [
+      {
+        "event_index": 75,
+        "event": "child_reaped",
+        "root": "/workspace/scratch/2a96718c6b46/reelforge/outputs/phase4b1-diagnostic-hardened/render-0/.reelforge-audio-pyltp588/video/.reelforge-encode-0w5tv6qh",
+        "created_identity": {
+          "type": "dir",
+          "inode": 919454,
+          "device": 27,
+          "mode": 16832,
+          "bytes": 4096,
+          "mtime_ns": 1793529326969388668,
+          "ctime_ns": 1793529326969388668
+        },
+        "restored_identity": {
+          "type": "dir",
+          "inode": 919456,
+          "device": 27,
+          "mode": 16832,
+          "bytes": 4096,
+          "mtime_ns": 1793529330612426327,
+          "ctime_ns": 1793529330612426327
+        },
+        "entries": [
+          ".rsync-tmp",
+          ".rsync-tmp/pending.mp4"
+        ]
+      }
+    ],
+    "reaped_children": 18,
+    "surviving_groups_observed": [],
+    "errors": [
+      {
+        "event": "render_error",
+        "code": "TRANSACTION_CLEANUP"
+      }
+    ]
+  }
+}

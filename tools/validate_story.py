@@ -4,7 +4,7 @@ import argparse
 import json
 from pathlib import Path
 
-from reelforge.core.errors import InputError
+from reelforge.core.errors import InputError, OperationError
 from reelforge.stories.contract import load_story
 
 
@@ -14,16 +14,29 @@ def main() -> int:
     args = parser.parse_args()
     try:
         story = load_story(args.story)
+        if story.audio is not None:
+            from reelforge.audio.registry import AudioRegistry
+            from reelforge.resources.monitor import JobMonitor
+
+            root = Path(__file__).resolve().parents[1] / "assets/audio"
+            with JobMonitor(workspace=root) as monitor:
+                AudioRegistry(root).resolve(
+                    story.audio, story.output.frames, cancelled=monitor.cancelled
+                )
     except InputError as exc:
         print(json.dumps({"valid": False, "render_ready": False, "issue": exc.issue.as_dict()}))
         return 2
-    except OSError as exc:
+    except (OSError, OperationError) as exc:
         print(
             json.dumps(
                 {
                     "valid": False,
                     "render_ready": False,
-                    "issue": {"code": "STORY_IO", "path": "", "message": str(exc)},
+                    "issue": {
+                        "code": getattr(exc, "code", "STORY_IO"),
+                        "path": "",
+                        "message": str(exc),
+                    },
                 }
             )
         )

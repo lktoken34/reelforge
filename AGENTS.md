@@ -21,8 +21,8 @@ local input in a later contract version, not a feature of this manifest.
 
 Episode restrictions above do not prevent an engineer from changing engine code for an
 explicit engine-development task. Read architecture, hardware constraints and roadmap first.
-Current assigned engineering scope is Phase 4A: restricted declarative multi-shot sequencing,
-reusing the accepted orchard, Rowan, renderer, encoder and resource policy. Keep drawing/video
+Current assigned engineering scope is Phase 4B: registered frame-grid narration/effect audio,
+reusing the accepted video sequence, renderer, encoder and resource policy. Keep drawing/video
 commands out of manifests and the installed CLI. Do not begin the next milestone without a new
 assignment following external review. Do not delegate to other agents unless explicitly requested.
 
@@ -50,7 +50,7 @@ Actual target-VM evidence and external review remain required; development resul
 certify deployment. Read docs/MEMORY_OBSERVABILITY.md and
 docs/TARGET_VM_PHASE2C1_PROMPT.md before target work. Use strict policy by default; the
 explicit guest fallback flag never ignores a discovered limit. Do not deploy to Muse Spark
-during Phase 3A. Review docs/CHARACTER_RIG.md. Stop after Phase 4A for independent architectural/visual review.
+during Phase 3A. Review docs/CHARACTER_RIG.md. Stop after Phase 4B for independent review.
 
 ## Experimental character-preset work
 
@@ -67,7 +67,7 @@ Read `docs/CINEMATIC_ENVIRONMENT.md` and copy `examples/environments/orchard_pus
 Validate with `python tools/validate_environment.py PATH`. Select only published environment,
 shot IDs and numeric bounds; never author paths/camera equations in scene data. The fixed
 render_environment.py quality proof is engineering tooling, not a production episode command.
-Phase 3B.1 passed external engineering/artistic review. Phase 4A awaits independent review.
+Phase 3B.1 passed external engineering/artistic review. Phase 4A passed review; Phase 4B is an unapproved audio review candidate.
 Read docs/ENVIRONMENT_POLISH.md. Use --basetemp outputs/pytest-phase3b1 for pytest so
 media integration tests satisfy the existing persistent-workspace policy. No GitHub push
 or individual source/binary publishing is authorized for this local export assignment.
@@ -78,5 +78,20 @@ Read docs/SHOT_TIMELINE.md. Copy examples/stories/last_farm.json and change only
 fields/IDs. Validate with python tools/validate_story.py PATH; render the experimental
 study with python tools/render_story.py PATH --output-dir outputs/NAME. Keep the installed
 production episode CLI not render-ready. Timeline JSON cannot contain paths, code, equations,
-audio, arbitrary assets or policy overrides. Use pytest --basetemp outputs/pytest-phase4a.
-Stop after Phase 4A; no push or deployment is authorized.
+arbitrary audio paths, arbitrary assets or policy overrides. Use pytest --basetemp outputs/pytest-phase4a.
+Stop after Phase 4B; no push or deployment is authorized.
+
+## Phase 4B audio candidate
+
+Read docs/AUDIO_SYNC.md and docs/PHASE4B_REPORT.md. story-0.1 is unchanged; story-0.2
+selects registered WAV asset IDs and bounded frame/gain values. Registry import is an operator
+action, never agent-supplied code or FFmpeg expressions. Use pytest --basetemp outputs/pytest-phase4b.
+The post-repeat cleanup regression must remain visible; do not skip it or claim the gate passed.
+Do not advance past Phase 4B until all cleanup guarantees and review requirements pass.
+
+## Phase 4B.1 cleanup investigation
+
+Current assignment is transaction cleanup only on phase4b-cleanup-fix. Read
+docs/CLEANUP_REPAIR.md. Ownership hardening is implemented but persistent pathname restoration
+still blocks acceptance; three full suites failed. Do not weaken or skip those assertions.
+Stop after this investigation checkpoint; no Phase 4C, GitHub push or deployment.
