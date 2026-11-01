@@ -169,9 +169,16 @@ jobs:
           uv run --frozen --extra renderer python tools/verify_cleanup_story.py \
             > outputs/diagnostic/av/phase4b1-cleanup.log 2>&1
           cleanup=$?
-          find outputs artifacts -type d \( \
-            -name '.reelforge-audio-*' -o -name '.reelforge-encode-*' \
-          \) -print > outputs/diagnostic/av/restored-private-paths.txt
+          {
+            find artifacts -type d \( \
+              -name '.reelforge-audio-*' -o -name '.reelforge-encode-*' \
+            \) -print
+            find outputs \
+              -path 'outputs/diagnostic/pytest-run-*' -prune -o \
+              -type d \( \
+                -name '.reelforge-audio-*' -o -name '.reelforge-encode-*' \
+              \) -print
+          } > outputs/diagnostic/av/restored-private-paths.txt
           private_paths=0
           if [ -s outputs/diagnostic/av/restored-private-paths.txt ]; then
             private_paths=1
