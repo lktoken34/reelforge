@@ -75,6 +75,7 @@ jobs:
           exit "$overall"
 
       - name: Verify existing audiovisual proof and cleanup
+        if: always()
         id: av
         shell: bash
         run: |
