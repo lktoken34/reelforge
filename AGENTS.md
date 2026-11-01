@@ -95,3 +95,13 @@ Current assignment is transaction cleanup only on phase4b-cleanup-fix. Read
 docs/CLEANUP_REPAIR.md. Ownership hardening is implemented but persistent pathname restoration
 still blocks acceptance; three full suites failed. Do not weaken or skip those assertions.
 Stop after this investigation checkpoint; no Phase 4C, GitHub push or deployment.
+
+## Current Phase 5A assignment
+
+The user-approved baseline is cdd56d1c183eaacb65b8ba1a11d4dd5f36bfef2e; external Phase 4B.1
+review supersedes historical blocked-status notes above. Implement only scene-0.1 graph/registry
+adapters on phase5a-generalized-scene-graph. Read docs/SCENE_GRAPH.md and docs/PHASE5A_REPORT.md.
+Preserve all ownership, media, resource, legacy contract and artwork behavior. Retain every legacy
+test. Workspace restoration is an environment limitation: never weaken assertions or add speculative
+cleanup patches. No agent delegation was authorized. No GitHub push, deployment, Phase 5B/5C or
+script interpreter is authorized. Stop after local commit and Phase 5A ZIP for independent review.

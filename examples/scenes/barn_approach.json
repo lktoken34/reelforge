@@ -1,0 +1,259 @@
+{
+  "schema_version": "scene-0.1",
+  "title": "A different approach to the barn",
+  "output": {
+    "width": 720,
+    "height": 1280,
+    "fps": 30,
+    "frames": 90,
+    "codec": "h264",
+    "pixel_format": "yuv420p"
+  },
+  "camera": "approach",
+  "art_direction": {
+    "warmth": 0.7,
+    "atmosphere": 0.7,
+    "breeze": 0.4
+  },
+  "nodes": [
+    {
+      "id": "root",
+      "kind": "root",
+      "parent": null,
+      "order": 0,
+      "visible": true,
+      "transform": {
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation_degrees": 0
+      }
+    },
+    {
+      "id": "sky_layer",
+      "kind": "layer",
+      "parent": "root",
+      "order": 0,
+      "visible": true,
+      "transform": {
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation_degrees": 0
+      },
+      "depth": 0
+    },
+    {
+      "id": "sky",
+      "kind": "background",
+      "parent": "sky_layer",
+      "order": 0,
+      "visible": true,
+      "transform": {
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation_degrees": 0
+      },
+      "asset_id": "dusk_sky_01",
+      "variant": "default"
+    },
+    {
+      "id": "distance",
+      "kind": "layer",
+      "parent": "root",
+      "order": 1,
+      "visible": true,
+      "transform": {
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation_degrees": 0
+      },
+      "depth": 0.18
+    },
+    {
+      "id": "hills",
+      "kind": "background",
+      "parent": "distance",
+      "order": 0,
+      "visible": true,
+      "transform": {
+        "x": 180,
+        "y": 340,
+        "scale": 1,
+        "rotation_degrees": 0
+      },
+      "asset_id": "distant_hills_01",
+      "variant": "default"
+    },
+    {
+      "id": "terrain",
+      "kind": "layer",
+      "parent": "root",
+      "order": 2,
+      "visible": true,
+      "transform": {
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation_degrees": 0
+      },
+      "depth": 1
+    },
+    {
+      "id": "ground",
+      "kind": "environment",
+      "parent": "terrain",
+      "order": 0,
+      "visible": true,
+      "transform": {
+        "x": 182,
+        "y": 500,
+        "scale": 1.03,
+        "rotation_degrees": 0
+      },
+      "asset_id": "orchard_ground_01",
+      "variant": "default"
+    },
+    {
+      "id": "structures",
+      "kind": "layer",
+      "parent": "root",
+      "order": 3,
+      "visible": true,
+      "transform": {
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation_degrees": 0
+      },
+      "depth": 0.85
+    },
+    {
+      "id": "people",
+      "kind": "layer",
+      "parent": "root",
+      "order": 5,
+      "visible": true,
+      "transform": {
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation_degrees": 0
+      },
+      "depth": 1
+    },
+    {
+      "id": "rowan",
+      "kind": "character",
+      "parent": "people",
+      "order": 0,
+      "visible": true,
+      "transform": {
+        "x": 105,
+        "y": 515,
+        "scale": 0.75,
+        "rotation_degrees": 0
+      },
+      "asset_id": "rowan_01",
+      "variant": "default",
+      "character": {
+        "character": "rowan_01",
+        "action": "react",
+        "direction": "right",
+        "speed": 1.0,
+        "expression": "concerned",
+        "intensity": 0.8
+      },
+      "ground_id": "ground"
+    },
+    {
+      "id": "foreground",
+      "kind": "layer",
+      "parent": "root",
+      "order": 6,
+      "visible": true,
+      "transform": {
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation_degrees": 0
+      },
+      "depth": 1.4
+    },
+    {
+      "id": "farm",
+      "kind": "group",
+      "parent": "structures",
+      "order": 0,
+      "visible": true,
+      "transform": {
+        "x": 253,
+        "y": 425,
+        "scale": 1.02,
+        "rotation_degrees": 0
+      }
+    },
+    {
+      "id": "barn",
+      "kind": "asset",
+      "parent": "farm",
+      "order": 0,
+      "visible": true,
+      "transform": {
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation_degrees": 0
+      },
+      "asset_id": "barn_01",
+      "variant": "default"
+    },
+    {
+      "id": "rail",
+      "kind": "asset",
+      "parent": "farm",
+      "order": 1,
+      "visible": true,
+      "transform": {
+        "x": -205,
+        "y": 27,
+        "scale": 0.73,
+        "rotation_degrees": 0
+      },
+      "asset_id": "fence_01",
+      "variant": "default"
+    },
+    {
+      "id": "left_tree",
+      "kind": "asset",
+      "parent": "structures",
+      "order": 2,
+      "visible": true,
+      "transform": {
+        "x": 24,
+        "y": 415,
+        "scale": 0.8,
+        "rotation_degrees": -4
+      },
+      "asset_id": "orchard_tree_01",
+      "variant": "compact"
+    },
+    {
+      "id": "foreground_canopy",
+      "kind": "environment",
+      "parent": "foreground",
+      "order": 0,
+      "visible": true,
+      "transform": {
+        "x": 180,
+        "y": 640,
+        "scale": 1,
+        "rotation_degrees": 0
+      },
+      "asset_id": "foreground_boughs_01",
+      "variant": "default"
+    }
+  ]
+}

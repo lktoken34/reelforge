@@ -1,0 +1,42 @@
+{
+  "status": "Implemented; independent review pending; local full-suite gate blocked",
+  "base": "cdd56d1c183eaacb65b8ba1a11d4dd5f36bfef2e",
+  "branch": "phase5a-generalized-scene-graph",
+  "full_tests": {
+    "total": 590,
+    "passed": 587,
+    "failed": 1,
+    "errors": 2,
+    "new_scene_cases": 102,
+    "new_scene_passed": 102,
+    "legacy_cases_preserved": 488
+  },
+  "full_gate_passed": false,
+  "isolated_validation_available": false,
+  "legacy_pixel_checkpoints_equal": 12,
+  "legacy_audio_verification_passed": true,
+  "all_90_repeat_video_frames_equal": true,
+  "new_video_frames": 90,
+  "new_video_resolution": [
+    720,
+    1280
+  ],
+  "new_video_fps": 30,
+  "new_video_codec": "h264/yuv420p",
+  "video_bytes": 1014543,
+  "sampled_tree_peak_rss_bytes": 102703104,
+  "encoded_fps": 10.57894088930291,
+  "wall_seconds": 10.347005386998717,
+  "lint": "passed",
+  "format": "passed",
+  "wheel_sdist": "passed",
+  "installed_wheel_without_cairo": "passed",
+  "resource_policy_changed": false,
+  "no_push_deployment_or_next_phase": true,
+  "missing_visual_artifacts": [],
+  "remaining_requirements": [
+    "Clean complete regression run in suitable isolated validation environment",
+    "Independent architectural and visual review"
+  ],
+  "latest_movie_and_legacy_av_cleanup_check_passed": true
+}

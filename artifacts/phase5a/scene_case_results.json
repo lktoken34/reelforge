@@ -1,0 +1,414 @@
+{
+  "source": "Final full-suite JUnit XML",
+  "passed": 102,
+  "cases": [
+    {
+      "name": "test_strict_fields[path0-story-0.2]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path1-]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path2-                                                                                                                        x]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path3-True]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path4-29]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path5-181]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path6-30.0]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path7-360]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path8-h265]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path9-rgba]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path10-eval(1)]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path11-value11]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path12-nan]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path13-inf]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path14-True]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path15-../root]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path16-python]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path17-1]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path18-1.0]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path19--1]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path20-True]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path21-nan]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path22-1281]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path23--721]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path24-0]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path25--1]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path26-value26]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path27-46]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path28-1.51]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path29-True]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path30-../image.png]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path31-no_asset]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path32-barn_01]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path33-new_texture]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path34-sky]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path35-None]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path36-walk]",
+      "status": "passed"
+    },
+    {
+      "name": "test_strict_fields[path37-run]",
+      "status": "passed"
+    },
+    {
+      "name": "test_unknown_fields_are_rejected[path0]",
+      "status": "passed"
+    },
+    {
+      "name": "test_unknown_fields_are_rejected[path1]",
+      "status": "passed"
+    },
+    {
+      "name": "test_unknown_fields_are_rejected[path2]",
+      "status": "passed"
+    },
+    {
+      "name": "test_unknown_fields_are_rejected[path3]",
+      "status": "passed"
+    },
+    {
+      "name": "test_unknown_fields_are_rejected[path4]",
+      "status": "passed"
+    },
+    {
+      "name": "test_huge_integer_is_actionable_not_overflow",
+      "status": "passed"
+    },
+    {
+      "name": "test_examples_compile_and_match_published_schema[rural_outpost]",
+      "status": "passed"
+    },
+    {
+      "name": "test_examples_compile_and_match_published_schema[tree_path]",
+      "status": "passed"
+    },
+    {
+      "name": "test_examples_compile_and_match_published_schema[barn_approach]",
+      "status": "passed"
+    },
+    {
+      "name": "test_topology_rejection[cycle]",
+      "status": "passed"
+    },
+    {
+      "name": "test_topology_rejection[duplicate]",
+      "status": "passed"
+    },
+    {
+      "name": "test_topology_rejection[missing_parent]",
+      "status": "passed"
+    },
+    {
+      "name": "test_topology_rejection[second_root]",
+      "status": "passed"
+    },
+    {
+      "name": "test_topology_rejection[nested_layer]",
+      "status": "passed"
+    },
+    {
+      "name": "test_topology_rejection[unlayered]",
+      "status": "passed"
+    },
+    {
+      "name": "test_depth_limit",
+      "status": "passed"
+    },
+    {
+      "name": "test_expansion_budgets[nodes]",
+      "status": "passed"
+    },
+    {
+      "name": "test_expansion_budgets[instances]",
+      "status": "passed"
+    },
+    {
+      "name": "test_expansion_budgets[layers]",
+      "status": "passed"
+    },
+    {
+      "name": "test_expansion_budgets[paths]",
+      "status": "passed"
+    },
+    {
+      "name": "test_expansion_budgets[world_scale]",
+      "status": "passed"
+    },
+    {
+      "name": "test_expansion_budgets[world_position]",
+      "status": "passed"
+    },
+    {
+      "name": "test_expansion_budgets[world_rotation]",
+      "status": "passed"
+    },
+    {
+      "name": "test_upright_ground_and_character_reject_effective_rotation",
+      "status": "passed"
+    },
+    {
+      "name": "test_same_asset_has_independent_instances_and_static_attachments",
+      "status": "passed"
+    },
+    {
+      "name": "test_reordered_json_preserves_traversal_and_geometry",
+      "status": "passed"
+    },
+    {
+      "name": "test_visibility_is_inherited_without_bypassing_budget",
+      "status": "passed"
+    },
+    {
+      "name": "test_camera_parallax_and_character_ground_origin",
+      "status": "passed"
+    },
+    {
+      "name": "test_frame_bounds[-1]",
+      "status": "passed"
+    },
+    {
+      "name": "test_frame_bounds[90]",
+      "status": "passed"
+    },
+    {
+      "name": "test_frame_bounds[1.0]",
+      "status": "passed"
+    },
+    {
+      "name": "test_frame_bounds[True]",
+      "status": "passed"
+    },
+    {
+      "name": "test_validation_compilation_never_constructs_cairo",
+      "status": "passed"
+    },
+    {
+      "name": "test_all_examples_avoid_complete_orchard_composition",
+      "status": "passed"
+    },
+    {
+      "name": "test_parent_child_matrix_and_material_preservation[0]",
+      "status": "passed"
+    },
+    {
+      "name": "test_parent_child_matrix_and_material_preservation[0.2]",
+      "status": "passed"
+    },
+    {
+      "name": "test_parent_child_matrix_and_material_preservation[-0.6]",
+      "status": "passed"
+    },
+    {
+      "name": "test_trusted_recipe_overrun_is_detected",
+      "status": "passed"
+    },
+    {
+      "name": "test_pixel_consistency_out_of_order_and_flattened_rotation",
+      "status": "passed"
+    },
+    {
+      "name": "test_scene_render_failure_reaps_encoder_and_surfaces",
+      "status": "passed"
+    },
+    {
+      "name": "test_scene_render_refuses_existing_output[scene.mp4]",
+      "status": "passed"
+    },
+    {
+      "name": "test_scene_render_refuses_existing_output[frame_000.png]",
+      "status": "passed"
+    },
+    {
+      "name": "test_scene_render_refuses_existing_output[render_report.json]",
+      "status": "passed"
+    },
+    {
+      "name": "test_scene_render_refuses_existing_output[None]",
+      "status": "passed"
+    },
+    {
+      "name": "test_cli_invalid_data_creates_no_render_directory",
+      "status": "passed"
+    },
+    {
+      "name": "test_every_registered_variant_stays_inside_its_envelope[dusk_sky_01]",
+      "status": "passed"
+    },
+    {
+      "name": "test_every_registered_variant_stays_inside_its_envelope[distant_hills_01]",
+      "status": "passed"
+    },
+    {
+      "name": "test_every_registered_variant_stays_inside_its_envelope[orchard_ground_01]",
+      "status": "passed"
+    },
+    {
+      "name": "test_every_registered_variant_stays_inside_its_envelope[barn_01]",
+      "status": "passed"
+    },
+    {
+      "name": "test_every_registered_variant_stays_inside_its_envelope[orchard_tree_01]",
+      "status": "passed"
+    },
+    {
+      "name": "test_every_registered_variant_stays_inside_its_envelope[fence_01]",
+      "status": "passed"
+    },
+    {
+      "name": "test_every_registered_variant_stays_inside_its_envelope[foreground_boughs_01]",
+      "status": "passed"
+    },
+    {
+      "name": "test_every_registered_variant_stays_inside_its_envelope[rowan_01]",
+      "status": "passed"
+    },
+    {
+      "name": "test_sole_ground_contact_after_parent_and_camera[idle]",
+      "status": "passed"
+    },
+    {
+      "name": "test_sole_ground_contact_after_parent_and_camera[look_around]",
+      "status": "passed"
+    },
+    {
+      "name": "test_sole_ground_contact_after_parent_and_camera[react]",
+      "status": "passed"
+    },
+    {
+      "name": "test_parent_rotation_can_be_explicitly_counter_rotated",
+      "status": "passed"
+    },
+    {
+      "name": "test_real_scene_stream_decode_and_budget",
+      "status": "passed"
+    },
+    {
+      "name": "test_explicit_supporting_ground_rejection[missing]",
+      "status": "passed"
+    },
+    {
+      "name": "test_explicit_supporting_ground_rejection[wrong_asset]",
+      "status": "passed"
+    },
+    {
+      "name": "test_explicit_supporting_ground_rejection[depth]",
+      "status": "passed"
+    },
+    {
+      "name": "test_explicit_supporting_ground_rejection[hidden]",
+      "status": "passed"
+    },
+    {
+      "name": "test_explicit_supporting_ground_rejection[outside]",
+      "status": "passed"
+    },
+    {
+      "name": "test_ground_binding_uses_registered_support_metadata_not_asset_name",
+      "status": "passed"
+    }
+  ]
+}

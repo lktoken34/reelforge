@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "retained_private_paths": {
+    "/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5a/cinematic": [],
+    "/workspace/scratch/2a96718c6b46/reelforge/outputs/phase5a-legacy-audio": []
+  },
+  "scope": "Read-only check after later native media operations, no sweeps or reconciliation"
+}

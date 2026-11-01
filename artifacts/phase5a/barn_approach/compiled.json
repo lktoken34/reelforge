@@ -1,0 +1,261 @@
+{
+  "schema_version": "scene-0.1",
+  "title": "A different approach to the barn",
+  "frame": 45,
+  "hierarchy": [
+    {
+      "id": "root",
+      "parent": null,
+      "kind": "root",
+      "world": {
+        "x": 0.0,
+        "y": 0.0,
+        "scale": 1,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": null,
+      "depth": null
+    },
+    {
+      "id": "sky_layer",
+      "parent": "root",
+      "kind": "layer",
+      "world": {
+        "x": 0.0,
+        "y": 0.0,
+        "scale": 1,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "sky_layer",
+      "depth": 0
+    },
+    {
+      "id": "sky",
+      "parent": "sky_layer",
+      "kind": "background",
+      "world": {
+        "x": 0.0,
+        "y": 0.0,
+        "scale": 1,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "sky_layer",
+      "depth": 0
+    },
+    {
+      "id": "distance",
+      "parent": "root",
+      "kind": "layer",
+      "world": {
+        "x": 0.0,
+        "y": 0.0,
+        "scale": 1,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "distance",
+      "depth": 0.18
+    },
+    {
+      "id": "hills",
+      "parent": "distance",
+      "kind": "background",
+      "world": {
+        "x": 180.0,
+        "y": 340.0,
+        "scale": 1,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "distance",
+      "depth": 0.18
+    },
+    {
+      "id": "terrain",
+      "parent": "root",
+      "kind": "layer",
+      "world": {
+        "x": 0.0,
+        "y": 0.0,
+        "scale": 1,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "terrain",
+      "depth": 1
+    },
+    {
+      "id": "ground",
+      "parent": "terrain",
+      "kind": "environment",
+      "world": {
+        "x": 182.0,
+        "y": 500.0,
+        "scale": 1.03,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "terrain",
+      "depth": 1
+    },
+    {
+      "id": "structures",
+      "parent": "root",
+      "kind": "layer",
+      "world": {
+        "x": 0.0,
+        "y": 0.0,
+        "scale": 1,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "structures",
+      "depth": 0.85
+    },
+    {
+      "id": "farm",
+      "parent": "structures",
+      "kind": "group",
+      "world": {
+        "x": 253.0,
+        "y": 425.0,
+        "scale": 1.02,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "structures",
+      "depth": 0.85
+    },
+    {
+      "id": "barn",
+      "parent": "farm",
+      "kind": "asset",
+      "world": {
+        "x": 253.0,
+        "y": 425.0,
+        "scale": 1.02,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "structures",
+      "depth": 0.85
+    },
+    {
+      "id": "rail",
+      "parent": "farm",
+      "kind": "asset",
+      "world": {
+        "x": 43.900000000000006,
+        "y": 452.54,
+        "scale": 0.7446,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "structures",
+      "depth": 0.85
+    },
+    {
+      "id": "left_tree",
+      "parent": "structures",
+      "kind": "asset",
+      "world": {
+        "x": 24.0,
+        "y": 415.0,
+        "scale": 0.8,
+        "angle": -0.06981317007977318
+      },
+      "visible": true,
+      "layer": "structures",
+      "depth": 0.85
+    },
+    {
+      "id": "people",
+      "parent": "root",
+      "kind": "layer",
+      "world": {
+        "x": 0.0,
+        "y": 0.0,
+        "scale": 1,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "people",
+      "depth": 1
+    },
+    {
+      "id": "rowan",
+      "parent": "people",
+      "kind": "character",
+      "world": {
+        "x": 105.0,
+        "y": 515.0,
+        "scale": 0.75,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "people",
+      "depth": 1
+    },
+    {
+      "id": "foreground",
+      "parent": "root",
+      "kind": "layer",
+      "world": {
+        "x": 0.0,
+        "y": 0.0,
+        "scale": 1,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "foreground",
+      "depth": 1.4
+    },
+    {
+      "id": "foreground_canopy",
+      "parent": "foreground",
+      "kind": "environment",
+      "world": {
+        "x": 180.0,
+        "y": 640.0,
+        "scale": 1,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "foreground",
+      "depth": 1.4
+    }
+  ],
+  "painter_ids": [
+    "sky",
+    "hills",
+    "ground",
+    "barn",
+    "rail",
+    "left_tree",
+    "rowan",
+    "foreground_canopy"
+  ],
+  "path_allowance": 1536,
+  "operation_allowance": 26300,
+  "character_ground_contacts": {
+    "rowan": {
+      "ground_id": "ground",
+      "world": [
+        105.0,
+        515.0
+      ],
+      "screen": [
+        88.5793611137511,
+        515.2757011655831
+      ]
+    }
+  },
+  "camera": {
+    "x": 12.626399174999184,
+    "y": 5.542133058333062,
+    "zoom": 1.0505898628166628
+  }
+}

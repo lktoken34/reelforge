@@ -1,0 +1,322 @@
+{
+  "scope": "Phase 5A deliverables; archive exports complete committed repository including all accepted prior assets",
+  "full_suite_gate_passed": false,
+  "files": {
+    "artifacts/phase5a/barn_approach/compiled.json": {
+      "bytes": 4860,
+      "sha256": "6b88f22f4ad19438bca6afee119eede3f00519d4b12c99ada59ba9da4b4ed58b"
+    },
+    "artifacts/phase5a/barn_approach/frame_000.png": {
+      "bytes": 214876,
+      "sha256": "4d1286145dfa40fee680c29c138afce059a3a0d8944653824127ebbf14379e44"
+    },
+    "artifacts/phase5a/barn_approach/frame_045.png": {
+      "bytes": 208176,
+      "sha256": "db6489e5c0ade355f21363cc983bbaa37da76242a9a2038f439ec96ce44ba464"
+    },
+    "artifacts/phase5a/barn_approach/frame_089.png": {
+      "bytes": 201619,
+      "sha256": "820b4d48c377816b426763918b8b9e1bba3f3bb0ebf9d59d71741c5764dbaac5"
+    },
+    "artifacts/phase5a/barn_approach/layer_distance.png": {
+      "bytes": 18295,
+      "sha256": "d923542d1d4ba7d960f8f07725665bd6230b70629d1bbe2c87fde914d54619e4"
+    },
+    "artifacts/phase5a/barn_approach/layer_foreground.png": {
+      "bytes": 55297,
+      "sha256": "ee9cdf7f7c647315aba1a9bce71a66dbd7365180c5f893a71bd504952b3744ee"
+    },
+    "artifacts/phase5a/barn_approach/layer_people.png": {
+      "bytes": 44461,
+      "sha256": "6e4143b7ac8fd73e74e82693caf20556359f267687f2f45b98e3d30c35825c65"
+    },
+    "artifacts/phase5a/barn_approach/layer_sky_layer.png": {
+      "bytes": 34548,
+      "sha256": "3c5b0279cf131411da5ab00ea7e7f2f56e5e1514e7fcaab939114da272b496a6"
+    },
+    "artifacts/phase5a/barn_approach/layer_structures.png": {
+      "bytes": 81562,
+      "sha256": "fbf1066339720a4e7a2c94693f72768f756fc9e4726f3cb9c96bf8332f166711"
+    },
+    "artifacts/phase5a/barn_approach/layer_terrain.png": {
+      "bytes": 78478,
+      "sha256": "9776c03c92e9bb3eeaea8031ff9ec975ea1bcf74e4d575d004855f05de7dc148"
+    },
+    "artifacts/phase5a/barn_approach/stills_report.json": {
+      "bytes": 20596,
+      "sha256": "8eb5961f4f31daed94f13c227b616f07d260280e53df710ad85a19f469263bef"
+    },
+    "artifacts/phase5a/barn_approach/structure.png": {
+      "bytes": 44574,
+      "sha256": "8251d1d2b0d16653611e49fdd7a2a912be6af31ca6816af76874b399d1450a27"
+    },
+    "artifacts/phase5a/barn_approach/structure.svg": {
+      "bytes": 5528,
+      "sha256": "575b2cd08765244a0ae708a6989e071c83e53a0e64b48b40349d309d0a67352c"
+    },
+    "artifacts/phase5a/baseline.json": {
+      "bytes": 288,
+      "sha256": "3cc05f965c4d0b71fcea00a8c3ed0570fbf73fd47cd769bef3014dfdba2831fb"
+    },
+    "artifacts/phase5a/baseline_tree_preservation.json": {
+      "bytes": 212,
+      "sha256": "6539f94b79658afc95fe6f4854eb639e543f4bd314d3b45fb16957874f5c1af9"
+    },
+    "artifacts/phase5a/build.txt": {
+      "bytes": 237,
+      "sha256": "097eb48f7fb15697e9461998bc43c5d21a121674896292ec2b1cc9047b025f34"
+    },
+    "artifacts/phase5a/capabilities.json": {
+      "bytes": 1911,
+      "sha256": "ad3480cba47c6b9e0a2966dfa55fecc6624a9b9cfbcbce4feef6e78e0f3573db"
+    },
+    "artifacts/phase5a/cinematic/render_report.json": {
+      "bytes": 35473,
+      "sha256": "ef1fd1e7ee60f73f98d8088992eb8aa893758b218d8780e27ab3380ab161f766"
+    },
+    "artifacts/phase5a/cinematic/scene.mp4": {
+      "bytes": 1014543,
+      "sha256": "3818f026cbcdf775a0faf2bf7bcfa24dd73f7f5f5d652694e6053199f2735b80"
+    },
+    "artifacts/phase5a/cli_inspection.json": {
+      "bytes": 3806,
+      "sha256": "a01f7f745f6439972ba9064cea47f40f961220abca897c681ef7857792d7b257"
+    },
+    "artifacts/phase5a/cli_validation.json": {
+      "bytes": 72,
+      "sha256": "92eff5b08984ac2cd8b39d018b35ee498917bc91cbca3150caa4d8ce39cee47f"
+    },
+    "artifacts/phase5a/composition_contact_sheet.png": {
+      "bytes": 206580,
+      "sha256": "f7c905f5e6acb93bace900e5a164a5e0c6a17dcad0dcfe1c0232dbc4c7fa753c"
+    },
+    "artifacts/phase5a/determinism_report.json": {
+      "bytes": 16922,
+      "sha256": "5ed2ec9b92a0936c5f0e2c08f8732a86a684b4f1427ae5d5a0332a566ce01415"
+    },
+    "artifacts/phase5a/diagram_rasterization_report.json": {
+      "bytes": 13484,
+      "sha256": "09004c401ca5ac7c3adfdf6693fefe659e17cd755f6316d728b0df8f52f138cc"
+    },
+    "artifacts/phase5a/environment_sync.txt": {
+      "bytes": 27,
+      "sha256": "05dad55b441e33b361a01b66f804c54cd310b701dfde428b6a5bf1c0bc4bb62f"
+    },
+    "artifacts/phase5a/full_tests.txt": {
+      "bytes": 7512,
+      "sha256": "01d57b3758124a5f1e9d7f6038de299278e3273a8af7442752497e3b31767ea0"
+    },
+    "artifacts/phase5a/full_tests_before_output_reservation.txt": {
+      "bytes": 23308,
+      "sha256": "d7b4f56fd9ca50e2628e4e5b69842181b51245a9dedde4112199004007951711"
+    },
+    "artifacts/phase5a/full_tests_before_title_fix.txt": {
+      "bytes": 25136,
+      "sha256": "485037355f877a53ee54d2ec8aaa381fb5e2b57374e57b8767e74ecfe9264a0b"
+    },
+    "artifacts/phase5a/full_tests_initial.txt": {
+      "bytes": 25282,
+      "sha256": "6b3a1e18cd4aed399827c77da17bf8065fc5007ab86d39dd7cbe215053884201"
+    },
+    "artifacts/phase5a/full_tests_truncated.txt": {
+      "bytes": 44,
+      "sha256": "0fb1be7819c4f2462ef3520971061413e8793f536f1e258d07466d69ce334a55"
+    },
+    "artifacts/phase5a/isolation_limit.txt": {
+      "bytes": 265,
+      "sha256": "03dcbb4f3b6ac473233a05e7050d4888dcee7a137596ee9c455e64871b76d3f2"
+    },
+    "artifacts/phase5a/legacy_audio_verification.json": {
+      "bytes": 32479,
+      "sha256": "d41280633095ba54ffc974b275973758ccb8515fc2fb70e89dcccd409b7b58b0"
+    },
+    "artifacts/phase5a/legacy_base_pixels.json": {
+      "bytes": 1118,
+      "sha256": "8665f859974548738b0ce8d2c9b5a63d0f8442004822f4dc10a9650eccf523d8"
+    },
+    "artifacts/phase5a/legacy_compatibility.json": {
+      "bytes": 1063,
+      "sha256": "02198d1cc876cc94cdcf673ea56be3fbc28de85b1bd09b8c4c9c8f995852a5b5"
+    },
+    "artifacts/phase5a/legacy_current_pixels.json": {
+      "bytes": 1118,
+      "sha256": "8665f859974548738b0ce8d2c9b5a63d0f8442004822f4dc10a9650eccf523d8"
+    },
+    "artifacts/phase5a/lint.txt": {
+      "bytes": 46,
+      "sha256": "0d0a5b74da5d8d4b16e4d611bd352678db09399a567fffe6540f869a8793bfc9"
+    },
+    "artifacts/phase5a/post_media_cleanup.json": {
+      "bytes": 313,
+      "sha256": "6329fc3815d13e69d8f5716151b9e79b9bf95baa6e721f724b3223eac58fbd57"
+    },
+    "artifacts/phase5a/post_media_cleanup_final.json": {
+      "bytes": 228,
+      "sha256": "ae6b3538cee6712e8ab33dfc8c4bc10b95ee927015116f5898879ce1196bd0b5"
+    },
+    "artifacts/phase5a/project_wheel_install.txt": {
+      "bytes": 308,
+      "sha256": "d655ba459b6a73470446cacc6ef585567d5c1f19ff5323439fcd92dac501ba26"
+    },
+    "artifacts/phase5a/quality_summary.json": {
+      "bytes": 1308,
+      "sha256": "d778bf66b186e2779f728329571367dcdb977b87881be576c4399f741bf8f81a"
+    },
+    "artifacts/phase5a/rural_outpost/compiled.json": {
+      "bytes": 5095,
+      "sha256": "546b73cccd2fc99577d7916970ad4699f4ec84d0365565f6930dd9c8cfa3f590"
+    },
+    "artifacts/phase5a/rural_outpost/frame_000.png": {
+      "bytes": 160064,
+      "sha256": "91a55c2801fee1c323bebe93932c5764b97c9c88d63eb5cb4dec24bc37d7bc05"
+    },
+    "artifacts/phase5a/rural_outpost/frame_045.png": {
+      "bytes": 157866,
+      "sha256": "ed8119c547d218b550afee82e02bf6d9fe3428b869f7ffed9c78884efdf3d1b2"
+    },
+    "artifacts/phase5a/rural_outpost/frame_089.png": {
+      "bytes": 156406,
+      "sha256": "38896b62582fbf6a88f8a8e0b2f1e2afbdbddeca57f584beb14691ccafe25de0"
+    },
+    "artifacts/phase5a/rural_outpost/layer_distance.png": {
+      "bytes": 18296,
+      "sha256": "b2383c1b05c3cd2157aafc52766e1a484f1f4ed282f8f41bcab71531365c5fd2"
+    },
+    "artifacts/phase5a/rural_outpost/layer_foreground.png": {
+      "bytes": 6001,
+      "sha256": "1fa25cea255a158d18e6a591ad466933d3516653263e9f923ad1bfdb730a75d0"
+    },
+    "artifacts/phase5a/rural_outpost/layer_people.png": {
+      "bytes": 30720,
+      "sha256": "da2eb681f97d75ad2945386325f377d7106e05964d4c462ca8e0186b42850b01"
+    },
+    "artifacts/phase5a/rural_outpost/layer_sky_layer.png": {
+      "bytes": 34548,
+      "sha256": "3c5b0279cf131411da5ab00ea7e7f2f56e5e1514e7fcaab939114da272b496a6"
+    },
+    "artifacts/phase5a/rural_outpost/layer_structures.png": {
+      "bytes": 55641,
+      "sha256": "9b5193e24df7a42618254e1db8d7839e652015025a80351b5b2fe32a251f35d8"
+    },
+    "artifacts/phase5a/rural_outpost/layer_terrain.png": {
+      "bytes": 78678,
+      "sha256": "b02e802a1c9d9739b767a2dda527849864186c0e2be4233080288bea3c88126e"
+    },
+    "artifacts/phase5a/rural_outpost/stills_report.json": {
+      "bytes": 20865,
+      "sha256": "f389bca567667a4edd4e8adc214c9f57ebb27f0e8de61f76071763ee00e91145"
+    },
+    "artifacts/phase5a/rural_outpost/structure.png": {
+      "bytes": 45939,
+      "sha256": "58317775cd9dd06036b80974a31f57f4ec5a46ec8daed372a80c32e5cad3c965"
+    },
+    "artifacts/phase5a/rural_outpost/structure.svg": {
+      "bytes": 5861,
+      "sha256": "06af7d0803c65024e9cc1aa971352f5a61d675a820ca89a6b7ae9bf00a1b4c67"
+    },
+    "artifacts/phase5a/scene-0.1.schema.json": {
+      "bytes": 10786,
+      "sha256": "693ecaa353b2099cc8b6f02db3e13dcda6f6044ed6e46fc011424cc183e66051"
+    },
+    "artifacts/phase5a/scene_case_results.json": {
+      "bytes": 10156,
+      "sha256": "f2c9acdaf87d94af10b9c1ab4f033a1fa1fb27ab5736deeb47171a98ba8ec32d"
+    },
+    "artifacts/phase5a/targeted_tests.txt": {
+      "bytes": 179,
+      "sha256": "8b3187b1594c55f4ed50a849e43246f88f04b4155f1a0b5a4b0886c4163461b8"
+    },
+    "artifacts/phase5a/test_execution.json": {
+      "bytes": 373,
+      "sha256": "1ad33d0150f3c7bb4ded72dd59c870c9e66134d0e053423b698da4a39a93663b"
+    },
+    "artifacts/phase5a/tests.xml": {
+      "bytes": 1127797,
+      "sha256": "f40ab9f5b31fef65d8cabb65a859e9b91ff9363242fe839dd877674646a3a861"
+    },
+    "artifacts/phase5a/tree_path/compiled.json": {
+      "bytes": 5718,
+      "sha256": "4ab04386079d82f9f0c04c9b1c97f71c513a72d1c50e042460dac391bbba2b8f"
+    },
+    "artifacts/phase5a/tree_path/frame_000.png": {
+      "bytes": 151687,
+      "sha256": "ef3b888ac0d9daa057ee39fc7891ef133ac99eacb90bb16fd6c1da4a539c2970"
+    },
+    "artifacts/phase5a/tree_path/frame_045.png": {
+      "bytes": 150090,
+      "sha256": "a743a26102a7e207107ee19b5e6cfebde38d3f955b90ea6d4cc91b7a1ba225c9"
+    },
+    "artifacts/phase5a/tree_path/frame_089.png": {
+      "bytes": 150427,
+      "sha256": "05054c4a8591e8375a5683418361e665234d53169db220d5682951dc4e85c91a"
+    },
+    "artifacts/phase5a/tree_path/layer_distance.png": {
+      "bytes": 18066,
+      "sha256": "ca245bc2266c2881cc5a760705c19b9163daaedafc07bdc00ba1239d0f9fdbaa"
+    },
+    "artifacts/phase5a/tree_path/layer_foreground.png": {
+      "bytes": 25644,
+      "sha256": "9426680afa49792e92f4ca9a05e73672cfe5ebd66e4c9615645c288cd42c13ab"
+    },
+    "artifacts/phase5a/tree_path/layer_people.png": {
+      "bytes": 41434,
+      "sha256": "01b28c5a291f861a8dc6530d2d205fabc00d7206a2210d80f5574132361cb558"
+    },
+    "artifacts/phase5a/tree_path/layer_sky_layer.png": {
+      "bytes": 34548,
+      "sha256": "3c5b0279cf131411da5ab00ea7e7f2f56e5e1514e7fcaab939114da272b496a6"
+    },
+    "artifacts/phase5a/tree_path/layer_structures.png": {
+      "bytes": 46600,
+      "sha256": "33332ca427a645cbf74c9b2cb6a01f0198e34f67b958680d3221c11c64461acf"
+    },
+    "artifacts/phase5a/tree_path/layer_terrain.png": {
+      "bytes": 66208,
+      "sha256": "f77e21eb59895b9c143dc3f84c805e24d2d82a8c91e48379085ebfbd641af6e2"
+    },
+    "artifacts/phase5a/tree_path/stills_report.json": {
+      "bytes": 21532,
+      "sha256": "8aa9859bc65039379e56e053ead1df749e2339fc4fd12c29152ea048c0676304"
+    },
+    "artifacts/phase5a/tree_path/structure.png": {
+      "bytes": 54664,
+      "sha256": "199e60e709dbd24eed62ea226f6eae9fc14ee859a39cff679720b275c095312e"
+    },
+    "artifacts/phase5a/tree_path/structure.svg": {
+      "bytes": 6832,
+      "sha256": "34dd9b0832300d489f56625e6e9c46c65273c4c3a07db6dfb9f55e179b0ac290"
+    },
+    "artifacts/phase5a/video_repeat_consistency.json": {
+      "bytes": 264,
+      "sha256": "cf76b16531ec2a51b2b9decc54faf0d124406d3ebe0a30d1406376653ba32c13"
+    },
+    "artifacts/phase5a/video_stdout.txt": {
+      "bytes": 177,
+      "sha256": "547f27821d030c030f1ad1e6815513becc0ad7cfc885fc7fc6d9da4dd6946a59"
+    },
+    "artifacts/phase5a/wheel_smoke.txt": {
+      "bytes": 265,
+      "sha256": "915a6ce66c529ba21ccb41fe751413e23b149dd1ec6688482c2dc18a81b4d078"
+    },
+    "examples/scenes/barn_approach.json": {
+      "bytes": 5056,
+      "sha256": "a5692d73c7ba598c4c71118c8cf41e06613503b9915da0ca8a7052422d33f73f"
+    },
+    "examples/scenes/rural_outpost.json": {
+      "bytes": 5286,
+      "sha256": "c7592ee87426cf3c0253a6c4dad637f0360879acd20d75141037d2143814b7a2"
+    },
+    "examples/scenes/tree_path.json": {
+      "bytes": 5941,
+      "sha256": "1f756b4e5a2247be48aa3ed4da147fbce0c93b247448574f9b0a9f8378a71d6a"
+    },
+    "docs/SCENE_GRAPH.md": {
+      "bytes": 11875,
+      "sha256": "7a1cc7ab316a0720e93ea9c0970b563a8b1be85dbf17bd552db2172faf228d47"
+    },
+    "docs/PHASE5A_REPORT.md": {
+      "bytes": 9833,
+      "sha256": "36d609412d2ec8f3b072d7328fb76878675472c3d63e2c8f25631b0f08152177"
+    }
+  }
+}

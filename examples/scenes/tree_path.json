@@ -1,0 +1,302 @@
+{
+  "schema_version": "scene-0.1",
+  "title": "Between the trees",
+  "output": {
+    "width": 720,
+    "height": 1280,
+    "fps": 30,
+    "frames": 90,
+    "codec": "h264",
+    "pixel_format": "yuv420p"
+  },
+  "camera": "gentle_drift",
+  "art_direction": {
+    "warmth": 0.7,
+    "atmosphere": 0.7,
+    "breeze": 0.4
+  },
+  "nodes": [
+    {
+      "id": "root",
+      "kind": "root",
+      "parent": null,
+      "order": 0,
+      "visible": true,
+      "transform": {
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation_degrees": 0
+      }
+    },
+    {
+      "id": "sky_layer",
+      "kind": "layer",
+      "parent": "root",
+      "order": 0,
+      "visible": true,
+      "transform": {
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation_degrees": 0
+      },
+      "depth": 0
+    },
+    {
+      "id": "sky",
+      "kind": "background",
+      "parent": "sky_layer",
+      "order": 0,
+      "visible": true,
+      "transform": {
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation_degrees": 0
+      },
+      "asset_id": "dusk_sky_01",
+      "variant": "default"
+    },
+    {
+      "id": "distance",
+      "kind": "layer",
+      "parent": "root",
+      "order": 1,
+      "visible": true,
+      "transform": {
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation_degrees": 0
+      },
+      "depth": 0.18
+    },
+    {
+      "id": "hills",
+      "kind": "background",
+      "parent": "distance",
+      "order": 0,
+      "visible": true,
+      "transform": {
+        "x": 180,
+        "y": 360,
+        "scale": 1,
+        "rotation_degrees": 0
+      },
+      "asset_id": "distant_hills_01",
+      "variant": "default"
+    },
+    {
+      "id": "terrain",
+      "kind": "layer",
+      "parent": "root",
+      "order": 2,
+      "visible": true,
+      "transform": {
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation_degrees": 0
+      },
+      "depth": 1
+    },
+    {
+      "id": "ground",
+      "kind": "environment",
+      "parent": "terrain",
+      "order": 0,
+      "visible": true,
+      "transform": {
+        "x": 155,
+        "y": 515,
+        "scale": 1.15,
+        "rotation_degrees": 0
+      },
+      "asset_id": "orchard_ground_01",
+      "variant": "default"
+    },
+    {
+      "id": "structures",
+      "kind": "layer",
+      "parent": "root",
+      "order": 3,
+      "visible": true,
+      "transform": {
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation_degrees": 0
+      },
+      "depth": 0.85
+    },
+    {
+      "id": "people",
+      "kind": "layer",
+      "parent": "root",
+      "order": 5,
+      "visible": true,
+      "transform": {
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation_degrees": 0
+      },
+      "depth": 1
+    },
+    {
+      "id": "rowan",
+      "kind": "character",
+      "parent": "people",
+      "order": 0,
+      "visible": true,
+      "transform": {
+        "x": 243,
+        "y": 535,
+        "scale": 0.72,
+        "rotation_degrees": 0
+      },
+      "asset_id": "rowan_01",
+      "variant": "default",
+      "character": {
+        "character": "rowan_01",
+        "action": "look_around",
+        "direction": "right",
+        "speed": 1.0,
+        "expression": "concerned",
+        "intensity": 0.8
+      },
+      "ground_id": "ground"
+    },
+    {
+      "id": "foreground",
+      "kind": "layer",
+      "parent": "root",
+      "order": 6,
+      "visible": true,
+      "transform": {
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation_degrees": 0
+      },
+      "depth": 1.4
+    },
+    {
+      "id": "left_grove",
+      "kind": "group",
+      "parent": "structures",
+      "order": 0,
+      "visible": true,
+      "transform": {
+        "x": 28,
+        "y": 425,
+        "scale": 0.9,
+        "rotation_degrees": 0
+      }
+    },
+    {
+      "id": "near_tree",
+      "kind": "asset",
+      "parent": "left_grove",
+      "order": 0,
+      "visible": true,
+      "transform": {
+        "x": 0,
+        "y": 0,
+        "scale": 1,
+        "rotation_degrees": 0
+      },
+      "asset_id": "orchard_tree_01",
+      "variant": "broad"
+    },
+    {
+      "id": "far_tree",
+      "kind": "asset",
+      "parent": "left_grove",
+      "order": 1,
+      "visible": true,
+      "transform": {
+        "x": 58,
+        "y": -28,
+        "scale": 0.63,
+        "rotation_degrees": -3
+      },
+      "asset_id": "orchard_tree_01",
+      "variant": "compact"
+    },
+    {
+      "id": "right_grove",
+      "kind": "group",
+      "parent": "structures",
+      "order": 0,
+      "visible": true,
+      "transform": {
+        "x": 326,
+        "y": 452,
+        "scale": 1,
+        "rotation_degrees": 0
+      }
+    },
+    {
+      "id": "right_tree",
+      "kind": "asset",
+      "parent": "right_grove",
+      "order": 0,
+      "visible": true,
+      "transform": {
+        "x": 0,
+        "y": 0,
+        "scale": 1.05,
+        "rotation_degrees": 0
+      },
+      "asset_id": "orchard_tree_01",
+      "variant": "lean"
+    },
+    {
+      "id": "fence",
+      "kind": "asset",
+      "parent": "structures",
+      "order": 2,
+      "visible": true,
+      "transform": {
+        "x": 119,
+        "y": 439,
+        "scale": 0.65,
+        "rotation_degrees": 0
+      },
+      "asset_id": "fence_01",
+      "variant": "default"
+    },
+    {
+      "id": "framing_left",
+      "kind": "asset",
+      "parent": "foreground",
+      "order": 0,
+      "visible": true,
+      "transform": {
+        "x": -6,
+        "y": 624,
+        "scale": 1.8,
+        "rotation_degrees": 0
+      },
+      "asset_id": "orchard_tree_01",
+      "variant": "broad"
+    },
+    {
+      "id": "framing_right",
+      "kind": "asset",
+      "parent": "foreground",
+      "order": 0,
+      "visible": true,
+      "transform": {
+        "x": 385,
+        "y": 610,
+        "scale": 1.7,
+        "rotation_degrees": 0
+      },
+      "asset_id": "orchard_tree_01",
+      "variant": "windswept"
+    }
+  ]
+}

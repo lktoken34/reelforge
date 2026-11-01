@@ -1,0 +1,15 @@
+{
+  "returncode": 1,
+  "command": [
+    "/workspace/scratch/2a96718c6b46/reelforge/.venv/bin/python",
+    "-m",
+    "pytest",
+    "--basetemp",
+    "outputs/pytest-phase5a-output-final",
+    "--junitxml=outputs/phase5a-reserved-tests.xml",
+    "-q"
+  ],
+  "log_capture": "Bounded 2 MiB stdout/stderr, persisted after reaping",
+  "stdout_bytes": 7543,
+  "stderr_bytes": 0
+}

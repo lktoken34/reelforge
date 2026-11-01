@@ -1,0 +1,4 @@
+Docker and Podman executables unavailable.
+unshare --user --map-root-user --mount true
+unshare: write failed /proc/self/uid_map: Operation not permitted
+No namespace/host/resource policy was changed. No isolated remote runner is exposed for unpublished local code.
