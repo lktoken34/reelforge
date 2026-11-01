@@ -237,3 +237,10 @@ accepted scene graph. See [the authoring guide](docs/PROCEDURAL_ENVIRONMENTS.md)
 capabilities, exact fields and CLI examples, and [the review report](docs/PHASE5B_REPORT.md)
 for visual evidence, measured costs and development-host validation limitations.
 The production episode interface remains not render-ready.
+
+## Experimental novel vector geometry (Phase 5C)
+
+[geometry-0.1 and composition-0.1](docs/NOVEL_GEOMETRY.md) permit bounded JSON-authored
+compound objects and placement in accepted scenes/procedural environments. Discover with
+`python tools/geometry.py capabilities`; review [the evidence](docs/PHASE5C_REPORT.md).
+The installed production episode CLI remains unchanged and not render-ready.

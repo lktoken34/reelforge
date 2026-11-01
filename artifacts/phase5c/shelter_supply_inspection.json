@@ -1,0 +1,523 @@
+{
+  "contract": "composition-0.1",
+  "geometry": {
+    "contract": "geometry-0.1",
+    "assets": [
+      {
+        "id": "damaged_mast",
+        "private_id": "generated_agent_damaged_mast",
+        "size": [
+          192,
+          292
+        ],
+        "anchors": {
+          "center": [
+            96.0,
+            146.0
+          ],
+          "origin": [
+            96.0,
+            287
+          ]
+        },
+        "paths": 32,
+        "operations": 111,
+        "geometry_sha256": "4d7849aef55275a8b80f612c9541d110c7c90530e2e4bdf0fc08694ca54661ec",
+        "character_support": false
+      },
+      {
+        "id": "water_cart",
+        "private_id": "generated_agent_water_cart",
+        "size": [
+          200,
+          174
+        ],
+        "anchors": {
+          "center": [
+            100.0,
+            87.0
+          ],
+          "origin": [
+            100.0,
+            169
+          ]
+        },
+        "paths": 34,
+        "operations": 139,
+        "geometry_sha256": "7f3674551a20496420be6ac7ec495b751a518a8a8c3eaeb925ddd13d2cf82dfa",
+        "character_support": false
+      },
+      {
+        "id": "watchtower",
+        "private_id": "generated_agent_watchtower",
+        "size": [
+          224,
+          304
+        ],
+        "anchors": {
+          "center": [
+            112.0,
+            152.0
+          ],
+          "origin": [
+            112.0,
+            299
+          ]
+        },
+        "paths": 37,
+        "operations": 120,
+        "geometry_sha256": "e7b0e2f953b88a8c3711a50e443c2f80935fff6d54f38cb342bbb100bdfd4049",
+        "character_support": false
+      },
+      {
+        "id": "field_radio",
+        "private_id": "generated_agent_field_radio",
+        "size": [
+          176,
+          152
+        ],
+        "anchors": {
+          "center": [
+            88.0,
+            76.0
+          ],
+          "origin": [
+            88.0,
+            147
+          ]
+        },
+        "paths": 25,
+        "operations": 106,
+        "geometry_sha256": "5740b1b4c94ab51b84d12b9ece912561e6339ef639ae84cda3397c0f57f9b388",
+        "character_support": false
+      }
+    ]
+  },
+  "graph": {
+    "schema_version": "scene-0.1",
+    "title": "Shelter Supply",
+    "frame": 45,
+    "hierarchy": [
+      {
+        "id": "root",
+        "parent": null,
+        "kind": "root",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": null,
+        "depth": null
+      },
+      {
+        "id": "layer_sky",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_sky",
+        "depth": 0
+      },
+      {
+        "id": "sky",
+        "parent": "layer_sky",
+        "kind": "background",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_sky",
+        "depth": 0
+      },
+      {
+        "id": "layer_backdrop",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_backdrop",
+        "depth": 0.18
+      },
+      {
+        "id": "backdrop",
+        "parent": "layer_backdrop",
+        "kind": "background",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_backdrop",
+        "depth": 0.18
+      },
+      {
+        "id": "layer_ground",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_ground",
+        "depth": 1
+      },
+      {
+        "id": "ground",
+        "parent": "layer_ground",
+        "kind": "environment",
+        "world": {
+          "x": 180.0,
+          "y": 510.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_ground",
+        "depth": 1
+      },
+      {
+        "id": "layer_distance",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_distance",
+        "depth": 0.48
+      },
+      {
+        "id": "distance",
+        "parent": "layer_distance",
+        "kind": "background",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_distance",
+        "depth": 0.48
+      },
+      {
+        "id": "layer_objects",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "rock_left_0",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 34.35343809662182,
+          "y": 392.16969200139533,
+          "scale": 0.6273561724589201,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "rock_right_0",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 311.6582268909735,
+          "y": 392.81444072840037,
+          "scale": 0.6370268291534993,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "rock_left_1",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 57.80181996535241,
+          "y": 416.1931317878314,
+          "scale": 0.7547839735704887,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "rock_right_1",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 316.13725843461754,
+          "y": 419.2490998563291,
+          "scale": 0.7274447094448395,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "shelter",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 196.71465867861002,
+          "y": 425.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "rock_left_2",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 49.59015955064383,
+          "y": 438.7304548174523,
+          "scale": 0.847528029426243,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "rock_right_2",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 314.1215935008443,
+          "y": 443.5629233288038,
+          "scale": 0.8064228926501076,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "rock_right_4",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 324.48157440540433,
+          "y": 488.35776640243296,
+          "scale": 1.0185700224181533,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "rock_left_4",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 55.18688551104627,
+          "y": 493.0707862336409,
+          "scale": 1.0310775730325887,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "dry_tree",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 78.0,
+          "y": 505.0,
+          "scale": 0.25,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "receiver",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 201.2,
+          "y": 498.55,
+          "scale": 0.35,
+          "angle": 0.0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "relay",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 237.6,
+          "y": 293.45,
+          "scale": 0.65,
+          "angle": 0.0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "supply",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 57.0,
+          "y": 445.15,
+          "scale": 0.65,
+          "angle": 0.0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "layer_people",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_people",
+        "depth": 1
+      },
+      {
+        "id": "rowan",
+        "parent": "layer_people",
+        "kind": "character",
+        "world": {
+          "x": 200.71492924570717,
+          "y": 525.0,
+          "scale": 0.47,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_people",
+        "depth": 1
+      },
+      {
+        "id": "layer_foreground",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_foreground",
+        "depth": 1.4
+      },
+      {
+        "id": "foreground",
+        "parent": "layer_foreground",
+        "kind": "asset",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_foreground",
+        "depth": 1.4
+      }
+    ],
+    "painter_ids": [
+      "sky",
+      "backdrop",
+      "ground",
+      "distance",
+      "rock_left_0",
+      "rock_right_0",
+      "rock_left_1",
+      "rock_right_1",
+      "shelter",
+      "rock_left_2",
+      "rock_right_2",
+      "rock_right_4",
+      "rock_left_4",
+      "dry_tree",
+      "receiver",
+      "relay",
+      "supply",
+      "rowan",
+      "foreground"
+    ],
+    "path_allowance": 1791,
+    "operation_allowance": 29956,
+    "character_ground_contacts": {
+      "rowan": {
+        "ground_id": "ground",
+        "world": [
+          200.71492924570717,
+          525.0
+        ],
+        "screen": [
+          189.13649549950517,
+          525.7815997937497
+        ]
+      }
+    },
+    "camera": {
+      "x": 12.626399174999184,
+      "y": 5.542133058333062,
+      "zoom": 1.0505898628166628
+    }
+  },
+  "character_support_for_authored_assets": false
+}

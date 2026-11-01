@@ -1,0 +1,93 @@
+{
+  "contract": "geometry-0.1",
+  "assets": [
+    {
+      "id": "damaged_mast",
+      "private_id": "generated_agent_damaged_mast",
+      "size": [
+        192,
+        292
+      ],
+      "anchors": {
+        "center": [
+          96.0,
+          146.0
+        ],
+        "origin": [
+          96.0,
+          287
+        ]
+      },
+      "paths": 32,
+      "operations": 111,
+      "geometry_sha256": "4d7849aef55275a8b80f612c9541d110c7c90530e2e4bdf0fc08694ca54661ec",
+      "character_support": false
+    },
+    {
+      "id": "water_cart",
+      "private_id": "generated_agent_water_cart",
+      "size": [
+        200,
+        174
+      ],
+      "anchors": {
+        "center": [
+          100.0,
+          87.0
+        ],
+        "origin": [
+          100.0,
+          169
+        ]
+      },
+      "paths": 34,
+      "operations": 139,
+      "geometry_sha256": "7f3674551a20496420be6ac7ec495b751a518a8a8c3eaeb925ddd13d2cf82dfa",
+      "character_support": false
+    },
+    {
+      "id": "watchtower",
+      "private_id": "generated_agent_watchtower",
+      "size": [
+        224,
+        304
+      ],
+      "anchors": {
+        "center": [
+          112.0,
+          152.0
+        ],
+        "origin": [
+          112.0,
+          299
+        ]
+      },
+      "paths": 37,
+      "operations": 120,
+      "geometry_sha256": "e7b0e2f953b88a8c3711a50e443c2f80935fff6d54f38cb342bbb100bdfd4049",
+      "character_support": false
+    },
+    {
+      "id": "field_radio",
+      "private_id": "generated_agent_field_radio",
+      "size": [
+        176,
+        152
+      ],
+      "anchors": {
+        "center": [
+          88.0,
+          76.0
+        ],
+        "origin": [
+          88.0,
+          147
+        ]
+      },
+      "paths": 25,
+      "operations": 106,
+      "geometry_sha256": "5740b1b4c94ab51b84d12b9ece912561e6339ef639ae84cda3397c0f57f9b388",
+      "character_support": false
+    }
+  ]
+}

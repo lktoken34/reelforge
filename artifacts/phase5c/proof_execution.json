@@ -1,0 +1,189 @@
+{
+  "scope": "Public JSON CLI calls, single attempts, all exit statuses retained",
+  "jobs": [
+    {
+      "command": [
+        "/workspace/scratch/2a96718c6b46/reelforge/.venv/bin/python",
+        "/workspace/scratch/2a96718c6b46/reelforge/tools/geometry.py",
+        "preview",
+        "/workspace/scratch/2a96718c6b46/reelforge/examples/geometry/survival_objects.json",
+        "--asset",
+        "damaged_mast",
+        "--output-dir",
+        "/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5c/proofs/asset_damaged_mast"
+      ],
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"report\": \"/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5c/proofs/asset_damaged_mast\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/2a96718c6b46/reelforge/.venv/bin/python",
+        "/workspace/scratch/2a96718c6b46/reelforge/tools/geometry.py",
+        "preview",
+        "/workspace/scratch/2a96718c6b46/reelforge/examples/geometry/survival_objects.json",
+        "--asset",
+        "water_cart",
+        "--output-dir",
+        "/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5c/proofs/asset_water_cart"
+      ],
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"report\": \"/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5c/proofs/asset_water_cart\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/2a96718c6b46/reelforge/.venv/bin/python",
+        "/workspace/scratch/2a96718c6b46/reelforge/tools/geometry.py",
+        "preview",
+        "/workspace/scratch/2a96718c6b46/reelforge/examples/geometry/survival_objects.json",
+        "--asset",
+        "watchtower",
+        "--output-dir",
+        "/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5c/proofs/asset_watchtower"
+      ],
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"report\": \"/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5c/proofs/asset_watchtower\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/2a96718c6b46/reelforge/.venv/bin/python",
+        "/workspace/scratch/2a96718c6b46/reelforge/tools/geometry.py",
+        "preview",
+        "/workspace/scratch/2a96718c6b46/reelforge/examples/geometry/survival_objects.json",
+        "--asset",
+        "field_radio",
+        "--output-dir",
+        "/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5c/proofs/asset_field_radio"
+      ],
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"report\": \"/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5c/proofs/asset_field_radio\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/2a96718c6b46/reelforge/.venv/bin/python",
+        "/workspace/scratch/2a96718c6b46/reelforge/tools/geometry.py",
+        "preview",
+        "/workspace/scratch/2a96718c6b46/reelforge/examples/geometry/heldout_wash_station.json",
+        "--asset",
+        "wash_station",
+        "--output-dir",
+        "/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5c/proofs/asset_wash_station"
+      ],
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"report\": \"/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5c/proofs/asset_wash_station\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/2a96718c6b46/reelforge/.venv/bin/python",
+        "/workspace/scratch/2a96718c6b46/reelforge/tools/geometry.py",
+        "render",
+        "/workspace/scratch/2a96718c6b46/reelforge/examples/compositions/woodland_relay.json",
+        "--stills-only",
+        "--output-dir",
+        "/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5c/proofs/woodland_relay_stills"
+      ],
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"report\": \"/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5c/proofs/woodland_relay_stills\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/2a96718c6b46/reelforge/.venv/bin/python",
+        "/workspace/scratch/2a96718c6b46/reelforge/tools/geometry.py",
+        "render",
+        "/workspace/scratch/2a96718c6b46/reelforge/examples/compositions/settlement_checkpoint.json",
+        "--stills-only",
+        "--output-dir",
+        "/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5c/proofs/settlement_checkpoint_stills"
+      ],
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"report\": \"/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5c/proofs/settlement_checkpoint_stills\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/2a96718c6b46/reelforge/.venv/bin/python",
+        "/workspace/scratch/2a96718c6b46/reelforge/tools/geometry.py",
+        "render",
+        "/workspace/scratch/2a96718c6b46/reelforge/examples/compositions/shelter_supply.json",
+        "--stills-only",
+        "--output-dir",
+        "/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5c/proofs/shelter_supply_stills"
+      ],
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"report\": \"/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5c/proofs/shelter_supply_stills\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/2a96718c6b46/reelforge/.venv/bin/python",
+        "/workspace/scratch/2a96718c6b46/reelforge/tools/geometry.py",
+        "render",
+        "/workspace/scratch/2a96718c6b46/reelforge/examples/compositions/orchard_checkpoint.json",
+        "--stills-only",
+        "--output-dir",
+        "/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5c/proofs/orchard_checkpoint_stills"
+      ],
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"report\": \"/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5c/proofs/orchard_checkpoint_stills\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/2a96718c6b46/reelforge/.venv/bin/python",
+        "/workspace/scratch/2a96718c6b46/reelforge/tools/geometry.py",
+        "render",
+        "/workspace/scratch/2a96718c6b46/reelforge/examples/compositions/heldout_station.json",
+        "--stills-only",
+        "--output-dir",
+        "/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5c/proofs/heldout_station_stills"
+      ],
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"report\": \"/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5c/proofs/heldout_station_stills\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/2a96718c6b46/reelforge/.venv/bin/python",
+        "/workspace/scratch/2a96718c6b46/reelforge/tools/geometry.py",
+        "render",
+        "/workspace/scratch/2a96718c6b46/reelforge/examples/compositions/woodland_relay.json",
+        "--output-dir",
+        "/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5c/proofs/woodland_relay_video"
+      ],
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"report\": \"/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5c/proofs/woodland_relay_video\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/2a96718c6b46/reelforge/.venv/bin/python",
+        "/workspace/scratch/2a96718c6b46/reelforge/tools/geometry.py",
+        "render",
+        "/workspace/scratch/2a96718c6b46/reelforge/examples/compositions/settlement_checkpoint.json",
+        "--output-dir",
+        "/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5c/proofs/settlement_checkpoint_video"
+      ],
+      "returncode": 1,
+      "stdout": "{\"ok\": false, \"error\": {\"code\": \"TRANSACTION_CLEANUP\", \"message\": \"Completed transaction path reappeared: /workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5c/proofs/settlement_checkpoint_video/.reelforge-encode-g411jquc\"}}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/2a96718c6b46/reelforge/.venv/bin/python",
+        "/workspace/scratch/2a96718c6b46/reelforge/tools/geometry.py",
+        "render",
+        "/workspace/scratch/2a96718c6b46/reelforge/examples/compositions/settlement_checkpoint.json",
+        "--output-dir",
+        "/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5c/proofs/settlement_repeat"
+      ],
+      "returncode": 1,
+      "stdout": "{\"ok\": false, \"error\": {\"code\": \"TRANSACTION_CLEANUP\", \"message\": \"Completed transaction path reappeared: /workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5c/proofs/settlement_repeat/.reelforge-encode-j8yk8jm_\"}}\n",
+      "stderr": ""
+    }
+  ]
+}

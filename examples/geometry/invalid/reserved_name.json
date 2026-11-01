@@ -1,0 +1,33 @@
+{
+  "schema_version": "geometry-0.1",
+  "palette": {
+    "steel": "#647c82"
+  },
+  "assets": [
+    {
+      "id": "rowan_01",
+      "size": [
+        100,
+        120
+      ],
+      "anchors": {
+        "origin": [
+          50,
+          115
+        ]
+      },
+      "shapes": [
+        {
+          "type": "rect",
+          "rect": [
+            10,
+            20,
+            80,
+            90
+          ],
+          "fill": "steel"
+        }
+      ]
+    }
+  ]
+}

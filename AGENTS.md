@@ -115,3 +115,13 @@ docs/PROCEDURAL_ENVIRONMENTS.md and docs/PHASE5B_REPORT.md. Preserve scene-0.1,
 legacy artwork, audio/video, transaction ownership and resource policy; retain all tests.
 Keep development-host restoration failures visible. No agent delegation, GitHub push,
 deployment, or Phase 5C is authorized. Stop after local commit and complete ZIP export.
+
+## Current Phase 5C assignment
+
+Phase 5B passed independent validation; the user-approved baseline is
+82ebbe08e57f7f13217e64c57b86df994da1541b. This authorization supersedes historical
+phase-stop notes above. Implement only geometry-0.1/composition-0.1 on
+phase5c-novel-vector-geometry. Read docs/NOVEL_GEOMETRY.md and docs/PHASE5C_REPORT.md.
+Keep all 692 accepted tests and the legacy scene, environment, story, audio, renderer,
+resource and transaction semantics. No delegation, push, deployment, or Phase 6A.
+Stop after local commit and complete Phase 5C ZIP export for independent review.

@@ -1,0 +1,286 @@
+{
+  "assets": [
+    {
+      "id": "damaged_mast",
+      "private_id": "generated_agent_damaged_mast",
+      "size": [
+        192,
+        292
+      ],
+      "anchors": {
+        "center": [
+          96.0,
+          146.0
+        ],
+        "origin": [
+          96.0,
+          287
+        ]
+      },
+      "paths": 32,
+      "operations": 111,
+      "geometry_sha256": "4d7849aef55275a8b80f612c9541d110c7c90530e2e4bdf0fc08694ca54661ec",
+      "character_support": false
+    },
+    {
+      "id": "water_cart",
+      "private_id": "generated_agent_water_cart",
+      "size": [
+        200,
+        174
+      ],
+      "anchors": {
+        "center": [
+          100.0,
+          87.0
+        ],
+        "origin": [
+          100.0,
+          169
+        ]
+      },
+      "paths": 34,
+      "operations": 139,
+      "geometry_sha256": "7f3674551a20496420be6ac7ec495b751a518a8a8c3eaeb925ddd13d2cf82dfa",
+      "character_support": false
+    },
+    {
+      "id": "watchtower",
+      "private_id": "generated_agent_watchtower",
+      "size": [
+        224,
+        304
+      ],
+      "anchors": {
+        "center": [
+          112.0,
+          152.0
+        ],
+        "origin": [
+          112.0,
+          299
+        ]
+      },
+      "paths": 37,
+      "operations": 120,
+      "geometry_sha256": "e7b0e2f953b88a8c3711a50e443c2f80935fff6d54f38cb342bbb100bdfd4049",
+      "character_support": false
+    },
+    {
+      "id": "field_radio",
+      "private_id": "generated_agent_field_radio",
+      "size": [
+        176,
+        152
+      ],
+      "anchors": {
+        "center": [
+          88.0,
+          76.0
+        ],
+        "origin": [
+          88.0,
+          147
+        ]
+      },
+      "paths": 25,
+      "operations": 106,
+      "geometry_sha256": "5740b1b4c94ab51b84d12b9ece912561e6339ef639ae84cda3397c0f57f9b388",
+      "character_support": false
+    },
+    {
+      "id": "wash_station",
+      "private_id": "generated_agent_wash_station",
+      "size": [
+        220,
+        262
+      ],
+      "anchors": {
+        "center": [
+          110,
+          131
+        ],
+        "origin": [
+          110,
+          253
+        ]
+      },
+      "paths": 30,
+      "operations": 106,
+      "geometry_sha256": "4d25cd9623e3ee3daa52ecc1ccd1a6cdea945ebea752369055ff05c479efc934",
+      "character_support": false
+    }
+  ],
+  "scenes": {
+    "woodland_relay": {
+      "nodes": 28,
+      "instances": 20,
+      "path_allowance": 1967,
+      "operation_allowance": 40056,
+      "actual_counts": {
+        "89": [
+          846,
+          6222
+        ],
+        "0": [
+          846,
+          6222
+        ],
+        "45": [
+          846,
+          6222
+        ]
+      }
+    },
+    "settlement_checkpoint": {
+      "nodes": 28,
+      "instances": 20,
+      "path_allowance": 2248,
+      "operation_allowance": 36765,
+      "actual_counts": {
+        "89": [
+          708,
+          3794
+        ],
+        "0": [
+          708,
+          3794
+        ],
+        "45": [
+          708,
+          3794
+        ]
+      }
+    },
+    "shelter_supply": {
+      "nodes": 27,
+      "instances": 19,
+      "path_allowance": 1791,
+      "operation_allowance": 29956,
+      "actual_counts": {
+        "89": [
+          529,
+          4316
+        ],
+        "0": [
+          529,
+          4316
+        ],
+        "45": [
+          529,
+          4316
+        ]
+      }
+    },
+    "orchard_checkpoint": {
+      "nodes": 19,
+      "instances": 10,
+      "path_allowance": 1337,
+      "operation_allowance": 24517,
+      "actual_counts": {
+        "89": [
+          867,
+          5918
+        ],
+        "0": [
+          867,
+          5918
+        ],
+        "45": [
+          867,
+          5918
+        ]
+      }
+    },
+    "heldout_station": {
+      "nodes": 26,
+      "instances": 18,
+      "path_allowance": 1906,
+      "operation_allowance": 39806,
+      "actual_counts": {
+        "89": [
+          785,
+          5972
+        ],
+        "0": [
+          785,
+          5972
+        ],
+        "45": [
+          785,
+          5972
+        ]
+      }
+    }
+  },
+  "videos": {
+    "woodland_relay_video": {
+      "success": true,
+      "cleanup_error": null,
+      "encoded_fps": 17.827672151616323,
+      "wall_seconds": 6.25862558200015,
+      "timings": {
+        "geometry_seconds": 0.9850331349989574,
+        "raster_seconds": 3.387035231997288,
+        "stream_seconds": 0.3607239929997377
+      },
+      "cpu_seconds": {
+        "parent": 5.784965306,
+        "children_user": 2.864503,
+        "children_system": 0.269354
+      },
+      "maximum_paths": 846,
+      "maximum_ops": 6222,
+      "sampled_tree_peak_mib": 98.265625
+    },
+    "settlement_checkpoint_video": {
+      "success": false,
+      "cleanup_error": {
+        "code": "TRANSACTION_CLEANUP",
+        "message": "Completed transaction path reappeared: /workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5c/proofs/settlement_checkpoint_video/.reelforge-encode-g411jquc"
+      },
+      "encoded_fps": 30.882192497589987,
+      "wall_seconds": 4.121122887999718,
+      "timings": {
+        "geometry_seconds": 0.8246887690011135,
+        "raster_seconds": 1.4411705449997498,
+        "stream_seconds": 0.3435696060000737
+      },
+      "cpu_seconds": {
+        "parent": 3.394051567,
+        "children_user": 2.71323,
+        "children_system": 0.273716
+      },
+      "maximum_paths": 708,
+      "maximum_ops": 3794,
+      "sampled_tree_peak_mib": 97.015625
+    },
+    "settlement_repeat": {
+      "success": false,
+      "cleanup_error": {
+        "code": "TRANSACTION_CLEANUP",
+        "message": "Completed transaction path reappeared: /workspace/scratch/2a96718c6b46/reelforge/artifacts/phase5c/proofs/settlement_repeat/.reelforge-encode-j8yk8jm_"
+      },
+      "encoded_fps": 32.58993129075979,
+      "wall_seconds": 3.9768380279997473,
+      "timings": {
+        "geometry_seconds": 0.7959219929985011,
+        "raster_seconds": 1.4100085189993479,
+        "stream_seconds": 0.24751486700051828
+      },
+      "cpu_seconds": {
+        "parent": 3.2272603789999996,
+        "children_user": 2.7340869999999997,
+        "children_system": 0.244612
+      },
+      "maximum_paths": 708,
+      "maximum_ops": 3794,
+      "sampled_tree_peak_mib": 97.01953125
+    }
+  },
+  "whole_proof_orchestration": {
+    "wall_seconds": 21.66725997200001,
+    "children_cpu_seconds": 29.240909000000002,
+    "sampled_tree_peak_mib": 123.9609375
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "description": "examples/geometry/heldout_description.txt",
+  "public_request": "examples/geometry/heldout_wash_station.json",
+  "compiler_and_tool_hashes_unchanged_after_authoring": true,
+  "compiler_sha256": {
+    "src/reelforge/geometry/__init__.py": "6242e0d53202a4a6299203da007090bf6de85f77d2c433ee519ee7209b6f6686",
+    "src/reelforge/geometry/compiler.py": "bd788e9e43548dfe2084c581a5db399faaa1575b289a477178a62db0cc72deab",
+    "src/reelforge/geometry/composition.py": "021444e5ed396f7f1f51cc2947fc0ba1e633063d59e03f5731f63f159029a4c3",
+    "src/reelforge/geometry/contract.py": "3affabffacb148bf61ae72e1277996292ea7da8109171d88de336ddce59649ca",
+    "src/reelforge/geometry/schema.py": "eb9d1cd313db79d5bec537e3cf11a15f4db59b19d29a6ede423ca7433f316dd9",
+    "tools/geometry.py": "85afef747f6f749e31f6a5d1d0c913c2f49d94f065000a5ffa289d2f745413dd"
+  },
+  "claim": "Authoring exercise, not a blinded benchmark or automatic language understanding"
+}

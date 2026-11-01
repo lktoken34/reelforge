@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "dependency_setup": "Fresh no-Cairo venv, pinned runtime/development distributions copied from accepted uv environment because registry network/cache is unavailable; newly built project wheel installed separately with --no-deps; uv pip check passed.",
+  "outside_checkout_cli_and_compilation": true,
+  "checks": [
+    {
+      "command": [
+        "uv",
+        "pip",
+        "check",
+        "--python",
+        "/workspace/scratch/2a96718c6b46/reelforge/outputs/phase5c-wheel-smoke/bin/python"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "Using Python 3.12.14 environment at: /workspace/scratch/2a96718c6b46/reelforge/outputs/phase5c-wheel-smoke\nChecked 12 packages in 0.53ms\nAll installed packages are compatible\n"
+    },
+    {
+      "command": [
+        "/workspace/scratch/2a96718c6b46/reelforge/outputs/phase5c-wheel-smoke/bin/reelforge",
+        "capabilities"
+      ],
+      "returncode": 0,
+      "stdout": "{\"commands\": [\"capabilities\", \"schema\", \"validate\"], \"engine_version\": \"0.6.0\", \"limits\": {\"input_bytes\": 1048576, \"issues\": 32, \"nesting\": 32, \"total_frames\": 18000}, \"ok\": true, \"phase\": 1, \"profiles\": {\"preview_360p\": [360, 640], \"target_720p\": [720, 1280]}, \"render_available\": false, \"schema_versions\": [\"2.0-draft1\"]}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/2a96718c6b46/reelforge/outputs/phase5c-wheel-smoke/bin/reelforge",
+        "schema"
+      ],
+      "returncode": 0,
+      "stdout": "{\"$id\": \"urn:reelforge:project:2.0-draft1\", \"$schema\": \"https://json-schema.org/draft/2020-12/schema\", \"additionalProperties\": false, \"properties\": {\"output\": {\"additionalProperties\": false, \"properties\": {\"fps\": {\"enum\": [24, 25, 30], \"type\": \"integer\"}, \"profile\": {\"enum\": [\"preview_360p\", \"target_720p\"]}}, \"required\": [\"profile\", \"fps\"], \"type\": \"object\"}, \"project_id\": {\"pattern\": \"^[a-z][a-z0-9_]{0,63}(?![\\\\s\\\\S])\", \"type\": \"string\"}, \"scenes\": {\"items\": {\"additionalProperties\": false, \"properties\": {\"duration_frames\": {\"maximum\": 1800, \"minimum\": 1, \"type\": \"integer\"}, \"id\": {\"pattern\": \"^[a-z][a-z0-9_]{0,63}(?![\\\\s\\\\S])\", \"type\": \"string\"}, \"intent\": {\"maxLength\": 2000, \"minLength\": 1, \"pattern\": \"\\\\S\", \"type\": \"string\"}}, \"required\": [\"id\", \"duration_frames\", \"intent\"], \"type\": \"object\"}, \"maxItems\": 256, \"minItems\": 1, \"type\": \"array\"}, \"schema_version\": {\"const\": \"2.0-draft1\"}, \"seed\": {\"maximum\": 2147483647, \"minimum\": 0, \"type\": \"integer\"}}, \"required\": [\"schema_version\", \"project_id\", \"seed\", \"output\", \"scenes\"], \"title\": \"ReelForge foundation manifest; not a renderable scene language\", \"type\": \"object\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/2a96718c6b46/reelforge/outputs/phase5c-wheel-smoke/bin/reelforge",
+        "validate",
+        "/workspace/scratch/2a96718c6b46/reelforge/examples/foundation/project.json"
+      ],
+      "returncode": 0,
+      "stdout": "{\"manifest_sha256\": \"3bfca4a208d36926c78335c6e2441a2c7bbb55456b35bfec4ea2631b4972f983\", \"ok\": true, \"render_ready\": false, \"scene_count\": 2, \"schema_version\": \"2.0-draft1\", \"total_frames\": 150}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/2a96718c6b46/reelforge/outputs/phase5c-wheel-smoke/bin/python",
+        "-c",
+        "import json,sys,importlib.util\nfrom pathlib import Path\nimport reelforge\nfrom reelforge.geometry.contract import load_geometry\nfrom reelforge.geometry.compiler import inspect_geometry\nfrom reelforge.geometry.composition import load_composition,inspect_composition\nassert importlib.util.find_spec('cairo') is None\nassert 'site-packages' in reelforge.__file__\nroot=Path(sys.argv[1]);objects={};scenes={}\nfor p in (root/'examples/geometry').glob('*.json'):objects[p.name]=inspect_geometry(load_geometry(p))\nfor p in (root/'examples/compositions').glob('*.json'):scenes[p.name]=inspect_composition(load_composition(p))['graph']['path_allowance']\nassert len(objects)==2 and len(scenes)==5\nassert 'cairo' not in sys.modules\nprint(json.dumps({'module':reelforge.__file__,'objects':objects,'scenes':scenes,'native_free':True}))\n",
+        "/workspace/scratch/2a96718c6b46/reelforge"
+      ],
+      "returncode": 0,
+      "stdout": "{\"module\": \"/workspace/scratch/2a96718c6b46/reelforge/outputs/phase5c-wheel-smoke/lib/python3.12/site-packages/reelforge/__init__.py\", \"objects\": {\"heldout_wash_station.json\": {\"contract\": \"geometry-0.1\", \"assets\": [{\"id\": \"wash_station\", \"private_id\": \"generated_agent_wash_station\", \"size\": [220, 262], \"anchors\": {\"center\": [110, 131], \"origin\": [110, 253]}, \"paths\": 30, \"operations\": 106, \"geometry_sha256\": \"4d25cd9623e3ee3daa52ecc1ccd1a6cdea945ebea752369055ff05c479efc934\", \"character_support\": false}]}, \"survival_objects.json\": {\"contract\": \"geometry-0.1\", \"assets\": [{\"id\": \"damaged_mast\", \"private_id\": \"generated_agent_damaged_mast\", \"size\": [192, 292], \"anchors\": {\"center\": [96.0, 146.0], \"origin\": [96.0, 287]}, \"paths\": 32, \"operations\": 111, \"geometry_sha256\": \"4d7849aef55275a8b80f612c9541d110c7c90530e2e4bdf0fc08694ca54661ec\", \"character_support\": false}, {\"id\": \"water_cart\", \"private_id\": \"generated_agent_water_cart\", \"size\": [200, 174], \"anchors\": {\"center\": [100.0, 87.0], \"origin\": [100.0, 169]}, \"paths\": 34, \"operations\": 139, \"geometry_sha256\": \"7f3674551a20496420be6ac7ec495b751a518a8a8c3eaeb925ddd13d2cf82dfa\", \"character_support\": false}, {\"id\": \"watchtower\", \"private_id\": \"generated_agent_watchtower\", \"size\": [224, 304], \"anchors\": {\"center\": [112.0, 152.0], \"origin\": [112.0, 299]}, \"paths\": 37, \"operations\": 120, \"geometry_sha256\": \"e7b0e2f953b88a8c3711a50e443c2f80935fff6d54f38cb342bbb100bdfd4049\", \"character_support\": false}, {\"id\": \"field_radio\", \"private_id\": \"generated_agent_field_radio\", \"size\": [176, 152], \"anchors\": {\"center\": [88.0, 76.0], \"origin\": [88.0, 147]}, \"paths\": 25, \"operations\": 106, \"geometry_sha256\": \"5740b1b4c94ab51b84d12b9ece912561e6339ef639ae84cda3397c0f57f9b388\", \"character_support\": false}]}}, \"scenes\": {\"woodland_relay.json\": 1967, \"shelter_supply.json\": 1791, \"orchard_checkpoint.json\": 1337, \"heldout_station.json\": 1906, \"settlement_checkpoint.json\": 2248}, \"native_free\": true}\n",
+      "stderr": ""
+    }
+  ],
+  "base_geometry_tests": "........................................................................ [ 69%]\n.................s.s........ss.                                          [100%]\n=========================== short test summary info ============================\nSKIPPED [1] tests/test_geometry.py:419: optional Cairo backend\nSKIPPED [1] tests/test_geometry.py:456: optional Cairo/FFmpeg integration\nSKIPPED [1] tests/test_geometry.py:562: optional Cairo/FFmpeg integration\nSKIPPED [1] tests/test_geometry.py:600: optional Cairo backend\n99 passed, 4 skipped in 1.04s\n"
+}

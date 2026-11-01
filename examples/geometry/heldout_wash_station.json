@@ -1,0 +1,610 @@
+{
+  "schema_version": "geometry-0.1",
+  "palette": {
+    "shadow": "#142c32",
+    "steel": "#566c70",
+    "edge": "#a8bab5",
+    "rust": "#a36f48",
+    "wood": "#79654d",
+    "light": "#cab08a",
+    "water": "#77999b",
+    "glass": "#263f49",
+    "amber": "#e5b56a",
+    "rubber": "#223239",
+    "cloth": "#7e8570",
+    "black": "#0d2026",
+    "glaze": "#e5cf9b35"
+  },
+  "assets": [
+    {
+      "id": "wash_station",
+      "size": [
+        220,
+        262
+      ],
+      "anchors": {
+        "origin": [
+          110,
+          253
+        ],
+        "center": [
+          110,
+          131
+        ]
+      },
+      "shapes": [
+        {
+          "type": "ellipse",
+          "ellipse": [
+            112,
+            251,
+            99,
+            6
+          ],
+          "fill": "shadow"
+        },
+        {
+          "type": "polygon",
+          "points": [
+            [
+              36,
+              239
+            ],
+            [
+              185,
+              239
+            ],
+            [
+              204,
+              228
+            ],
+            [
+              57,
+              228
+            ]
+          ],
+          "fill": "steel"
+        },
+        {
+          "type": "polygon",
+          "points": [
+            [
+              36,
+              239
+            ],
+            [
+              185,
+              239
+            ],
+            [
+              185,
+              247
+            ],
+            [
+              36,
+              247
+            ]
+          ],
+          "fill": "shadow"
+        },
+        {
+          "type": "path",
+          "path": [
+            [
+              "M",
+              62,
+              237
+            ],
+            [
+              "L",
+              62,
+              57
+            ],
+            [
+              "C",
+              62,
+              20,
+              166,
+              20,
+              166,
+              57
+            ],
+            [
+              "L",
+              166,
+              237
+            ]
+          ],
+          "stroke": {
+            "paint": "steel",
+            "width": 7
+          }
+        },
+        {
+          "type": "path",
+          "path": [
+            [
+              "M",
+              60,
+              236
+            ],
+            [
+              "L",
+              60,
+              57
+            ],
+            [
+              "C",
+              60,
+              17,
+              164,
+              17,
+              164,
+              57
+            ],
+            [
+              "L",
+              164,
+              236
+            ]
+          ],
+          "stroke": {
+            "paint": "edge",
+            "width": 2
+          }
+        },
+        {
+          "type": "rect",
+          "rect": [
+            109,
+            28,
+            5,
+            23
+          ],
+          "fill": "steel"
+        },
+        {
+          "type": "polygon",
+          "points": [
+            [
+              99,
+              51
+            ],
+            [
+              123,
+              51
+            ],
+            [
+              128,
+              59
+            ],
+            [
+              95,
+              59
+            ]
+          ],
+          "fill": "shadow"
+        },
+        {
+          "type": "rect",
+          "rect": [
+            97,
+            57,
+            30,
+            4
+          ],
+          "fill": "edge"
+        },
+        {
+          "type": "rect",
+          "rect": [
+            8,
+            178,
+            35,
+            59
+          ],
+          "fill": {
+            "linear": [
+              0,
+              178,
+              0,
+              237
+            ],
+            "stops": [
+              [
+                0,
+                "cloth"
+              ],
+              [
+                1,
+                "steel"
+              ]
+            ]
+          }
+        },
+        {
+          "type": "polygon",
+          "points": [
+            [
+              43,
+              178
+            ],
+            [
+              54,
+              171
+            ],
+            [
+              54,
+              226
+            ],
+            [
+              43,
+              237
+            ]
+          ],
+          "fill": "shadow"
+        },
+        {
+          "type": "polygon",
+          "points": [
+            [
+              8,
+              178
+            ],
+            [
+              19,
+              171
+            ],
+            [
+              54,
+              171
+            ],
+            [
+              43,
+              178
+            ]
+          ],
+          "fill": "edge"
+        },
+        {
+          "type": "rect",
+          "rect": [
+            27,
+            162,
+            5,
+            13
+          ],
+          "fill": "steel"
+        },
+        {
+          "type": "rect",
+          "rect": [
+            21,
+            159,
+            19,
+            4
+          ],
+          "fill": "wood"
+        },
+        {
+          "type": "path",
+          "path": [
+            [
+              "M",
+              52,
+              200
+            ],
+            [
+              "C",
+              91,
+              212,
+              31,
+              133,
+              64,
+              143
+            ]
+          ],
+          "stroke": {
+            "paint": "black",
+            "width": 3
+          }
+        },
+        {
+          "type": "path",
+          "path": [
+            [
+              "M",
+              64,
+              143
+            ],
+            [
+              "L",
+              75,
+              143
+            ]
+          ],
+          "stroke": {
+            "paint": "rust",
+            "width": 4
+          }
+        },
+        {
+          "type": "ellipse",
+          "ellipse": [
+            78,
+            143,
+            7,
+            7
+          ],
+          "fill": "amber",
+          "stroke": {
+            "paint": "shadow",
+            "width": 1
+          }
+        },
+        {
+          "type": "path",
+          "path": [
+            [
+              "M",
+              78,
+              138
+            ],
+            [
+              "L",
+              78,
+              148
+            ]
+          ],
+          "stroke": {
+            "paint": "rust",
+            "width": 2
+          }
+        },
+        {
+          "type": "rect",
+          "rect": [
+            159,
+            101,
+            13,
+            24
+          ],
+          "fill": "amber"
+        },
+        {
+          "type": "path",
+          "path": [
+            [
+              "M",
+              162,
+              107
+            ],
+            [
+              "L",
+              169,
+              114
+            ],
+            [
+              "L",
+              162,
+              121
+            ]
+          ],
+          "stroke": {
+            "paint": "shadow",
+            "width": 2
+          }
+        },
+        {
+          "type": "path",
+          "path": [
+            [
+              "M",
+              49,
+              236
+            ],
+            [
+              "L",
+              62,
+              230
+            ]
+          ],
+          "stroke": {
+            "paint": "shadow",
+            "width": 2
+          }
+        },
+        {
+          "type": "path",
+          "path": [
+            [
+              "M",
+              61,
+              236
+            ],
+            [
+              "L",
+              74,
+              230
+            ]
+          ],
+          "stroke": {
+            "paint": "shadow",
+            "width": 2
+          }
+        },
+        {
+          "type": "path",
+          "path": [
+            [
+              "M",
+              73,
+              236
+            ],
+            [
+              "L",
+              86,
+              230
+            ]
+          ],
+          "stroke": {
+            "paint": "shadow",
+            "width": 2
+          }
+        },
+        {
+          "type": "path",
+          "path": [
+            [
+              "M",
+              85,
+              236
+            ],
+            [
+              "L",
+              98,
+              230
+            ]
+          ],
+          "stroke": {
+            "paint": "shadow",
+            "width": 2
+          }
+        },
+        {
+          "type": "path",
+          "path": [
+            [
+              "M",
+              97,
+              236
+            ],
+            [
+              "L",
+              110,
+              230
+            ]
+          ],
+          "stroke": {
+            "paint": "shadow",
+            "width": 2
+          }
+        },
+        {
+          "type": "path",
+          "path": [
+            [
+              "M",
+              109,
+              236
+            ],
+            [
+              "L",
+              122,
+              230
+            ]
+          ],
+          "stroke": {
+            "paint": "shadow",
+            "width": 2
+          }
+        },
+        {
+          "type": "path",
+          "path": [
+            [
+              "M",
+              121,
+              236
+            ],
+            [
+              "L",
+              134,
+              230
+            ]
+          ],
+          "stroke": {
+            "paint": "shadow",
+            "width": 2
+          }
+        },
+        {
+          "type": "path",
+          "path": [
+            [
+              "M",
+              133,
+              236
+            ],
+            [
+              "L",
+              146,
+              230
+            ]
+          ],
+          "stroke": {
+            "paint": "shadow",
+            "width": 2
+          }
+        },
+        {
+          "type": "path",
+          "path": [
+            [
+              "M",
+              145,
+              236
+            ],
+            [
+              "L",
+              158,
+              230
+            ]
+          ],
+          "stroke": {
+            "paint": "shadow",
+            "width": 2
+          }
+        },
+        {
+          "type": "path",
+          "path": [
+            [
+              "M",
+              157,
+              236
+            ],
+            [
+              "L",
+              170,
+              230
+            ]
+          ],
+          "stroke": {
+            "paint": "shadow",
+            "width": 2
+          }
+        },
+        {
+          "type": "path",
+          "path": [
+            [
+              "M",
+              169,
+              236
+            ],
+            [
+              "L",
+              182,
+              230
+            ]
+          ],
+          "stroke": {
+            "paint": "shadow",
+            "width": 2
+          }
+        }
+      ]
+    }
+  ]
+}

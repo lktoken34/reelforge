@@ -1,0 +1,7 @@
+{
+  "all_90_source_frames_equal": true,
+  "all_90_decoded_frames_equal": true,
+  "first_render_success": false,
+  "repeat_render_success": false,
+  "scope": "Same native build; byte-identical cross-build AAC/MP4 is not claimed"
+}

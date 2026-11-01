@@ -1,0 +1,13 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "pytest",
+    "--basetemp",
+    "outputs/pytest-phase5c-full",
+    "--junitxml=outputs/phase5c-tests.xml",
+    "-q"
+  ],
+  "returncode": 1,
+  "capture": "Bounded suite output saved after pytest child was reaped"
+}
