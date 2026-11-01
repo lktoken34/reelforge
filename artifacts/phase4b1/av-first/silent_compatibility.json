@@ -1,0 +1,9 @@
+{
+  "approved_base_commit": "fd14320355f442f5fe9c59043b19a6009bd0f482",
+  "original_silent_path": "artifacts/phase4a/story.mp4",
+  "original_silent_sha256": "46e9ed06b457b36401612de61b0edb73fa968efb38ed856bd763f5f08376f622",
+  "all_360_decoded_video_frames_match_original": true,
+  "all_360_source_frames_match_original": true,
+  "h264_copied_without_reencoding": true,
+  "all_video_presentation_timestamps_preserved": true
+}

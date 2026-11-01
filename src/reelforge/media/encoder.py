@@ -4,7 +4,6 @@ import math
 import os
 import shutil
 import subprocess
-import tempfile
 import threading
 import time
 from pathlib import Path
@@ -12,6 +11,7 @@ from types import TracebackType
 from typing import Self
 
 from reelforge.core.streams import check_interrupt
+from reelforge.core.transaction import OwnedDirectory
 from reelforge.rendering.interface import PixelLayout, Surface
 
 from .process import VideoError, run_bounded, stop_process
@@ -137,7 +137,8 @@ class FFmpegEncoder:
         self.returncode: int | None = None
         self.frames_written = 0
         self.command: list[str] = []
-        self._temporary: tempfile.TemporaryDirectory | None = None
+        self._temporary: OwnedDirectory | None = None
+        self._transaction: OwnedDirectory | None = None
         self._reader: threading.Thread | None = None
         self._log = bytearray()
         self._lock = threading.Lock()
@@ -182,10 +183,11 @@ class FFmpegEncoder:
                 raise VideoError("OUTPUT_EXISTS", "Output exists; explicit overwrite is required")
             if not self.output.parent.is_dir():
                 raise VideoError("OUTPUT_DIRECTORY", "Create the output directory before encoding")
-            self._temporary = tempfile.TemporaryDirectory(
-                prefix=".reelforge-encode-", dir=self.output.parent
+            self._temporary = OwnedDirectory(
+                self.output.parent, ".reelforge-encode-", files=frozenset({"pending.mp4"})
             )
-            self._pending = Path(self._temporary.name) / "pending.mp4"
+            self._transaction = self._temporary
+            self._pending = self._temporary.path / "pending.mp4"
             self.command = encoder_command(
                 executable, self.width, self.height, self.frames, self._pending
             )
@@ -283,10 +285,13 @@ class FFmpegEncoder:
                 self.proc.stderr.close()
         finally:
             if self._temporary is not None:
-                # Explicitly remove the known pending file before directory cleanup.
-                self._pending.unlink(missing_ok=True)
-                self._temporary.cleanup()
-                self._temporary = None
+                owner, self._temporary = self._temporary, None
+                owner.cleanup()
+
+    def confirm_cleanup(self) -> None:
+        """Verify absence without deleting/reacquiring a completed transaction's path."""
+        if self._transaction is not None:
+            self._transaction.assert_absent()
 
     def __exit__(
         self, exc_type: type | None, exc: BaseException | None, traceback: TracebackType | None

@@ -18,3 +18,8 @@ outputs/
 
 # Isolated PNG cells used only while assembling review sheets.
 .reelforge-panels-*/
+
+# Private supervised audio/registration transactions.
+.reelforge-audio-*/
+.register-*/
+audio-fixtures-*/

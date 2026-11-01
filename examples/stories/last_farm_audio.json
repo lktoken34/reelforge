@@ -1,0 +1,109 @@
+{
+  "schema_version": "story-0.2",
+  "title": "The Last Farm — Something in the Barn",
+  "output": {
+    "width": 720,
+    "height": 1280,
+    "fps": 30,
+    "frames": 360,
+    "codec": "h264",
+    "pixel_format": "yuv420p"
+  },
+  "shots": [
+    {
+      "id": "quiet_orchard",
+      "start_frame": 0,
+      "end_frame": 120,
+      "environment": "last_light_orchard_01",
+      "camera": "establishing_wide",
+      "transition": "cut",
+      "character": {
+        "character": "rowan_01",
+        "action": "idle",
+        "direction": "right",
+        "speed": 1.0,
+        "expression": "calm",
+        "intensity": 1.0
+      },
+      "art_direction": {
+        "atmosphere": 0.65,
+        "warmth": 0.7,
+        "breeze": 0.45,
+        "framing": 0.0
+      }
+    },
+    {
+      "id": "rowan_notices",
+      "start_frame": 120,
+      "end_frame": 240,
+      "environment": "last_light_orchard_01",
+      "camera": "character_reaction",
+      "transition": "cut",
+      "character": {
+        "character": "rowan_01",
+        "action": "look_around",
+        "direction": "right",
+        "speed": 1.0,
+        "expression": "concerned",
+        "intensity": 1.0
+      },
+      "art_direction": {
+        "atmosphere": 0.65,
+        "warmth": 0.7,
+        "breeze": 0.45,
+        "framing": 0.0
+      }
+    },
+    {
+      "id": "dark_entrance",
+      "start_frame": 240,
+      "end_frame": 360,
+      "environment": "last_light_orchard_01",
+      "camera": "suspense_reveal",
+      "transition": "cut",
+      "character": {
+        "character": "rowan_01",
+        "action": "react",
+        "direction": "right",
+        "speed": 1.0,
+        "expression": "frightened",
+        "intensity": 0.8
+      },
+      "art_direction": {
+        "atmosphere": 0.65,
+        "warmth": 0.7,
+        "breeze": 0.45,
+        "framing": 0.0
+      }
+    }
+  ],
+  "audio": {
+    "sample_rate": 48000,
+    "channels": 2,
+    "codec": "aac",
+    "bitrate": 128000,
+    "narration": {
+      "asset_id": "diag_opening",
+      "start_frame": 9,
+      "trim_start_frame": 0,
+      "trim_end_frame": null,
+      "gain": 0.5
+    },
+    "cues": [
+      {
+        "asset_id": "diag_fence",
+        "start_frame": 120,
+        "trim_start_frame": 0,
+        "trim_end_frame": null,
+        "gain": 0.25
+      },
+      {
+        "asset_id": "diag_suspense",
+        "start_frame": 240,
+        "trim_start_frame": 0,
+        "trim_end_frame": null,
+        "gain": 0.45
+      }
+    ]
+  }
+}

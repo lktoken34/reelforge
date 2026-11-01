@@ -169,3 +169,23 @@ its identical actor, camera and time. Only the new story path supplies independe
 No old camera equation, drawing recipe, rig, backend, encoder or policy changed.
 `tools/render_story.py` streams one surface into one FFmpegEncoder across all hard cuts;
 review/benchmark tools remain outside the installed production CLI. See SHOT_TIMELINE.md.
+
+## Phase 4B audio candidate boundary
+
+The optional story-0.2 audio data model is native-free. An operator-owned PCM16 WAV registry
+resolves IDs to pinned local bytes, validates media/roles/trims and supplies private snapshots.
+The original silent renderer remains the video stage. Audio orchestration mixes frame-grid
+float PCM to disk, then stream-copies H.264 while encoding AAC, with full decoded timing and
+bitstream verification. Existing media/rendering/resource modules are unchanged. A master
+JobMonitor spans sequential children; there is no audio-generation service or new renderer.
+See AUDIO_SYNC.md and PHASE4B_REPORT.md. The retained post-repeat cleanup failure blocks
+acceptance; no persistent batch service, new deployment or later milestone is authorized.
+
+## Phase 4B.1 cleanup checkpoint
+
+core/transaction.py retains one explicit directory inode/descriptor through cleanup; audio and
+encoder transactions use it without GC finalizers. Rendering checks the original owner's absence
+instead of reacquiring a removed path by prefix. Unexpected content/replacement/removal failures
+propagate. Publication still protects existing outputs and retains a valid already-published MP4
+if later cleanup fails. Persistent external pathname restoration remains unresolved; see
+CLEANUP_REPAIR.md. No render, audio, timing or resource-policy semantics changed.

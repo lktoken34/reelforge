@@ -1,0 +1,5 @@
+last_farm.json story-0.1 360 frames validated without Cairo
+last_farm_audio.json story-0.2 360 frames validated without Cairo
+{"commands": ["capabilities", "schema", "validate"], "engine_version": "0.6.0", "limits": {"input_bytes": 1048576, "issues": 32, "nesting": 32, "total_frames": 18000}, "ok": true, "phase": 1, "profiles": {"preview_360p": [360, 640], "target_720p": [720, 1280]}, "render_available": false, "schema_versions": ["2.0-draft1"]}
+
+Installed wheel outside checkout: PASS

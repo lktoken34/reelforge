@@ -1,0 +1,8 @@
+{
+  "exact_wav_bytes_reproduced": true,
+  "sha256": {
+    "diag_fence.wav": "f2ab82a7c31842b6abc122f9c794d191c5a7c85eaa38688975eb35806bc020df",
+    "diag_suspense.wav": "526f4bac80e62d9c50a21b8803640c42f0cb58f63127de973846772c396f949a",
+    "diag_opening.wav": "b59a143e46f7fcfabda9d625cc8a598080d7d66ed5c637c25cfe14b82af062ee"
+  }
+}

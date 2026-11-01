@@ -1,0 +1,35 @@
+{
+  "schema_version": "audio-assets-0.1",
+  "assets": [
+    {
+      "id": "diag_opening",
+      "role": "narration",
+      "file": "diag_opening.wav",
+      "sha256": "b59a143e46f7fcfabda9d625cc8a598080d7d66ed5c637c25cfe14b82af062ee",
+      "size_bytes": 57644,
+      "sample_rate": 24000,
+      "channels": 1,
+      "samples": 28800
+    },
+    {
+      "id": "diag_fence",
+      "role": "sfx",
+      "file": "diag_fence.wav",
+      "sha256": "f2ab82a7c31842b6abc122f9c794d191c5a7c85eaa38688975eb35806bc020df",
+      "size_bytes": 70604,
+      "sample_rate": 44100,
+      "channels": 2,
+      "samples": 17640
+    },
+    {
+      "id": "diag_suspense",
+      "role": "sfx",
+      "file": "diag_suspense.wav",
+      "sha256": "526f4bac80e62d9c50a21b8803640c42f0cb58f63127de973846772c396f949a",
+      "size_bytes": 172844,
+      "sample_rate": 48000,
+      "channels": 1,
+      "samples": 86400
+    }
+  ]
+}

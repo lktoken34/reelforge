@@ -1,0 +1,471 @@
+............................................FEEEEEEEEE.................. [ 14%]
+........................................................................ [ 29%]
+........................................................................ [ 44%]
+........................................................................ [ 59%]
+........................................................................ [ 73%]
+........................................................................ [ 88%]
+.......F.................F..............................                 [100%]
+==================================== ERRORS ====================================
+_______ ERROR at setup of test_existing_output_is_protected_before_work ________
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3'), _...'/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope="module")
+    def template(tmp_path_factory):
+        if not NATIVE:
+            pytest.skip("optional Cairo/FFmpeg")
+        sys.path.insert(0, str(ROOT / "tools"))
+        from render_story import render
+
+        data = load_story(ROOT / "examples/stories/last_farm.json").to_data()
+        data["shots"] = data["shots"][:1]
+        data["shots"][0]["end_frame"] = 30
+        data["output"]["frames"] = 30
+        story = validate_story(data)
+        directory = tmp_path_factory.mktemp("audio-silent-template")
+>       report = render(story, directory)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_audio.py:262:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools/render_story.py:114: in render
+    encoder.confirm_cleanup()
+src/reelforge/media/encoder.py:294: in confirm_cleanup
+    self._transaction.assert_absent()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <reelforge.core.transaction.OwnedDirectory object at 0x7f6f26274590>
+
+    def assert_absent(self) -> None:
+        if self.path.exists() or self.path.is_symlink():
+>           raise OperationError(
+                "TRANSACTION_CLEANUP", f"Completed transaction path reappeared: {self.path}"
+            )
+E           reelforge.core.errors.OperationError: Completed transaction path reappeared: /workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3/audio-silent-template0/.reelforge-encode-74o8mga_
+
+src/reelforge/core/transaction.py:29: OperationError
+___ ERROR at setup of test_unexpected_stage_failure_removes_private_mp4[mix] ___
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3'), _...'/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope="module")
+    def template(tmp_path_factory):
+        if not NATIVE:
+            pytest.skip("optional Cairo/FFmpeg")
+        sys.path.insert(0, str(ROOT / "tools"))
+        from render_story import render
+
+        data = load_story(ROOT / "examples/stories/last_farm.json").to_data()
+        data["shots"] = data["shots"][:1]
+        data["shots"][0]["end_frame"] = 30
+        data["output"]["frames"] = 30
+        story = validate_story(data)
+        directory = tmp_path_factory.mktemp("audio-silent-template")
+>       report = render(story, directory)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_audio.py:262:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools/render_story.py:114: in render
+    encoder.confirm_cleanup()
+src/reelforge/media/encoder.py:294: in confirm_cleanup
+    self._transaction.assert_absent()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <reelforge.core.transaction.OwnedDirectory object at 0x7f6f26274590>
+
+    def assert_absent(self) -> None:
+        if self.path.exists() or self.path.is_symlink():
+>           raise OperationError(
+                "TRANSACTION_CLEANUP", f"Completed transaction path reappeared: {self.path}"
+            )
+E           reelforge.core.errors.OperationError: Completed transaction path reappeared: /workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3/audio-silent-template0/.reelforge-encode-74o8mga_
+
+src/reelforge/core/transaction.py:29: OperationError
+___ ERROR at setup of test_unexpected_stage_failure_removes_private_mp4[mux] ___
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3'), _...'/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope="module")
+    def template(tmp_path_factory):
+        if not NATIVE:
+            pytest.skip("optional Cairo/FFmpeg")
+        sys.path.insert(0, str(ROOT / "tools"))
+        from render_story import render
+
+        data = load_story(ROOT / "examples/stories/last_farm.json").to_data()
+        data["shots"] = data["shots"][:1]
+        data["shots"][0]["end_frame"] = 30
+        data["output"]["frames"] = 30
+        story = validate_story(data)
+        directory = tmp_path_factory.mktemp("audio-silent-template")
+>       report = render(story, directory)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_audio.py:262:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools/render_story.py:114: in render
+    encoder.confirm_cleanup()
+src/reelforge/media/encoder.py:294: in confirm_cleanup
+    self._transaction.assert_absent()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <reelforge.core.transaction.OwnedDirectory object at 0x7f6f26274590>
+
+    def assert_absent(self) -> None:
+        if self.path.exists() or self.path.is_symlink():
+>           raise OperationError(
+                "TRANSACTION_CLEANUP", f"Completed transaction path reappeared: {self.path}"
+            )
+E           reelforge.core.errors.OperationError: Completed transaction path reappeared: /workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3/audio-silent-template0/.reelforge-encode-74o8mga_
+
+src/reelforge/core/transaction.py:29: OperationError
+_ ERROR at setup of test_unexpected_stage_failure_removes_private_mp4[verify] __
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3'), _...'/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope="module")
+    def template(tmp_path_factory):
+        if not NATIVE:
+            pytest.skip("optional Cairo/FFmpeg")
+        sys.path.insert(0, str(ROOT / "tools"))
+        from render_story import render
+
+        data = load_story(ROOT / "examples/stories/last_farm.json").to_data()
+        data["shots"] = data["shots"][:1]
+        data["shots"][0]["end_frame"] = 30
+        data["output"]["frames"] = 30
+        story = validate_story(data)
+        directory = tmp_path_factory.mktemp("audio-silent-template")
+>       report = render(story, directory)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_audio.py:262:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools/render_story.py:114: in render
+    encoder.confirm_cleanup()
+src/reelforge/media/encoder.py:294: in confirm_cleanup
+    self._transaction.assert_absent()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <reelforge.core.transaction.OwnedDirectory object at 0x7f6f26274590>
+
+    def assert_absent(self) -> None:
+        if self.path.exists() or self.path.is_symlink():
+>           raise OperationError(
+                "TRANSACTION_CLEANUP", f"Completed transaction path reappeared: {self.path}"
+            )
+E           reelforge.core.errors.OperationError: Completed transaction path reappeared: /workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3/audio-silent-template0/.reelforge-encode-74o8mga_
+
+src/reelforge/core/transaction.py:29: OperationError
+_ ERROR at setup of test_audio_cancellation_reaps_actual_child_and_removes_candidate _
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3'), _...'/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope="module")
+    def template(tmp_path_factory):
+        if not NATIVE:
+            pytest.skip("optional Cairo/FFmpeg")
+        sys.path.insert(0, str(ROOT / "tools"))
+        from render_story import render
+
+        data = load_story(ROOT / "examples/stories/last_farm.json").to_data()
+        data["shots"] = data["shots"][:1]
+        data["shots"][0]["end_frame"] = 30
+        data["output"]["frames"] = 30
+        story = validate_story(data)
+        directory = tmp_path_factory.mktemp("audio-silent-template")
+>       report = render(story, directory)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_audio.py:262:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools/render_story.py:114: in render
+    encoder.confirm_cleanup()
+src/reelforge/media/encoder.py:294: in confirm_cleanup
+    self._transaction.assert_absent()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <reelforge.core.transaction.OwnedDirectory object at 0x7f6f26274590>
+
+    def assert_absent(self) -> None:
+        if self.path.exists() or self.path.is_symlink():
+>           raise OperationError(
+                "TRANSACTION_CLEANUP", f"Completed transaction path reappeared: {self.path}"
+            )
+E           reelforge.core.errors.OperationError: Completed transaction path reappeared: /workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3/audio-silent-template0/.reelforge-encode-74o8mga_
+
+src/reelforge/core/transaction.py:29: OperationError
+_________ ERROR at setup of test_keyboard_interrupt_cleans_transaction _________
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3'), _...'/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope="module")
+    def template(tmp_path_factory):
+        if not NATIVE:
+            pytest.skip("optional Cairo/FFmpeg")
+        sys.path.insert(0, str(ROOT / "tools"))
+        from render_story import render
+
+        data = load_story(ROOT / "examples/stories/last_farm.json").to_data()
+        data["shots"] = data["shots"][:1]
+        data["shots"][0]["end_frame"] = 30
+        data["output"]["frames"] = 30
+        story = validate_story(data)
+        directory = tmp_path_factory.mktemp("audio-silent-template")
+>       report = render(story, directory)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_audio.py:262:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools/render_story.py:114: in render
+    encoder.confirm_cleanup()
+src/reelforge/media/encoder.py:294: in confirm_cleanup
+    self._transaction.assert_absent()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <reelforge.core.transaction.OwnedDirectory object at 0x7f6f26274590>
+
+    def assert_absent(self) -> None:
+        if self.path.exists() or self.path.is_symlink():
+>           raise OperationError(
+                "TRANSACTION_CLEANUP", f"Completed transaction path reappeared: {self.path}"
+            )
+E           reelforge.core.errors.OperationError: Completed transaction path reappeared: /workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3/audio-silent-template0/.reelforge-encode-74o8mga_
+
+src/reelforge/core/transaction.py:29: OperationError
+____________ ERROR at setup of test_disk_preflight_prevents_render _____________
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3'), _...'/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope="module")
+    def template(tmp_path_factory):
+        if not NATIVE:
+            pytest.skip("optional Cairo/FFmpeg")
+        sys.path.insert(0, str(ROOT / "tools"))
+        from render_story import render
+
+        data = load_story(ROOT / "examples/stories/last_farm.json").to_data()
+        data["shots"] = data["shots"][:1]
+        data["shots"][0]["end_frame"] = 30
+        data["output"]["frames"] = 30
+        story = validate_story(data)
+        directory = tmp_path_factory.mktemp("audio-silent-template")
+>       report = render(story, directory)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_audio.py:262:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools/render_story.py:114: in render
+    encoder.confirm_cleanup()
+src/reelforge/media/encoder.py:294: in confirm_cleanup
+    self._transaction.assert_absent()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <reelforge.core.transaction.OwnedDirectory object at 0x7f6f26274590>
+
+    def assert_absent(self) -> None:
+        if self.path.exists() or self.path.is_symlink():
+>           raise OperationError(
+                "TRANSACTION_CLEANUP", f"Completed transaction path reappeared: {self.path}"
+            )
+E           reelforge.core.errors.OperationError: Completed transaction path reappeared: /workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3/audio-silent-template0/.reelforge-encode-74o8mga_
+
+src/reelforge/core/transaction.py:29: OperationError
+__ ERROR at setup of test_resource_cancellation_at_final_exit_cannot_publish ___
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3'), _...'/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope="module")
+    def template(tmp_path_factory):
+        if not NATIVE:
+            pytest.skip("optional Cairo/FFmpeg")
+        sys.path.insert(0, str(ROOT / "tools"))
+        from render_story import render
+
+        data = load_story(ROOT / "examples/stories/last_farm.json").to_data()
+        data["shots"] = data["shots"][:1]
+        data["shots"][0]["end_frame"] = 30
+        data["output"]["frames"] = 30
+        story = validate_story(data)
+        directory = tmp_path_factory.mktemp("audio-silent-template")
+>       report = render(story, directory)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_audio.py:262:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools/render_story.py:114: in render
+    encoder.confirm_cleanup()
+src/reelforge/media/encoder.py:294: in confirm_cleanup
+    self._transaction.assert_absent()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <reelforge.core.transaction.OwnedDirectory object at 0x7f6f26274590>
+
+    def assert_absent(self) -> None:
+        if self.path.exists() or self.path.is_symlink():
+>           raise OperationError(
+                "TRANSACTION_CLEANUP", f"Completed transaction path reappeared: {self.path}"
+            )
+E           reelforge.core.errors.OperationError: Completed transaction path reappeared: /workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3/audio-silent-template0/.reelforge-encode-74o8mga_
+
+src/reelforge/core/transaction.py:29: OperationError
+_______________ ERROR at setup of test_racing_output_protection ________________
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3'), _...'/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope="module")
+    def template(tmp_path_factory):
+        if not NATIVE:
+            pytest.skip("optional Cairo/FFmpeg")
+        sys.path.insert(0, str(ROOT / "tools"))
+        from render_story import render
+
+        data = load_story(ROOT / "examples/stories/last_farm.json").to_data()
+        data["shots"] = data["shots"][:1]
+        data["shots"][0]["end_frame"] = 30
+        data["output"]["frames"] = 30
+        story = validate_story(data)
+        directory = tmp_path_factory.mktemp("audio-silent-template")
+>       report = render(story, directory)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_audio.py:262:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools/render_story.py:114: in render
+    encoder.confirm_cleanup()
+src/reelforge/media/encoder.py:294: in confirm_cleanup
+    self._transaction.assert_absent()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <reelforge.core.transaction.OwnedDirectory object at 0x7f6f26274590>
+
+    def assert_absent(self) -> None:
+        if self.path.exists() or self.path.is_symlink():
+>           raise OperationError(
+                "TRANSACTION_CLEANUP", f"Completed transaction path reappeared: {self.path}"
+            )
+E           reelforge.core.errors.OperationError: Completed transaction path reappeared: /workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3/audio-silent-template0/.reelforge-encode-74o8mga_
+
+src/reelforge/core/transaction.py:29: OperationError
+=================================== FAILURES ===================================
+__________________ test_real_pcm_mix_aac_mux_repeat_and_clock __________________
+
+tmp_path = PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3/test_real_pcm_mix_aac_mux_repe0')
+audio_data = {'audio': {'bitrate': 128000, 'channels': 2, 'codec': 'aac', 'cues': [{'asset_id': 'diag_fence', 'gain': 0.25, 'start_...'react', 'character': 'rowan_01', 'direction': 'right', 'expression': 'frightened', ...}, 'end_frame': 360, ...}], ...}
+
+    def test_real_pcm_mix_aac_mux_repeat_and_clock(tmp_path, audio_data):
+        if not NATIVE:
+            pytest.skip("optional Cairo/FFmpeg")
+        import subprocess
+
+        data = copy.deepcopy(audio_data)
+        data["shots"] = data["shots"][:1]
+        data["shots"][0]["end_frame"] = data["output"]["frames"] = 30
+        data["audio"]["narration"].update(start_frame=1, gain=0.3)
+        data["audio"]["cues"][0].update(start_frame=15, gain=0.1)
+        data["audio"]["cues"][1].update(start_frame=24, gain=0.2)
+        manifest = tmp_path / "story.json"
+        manifest.write_text(json.dumps(data))
+        reports = []
+        for name in ("first", "repeat"):
+            directory = tmp_path / name
+            result = subprocess.run(
+                [
+                    sys.executable,
+                    str(ROOT / "tools/render_story.py"),
+                    str(manifest),
+                    "--output-dir",
+                    str(directory),
+                ],
+                capture_output=True,
+                text=True,
+                timeout=60,
+            )
+>           assert result.returncode == 0, result.stdout + result.stderr
+E           AssertionError: {"ok": false, "render_ready": false, "error": {"code": "TRANSACTION_CLEANUP", "message": "Completed transaction path reappeared: /workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3/test_real_pcm_mix_aac_mux_repe0/first/.reelforge-audio-i6y2oyyv/video/.reelforge-encode-sgemip7y"}}
+E
+E           assert 1 == 0
+E            +  where 1 = CompletedProcess(args=['/workspace/scratch/2a96718c6b46/reelforge/.venv/bin/python', '/workspace/scratch/2a96718c6b46/...run3/test_real_pcm_mix_aac_mux_repe0/first/.reelforge-audio-i6y2oyyv/video/.reelforge-encode-sgemip7y"}}\n', stderr='').returncode
+
+tests/test_audio.py:324: AssertionError
+_____________ test_real_continuous_story_encode_decode_and_repeat ______________
+
+tmp_path = PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3/test_real_continuous_story_enc0')
+worker = <module 'render_story' from '/workspace/scratch/2a96718c6b46/reelforge/tools/render_story.py'>
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f6f25ae4b30>
+
+    def test_real_continuous_story_encode_decode_and_repeat(tmp_path, worker, monkeypatch):
+        from reelforge.media import encoder as media
+
+        original = media.FFmpegEncoder
+        encoders = []
+
+        def tracked(*args, **kwargs):
+            obj = original(*args, **kwargs)
+            encoders.append(obj)
+            return obj
+
+        monkeypatch.setattr(media, "FFmpegEncoder", tracked)
+        story = short_story()
+>       first = worker.render(story, tmp_path / "first")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_story_rendering.py:47:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools/render_story.py:114: in render
+    encoder.confirm_cleanup()
+src/reelforge/media/encoder.py:294: in confirm_cleanup
+    self._transaction.assert_absent()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <reelforge.core.transaction.OwnedDirectory object at 0x7f6f25ae6f60>
+
+    def assert_absent(self) -> None:
+        if self.path.exists() or self.path.is_symlink():
+>           raise OperationError(
+                "TRANSACTION_CLEANUP", f"Completed transaction path reappeared: {self.path}"
+            )
+E           reelforge.core.errors.OperationError: Completed transaction path reappeared: /workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3/test_real_continuous_story_enc0/first/.reelforge-encode-ubqw61_2
+
+src/reelforge/core/transaction.py:29: OperationError
+___________ test_two_audio_jobs_persistently_clean_after_native_work ___________
+
+tmp_path = PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3/test_two_audio_jobs_persistent0')
+workflow = (<module 'render_audio_story' from '/workspace/scratch/2a96718c6b46/reelforge/tools/render_audio_story.py'>, Story(sch...(character='rowan_01', action='idle', direction='right', speed=1.0, expression='calm', intensity=1.0)),), audio=None)])
+
+    def test_two_audio_jobs_persistently_clean_after_native_work(tmp_path, workflow):
+        _, _, run, _ = workflow
+        outputs = []
+        for i in range(2):
+            out = tmp_path / f"audio-{i}"
+            report = run(out)
+            assert report["transaction_clean"]
+            outputs.append(out)
+            rc, _, _ = run_bounded(
+                ["ffmpeg", "-v", "error", "-i", str(out / "story.mp4"), "-f", "null", "-"]
+            )
+            assert rc == 0
+            for previous in outputs:
+>               assert not list(previous.glob(".reelforge-audio-*"))
+E               AssertionError: assert not [PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-_flo5s8g')]
+E                +  where [PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-_flo5s8g')] = list(<generator object Path.glob at 0x7f6f264d3de0>)
+E                +    where <generator object Path.glob at 0x7f6f264d3de0> = glob('.reelforge-audio-*')
+E                +      where glob = PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-run3/test_two_audio_jobs_persistent0/audio-0').glob
+
+tests/test_transaction_cleanup.py:220: AssertionError
+- generated xml file: /workspace/scratch/2a96718c6b46/reelforge/artifacts/phase4b1/suite_3.xml -
+=========================== short test summary info ============================
+ERROR tests/test_audio.py::test_existing_output_is_protected_before_work - re...
+ERROR tests/test_audio.py::test_unexpected_stage_failure_removes_private_mp4[mix]
+ERROR tests/test_audio.py::test_unexpected_stage_failure_removes_private_mp4[mux]
+ERROR tests/test_audio.py::test_unexpected_stage_failure_removes_private_mp4[verify]
+ERROR tests/test_audio.py::test_audio_cancellation_reaps_actual_child_and_removes_candidate
+ERROR tests/test_audio.py::test_keyboard_interrupt_cleans_transaction - reelf...
+ERROR tests/test_audio.py::test_disk_preflight_prevents_render - reelforge.co...
+ERROR tests/test_audio.py::test_resource_cancellation_at_final_exit_cannot_publish
+ERROR tests/test_audio.py::test_racing_output_protection - reelforge.core.err...
+FAILED tests/test_audio.py::test_real_pcm_mix_aac_mux_repeat_and_clock - Asse...
+FAILED tests/test_story_rendering.py::test_real_continuous_story_encode_decode_and_repeat
+FAILED tests/test_transaction_cleanup.py::test_two_audio_jobs_persistently_clean_after_native_work
+3 failed, 476 passed, 9 errors in 61.63s (0:01:01)

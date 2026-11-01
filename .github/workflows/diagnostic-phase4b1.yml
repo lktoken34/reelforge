@@ -1,0 +1,109 @@
+name: phase4b1-independent-diagnostic
+
+on:
+  push:
+    branches:
+      - diagnostic-phase4b1-cleanup
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diagnostic:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.13.4"
+          python-version: "3.12"
+
+      - name: Install native dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            libcairo2-dev pkg-config python3-dev build-essential ffmpeg
+
+      - name: Sync pinned dependencies
+        run: uv sync --frozen --extra renderer
+
+      - name: Run three fresh full suites
+        id: suites
+        shell: bash
+        run: |
+          set +e
+          mkdir -p outputs/diagnostic
+          overall=0
+          for run in 1 2 3; do
+            base="outputs/diagnostic/pytest-run-${run}"
+            log="outputs/diagnostic/suite-${run}.log"
+            junit="outputs/diagnostic/suite-${run}.xml"
+            uv run --frozen --extra renderer pytest \
+              --basetemp "$base" \
+              --junitxml "$junit" 2>&1 | tee "$log"
+            code=${PIPESTATUS[0]}
+            printf 'exit_code=%s\n' "$code" | tee -a "$log"
+            if [ "$code" -ne 0 ]; then
+              overall=1
+            fi
+          done
+          uv run python -c '
+          import json
+          import xml.etree.ElementTree as ET
+          from pathlib import Path
+          summary = []
+          for path in sorted(Path("outputs/diagnostic").glob("suite-*.xml")):
+              root = ET.parse(path).getroot()
+              summary.append({
+                  "run": int(path.stem.split("-")[1]),
+                  "tests": int(root.attrib.get("tests", 0)),
+                  "passed": int(root.attrib.get("tests", 0))
+                      - int(root.attrib.get("failures", 0))
+                      - int(root.attrib.get("errors", 0))
+                      - int(root.attrib.get("skipped", 0)),
+                  "failed": int(root.attrib.get("failures", 0)),
+                  "errors": int(root.attrib.get("errors", 0)),
+                  "skipped": int(root.attrib.get("skipped", 0)),
+                  "time_seconds": float(root.attrib.get("time", 0)),
+              })
+          Path("outputs/diagnostic/suite-summary.json").write_text(
+              json.dumps(summary, indent=2) + "\n"
+          )
+          '
+          exit "$overall"
+
+      - name: Verify existing audiovisual proof and cleanup
+        id: av
+        shell: bash
+        run: |
+          set +e
+          mkdir -p outputs/diagnostic/av
+          ffprobe -v error -show_streams -show_format -of json \
+            artifacts/phase4b1/av-first/story.mp4 \
+            > outputs/diagnostic/av/ffprobe.json
+          probe_code=$?
+          ffmpeg -v error -i artifacts/phase4b1/av-first/story.mp4 \
+            -f null - > outputs/diagnostic/av/decode.log 2>&1
+          decode_code=$?
+          uv run --frozen --extra renderer python tools/verify_cleanup_story.py \
+            > outputs/diagnostic/av/cleanup-verification.log 2>&1
+          cleanup_code=$?
+          printf '{"ffprobe":%s,"decode":%s,"cleanup_verification":%s}\n' \
+            "$probe_code" "$decode_code" "$cleanup_code" \
+            > outputs/diagnostic/av/status.json
+          if [ "$probe_code" -ne 0 ] || [ "$decode_code" -ne 0 ] || [ "$cleanup_code" -ne 0 ]; then
+            exit 1
+          fi
+
+      - name: Upload diagnostic evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase4b1-independent-diagnostic
+          path: |
+            outputs/diagnostic/
+            artifacts/phase4b1/
+          retention-days: 30
+          if-no-files-found: error

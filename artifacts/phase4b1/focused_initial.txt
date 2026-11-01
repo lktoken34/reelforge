@@ -1,0 +1,30 @@
+.............F                                                           [100%]
+=================================== FAILURES ===================================
+___________ test_two_audio_jobs_persistently_clean_after_native_work ___________
+
+tmp_path = PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-focused/test_two_audio_jobs_persistent0')
+workflow = (<module 'render_audio_story' from '/workspace/scratch/2a96718c6b46/reelforge/tools/render_audio_story.py'>, Story(sch...(character='rowan_01', action='idle', direction='right', speed=1.0, expression='calm', intensity=1.0)),), audio=None)])
+
+    def test_two_audio_jobs_persistently_clean_after_native_work(tmp_path, workflow):
+        _, _, run, _ = workflow
+        outputs = []
+        for i in range(2):
+            out = tmp_path / f"audio-{i}"
+            report = run(out)
+            assert report["transaction_clean"]
+            outputs.append(out)
+            rc, _, _ = run_bounded(
+                ["ffmpeg", "-v", "error", "-i", str(out / "story.mp4"), "-f", "null", "-"]
+            )
+            assert rc == 0
+            for previous in outputs:
+>               assert not list(previous.glob(".reelforge-audio-*"))
+E               AssertionError: assert not [PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-focused/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-nv3k_cck')]
+E                +  where [PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-focused/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-nv3k_cck')] = list(<generator object Path.glob at 0x7f6762f23cd0>)
+E                +    where <generator object Path.glob at 0x7f6762f23cd0> = glob('.reelforge-audio-*')
+E                +      where glob = PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase4b1-focused/test_two_audio_jobs_persistent0/audio-0').glob
+
+tests/test_transaction_cleanup.py:213: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_transaction_cleanup.py::test_two_audio_jobs_persistently_clean_after_native_work
+1 failed, 13 passed in 14.59s

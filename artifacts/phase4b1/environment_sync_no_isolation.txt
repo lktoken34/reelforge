@@ -1,0 +1,27 @@
+   Building reelforge-v2 @ file:///workspace/scratch/2a96718c6b46/reelforge
+error: Failed to build `reelforge-v2 @ file:///workspace/scratch/2a96718c6b46/reelforge`
+  cause: The build backend returned an error
+  cause: Call to `hatchling.build.build_editable` failed (exit status: 1)
+
+         [stderr]
+         Traceback (most recent call last):
+           File "<string>", line 11, in <module>
+           File "/workspace/scratch/2a96718c6b46/reelforge/.venv/lib/python3.12/site-packages/hatchling/build.py", line 83, in build_editable
+             return os.path.basename(next(builder.build(directory=wheel_directory, versions=['editable'])))
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           File "/workspace/scratch/2a96718c6b46/reelforge/.venv/lib/python3.12/site-packages/hatchling/builders/plugin/interface.py", line 155, in build
+             artifact = version_api[version](directory, **build_data)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           File "/workspace/scratch/2a96718c6b46/reelforge/.venv/lib/python3.12/site-packages/hatchling/builders/wheel.py", line 496, in build_editable
+             return self.build_editable_detection(directory, **build_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           File "/workspace/scratch/2a96718c6b46/reelforge/.venv/lib/python3.12/site-packages/hatchling/builders/wheel.py", line 499, in build_editable_detection
+             from editables import EditableProject
+         ModuleNotFoundError: No module named 'editables'
+
+hint: This error likely indicates that `reelforge-v2@0.6.0` depends on `editables`, but doesn't declare it as a build dependency. If `reelforge-v2` is a first-party package, consider adding `editables` to its `build-system.requires`. Otherwise, either add it to your `pyproject.toml` under:
+
+[tool.uv.extra-build-dependencies]
+reelforge-v2 = ["editables"]
+
+or `uv pip install editables` into the environment and re-run with `--no-build-isolation`.

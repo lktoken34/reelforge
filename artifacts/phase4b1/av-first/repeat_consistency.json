@@ -1,0 +1,11 @@
+{
+  "same_native_version": true,
+  "expected_pcm_sha256_equal": true,
+  "decoded_pcm_sha256_equal": true,
+  "all_video_frames_equal": true,
+  "all_source_frames_equal": true,
+  "cue_timing_equal": true,
+  "scope": "Two successive audio reprocessing jobs in one Python process, same native build; approved silent video reused; AAC container byte identity not promised",
+  "cleanup_gate_passed": true,
+  "phase4b_accepted": false
+}

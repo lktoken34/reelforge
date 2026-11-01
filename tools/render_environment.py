@@ -8,8 +8,6 @@ import time
 from dataclasses import asdict
 from pathlib import Path
 
-from render_video import confirm_transaction_cleanup
-
 from reelforge.core.errors import OperationError
 from reelforge.environments.presets import EnvironmentPreset, load_preset
 from reelforge.environments.scene import environment_frame, layers_at
@@ -85,7 +83,7 @@ def render(output_dir: Path, *, stills_only=False, preset_path=None):
         verification = verify_video(
             output, width=720, height=1280, frames=180, cancelled=monitor.cancelled
         )
-        confirm_transaction_cleanup(Path(encoder.command[-1]), output)
+        encoder.confirm_cleanup()
     if renderer.active_surfaces or renderer.allocated_bytes:
         raise OperationError("SURFACE_LEAK", "Environment proof retained surfaces")
     observability = memory_observability(monitor.initial, monitor.final)

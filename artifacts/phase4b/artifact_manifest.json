@@ -1,0 +1,117 @@
+{
+  "scope": "Required Phase 4B proofs plus preserved silent compatibility reference; archive contains full committed tree",
+  "files": {
+    "artifacts/phase4b/audio_timeline.png": {
+      "bytes": 44500,
+      "sha256": "4b43cfab11ed939c42ebadc6f361fcb56391f656fcf7d5c52b2d97e8ee521fad"
+    },
+    "artifacts/phase4b/audio_timeline.svg": {
+      "bytes": 15965,
+      "sha256": "060b8e049375e8a5fe6d86ceec07a5bb651c0bb397c15f7a9bf0194cb4be1f0a"
+    },
+    "artifacts/phase4b/build_results.txt": {
+      "bytes": 237,
+      "sha256": "097eb48f7fb15697e9461998bc43c5d21a121674896292ec2b1cc9047b025f34"
+    },
+    "artifacts/phase4b/cleanup_isolated_test.txt": {
+      "bytes": 99,
+      "sha256": "4db9d8af119d485f1361db0175ff61928d66088724a6c1899928191e4b193f58"
+    },
+    "artifacts/phase4b/cleanup_report.json": {
+      "bytes": 293,
+      "sha256": "af2cbe8d8f930e94537f3bee204e662d24c3645fc567b97edddfd277238f4278"
+    },
+    "artifacts/phase4b/fixture_consistency.json": {
+      "bytes": 334,
+      "sha256": "147e0bbd9c52210d161741327f99406b0dbeaac1ccb4e90e5c9ee2b34c019a64"
+    },
+    "artifacts/phase4b/lint_results.txt": {
+      "bytes": 46,
+      "sha256": "d5c557c8da9ce05fd31cff5c23d522b45ee452b8ad7f2310f92dbc4ba8474b84"
+    },
+    "artifacts/phase4b/quality_summary.json": {
+      "bytes": 1213,
+      "sha256": "8aa4ae8d3b90ba0a38bf4dd15392b12a4b6956c6ab2fcd19c7130d77a9aa70ef"
+    },
+    "artifacts/phase4b/repeat_consistency.json": {
+      "bytes": 358,
+      "sha256": "44666d932e4382ea104c4401e2c4aa8bbbd1176581bf97664b3581ae7dbbb72f"
+    },
+    "artifacts/phase4b/repeat_report.json": {
+      "bytes": 169497,
+      "sha256": "24120dfb3bfeb3b9f0f03aae8ab4574626f285cfb5747fa4d51f1e088847bc0f"
+    },
+    "artifacts/phase4b/report.json": {
+      "bytes": 169496,
+      "sha256": "9b0c6802b58cd1093b0b97a956d7794eef1c77396ead61992d0d7f7c9b700873"
+    },
+    "artifacts/phase4b/silent_compatibility.json": {
+      "bytes": 426,
+      "sha256": "9c8d653314f5fe7e58f31cbd78cc19ba72b8dccf46931baa5dee7c786a4f8059"
+    },
+    "artifacts/phase4b/story.mp4": {
+      "bytes": 3801675,
+      "sha256": "fbe626a8371c8c8a1584d7c220adcf7799d0ec41d50758e43d5b33f658f831cd"
+    },
+    "artifacts/phase4b/sync_report.json": {
+      "bytes": 16516,
+      "sha256": "cd5dadf45c969929a1a5e5aef0fc73f3fbd0666a73200fcddafaa4cabef59f70"
+    },
+    "artifacts/phase4b/test_results.txt": {
+      "bytes": 4938,
+      "sha256": "8dd1a0e235ace654de1bda4d7dc133f4c48c0ce6fb29cd7d729203d972372ab1"
+    },
+    "artifacts/phase4b/test_results_exclusive.txt": {
+      "bytes": 26572,
+      "sha256": "78340774a9bb22609ff505ea867652fd1e6b0abffcfc95212f929f7c77697b2a"
+    },
+    "artifacts/phase4b/test_results_initial.txt": {
+      "bytes": 4938,
+      "sha256": "8dd1a0e235ace654de1bda4d7dc133f4c48c0ce6fb29cd7d729203d972372ab1"
+    },
+    "artifacts/phase4b/test_results_interrupted.txt": {
+      "bytes": 493,
+      "sha256": "f2cda9de7699be90e25ff5b1ef9b6411cc8050109d97841fc460d38a8fc3bcb9"
+    },
+    "artifacts/phase4b/visualization_report.json": {
+      "bytes": 13484,
+      "sha256": "13ec6a8a7220431511c769b0a86d46b300a2492ea9a303cb4964341f201c44d7"
+    },
+    "artifacts/phase4b/wheel_smoke.txt": {
+      "bytes": 490,
+      "sha256": "442a0498a2d447900e4de48e35a908ea8a3389e1bb37e0b20af9747d6600e7a2"
+    },
+    "assets/audio/registry.json": {
+      "bytes": 903,
+      "sha256": "5d1dc29ac837c66f1bedf0de9f9881358a47092945a3a557575621448772a7df"
+    },
+    "assets/audio/diag_opening.wav": {
+      "bytes": 57644,
+      "sha256": "b59a143e46f7fcfabda9d625cc8a598080d7d66ed5c637c25cfe14b82af062ee"
+    },
+    "assets/audio/diag_fence.wav": {
+      "bytes": 70604,
+      "sha256": "f2ab82a7c31842b6abc122f9c794d191c5a7c85eaa38688975eb35806bc020df"
+    },
+    "assets/audio/diag_suspense.wav": {
+      "bytes": 172844,
+      "sha256": "526f4bac80e62d9c50a21b8803640c42f0cb58f63127de973846772c396f949a"
+    },
+    "examples/stories/last_farm_audio.json": {
+      "bytes": 2467,
+      "sha256": "a29350c7c7c9cdfacc703748a389e8e8d861e2bbf7f6909a6e6c517725bc80a7"
+    },
+    "docs/AUDIO_SYNC.md": {
+      "bytes": 10657,
+      "sha256": "e5ae4aa07e52c4b6abf1a1d9476f54319210deb4d88af6e1396a892e005aaba8"
+    },
+    "docs/PHASE4B_REPORT.md": {
+      "bytes": 7995,
+      "sha256": "31c08a6971bc69fc859d9543bbfd16a50d9a7df8bf049550e8881e95701da115"
+    },
+    "artifacts/phase4a/story.mp4": {
+      "bytes": 3732120,
+      "sha256": "46e9ed06b457b36401612de61b0edb73fa968efb38ed856bd763f5f08376f622"
+    }
+  }
+}

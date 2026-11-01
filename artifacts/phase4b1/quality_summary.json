@@ -1,0 +1,56 @@
+{
+  "status": "BLOCKED \u2014 safety hardening and diagnostic checkpoint, not completed reliability repair",
+  "approved_phase4a": "fd14320355f442f5fe9c59043b19a6009bd0f482",
+  "phase4b_parent": "a5672acc5b25df7073aac07697c51e3716d3ea4c",
+  "branch": "phase4b-cleanup-fix",
+  "acceptance_gate_passed": false,
+  "tests_total": 488,
+  "original_tests": 412,
+  "phase4b_tests": 62,
+  "new_cleanup_tests": 14,
+  "full_suites": [
+    {
+      "run": 1,
+      "passed": 485,
+      "failed": 3,
+      "errors": 0,
+      "seconds": 94.3
+    },
+    {
+      "run": 2,
+      "passed": 483,
+      "failed": 3,
+      "errors": 2,
+      "seconds": 73.21
+    },
+    {
+      "run": 3,
+      "passed": 476,
+      "failed": 3,
+      "errors": 9,
+      "seconds": 61.63
+    }
+  ],
+  "three_zero_failure_runs_achieved": false,
+  "identified_writer": false,
+  "verified_observation": "Removed private pathnames restored with new inodes during subsequent native operations",
+  "resource_policy_changed": false,
+  "job_budget_bytes": 268435456,
+  "reserve_bytes": 67108864,
+  "native_surviving_process_groups_observed_in_hardened_trace": 0,
+  "native_reaped_children_in_hardened_trace": 18,
+  "lint": "passed",
+  "format": "passed",
+  "build": "passed",
+  "installed_wheel_without_cairo_smoke": "passed",
+  "frozen_renderer_sync": "passed with --no-editable; offline editable missing cached editables dependency",
+  "av_scope": "Two fresh audio jobs/full verification reuse approved silent video; no artwork rerender",
+  "av_jobs_passed": true,
+  "av_cleanup_spot_check_passed": true,
+  "remaining_requirements": [
+    "Resolve persistent pathname restoration and identify writer",
+    "Three clean complete suites",
+    "Establish persistent cleanup reliability"
+  ],
+  "no_push_or_deployment": true
+}

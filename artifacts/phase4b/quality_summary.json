@@ -1,0 +1,40 @@
+{
+  "approved_base_commit": "fd14320355f442f5fe9c59043b19a6009bd0f482",
+  "branch": "phase4b-audio-sync",
+  "acceptance_gate_passed": false,
+  "blocker": "Persistent private transaction cleanup is intermittent; root cause unresolved",
+  "tests": {
+    "total": 474,
+    "original_cases": 412,
+    "original_cases_passed": 412,
+    "added_cases": 62,
+    "earlier_complete_run": {
+      "passed": 473,
+      "failed": 1
+    },
+    "latest_complete_run": {
+      "passed": 465,
+      "errors": 9
+    },
+    "isolated_cleanup_test": "passed",
+    "partial_run": "not counted"
+  },
+  "lint": "passed",
+  "format": "passed",
+  "wheel_sdist_build": "passed",
+  "installed_base_wheel_without_cairo": "passed",
+  "audio_sync_verified": true,
+  "repeat_pcm_and_video_equal": true,
+  "latest_full_story_cleanup_check": true,
+  "missing_artifacts": [],
+  "total_wall_seconds": 51.71419188800064,
+  "sampled_tree_peak_rss_bytes": 104927232,
+  "audio_mix_seconds": 0.26647174199933943,
+  "audio_mux_seconds": 0.2866297589989699,
+  "limitations": [
+    "cleanup gate blocked",
+    "diagnostic tones, not spoken narration",
+    "AAC timing tolerance 1024 samples",
+    "development host only; no deployment certification"
+  ]
+}
