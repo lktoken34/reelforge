@@ -97,7 +97,7 @@ jobs:
             ffmpeg -v error -i "$video" -f null - \
               > "outputs/diagnostic/av/${family}-decode.log" 2>&1 || overall=1
           done
-          uv run python -c 'import glob,json,sys; from pathlib import Path; files=glob.glob("outputs/diagnostic/av/*.json"); files=[p for p in files if not p.endswith("summary.json")]; rows=[(p,next(x for x in json.load(open(p))["streams"] if x.get("codec_type")=="video")) for p in files]; ok=len(rows)==3 and all((s.get("codec_name"),s.get("pix_fmt"),int(s.get("width",0)),int(s.get("height",0)),s.get("avg_frame_rate"),int(s.get("nb_read_frames") or s.get("nb_frames") or 0),s.get("duration"))==("h264","yuv420p",720,1280,"30/1",90,"3.000000") and Path(p.replace(".json","-decode.log")).exists() for p,s in rows); json.dump({"archived_probe_files":len(rows),"passed":ok},open("outputs/diagnostic/av/summary.json","w"),indent=2); raise SystemExit(0 if ok else 1)' || overall=1
+          uv run python -c 'import glob,json,sys; from pathlib import Path; files=glob.glob("outputs/diagnostic/av/*.json"); files=[p for p in files if not p.endswith("summary.json")]; rows=[(p,json.load(open(p))["streams"][0]) for p in files]; ok=len(rows)==3 and all((s.get("codec_name"),s.get("pix_fmt"),int(s.get("width",0)),int(s.get("height",0)),s.get("avg_frame_rate"),int(s.get("nb_read_frames") or s.get("nb_frames") or 0),s.get("duration"))==("h264","yuv420p",720,1280,"30/1",90,"3.000000") and Path(p.replace(".json","-decode.log")).exists() for p,s in rows); json.dump({"archived_probe_files":len(rows),"passed":ok},open("outputs/diagnostic/av/summary.json","w"),indent=2); raise SystemExit(0 if ok else 1)' || overall=1
           exit "$overall"
 
       - name: Verify legacy checkpoints and audio
