@@ -189,3 +189,15 @@ instead of reacquiring a removed path by prefix. Unexpected content/replacement/
 propagate. Publication still protects existing outputs and retains a valid already-published MP4
 if later cleanup fails. Persistent external pathname restoration remains unresolved; see
 CLEANUP_REPAIR.md. No render, audio, timing or resource-policy semantics changed.
+
+## Phase 5A scene boundary
+
+scenes owns native-free typed scene-0.1 values, semantic graph compilation, a small trusted asset
+registry and stateless evaluation into existing DrawPaths. It reuses existing component recipes
+through anchor-preserving adapters; no entire orchard composition is used by the new examples.
+Groups compose positive uniform scale/rotation/translation, layers define independent painter
+order and parallax, and characters reference registered support metadata. Immutable plans and
+conservative per-asset envelopes bound graph and render expansion before native allocation.
+Only experimental tools import the Cairo adapter/encoder after validation. No new story schema,
+asset scripting language, render backend, audio feature or deployment boundary is introduced.
+Read SCENE_GRAPH.md for precise semantics and PHASE5A_REPORT.md for the local validation limitation.

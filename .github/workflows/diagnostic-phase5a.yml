@@ -1,0 +1,131 @@
+name: phase5a-independent-diagnostic
+
+on:
+  push:
+    branches:
+      - diagnostic-phase5a-scene-graph
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diagnostic:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.13.4"
+          python-version: "3.12"
+
+      - name: Install native dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            libcairo2-dev pkg-config python3-dev build-essential ffmpeg
+
+      - name: Sync pinned dependencies
+        run: uv sync --frozen --extra renderer
+
+      - name: Run three fresh full suites
+        shell: bash
+        run: |
+          set +e
+          mkdir -p outputs/diagnostic
+          overall=0
+          for run in 1 2 3; do
+            base="outputs/diagnostic/pytest-run-${run}"
+            log="outputs/diagnostic/suite-${run}.log"
+            junit="outputs/diagnostic/suite-${run}.xml"
+            uv run --frozen --extra renderer pytest \
+              --basetemp "$base" \
+              --junitxml "$junit" 2>&1 | tee "$log"
+            code=${PIPESTATUS[0]}
+            printf 'exit_code=%s\n' "$code" | tee -a "$log"
+            if [ "$code" -ne 0 ]; then
+              overall=1
+            fi
+          done
+          uv run python -c '
+          import json
+          import xml.etree.ElementTree as ET
+          from pathlib import Path
+          summary = []
+          for path in sorted(Path("outputs/diagnostic").glob("suite-*.xml")):
+              root = ET.parse(path).getroot()
+              summary.append({
+                  "run": int(path.stem.split("-")[1]),
+                  "tests": int(root.attrib.get("tests", 0)),
+                  "failures": int(root.attrib.get("failures", 0)),
+                  "errors": int(root.attrib.get("errors", 0)),
+                  "skipped": int(root.attrib.get("skipped", 0)),
+                  "time_seconds": float(root.attrib.get("time", 0)),
+              })
+          Path("outputs/diagnostic/suite-summary.json").write_text(
+              json.dumps(summary, indent=2) + "\n"
+          )
+          '
+          exit "$overall"
+
+      - name: Verify scene manifests and determinism
+        if: always()
+        run: |
+          mkdir -p outputs/diagnostic/scenes
+          for scene in rural_outpost tree_path barn_approach; do
+            uv run --frozen python tools/scene.py validate \
+              "examples/scenes/${scene}.json" \
+              > "outputs/diagnostic/scenes/${scene}-validate.json"
+            uv run --frozen python tools/scene.py inspect \
+              "examples/scenes/${scene}.json" --frame 45 \
+              > "outputs/diagnostic/scenes/${scene}-inspect.json"
+          done
+          uv run --frozen --extra renderer python tools/review_scenes.py \
+            > outputs/diagnostic/scenes/review.log
+          uv run --frozen python tools/legacy_scene_checkpoints.py \
+            > outputs/diagnostic/scenes/legacy-checkpoints.log
+          uv run --frozen python tools/verify_scene_legacy_audio.py \
+            > outputs/diagnostic/scenes/legacy-audio.log
+
+      - name: Verify Phase 5A and Phase 4B.1 audiovisual proofs
+        if: always()
+        shell: bash
+        run: |
+          set +e
+          mkdir -p outputs/diagnostic/av
+          ffprobe -v error -show_streams -show_format -of json \
+            artifacts/phase5a/cinematic/scene.mp4 \
+            > outputs/diagnostic/av/phase5a-ffprobe.json
+          p5a_probe=$?
+          ffmpeg -v error -i artifacts/phase5a/cinematic/scene.mp4 \
+            -f null - > outputs/diagnostic/av/phase5a-decode.log 2>&1
+          p5a_decode=$?
+          ffprobe -v error -show_streams -show_format -of json \
+            artifacts/phase4b1/av-first/story.mp4 \
+            > outputs/diagnostic/av/phase4b1-ffprobe.json
+          p4b1_probe=$?
+          ffmpeg -v error -i artifacts/phase4b1/av-first/story.mp4 \
+            -f null - > outputs/diagnostic/av/phase4b1-decode.log 2>&1
+          p4b1_decode=$?
+          uv run --frozen --extra renderer python tools/verify_cleanup_story.py \
+            > outputs/diagnostic/av/phase4b1-cleanup.log 2>&1
+          cleanup=$?
+          find outputs artifacts -type d \( \
+            -name '.reelforge-audio-*' -o -name '.reelforge-encode-*' \
+          \) -print > outputs/diagnostic/av/restored-private-paths.txt
+          printf '{"phase5a_probe":%s,"phase5a_decode":%s,"phase4b1_probe":%s,"phase4b1_decode":%s,"phase4b1_cleanup":%s}\n' \
+            "$p5a_probe" "$p5a_decode" "$p4b1_probe" "$p4b1_decode" "$cleanup" \
+            > outputs/diagnostic/av/status.json
+
+      - name: Upload diagnostic evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase5a-independent-diagnostic
+          path: |
+            outputs/diagnostic/
+            artifacts/phase5a/
+            artifacts/phase4b1/
+          retention-days: 30
+          if-no-files-found: error

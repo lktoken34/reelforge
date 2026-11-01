@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="795" height="690">
+<rect width="795" height="690" fill="#142c34"/>
+<rect x="20" y="286.77777777777777" width="165" height="42" rx="5" fill="#365c60"/>
+<text x="27" y="303.77777777777777" fill="#f4e5c7" font-family="sans-serif" font-size="12">root</text>
+<text x="27" y="319.77777777777777" fill="#d3ded3" font-family="sans-serif" font-size="11">root</text>
+<path d="M185,307.77777777777777 C200,307.77777777777777 200,55.0 215,55.0" fill="none" stroke="#718d83"/>
+<rect x="215" y="34.0" width="165" height="42" rx="5" fill="#365c60"/>
+<text x="222" y="51.0" fill="#f4e5c7" font-family="sans-serif" font-size="12">sky_layer</text>
+<text x="222" y="67.0" fill="#d3ded3" font-family="sans-serif" font-size="11">layer / depth 0</text>
+<path d="M380,55.0 C395,55.0 395,55 410,55" fill="none" stroke="#718d83"/>
+<rect x="410" y="34" width="165" height="42" rx="5" fill="#9a8056"/>
+<text x="417" y="51" fill="#f4e5c7" font-family="sans-serif" font-size="12">sky</text>
+<text x="417" y="67" fill="#d3ded3" font-family="sans-serif" font-size="11">background</text>
+<path d="M185,307.77777777777777 C200,307.77777777777777 200,120.0 215,120.0" fill="none" stroke="#718d83"/>
+<rect x="215" y="99.0" width="165" height="42" rx="5" fill="#365c60"/>
+<text x="222" y="116.0" fill="#f4e5c7" font-family="sans-serif" font-size="12">distance</text>
+<text x="222" y="132.0" fill="#d3ded3" font-family="sans-serif" font-size="11">layer / depth 0.18</text>
+<path d="M380,120.0 C395,120.0 395,120 410,120" fill="none" stroke="#718d83"/>
+<rect x="410" y="99" width="165" height="42" rx="5" fill="#9a8056"/>
+<text x="417" y="116" fill="#f4e5c7" font-family="sans-serif" font-size="12">hills</text>
+<text x="417" y="132" fill="#d3ded3" font-family="sans-serif" font-size="11">background</text>
+<path d="M185,307.77777777777777 C200,307.77777777777777 200,185.0 215,185.0" fill="none" stroke="#718d83"/>
+<rect x="215" y="164.0" width="165" height="42" rx="5" fill="#365c60"/>
+<text x="222" y="181.0" fill="#f4e5c7" font-family="sans-serif" font-size="12">terrain</text>
+<text x="222" y="197.0" fill="#d3ded3" font-family="sans-serif" font-size="11">layer / depth 1</text>
+<path d="M380,185.0 C395,185.0 395,185 410,185" fill="none" stroke="#718d83"/>
+<rect x="410" y="164" width="165" height="42" rx="5" fill="#9a8056"/>
+<text x="417" y="181" fill="#f4e5c7" font-family="sans-serif" font-size="12">ground</text>
+<text x="417" y="197" fill="#d3ded3" font-family="sans-serif" font-size="11">environment</text>
+<path d="M185,307.77777777777777 C200,307.77777777777777 200,369.1666666666667 215,369.1666666666667" fill="none" stroke="#718d83"/>
+<rect x="215" y="348.1666666666667" width="165" height="42" rx="5" fill="#365c60"/>
+<text x="222" y="365.1666666666667" fill="#f4e5c7" font-family="sans-serif" font-size="12">structures</text>
+<text x="222" y="381.1666666666667" fill="#d3ded3" font-family="sans-serif" font-size="11">layer / depth 0.85</text>
+<path d="M380,369.1666666666667 C395,369.1666666666667 395,282.5 410,282.5" fill="none" stroke="#718d83"/>
+<rect x="410" y="261.5" width="165" height="42" rx="5" fill="#365c60"/>
+<text x="417" y="278.5" fill="#f4e5c7" font-family="sans-serif" font-size="12">left_grove</text>
+<text x="417" y="294.5" fill="#d3ded3" font-family="sans-serif" font-size="11">group</text>
+<path d="M575,282.5 C590,282.5 590,250 605,250" fill="none" stroke="#718d83"/>
+<rect x="605" y="229" width="165" height="42" rx="5" fill="#9a8056"/>
+<text x="612" y="246" fill="#f4e5c7" font-family="sans-serif" font-size="12">near_tree</text>
+<text x="612" y="262" fill="#d3ded3" font-family="sans-serif" font-size="11">asset</text>
+<path d="M575,282.5 C590,282.5 590,315 605,315" fill="none" stroke="#718d83"/>
+<rect x="605" y="294" width="165" height="42" rx="5" fill="#9a8056"/>
+<text x="612" y="311" fill="#f4e5c7" font-family="sans-serif" font-size="12">far_tree</text>
+<text x="612" y="327" fill="#d3ded3" font-family="sans-serif" font-size="11">asset</text>
+<path d="M380,369.1666666666667 C395,369.1666666666667 395,380.0 410,380.0" fill="none" stroke="#718d83"/>
+<rect x="410" y="359.0" width="165" height="42" rx="5" fill="#365c60"/>
+<text x="417" y="376.0" fill="#f4e5c7" font-family="sans-serif" font-size="12">right_grove</text>
+<text x="417" y="392.0" fill="#d3ded3" font-family="sans-serif" font-size="11">group</text>
+<path d="M575,380.0 C590,380.0 590,380 605,380" fill="none" stroke="#718d83"/>
+<rect x="605" y="359" width="165" height="42" rx="5" fill="#9a8056"/>
+<text x="612" y="376" fill="#f4e5c7" font-family="sans-serif" font-size="12">right_tree</text>
+<text x="612" y="392" fill="#d3ded3" font-family="sans-serif" font-size="11">asset</text>
+<path d="M380,369.1666666666667 C395,369.1666666666667 395,445 410,445" fill="none" stroke="#718d83"/>
+<rect x="410" y="424" width="165" height="42" rx="5" fill="#9a8056"/>
+<text x="417" y="441" fill="#f4e5c7" font-family="sans-serif" font-size="12">fence</text>
+<text x="417" y="457" fill="#d3ded3" font-family="sans-serif" font-size="11">asset</text>
+<path d="M185,307.77777777777777 C200,307.77777777777777 200,510.0 215,510.0" fill="none" stroke="#718d83"/>
+<rect x="215" y="489.0" width="165" height="42" rx="5" fill="#365c60"/>
+<text x="222" y="506.0" fill="#f4e5c7" font-family="sans-serif" font-size="12">people</text>
+<text x="222" y="522.0" fill="#d3ded3" font-family="sans-serif" font-size="11">layer / depth 1</text>
+<path d="M380,510.0 C395,510.0 395,510 410,510" fill="none" stroke="#718d83"/>
+<rect x="410" y="489" width="165" height="42" rx="5" fill="#9a8056"/>
+<text x="417" y="506" fill="#f4e5c7" font-family="sans-serif" font-size="12">rowan</text>
+<text x="417" y="522" fill="#d3ded3" font-family="sans-serif" font-size="11">character</text>
+<path d="M185,307.77777777777777 C200,307.77777777777777 200,607.5 215,607.5" fill="none" stroke="#718d83"/>
+<rect x="215" y="586.5" width="165" height="42" rx="5" fill="#365c60"/>
+<text x="222" y="603.5" fill="#f4e5c7" font-family="sans-serif" font-size="12">foreground</text>
+<text x="222" y="619.5" fill="#d3ded3" font-family="sans-serif" font-size="11">layer / depth 1.4</text>
+<path d="M380,607.5 C395,607.5 395,575 410,575" fill="none" stroke="#718d83"/>
+<rect x="410" y="554" width="165" height="42" rx="5" fill="#9a8056"/>
+<text x="417" y="571" fill="#f4e5c7" font-family="sans-serif" font-size="12">framing_left</text>
+<text x="417" y="587" fill="#d3ded3" font-family="sans-serif" font-size="11">asset</text>
+<path d="M380,607.5 C395,607.5 395,640 410,640" fill="none" stroke="#718d83"/>
+<rect x="410" y="619" width="165" height="42" rx="5" fill="#9a8056"/>
+<text x="417" y="636" fill="#f4e5c7" font-family="sans-serif" font-size="12">framing_right</text>
+<text x="417" y="652" fill="#d3ded3" font-family="sans-serif" font-size="11">asset</text>
+</svg>

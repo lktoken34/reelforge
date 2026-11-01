@@ -1,0 +1,1 @@
+{"ok": true, "experimental": true, "production_render_ready": false, "frames": 90, "encoded_fps": 10.57894088930291, "report": "artifacts/phase5a/cinematic/render_report.json"}

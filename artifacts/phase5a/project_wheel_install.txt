@@ -1,0 +1,6 @@
+Resolved 1 package in 2ms
+Prepared 1 package in 15ms
+Uninstalled 1 package in 2ms
+Installed 1 package in 4ms
+ - reelforge-v2==0.6.0 (from file:///workspace/scratch/2a96718c6b46/reelforge)
+ + reelforge-v2==0.6.0 (from file:///workspace/scratch/2a96718c6b46/reelforge/dist/reelforge_v2-0.6.0-py3-none-any.whl)

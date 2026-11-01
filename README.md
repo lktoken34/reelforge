@@ -219,3 +219,13 @@ still fails; this is not an accepted Phase 4B gate or a production/batch renderi
 Phase 4B.1 cleanup investigation remains blocked: see [CLEANUP_REPAIR.md](docs/CLEANUP_REPAIR.md)
 for verified inode restoration, safety hardening and all three failed suite results. The ZIP is
 a committed review checkpoint, not an approved reliability repair.
+
+### Experimental scene graph — Phase 5A
+
+The user has approved Phase 4B.1 at cdd56d1; older blocked notes above retain historical host
+evidence. scene-0.1 now assembles registered components into distinct layouts with bounded groups,
+transforms, layers, ground binding and camera references. See [authoring contract](docs/SCENE_GRAPH.md),
+[engineering/visual report](docs/PHASE5A_REPORT.md), [JSON examples](examples/scenes/) and
+[proofs](artifacts/phase5a/). Run python tools/scene.py capabilities, then validate/inspect/render.
+Legacy story/audio contracts and the production episode CLI are unchanged. All new scene tests
+pass locally; full-suite cleanup failures on this host still require isolated validation.

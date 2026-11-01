@@ -1,0 +1,5 @@
+{
+  "all_90_source_frames_equal": true,
+  "all_90_decoded_frames_equal": true,
+  "scope": "Two full scene renders on same native build; final compile adds explicit ground-support metadata with identical projection/geometry. No AAC/MP4 cross-build byte promise."
+}

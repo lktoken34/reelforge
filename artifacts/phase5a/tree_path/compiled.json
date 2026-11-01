@@ -1,0 +1,305 @@
+{
+  "schema_version": "scene-0.1",
+  "title": "Between the trees",
+  "frame": 45,
+  "hierarchy": [
+    {
+      "id": "root",
+      "parent": null,
+      "kind": "root",
+      "world": {
+        "x": 0.0,
+        "y": 0.0,
+        "scale": 1,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": null,
+      "depth": null
+    },
+    {
+      "id": "sky_layer",
+      "parent": "root",
+      "kind": "layer",
+      "world": {
+        "x": 0.0,
+        "y": 0.0,
+        "scale": 1,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "sky_layer",
+      "depth": 0
+    },
+    {
+      "id": "sky",
+      "parent": "sky_layer",
+      "kind": "background",
+      "world": {
+        "x": 0.0,
+        "y": 0.0,
+        "scale": 1,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "sky_layer",
+      "depth": 0
+    },
+    {
+      "id": "distance",
+      "parent": "root",
+      "kind": "layer",
+      "world": {
+        "x": 0.0,
+        "y": 0.0,
+        "scale": 1,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "distance",
+      "depth": 0.18
+    },
+    {
+      "id": "hills",
+      "parent": "distance",
+      "kind": "background",
+      "world": {
+        "x": 180.0,
+        "y": 360.0,
+        "scale": 1,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "distance",
+      "depth": 0.18
+    },
+    {
+      "id": "terrain",
+      "parent": "root",
+      "kind": "layer",
+      "world": {
+        "x": 0.0,
+        "y": 0.0,
+        "scale": 1,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "terrain",
+      "depth": 1
+    },
+    {
+      "id": "ground",
+      "parent": "terrain",
+      "kind": "environment",
+      "world": {
+        "x": 155.0,
+        "y": 515.0,
+        "scale": 1.15,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "terrain",
+      "depth": 1
+    },
+    {
+      "id": "structures",
+      "parent": "root",
+      "kind": "layer",
+      "world": {
+        "x": 0.0,
+        "y": 0.0,
+        "scale": 1,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "structures",
+      "depth": 0.85
+    },
+    {
+      "id": "left_grove",
+      "parent": "structures",
+      "kind": "group",
+      "world": {
+        "x": 28.0,
+        "y": 425.0,
+        "scale": 0.9,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "structures",
+      "depth": 0.85
+    },
+    {
+      "id": "near_tree",
+      "parent": "left_grove",
+      "kind": "asset",
+      "world": {
+        "x": 28.0,
+        "y": 425.0,
+        "scale": 0.9,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "structures",
+      "depth": 0.85
+    },
+    {
+      "id": "far_tree",
+      "parent": "left_grove",
+      "kind": "asset",
+      "world": {
+        "x": 80.2,
+        "y": 399.8,
+        "scale": 0.5670000000000001,
+        "angle": -0.05235987755982989
+      },
+      "visible": true,
+      "layer": "structures",
+      "depth": 0.85
+    },
+    {
+      "id": "right_grove",
+      "parent": "structures",
+      "kind": "group",
+      "world": {
+        "x": 326.0,
+        "y": 452.0,
+        "scale": 1,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "structures",
+      "depth": 0.85
+    },
+    {
+      "id": "right_tree",
+      "parent": "right_grove",
+      "kind": "asset",
+      "world": {
+        "x": 326.0,
+        "y": 452.0,
+        "scale": 1.05,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "structures",
+      "depth": 0.85
+    },
+    {
+      "id": "fence",
+      "parent": "structures",
+      "kind": "asset",
+      "world": {
+        "x": 119.0,
+        "y": 439.0,
+        "scale": 0.65,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "structures",
+      "depth": 0.85
+    },
+    {
+      "id": "people",
+      "parent": "root",
+      "kind": "layer",
+      "world": {
+        "x": 0.0,
+        "y": 0.0,
+        "scale": 1,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "people",
+      "depth": 1
+    },
+    {
+      "id": "rowan",
+      "parent": "people",
+      "kind": "character",
+      "world": {
+        "x": 243.0,
+        "y": 535.0,
+        "scale": 0.72,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "people",
+      "depth": 1
+    },
+    {
+      "id": "foreground",
+      "parent": "root",
+      "kind": "layer",
+      "world": {
+        "x": 0.0,
+        "y": 0.0,
+        "scale": 1,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "foreground",
+      "depth": 1.4
+    },
+    {
+      "id": "framing_left",
+      "parent": "foreground",
+      "kind": "asset",
+      "world": {
+        "x": -6.0,
+        "y": 624.0,
+        "scale": 1.8,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "foreground",
+      "depth": 1.4
+    },
+    {
+      "id": "framing_right",
+      "parent": "foreground",
+      "kind": "asset",
+      "world": {
+        "x": 385.0,
+        "y": 610.0,
+        "scale": 1.7,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "foreground",
+      "depth": 1.4
+    }
+  ],
+  "painter_ids": [
+    "sky",
+    "hills",
+    "ground",
+    "near_tree",
+    "far_tree",
+    "right_tree",
+    "fence",
+    "rowan",
+    "framing_left",
+    "framing_right"
+  ],
+  "path_allowance": 1216,
+  "operation_allowance": 26300,
+  "character_ground_contacts": {
+    "rowan": {
+      "ground_id": "ground",
+      "world": [
+        243.0,
+        535.0
+      ],
+      "screen": [
+        244.64465257337557,
+        539.757793037708
+      ]
+    }
+  },
+  "camera": {
+    "x": 0.10111933999934752,
+    "y": -1.0168532233332246,
+    "zoom": 1.0277106652916652
+  }
+}

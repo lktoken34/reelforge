@@ -1,0 +1,4 @@
+validated, compiled, evaluated without Cairo: barn_approach.json
+validated, compiled, evaluated without Cairo: rural_outpost.json
+validated, compiled, evaluated without Cairo: tree_path.json
+Installed wheel outside checkout: PASS; production render_available:false

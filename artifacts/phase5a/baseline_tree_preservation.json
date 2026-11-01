@@ -1,0 +1,9 @@
+{
+  "base": "cdd56d1c183eaacb65b8ba1a11d4dd5f36bfef2e",
+  "unchanged_existing_files_verified": 338,
+  "intentional_existing_document_updates": [
+    "AGENTS.md",
+    "README.md",
+    "docs/ARCHITECTURE.md"
+  ]
+}

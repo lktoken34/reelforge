@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "retained_private_paths": {
+    "artifacts/phase5a/cinematic": [],
+    "outputs/phase5a-legacy-audio": []
+  },
+  "scope": "Read-only final check after all subsequent tests/native/build work; no deletion"
+}

@@ -1,0 +1,275 @@
+{
+  "schema_version": "scene-0.1",
+  "title": "Rural outpost \u2014 the last shelter",
+  "frame": 45,
+  "hierarchy": [
+    {
+      "id": "root",
+      "parent": null,
+      "kind": "root",
+      "world": {
+        "x": 0.0,
+        "y": 0.0,
+        "scale": 1,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": null,
+      "depth": null
+    },
+    {
+      "id": "sky_layer",
+      "parent": "root",
+      "kind": "layer",
+      "world": {
+        "x": 0.0,
+        "y": 0.0,
+        "scale": 1,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "sky_layer",
+      "depth": 0
+    },
+    {
+      "id": "sky",
+      "parent": "sky_layer",
+      "kind": "background",
+      "world": {
+        "x": 0.0,
+        "y": 0.0,
+        "scale": 1,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "sky_layer",
+      "depth": 0
+    },
+    {
+      "id": "distance",
+      "parent": "root",
+      "kind": "layer",
+      "world": {
+        "x": 0.0,
+        "y": 0.0,
+        "scale": 1,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "distance",
+      "depth": 0.18
+    },
+    {
+      "id": "hills",
+      "parent": "distance",
+      "kind": "background",
+      "world": {
+        "x": 180.0,
+        "y": 345.0,
+        "scale": 1,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "distance",
+      "depth": 0.18
+    },
+    {
+      "id": "terrain",
+      "parent": "root",
+      "kind": "layer",
+      "world": {
+        "x": 0.0,
+        "y": 0.0,
+        "scale": 1,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "terrain",
+      "depth": 1
+    },
+    {
+      "id": "ground",
+      "parent": "terrain",
+      "kind": "environment",
+      "world": {
+        "x": 180.0,
+        "y": 505.0,
+        "scale": 1.1,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "terrain",
+      "depth": 1
+    },
+    {
+      "id": "structures",
+      "parent": "root",
+      "kind": "layer",
+      "world": {
+        "x": 0.0,
+        "y": 0.0,
+        "scale": 1,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "structures",
+      "depth": 0.85
+    },
+    {
+      "id": "outpost",
+      "parent": "structures",
+      "kind": "group",
+      "world": {
+        "x": 236.0,
+        "y": 425.0,
+        "scale": 0.62,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "structures",
+      "depth": 0.85
+    },
+    {
+      "id": "building",
+      "parent": "outpost",
+      "kind": "asset",
+      "world": {
+        "x": 236.0,
+        "y": 425.0,
+        "scale": 0.62,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "structures",
+      "depth": 0.85
+    },
+    {
+      "id": "gate",
+      "parent": "outpost",
+      "kind": "asset",
+      "world": {
+        "x": 123.16,
+        "y": 438.64,
+        "scale": 0.496,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "structures",
+      "depth": 0.85
+    },
+    {
+      "id": "trees",
+      "parent": "structures",
+      "kind": "group",
+      "world": {
+        "x": 34.0,
+        "y": 425.0,
+        "scale": 1,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "structures",
+      "depth": 0.85
+    },
+    {
+      "id": "lone_tree",
+      "parent": "trees",
+      "kind": "asset",
+      "world": {
+        "x": 34.0,
+        "y": 425.0,
+        "scale": 0.87,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "structures",
+      "depth": 0.85
+    },
+    {
+      "id": "people",
+      "parent": "root",
+      "kind": "layer",
+      "world": {
+        "x": 0.0,
+        "y": 0.0,
+        "scale": 1,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "people",
+      "depth": 1
+    },
+    {
+      "id": "rowan",
+      "parent": "people",
+      "kind": "character",
+      "world": {
+        "x": 95.0,
+        "y": 504.0,
+        "scale": 0.57,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "people",
+      "depth": 1
+    },
+    {
+      "id": "foreground",
+      "parent": "root",
+      "kind": "layer",
+      "world": {
+        "x": 0.0,
+        "y": 0.0,
+        "scale": 1,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "foreground",
+      "depth": 1.4
+    },
+    {
+      "id": "right_edge",
+      "parent": "foreground",
+      "kind": "asset",
+      "world": {
+        "x": 389.0,
+        "y": 570.0,
+        "scale": 1.6,
+        "angle": 0.0
+      },
+      "visible": true,
+      "layer": "foreground",
+      "depth": 1.4
+    }
+  ],
+  "painter_ids": [
+    "sky",
+    "hills",
+    "ground",
+    "building",
+    "gate",
+    "lone_tree",
+    "rowan",
+    "right_edge"
+  ],
+  "path_allowance": 1280,
+  "operation_allowance": 24300,
+  "character_ground_contacts": {
+    "rowan": {
+      "ground_id": "ground",
+      "world": [
+        95.0,
+        504.0
+      ],
+      "screen": [
+        92.5434741102091,
+        507.8987624136664
+      ]
+    }
+  },
+  "camera": {
+    "x": 0.10111933999934752,
+    "y": -1.0168532233332246,
+    "zoom": 1.0277106652916652
+  }
+}
