@@ -177,6 +177,35 @@ jobs:
               > "outputs/diagnostic/renders/${family}.log" 2>&1
             [ "${PIPESTATUS[0]}" -eq 0 ] || overall=1
           done
+          uv run --frozen --extra renderer python tools/procedural_environment.py render \
+            examples/procedural/woodland_trail_417.json \
+            --output-dir outputs/diagnostic/renders/woodland-repeat \
+            > outputs/diagnostic/renders/woodland-repeat.log 2>&1
+          [ "${PIPESTATUS[0]}" -eq 0 ] || overall=1
+          uv run python -c '
+          import json
+          from pathlib import Path
+          first = json.loads(Path("outputs/diagnostic/renders/woodland/render_report.json").read_text())
+          second = json.loads(Path("outputs/diagnostic/renders/woodland-repeat/render_report.json").read_text())
+          result = {
+              "source_checkpoints_equal": (
+                  first.get("source_pixel_sha256")
+                  == second.get("source_pixel_sha256")
+              ),
+              "decoded_frames_equal": (
+                  first.get("verification", {}).get("decoded_rgb_sha256")
+                  == second.get("verification", {}).get("decoded_rgb_sha256")
+              ),
+              "both_jobs_completed": True,
+          }
+          Path("outputs/diagnostic/renders/woodland-repeat-consistency.json").write_text(
+              json.dumps(result, indent=2) + "\n"
+          )
+          raise SystemExit(
+              0 if result["source_checkpoints_equal"] and result["decoded_frames_equal"] else 1
+          )
+          '
+          [ "$?" -eq 0 ] || overall=1
           exit "$overall"
 
       - name: Verify procedural videos, legacy regressions and cleanup
@@ -209,8 +238,8 @@ jobs:
                 and video["pix_fmt"] == "yuv420p"
                 and video["width"] == 720 and video["height"] == 1280
                 and video["avg_frame_rate"] == "30/1"
-                and video.get("nb_read_frames", video.get("nb_frames")) == "90"
-                and video["duration"] == "3.000000"
+                and int(video.get("nb_read_frames", video.get("nb_frames", 0))) == 90
+                and abs(float(video["duration"]) - 3.0) < 0.000001
             )
             raise SystemExit(0 if ok else 1)
             ' "outputs/diagnostic/av/${family}-ffprobe.json"
