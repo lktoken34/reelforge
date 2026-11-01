@@ -1,0 +1,145 @@
+{
+  "approved_base_commit": "ef27965967e78c025a2526def415a22975e3b5c1",
+  "files": {
+    "baseline_same_host_report.json": {
+      "size_bytes": 30921,
+      "sha256": "9d84e24e97c5ff16ac300317688d406b5e5a73ed0737c6782c6a614fb0400261"
+    },
+    "before_after.mp4": {
+      "size_bytes": 3808175,
+      "sha256": "ee144f2cac933c99b6c1de03bc3cbae28d529428d4f52d816d5f3daa04e694a3"
+    },
+    "before_after.png": {
+      "size_bytes": 594221,
+      "sha256": "2f2c3522eefc7863c7f0119ebd7355aa51cc9c991de27dc9831846f58edf1af6"
+    },
+    "build_results.txt": {
+      "size_bytes": 237,
+      "sha256": "097eb48f7fb15697e9461998bc43c5d21a121674896292ec2b1cc9047b025f34"
+    },
+    "camera_contact_sheet.png": {
+      "size_bytes": 414787,
+      "sha256": "5bb5ca65d7237ca2e6efe46f85f72af8ee1684d5c40d10a987f3f8abc803128e"
+    },
+    "comparison_report.json": {
+      "size_bytes": 73041,
+      "sha256": "f37a95a1704c33c596147360370fef1c7372bed1771fb16bd0140e2df12b4bbd"
+    },
+    "depth_breakdown.png": {
+      "size_bytes": 194421,
+      "sha256": "990037e5e6849a1f7c4866b43ace775589461f16385f558063ac7f11e7afd735"
+    },
+    "frame_000.png": {
+      "size_bytes": 285647,
+      "sha256": "01725f5d36058e28a23c02431225e0295e33171b8df864bba1fcba51a7f45000"
+    },
+    "frame_090.png": {
+      "size_bytes": 280802,
+      "sha256": "7fe4b54698b312922e927967a5ef11a15a0a3fcfc8c765ff162b77d9f34aa1e4"
+    },
+    "frame_179.png": {
+      "size_bytes": 275355,
+      "sha256": "52cc27df5d7cd26f99878a4c07c2602184ec767d38cb68b752168491f840b569"
+    },
+    "hero_1080x1920.png": {
+      "size_bytes": 435689,
+      "sha256": "50dc7cbe84e33141e1b203d7886c79ce1a896fbdadd6d45e3fdcf287dcc881e4"
+    },
+    "initial_test_attempt.txt": {
+      "size_bytes": 2322,
+      "sha256": "746cea9eee284d09cf8f534e5d3758597a2eab165aa051e5cdd7e85ab67015fb"
+    },
+    "layer_barn.png": {
+      "size_bytes": 59882,
+      "sha256": "f242eb386a4cc0508341c994c7169845b262b5799f8882cdebc1621c322c0384"
+    },
+    "layer_door_light.png": {
+      "size_bytes": 13336,
+      "sha256": "3535f690c807c86dd6bff1a9fa1f64df033a3b0cb1a39ef86edf019a964ac444"
+    },
+    "layer_edge_grade.png": {
+      "size_bytes": 53184,
+      "sha256": "9a5b8c9c73aedb94e9305f667ca884eb56f020084ff3069cecbfc382bd546677"
+    },
+    "layer_fence_props.png": {
+      "size_bytes": 13952,
+      "sha256": "dabe804d0a7c7661bae1653e2859a0c932be23d9772131461eba9a265ad5d1f9"
+    },
+    "layer_foreground.png": {
+      "size_bytes": 52276,
+      "sha256": "ea236e4e01ae4753c126e7f7b2795170ee6a64e2dc9b02ea0aab30df00c519e1"
+    },
+    "layer_ground.png": {
+      "size_bytes": 81910,
+      "sha256": "232ea75fbb6ef779ac40fa88320ddc852caa12ed01a107532e34118cd1890505"
+    },
+    "layer_hills.png": {
+      "size_bytes": 18262,
+      "sha256": "dd5a602ff40c105c5076f23ef34467c22d252b3ae2502b8aac332a372b084025"
+    },
+    "layer_orchard.png": {
+      "size_bytes": 33162,
+      "sha256": "f5385403ae8847110fbf589deee951650bf59e2d4746fc7a11e2ac14063e2961"
+    },
+    "layer_rowan.png": {
+      "size_bytes": 42800,
+      "sha256": "ec5f20f514e555bf803cccbc10175f9488b027499c81e1239c4fd862429d40c3"
+    },
+    "layer_sky.png": {
+      "size_bytes": 34548,
+      "sha256": "3c5b0279cf131411da5ab00ea7e7f2f56e5e1514e7fcaab939114da272b496a6"
+    },
+    "lighting_atmosphere_breakdown.png": {
+      "size_bytes": 496595,
+      "sha256": "5303740e815a3b46dcb5326ac06c994e376ecd6242f64d3e1ee75baf3c691474"
+    },
+    "lint_results.txt": {
+      "size_bytes": 46,
+      "sha256": "9db9b7d82bdf19591948ad5b127f5b8d6c7af98cb50cb9f843ee15daa7a611c8"
+    },
+    "orchard_cinematic.mp4": {
+      "size_bytes": 1756072,
+      "sha256": "a675719f852a7703f9c0c75faabe1c23383277b5f9d6d2b88fc92811363679ab"
+    },
+    "orchard_suspense.mp4": {
+      "size_bytes": 1815833,
+      "sha256": "64ab39f91fde2e83db1769f9e56706f67aeda572f43f84e41a5348f7e0ab8411"
+    },
+    "original_phase3b.mp4": {
+      "size_bytes": 1627473,
+      "sha256": "c192487660389ddeded0bca1ac5762889ef6e4ac2e06005c0f2f843e2a617259"
+    },
+    "repeat_consistency.json": {
+      "size_bytes": 14149,
+      "sha256": "da219978bcee489feae31e28f54d32c3c655f134fb7081453e30193be58030eb"
+    },
+    "report.json": {
+      "size_bytes": 31096,
+      "sha256": "74c74e3c3a84096e986ed2c9859ca8bd94fb3fa7e66cf3a1479bcecf265d6ad3"
+    },
+    "summary.json": {
+      "size_bytes": 2566,
+      "sha256": "1cc603aae923dc6898190e588728650ba9ae8667c1bd1a924978667426817cb0"
+    },
+    "suspense_contact_sheet.png": {
+      "size_bytes": 426697,
+      "sha256": "f293ff9a8112a6bc3dde65ad4432acd1c8be919d95d50e130adde3637469f288"
+    },
+    "suspense_repeat_consistency.json": {
+      "size_bytes": 14155,
+      "sha256": "ecd31f4bda05802dba06651b5f3d5152938f07d460a85e33e2f3081bbf2892e9"
+    },
+    "suspense_report.json": {
+      "size_bytes": 31108,
+      "sha256": "96f2bae3e1f0335666cc5e1bfba459dfae5bb5a4cdf26dbb5e0cfaa159aa3a8d"
+    },
+    "test_results.txt": {
+      "size_bytes": 421,
+      "sha256": "285e0f00356ce32744fb5ce6b041e40f50bd2da3c8adc9a977bb5406650113e6"
+    },
+    "wheel_smoke.txt": {
+      "size_bytes": 1013,
+      "sha256": "9aa36e2d431133f6a1db91e10b1e8ccfee86547c72173eb99fe1002a86fd788c"
+    }
+  }
+}

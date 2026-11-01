@@ -183,3 +183,12 @@ One original code-authored orchard environment, bounded shot presets and six-sec
 integration are available for external review. See [environment contract](docs/CINEMATIC_ENVIRONMENT.md),
 [technical/artistic assessment](docs/PHASE3B_REPORT.md) and [visual artifacts](artifacts/phase3b/).
 Production episode rendering remains unavailable; target deployment remains blocked.
+
+### Phase 3B.1 local artistic review candidate
+
+The same orchard now has varied foliage/planting, attached local lighting, dusk material
+grading and a separate bounded suspense shot. Original camera presets remain valid.
+See [refinement contract](docs/ENVIRONMENT_POLISH.md),
+[review and measurements](docs/PHASE3B1_REPORT.md), and [visual proofs](artifacts/phase3b1/).
+The main A/B keeps the original framing/timing; the suspense demonstration is separate.
+No production rendering, target deployment or later phase is approved.

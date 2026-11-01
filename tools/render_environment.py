@@ -1,10 +1,11 @@
-"""Trusted Phase 3B proof renderer; strict resource policy; no episode integration."""
+"""Trusted Phase 3B.1 proof renderer; strict resource policy; no episode integration."""
 
 import argparse
 import json
 import resource
 import signal
 import time
+from dataclasses import asdict
 from pathlib import Path
 
 from render_video import confirm_transaction_cleanup
@@ -95,7 +96,8 @@ def render(output_dir: Path, *, stills_only=False, preset_path=None):
         raise OperationError("OOM_EVENTS", "OOM counters changed during character proof")
     after = resource.getrusage(resource.RUSAGE_CHILDREN)
     report = {
-        "scope": "Phase 3B development-host cinematic environment; not target VM",
+        "scope": "Phase 3B.1 development-host cinematic environment; not target VM",
+        "preset": asdict(preset),
         "versions": backend_versions(),
         "technical_rendering_success": True,
         "artistic_approval": False,

@@ -1,0 +1,74 @@
+{
+  "scope": "Phase 3B.1 local review candidate; external artistic approval pending",
+  "approved_base_commit": "ef27965967e78c025a2526def415a22975e3b5c1",
+  "branch": "phase3b1-environment-polish",
+  "tests_passed": 325,
+  "existing_tests_preserved": 301,
+  "new_test_cases": 24,
+  "immutable_template_bytes": 2253848,
+  "immutable_template_design_allowance_bytes": 3145728,
+  "frame_commands": 1258,
+  "frame_path_and_clip_operations": 9698,
+  "protected_source_areas_unchanged": [
+    "src/reelforge/rendering",
+    "src/reelforge/media",
+    "src/reelforge/resources",
+    "src/reelforge/characters",
+    "pyproject.toml",
+    "uv.lock"
+  ],
+  "baseline_original_bytes_unchanged": true,
+  "baseline_same_host_all_decoded_frames_match": true,
+  "main_same_camera_and_timing_as_baseline": true,
+  "suspense_is_separate": true,
+  "baseline": {
+    "render_encode_seconds": 14.453253935000248,
+    "render_timings": {
+      "geometry_seconds": 7.492297635004434,
+      "draw_seconds": 5.47655098600535,
+      "stream_write_seconds": 1.3486441640025078
+    },
+    "encoded_fps": 12.453942953573168
+  },
+  "main": {
+    "render_encode_seconds": 12.812389349000114,
+    "render_timings": {
+      "geometry_seconds": 5.329900924996764,
+      "draw_seconds": 6.304619940006887,
+      "stream_write_seconds": 1.0416832119981336
+    },
+    "encoded_fps": 14.048901816587966
+  },
+  "suspense": {
+    "render_encode_seconds": 14.452145115999883,
+    "render_timings": {
+      "geometry_seconds": 6.074928504002855,
+      "draw_seconds": 7.0886222229964915,
+      "stream_write_seconds": 1.132512299002883
+    },
+    "encoded_fps": 12.454898463531416
+  },
+  "rss_peaks_bytes": {
+    "baseline": 95264768,
+    "main": 96239616,
+    "main_repeat": 111390720,
+    "suspense": 102883328,
+    "suspense_repeat": 102604800,
+    "comparison": 150814720,
+    "proof_sheets": 161038336
+  },
+  "main_repeat_all_180_decoded_frames_equal": true,
+  "suspense_repeat_all_180_decoded_frames_equal": true,
+  "memory_budget_bytes": 268435456,
+  "reserve_bytes": 67108864,
+  "memory_policy": "strict",
+  "missing_required_artifacts": [],
+  "artistic_approval": false,
+  "deployment_gate_approved": false,
+  "limitations": [
+    "Stylized shared tree recipe and regular bed perspective remain visible",
+    "Authored light/shadow approximations; no volumetrics or pose-aware physical relighting",
+    "Sky remains spacious in the controlled camera; narrative escalation remains restrained",
+    "RSS sampling can miss transient peaks and double-count shared memory; development host only"
+  ]
+}

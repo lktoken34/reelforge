@@ -1,5 +1,10 @@
 # Last Light Orchard — experimental environment contract
 
+**Current refinement:** see [Phase 3B.1 contract](ENVIRONMENT_POLISH.md). The three original
+camera presets and six-field input remain compatible. The implementation/budget details below
+record the Phase 3B baseline; current visual methods and measurements are in the refinement
+contract and report.
+
 Phase 3B adds one original code-generated farm environment for external review. It is
 not a world generator or a production episode compiler. The installed episode CLI still
 advertises `render_available: false`; manifests remain `render_ready: false`.

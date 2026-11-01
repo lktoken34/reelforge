@@ -1,0 +1,47 @@
+........................................................................ [ 22%]
+........................................................................ [ 44%]
+........................................................................ [ 66%]
+........................................................................ [ 88%]
+.......F............................                                     [100%]
+=================================== FAILURES ===================================
+____________ test_engineering_worker_accepts_long_render_arguments _____________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-3/test_engineering_worker_accept0')
+
+    def test_engineering_worker_accepts_long_render_arguments(tmp_path):
+        import json
+        import subprocess
+        import sys
+        from pathlib import Path
+
+        script = Path(__file__).resolve().parents[1] / "tools/render_video.py"
+        output, report = tmp_path / "long.mp4", tmp_path / "long.json"
+        result = subprocess.run(
+            [
+                sys.executable,
+                str(script),
+                "--width",
+                "360",
+                "--frames",
+                "450",
+                "--timeout",
+                "180",
+                "--output",
+                str(output),
+                "--report",
+                str(report),
+            ],
+            capture_output=True,
+            text=True,
+            timeout=60,
+        )
+>       assert result.returncode == 0, result.stderr
+E       AssertionError: {"ok": false, "technical_rendering_success": false, "memory_policy": "strict", "deployment_gate_approved": false, "error": {"code": "WORKSPACE_TMP", "message": "Choose a persistent project directory outside /tmp"}, "render_ready": false}
+E
+E       assert 2 == 0
+E        +  where 2 = CompletedProcess(args=['/workspace/scratch/2a96718c6b46/reelforge/.venv/bin/python', '/workspace/scratch/2a96718c6b46/... {"code": "WORKSPACE_TMP", "message": "Choose a persistent project directory outside /tmp"}, "render_ready": false}\n').returncode
+
+tests/test_video_integration.py:80: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_video_integration.py::test_engineering_worker_accepts_long_render_arguments
+1 failed, 323 passed in 16.00s

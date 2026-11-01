@@ -21,8 +21,8 @@ local input in a later contract version, not a feature of this manifest.
 
 Episode restrictions above do not prevent an engineer from changing engine code for an
 explicit engine-development task. Read architecture, hardware constraints and roadmap first.
-Current assigned engineering scope is Phase 3B: one original farm/orchard environment,
-bounded layers/camera/atmosphere, existing Rowan preset integration and visual proofs on development hardware. Keep drawing/video
+Current assigned engineering scope is Phase 3B.1: refine the accepted orchard artwork,
+lighting and bounded camera presets, preserving Rowan, renderer, encoder and resource policy. Keep drawing/video
 commands out of manifests and the installed CLI. Do not begin the next milestone without a new
 assignment following external review. Do not delegate to other agents unless explicitly requested.
 
@@ -50,7 +50,7 @@ Actual target-VM evidence and external review remain required; development resul
 certify deployment. Read docs/MEMORY_OBSERVABILITY.md and
 docs/TARGET_VM_PHASE2C1_PROMPT.md before target work. Use strict policy by default; the
 explicit guest fallback flag never ignores a discovered limit. Do not deploy to Muse Spark
-during Phase 3A. Review docs/CHARACTER_RIG.md. Stop after Phase 3B for independent artistic/architectural review.
+during Phase 3A. Review docs/CHARACTER_RIG.md. Stop after Phase 3B.1 for independent artistic/architectural review.
 
 ## Experimental character-preset work
 
@@ -67,4 +67,7 @@ Read `docs/CINEMATIC_ENVIRONMENT.md` and copy `examples/environments/orchard_pus
 Validate with `python tools/validate_environment.py PATH`. Select only published environment,
 shot IDs and numeric bounds; never author paths/camera equations in scene data. The fixed
 render_environment.py quality proof is engineering tooling, not a production episode command.
-The environment has not passed external artistic or architectural review yet.
+Phase 3B engineering passed review; Phase 3B.1 artistic/architectural acceptance is pending.
+Read docs/ENVIRONMENT_POLISH.md. Use --basetemp outputs/pytest-phase3b1 for pytest so
+media integration tests satisfy the existing persistent-workspace policy. No GitHub push
+or individual source/binary publishing is authorized for this local export assignment.

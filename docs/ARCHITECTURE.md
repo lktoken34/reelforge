@@ -149,3 +149,9 @@ See VIDEO_PIPELINE.md for exact contracts and PHASE2B_HARDWARE.md for measured w
 bounded camera math and a native-free six-field preset. It returns the existing DrawPath
 vocabulary. No episode schema, backend, encoder or resource-policy boundary changed.
 See CINEMATIC_ENVIRONMENT.md and PHASE3B_REPORT.md; external review is pending.
+
+Phase 3B.1 retains the accepted environment layer contract. `environments/polish.py` supplies
+bounded vector recipes, fixed immutable templates and material grading; scene composition
+projects threshold light between existing depth planes. The existing six input fields are
+unchanged; `orchard_suspense` is an additive trusted shot ID. Backend/media/resources/rig
+are unchanged. See ENVIRONMENT_POLISH.md and PHASE3B1_REPORT.md; stop for external review.

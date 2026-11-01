@@ -18,8 +18,8 @@ class EnvironmentPreset:
     def __post_init__(self):
         if self.environment != "last_light_orchard_01":
             raise RenderError("/environment: choose last_light_orchard_01")
-        if self.shot not in ("orchard_push", "orchard_pan", "locked"):
-            raise RenderError("/shot: choose orchard_push, orchard_pan or locked")
+        if self.shot not in ("orchard_push", "orchard_pan", "locked", "orchard_suspense"):
+            raise RenderError("/shot: choose orchard_push, orchard_pan, locked or orchard_suspense")
         for key in ("atmosphere", "warmth", "breeze", "framing"):
             value = getattr(self, key)
             finite(value)
