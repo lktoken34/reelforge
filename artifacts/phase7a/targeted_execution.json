@@ -1,0 +1,13 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "pytest",
+    "tests/test_storyboards.py",
+    "--basetemp",
+    "outputs/pytest-storyboard-targeted",
+    "-q"
+  ],
+  "exit_code": 0,
+  "seconds": 21.387114884000084
+}

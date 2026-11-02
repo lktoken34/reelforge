@@ -1,0 +1,26 @@
+{
+  "cwd": "/tmp",
+  "installed_compiler": "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7a-wheel-smoke/lib/python3.12/site-packages/reelforge/storyboards/compiler.py",
+  "cairo_available": false,
+  "ffmpeg_or_subprocess_imported": false,
+  "studies": {
+    "abandoned_settlement": {
+      "beats": 5,
+      "shots": 2,
+      "frames_inspected": 90,
+      "plan_sha256": "c8b2bd3756465568d5912cbb782773b6a9688d9a383a8b0b49602b632f659839"
+    },
+    "shelter_entrance": {
+      "beats": 5,
+      "shots": 1,
+      "frames_inspected": 90,
+      "plan_sha256": "32de67e0a3f5564c9b0ecbff7dc872b906323911f13e6f478851680ca04ee7df"
+    },
+    "silent_signal": {
+      "beats": 5,
+      "shots": 1,
+      "frames_inspected": 90,
+      "plan_sha256": "e82cc92addb330291cb6f298ec708ae78f5cbdb44b02ce78daf17c5619ecc1af"
+    }
+  }
+}

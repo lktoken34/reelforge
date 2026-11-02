@@ -1,0 +1,10 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "tools/verify_storyboard_compatibility.py"
+  ],
+  "seconds": 30.36119762499993,
+  "exit_code": 0,
+  "stdout": "594 legacy pixels and 360 new decoded frames match. AV onset errors: [0, -1, 0]\nAudio cleanup immediate/later True True\n",
+  "attempts": 1
+}

@@ -1,0 +1,166 @@
+{
+  "schema_version": "storyboard-0.1",
+  "title": "Shelter Entrance",
+  "description": "One continuous shot approaches the doorway and holds through Rowan's reaction. The walk stays on the accepted horizontal apron, with no entry or depth navigation.",
+  "world": {
+    "schema_version": "environment-0.1",
+    "title": "Rocky Shelter \u2014 seed 417",
+    "family": "rocky_shelter",
+    "seed": 417,
+    "composition": {
+      "density": 2,
+      "path_alignment": 0,
+      "structure": 0.7,
+      "framing": 0.8,
+      "detail": "rich"
+    },
+    "art_direction": {
+      "lighting": "dusk",
+      "atmosphere": 0.7
+    },
+    "rowan": {
+      "enabled": true,
+      "action": "look_around",
+      "side": "left"
+    }
+  },
+  "rowan": {
+    "actor_id": "rowan",
+    "support_id": "ground",
+    "start": {
+      "position": [
+        165,
+        470
+      ],
+      "facing": "right"
+    }
+  },
+  "subjects": [
+    {
+      "id": "rowan",
+      "target": {
+        "kind": "actor",
+        "id": "rowan"
+      }
+    },
+    {
+      "id": "entrance",
+      "target": {
+        "kind": "point",
+        "position": [
+          230,
+          415
+        ],
+        "depth": 0.85
+      }
+    },
+    {
+      "id": "unseen",
+      "target": {
+        "kind": "point",
+        "position": [
+          235,
+          390
+        ],
+        "depth": 0.85
+      }
+    }
+  ],
+  "views": [
+    {
+      "id": "entrance_watch",
+      "kind": "push_in",
+      "subject": "entrance",
+      "zoom": [
+        1,
+        1.24
+      ],
+      "screen": [
+        230,
+        415
+      ],
+      "offset_start": [
+        0,
+        0
+      ],
+      "offset_end": [
+        0,
+        0
+      ],
+      "lead_seconds": 0,
+      "hold": [
+        6,
+        18
+      ],
+      "crop": "full",
+      "foreground": "clear",
+      "cut": "matched"
+    }
+  ],
+  "pattern": "approach_suspense",
+  "beats": [
+    {
+      "id": "at_the_apron",
+      "type": "establish",
+      "frames": 6,
+      "subject": "entrance",
+      "action": {
+        "kind": "idle",
+        "expression": "concerned"
+      },
+      "view": "entrance_watch",
+      "description": ""
+    },
+    {
+      "id": "close_distance",
+      "type": "approach",
+      "frames": 36,
+      "subject": "entrance",
+      "action": {
+        "kind": "walk_to",
+        "expression": "concerned",
+        "end_x": 201,
+        "end_speed": 30
+      },
+      "view": "entrance_watch",
+      "description": ""
+    },
+    {
+      "id": "settle",
+      "type": "approach",
+      "frames": 18,
+      "subject": "entrance",
+      "action": {
+        "kind": "stop_at",
+        "expression": "concerned",
+        "end_x": 210
+      },
+      "view": "entrance_watch",
+      "description": ""
+    },
+    {
+      "id": "wait",
+      "type": "hold",
+      "frames": 12,
+      "subject": "unseen",
+      "action": {
+        "kind": "idle",
+        "expression": "concerned"
+      },
+      "view": "entrance_watch",
+      "description": "Pause at the threshold, still outside."
+    },
+    {
+      "id": "answer_the_dark",
+      "type": "react",
+      "frames": 18,
+      "subject": "unseen",
+      "action": {
+        "kind": "react",
+        "expression": "concerned"
+      },
+      "view": "entrance_watch",
+      "description": "Visible reaction to something unspecified; no object or audio is generated."
+    }
+  ]
+}

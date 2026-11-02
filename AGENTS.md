@@ -149,3 +149,15 @@ resource semantics. Use targeted development tests and at most one final local f
 attempt; retain host restoration failures without retrying. Publication uses one normal CI
 run. No delegation, GitHub push, deployment, Muse Spark, Phase 6C or Phase 7 is authorized.
 Stop after the local commit and complete committed ZIP for independent review.
+
+## Current Phase 7A assignment
+
+Phase 6B passed standard CI (935 renderer tests), approved baseline
+930cd75bf77778ffb7f16594b7aa4994ed950c46. Explicit user Phase 7A authorization supersedes
+historical phase-stop notes. Work only on storyboard-0.1 narrative planning on
+phase7a-narrative-storyboard. Read docs/STORYBOARDS.md and docs/PHASE7A_REPORT.md.
+Preserve all accepted contracts, tests and runtime semantics. No existing engine adapter
+was needed: compile into accepted blocking/direction documents and reuse the renderer.
+Use targeted tests and at most one final full-suite attempt; retain host cleanup restoration
+failures without encode/test retries or unrelated fixes. No delegation, GitHub push, deployment,
+Muse Spark or Phase 7B. Stop after local commit and complete Phase 7A archive for review.

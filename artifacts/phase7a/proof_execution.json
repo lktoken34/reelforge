@@ -1,0 +1,99 @@
+{
+  "policy": "One attempt per job; no retries",
+  "jobs": [
+    {
+      "command": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/.venv/bin/python",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/tools/storyboard.py",
+        "render",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/examples/storyboards/silent_signal.json",
+        "--output-dir",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7a/proofs/silent_signal_stills",
+        "--stills-only"
+      ],
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"report\": \"/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7a/proofs/silent_signal_stills\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/.venv/bin/python",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/tools/storyboard.py",
+        "render",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/examples/storyboards/silent_signal.json",
+        "--output-dir",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7a/proofs/silent_signal_video"
+      ],
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"report\": \"/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7a/proofs/silent_signal_video\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/.venv/bin/python",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/tools/storyboard.py",
+        "render",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/examples/storyboards/abandoned_settlement.json",
+        "--output-dir",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7a/proofs/abandoned_settlement_stills",
+        "--stills-only"
+      ],
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"report\": \"/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7a/proofs/abandoned_settlement_stills\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/.venv/bin/python",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/tools/storyboard.py",
+        "render",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/examples/storyboards/abandoned_settlement.json",
+        "--output-dir",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7a/proofs/abandoned_settlement_video"
+      ],
+      "returncode": 1,
+      "stdout": "{\"ok\": false, \"error\": {\"code\": \"TRANSACTION_CLEANUP\", \"message\": \"Completed transaction path reappeared: /workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7a/proofs/abandoned_settlement_video/.reelforge-encode-wffnsq3o\"}}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/.venv/bin/python",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/tools/storyboard.py",
+        "render",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/examples/storyboards/shelter_entrance.json",
+        "--output-dir",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7a/proofs/shelter_entrance_stills",
+        "--stills-only"
+      ],
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"report\": \"/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7a/proofs/shelter_entrance_stills\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/.venv/bin/python",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/tools/storyboard.py",
+        "render",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/examples/storyboards/shelter_entrance.json",
+        "--output-dir",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7a/proofs/shelter_entrance_video"
+      ],
+      "returncode": 1,
+      "stdout": "{\"ok\": false, \"error\": {\"code\": \"TRANSACTION_CLEANUP\", \"message\": \"Completed transaction path reappeared: /workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7a/proofs/shelter_entrance_video/.reelforge-encode-uvzbo_8q\"}}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/.venv/bin/python",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/tools/storyboard.py",
+        "render",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/examples/storyboards/silent_signal.json",
+        "--output-dir",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7a/proofs/signal_repeat"
+      ],
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"report\": \"/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7a/proofs/signal_repeat\"}\n",
+      "stderr": ""
+    }
+  ]
+}

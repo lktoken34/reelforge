@@ -1,0 +1,115 @@
+............................................F........................... [  7%]
+........................................................................ [ 14%]
+........................................................................ [ 21%]
+........................................................................ [ 28%]
+........................................................................ [ 35%]
+........................................................................ [ 42%]
+........................................................................ [ 49%]
+........................................................................ [ 56%]
+........................................................................ [ 63%]
+........................................................................ [ 71%]
+........................................................................ [ 78%]
+........................................................................ [ 85%]
+........................................................................ [ 92%]
+...............................................F........................ [ 99%]
+......                                                                   [100%]
+=================================== FAILURES ===================================
+__________________ test_real_pcm_mix_aac_mux_repeat_and_clock __________________
+
+tmp_path = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/pytest-phase7a/test_real_pcm_mix_aac_mux_repe0')
+audio_data = {'audio': {'bitrate': 128000, 'channels': 2, 'codec': 'aac', 'cues': [{'asset_id': 'diag_fence', 'gain': 0.25, 'start_...'react', 'character': 'rowan_01', 'direction': 'right', 'expression': 'frightened', ...}, 'end_frame': 360, ...}], ...}
+
+    def test_real_pcm_mix_aac_mux_repeat_and_clock(tmp_path, audio_data):
+        if not NATIVE:
+            pytest.skip("optional Cairo/FFmpeg")
+        import subprocess
+    
+        data = copy.deepcopy(audio_data)
+        data["shots"] = data["shots"][:1]
+        data["shots"][0]["end_frame"] = data["output"]["frames"] = 30
+        data["audio"]["narration"].update(start_frame=1, gain=0.3)
+        data["audio"]["cues"][0].update(start_frame=15, gain=0.1)
+        data["audio"]["cues"][1].update(start_frame=24, gain=0.2)
+        manifest = tmp_path / "story.json"
+        manifest.write_text(json.dumps(data))
+        reports = []
+        for name in ("first", "repeat"):
+            directory = tmp_path / name
+            result = subprocess.run(
+                [
+                    sys.executable,
+                    str(ROOT / "tools/render_story.py"),
+                    str(manifest),
+                    "--output-dir",
+                    str(directory),
+                ],
+                capture_output=True,
+                text=True,
+                timeout=60,
+            )
+            assert result.returncode == 0, result.stdout + result.stderr
+            reports.append(json.loads((directory / "report.json").read_text()))
+        first, second = reports
+        for report in (first, second):
+            verify = report["audio_verification"]
+            assert report["stream_types"] == ["video", "audio"]
+            assert report["verification"]["decoded_frames"] == 30
+            assert verify["effective_samples_per_channel"] == 48000
+            assert 0 <= verify["terminal_padding_samples"] <= 1024
+            assert verify["decoded_audio_clock_gapless"] and verify["h264_bitstream_unchanged"]
+            assert verify["video_pts_unchanged"]
+            assert abs(verify["first_audible_error_samples"]) <= 1024
+            assert abs(verify["last_audible_error_samples"]) <= 1024
+            assert report["mix"]["statistics"]["peak"] <= 0.9
+            assert (
+                report["temporary_storage"]["sampled_peak_bytes"]
+                <= report["temporary_storage"]["preflight_estimate_bytes"]
+            )
+            assert report["whole_job_memory"]["job_budget_bytes"] == 256 * 1024**2
+            assert report["whole_job_memory"]["reserve_bytes"] == 64 * 1024**2
+            assert report["whole_job_memory"]["memory_policy"] == "strict"
+            assert report["live_surfaces_after"] == report["allocated_surface_bytes_after"] == 0
+            assert report["transaction_clean"]
+        assert first["mix"]["statistics"]["sha256"] == second["mix"]["statistics"]["sha256"]
+        assert (
+            first["audio_verification"]["decoded_pcm"]["sha256"]
+            == second["audio_verification"]["decoded_pcm"]["sha256"]
+        )
+        for name in ("first", "repeat"):
+>           assert not list((tmp_path / name).glob(".reelforge-audio-*"))
+E           AssertionError: assert not [PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/pytest-phase7a/test_real_pcm_mix_aac_mux_repe0/first/.reelforge-audio-wd5faa1o')]
+E            +  where [PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/pytest-phase7a/test_real_pcm_mix_aac_mux_repe0/first/.reelforge-audio-wd5faa1o')] = list(<generator object Path.glob at 0x7f55355f9140>)
+E            +    where <generator object Path.glob at 0x7f55355f9140> = glob('.reelforge-audio-*')
+E            +      where glob = (PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/pytest-phase7a/test_real_pcm_mix_aac_mux_repe0') / 'first').glob
+
+tests/test_audio.py:353: AssertionError
+___________ test_two_audio_jobs_persistently_clean_after_native_work ___________
+
+tmp_path = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/pytest-phase7a/test_two_audio_jobs_persistent0')
+workflow = (<module 'render_audio_story' from '/workspace/scratch/ade48aa5d272/reelforge-phase6b/tools/render_audio_story.py'>, S...(character='rowan_01', action='idle', direction='right', speed=1.0, expression='calm', intensity=1.0)),), audio=None)])
+
+    def test_two_audio_jobs_persistently_clean_after_native_work(tmp_path, workflow):
+        _, _, run, _ = workflow
+        outputs = []
+        for i in range(2):
+            out = tmp_path / f"audio-{i}"
+            report = run(out)
+            assert report["transaction_clean"]
+            outputs.append(out)
+            rc, _, _ = run_bounded(
+                ["ffmpeg", "-v", "error", "-i", str(out / "story.mp4"), "-f", "null", "-"]
+            )
+            assert rc == 0
+            for previous in outputs:
+>               assert not list(previous.glob(".reelforge-audio-*"))
+E               AssertionError: assert not [PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/pytest-phase7a/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-lest4kmf')]
+E                +  where [PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/pytest-phase7a/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-lest4kmf')] = list(<generator object Path.glob at 0x7f55355faac0>)
+E                +    where <generator object Path.glob at 0x7f55355faac0> = glob('.reelforge-audio-*')
+E                +      where glob = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/pytest-phase7a/test_two_audio_jobs_persistent0/audio-0').glob
+
+tests/test_transaction_cleanup.py:220: AssertionError
+- generated xml file: /workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7a/tests.xml -
+=========================== short test summary info ============================
+FAILED tests/test_audio.py::test_real_pcm_mix_aac_mux_repeat_and_clock - Asse...
+FAILED tests/test_transaction_cleanup.py::test_two_audio_jobs_persistently_clean_after_native_work
+2 failed, 1012 passed in 126.69s (0:02:06)

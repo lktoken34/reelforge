@@ -260,3 +260,13 @@ and environment time. Read [CINEMATIC_DIRECTION.md](docs/CINEMATIC_DIRECTION.md)
 `examples/direction/woodland_suspense.json`, and use `python tools/direction.py capabilities`,
 `schema`, `validate`, `inspect`, `frame` and `render`. The installed production CLI remains
 unchanged. See [PHASE6B_REPORT.md](docs/PHASE6B_REPORT.md) for evidence and limitations.
+
+### Experimental Phase 7A structured storyboards
+
+Author one `storyboard-0.1` document with a world, local subject/view definitions, a planning
+pattern and timed narrative beats. The compiler schedules continuous Rowan motion, coalesces
+shared views and generates accepted blocking/direction plans. See [STORYBOARDS.md](docs/STORYBOARDS.md),
+`examples/storyboards/`, and `python tools/storyboard.py capabilities`. Commands include schema,
+validate, beats, compile, frame and render (with --stills-only for previews). All planning is
+native-free; movies are silent; the production CLI remains unchanged. Evidence and limitations
+are in [PHASE7A_REPORT.md](docs/PHASE7A_REPORT.md).

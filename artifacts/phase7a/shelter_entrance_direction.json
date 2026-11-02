@@ -1,0 +1,153 @@
+{
+  "base": {
+    "actor_id": "rowan",
+    "base": {
+      "art_direction": {
+        "atmosphere": 0.7,
+        "lighting": "dusk"
+      },
+      "composition": {
+        "density": 2,
+        "detail": "rich",
+        "framing": 0.8,
+        "path_alignment": 0,
+        "structure": 0.7
+      },
+      "family": "rocky_shelter",
+      "rowan": {
+        "action": "look_around",
+        "enabled": true,
+        "side": "left"
+      },
+      "schema_version": "environment-0.1",
+      "seed": 417,
+      "title": "Rocky Shelter \u2014 seed 417"
+    },
+    "camera": "locked",
+    "corridor": "level_field",
+    "schema_version": "blocking-0.1",
+    "segments": [
+      {
+        "acting": "idle",
+        "destination": [
+          165,
+          470
+        ],
+        "end_frame": 6,
+        "end_speed": 0,
+        "expression": "concerned",
+        "facing": "right",
+        "id": "at_the_apron",
+        "mode": "idle",
+        "start_frame": 0
+      },
+      {
+        "acting": "none",
+        "destination": [
+          201,
+          470
+        ],
+        "end_frame": 42,
+        "end_speed": 30,
+        "expression": "concerned",
+        "facing": "right",
+        "id": "close_distance",
+        "mode": "walk",
+        "start_frame": 6
+      },
+      {
+        "acting": "none",
+        "destination": [
+          210,
+          470
+        ],
+        "end_frame": 60,
+        "end_speed": 0,
+        "expression": "concerned",
+        "facing": "right",
+        "id": "settle",
+        "mode": "stop",
+        "start_frame": 42
+      },
+      {
+        "acting": "idle",
+        "destination": [
+          210,
+          470
+        ],
+        "end_frame": 72,
+        "end_speed": 0,
+        "expression": "concerned",
+        "facing": "right",
+        "id": "wait",
+        "mode": "idle",
+        "start_frame": 60
+      },
+      {
+        "acting": "react",
+        "destination": [
+          210,
+          470
+        ],
+        "end_frame": 90,
+        "end_speed": 0,
+        "expression": "concerned",
+        "facing": "right",
+        "id": "answer_the_dark",
+        "mode": "idle",
+        "start_frame": 72
+      }
+    ],
+    "start": {
+      "facing": "right",
+      "position": [
+        165,
+        470
+      ]
+    },
+    "support_id": "ground",
+    "title": "Shelter Entrance"
+  },
+  "schema_version": "direction-0.1",
+  "shots": [
+    {
+      "behavior": "push_in",
+      "continuity": "matched",
+      "end_frame": 90,
+      "foreground": "clear",
+      "framing": "full",
+      "hold_in_frames": 6,
+      "hold_out_frames": 18,
+      "id": "shot_00",
+      "look_ahead_seconds": 0,
+      "offset_end": [
+        0,
+        0
+      ],
+      "offset_start": [
+        0,
+        0
+      ],
+      "safe_margin": 8,
+      "screen": [
+        230,
+        415
+      ],
+      "start_frame": 0,
+      "target": {
+        "depth": 0.85,
+        "kind": "point",
+        "position": [
+          230,
+          415
+        ]
+      },
+      "track": false,
+      "zoom": [
+        1,
+        1.24
+      ]
+    }
+  ],
+  "title": "Shelter Entrance"
+}

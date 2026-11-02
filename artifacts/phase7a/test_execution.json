@@ -1,0 +1,15 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "pytest",
+    "--basetemp",
+    "outputs/pytest-phase7a",
+    "--junitxml=artifacts/phase7a/tests.xml",
+    "-q"
+  ],
+  "exit_code": 1,
+  "seconds": 127.07772868999996,
+  "full_suite_attempts": 1,
+  "retries": 0
+}

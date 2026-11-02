@@ -1,0 +1,7 @@
+{
+  "approved_baseline": "930cd75bf77778ffb7f16594b7aa4994ed950c46",
+  "accepted_implementation_tool_and_test_files_compared_exactly": 142,
+  "all_935_accepted_tests_unchanged": true,
+  "all_accepted_runtime_and_tools_unchanged": true,
+  "integration_adapter_required": false
+}
