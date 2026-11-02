@@ -1,0 +1,134 @@
+[
+  {
+    "path": "pytest/audio-silent-template0/.reelforge-encode-ayee9o2x",
+    "before_index": 109,
+    "after_index": 113,
+    "before_ns": 3847605645608,
+    "after_ns": 3847674102709,
+    "original": {
+      "dev": 27,
+      "ino": 2228273,
+      "mode": 16832,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1793644297537213420,
+      "ctime_ns": 1793644297537213420
+    },
+    "current": {
+      "dev": 27,
+      "ino": 2228281,
+      "mode": 16832,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1793644301269872525,
+      "ctime_ns": 1793644301269872525
+    },
+    "original_fd": {
+      "dev": 27,
+      "ino": 2228273,
+      "mode": 16832,
+      "nlink": 0,
+      "size": 0,
+      "mtime_ns": 1793644300517296939,
+      "ctime_ns": 1793644300523338435
+    },
+    "between": [
+      {
+        "event": "inotify",
+        "phase": "native_after_constructor",
+        "monotonic_ns": 3847627533916,
+        "wall_ns": 1793644301268580211,
+        "watch": 2,
+        "mask": 1073742080,
+        "cookie": 0,
+        "name": ".reelforge-encode-ayee9o2x",
+        "timestamp_scope": "Userspace drain time, writer PID unavailable"
+      },
+      {
+        "event": "inotify",
+        "phase": "native_after_constructor",
+        "monotonic_ns": 3847657566899,
+        "wall_ns": 1793644301298613173,
+        "watch": 6,
+        "mask": 32,
+        "cookie": 0,
+        "name": "input.wav",
+        "timestamp_scope": "Userspace drain time, writer PID unavailable"
+      },
+      {
+        "event": "native_reaped_by_poll",
+        "phase": "native_after_constructor",
+        "monotonic_ns": 3847673150009,
+        "wall_ns": 1793644301314196323,
+        "pid": 58,
+        "returncode": 0
+      }
+    ]
+  },
+  {
+    "path": "pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-dh6z5qgl",
+    "before_index": 691,
+    "after_index": 695,
+    "before_ns": 3851068974736,
+    "after_ns": 3851154093221,
+    "original": {
+      "dev": 27,
+      "ino": 2228258,
+      "mode": 16832,
+      "nlink": 2,
+      "size": 4096,
+      "mtime_ns": 1793644301165454958,
+      "ctime_ns": 1793644301165454958
+    },
+    "current": {
+      "dev": 27,
+      "ino": 2228306,
+      "mode": 16832,
+      "nlink": 5,
+      "size": 4096,
+      "mtime_ns": 1793644304787447001,
+      "ctime_ns": 1793644304787447001
+    },
+    "original_fd": {
+      "dev": 27,
+      "ino": 2228258,
+      "mode": 16832,
+      "nlink": 0,
+      "size": 0,
+      "mtime_ns": 1793644303729029862,
+      "ctime_ns": 1793644303729261452
+    },
+    "between": [
+      {
+        "event": "inotify",
+        "phase": "native_after_constructor",
+        "monotonic_ns": 3851126879532,
+        "wall_ns": 1793644304767926107,
+        "watch": 4,
+        "mask": 1073742080,
+        "cookie": 0,
+        "name": ".reelforge-audio-dh6z5qgl",
+        "timestamp_scope": "Userspace drain time, writer PID unavailable"
+      },
+      {
+        "event": "inotify",
+        "phase": "native_after_constructor",
+        "monotonic_ns": 3851127727124,
+        "wall_ns": 1793644304768773288,
+        "watch": 19,
+        "mask": 32,
+        "cookie": 0,
+        "name": "input.wav",
+        "timestamp_scope": "Userspace drain time, writer PID unavailable"
+      },
+      {
+        "event": "native_reaped_by_poll",
+        "phase": "native_after_constructor",
+        "monotonic_ns": 3851153215684,
+        "wall_ns": 1793644304794261829,
+        "pid": 181,
+        "returncode": 0
+      }
+    ]
+  }
+]

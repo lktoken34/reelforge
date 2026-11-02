@@ -1,0 +1,11 @@
+E501 Line too long (116 > 100)
+  --> tools/trace_reel_cleanup.py:83:101
+   |
+82 |     with JobMonitor(workspace=probe.root) as monitor:
+83 |         with patch.object(subprocess,'Popen',ObservedProcess),patch.object(workflow,'OwnedDirectory',ObservedOwner):
+   |                                                                                                     ^^^^^^^^^^^^^^^^
+84 |             result=workflow.render_reel(load_reel(ROOT/'examples/reels/silent_signal.json'),
+85 |                 probe.root/'job',registry_root=ROOT/'assets/audio',render_silent=reuse_silent)
+   |
+
+Found 3 errors (2 fixed, 1 remaining).

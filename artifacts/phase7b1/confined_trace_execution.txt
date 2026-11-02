@@ -1,0 +1,32 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+___________ test_two_audio_jobs_persistently_clean_after_native_work ___________
+
+tmp_path = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-confined-trace/pytest/test_two_audio_jobs_persistent0')
+workflow = (<module 'render_audio_story' from '/workspace/scratch/ade48aa5d272/reelforge-phase6b/tools/render_audio_story.py'>, S...(character='rowan_01', action='idle', direction='right', speed=1.0, expression='calm', intensity=1.0)),), audio=None)])
+
+    def test_two_audio_jobs_persistently_clean_after_native_work(tmp_path, workflow):
+        _, _, run, _ = workflow
+        outputs = []
+        for i in range(2):
+            out = tmp_path / f"audio-{i}"
+            report = run(out)
+            assert report["transaction_clean"]
+            outputs.append(out)
+            rc, _, _ = run_bounded(
+                ["ffmpeg", "-v", "error", "-i", str(out / "story.mp4"), "-f", "null", "-"]
+            )
+            assert rc == 0
+            for previous in outputs:
+>               assert not list(previous.glob(".reelforge-audio-*"))
+E               AssertionError: assert not [PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-confined-trace/pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-6n77xeig')]
+E                +  where [PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-confined-trace/pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-6n77xeig')] = list(<generator object Path.glob at 0x7f992c99f890>)
+E                +    where <generator object Path.glob at 0x7f992c99f890> = glob('.reelforge-audio-*')
+E                +      where glob = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-confined-trace/pytest/test_two_audio_jobs_persistent0/audio-0').glob
+
+tests/test_transaction_cleanup.py:220: AssertionError
+- generated xml file: /workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-confined-trace/targeted.xml -
+=========================== short test summary info ============================
+FAILED tests/test_transaction_cleanup.py::test_two_audio_jobs_persistently_clean_after_native_work
+1 failed in 7.98s
+{"trace": "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-confined-trace/trace.json", "events": 1131, "reelforge_modules_loaded": ["reelforge", "reelforge.audio", "reelforge.core", "reelforge.core.errors", "reelforge.media", "reelforge.core.streams", "reelforge.media.process", "reelforge.contracts", "reelforge.contracts.project", "reelforge.stories", "reelforge.rendering", "reelforge.rendering.model", "reelforge.stories.audio_contract", "reelforge.core.transaction", "reelforge.audio.transaction", "reelforge.audio.registry", "reelforge.audio.processing", "reelforge.reels", "reelforge.media.verify", "reelforge.resources", "reelforge.resources.memory", "reelforge.resources.monitor", "reelforge.resources.deployment", "reelforge.storyboards", "reelforge.characters", "reelforge.characters.rig", "reelforge.characters.contact", "reelforge.characters.presets", "reelforge.direction", "reelforge.blocking", "reelforge.geometry", "reelforge.procedural", "reelforge.scenes", "reelforge.rendering.diagnostic", "reelforge.characters.secondary", "reelforge.characters.rowan", "reelforge.environments", "reelforge.environments.artwork", "reelforge.environments.polish", "reelforge.scenes.transforms", "reelforge.scenes.assets", "reelforge.scenes.contract", "reelforge.scenes.geometry", "reelforge.environments.presets", "reelforge.environments.scene", "reelforge.scenes.graph", "reelforge.procedural.contract", "reelforge.procedural.planning", "reelforge.procedural.drawing", "reelforge.procedural.recipes", "reelforge.procedural.compiler", "reelforge.geometry.contract", "reelforge.geometry.compiler", "reelforge.geometry.composition", "reelforge.blocking.timeline", "reelforge.blocking.contract", "reelforge.direction.contract", "reelforge.characters.transition", "reelforge.blocking.sampling", "reelforge.direction.sampling", "reelforge.storyboards.patterns", "reelforge.storyboards.compiler", "reelforge.reels.contract", "reelforge.reels.workflow", "reelforge.rendering.interface", "reelforge.media.encoder", "reelforge.stories.contract", "reelforge.rendering.backends", "reelforge.rendering.backends.cairo", "reelforge.rendering.video_diagnostic", "reelforge.stories.sampling"]}

@@ -1,0 +1,2953 @@
+{
+  "probe_version": 1,
+  "mode": "engine-independent control",
+  "reelforge_modules_loaded": [],
+  "identity": {
+    "pid": 23,
+    "ppid": 2,
+    "pgid": 1,
+    "procfs_self": "5411",
+    "nspid": "NSpid:\t5411\t23",
+    "pid_ns": "pid:[4026532277]",
+    "mount_ns": "mnt:[4026532275]"
+  },
+  "probe_root": "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-pipe-control",
+  "events": [
+    {
+      "event": "initial",
+      "phase": "initial",
+      "monotonic_ns": 3981185393107,
+      "wall_ns": 1793644434826438951,
+      "identity": {
+        "pid": 23,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "5411",
+        "nspid": "NSpid:\t5411\t23",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228339\n"
+      }
+    },
+    {
+      "event": "python_mutation_audit",
+      "phase": "initial",
+      "monotonic_ns": 3981185448992,
+      "wall_ns": 1793644434826494355,
+      "operation": "os.mkdir",
+      "arguments": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-pipe-control/.reelforge-encode-81a6stcl"
+      ]
+    },
+    {
+      "event": "inotify",
+      "phase": "initial",
+      "monotonic_ns": 3981185626675,
+      "wall_ns": 1793644434826672559,
+      "watch": 1,
+      "mask": 1073742080,
+      "cookie": 0,
+      "name": ".reelforge-encode-81a6stcl",
+      "timestamp_scope": "Userspace drain time, writer PID unavailable"
+    },
+    {
+      "event": "inotify",
+      "phase": "initial",
+      "monotonic_ns": 3981185792796,
+      "wall_ns": 1793644434826838159,
+      "watch": 1,
+      "mask": 1073741856,
+      "cookie": 0,
+      "name": ".reelforge-encode-81a6stcl",
+      "timestamp_scope": "Userspace drain time, writer PID unavailable"
+    },
+    {
+      "event": "snapshot",
+      "phase": "native_raw_pipe_before_spawn",
+      "monotonic_ns": 3981189190035,
+      "wall_ns": 1793644434830235569,
+      "label": "native_raw_pipe_before_spawn",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793644434824951694,
+        "ctime_ns": 1793644434824951694
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793644434824951694,
+        "ctime_ns": 1793644434824951694
+      },
+      "paths": {
+        ".reelforge-encode-81a6stcl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          },
+          "retired": false,
+          "path": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          },
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228339\n"
+      }
+    },
+    {
+      "event": "python_spawn_audit",
+      "phase": "native_raw_pipe",
+      "monotonic_ns": 3981189274202,
+      "wall_ns": 1793644434830319596,
+      "executable": "ffmpeg",
+      "argv": [
+        "ffmpeg",
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-nostdin",
+        "-max_alloc",
+        "67108864",
+        "-threads",
+        "1",
+        "-filter_threads",
+        "1",
+        "-filter_complex_threads",
+        "1",
+        "-f",
+        "rawvideo",
+        "-pixel_format",
+        "bgra",
+        "-video_size",
+        "360x640",
+        "-framerate",
+        "30",
+        "-i",
+        "pipe:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-frames:v",
+        "3",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "veryfast",
+        "-tune",
+        "zerolatency",
+        "-threads:v",
+        "1",
+        "-x264-params",
+        "threads=1:lookahead_threads=1:sync-lookahead=0:rc-lookahead=0:bframes=0:ref=1",
+        "-profile:v",
+        "main",
+        "-level:v",
+        "3.1",
+        "-crf",
+        "20",
+        "-vf",
+        "scale=in_range=full:out_range=tv:out_color_matrix=bt709,format=yuv420p",
+        "-pix_fmt",
+        "yuv420p",
+        "-colorspace",
+        "bt709",
+        "-color_primaries",
+        "bt709",
+        "-color_trc",
+        "bt709",
+        "-color_range",
+        "tv",
+        "-tag:v",
+        "avc1",
+        "-movflags",
+        "+faststart",
+        "-f",
+        "mp4",
+        "-n",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-pipe-control/.reelforge-encode-81a6stcl/pending.mp4"
+      ]
+    },
+    {
+      "event": "popen_return",
+      "phase": "native_raw_pipe",
+      "monotonic_ns": 3981189864545,
+      "wall_ns": 1793644434830909978,
+      "label": "native_raw_pipe",
+      "pid": 25,
+      "pgid": 25,
+      "parent_identity": {
+        "pid": 23,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "5411",
+        "nspid": "NSpid:\t5411\t23",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "command": [
+        "ffmpeg",
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-nostdin",
+        "-max_alloc",
+        "67108864",
+        "-threads",
+        "1",
+        "-filter_threads",
+        "1",
+        "-filter_complex_threads",
+        "1",
+        "-f",
+        "rawvideo",
+        "-pixel_format",
+        "bgra",
+        "-video_size",
+        "360x640",
+        "-framerate",
+        "30",
+        "-i",
+        "pipe:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-frames:v",
+        "3",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "veryfast",
+        "-tune",
+        "zerolatency",
+        "-threads:v",
+        "1",
+        "-x264-params",
+        "threads=1:lookahead_threads=1:sync-lookahead=0:rc-lookahead=0:bframes=0:ref=1",
+        "-profile:v",
+        "main",
+        "-level:v",
+        "3.1",
+        "-crf",
+        "20",
+        "-vf",
+        "scale=in_range=full:out_range=tv:out_color_matrix=bt709,format=yuv420p",
+        "-pix_fmt",
+        "yuv420p",
+        "-colorspace",
+        "bt709",
+        "-color_primaries",
+        "bt709",
+        "-color_trc",
+        "bt709",
+        "-color_range",
+        "tv",
+        "-tag:v",
+        "avc1",
+        "-movflags",
+        "+faststart",
+        "-f",
+        "mp4",
+        "-n",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-pipe-control/.reelforge-encode-81a6stcl/pending.mp4"
+      ]
+    },
+    {
+      "event": "snapshot",
+      "phase": "native_raw_pipe_after_popen_return",
+      "monotonic_ns": 3981190741650,
+      "wall_ns": 1793644434831787084,
+      "label": "native_raw_pipe_after_popen_return",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793644434824951694,
+        "ctime_ns": 1793644434824951694
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793644434824951694,
+        "ctime_ns": 1793644434824951694
+      },
+      "paths": {
+        ".reelforge-encode-81a6stcl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          },
+          "retired": false,
+          "path": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          },
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228339\n"
+      }
+    },
+    {
+      "event": "child_reaped",
+      "phase": "native_raw_pipe_after_popen_return",
+      "monotonic_ns": 3981282494750,
+      "wall_ns": 1793644434923540864,
+      "label": "native_raw_pipe",
+      "pid": 25,
+      "returncode": 0,
+      "waitpid_reports_no_child": true,
+      "process_group_absent": true,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "event": "snapshot",
+      "phase": "native_raw_pipe_after_reaping",
+      "monotonic_ns": 3981283655785,
+      "wall_ns": 1793644434924701278,
+      "label": "native_raw_pipe_after_reaping",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793644434824951694,
+        "ctime_ns": 1793644434824951694
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793644434824951694,
+        "ctime_ns": 1793644434824951694
+      },
+      "paths": {
+        ".reelforge-encode-81a6stcl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          },
+          "retired": false,
+          "path": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434892953559,
+            "ctime_ns": 1793644434892953559
+          },
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434892953559,
+            "ctime_ns": 1793644434892953559
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228339\n"
+      }
+    },
+    {
+      "event": "snapshot",
+      "phase": "native_mp4_probe_before_spawn",
+      "monotonic_ns": 3981284405858,
+      "wall_ns": 1793644434925451252,
+      "label": "native_mp4_probe_before_spawn",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793644434824951694,
+        "ctime_ns": 1793644434824951694
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793644434824951694,
+        "ctime_ns": 1793644434824951694
+      },
+      "paths": {
+        ".reelforge-encode-81a6stcl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          },
+          "retired": false,
+          "path": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434892953559,
+            "ctime_ns": 1793644434892953559
+          },
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434892953559,
+            "ctime_ns": 1793644434892953559
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228339\n"
+      }
+    },
+    {
+      "event": "python_spawn_audit",
+      "phase": "native_mp4_probe",
+      "monotonic_ns": 3981284481823,
+      "wall_ns": 1793644434925527206,
+      "executable": "ffprobe",
+      "argv": [
+        "ffprobe",
+        "-v",
+        "error",
+        "-show_entries",
+        "format=duration",
+        "-of",
+        "json",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-pipe-control/.reelforge-encode-81a6stcl/pending.mp4"
+      ]
+    },
+    {
+      "event": "popen_return",
+      "phase": "native_mp4_probe",
+      "monotonic_ns": 3981285610920,
+      "wall_ns": 1793644434926656323,
+      "label": "native_mp4_probe",
+      "pid": 29,
+      "pgid": 29,
+      "parent_identity": {
+        "pid": 23,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "5411",
+        "nspid": "NSpid:\t5411\t23",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "command": [
+        "ffprobe",
+        "-v",
+        "error",
+        "-show_entries",
+        "format=duration",
+        "-of",
+        "json",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-pipe-control/.reelforge-encode-81a6stcl/pending.mp4"
+      ]
+    },
+    {
+      "event": "snapshot",
+      "phase": "native_mp4_probe_after_popen_return",
+      "monotonic_ns": 3981286234492,
+      "wall_ns": 1793644434927279925,
+      "label": "native_mp4_probe_after_popen_return",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793644434824951694,
+        "ctime_ns": 1793644434824951694
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793644434824951694,
+        "ctime_ns": 1793644434824951694
+      },
+      "paths": {
+        ".reelforge-encode-81a6stcl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          },
+          "retired": false,
+          "path": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434892953559,
+            "ctime_ns": 1793644434892953559
+          },
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434892953559,
+            "ctime_ns": 1793644434892953559
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228339\n"
+      }
+    },
+    {
+      "event": "child_reaped",
+      "phase": "native_mp4_probe_after_popen_return",
+      "monotonic_ns": 3981339657807,
+      "wall_ns": 1793644434980704011,
+      "label": "native_mp4_probe",
+      "pid": 29,
+      "returncode": 0,
+      "waitpid_reports_no_child": true,
+      "process_group_absent": true,
+      "stdout": "{\n    \"format\": {\n        \"duration\": \"0.100000\"\n    }\n}\n",
+      "stderr": ""
+    },
+    {
+      "event": "snapshot",
+      "phase": "native_mp4_probe_after_reaping",
+      "monotonic_ns": 3981340893891,
+      "wall_ns": 1793644434981939334,
+      "label": "native_mp4_probe_after_reaping",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793644434824951694,
+        "ctime_ns": 1793644434824951694
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793644434824951694,
+        "ctime_ns": 1793644434824951694
+      },
+      "paths": {
+        ".reelforge-encode-81a6stcl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          },
+          "retired": false,
+          "path": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434892953559,
+            "ctime_ns": 1793644434892953559
+          },
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434892953559,
+            "ctime_ns": 1793644434892953559
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228339\n"
+      }
+    },
+    {
+      "event": "python_mutation_audit",
+      "phase": "native_mp4_probe_after_reaping",
+      "monotonic_ns": 3981340964427,
+      "wall_ns": 1793644434982009800,
+      "operation": "os.link",
+      "arguments": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-pipe-control/.reelforge-encode-81a6stcl/pending.mp4",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-pipe-control/published.mp4"
+      ]
+    },
+    {
+      "event": "inotify",
+      "phase": "canary_before_cleanup",
+      "monotonic_ns": 3981341101849,
+      "wall_ns": 1793644434982147974,
+      "watch": 1,
+      "mask": 256,
+      "cookie": 0,
+      "name": "published.mp4",
+      "timestamp_scope": "Userspace drain time, writer PID unavailable"
+    },
+    {
+      "event": "snapshot",
+      "phase": "canary_before_cleanup",
+      "monotonic_ns": 3981341809544,
+      "wall_ns": 1793644434982855098,
+      "label": "canary_before_cleanup",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793644434980955973,
+        "ctime_ns": 1793644434980955973
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793644434980955973,
+        "ctime_ns": 1793644434980955973
+      },
+      "paths": {
+        ".reelforge-encode-81a6stcl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          },
+          "retired": false,
+          "path": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434892953559,
+            "ctime_ns": 1793644434892953559
+          },
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434892953559,
+            "ctime_ns": 1793644434892953559
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228339\n"
+      }
+    },
+    {
+      "event": "python_mutation_audit",
+      "phase": "canary_before_cleanup",
+      "monotonic_ns": 3981341819449,
+      "wall_ns": 1793644434982864773,
+      "operation": "os.remove",
+      "arguments": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-pipe-control/.reelforge-encode-81a6stcl/marker.txt"
+      ]
+    },
+    {
+      "event": "python_mutation_audit",
+      "phase": "canary_before_cleanup",
+      "monotonic_ns": 3981341854663,
+      "wall_ns": 1793644434982899976,
+      "operation": "os.remove",
+      "arguments": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-pipe-control/.reelforge-encode-81a6stcl/pending.mp4"
+      ]
+    },
+    {
+      "event": "python_mutation_audit",
+      "phase": "canary_before_cleanup",
+      "monotonic_ns": 3981341864908,
+      "wall_ns": 1793644434982910211,
+      "operation": "os.rmdir",
+      "arguments": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-pipe-control/.reelforge-encode-81a6stcl"
+      ]
+    },
+    {
+      "event": "inotify",
+      "phase": "canary_after_cleanup",
+      "monotonic_ns": 3981341955620,
+      "wall_ns": 1793644434983001273,
+      "watch": 1,
+      "mask": 1073742336,
+      "cookie": 0,
+      "name": ".reelforge-encode-81a6stcl",
+      "timestamp_scope": "Userspace drain time, writer PID unavailable"
+    },
+    {
+      "event": "snapshot",
+      "phase": "canary_after_cleanup",
+      "monotonic_ns": 3981342475741,
+      "wall_ns": 1793644434983521255,
+      "label": "canary_after_cleanup",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793644434982917923,
+        "ctime_ns": 1793644434982917923
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793644434982917923,
+        "ctime_ns": 1793644434982917923
+      },
+      "paths": {
+        ".reelforge-encode-81a6stcl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793644434980955973,
+            "ctime_ns": 1793644434982917923
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228339\n"
+      }
+    },
+    {
+      "event": "snapshot",
+      "phase": "no_child_time_control",
+      "monotonic_ns": 3981443816505,
+      "wall_ns": 1793644435084862550,
+      "label": "no_child_time_control",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793644434982917923,
+        "ctime_ns": 1793644434982917923
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793644434982917923,
+        "ctime_ns": 1793644434982917923
+      },
+      "paths": {
+        ".reelforge-encode-81a6stcl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793644434980955973,
+            "ctime_ns": 1793644434982917923
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228339\n"
+      }
+    },
+    {
+      "event": "snapshot",
+      "phase": "true_noop_before_spawn",
+      "monotonic_ns": 3981444920734,
+      "wall_ns": 1793644435085966178,
+      "label": "true_noop_before_spawn",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793644434982917923,
+        "ctime_ns": 1793644434982917923
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793644434982917923,
+        "ctime_ns": 1793644434982917923
+      },
+      "paths": {
+        ".reelforge-encode-81a6stcl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793644434980955973,
+            "ctime_ns": 1793644434982917923
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228339\n"
+      }
+    },
+    {
+      "event": "python_spawn_audit",
+      "phase": "true_noop",
+      "monotonic_ns": 3981445090050,
+      "wall_ns": 1793644435086135554,
+      "executable": "/bin/true",
+      "argv": [
+        "/bin/true"
+      ]
+    },
+    {
+      "event": "popen_return",
+      "phase": "true_noop",
+      "monotonic_ns": 3981445804590,
+      "wall_ns": 1793644435086850044,
+      "label": "true_noop",
+      "pid": 30,
+      "pgid": 30,
+      "parent_identity": {
+        "pid": 23,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "5411",
+        "nspid": "NSpid:\t5411\t23",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "command": [
+        "/bin/true"
+      ]
+    },
+    {
+      "event": "snapshot",
+      "phase": "true_noop_after_popen_return",
+      "monotonic_ns": 3981447006056,
+      "wall_ns": 1793644435088051520,
+      "label": "true_noop_after_popen_return",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793644434982917923,
+        "ctime_ns": 1793644434982917923
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793644434982917923,
+        "ctime_ns": 1793644434982917923
+      },
+      "paths": {
+        ".reelforge-encode-81a6stcl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793644434980955973,
+            "ctime_ns": 1793644434982917923
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228339\n"
+      }
+    },
+    {
+      "event": "child_reaped",
+      "phase": "true_noop_after_popen_return",
+      "monotonic_ns": 3981447105086,
+      "wall_ns": 1793644435088150469,
+      "label": "true_noop",
+      "pid": 30,
+      "returncode": 0,
+      "waitpid_reports_no_child": true,
+      "process_group_absent": true,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "event": "snapshot",
+      "phase": "true_noop_after_reaping",
+      "monotonic_ns": 3981447826586,
+      "wall_ns": 1793644435088872000,
+      "label": "true_noop_after_reaping",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793644434982917923,
+        "ctime_ns": 1793644434982917923
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793644434982917923,
+        "ctime_ns": 1793644434982917923
+      },
+      "paths": {
+        ".reelforge-encode-81a6stcl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793644434980955973,
+            "ctime_ns": 1793644434982917923
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228339\n"
+      }
+    },
+    {
+      "event": "snapshot",
+      "phase": "python_noop_before_spawn",
+      "monotonic_ns": 3981448704273,
+      "wall_ns": 1793644435089749726,
+      "label": "python_noop_before_spawn",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793644434982917923,
+        "ctime_ns": 1793644434982917923
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793644434982917923,
+        "ctime_ns": 1793644434982917923
+      },
+      "paths": {
+        ".reelforge-encode-81a6stcl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793644434980955973,
+            "ctime_ns": 1793644434982917923
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228339\n"
+      }
+    },
+    {
+      "event": "python_spawn_audit",
+      "phase": "python_noop",
+      "monotonic_ns": 3981448744594,
+      "wall_ns": 1793644435089789947,
+      "executable": "/workspace/scratch/ade48aa5d272/reelforge-phase6b/.venv/bin/python",
+      "argv": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/.venv/bin/python",
+        "-I",
+        "-S",
+        "-c",
+        "import os,time;print(\"child_pid\",os.getpid());time.sleep(.03)"
+      ]
+    },
+    {
+      "event": "popen_return",
+      "phase": "python_noop",
+      "monotonic_ns": 3981449087492,
+      "wall_ns": 1793644435090132895,
+      "label": "python_noop",
+      "pid": 31,
+      "pgid": 31,
+      "parent_identity": {
+        "pid": 23,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "5411",
+        "nspid": "NSpid:\t5411\t23",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "command": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/.venv/bin/python",
+        "-I",
+        "-S",
+        "-c",
+        "import os,time;print(\"child_pid\",os.getpid());time.sleep(.03)"
+      ]
+    },
+    {
+      "event": "snapshot",
+      "phase": "python_noop_after_popen_return",
+      "monotonic_ns": 3981449732336,
+      "wall_ns": 1793644435090777720,
+      "label": "python_noop_after_popen_return",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793644434982917923,
+        "ctime_ns": 1793644434982917923
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793644434982917923,
+        "ctime_ns": 1793644434982917923
+      },
+      "paths": {
+        ".reelforge-encode-81a6stcl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793644434980955973,
+            "ctime_ns": 1793644434982917923
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228339\n"
+      }
+    },
+    {
+      "event": "child_reaped",
+      "phase": "python_noop_after_popen_return",
+      "monotonic_ns": 3981493549219,
+      "wall_ns": 1793644435134595393,
+      "label": "python_noop",
+      "pid": 31,
+      "returncode": 0,
+      "waitpid_reports_no_child": true,
+      "process_group_absent": true,
+      "stdout": "child_pid 31\n",
+      "stderr": ""
+    },
+    {
+      "event": "snapshot",
+      "phase": "python_noop_after_reaping",
+      "monotonic_ns": 3981494398572,
+      "wall_ns": 1793644435135444005,
+      "label": "python_noop_after_reaping",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793644434982917923,
+        "ctime_ns": 1793644434982917923
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793644434982917923,
+        "ctime_ns": 1793644434982917923
+      },
+      "paths": {
+        ".reelforge-encode-81a6stcl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793644434980955973,
+            "ctime_ns": 1793644434982917923
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228339\n"
+      }
+    },
+    {
+      "event": "snapshot",
+      "phase": "ffmpeg_version_before_spawn",
+      "monotonic_ns": 3981495366896,
+      "wall_ns": 1793644435136412339,
+      "label": "ffmpeg_version_before_spawn",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793644434982917923,
+        "ctime_ns": 1793644434982917923
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793644434982917923,
+        "ctime_ns": 1793644434982917923
+      },
+      "paths": {
+        ".reelforge-encode-81a6stcl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793644434980955973,
+            "ctime_ns": 1793644434982917923
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228339\n"
+      }
+    },
+    {
+      "event": "python_spawn_audit",
+      "phase": "ffmpeg_version",
+      "monotonic_ns": 3981495428439,
+      "wall_ns": 1793644435136473792,
+      "executable": "ffmpeg",
+      "argv": [
+        "ffmpeg",
+        "-version"
+      ]
+    },
+    {
+      "event": "popen_return",
+      "phase": "ffmpeg_version",
+      "monotonic_ns": 3981496170830,
+      "wall_ns": 1793644435137216474,
+      "label": "ffmpeg_version",
+      "pid": 32,
+      "pgid": 32,
+      "parent_identity": {
+        "pid": 23,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "5411",
+        "nspid": "NSpid:\t5411\t23",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "command": [
+        "ffmpeg",
+        "-version"
+      ]
+    },
+    {
+      "event": "snapshot",
+      "phase": "ffmpeg_version_after_popen_return",
+      "monotonic_ns": 3981497078172,
+      "wall_ns": 1793644435138123665,
+      "label": "ffmpeg_version_after_popen_return",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793644434982917923,
+        "ctime_ns": 1793644434982917923
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793644434982917923,
+        "ctime_ns": 1793644434982917923
+      },
+      "paths": {
+        ".reelforge-encode-81a6stcl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793644434980955973,
+            "ctime_ns": 1793644434982917923
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228339\n"
+      }
+    },
+    {
+      "event": "child_reaped",
+      "phase": "ffmpeg_version_after_popen_return",
+      "monotonic_ns": 3981545727948,
+      "wall_ns": 1793644435186774203,
+      "label": "ffmpeg_version",
+      "pid": 32,
+      "returncode": 0,
+      "waitpid_reports_no_child": true,
+      "process_group_absent": true,
+      "stdout": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers\nbuilt with gcc 13 (Ubuntu 13.2.0-23ubuntu3)\nconfiguration: --prefix=/usr --extra-version=3ubuntu5 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --disable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared\nlibavutil      58. 29.100 / 58. 29.100\nlibavcodec     60. 31.102 / 60. 31.102\nlibavformat    60. 16.100 / 60. 16.100\nlibavdevice    60.  3.100 / 60.  3.100\nlibavfilter     9. 12.100 /  9. 12.100\nlibswscale      7.  5.100 /  7.  5.100\nlibswresample   4. 12.100 /  4. 12.100\nlibpostproc    57.  3.100 / 57.  3.100\n",
+      "stderr": ""
+    },
+    {
+      "event": "snapshot",
+      "phase": "ffmpeg_version_after_reaping",
+      "monotonic_ns": 3981546705315,
+      "wall_ns": 1793644435187750769,
+      "label": "ffmpeg_version_after_reaping",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793644434982917923,
+        "ctime_ns": 1793644434982917923
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793644434982917923,
+        "ctime_ns": 1793644434982917923
+      },
+      "paths": {
+        ".reelforge-encode-81a6stcl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793644434980955973,
+            "ctime_ns": 1793644434982917923
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228339\n"
+      }
+    },
+    {
+      "event": "snapshot",
+      "phase": "ffmpeg_null_before_spawn",
+      "monotonic_ns": 3981547402259,
+      "wall_ns": 1793644435188447702,
+      "label": "ffmpeg_null_before_spawn",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793644434982917923,
+        "ctime_ns": 1793644434982917923
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793644434982917923,
+        "ctime_ns": 1793644434982917923
+      },
+      "paths": {
+        ".reelforge-encode-81a6stcl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793644434980955973,
+            "ctime_ns": 1793644434982917923
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228339\n"
+      }
+    },
+    {
+      "event": "python_spawn_audit",
+      "phase": "ffmpeg_null",
+      "monotonic_ns": 3981547460186,
+      "wall_ns": 1793644435188505529,
+      "executable": "ffmpeg",
+      "argv": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-filter_threads",
+        "1",
+        "-f",
+        "lavfi",
+        "-i",
+        "anullsrc=r=48000:cl=stereo",
+        "-t",
+        "0.01",
+        "-threads:a",
+        "1",
+        "-f",
+        "null",
+        "-"
+      ]
+    },
+    {
+      "event": "popen_return",
+      "phase": "ffmpeg_null",
+      "monotonic_ns": 3981548331283,
+      "wall_ns": 1793644435189376716,
+      "label": "ffmpeg_null",
+      "pid": 33,
+      "pgid": 33,
+      "parent_identity": {
+        "pid": 23,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "5411",
+        "nspid": "NSpid:\t5411\t23",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-filter_threads",
+        "1",
+        "-f",
+        "lavfi",
+        "-i",
+        "anullsrc=r=48000:cl=stereo",
+        "-t",
+        "0.01",
+        "-threads:a",
+        "1",
+        "-f",
+        "null",
+        "-"
+      ]
+    },
+    {
+      "event": "snapshot",
+      "phase": "ffmpeg_null_after_popen_return",
+      "monotonic_ns": 3981548943658,
+      "wall_ns": 1793644435189989112,
+      "label": "ffmpeg_null_after_popen_return",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793644434982917923,
+        "ctime_ns": 1793644434982917923
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793644434982917923,
+        "ctime_ns": 1793644434982917923
+      },
+      "paths": {
+        ".reelforge-encode-81a6stcl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793644434980955973,
+            "ctime_ns": 1793644434982917923
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228339\n"
+      }
+    },
+    {
+      "event": "child_reaped",
+      "phase": "ffmpeg_null_after_popen_return",
+      "monotonic_ns": 3981594667562,
+      "wall_ns": 1793644435235713626,
+      "label": "ffmpeg_null",
+      "pid": 33,
+      "returncode": 0,
+      "waitpid_reports_no_child": true,
+      "process_group_absent": true,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "event": "snapshot",
+      "phase": "ffmpeg_null_after_reaping",
+      "monotonic_ns": 3981595819283,
+      "wall_ns": 1793644435236864846,
+      "label": "ffmpeg_null_after_reaping",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793644434982917923,
+        "ctime_ns": 1793644434982917923
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793644434982917923,
+        "ctime_ns": 1793644434982917923
+      },
+      "paths": {
+        ".reelforge-encode-81a6stcl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793644434980955973,
+            "ctime_ns": 1793644434982917923
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228339\n"
+      }
+    },
+    {
+      "event": "snapshot",
+      "phase": "published_mp4_decode_before_spawn",
+      "monotonic_ns": 3981596604980,
+      "wall_ns": 1793644435237650433,
+      "label": "published_mp4_decode_before_spawn",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793644434982917923,
+        "ctime_ns": 1793644434982917923
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793644434982917923,
+        "ctime_ns": 1793644434982917923
+      },
+      "paths": {
+        ".reelforge-encode-81a6stcl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793644434980955973,
+            "ctime_ns": 1793644434982917923
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228339\n"
+      }
+    },
+    {
+      "event": "python_spawn_audit",
+      "phase": "published_mp4_decode",
+      "monotonic_ns": 3981596727315,
+      "wall_ns": 1793644435237772708,
+      "executable": "ffmpeg",
+      "argv": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-i",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-pipe-control/published.mp4",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-threads:v",
+        "1",
+        "-f",
+        "null",
+        "-"
+      ]
+    },
+    {
+      "event": "popen_return",
+      "phase": "published_mp4_decode",
+      "monotonic_ns": 3981597151766,
+      "wall_ns": 1793644435238197200,
+      "label": "published_mp4_decode",
+      "pid": 46,
+      "pgid": 46,
+      "parent_identity": {
+        "pid": 23,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "5411",
+        "nspid": "NSpid:\t5411\t23",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-i",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-pipe-control/published.mp4",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-threads:v",
+        "1",
+        "-f",
+        "null",
+        "-"
+      ]
+    },
+    {
+      "event": "snapshot",
+      "phase": "published_mp4_decode_after_popen_return",
+      "monotonic_ns": 3981598482107,
+      "wall_ns": 1793644435239527530,
+      "label": "published_mp4_decode_after_popen_return",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793644434982917923,
+        "ctime_ns": 1793644434982917923
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793644434982917923,
+        "ctime_ns": 1793644434982917923
+      },
+      "paths": {
+        ".reelforge-encode-81a6stcl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793644434980955973,
+            "ctime_ns": 1793644434982917923
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228339\n"
+      }
+    },
+    {
+      "event": "inotify",
+      "phase": "published_mp4_decode_after_popen_return",
+      "monotonic_ns": 3981643755896,
+      "wall_ns": 1793644435284802581,
+      "watch": 1,
+      "mask": 32,
+      "cookie": 0,
+      "name": "published.mp4",
+      "timestamp_scope": "Userspace drain time, writer PID unavailable"
+    },
+    {
+      "event": "child_reaped",
+      "phase": "published_mp4_decode_after_popen_return",
+      "monotonic_ns": 3981649462485,
+      "wall_ns": 1793644435290508289,
+      "label": "published_mp4_decode",
+      "pid": 46,
+      "returncode": 0,
+      "waitpid_reports_no_child": true,
+      "process_group_absent": true,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "event": "snapshot",
+      "phase": "published_mp4_decode_after_reaping",
+      "monotonic_ns": 3981650355976,
+      "wall_ns": 1793644435291401679,
+      "label": "published_mp4_decode_after_reaping",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793644434982917923,
+        "ctime_ns": 1793644434982917923
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793644434982917923,
+        "ctime_ns": 1793644434982917923
+      },
+      "paths": {
+        ".reelforge-encode-81a6stcl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793644434980955973,
+            "ctime_ns": 1793644434982917923
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228339\n"
+      }
+    },
+    {
+      "event": "python_mutation_audit",
+      "phase": "published_mp4_decode_after_reaping",
+      "monotonic_ns": 3981650409927,
+      "wall_ns": 1793644435291455260,
+      "operation": "os.mkdir",
+      "arguments": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-pipe-control/.register-a7k3xrq5"
+      ]
+    },
+    {
+      "event": "inotify",
+      "phase": "published_mp4_decode_after_reaping",
+      "monotonic_ns": 3981650714743,
+      "wall_ns": 1793644435291760226,
+      "watch": 1,
+      "mask": 1073742080,
+      "cookie": 0,
+      "name": ".register-a7k3xrq5",
+      "timestamp_scope": "Userspace drain time, writer PID unavailable"
+    },
+    {
+      "event": "snapshot",
+      "phase": "next_registered_wav_probe_before_spawn",
+      "monotonic_ns": 3981651607056,
+      "wall_ns": 1793644435292652530,
+      "label": "next_registered_wav_probe_before_spawn",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793644435288964423,
+        "ctime_ns": 1793644435288964423
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793644435288964423,
+        "ctime_ns": 1793644435288964423
+      },
+      "paths": {
+        ".reelforge-encode-81a6stcl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793644434980955973,
+            "ctime_ns": 1793644434982917923
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228339\n"
+      }
+    },
+    {
+      "event": "python_spawn_audit",
+      "phase": "next_registered_wav_probe",
+      "monotonic_ns": 3981651738916,
+      "wall_ns": 1793644435292784309,
+      "executable": "ffprobe",
+      "argv": [
+        "ffprobe",
+        "-v",
+        "error",
+        "-protocol_whitelist",
+        "file",
+        "-f",
+        "wav",
+        "-show_entries",
+        "stream=codec_type,codec_name,sample_rate,channels:format=format_name",
+        "-of",
+        "json",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-pipe-control/.register-a7k3xrq5/input.wav"
+      ]
+    },
+    {
+      "event": "popen_return",
+      "phase": "next_registered_wav_probe",
+      "monotonic_ns": 3981652169998,
+      "wall_ns": 1793644435293215441,
+      "label": "next_registered_wav_probe",
+      "pid": 50,
+      "pgid": 50,
+      "parent_identity": {
+        "pid": 23,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "5411",
+        "nspid": "NSpid:\t5411\t23",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "command": [
+        "ffprobe",
+        "-v",
+        "error",
+        "-protocol_whitelist",
+        "file",
+        "-f",
+        "wav",
+        "-show_entries",
+        "stream=codec_type,codec_name,sample_rate,channels:format=format_name",
+        "-of",
+        "json",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-pipe-control/.register-a7k3xrq5/input.wav"
+      ]
+    },
+    {
+      "event": "snapshot",
+      "phase": "next_registered_wav_probe_after_popen_return",
+      "monotonic_ns": 3981652948584,
+      "wall_ns": 1793644435293994027,
+      "label": "next_registered_wav_probe_after_popen_return",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793644435288964423,
+        "ctime_ns": 1793644435288964423
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793644435288964423,
+        "ctime_ns": 1793644435288964423
+      },
+      "paths": {
+        ".reelforge-encode-81a6stcl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793644434980955973,
+            "ctime_ns": 1793644434982917923
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228339\n"
+      }
+    },
+    {
+      "event": "child_reaped",
+      "phase": "next_registered_wav_probe_after_popen_return",
+      "monotonic_ns": 3981697489315,
+      "wall_ns": 1793644435338535540,
+      "label": "next_registered_wav_probe",
+      "pid": 50,
+      "returncode": 0,
+      "waitpid_reports_no_child": true,
+      "process_group_absent": true,
+      "stdout": "{\n    \"programs\": [\n\n    ],\n    \"streams\": [\n        {\n            \"codec_name\": \"pcm_s16le\",\n            \"codec_type\": \"audio\",\n            \"sample_rate\": \"24000\",\n            \"channels\": 1\n        }\n    ],\n    \"format\": {\n        \"format_name\": \"wav\"\n    }\n}\n",
+      "stderr": ""
+    },
+    {
+      "event": "snapshot",
+      "phase": "next_registered_wav_probe_after_reaping",
+      "monotonic_ns": 3981698240400,
+      "wall_ns": 1793644435339285864,
+      "label": "next_registered_wav_probe_after_reaping",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793644435288964423,
+        "ctime_ns": 1793644435288964423
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793644435288964423,
+        "ctime_ns": 1793644435288964423
+      },
+      "paths": {
+        ".reelforge-encode-81a6stcl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793644434980955973,
+            "ctime_ns": 1793644434982917923
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228339\n"
+      }
+    },
+    {
+      "event": "snapshot",
+      "phase": "next_registered_wav_decode_before_spawn",
+      "monotonic_ns": 3981699157306,
+      "wall_ns": 1793644435340202769,
+      "label": "next_registered_wav_decode_before_spawn",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793644435288964423,
+        "ctime_ns": 1793644435288964423
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793644435288964423,
+        "ctime_ns": 1793644435288964423
+      },
+      "paths": {
+        ".reelforge-encode-81a6stcl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793644434980955973,
+            "ctime_ns": 1793644434982917923
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228339\n"
+      }
+    },
+    {
+      "event": "python_spawn_audit",
+      "phase": "next_registered_wav_decode",
+      "monotonic_ns": 3981699257127,
+      "wall_ns": 1793644435340302550,
+      "executable": "ffmpeg",
+      "argv": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-xerror",
+        "-err_detect",
+        "explode",
+        "-threads",
+        "1",
+        "-protocol_whitelist",
+        "file",
+        "-f",
+        "wav",
+        "-i",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-pipe-control/.register-a7k3xrq5/input.wav",
+        "-map",
+        "0:a:0",
+        "-vn",
+        "-sn",
+        "-dn",
+        "-threads:a",
+        "1",
+        "-f",
+        "null",
+        "-"
+      ]
+    },
+    {
+      "event": "popen_return",
+      "phase": "next_registered_wav_decode",
+      "monotonic_ns": 3981699755460,
+      "wall_ns": 1793644435340800893,
+      "label": "next_registered_wav_decode",
+      "pid": 51,
+      "pgid": 51,
+      "parent_identity": {
+        "pid": 23,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "5411",
+        "nspid": "NSpid:\t5411\t23",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-xerror",
+        "-err_detect",
+        "explode",
+        "-threads",
+        "1",
+        "-protocol_whitelist",
+        "file",
+        "-f",
+        "wav",
+        "-i",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-pipe-control/.register-a7k3xrq5/input.wav",
+        "-map",
+        "0:a:0",
+        "-vn",
+        "-sn",
+        "-dn",
+        "-threads:a",
+        "1",
+        "-f",
+        "null",
+        "-"
+      ]
+    },
+    {
+      "event": "snapshot",
+      "phase": "next_registered_wav_decode_after_popen_return",
+      "monotonic_ns": 3981700451752,
+      "wall_ns": 1793644435341497135,
+      "label": "next_registered_wav_decode_after_popen_return",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793644435288964423,
+        "ctime_ns": 1793644435288964423
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793644435288964423,
+        "ctime_ns": 1793644435288964423
+      },
+      "paths": {
+        ".reelforge-encode-81a6stcl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793644434980955973,
+            "ctime_ns": 1793644434982917923
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228339\n"
+      }
+    },
+    {
+      "event": "child_reaped",
+      "phase": "next_registered_wav_decode_after_popen_return",
+      "monotonic_ns": 3981753304700,
+      "wall_ns": 1793644435394350975,
+      "label": "next_registered_wav_decode",
+      "pid": 51,
+      "returncode": 0,
+      "waitpid_reports_no_child": true,
+      "process_group_absent": true,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "event": "snapshot",
+      "phase": "next_registered_wav_decode_after_reaping",
+      "monotonic_ns": 3981754121495,
+      "wall_ns": 1793644435395166888,
+      "label": "next_registered_wav_decode_after_reaping",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793644435288964423,
+        "ctime_ns": 1793644435288964423
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793644435288964423,
+        "ctime_ns": 1793644435288964423
+      },
+      "paths": {
+        ".reelforge-encode-81a6stcl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793644434980955973,
+            "ctime_ns": 1793644434982917923
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228339\n"
+      }
+    },
+    {
+      "event": "snapshot",
+      "phase": "final_before_observer_fd_close",
+      "monotonic_ns": 3981754898028,
+      "wall_ns": 1793644435395943472,
+      "label": "final_before_observer_fd_close",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793644435288964423,
+        "ctime_ns": 1793644435288964423
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793644435288964423,
+        "ctime_ns": 1793644435288964423
+      },
+      "paths": {
+        ".reelforge-encode-81a6stcl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793644434980955973,
+            "ctime_ns": 1793644434982917923
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228339\n"
+      }
+    },
+    {
+      "event": "snapshot",
+      "phase": "final_after_observer_fd_close",
+      "monotonic_ns": 3981755584155,
+      "wall_ns": 1793644435396629588,
+      "label": "final_after_observer_fd_close",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793644435288964423,
+        "ctime_ns": 1793644435288964423
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228339,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793644435288964423,
+        "ctime_ns": 1793644435288964423
+      },
+      "paths": {
+        ".reelforge-encode-81a6stcl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228340,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644434824951694,
+            "ctime_ns": 1793644434824951694
+          },
+          "retired": true,
+          "path": null
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228339\n"
+      }
+    }
+  ],
+  "complete": true,
+  "recreated_paths_never_removed": true
+}

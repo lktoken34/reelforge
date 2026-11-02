@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="9.029" timestamp="2026-11-02T13:31:37.425028-05:00" hostname="40823d960cc0"><testcase classname="tests.test_transaction_cleanup" name="test_two_audio_jobs_persistently_clean_after_native_work" time="8.974"><failure message="AssertionError: assert not [PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-legacy-trace/pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-dh6z5qgl')]&#10; +  where [PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-legacy-trace/pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-dh6z5qgl')] = list(&lt;generator object Path.glob at 0x7fb2901db120&gt;)&#10; +    where &lt;generator object Path.glob at 0x7fb2901db120&gt; = glob('.reelforge-audio-*')&#10; +      where glob = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-legacy-trace/pytest/test_two_audio_jobs_persistent0/audio-0').glob">tmp_path = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-legacy-trace/pytest/test_two_audio_jobs_persistent0')
+workflow = (&lt;module 'render_audio_story' from '/workspace/scratch/ade48aa5d272/reelforge-phase6b/tools/render_audio_story.py'&gt;, S...(character='rowan_01', action='idle', direction='right', speed=1.0, expression='calm', intensity=1.0)),), audio=None)])
+
+    def test_two_audio_jobs_persistently_clean_after_native_work(tmp_path, workflow):
+        _, _, run, _ = workflow
+        outputs = []
+        for i in range(2):
+            out = tmp_path / f"audio-{i}"
+            report = run(out)
+            assert report["transaction_clean"]
+            outputs.append(out)
+            rc, _, _ = run_bounded(
+                ["ffmpeg", "-v", "error", "-i", str(out / "story.mp4"), "-f", "null", "-"]
+            )
+            assert rc == 0
+            for previous in outputs:
+&gt;               assert not list(previous.glob(".reelforge-audio-*"))
+E               AssertionError: assert not [PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-legacy-trace/pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-dh6z5qgl')]
+E                +  where [PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-legacy-trace/pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-dh6z5qgl')] = list(&lt;generator object Path.glob at 0x7fb2901db120&gt;)
+E                +    where &lt;generator object Path.glob at 0x7fb2901db120&gt; = glob('.reelforge-audio-*')
+E                +      where glob = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-legacy-trace/pytest/test_two_audio_jobs_persistent0/audio-0').glob
+
+tests/test_transaction_cleanup.py:220: AssertionError</failure></testcase></testsuite></testsuites>

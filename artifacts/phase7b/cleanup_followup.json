@@ -1,0 +1,30 @@
+{
+  "silent_signal": {
+    "path": "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7b/proofs/silent_signal/.reelforge-audio-itmcfvzg",
+    "restored_private_paths": [
+      "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7b/proofs/silent_signal/.reelforge-audio-itmcfvzg"
+    ],
+    "scope": "Read-only after later native work; original return statuses unchanged; no sweep"
+  },
+  "abandoned_settlement": {
+    "path": "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7b/proofs/abandoned_settlement/.reelforge-audio-393ekt1g",
+    "restored_private_paths": [
+      "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7b/proofs/abandoned_settlement/.reelforge-audio-393ekt1g"
+    ],
+    "scope": "Read-only after later native work; original return statuses unchanged; no sweep"
+  },
+  "shelter_entrance": {
+    "path": "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7b/proofs/shelter_entrance/.reelforge-audio-rj2lpjb1",
+    "restored_private_paths": [
+      "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7b/proofs/shelter_entrance/.reelforge-audio-rj2lpjb1"
+    ],
+    "scope": "Read-only after later native work; original return statuses unchanged; no sweep"
+  },
+  "signal_repeat": {
+    "path": "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7b/proofs/signal_repeat/.reelforge-audio-rm_6uqnh",
+    "restored_private_paths": [
+      "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7b/proofs/signal_repeat/.reelforge-audio-rm_6uqnh"
+    ],
+    "scope": "Read-only after later native work; original return statuses unchanged; no sweep"
+  }
+}

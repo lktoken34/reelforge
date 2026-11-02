@@ -270,3 +270,18 @@ shared views and generates accepted blocking/direction plans. See [STORYBOARDS.m
 validate, beats, compile, frame and render (with --stills-only for previews). All planning is
 native-free; movies are silent; the production CLI remains unchanged. Evidence and limitations
 are in [PHASE7A_REPORT.md](docs/PHASE7A_REPORT.md).
+
+### Phase 7B integrated audiovisual review candidate
+
+`python tools/reel.py capabilities` discovers experimental reel-0.1. Embed an accepted
+storyboard plus registered AudioPlan cues; validate/inspect without native tools and render
+one 90-frame H.264/AAC reel. See [INTEGRATED_REELS.md](docs/INTEGRATED_REELS.md) and
+[PHASE7B_REPORT.md](docs/PHASE7B_REPORT.md). Proof audio is labelled diagnostic; no spoken
+narration or deployment approval is claimed. The installed production CLI is unchanged.
+
+### Phase 7B.1 persistent cleanup investigation
+
+[The investigation report](docs/PHASE7B1_REPORT.md) records actual directory recreation outside
+the traced engine parent and its supervised native children under diagnostic confinement.
+The specific external writer remains unidentified; this host's cleanup gate remains blocked.
+Runtime code, tests, contracts and all original Phase 7B audiovisual evidence are unchanged.

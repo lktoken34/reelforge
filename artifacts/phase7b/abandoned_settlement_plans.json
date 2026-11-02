@@ -1,0 +1,6347 @@
+{
+  "contract": "reel-0.1",
+  "title": "Abandoned Settlement \u2014 diagnostic audio",
+  "frames": 90,
+  "fps": 30,
+  "sample_rate": 48000,
+  "samples_per_frame": 1600,
+  "effective_samples_per_channel": 144000,
+  "registry_validation": "metadata-only",
+  "media_bytes_validated": false,
+  "audio_cues": [
+    {
+      "asset_id": "diag_opening",
+      "start_frame": 0,
+      "trim_start_frame": 0,
+      "trim_end_frame": 36,
+      "gain": 0.2,
+      "role": "narration",
+      "source_sha256": "b59a143e46f7fcfabda9d625cc8a598080d7d66ed5c637c25cfe14b82af062ee",
+      "start_sample": 0,
+      "end_sample": 57600,
+      "effective_samples": 57600
+    },
+    {
+      "asset_id": "diag_fence",
+      "start_frame": 45,
+      "trim_start_frame": 0,
+      "trim_end_frame": 12,
+      "gain": 0.2,
+      "role": "sfx",
+      "source_sha256": "f2ab82a7c31842b6abc122f9c794d191c5a7c85eaa38688975eb35806bc020df",
+      "start_sample": 72000,
+      "end_sample": 91200,
+      "effective_samples": 19200
+    },
+    {
+      "asset_id": "diag_suspense",
+      "start_frame": 54,
+      "trim_start_frame": 18,
+      "trim_end_frame": 54,
+      "gain": 0.12,
+      "role": "sfx",
+      "source_sha256": "526f4bac80e62d9c50a21b8803640c42f0cb58f63127de973846772c396f949a",
+      "start_sample": 86400,
+      "end_sample": 144000,
+      "effective_samples": 57600
+    }
+  ],
+  "storyboard": {
+    "contract": "storyboard-0.1",
+    "title": "Abandoned Settlement",
+    "pattern": "threat_escape",
+    "description_metadata": "A deserted street, a held reaction, then one matched cut following the start of escape. Original authored watchtower, cart and radio remain static scene objects. No audio.",
+    "frames": 90,
+    "fps": 30,
+    "beats": [
+      {
+        "id": "take_stock",
+        "kind": "establish",
+        "start": 0,
+        "end": 6,
+        "subject": "street",
+        "view": "street_watch",
+        "action": "idle",
+        "description": ""
+      },
+      {
+        "id": "explore",
+        "kind": "approach",
+        "start": 6,
+        "end": 33,
+        "subject": "tower",
+        "view": "street_watch",
+        "action": "walk_to",
+        "description": ""
+      },
+      {
+        "id": "suspicion",
+        "kind": "discover",
+        "start": 33,
+        "end": 45,
+        "subject": "suspected_threat",
+        "view": "street_watch",
+        "action": "stop_at",
+        "description": "A bounded location of interest; no threat actor or sound is invented."
+      },
+      {
+        "id": "flinch",
+        "kind": "react",
+        "start": 45,
+        "end": 60,
+        "subject": "suspected_threat",
+        "view": "street_watch",
+        "action": "react",
+        "description": "Use the accepted visible react performance."
+      },
+      {
+        "id": "break_away",
+        "kind": "escape",
+        "start": 60,
+        "end": 90,
+        "subject": "street",
+        "view": "escape_follow",
+        "action": "run_to",
+        "description": "Begin a supported escape route without a teleport."
+      }
+    ],
+    "shots": [
+      {
+        "id": "shot_00",
+        "start": 0,
+        "end": 60,
+        "beats": [
+          "take_stock",
+          "explore",
+          "suspicion",
+          "flinch"
+        ]
+      },
+      {
+        "id": "shot_01",
+        "start": 60,
+        "end": 90,
+        "beats": [
+          "break_away"
+        ]
+      }
+    ],
+    "plan_sha256": "c8b2bd3756465568d5912cbb782773b6a9688d9a383a8b0b49602b632f659839",
+    "audio_present": false
+  },
+  "compiled": {
+    "contract": "storyboard-0.1",
+    "title": "Abandoned Settlement",
+    "pattern": "threat_escape",
+    "description_metadata": "A deserted street, a held reaction, then one matched cut following the start of escape. Original authored watchtower, cart and radio remain static scene objects. No audio.",
+    "frames": 90,
+    "fps": 30,
+    "beats": [
+      {
+        "id": "take_stock",
+        "kind": "establish",
+        "start": 0,
+        "end": 6,
+        "subject": "street",
+        "view": "street_watch",
+        "action": "idle",
+        "description": ""
+      },
+      {
+        "id": "explore",
+        "kind": "approach",
+        "start": 6,
+        "end": 33,
+        "subject": "tower",
+        "view": "street_watch",
+        "action": "walk_to",
+        "description": ""
+      },
+      {
+        "id": "suspicion",
+        "kind": "discover",
+        "start": 33,
+        "end": 45,
+        "subject": "suspected_threat",
+        "view": "street_watch",
+        "action": "stop_at",
+        "description": "A bounded location of interest; no threat actor or sound is invented."
+      },
+      {
+        "id": "flinch",
+        "kind": "react",
+        "start": 45,
+        "end": 60,
+        "subject": "suspected_threat",
+        "view": "street_watch",
+        "action": "react",
+        "description": "Use the accepted visible react performance."
+      },
+      {
+        "id": "break_away",
+        "kind": "escape",
+        "start": 60,
+        "end": 90,
+        "subject": "street",
+        "view": "escape_follow",
+        "action": "run_to",
+        "description": "Begin a supported escape route without a teleport."
+      }
+    ],
+    "shots": [
+      {
+        "id": "shot_00",
+        "start": 0,
+        "end": 60,
+        "beats": [
+          "take_stock",
+          "explore",
+          "suspicion",
+          "flinch"
+        ]
+      },
+      {
+        "id": "shot_01",
+        "start": 60,
+        "end": 90,
+        "beats": [
+          "break_away"
+        ]
+      }
+    ],
+    "plan_sha256": "c8b2bd3756465568d5912cbb782773b6a9688d9a383a8b0b49602b632f659839",
+    "audio_present": false,
+    "scene": {
+      "schema_version": "scene-0.1",
+      "title": "Abandoned Settlement",
+      "frame": 0,
+      "hierarchy": [
+        {
+          "id": "root",
+          "parent": null,
+          "kind": "root",
+          "world": {
+            "x": 0.0,
+            "y": 0.0,
+            "scale": 1,
+            "angle": 0
+          },
+          "visible": true,
+          "layer": null,
+          "depth": null
+        },
+        {
+          "id": "layer_sky",
+          "parent": "root",
+          "kind": "layer",
+          "world": {
+            "x": 0.0,
+            "y": 0.0,
+            "scale": 1,
+            "angle": 0
+          },
+          "visible": true,
+          "layer": "layer_sky",
+          "depth": 0
+        },
+        {
+          "id": "sky",
+          "parent": "layer_sky",
+          "kind": "background",
+          "world": {
+            "x": 0.0,
+            "y": 0.0,
+            "scale": 1,
+            "angle": 0
+          },
+          "visible": true,
+          "layer": "layer_sky",
+          "depth": 0
+        },
+        {
+          "id": "layer_backdrop",
+          "parent": "root",
+          "kind": "layer",
+          "world": {
+            "x": 0.0,
+            "y": 0.0,
+            "scale": 1,
+            "angle": 0
+          },
+          "visible": true,
+          "layer": "layer_backdrop",
+          "depth": 0.18
+        },
+        {
+          "id": "backdrop",
+          "parent": "layer_backdrop",
+          "kind": "background",
+          "world": {
+            "x": 0.0,
+            "y": 0.0,
+            "scale": 1,
+            "angle": 0
+          },
+          "visible": true,
+          "layer": "layer_backdrop",
+          "depth": 0.18
+        },
+        {
+          "id": "layer_ground",
+          "parent": "root",
+          "kind": "layer",
+          "world": {
+            "x": 0.0,
+            "y": 0.0,
+            "scale": 1,
+            "angle": 0
+          },
+          "visible": true,
+          "layer": "layer_ground",
+          "depth": 1
+        },
+        {
+          "id": "ground",
+          "parent": "layer_ground",
+          "kind": "environment",
+          "world": {
+            "x": 180.0,
+            "y": 510.0,
+            "scale": 1,
+            "angle": 0
+          },
+          "visible": true,
+          "layer": "layer_ground",
+          "depth": 1
+        },
+        {
+          "id": "layer_distance",
+          "parent": "root",
+          "kind": "layer",
+          "world": {
+            "x": 0.0,
+            "y": 0.0,
+            "scale": 1,
+            "angle": 0
+          },
+          "visible": true,
+          "layer": "layer_distance",
+          "depth": 0.48
+        },
+        {
+          "id": "distance",
+          "parent": "layer_distance",
+          "kind": "background",
+          "world": {
+            "x": 0.0,
+            "y": 0.0,
+            "scale": 1,
+            "angle": 0
+          },
+          "visible": true,
+          "layer": "layer_distance",
+          "depth": 0.48
+        },
+        {
+          "id": "layer_objects",
+          "parent": "root",
+          "kind": "layer",
+          "world": {
+            "x": 0.0,
+            "y": 0.0,
+            "scale": 1,
+            "angle": 0
+          },
+          "visible": true,
+          "layer": "layer_objects",
+          "depth": 1
+        },
+        {
+          "id": "building_left_0",
+          "parent": "layer_objects",
+          "kind": "asset",
+          "world": {
+            "x": 35.00720233901919,
+            "y": 375.4866685867922,
+            "scale": 0.6145189334042083,
+            "angle": 0
+          },
+          "visible": true,
+          "layer": "layer_objects",
+          "depth": 1
+        },
+        {
+          "id": "building_right_0",
+          "parent": "layer_objects",
+          "kind": "asset",
+          "world": {
+            "x": 334.5664716196955,
+            "y": 375.7831368462033,
+            "scale": 0.63387793291742,
+            "angle": 0
+          },
+          "visible": true,
+          "layer": "layer_objects",
+          "depth": 1
+        },
+        {
+          "id": "building_right_1",
+          "parent": "layer_objects",
+          "kind": "asset",
+          "world": {
+            "x": 343.5256422356173,
+            "y": 397.2561374729856,
+            "scale": 0.6990444163093209,
+            "angle": 0
+          },
+          "visible": true,
+          "layer": "layer_objects",
+          "depth": 1
+        },
+        {
+          "id": "building_left_1",
+          "parent": "layer_objects",
+          "kind": "asset",
+          "world": {
+            "x": 39.93763638744326,
+            "y": 404.1820491980046,
+            "scale": 0.7292334976882323,
+            "angle": 0
+          },
+          "visible": true,
+          "layer": "layer_objects",
+          "depth": 1
+        },
+        {
+          "id": "building_left_2",
+          "parent": "layer_objects",
+          "kind": "asset",
+          "world": {
+            "x": 65.3006176308237,
+            "y": 426.20990662669243,
+            "scale": 0.8021393944987845,
+            "angle": 0
+          },
+          "visible": true,
+          "layer": "layer_objects",
+          "depth": 1
+        },
+        {
+          "id": "building_right_2",
+          "parent": "layer_objects",
+          "kind": "asset",
+          "world": {
+            "x": 354.0231787276574,
+            "y": 427.2819835695268,
+            "scale": 0.8405534011353435,
+            "angle": 0
+          },
+          "visible": true,
+          "layer": "layer_objects",
+          "depth": 1
+        },
+        {
+          "id": "building_left_4",
+          "parent": "layer_objects",
+          "kind": "asset",
+          "world": {
+            "x": 64.9462531348699,
+            "y": 468.1094675550801,
+            "scale": 1.0110728869187127,
+            "angle": 0
+          },
+          "visible": true,
+          "layer": "layer_objects",
+          "depth": 1
+        },
+        {
+          "id": "street_barrel",
+          "parent": "layer_objects",
+          "kind": "asset",
+          "world": {
+            "x": 306.0,
+            "y": 470.0,
+            "scale": 0.8,
+            "angle": 0
+          },
+          "visible": true,
+          "layer": "layer_objects",
+          "depth": 1
+        },
+        {
+          "id": "building_right_4",
+          "parent": "layer_objects",
+          "kind": "asset",
+          "world": {
+            "x": 365.46814932222196,
+            "y": 473.0398784339975,
+            "scale": 1.022082381578683,
+            "angle": 0
+          },
+          "visible": true,
+          "layer": "layer_objects",
+          "depth": 1
+        },
+        {
+          "id": "regrowth",
+          "parent": "layer_objects",
+          "kind": "asset",
+          "world": {
+            "x": 350.0,
+            "y": 475.0,
+            "scale": 0.38,
+            "angle": 0
+          },
+          "visible": true,
+          "layer": "layer_objects",
+          "depth": 1
+        },
+        {
+          "id": "street_crate",
+          "parent": "layer_objects",
+          "kind": "asset",
+          "world": {
+            "x": 95.0,
+            "y": 500.0,
+            "scale": 1,
+            "angle": 0
+          },
+          "visible": true,
+          "layer": "layer_objects",
+          "depth": 1
+        },
+        {
+          "id": "checkpoint",
+          "parent": "layer_objects",
+          "kind": "asset",
+          "world": {
+            "x": 244.44,
+            "y": 287.63,
+            "scale": 0.63,
+            "angle": 0.0
+          },
+          "visible": true,
+          "layer": "layer_objects",
+          "depth": 1
+        },
+        {
+          "id": "receiver",
+          "parent": "layer_objects",
+          "kind": "asset",
+          "world": {
+            "x": 17.799999999999997,
+            "y": 489.2,
+            "scale": 0.4,
+            "angle": 0.0
+          },
+          "visible": true,
+          "layer": "layer_objects",
+          "depth": 1
+        },
+        {
+          "id": "supply",
+          "parent": "layer_objects",
+          "kind": "asset",
+          "world": {
+            "x": 24.999999999999993,
+            "y": 455.05,
+            "scale": 0.55,
+            "angle": 0.0
+          },
+          "visible": true,
+          "layer": "layer_objects",
+          "depth": 1
+        },
+        {
+          "id": "layer_people",
+          "parent": "root",
+          "kind": "layer",
+          "world": {
+            "x": 0.0,
+            "y": 0.0,
+            "scale": 1,
+            "angle": 0
+          },
+          "visible": true,
+          "layer": "layer_people",
+          "depth": 1
+        },
+        {
+          "id": "rowan",
+          "parent": "layer_people",
+          "kind": "character",
+          "world": {
+            "x": 222.08652814355816,
+            "y": 525.0,
+            "scale": 0.47,
+            "angle": 0
+          },
+          "visible": true,
+          "layer": "layer_people",
+          "depth": 1
+        },
+        {
+          "id": "layer_foreground",
+          "parent": "root",
+          "kind": "layer",
+          "world": {
+            "x": 0.0,
+            "y": 0.0,
+            "scale": 1,
+            "angle": 0
+          },
+          "visible": true,
+          "layer": "layer_foreground",
+          "depth": 1.4
+        },
+        {
+          "id": "foreground",
+          "parent": "layer_foreground",
+          "kind": "asset",
+          "world": {
+            "x": 0.0,
+            "y": 0.0,
+            "scale": 1,
+            "angle": 0
+          },
+          "visible": true,
+          "layer": "layer_foreground",
+          "depth": 1.4
+        }
+      ],
+      "painter_ids": [
+        "sky",
+        "backdrop",
+        "ground",
+        "distance",
+        "building_left_0",
+        "building_right_0",
+        "building_right_1",
+        "building_left_1",
+        "building_left_2",
+        "building_right_2",
+        "building_left_4",
+        "street_barrel",
+        "building_right_4",
+        "regrowth",
+        "street_crate",
+        "checkpoint",
+        "receiver",
+        "supply",
+        "rowan",
+        "foreground"
+      ],
+      "path_allowance": 2504,
+      "operation_allowance": 42765,
+      "character_ground_contacts": {
+        "rowan": {
+          "ground_id": "ground",
+          "world": [
+            222.08652814355816,
+            525.0
+          ],
+          "screen": [
+            222.08652814355816,
+            525.0
+          ]
+        }
+      },
+      "camera": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    },
+    "scene_is_static_reference": true,
+    "blocking_document": {
+      "actor_id": "rowan",
+      "base": {
+        "base": {
+          "art_direction": {
+            "atmosphere": 0.7,
+            "lighting": "dusk"
+          },
+          "composition": {
+            "density": 2,
+            "detail": "rich",
+            "framing": 0.8,
+            "path_alignment": 0,
+            "structure": 0.7
+          },
+          "family": "settlement_street",
+          "rowan": {
+            "action": "look_around",
+            "enabled": true,
+            "side": "left"
+          },
+          "schema_version": "environment-0.1",
+          "seed": 33,
+          "title": "Settlement Street \u2014 seed 33"
+        },
+        "geometry": {
+          "assets": [
+            {
+              "anchors": {
+                "center": [
+                  96.0,
+                  146.0
+                ],
+                "origin": [
+                  96.0,
+                  287
+                ]
+              },
+              "id": "damaged_mast",
+              "shapes": [
+                {
+                  "ellipse": [
+                    90,
+                    282,
+                    79,
+                    5
+                  ],
+                  "fill": "shadow",
+                  "type": "ellipse"
+                },
+                {
+                  "fill": "shadow",
+                  "points": [
+                    [
+                      75,
+                      275
+                    ],
+                    [
+                      100,
+                      18
+                    ],
+                    [
+                      114,
+                      18
+                    ],
+                    [
+                      139,
+                      275
+                    ]
+                  ],
+                  "type": "polygon"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      78,
+                      273
+                    ],
+                    [
+                      "L",
+                      103,
+                      22
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "edge",
+                    "width": 3
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      135,
+                      273
+                    ],
+                    [
+                      "L",
+                      111,
+                      22
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "steel",
+                    "width": 4
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      98.2,
+                      40
+                    ],
+                    [
+                      "L",
+                      115.8,
+                      65
+                    ],
+                    [
+                      "L",
+                      96.2,
+                      65
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "rust",
+                    "width": 2
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      95.68,
+                      68
+                    ],
+                    [
+                      "L",
+                      118.32,
+                      93
+                    ],
+                    [
+                      "L",
+                      93.68,
+                      93
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "steel",
+                    "width": 2
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      93.16,
+                      96
+                    ],
+                    [
+                      "L",
+                      120.84,
+                      121
+                    ],
+                    [
+                      "L",
+                      91.16,
+                      121
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "steel",
+                    "width": 2
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      90.64,
+                      124
+                    ],
+                    [
+                      "L",
+                      123.36,
+                      149
+                    ],
+                    [
+                      "L",
+                      88.64,
+                      149
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "rust",
+                    "width": 2
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      88.12,
+                      152
+                    ],
+                    [
+                      "L",
+                      125.88,
+                      177
+                    ],
+                    [
+                      "L",
+                      86.12,
+                      177
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "steel",
+                    "width": 2
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      85.6,
+                      180
+                    ],
+                    [
+                      "L",
+                      128.4,
+                      205
+                    ],
+                    [
+                      "L",
+                      83.6,
+                      205
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "steel",
+                    "width": 2
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      83.08,
+                      208
+                    ],
+                    [
+                      "L",
+                      130.92,
+                      233
+                    ],
+                    [
+                      "L",
+                      81.08,
+                      233
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "rust",
+                    "width": 2
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      80.56,
+                      236
+                    ],
+                    [
+                      "L",
+                      133.44,
+                      261
+                    ],
+                    [
+                      "L",
+                      78.56,
+                      261
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "steel",
+                    "width": 2
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      104,
+                      40
+                    ],
+                    [
+                      "L",
+                      20,
+                      276
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "steel",
+                    "width": 1.4
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      112,
+                      65
+                    ],
+                    [
+                      "L",
+                      175,
+                      276
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "steel",
+                    "width": 1.4
+                  },
+                  "type": "path"
+                },
+                {
+                  "fill": "light",
+                  "points": [
+                    [
+                      14,
+                      275
+                    ],
+                    [
+                      26,
+                      275
+                    ],
+                    [
+                      30,
+                      282
+                    ],
+                    [
+                      12,
+                      282
+                    ]
+                  ],
+                  "type": "polygon"
+                },
+                {
+                  "fill": "light",
+                  "points": [
+                    [
+                      169,
+                      275
+                    ],
+                    [
+                      181,
+                      275
+                    ],
+                    [
+                      184,
+                      282
+                    ],
+                    [
+                      167,
+                      282
+                    ]
+                  ],
+                  "type": "polygon"
+                },
+                {
+                  "fill": "amber",
+                  "points": [
+                    [
+                      104,
+                      16
+                    ],
+                    [
+                      108,
+                      5
+                    ],
+                    [
+                      112,
+                      16
+                    ]
+                  ],
+                  "type": "polygon"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      107,
+                      18
+                    ],
+                    [
+                      "L",
+                      107,
+                      50
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "edge",
+                    "width": 2
+                  },
+                  "type": "path"
+                },
+                {
+                  "shapes": [
+                    {
+                      "fill": {
+                        "linear": [
+                          0,
+                          0,
+                          0,
+                          50
+                        ],
+                        "stops": [
+                          [
+                            0,
+                            "edge"
+                          ],
+                          [
+                            1,
+                            "steel"
+                          ]
+                        ]
+                      },
+                      "points": [
+                        [
+                          3,
+                          7
+                        ],
+                        [
+                          44,
+                          0
+                        ],
+                        [
+                          53,
+                          24
+                        ],
+                        [
+                          44,
+                          51
+                        ],
+                        [
+                          8,
+                          39
+                        ]
+                      ],
+                      "type": "polygon"
+                    },
+                    {
+                      "fill": "shadow",
+                      "points": [
+                        [
+                          38,
+                          3
+                        ],
+                        [
+                          45,
+                          4
+                        ],
+                        [
+                          42,
+                          18
+                        ],
+                        [
+                          52,
+                          24
+                        ],
+                        [
+                          43,
+                          25
+                        ],
+                        [
+                          41,
+                          40
+                        ],
+                        [
+                          35,
+                          35
+                        ]
+                      ],
+                      "type": "polygon"
+                    },
+                    {
+                      "path": [
+                        [
+                          "M",
+                          7,
+                          20
+                        ],
+                        [
+                          "L",
+                          40,
+                          26
+                        ]
+                      ],
+                      "stroke": {
+                        "paint": "light",
+                        "width": 2
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "path": [
+                        [
+                          "M",
+                          17,
+                          24
+                        ],
+                        [
+                          "L",
+                          5,
+                          44
+                        ]
+                      ],
+                      "stroke": {
+                        "paint": "rust",
+                        "width": 2
+                      },
+                      "type": "path"
+                    }
+                  ],
+                  "transform": {
+                    "rotation_degrees": 0,
+                    "scale": 1,
+                    "x": 104,
+                    "y": 45
+                  },
+                  "type": "group"
+                },
+                {
+                  "fill": {
+                    "linear": [
+                      0,
+                      216,
+                      0,
+                      272
+                    ],
+                    "stops": [
+                      [
+                        0,
+                        "edge"
+                      ],
+                      [
+                        1,
+                        "steel"
+                      ]
+                    ]
+                  },
+                  "rect": [
+                    57,
+                    216,
+                    47,
+                    56
+                  ],
+                  "stroke": {
+                    "paint": "shadow",
+                    "width": 1
+                  },
+                  "type": "rect"
+                },
+                {
+                  "fill": "glass",
+                  "rect": [
+                    63,
+                    222,
+                    34,
+                    40
+                  ],
+                  "type": "rect"
+                },
+                {
+                  "fill": "black",
+                  "rect": [
+                    67,
+                    225,
+                    26,
+                    12
+                  ],
+                  "type": "rect"
+                },
+                {
+                  "ellipse": [
+                    91,
+                    244,
+                    2,
+                    2
+                  ],
+                  "fill": "amber",
+                  "type": "ellipse"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      67,
+                      248
+                    ],
+                    [
+                      "L",
+                      88,
+                      248
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "steel",
+                    "width": 1
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      67,
+                      252
+                    ],
+                    [
+                      "L",
+                      88,
+                      252
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "steel",
+                    "width": 1
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      67,
+                      256
+                    ],
+                    [
+                      "L",
+                      88,
+                      256
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "steel",
+                    "width": 1
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      67,
+                      260
+                    ],
+                    [
+                      "L",
+                      88,
+                      260
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "steel",
+                    "width": 1
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      104,
+                      232
+                    ],
+                    [
+                      "C",
+                      133,
+                      227,
+                      106,
+                      192,
+                      119,
+                      177
+                    ],
+                    [
+                      "C",
+                      143,
+                      152,
+                      110,
+                      136,
+                      112,
+                      107
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "black",
+                    "width": 3
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      92,
+                      271
+                    ],
+                    [
+                      "L",
+                      90,
+                      279
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "rust",
+                    "width": 3
+                  },
+                  "type": "path"
+                }
+              ],
+              "size": [
+                192,
+                292
+              ]
+            },
+            {
+              "anchors": {
+                "center": [
+                  100.0,
+                  87.0
+                ],
+                "origin": [
+                  100.0,
+                  169
+                ]
+              },
+              "id": "water_cart",
+              "shapes": [
+                {
+                  "ellipse": [
+                    103,
+                    160,
+                    88,
+                    7
+                  ],
+                  "fill": "shadow",
+                  "type": "ellipse"
+                },
+                {
+                  "ellipse": [
+                    46,
+                    139,
+                    24,
+                    25
+                  ],
+                  "fill": "rubber",
+                  "stroke": {
+                    "paint": "shadow",
+                    "width": 1
+                  },
+                  "type": "ellipse"
+                },
+                {
+                  "ellipse": [
+                    46,
+                    139,
+                    16,
+                    17
+                  ],
+                  "fill": "steel",
+                  "stroke": {
+                    "paint": "edge",
+                    "width": 1
+                  },
+                  "type": "ellipse"
+                },
+                {
+                  "ellipse": [
+                    46,
+                    139,
+                    5,
+                    5
+                  ],
+                  "fill": "rust",
+                  "type": "ellipse"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      46,
+                      139
+                    ],
+                    [
+                      "L",
+                      59,
+                      139
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "edge",
+                    "width": 1.6
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      46,
+                      139
+                    ],
+                    [
+                      "L",
+                      33,
+                      139
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "edge",
+                    "width": 1.6
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      46,
+                      139
+                    ],
+                    [
+                      "L",
+                      46,
+                      153
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "edge",
+                    "width": 1.6
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      46,
+                      139
+                    ],
+                    [
+                      "L",
+                      46,
+                      125
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "edge",
+                    "width": 1.6
+                  },
+                  "type": "path"
+                },
+                {
+                  "ellipse": [
+                    151,
+                    139,
+                    24,
+                    25
+                  ],
+                  "fill": "rubber",
+                  "stroke": {
+                    "paint": "shadow",
+                    "width": 1
+                  },
+                  "type": "ellipse"
+                },
+                {
+                  "ellipse": [
+                    151,
+                    139,
+                    16,
+                    17
+                  ],
+                  "fill": "steel",
+                  "stroke": {
+                    "paint": "edge",
+                    "width": 1
+                  },
+                  "type": "ellipse"
+                },
+                {
+                  "ellipse": [
+                    151,
+                    139,
+                    5,
+                    5
+                  ],
+                  "fill": "rust",
+                  "type": "ellipse"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      151,
+                      139
+                    ],
+                    [
+                      "L",
+                      164,
+                      139
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "edge",
+                    "width": 1.6
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      151,
+                      139
+                    ],
+                    [
+                      "L",
+                      138,
+                      139
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "edge",
+                    "width": 1.6
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      151,
+                      139
+                    ],
+                    [
+                      "L",
+                      151,
+                      153
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "edge",
+                    "width": 1.6
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      151,
+                      139
+                    ],
+                    [
+                      "L",
+                      151,
+                      125
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "edge",
+                    "width": 1.6
+                  },
+                  "type": "path"
+                },
+                {
+                  "fill": "light",
+                  "points": [
+                    [
+                      30,
+                      120
+                    ],
+                    [
+                      151,
+                      120
+                    ],
+                    [
+                      175,
+                      102
+                    ],
+                    [
+                      56,
+                      102
+                    ]
+                  ],
+                  "type": "polygon"
+                },
+                {
+                  "fill": "wood",
+                  "points": [
+                    [
+                      30,
+                      120
+                    ],
+                    [
+                      151,
+                      120
+                    ],
+                    [
+                      151,
+                      130
+                    ],
+                    [
+                      30,
+                      130
+                    ]
+                  ],
+                  "type": "polygon"
+                },
+                {
+                  "fill": "shadow",
+                  "points": [
+                    [
+                      151,
+                      120
+                    ],
+                    [
+                      175,
+                      102
+                    ],
+                    [
+                      175,
+                      115
+                    ],
+                    [
+                      151,
+                      130
+                    ]
+                  ],
+                  "type": "polygon"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      41,
+                      121
+                    ],
+                    [
+                      "L",
+                      42,
+                      139
+                    ],
+                    [
+                      "L",
+                      153,
+                      139
+                    ],
+                    [
+                      "L",
+                      153,
+                      118
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "steel",
+                    "width": 4
+                  },
+                  "type": "path"
+                },
+                {
+                  "fill": {
+                    "linear": [
+                      0,
+                      25,
+                      0,
+                      105
+                    ],
+                    "stops": [
+                      [
+                        0,
+                        "water"
+                      ],
+                      [
+                        1,
+                        "steel"
+                      ]
+                    ]
+                  },
+                  "points": [
+                    [
+                      50,
+                      102
+                    ],
+                    [
+                      50,
+                      41
+                    ],
+                    [
+                      69,
+                      25
+                    ],
+                    [
+                      157,
+                      25
+                    ],
+                    [
+                      157,
+                      90
+                    ],
+                    [
+                      137,
+                      105
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "shadow",
+                    "width": 1
+                  },
+                  "type": "polygon"
+                },
+                {
+                  "fill": "glass",
+                  "points": [
+                    [
+                      137,
+                      105
+                    ],
+                    [
+                      157,
+                      90
+                    ],
+                    [
+                      157,
+                      25
+                    ],
+                    [
+                      137,
+                      40
+                    ]
+                  ],
+                  "type": "polygon"
+                },
+                {
+                  "fill": "edge",
+                  "points": [
+                    [
+                      50,
+                      41
+                    ],
+                    [
+                      69,
+                      25
+                    ],
+                    [
+                      157,
+                      25
+                    ],
+                    [
+                      137,
+                      41
+                    ]
+                  ],
+                  "type": "polygon"
+                },
+                {
+                  "fill": "cloth",
+                  "rect": [
+                    83,
+                    34,
+                    15,
+                    70
+                  ],
+                  "type": "rect"
+                },
+                {
+                  "fill": "cloth",
+                  "rect": [
+                    124,
+                    29,
+                    12,
+                    74
+                  ],
+                  "type": "rect"
+                },
+                {
+                  "fill": "rust",
+                  "rect": [
+                    88,
+                    43,
+                    5,
+                    12
+                  ],
+                  "type": "rect"
+                },
+                {
+                  "fill": "rust",
+                  "rect": [
+                    127,
+                    38,
+                    5,
+                    12
+                  ],
+                  "type": "rect"
+                },
+                {
+                  "ellipse": [
+                    108,
+                    29,
+                    12,
+                    4
+                  ],
+                  "fill": "shadow",
+                  "type": "ellipse"
+                },
+                {
+                  "ellipse": [
+                    108,
+                    27,
+                    10,
+                    3
+                  ],
+                  "fill": "steel",
+                  "type": "ellipse"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      151,
+                      92
+                    ],
+                    [
+                      "L",
+                      167,
+                      92
+                    ],
+                    [
+                      "L",
+                      167,
+                      104
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "rust",
+                    "width": 3
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      163,
+                      97
+                    ],
+                    [
+                      "L",
+                      172,
+                      97
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "edge",
+                    "width": 2
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      30,
+                      120
+                    ],
+                    [
+                      "C",
+                      16,
+                      105,
+                      18,
+                      78,
+                      8,
+                      66
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "steel",
+                    "width": 4
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      5,
+                      65
+                    ],
+                    [
+                      "L",
+                      20,
+                      65
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "wood",
+                    "width": 6
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      60,
+                      64
+                    ],
+                    [
+                      "L",
+                      75,
+                      64
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "edge",
+                    "width": 1
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      60,
+                      75
+                    ],
+                    [
+                      "L",
+                      75,
+                      75
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "edge",
+                    "width": 1
+                  },
+                  "type": "path"
+                }
+              ],
+              "size": [
+                200,
+                174
+              ]
+            },
+            {
+              "anchors": {
+                "center": [
+                  112.0,
+                  152.0
+                ],
+                "origin": [
+                  112.0,
+                  299
+                ]
+              },
+              "id": "watchtower",
+              "shapes": [
+                {
+                  "ellipse": [
+                    115,
+                    292,
+                    93,
+                    5
+                  ],
+                  "fill": "shadow",
+                  "type": "ellipse"
+                },
+                {
+                  "fill": "wood",
+                  "points": [
+                    [
+                      48,
+                      285
+                    ],
+                    [
+                      56,
+                      285
+                    ],
+                    [
+                      60,
+                      146
+                    ],
+                    [
+                      50,
+                      146
+                    ]
+                  ],
+                  "type": "polygon"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      51,
+                      281
+                    ],
+                    [
+                      "L",
+                      55,
+                      150
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "light",
+                    "width": 1.5
+                  },
+                  "type": "path"
+                },
+                {
+                  "fill": "wood",
+                  "points": [
+                    [
+                      149,
+                      285
+                    ],
+                    [
+                      157,
+                      285
+                    ],
+                    [
+                      161,
+                      146
+                    ],
+                    [
+                      151,
+                      146
+                    ]
+                  ],
+                  "type": "polygon"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      152,
+                      281
+                    ],
+                    [
+                      "L",
+                      156,
+                      150
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "light",
+                    "width": 1.5
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      54,
+                      260
+                    ],
+                    [
+                      "L",
+                      154,
+                      176
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "wood",
+                    "width": 6
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      55,
+                      179
+                    ],
+                    [
+                      "L",
+                      150,
+                      260
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "wood",
+                    "width": 6
+                  },
+                  "type": "path"
+                },
+                {
+                  "fill": "light",
+                  "points": [
+                    [
+                      29,
+                      139
+                    ],
+                    [
+                      155,
+                      139
+                    ],
+                    [
+                      184,
+                      120
+                    ],
+                    [
+                      58,
+                      120
+                    ]
+                  ],
+                  "type": "polygon"
+                },
+                {
+                  "fill": "wood",
+                  "points": [
+                    [
+                      29,
+                      139
+                    ],
+                    [
+                      155,
+                      139
+                    ],
+                    [
+                      155,
+                      150
+                    ],
+                    [
+                      29,
+                      150
+                    ]
+                  ],
+                  "type": "polygon"
+                },
+                {
+                  "fill": "shadow",
+                  "points": [
+                    [
+                      155,
+                      139
+                    ],
+                    [
+                      184,
+                      120
+                    ],
+                    [
+                      184,
+                      134
+                    ],
+                    [
+                      155,
+                      150
+                    ]
+                  ],
+                  "type": "polygon"
+                },
+                {
+                  "shapes": [
+                    {
+                      "fill": {
+                        "linear": [
+                          0,
+                          39,
+                          0,
+                          106
+                        ],
+                        "stops": [
+                          [
+                            0,
+                            "light"
+                          ],
+                          [
+                            1,
+                            "wood"
+                          ]
+                        ]
+                      },
+                      "rect": [
+                        5,
+                        39,
+                        118,
+                        67
+                      ],
+                      "stroke": {
+                        "paint": "shadow",
+                        "width": 1
+                      },
+                      "type": "rect"
+                    },
+                    {
+                      "fill": "shadow",
+                      "points": [
+                        [
+                          123,
+                          106
+                        ],
+                        [
+                          150,
+                          91
+                        ],
+                        [
+                          150,
+                          20
+                        ],
+                        [
+                          123,
+                          39
+                        ]
+                      ],
+                      "type": "polygon"
+                    },
+                    {
+                      "fill": "shadow",
+                      "points": [
+                        [
+                          0,
+                          38
+                        ],
+                        [
+                          44,
+                          3
+                        ],
+                        [
+                          152,
+                          15
+                        ],
+                        [
+                          123,
+                          38
+                        ]
+                      ],
+                      "type": "polygon"
+                    },
+                    {
+                      "fill": "rust",
+                      "points": [
+                        [
+                          44,
+                          3
+                        ],
+                        [
+                          50,
+                          3
+                        ],
+                        [
+                          123,
+                          32
+                        ],
+                        [
+                          121,
+                          38
+                        ]
+                      ],
+                      "type": "polygon"
+                    },
+                    {
+                      "fill": "glass",
+                      "rect": [
+                        17,
+                        54,
+                        40,
+                        27
+                      ],
+                      "type": "rect"
+                    },
+                    {
+                      "fill": "black",
+                      "rect": [
+                        76,
+                        54,
+                        30,
+                        27
+                      ],
+                      "type": "rect"
+                    },
+                    {
+                      "path": [
+                        [
+                          "M",
+                          15,
+                          54
+                        ],
+                        [
+                          "L",
+                          59,
+                          54
+                        ],
+                        [
+                          "L",
+                          59,
+                          83
+                        ]
+                      ],
+                      "stroke": {
+                        "paint": "edge",
+                        "width": 1.5
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "path": [
+                        [
+                          "M",
+                          78,
+                          55
+                        ],
+                        [
+                          "L",
+                          101,
+                          81
+                        ]
+                      ],
+                      "stroke": {
+                        "paint": "wood",
+                        "width": 3
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "fill": "shadow",
+                      "points": [
+                        [
+                          109,
+                          45
+                        ],
+                        [
+                          114,
+                          42
+                        ],
+                        [
+                          118,
+                          59
+                        ],
+                        [
+                          115,
+                          69
+                        ],
+                        [
+                          122,
+                          82
+                        ],
+                        [
+                          110,
+                          77
+                        ]
+                      ],
+                      "type": "polygon"
+                    }
+                  ],
+                  "transform": {
+                    "rotation_degrees": 0,
+                    "scale": 1,
+                    "x": 30,
+                    "y": 30
+                  },
+                  "type": "group"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      36,
+                      136
+                    ],
+                    [
+                      "L",
+                      36,
+                      108
+                    ],
+                    [
+                      "L",
+                      143,
+                      108
+                    ],
+                    [
+                      "L",
+                      143,
+                      137
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "wood",
+                    "width": 4
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      181,
+                      121
+                    ],
+                    [
+                      "L",
+                      181,
+                      93
+                    ],
+                    [
+                      "L",
+                      153,
+                      109
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "wood",
+                    "width": 3
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      70,
+                      285
+                    ],
+                    [
+                      "L",
+                      100,
+                      151
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "steel",
+                    "width": 3
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      93,
+                      285
+                    ],
+                    [
+                      "L",
+                      122,
+                      151
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "steel",
+                    "width": 3
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      74,
+                      272
+                    ],
+                    [
+                      "L",
+                      95,
+                      272
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "edge",
+                    "width": 2
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      77,
+                      259
+                    ],
+                    [
+                      "L",
+                      98,
+                      259
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "edge",
+                    "width": 2
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      80,
+                      246
+                    ],
+                    [
+                      "L",
+                      101,
+                      246
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "edge",
+                    "width": 2
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      83,
+                      233
+                    ],
+                    [
+                      "L",
+                      104,
+                      233
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "edge",
+                    "width": 2
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      86,
+                      220
+                    ],
+                    [
+                      "L",
+                      107,
+                      220
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "edge",
+                    "width": 2
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      89,
+                      207
+                    ],
+                    [
+                      "L",
+                      110,
+                      207
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "edge",
+                    "width": 2
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      92,
+                      194
+                    ],
+                    [
+                      "L",
+                      113,
+                      194
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "edge",
+                    "width": 2
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      95,
+                      181
+                    ],
+                    [
+                      "L",
+                      116,
+                      181
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "edge",
+                    "width": 2
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      98,
+                      168
+                    ],
+                    [
+                      "L",
+                      119,
+                      168
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "edge",
+                    "width": 2
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      48,
+                      112
+                    ],
+                    [
+                      "L",
+                      48,
+                      134
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "wood",
+                    "width": 2
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      70,
+                      112
+                    ],
+                    [
+                      "L",
+                      70,
+                      134
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "wood",
+                    "width": 2
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      92,
+                      112
+                    ],
+                    [
+                      "L",
+                      92,
+                      134
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "wood",
+                    "width": 2
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      114,
+                      112
+                    ],
+                    [
+                      "L",
+                      114,
+                      134
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "wood",
+                    "width": 2
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      136,
+                      112
+                    ],
+                    [
+                      "L",
+                      136,
+                      134
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "wood",
+                    "width": 2
+                  },
+                  "type": "path"
+                }
+              ],
+              "size": [
+                224,
+                304
+              ]
+            },
+            {
+              "anchors": {
+                "center": [
+                  88.0,
+                  76.0
+                ],
+                "origin": [
+                  88.0,
+                  147
+                ]
+              },
+              "id": "field_radio",
+              "shapes": [
+                {
+                  "ellipse": [
+                    94,
+                    142,
+                    81,
+                    6
+                  ],
+                  "fill": "shadow",
+                  "type": "ellipse"
+                },
+                {
+                  "fill": "shadow",
+                  "points": [
+                    [
+                      29,
+                      130
+                    ],
+                    [
+                      128,
+                      130
+                    ],
+                    [
+                      155,
+                      112
+                    ],
+                    [
+                      155,
+                      46
+                    ],
+                    [
+                      128,
+                      63
+                    ],
+                    [
+                      29,
+                      63
+                    ]
+                  ],
+                  "type": "polygon"
+                },
+                {
+                  "fill": {
+                    "linear": [
+                      0,
+                      63,
+                      0,
+                      130
+                    ],
+                    "stops": [
+                      [
+                        0,
+                        "steel"
+                      ],
+                      [
+                        1,
+                        "shadow"
+                      ]
+                    ]
+                  },
+                  "rect": [
+                    29,
+                    63,
+                    99,
+                    67
+                  ],
+                  "stroke": {
+                    "paint": "edge",
+                    "width": 1
+                  },
+                  "type": "rect"
+                },
+                {
+                  "fill": "steel",
+                  "points": [
+                    [
+                      29,
+                      63
+                    ],
+                    [
+                      53,
+                      46
+                    ],
+                    [
+                      155,
+                      46
+                    ],
+                    [
+                      128,
+                      63
+                    ]
+                  ],
+                  "type": "polygon"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      45,
+                      57
+                    ],
+                    [
+                      "L",
+                      45,
+                      35
+                    ],
+                    [
+                      "L",
+                      112,
+                      35
+                    ],
+                    [
+                      "L",
+                      112,
+                      53
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "shadow",
+                    "width": 6
+                  },
+                  "type": "path"
+                },
+                {
+                  "fill": "glass",
+                  "rect": [
+                    38,
+                    73,
+                    45,
+                    22
+                  ],
+                  "stroke": {
+                    "paint": "edge",
+                    "width": 1
+                  },
+                  "type": "rect"
+                },
+                {
+                  "fill": "amber",
+                  "rect": [
+                    42,
+                    77,
+                    37,
+                    7
+                  ],
+                  "type": "rect"
+                },
+                {
+                  "ellipse": [
+                    103,
+                    84,
+                    11,
+                    11
+                  ],
+                  "fill": "black",
+                  "stroke": {
+                    "paint": "edge",
+                    "width": 1
+                  },
+                  "type": "ellipse"
+                },
+                {
+                  "ellipse": [
+                    103,
+                    84,
+                    4,
+                    4
+                  ],
+                  "fill": "rust",
+                  "type": "ellipse"
+                },
+                {
+                  "fill": "shadow",
+                  "rect": [
+                    38,
+                    103,
+                    77,
+                    17
+                  ],
+                  "type": "rect"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      43,
+                      107
+                    ],
+                    [
+                      "L",
+                      43,
+                      117
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "steel",
+                    "width": 2
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      53,
+                      107
+                    ],
+                    [
+                      "L",
+                      53,
+                      117
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "steel",
+                    "width": 2
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      63,
+                      107
+                    ],
+                    [
+                      "L",
+                      63,
+                      117
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "steel",
+                    "width": 2
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      73,
+                      107
+                    ],
+                    [
+                      "L",
+                      73,
+                      117
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "steel",
+                    "width": 2
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      83,
+                      107
+                    ],
+                    [
+                      "L",
+                      83,
+                      117
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "steel",
+                    "width": 2
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      93,
+                      107
+                    ],
+                    [
+                      "L",
+                      93,
+                      117
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "steel",
+                    "width": 2
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      103,
+                      107
+                    ],
+                    [
+                      "L",
+                      103,
+                      117
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "steel",
+                    "width": 2
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      140,
+                      53
+                    ],
+                    [
+                      "L",
+                      147,
+                      10
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "edge",
+                    "width": 2
+                  },
+                  "type": "path"
+                },
+                {
+                  "ellipse": [
+                    147,
+                    9,
+                    2,
+                    2
+                  ],
+                  "fill": "amber",
+                  "type": "ellipse"
+                },
+                {
+                  "fill": "wood",
+                  "rect": [
+                    4,
+                    110,
+                    23,
+                    27
+                  ],
+                  "stroke": {
+                    "paint": "rust",
+                    "width": 1
+                  },
+                  "type": "rect"
+                },
+                {
+                  "fill": "rust",
+                  "rect": [
+                    8,
+                    105,
+                    5,
+                    5
+                  ],
+                  "type": "rect"
+                },
+                {
+                  "fill": "rust",
+                  "rect": [
+                    19,
+                    105,
+                    5,
+                    5
+                  ],
+                  "type": "rect"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      25,
+                      115
+                    ],
+                    [
+                      "C",
+                      46,
+                      106,
+                      4,
+                      87,
+                      21,
+                      79
+                    ],
+                    [
+                      "C",
+                      42,
+                      65,
+                      11,
+                      59,
+                      35,
+                      53
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "black",
+                    "width": 3
+                  },
+                  "type": "path"
+                },
+                {
+                  "path": [
+                    [
+                      "M",
+                      135,
+                      114
+                    ],
+                    [
+                      "L",
+                      149,
+                      105
+                    ]
+                  ],
+                  "stroke": {
+                    "paint": "rust",
+                    "width": 2
+                  },
+                  "type": "path"
+                },
+                {
+                  "clip": [
+                    [
+                      "M",
+                      38,
+                      73
+                    ],
+                    [
+                      "L",
+                      83,
+                      73
+                    ],
+                    [
+                      "L",
+                      83,
+                      95
+                    ],
+                    [
+                      "L",
+                      38,
+                      95
+                    ],
+                    [
+                      "Z"
+                    ]
+                  ],
+                  "fill": "glaze",
+                  "points": [
+                    [
+                      37,
+                      73
+                    ],
+                    [
+                      62,
+                      73
+                    ],
+                    [
+                      49,
+                      94
+                    ],
+                    [
+                      37,
+                      94
+                    ]
+                  ],
+                  "type": "polygon"
+                }
+              ],
+              "size": [
+                176,
+                152
+              ]
+            }
+          ],
+          "palette": {
+            "amber": "#e5b56a",
+            "black": "#0d2026",
+            "cloth": "#7e8570",
+            "edge": "#a8bab5",
+            "glass": "#263f49",
+            "glaze": "#e5cf9b35",
+            "light": "#cab08a",
+            "rubber": "#223239",
+            "rust": "#a36f48",
+            "shadow": "#142c32",
+            "steel": "#566c70",
+            "water": "#77999b",
+            "wood": "#79654d"
+          },
+          "schema_version": "geometry-0.1"
+        },
+        "instances": [
+          {
+            "anchor": "origin",
+            "asset": "watchtower",
+            "id": "checkpoint",
+            "order": 20,
+            "parent": "layer_objects",
+            "transform": {
+              "rotation_degrees": 0,
+              "scale": 0.63,
+              "x": 315,
+              "y": 476
+            },
+            "visible": true
+          },
+          {
+            "anchor": "origin",
+            "asset": "water_cart",
+            "id": "supply",
+            "order": 20,
+            "parent": "layer_objects",
+            "transform": {
+              "rotation_degrees": 0,
+              "scale": 0.55,
+              "x": 80,
+              "y": 548
+            },
+            "visible": true
+          },
+          {
+            "anchor": "origin",
+            "asset": "field_radio",
+            "id": "receiver",
+            "order": 20,
+            "parent": "layer_objects",
+            "transform": {
+              "rotation_degrees": 0,
+              "scale": 0.4,
+              "x": 53,
+              "y": 548
+            },
+            "visible": true
+          }
+        ],
+        "schema_version": "composition-0.1",
+        "title": "Settlement Checkpoint"
+      },
+      "camera": "locked",
+      "corridor": "level_field",
+      "schema_version": "blocking-0.1",
+      "segments": [
+        {
+          "acting": "idle",
+          "destination": [
+            140,
+            550
+          ],
+          "end_frame": 6,
+          "end_speed": 0,
+          "expression": "concerned",
+          "facing": "right",
+          "id": "take_stock",
+          "mode": "idle",
+          "start_frame": 0
+        },
+        {
+          "acting": "none",
+          "destination": [
+            168.5,
+            550
+          ],
+          "end_frame": 33,
+          "end_speed": 40,
+          "expression": "concerned",
+          "facing": "right",
+          "id": "explore",
+          "mode": "walk",
+          "start_frame": 6
+        },
+        {
+          "acting": "none",
+          "destination": [
+            176.5,
+            550
+          ],
+          "end_frame": 45,
+          "end_speed": 0,
+          "expression": "concerned",
+          "facing": "right",
+          "id": "suspicion",
+          "mode": "stop",
+          "start_frame": 33
+        },
+        {
+          "acting": "react",
+          "destination": [
+            176.5,
+            550
+          ],
+          "end_frame": 60,
+          "end_speed": 0,
+          "expression": "concerned",
+          "facing": "right",
+          "id": "flinch",
+          "mode": "idle",
+          "start_frame": 45
+        },
+        {
+          "acting": "none",
+          "destination": [
+            216.5,
+            550
+          ],
+          "end_frame": 90,
+          "end_speed": 80,
+          "expression": "concerned",
+          "facing": "right",
+          "id": "break_away",
+          "mode": "run",
+          "start_frame": 60
+        }
+      ],
+      "start": {
+        "facing": "right",
+        "position": [
+          140,
+          550
+        ]
+      },
+      "support_id": "ground",
+      "title": "Abandoned Settlement"
+    },
+    "direction_document": {
+      "base": {
+        "actor_id": "rowan",
+        "base": {
+          "base": {
+            "art_direction": {
+              "atmosphere": 0.7,
+              "lighting": "dusk"
+            },
+            "composition": {
+              "density": 2,
+              "detail": "rich",
+              "framing": 0.8,
+              "path_alignment": 0,
+              "structure": 0.7
+            },
+            "family": "settlement_street",
+            "rowan": {
+              "action": "look_around",
+              "enabled": true,
+              "side": "left"
+            },
+            "schema_version": "environment-0.1",
+            "seed": 33,
+            "title": "Settlement Street \u2014 seed 33"
+          },
+          "geometry": {
+            "assets": [
+              {
+                "anchors": {
+                  "center": [
+                    96.0,
+                    146.0
+                  ],
+                  "origin": [
+                    96.0,
+                    287
+                  ]
+                },
+                "id": "damaged_mast",
+                "shapes": [
+                  {
+                    "ellipse": [
+                      90,
+                      282,
+                      79,
+                      5
+                    ],
+                    "fill": "shadow",
+                    "type": "ellipse"
+                  },
+                  {
+                    "fill": "shadow",
+                    "points": [
+                      [
+                        75,
+                        275
+                      ],
+                      [
+                        100,
+                        18
+                      ],
+                      [
+                        114,
+                        18
+                      ],
+                      [
+                        139,
+                        275
+                      ]
+                    ],
+                    "type": "polygon"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        78,
+                        273
+                      ],
+                      [
+                        "L",
+                        103,
+                        22
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "edge",
+                      "width": 3
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        135,
+                        273
+                      ],
+                      [
+                        "L",
+                        111,
+                        22
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "steel",
+                      "width": 4
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        98.2,
+                        40
+                      ],
+                      [
+                        "L",
+                        115.8,
+                        65
+                      ],
+                      [
+                        "L",
+                        96.2,
+                        65
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "rust",
+                      "width": 2
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        95.68,
+                        68
+                      ],
+                      [
+                        "L",
+                        118.32,
+                        93
+                      ],
+                      [
+                        "L",
+                        93.68,
+                        93
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "steel",
+                      "width": 2
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        93.16,
+                        96
+                      ],
+                      [
+                        "L",
+                        120.84,
+                        121
+                      ],
+                      [
+                        "L",
+                        91.16,
+                        121
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "steel",
+                      "width": 2
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        90.64,
+                        124
+                      ],
+                      [
+                        "L",
+                        123.36,
+                        149
+                      ],
+                      [
+                        "L",
+                        88.64,
+                        149
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "rust",
+                      "width": 2
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        88.12,
+                        152
+                      ],
+                      [
+                        "L",
+                        125.88,
+                        177
+                      ],
+                      [
+                        "L",
+                        86.12,
+                        177
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "steel",
+                      "width": 2
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        85.6,
+                        180
+                      ],
+                      [
+                        "L",
+                        128.4,
+                        205
+                      ],
+                      [
+                        "L",
+                        83.6,
+                        205
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "steel",
+                      "width": 2
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        83.08,
+                        208
+                      ],
+                      [
+                        "L",
+                        130.92,
+                        233
+                      ],
+                      [
+                        "L",
+                        81.08,
+                        233
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "rust",
+                      "width": 2
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        80.56,
+                        236
+                      ],
+                      [
+                        "L",
+                        133.44,
+                        261
+                      ],
+                      [
+                        "L",
+                        78.56,
+                        261
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "steel",
+                      "width": 2
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        104,
+                        40
+                      ],
+                      [
+                        "L",
+                        20,
+                        276
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "steel",
+                      "width": 1.4
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        112,
+                        65
+                      ],
+                      [
+                        "L",
+                        175,
+                        276
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "steel",
+                      "width": 1.4
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "fill": "light",
+                    "points": [
+                      [
+                        14,
+                        275
+                      ],
+                      [
+                        26,
+                        275
+                      ],
+                      [
+                        30,
+                        282
+                      ],
+                      [
+                        12,
+                        282
+                      ]
+                    ],
+                    "type": "polygon"
+                  },
+                  {
+                    "fill": "light",
+                    "points": [
+                      [
+                        169,
+                        275
+                      ],
+                      [
+                        181,
+                        275
+                      ],
+                      [
+                        184,
+                        282
+                      ],
+                      [
+                        167,
+                        282
+                      ]
+                    ],
+                    "type": "polygon"
+                  },
+                  {
+                    "fill": "amber",
+                    "points": [
+                      [
+                        104,
+                        16
+                      ],
+                      [
+                        108,
+                        5
+                      ],
+                      [
+                        112,
+                        16
+                      ]
+                    ],
+                    "type": "polygon"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        107,
+                        18
+                      ],
+                      [
+                        "L",
+                        107,
+                        50
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "edge",
+                      "width": 2
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "shapes": [
+                      {
+                        "fill": {
+                          "linear": [
+                            0,
+                            0,
+                            0,
+                            50
+                          ],
+                          "stops": [
+                            [
+                              0,
+                              "edge"
+                            ],
+                            [
+                              1,
+                              "steel"
+                            ]
+                          ]
+                        },
+                        "points": [
+                          [
+                            3,
+                            7
+                          ],
+                          [
+                            44,
+                            0
+                          ],
+                          [
+                            53,
+                            24
+                          ],
+                          [
+                            44,
+                            51
+                          ],
+                          [
+                            8,
+                            39
+                          ]
+                        ],
+                        "type": "polygon"
+                      },
+                      {
+                        "fill": "shadow",
+                        "points": [
+                          [
+                            38,
+                            3
+                          ],
+                          [
+                            45,
+                            4
+                          ],
+                          [
+                            42,
+                            18
+                          ],
+                          [
+                            52,
+                            24
+                          ],
+                          [
+                            43,
+                            25
+                          ],
+                          [
+                            41,
+                            40
+                          ],
+                          [
+                            35,
+                            35
+                          ]
+                        ],
+                        "type": "polygon"
+                      },
+                      {
+                        "path": [
+                          [
+                            "M",
+                            7,
+                            20
+                          ],
+                          [
+                            "L",
+                            40,
+                            26
+                          ]
+                        ],
+                        "stroke": {
+                          "paint": "light",
+                          "width": 2
+                        },
+                        "type": "path"
+                      },
+                      {
+                        "path": [
+                          [
+                            "M",
+                            17,
+                            24
+                          ],
+                          [
+                            "L",
+                            5,
+                            44
+                          ]
+                        ],
+                        "stroke": {
+                          "paint": "rust",
+                          "width": 2
+                        },
+                        "type": "path"
+                      }
+                    ],
+                    "transform": {
+                      "rotation_degrees": 0,
+                      "scale": 1,
+                      "x": 104,
+                      "y": 45
+                    },
+                    "type": "group"
+                  },
+                  {
+                    "fill": {
+                      "linear": [
+                        0,
+                        216,
+                        0,
+                        272
+                      ],
+                      "stops": [
+                        [
+                          0,
+                          "edge"
+                        ],
+                        [
+                          1,
+                          "steel"
+                        ]
+                      ]
+                    },
+                    "rect": [
+                      57,
+                      216,
+                      47,
+                      56
+                    ],
+                    "stroke": {
+                      "paint": "shadow",
+                      "width": 1
+                    },
+                    "type": "rect"
+                  },
+                  {
+                    "fill": "glass",
+                    "rect": [
+                      63,
+                      222,
+                      34,
+                      40
+                    ],
+                    "type": "rect"
+                  },
+                  {
+                    "fill": "black",
+                    "rect": [
+                      67,
+                      225,
+                      26,
+                      12
+                    ],
+                    "type": "rect"
+                  },
+                  {
+                    "ellipse": [
+                      91,
+                      244,
+                      2,
+                      2
+                    ],
+                    "fill": "amber",
+                    "type": "ellipse"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        67,
+                        248
+                      ],
+                      [
+                        "L",
+                        88,
+                        248
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "steel",
+                      "width": 1
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        67,
+                        252
+                      ],
+                      [
+                        "L",
+                        88,
+                        252
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "steel",
+                      "width": 1
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        67,
+                        256
+                      ],
+                      [
+                        "L",
+                        88,
+                        256
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "steel",
+                      "width": 1
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        67,
+                        260
+                      ],
+                      [
+                        "L",
+                        88,
+                        260
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "steel",
+                      "width": 1
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        104,
+                        232
+                      ],
+                      [
+                        "C",
+                        133,
+                        227,
+                        106,
+                        192,
+                        119,
+                        177
+                      ],
+                      [
+                        "C",
+                        143,
+                        152,
+                        110,
+                        136,
+                        112,
+                        107
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "black",
+                      "width": 3
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        92,
+                        271
+                      ],
+                      [
+                        "L",
+                        90,
+                        279
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "rust",
+                      "width": 3
+                    },
+                    "type": "path"
+                  }
+                ],
+                "size": [
+                  192,
+                  292
+                ]
+              },
+              {
+                "anchors": {
+                  "center": [
+                    100.0,
+                    87.0
+                  ],
+                  "origin": [
+                    100.0,
+                    169
+                  ]
+                },
+                "id": "water_cart",
+                "shapes": [
+                  {
+                    "ellipse": [
+                      103,
+                      160,
+                      88,
+                      7
+                    ],
+                    "fill": "shadow",
+                    "type": "ellipse"
+                  },
+                  {
+                    "ellipse": [
+                      46,
+                      139,
+                      24,
+                      25
+                    ],
+                    "fill": "rubber",
+                    "stroke": {
+                      "paint": "shadow",
+                      "width": 1
+                    },
+                    "type": "ellipse"
+                  },
+                  {
+                    "ellipse": [
+                      46,
+                      139,
+                      16,
+                      17
+                    ],
+                    "fill": "steel",
+                    "stroke": {
+                      "paint": "edge",
+                      "width": 1
+                    },
+                    "type": "ellipse"
+                  },
+                  {
+                    "ellipse": [
+                      46,
+                      139,
+                      5,
+                      5
+                    ],
+                    "fill": "rust",
+                    "type": "ellipse"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        46,
+                        139
+                      ],
+                      [
+                        "L",
+                        59,
+                        139
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "edge",
+                      "width": 1.6
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        46,
+                        139
+                      ],
+                      [
+                        "L",
+                        33,
+                        139
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "edge",
+                      "width": 1.6
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        46,
+                        139
+                      ],
+                      [
+                        "L",
+                        46,
+                        153
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "edge",
+                      "width": 1.6
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        46,
+                        139
+                      ],
+                      [
+                        "L",
+                        46,
+                        125
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "edge",
+                      "width": 1.6
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "ellipse": [
+                      151,
+                      139,
+                      24,
+                      25
+                    ],
+                    "fill": "rubber",
+                    "stroke": {
+                      "paint": "shadow",
+                      "width": 1
+                    },
+                    "type": "ellipse"
+                  },
+                  {
+                    "ellipse": [
+                      151,
+                      139,
+                      16,
+                      17
+                    ],
+                    "fill": "steel",
+                    "stroke": {
+                      "paint": "edge",
+                      "width": 1
+                    },
+                    "type": "ellipse"
+                  },
+                  {
+                    "ellipse": [
+                      151,
+                      139,
+                      5,
+                      5
+                    ],
+                    "fill": "rust",
+                    "type": "ellipse"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        151,
+                        139
+                      ],
+                      [
+                        "L",
+                        164,
+                        139
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "edge",
+                      "width": 1.6
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        151,
+                        139
+                      ],
+                      [
+                        "L",
+                        138,
+                        139
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "edge",
+                      "width": 1.6
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        151,
+                        139
+                      ],
+                      [
+                        "L",
+                        151,
+                        153
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "edge",
+                      "width": 1.6
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        151,
+                        139
+                      ],
+                      [
+                        "L",
+                        151,
+                        125
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "edge",
+                      "width": 1.6
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "fill": "light",
+                    "points": [
+                      [
+                        30,
+                        120
+                      ],
+                      [
+                        151,
+                        120
+                      ],
+                      [
+                        175,
+                        102
+                      ],
+                      [
+                        56,
+                        102
+                      ]
+                    ],
+                    "type": "polygon"
+                  },
+                  {
+                    "fill": "wood",
+                    "points": [
+                      [
+                        30,
+                        120
+                      ],
+                      [
+                        151,
+                        120
+                      ],
+                      [
+                        151,
+                        130
+                      ],
+                      [
+                        30,
+                        130
+                      ]
+                    ],
+                    "type": "polygon"
+                  },
+                  {
+                    "fill": "shadow",
+                    "points": [
+                      [
+                        151,
+                        120
+                      ],
+                      [
+                        175,
+                        102
+                      ],
+                      [
+                        175,
+                        115
+                      ],
+                      [
+                        151,
+                        130
+                      ]
+                    ],
+                    "type": "polygon"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        41,
+                        121
+                      ],
+                      [
+                        "L",
+                        42,
+                        139
+                      ],
+                      [
+                        "L",
+                        153,
+                        139
+                      ],
+                      [
+                        "L",
+                        153,
+                        118
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "steel",
+                      "width": 4
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "fill": {
+                      "linear": [
+                        0,
+                        25,
+                        0,
+                        105
+                      ],
+                      "stops": [
+                        [
+                          0,
+                          "water"
+                        ],
+                        [
+                          1,
+                          "steel"
+                        ]
+                      ]
+                    },
+                    "points": [
+                      [
+                        50,
+                        102
+                      ],
+                      [
+                        50,
+                        41
+                      ],
+                      [
+                        69,
+                        25
+                      ],
+                      [
+                        157,
+                        25
+                      ],
+                      [
+                        157,
+                        90
+                      ],
+                      [
+                        137,
+                        105
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "shadow",
+                      "width": 1
+                    },
+                    "type": "polygon"
+                  },
+                  {
+                    "fill": "glass",
+                    "points": [
+                      [
+                        137,
+                        105
+                      ],
+                      [
+                        157,
+                        90
+                      ],
+                      [
+                        157,
+                        25
+                      ],
+                      [
+                        137,
+                        40
+                      ]
+                    ],
+                    "type": "polygon"
+                  },
+                  {
+                    "fill": "edge",
+                    "points": [
+                      [
+                        50,
+                        41
+                      ],
+                      [
+                        69,
+                        25
+                      ],
+                      [
+                        157,
+                        25
+                      ],
+                      [
+                        137,
+                        41
+                      ]
+                    ],
+                    "type": "polygon"
+                  },
+                  {
+                    "fill": "cloth",
+                    "rect": [
+                      83,
+                      34,
+                      15,
+                      70
+                    ],
+                    "type": "rect"
+                  },
+                  {
+                    "fill": "cloth",
+                    "rect": [
+                      124,
+                      29,
+                      12,
+                      74
+                    ],
+                    "type": "rect"
+                  },
+                  {
+                    "fill": "rust",
+                    "rect": [
+                      88,
+                      43,
+                      5,
+                      12
+                    ],
+                    "type": "rect"
+                  },
+                  {
+                    "fill": "rust",
+                    "rect": [
+                      127,
+                      38,
+                      5,
+                      12
+                    ],
+                    "type": "rect"
+                  },
+                  {
+                    "ellipse": [
+                      108,
+                      29,
+                      12,
+                      4
+                    ],
+                    "fill": "shadow",
+                    "type": "ellipse"
+                  },
+                  {
+                    "ellipse": [
+                      108,
+                      27,
+                      10,
+                      3
+                    ],
+                    "fill": "steel",
+                    "type": "ellipse"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        151,
+                        92
+                      ],
+                      [
+                        "L",
+                        167,
+                        92
+                      ],
+                      [
+                        "L",
+                        167,
+                        104
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "rust",
+                      "width": 3
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        163,
+                        97
+                      ],
+                      [
+                        "L",
+                        172,
+                        97
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "edge",
+                      "width": 2
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        30,
+                        120
+                      ],
+                      [
+                        "C",
+                        16,
+                        105,
+                        18,
+                        78,
+                        8,
+                        66
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "steel",
+                      "width": 4
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        5,
+                        65
+                      ],
+                      [
+                        "L",
+                        20,
+                        65
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "wood",
+                      "width": 6
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        60,
+                        64
+                      ],
+                      [
+                        "L",
+                        75,
+                        64
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "edge",
+                      "width": 1
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        60,
+                        75
+                      ],
+                      [
+                        "L",
+                        75,
+                        75
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "edge",
+                      "width": 1
+                    },
+                    "type": "path"
+                  }
+                ],
+                "size": [
+                  200,
+                  174
+                ]
+              },
+              {
+                "anchors": {
+                  "center": [
+                    112.0,
+                    152.0
+                  ],
+                  "origin": [
+                    112.0,
+                    299
+                  ]
+                },
+                "id": "watchtower",
+                "shapes": [
+                  {
+                    "ellipse": [
+                      115,
+                      292,
+                      93,
+                      5
+                    ],
+                    "fill": "shadow",
+                    "type": "ellipse"
+                  },
+                  {
+                    "fill": "wood",
+                    "points": [
+                      [
+                        48,
+                        285
+                      ],
+                      [
+                        56,
+                        285
+                      ],
+                      [
+                        60,
+                        146
+                      ],
+                      [
+                        50,
+                        146
+                      ]
+                    ],
+                    "type": "polygon"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        51,
+                        281
+                      ],
+                      [
+                        "L",
+                        55,
+                        150
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "light",
+                      "width": 1.5
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "fill": "wood",
+                    "points": [
+                      [
+                        149,
+                        285
+                      ],
+                      [
+                        157,
+                        285
+                      ],
+                      [
+                        161,
+                        146
+                      ],
+                      [
+                        151,
+                        146
+                      ]
+                    ],
+                    "type": "polygon"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        152,
+                        281
+                      ],
+                      [
+                        "L",
+                        156,
+                        150
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "light",
+                      "width": 1.5
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        54,
+                        260
+                      ],
+                      [
+                        "L",
+                        154,
+                        176
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "wood",
+                      "width": 6
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        55,
+                        179
+                      ],
+                      [
+                        "L",
+                        150,
+                        260
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "wood",
+                      "width": 6
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "fill": "light",
+                    "points": [
+                      [
+                        29,
+                        139
+                      ],
+                      [
+                        155,
+                        139
+                      ],
+                      [
+                        184,
+                        120
+                      ],
+                      [
+                        58,
+                        120
+                      ]
+                    ],
+                    "type": "polygon"
+                  },
+                  {
+                    "fill": "wood",
+                    "points": [
+                      [
+                        29,
+                        139
+                      ],
+                      [
+                        155,
+                        139
+                      ],
+                      [
+                        155,
+                        150
+                      ],
+                      [
+                        29,
+                        150
+                      ]
+                    ],
+                    "type": "polygon"
+                  },
+                  {
+                    "fill": "shadow",
+                    "points": [
+                      [
+                        155,
+                        139
+                      ],
+                      [
+                        184,
+                        120
+                      ],
+                      [
+                        184,
+                        134
+                      ],
+                      [
+                        155,
+                        150
+                      ]
+                    ],
+                    "type": "polygon"
+                  },
+                  {
+                    "shapes": [
+                      {
+                        "fill": {
+                          "linear": [
+                            0,
+                            39,
+                            0,
+                            106
+                          ],
+                          "stops": [
+                            [
+                              0,
+                              "light"
+                            ],
+                            [
+                              1,
+                              "wood"
+                            ]
+                          ]
+                        },
+                        "rect": [
+                          5,
+                          39,
+                          118,
+                          67
+                        ],
+                        "stroke": {
+                          "paint": "shadow",
+                          "width": 1
+                        },
+                        "type": "rect"
+                      },
+                      {
+                        "fill": "shadow",
+                        "points": [
+                          [
+                            123,
+                            106
+                          ],
+                          [
+                            150,
+                            91
+                          ],
+                          [
+                            150,
+                            20
+                          ],
+                          [
+                            123,
+                            39
+                          ]
+                        ],
+                        "type": "polygon"
+                      },
+                      {
+                        "fill": "shadow",
+                        "points": [
+                          [
+                            0,
+                            38
+                          ],
+                          [
+                            44,
+                            3
+                          ],
+                          [
+                            152,
+                            15
+                          ],
+                          [
+                            123,
+                            38
+                          ]
+                        ],
+                        "type": "polygon"
+                      },
+                      {
+                        "fill": "rust",
+                        "points": [
+                          [
+                            44,
+                            3
+                          ],
+                          [
+                            50,
+                            3
+                          ],
+                          [
+                            123,
+                            32
+                          ],
+                          [
+                            121,
+                            38
+                          ]
+                        ],
+                        "type": "polygon"
+                      },
+                      {
+                        "fill": "glass",
+                        "rect": [
+                          17,
+                          54,
+                          40,
+                          27
+                        ],
+                        "type": "rect"
+                      },
+                      {
+                        "fill": "black",
+                        "rect": [
+                          76,
+                          54,
+                          30,
+                          27
+                        ],
+                        "type": "rect"
+                      },
+                      {
+                        "path": [
+                          [
+                            "M",
+                            15,
+                            54
+                          ],
+                          [
+                            "L",
+                            59,
+                            54
+                          ],
+                          [
+                            "L",
+                            59,
+                            83
+                          ]
+                        ],
+                        "stroke": {
+                          "paint": "edge",
+                          "width": 1.5
+                        },
+                        "type": "path"
+                      },
+                      {
+                        "path": [
+                          [
+                            "M",
+                            78,
+                            55
+                          ],
+                          [
+                            "L",
+                            101,
+                            81
+                          ]
+                        ],
+                        "stroke": {
+                          "paint": "wood",
+                          "width": 3
+                        },
+                        "type": "path"
+                      },
+                      {
+                        "fill": "shadow",
+                        "points": [
+                          [
+                            109,
+                            45
+                          ],
+                          [
+                            114,
+                            42
+                          ],
+                          [
+                            118,
+                            59
+                          ],
+                          [
+                            115,
+                            69
+                          ],
+                          [
+                            122,
+                            82
+                          ],
+                          [
+                            110,
+                            77
+                          ]
+                        ],
+                        "type": "polygon"
+                      }
+                    ],
+                    "transform": {
+                      "rotation_degrees": 0,
+                      "scale": 1,
+                      "x": 30,
+                      "y": 30
+                    },
+                    "type": "group"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        36,
+                        136
+                      ],
+                      [
+                        "L",
+                        36,
+                        108
+                      ],
+                      [
+                        "L",
+                        143,
+                        108
+                      ],
+                      [
+                        "L",
+                        143,
+                        137
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "wood",
+                      "width": 4
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        181,
+                        121
+                      ],
+                      [
+                        "L",
+                        181,
+                        93
+                      ],
+                      [
+                        "L",
+                        153,
+                        109
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "wood",
+                      "width": 3
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        70,
+                        285
+                      ],
+                      [
+                        "L",
+                        100,
+                        151
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "steel",
+                      "width": 3
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        93,
+                        285
+                      ],
+                      [
+                        "L",
+                        122,
+                        151
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "steel",
+                      "width": 3
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        74,
+                        272
+                      ],
+                      [
+                        "L",
+                        95,
+                        272
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "edge",
+                      "width": 2
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        77,
+                        259
+                      ],
+                      [
+                        "L",
+                        98,
+                        259
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "edge",
+                      "width": 2
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        80,
+                        246
+                      ],
+                      [
+                        "L",
+                        101,
+                        246
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "edge",
+                      "width": 2
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        83,
+                        233
+                      ],
+                      [
+                        "L",
+                        104,
+                        233
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "edge",
+                      "width": 2
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        86,
+                        220
+                      ],
+                      [
+                        "L",
+                        107,
+                        220
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "edge",
+                      "width": 2
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        89,
+                        207
+                      ],
+                      [
+                        "L",
+                        110,
+                        207
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "edge",
+                      "width": 2
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        92,
+                        194
+                      ],
+                      [
+                        "L",
+                        113,
+                        194
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "edge",
+                      "width": 2
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        95,
+                        181
+                      ],
+                      [
+                        "L",
+                        116,
+                        181
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "edge",
+                      "width": 2
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        98,
+                        168
+                      ],
+                      [
+                        "L",
+                        119,
+                        168
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "edge",
+                      "width": 2
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        48,
+                        112
+                      ],
+                      [
+                        "L",
+                        48,
+                        134
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "wood",
+                      "width": 2
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        70,
+                        112
+                      ],
+                      [
+                        "L",
+                        70,
+                        134
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "wood",
+                      "width": 2
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        92,
+                        112
+                      ],
+                      [
+                        "L",
+                        92,
+                        134
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "wood",
+                      "width": 2
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        114,
+                        112
+                      ],
+                      [
+                        "L",
+                        114,
+                        134
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "wood",
+                      "width": 2
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        136,
+                        112
+                      ],
+                      [
+                        "L",
+                        136,
+                        134
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "wood",
+                      "width": 2
+                    },
+                    "type": "path"
+                  }
+                ],
+                "size": [
+                  224,
+                  304
+                ]
+              },
+              {
+                "anchors": {
+                  "center": [
+                    88.0,
+                    76.0
+                  ],
+                  "origin": [
+                    88.0,
+                    147
+                  ]
+                },
+                "id": "field_radio",
+                "shapes": [
+                  {
+                    "ellipse": [
+                      94,
+                      142,
+                      81,
+                      6
+                    ],
+                    "fill": "shadow",
+                    "type": "ellipse"
+                  },
+                  {
+                    "fill": "shadow",
+                    "points": [
+                      [
+                        29,
+                        130
+                      ],
+                      [
+                        128,
+                        130
+                      ],
+                      [
+                        155,
+                        112
+                      ],
+                      [
+                        155,
+                        46
+                      ],
+                      [
+                        128,
+                        63
+                      ],
+                      [
+                        29,
+                        63
+                      ]
+                    ],
+                    "type": "polygon"
+                  },
+                  {
+                    "fill": {
+                      "linear": [
+                        0,
+                        63,
+                        0,
+                        130
+                      ],
+                      "stops": [
+                        [
+                          0,
+                          "steel"
+                        ],
+                        [
+                          1,
+                          "shadow"
+                        ]
+                      ]
+                    },
+                    "rect": [
+                      29,
+                      63,
+                      99,
+                      67
+                    ],
+                    "stroke": {
+                      "paint": "edge",
+                      "width": 1
+                    },
+                    "type": "rect"
+                  },
+                  {
+                    "fill": "steel",
+                    "points": [
+                      [
+                        29,
+                        63
+                      ],
+                      [
+                        53,
+                        46
+                      ],
+                      [
+                        155,
+                        46
+                      ],
+                      [
+                        128,
+                        63
+                      ]
+                    ],
+                    "type": "polygon"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        45,
+                        57
+                      ],
+                      [
+                        "L",
+                        45,
+                        35
+                      ],
+                      [
+                        "L",
+                        112,
+                        35
+                      ],
+                      [
+                        "L",
+                        112,
+                        53
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "shadow",
+                      "width": 6
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "fill": "glass",
+                    "rect": [
+                      38,
+                      73,
+                      45,
+                      22
+                    ],
+                    "stroke": {
+                      "paint": "edge",
+                      "width": 1
+                    },
+                    "type": "rect"
+                  },
+                  {
+                    "fill": "amber",
+                    "rect": [
+                      42,
+                      77,
+                      37,
+                      7
+                    ],
+                    "type": "rect"
+                  },
+                  {
+                    "ellipse": [
+                      103,
+                      84,
+                      11,
+                      11
+                    ],
+                    "fill": "black",
+                    "stroke": {
+                      "paint": "edge",
+                      "width": 1
+                    },
+                    "type": "ellipse"
+                  },
+                  {
+                    "ellipse": [
+                      103,
+                      84,
+                      4,
+                      4
+                    ],
+                    "fill": "rust",
+                    "type": "ellipse"
+                  },
+                  {
+                    "fill": "shadow",
+                    "rect": [
+                      38,
+                      103,
+                      77,
+                      17
+                    ],
+                    "type": "rect"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        43,
+                        107
+                      ],
+                      [
+                        "L",
+                        43,
+                        117
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "steel",
+                      "width": 2
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        53,
+                        107
+                      ],
+                      [
+                        "L",
+                        53,
+                        117
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "steel",
+                      "width": 2
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        63,
+                        107
+                      ],
+                      [
+                        "L",
+                        63,
+                        117
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "steel",
+                      "width": 2
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        73,
+                        107
+                      ],
+                      [
+                        "L",
+                        73,
+                        117
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "steel",
+                      "width": 2
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        83,
+                        107
+                      ],
+                      [
+                        "L",
+                        83,
+                        117
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "steel",
+                      "width": 2
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        93,
+                        107
+                      ],
+                      [
+                        "L",
+                        93,
+                        117
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "steel",
+                      "width": 2
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        103,
+                        107
+                      ],
+                      [
+                        "L",
+                        103,
+                        117
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "steel",
+                      "width": 2
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        140,
+                        53
+                      ],
+                      [
+                        "L",
+                        147,
+                        10
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "edge",
+                      "width": 2
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "ellipse": [
+                      147,
+                      9,
+                      2,
+                      2
+                    ],
+                    "fill": "amber",
+                    "type": "ellipse"
+                  },
+                  {
+                    "fill": "wood",
+                    "rect": [
+                      4,
+                      110,
+                      23,
+                      27
+                    ],
+                    "stroke": {
+                      "paint": "rust",
+                      "width": 1
+                    },
+                    "type": "rect"
+                  },
+                  {
+                    "fill": "rust",
+                    "rect": [
+                      8,
+                      105,
+                      5,
+                      5
+                    ],
+                    "type": "rect"
+                  },
+                  {
+                    "fill": "rust",
+                    "rect": [
+                      19,
+                      105,
+                      5,
+                      5
+                    ],
+                    "type": "rect"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        25,
+                        115
+                      ],
+                      [
+                        "C",
+                        46,
+                        106,
+                        4,
+                        87,
+                        21,
+                        79
+                      ],
+                      [
+                        "C",
+                        42,
+                        65,
+                        11,
+                        59,
+                        35,
+                        53
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "black",
+                      "width": 3
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "path": [
+                      [
+                        "M",
+                        135,
+                        114
+                      ],
+                      [
+                        "L",
+                        149,
+                        105
+                      ]
+                    ],
+                    "stroke": {
+                      "paint": "rust",
+                      "width": 2
+                    },
+                    "type": "path"
+                  },
+                  {
+                    "clip": [
+                      [
+                        "M",
+                        38,
+                        73
+                      ],
+                      [
+                        "L",
+                        83,
+                        73
+                      ],
+                      [
+                        "L",
+                        83,
+                        95
+                      ],
+                      [
+                        "L",
+                        38,
+                        95
+                      ],
+                      [
+                        "Z"
+                      ]
+                    ],
+                    "fill": "glaze",
+                    "points": [
+                      [
+                        37,
+                        73
+                      ],
+                      [
+                        62,
+                        73
+                      ],
+                      [
+                        49,
+                        94
+                      ],
+                      [
+                        37,
+                        94
+                      ]
+                    ],
+                    "type": "polygon"
+                  }
+                ],
+                "size": [
+                  176,
+                  152
+                ]
+              }
+            ],
+            "palette": {
+              "amber": "#e5b56a",
+              "black": "#0d2026",
+              "cloth": "#7e8570",
+              "edge": "#a8bab5",
+              "glass": "#263f49",
+              "glaze": "#e5cf9b35",
+              "light": "#cab08a",
+              "rubber": "#223239",
+              "rust": "#a36f48",
+              "shadow": "#142c32",
+              "steel": "#566c70",
+              "water": "#77999b",
+              "wood": "#79654d"
+            },
+            "schema_version": "geometry-0.1"
+          },
+          "instances": [
+            {
+              "anchor": "origin",
+              "asset": "watchtower",
+              "id": "checkpoint",
+              "order": 20,
+              "parent": "layer_objects",
+              "transform": {
+                "rotation_degrees": 0,
+                "scale": 0.63,
+                "x": 315,
+                "y": 476
+              },
+              "visible": true
+            },
+            {
+              "anchor": "origin",
+              "asset": "water_cart",
+              "id": "supply",
+              "order": 20,
+              "parent": "layer_objects",
+              "transform": {
+                "rotation_degrees": 0,
+                "scale": 0.55,
+                "x": 80,
+                "y": 548
+              },
+              "visible": true
+            },
+            {
+              "anchor": "origin",
+              "asset": "field_radio",
+              "id": "receiver",
+              "order": 20,
+              "parent": "layer_objects",
+              "transform": {
+                "rotation_degrees": 0,
+                "scale": 0.4,
+                "x": 53,
+                "y": 548
+              },
+              "visible": true
+            }
+          ],
+          "schema_version": "composition-0.1",
+          "title": "Settlement Checkpoint"
+        },
+        "camera": "locked",
+        "corridor": "level_field",
+        "schema_version": "blocking-0.1",
+        "segments": [
+          {
+            "acting": "idle",
+            "destination": [
+              140,
+              550
+            ],
+            "end_frame": 6,
+            "end_speed": 0,
+            "expression": "concerned",
+            "facing": "right",
+            "id": "take_stock",
+            "mode": "idle",
+            "start_frame": 0
+          },
+          {
+            "acting": "none",
+            "destination": [
+              168.5,
+              550
+            ],
+            "end_frame": 33,
+            "end_speed": 40,
+            "expression": "concerned",
+            "facing": "right",
+            "id": "explore",
+            "mode": "walk",
+            "start_frame": 6
+          },
+          {
+            "acting": "none",
+            "destination": [
+              176.5,
+              550
+            ],
+            "end_frame": 45,
+            "end_speed": 0,
+            "expression": "concerned",
+            "facing": "right",
+            "id": "suspicion",
+            "mode": "stop",
+            "start_frame": 33
+          },
+          {
+            "acting": "react",
+            "destination": [
+              176.5,
+              550
+            ],
+            "end_frame": 60,
+            "end_speed": 0,
+            "expression": "concerned",
+            "facing": "right",
+            "id": "flinch",
+            "mode": "idle",
+            "start_frame": 45
+          },
+          {
+            "acting": "none",
+            "destination": [
+              216.5,
+              550
+            ],
+            "end_frame": 90,
+            "end_speed": 80,
+            "expression": "concerned",
+            "facing": "right",
+            "id": "break_away",
+            "mode": "run",
+            "start_frame": 60
+          }
+        ],
+        "start": {
+          "facing": "right",
+          "position": [
+            140,
+            550
+          ]
+        },
+        "support_id": "ground",
+        "title": "Abandoned Settlement"
+      },
+      "schema_version": "direction-0.1",
+      "shots": [
+        {
+          "behavior": "establishing",
+          "continuity": "matched",
+          "end_frame": 60,
+          "foreground": "clear",
+          "framing": "full",
+          "hold_in_frames": 0,
+          "hold_out_frames": 0,
+          "id": "shot_00",
+          "look_ahead_seconds": 0,
+          "offset_end": [
+            0,
+            0
+          ],
+          "offset_start": [
+            0,
+            0
+          ],
+          "safe_margin": 8,
+          "screen": [
+            180,
+            500
+          ],
+          "start_frame": 0,
+          "target": {
+            "depth": 1,
+            "kind": "point",
+            "position": [
+              180,
+              500
+            ]
+          },
+          "track": false,
+          "zoom": [
+            1.06,
+            1.06
+          ]
+        },
+        {
+          "behavior": "follow",
+          "continuity": "matched",
+          "end_frame": 90,
+          "foreground": "clear",
+          "framing": "full",
+          "hold_in_frames": 0,
+          "hold_out_frames": 0,
+          "id": "shot_01",
+          "look_ahead_seconds": 0.16,
+          "offset_end": [
+            0,
+            0
+          ],
+          "offset_start": [
+            0,
+            0
+          ],
+          "safe_margin": 8,
+          "screen": [
+            175,
+            560
+          ],
+          "start_frame": 60,
+          "target": {
+            "id": "rowan",
+            "kind": "actor"
+          },
+          "track": true,
+          "zoom": [
+            1.12,
+            1.12
+          ]
+        }
+      ],
+      "title": "Abandoned Settlement"
+    },
+    "subjects": [
+      {
+        "id": "rowan",
+        "target": {
+          "id": "rowan",
+          "kind": "actor"
+        }
+      },
+      {
+        "id": "street",
+        "target": {
+          "depth": 1,
+          "kind": "point",
+          "position": [
+            180,
+            500
+          ]
+        }
+      },
+      {
+        "id": "suspected_threat",
+        "target": {
+          "depth": 0.85,
+          "kind": "point",
+          "position": [
+            265,
+            420
+          ]
+        }
+      },
+      {
+        "id": "tower",
+        "target": {
+          "id": "checkpoint",
+          "kind": "node"
+        }
+      }
+    ]
+  }
+}

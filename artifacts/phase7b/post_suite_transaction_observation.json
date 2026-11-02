@@ -1,0 +1,30 @@
+{
+  "scope": "Read-only after full suite; no native tools, retries, deletion or reacquisition; later restoration is review failure",
+  "jobs": {
+    "abandoned_settlement": {
+      "original_success": true,
+      "original_transaction_clean": true,
+      "retired_path_present": true,
+      "path": "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7b/proofs/abandoned_settlement/.reelforge-audio-393ekt1g"
+    },
+    "signal_repeat": {
+      "original_success": true,
+      "original_transaction_clean": true,
+      "retired_path_present": true,
+      "path": "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7b/proofs/signal_repeat/.reelforge-audio-rm_6uqnh"
+    },
+    "silent_signal": {
+      "original_success": true,
+      "original_transaction_clean": true,
+      "retired_path_present": true,
+      "path": "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7b/proofs/silent_signal/.reelforge-audio-itmcfvzg"
+    },
+    "shelter_entrance": {
+      "original_success": true,
+      "original_transaction_clean": true,
+      "retired_path_present": true,
+      "path": "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7b/proofs/shelter_entrance/.reelforge-audio-rj2lpjb1"
+    }
+  },
+  "persistent_cleanup_review_passed": false
+}

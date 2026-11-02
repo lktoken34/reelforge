@@ -1,0 +1,17 @@
+{
+  "command": [
+    "cc",
+    "-std=c11",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "tools/native_directory_guard.c",
+    "-o",
+    "outputs/phase7b1-native-directory-guard"
+  ],
+  "compiler": "cc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
+  "source_sha256": "2823eac5e8be4a0db24fab669695ad386d2712ca4be84ccc00939155afa731d9",
+  "binary_sha256": "e32f6fdb9bee00b6648b80ec750cd22a90b41dffb297e6f88362329fb576ea51",
+  "production_runtime_uses_guard": false
+}

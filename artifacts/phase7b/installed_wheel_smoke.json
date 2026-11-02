@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "installed_module": "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b-wheel-smoke/lib/python3.12/site-packages/reelforge/reels/contract.py",
+  "cwd": "/tmp",
+  "PATH": "empty",
+  "cairo_available": false,
+  "ffmpeg_available": false,
+  "frame_inspections": 270,
+  "schema_examples": 3,
+  "native_modules_imported_by_planning": false
+}

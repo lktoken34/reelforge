@@ -116,6 +116,7 @@ class FFmpegEncoder:
         cancelled: threading.Event | None = None,
         ffmpeg: str = "ffmpeg",
         overwrite: bool = False,
+        staging_directory: Path | None = None,
     ):
         if (
             type(width) is not int
@@ -137,6 +138,7 @@ class FFmpegEncoder:
         self.returncode: int | None = None
         self.frames_written = 0
         self.command: list[str] = []
+        self.staging_directory = staging_directory
         self._temporary: OwnedDirectory | None = None
         self._transaction: OwnedDirectory | None = None
         self._reader: threading.Thread | None = None
@@ -183,11 +185,24 @@ class FFmpegEncoder:
                 raise VideoError("OUTPUT_EXISTS", "Output exists; explicit overwrite is required")
             if not self.output.parent.is_dir():
                 raise VideoError("OUTPUT_DIRECTORY", "Create the output directory before encoding")
-            self._temporary = OwnedDirectory(
-                self.output.parent, ".reelforge-encode-", files=frozenset({"pending.mp4"})
-            )
-            self._transaction = self._temporary
-            self._pending = self._temporary.path / "pending.mp4"
+            if self.staging_directory is None:
+                self._temporary = OwnedDirectory(
+                    self.output.parent, ".reelforge-encode-", files=frozenset({"pending.mp4"})
+                )
+                self._transaction = self._temporary
+                self._pending = self._temporary.path / "pending.mp4"
+            else:
+                stage = self.staging_directory
+                if (
+                    stage.is_symlink()
+                    or not stage.is_dir()
+                    or any(stage.iterdir())
+                    or stage.parent.resolve() != self.output.parent.parent.resolve()
+                ):
+                    raise VideoError(
+                        "ENCODER_STAGING", "Borrow an empty sibling stage in the job root"
+                    )
+                self._pending = stage / "pending.mp4"
             self.command = encoder_command(
                 executable, self.width, self.height, self.frames, self._pending
             )

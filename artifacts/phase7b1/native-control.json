@@ -1,0 +1,2523 @@
+{
+  "probe_version": 1,
+  "mode": "engine-independent control",
+  "reelforge_modules_loaded": [],
+  "identity": {
+    "pid": 24,
+    "ppid": 2,
+    "pgid": 1,
+    "procfs_self": "4593",
+    "nspid": "NSpid:\t4593\t24",
+    "pid_ns": "pid:[4026532277]",
+    "mount_ns": "mnt:[4026532275]"
+  },
+  "probe_root": "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-native-control",
+  "events": [
+    {
+      "event": "initial",
+      "phase": "initial",
+      "monotonic_ns": 3515239412662,
+      "wall_ns": 1793643968880458506,
+      "identity": {
+        "pid": 24,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "4593",
+        "nspid": "NSpid:\t4593\t24",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228234\n"
+      }
+    },
+    {
+      "event": "python_mutation_audit",
+      "phase": "initial",
+      "monotonic_ns": 3515239525253,
+      "wall_ns": 1793643968880570716,
+      "operation": "os.mkdir",
+      "arguments": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-native-control/retired-canary-suk311g3"
+      ]
+    },
+    {
+      "event": "inotify",
+      "phase": "initial",
+      "monotonic_ns": 3515239729538,
+      "wall_ns": 1793643968880775062,
+      "watch": 1,
+      "mask": 1073742080,
+      "cookie": 0,
+      "name": "retired-canary-suk311g3",
+      "timestamp_scope": "Userspace drain time, writer PID unavailable"
+    },
+    {
+      "event": "inotify",
+      "phase": "native_named_output_before_spawn",
+      "monotonic_ns": 3515239898585,
+      "wall_ns": 1793643968880943978,
+      "watch": 1,
+      "mask": 1073741856,
+      "cookie": 0,
+      "name": "retired-canary-suk311g3",
+      "timestamp_scope": "Userspace drain time, writer PID unavailable"
+    },
+    {
+      "event": "snapshot",
+      "phase": "native_named_output_before_spawn",
+      "monotonic_ns": 3515240526120,
+      "wall_ns": 1793643968881571624,
+      "label": "native_named_output_before_spawn",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793643968875556182,
+        "ctime_ns": 1793643968875556182
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793643968875556182,
+        "ctime_ns": 1793643968875556182
+      },
+      "paths": {
+        "retired-canary-suk311g3": {
+          "original": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968875556182,
+            "ctime_ns": 1793643968875556182
+          },
+          "retired": false,
+          "path": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968875556182,
+            "ctime_ns": 1793643968875556182
+          },
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968875556182,
+            "ctime_ns": 1793643968875556182
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228234\n"
+      }
+    },
+    {
+      "event": "python_spawn_audit",
+      "phase": "native_named_output",
+      "monotonic_ns": 3515240645371,
+      "wall_ns": 1793643968881690785,
+      "executable": "ffmpeg",
+      "argv": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-filter_threads",
+        "1",
+        "-f",
+        "lavfi",
+        "-i",
+        "sine=frequency=440:sample_rate=48000",
+        "-t",
+        "0.01",
+        "-c:a",
+        "pcm_s16le",
+        "-threads:a",
+        "1",
+        "-n",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-native-control/retired-canary-suk311g3/native.wav"
+      ]
+    },
+    {
+      "event": "popen_return",
+      "phase": "native_named_output",
+      "monotonic_ns": 3515241208390,
+      "wall_ns": 1793643968882253874,
+      "label": "native_named_output",
+      "pid": 26,
+      "pgid": 26,
+      "parent_identity": {
+        "pid": 24,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "4593",
+        "nspid": "NSpid:\t4593\t24",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-filter_threads",
+        "1",
+        "-f",
+        "lavfi",
+        "-i",
+        "sine=frequency=440:sample_rate=48000",
+        "-t",
+        "0.01",
+        "-c:a",
+        "pcm_s16le",
+        "-threads:a",
+        "1",
+        "-n",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-native-control/retired-canary-suk311g3/native.wav"
+      ]
+    },
+    {
+      "event": "snapshot",
+      "phase": "native_named_output_after_popen_return",
+      "monotonic_ns": 3515242097058,
+      "wall_ns": 1793643968883142531,
+      "label": "native_named_output_after_popen_return",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793643968875556182,
+        "ctime_ns": 1793643968875556182
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793643968875556182,
+        "ctime_ns": 1793643968875556182
+      },
+      "paths": {
+        "retired-canary-suk311g3": {
+          "original": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968875556182,
+            "ctime_ns": 1793643968875556182
+          },
+          "retired": false,
+          "path": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968875556182,
+            "ctime_ns": 1793643968875556182
+          },
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968875556182,
+            "ctime_ns": 1793643968875556182
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228234\n"
+      }
+    },
+    {
+      "event": "child_reaped",
+      "phase": "native_named_output_after_popen_return",
+      "monotonic_ns": 3515300569189,
+      "wall_ns": 1793643968941615213,
+      "label": "native_named_output",
+      "pid": 26,
+      "returncode": 0,
+      "waitpid_reports_no_child": true,
+      "process_group_absent": true,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "event": "snapshot",
+      "phase": "native_named_output_after_reaping",
+      "monotonic_ns": 3515301460921,
+      "wall_ns": 1793643968942506344,
+      "label": "native_named_output_after_reaping",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793643968875556182,
+        "ctime_ns": 1793643968875556182
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793643968875556182,
+        "ctime_ns": 1793643968875556182
+      },
+      "paths": {
+        "retired-canary-suk311g3": {
+          "original": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968875556182,
+            "ctime_ns": 1793643968875556182
+          },
+          "retired": false,
+          "path": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968935558121,
+            "ctime_ns": 1793643968935558121
+          },
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968935558121,
+            "ctime_ns": 1793643968935558121
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228234\n"
+      }
+    },
+    {
+      "event": "snapshot",
+      "phase": "native_named_probe_before_spawn",
+      "monotonic_ns": 3515302091607,
+      "wall_ns": 1793643968943137050,
+      "label": "native_named_probe_before_spawn",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793643968875556182,
+        "ctime_ns": 1793643968875556182
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793643968875556182,
+        "ctime_ns": 1793643968875556182
+      },
+      "paths": {
+        "retired-canary-suk311g3": {
+          "original": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968875556182,
+            "ctime_ns": 1793643968875556182
+          },
+          "retired": false,
+          "path": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968935558121,
+            "ctime_ns": 1793643968935558121
+          },
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968935558121,
+            "ctime_ns": 1793643968935558121
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228234\n"
+      }
+    },
+    {
+      "event": "python_spawn_audit",
+      "phase": "native_named_probe",
+      "monotonic_ns": 3515302158949,
+      "wall_ns": 1793643968943204322,
+      "executable": "ffprobe",
+      "argv": [
+        "ffprobe",
+        "-v",
+        "error",
+        "-show_entries",
+        "format=duration",
+        "-of",
+        "json",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-native-control/retired-canary-suk311g3/native.wav"
+      ]
+    },
+    {
+      "event": "popen_return",
+      "phase": "native_named_probe",
+      "monotonic_ns": 3515302689504,
+      "wall_ns": 1793643968943734937,
+      "label": "native_named_probe",
+      "pid": 39,
+      "pgid": 39,
+      "parent_identity": {
+        "pid": 24,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "4593",
+        "nspid": "NSpid:\t4593\t24",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "command": [
+        "ffprobe",
+        "-v",
+        "error",
+        "-show_entries",
+        "format=duration",
+        "-of",
+        "json",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-native-control/retired-canary-suk311g3/native.wav"
+      ]
+    },
+    {
+      "event": "snapshot",
+      "phase": "native_named_probe_after_popen_return",
+      "monotonic_ns": 3515303197404,
+      "wall_ns": 1793643968944242787,
+      "label": "native_named_probe_after_popen_return",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793643968875556182,
+        "ctime_ns": 1793643968875556182
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793643968875556182,
+        "ctime_ns": 1793643968875556182
+      },
+      "paths": {
+        "retired-canary-suk311g3": {
+          "original": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968875556182,
+            "ctime_ns": 1793643968875556182
+          },
+          "retired": false,
+          "path": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968935558121,
+            "ctime_ns": 1793643968935558121
+          },
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968935558121,
+            "ctime_ns": 1793643968935558121
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228234\n"
+      }
+    },
+    {
+      "event": "child_reaped",
+      "phase": "native_named_probe_after_popen_return",
+      "monotonic_ns": 3515364111735,
+      "wall_ns": 1793643969005157869,
+      "label": "native_named_probe",
+      "pid": 39,
+      "returncode": 0,
+      "waitpid_reports_no_child": true,
+      "process_group_absent": true,
+      "stdout": "{\n    \"format\": {\n        \"duration\": \"0.010000\"\n    }\n}\n",
+      "stderr": ""
+    },
+    {
+      "event": "snapshot",
+      "phase": "native_named_probe_after_reaping",
+      "monotonic_ns": 3515364993421,
+      "wall_ns": 1793643969006038855,
+      "label": "native_named_probe_after_reaping",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793643968875556182,
+        "ctime_ns": 1793643968875556182
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793643968875556182,
+        "ctime_ns": 1793643968875556182
+      },
+      "paths": {
+        "retired-canary-suk311g3": {
+          "original": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968875556182,
+            "ctime_ns": 1793643968875556182
+          },
+          "retired": false,
+          "path": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968935558121,
+            "ctime_ns": 1793643968935558121
+          },
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968935558121,
+            "ctime_ns": 1793643968935558121
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228234\n"
+      }
+    },
+    {
+      "event": "snapshot",
+      "phase": "canary_before_cleanup",
+      "monotonic_ns": 3515365786614,
+      "wall_ns": 1793643969006832047,
+      "label": "canary_before_cleanup",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793643968875556182,
+        "ctime_ns": 1793643968875556182
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793643968875556182,
+        "ctime_ns": 1793643968875556182
+      },
+      "paths": {
+        "retired-canary-suk311g3": {
+          "original": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968875556182,
+            "ctime_ns": 1793643968875556182
+          },
+          "retired": false,
+          "path": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968935558121,
+            "ctime_ns": 1793643968935558121
+          },
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968935558121,
+            "ctime_ns": 1793643968935558121
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228234\n"
+      }
+    },
+    {
+      "event": "python_mutation_audit",
+      "phase": "canary_before_cleanup",
+      "monotonic_ns": 3515365799814,
+      "wall_ns": 1793643969006845147,
+      "operation": "os.remove",
+      "arguments": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-native-control/retired-canary-suk311g3/marker.txt"
+      ]
+    },
+    {
+      "event": "python_mutation_audit",
+      "phase": "canary_before_cleanup",
+      "monotonic_ns": 3515365870912,
+      "wall_ns": 1793643969006916225,
+      "operation": "os.remove",
+      "arguments": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-native-control/retired-canary-suk311g3/native.wav"
+      ]
+    },
+    {
+      "event": "python_mutation_audit",
+      "phase": "canary_before_cleanup",
+      "monotonic_ns": 3515365885113,
+      "wall_ns": 1793643969006930416,
+      "operation": "os.rmdir",
+      "arguments": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-native-control/retired-canary-suk311g3"
+      ]
+    },
+    {
+      "event": "inotify",
+      "phase": "canary_after_cleanup",
+      "monotonic_ns": 3515365989873,
+      "wall_ns": 1793643969007035376,
+      "watch": 1,
+      "mask": 1073742336,
+      "cookie": 0,
+      "name": "retired-canary-suk311g3",
+      "timestamp_scope": "Userspace drain time, writer PID unavailable"
+    },
+    {
+      "event": "snapshot",
+      "phase": "canary_after_cleanup",
+      "monotonic_ns": 3515366751006,
+      "wall_ns": 1793643969007796560,
+      "label": "canary_after_cleanup",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "paths": {
+        "retired-canary-suk311g3": {
+          "original": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968875556182,
+            "ctime_ns": 1793643968875556182
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643969003560321,
+            "ctime_ns": 1793643969003560321
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228234\n"
+      }
+    },
+    {
+      "event": "snapshot",
+      "phase": "no_child_time_control",
+      "monotonic_ns": 3515468166041,
+      "wall_ns": 1793643969109212105,
+      "label": "no_child_time_control",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "paths": {
+        "retired-canary-suk311g3": {
+          "original": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968875556182,
+            "ctime_ns": 1793643968875556182
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643969003560321,
+            "ctime_ns": 1793643969003560321
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228234\n"
+      }
+    },
+    {
+      "event": "snapshot",
+      "phase": "true_noop_before_spawn",
+      "monotonic_ns": 3515468774103,
+      "wall_ns": 1793643969109819576,
+      "label": "true_noop_before_spawn",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "paths": {
+        "retired-canary-suk311g3": {
+          "original": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968875556182,
+            "ctime_ns": 1793643968875556182
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643969003560321,
+            "ctime_ns": 1793643969003560321
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228234\n"
+      }
+    },
+    {
+      "event": "python_spawn_audit",
+      "phase": "true_noop",
+      "monotonic_ns": 3515468835676,
+      "wall_ns": 1793643969109881039,
+      "executable": "/bin/true",
+      "argv": [
+        "/bin/true"
+      ]
+    },
+    {
+      "event": "popen_return",
+      "phase": "true_noop",
+      "monotonic_ns": 3515469226238,
+      "wall_ns": 1793643969110271662,
+      "label": "true_noop",
+      "pid": 40,
+      "pgid": 40,
+      "parent_identity": {
+        "pid": 24,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "4593",
+        "nspid": "NSpid:\t4593\t24",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "command": [
+        "/bin/true"
+      ]
+    },
+    {
+      "event": "snapshot",
+      "phase": "true_noop_after_popen_return",
+      "monotonic_ns": 3515469856234,
+      "wall_ns": 1793643969110901647,
+      "label": "true_noop_after_popen_return",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "paths": {
+        "retired-canary-suk311g3": {
+          "original": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968875556182,
+            "ctime_ns": 1793643968875556182
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643969003560321,
+            "ctime_ns": 1793643969003560321
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228234\n"
+      }
+    },
+    {
+      "event": "child_reaped",
+      "phase": "true_noop_after_popen_return",
+      "monotonic_ns": 3515470631880,
+      "wall_ns": 1793643969111677313,
+      "label": "true_noop",
+      "pid": 40,
+      "returncode": 0,
+      "waitpid_reports_no_child": true,
+      "process_group_absent": true,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "event": "snapshot",
+      "phase": "true_noop_after_reaping",
+      "monotonic_ns": 3515471309287,
+      "wall_ns": 1793643969112354720,
+      "label": "true_noop_after_reaping",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "paths": {
+        "retired-canary-suk311g3": {
+          "original": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968875556182,
+            "ctime_ns": 1793643968875556182
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643969003560321,
+            "ctime_ns": 1793643969003560321
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228234\n"
+      }
+    },
+    {
+      "event": "snapshot",
+      "phase": "python_noop_before_spawn",
+      "monotonic_ns": 3515471897318,
+      "wall_ns": 1793643969112942722,
+      "label": "python_noop_before_spawn",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "paths": {
+        "retired-canary-suk311g3": {
+          "original": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968875556182,
+            "ctime_ns": 1793643968875556182
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643969003560321,
+            "ctime_ns": 1793643969003560321
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228234\n"
+      }
+    },
+    {
+      "event": "python_spawn_audit",
+      "phase": "python_noop",
+      "monotonic_ns": 3515471939282,
+      "wall_ns": 1793643969112984635,
+      "executable": "/workspace/scratch/ade48aa5d272/reelforge-phase6b/.venv/bin/python",
+      "argv": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/.venv/bin/python",
+        "-I",
+        "-S",
+        "-c",
+        "import os,time;print(\"child_pid\",os.getpid());time.sleep(.03)"
+      ]
+    },
+    {
+      "event": "popen_return",
+      "phase": "python_noop",
+      "monotonic_ns": 3515472728378,
+      "wall_ns": 1793643969113773822,
+      "label": "python_noop",
+      "pid": 41,
+      "pgid": 41,
+      "parent_identity": {
+        "pid": 24,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "4593",
+        "nspid": "NSpid:\t4593\t24",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "command": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/.venv/bin/python",
+        "-I",
+        "-S",
+        "-c",
+        "import os,time;print(\"child_pid\",os.getpid());time.sleep(.03)"
+      ]
+    },
+    {
+      "event": "snapshot",
+      "phase": "python_noop_after_popen_return",
+      "monotonic_ns": 3515473332755,
+      "wall_ns": 1793643969114378158,
+      "label": "python_noop_after_popen_return",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "paths": {
+        "retired-canary-suk311g3": {
+          "original": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968875556182,
+            "ctime_ns": 1793643968875556182
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643969003560321,
+            "ctime_ns": 1793643969003560321
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228234\n"
+      }
+    },
+    {
+      "event": "child_reaped",
+      "phase": "python_noop_after_popen_return",
+      "monotonic_ns": 3515514454415,
+      "wall_ns": 1793643969155500439,
+      "label": "python_noop",
+      "pid": 41,
+      "returncode": 0,
+      "waitpid_reports_no_child": true,
+      "process_group_absent": true,
+      "stdout": "child_pid 41\n",
+      "stderr": ""
+    },
+    {
+      "event": "snapshot",
+      "phase": "python_noop_after_reaping",
+      "monotonic_ns": 3515515285725,
+      "wall_ns": 1793643969156331209,
+      "label": "python_noop_after_reaping",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "paths": {
+        "retired-canary-suk311g3": {
+          "original": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968875556182,
+            "ctime_ns": 1793643968875556182
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643969003560321,
+            "ctime_ns": 1793643969003560321
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228234\n"
+      }
+    },
+    {
+      "event": "snapshot",
+      "phase": "ffmpeg_version_before_spawn",
+      "monotonic_ns": 3515515960829,
+      "wall_ns": 1793643969157006272,
+      "label": "ffmpeg_version_before_spawn",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "paths": {
+        "retired-canary-suk311g3": {
+          "original": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968875556182,
+            "ctime_ns": 1793643968875556182
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643969003560321,
+            "ctime_ns": 1793643969003560321
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228234\n"
+      }
+    },
+    {
+      "event": "python_spawn_audit",
+      "phase": "ffmpeg_version",
+      "monotonic_ns": 3515516046980,
+      "wall_ns": 1793643969157092353,
+      "executable": "ffmpeg",
+      "argv": [
+        "ffmpeg",
+        "-version"
+      ]
+    },
+    {
+      "event": "popen_return",
+      "phase": "ffmpeg_version",
+      "monotonic_ns": 3515516460747,
+      "wall_ns": 1793643969157506150,
+      "label": "ffmpeg_version",
+      "pid": 42,
+      "pgid": 42,
+      "parent_identity": {
+        "pid": 24,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "4593",
+        "nspid": "NSpid:\t4593\t24",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "command": [
+        "ffmpeg",
+        "-version"
+      ]
+    },
+    {
+      "event": "snapshot",
+      "phase": "ffmpeg_version_after_popen_return",
+      "monotonic_ns": 3515517235221,
+      "wall_ns": 1793643969158280665,
+      "label": "ffmpeg_version_after_popen_return",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "paths": {
+        "retired-canary-suk311g3": {
+          "original": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968875556182,
+            "ctime_ns": 1793643968875556182
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643969003560321,
+            "ctime_ns": 1793643969003560321
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228234\n"
+      }
+    },
+    {
+      "event": "child_reaped",
+      "phase": "ffmpeg_version_after_popen_return",
+      "monotonic_ns": 3515563197140,
+      "wall_ns": 1793643969204243155,
+      "label": "ffmpeg_version",
+      "pid": 42,
+      "returncode": 0,
+      "waitpid_reports_no_child": true,
+      "process_group_absent": true,
+      "stdout": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers\nbuilt with gcc 13 (Ubuntu 13.2.0-23ubuntu3)\nconfiguration: --prefix=/usr --extra-version=3ubuntu5 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --disable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared\nlibavutil      58. 29.100 / 58. 29.100\nlibavcodec     60. 31.102 / 60. 31.102\nlibavformat    60. 16.100 / 60. 16.100\nlibavdevice    60.  3.100 / 60.  3.100\nlibavfilter     9. 12.100 /  9. 12.100\nlibswscale      7.  5.100 /  7.  5.100\nlibswresample   4. 12.100 /  4. 12.100\nlibpostproc    57.  3.100 / 57.  3.100\n",
+      "stderr": ""
+    },
+    {
+      "event": "snapshot",
+      "phase": "ffmpeg_version_after_reaping",
+      "monotonic_ns": 3515564061040,
+      "wall_ns": 1793643969205106464,
+      "label": "ffmpeg_version_after_reaping",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "paths": {
+        "retired-canary-suk311g3": {
+          "original": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968875556182,
+            "ctime_ns": 1793643968875556182
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643969003560321,
+            "ctime_ns": 1793643969003560321
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228234\n"
+      }
+    },
+    {
+      "event": "snapshot",
+      "phase": "ffmpeg_null_before_spawn",
+      "monotonic_ns": 3515564817758,
+      "wall_ns": 1793643969205863221,
+      "label": "ffmpeg_null_before_spawn",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "paths": {
+        "retired-canary-suk311g3": {
+          "original": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968875556182,
+            "ctime_ns": 1793643968875556182
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643969003560321,
+            "ctime_ns": 1793643969003560321
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228234\n"
+      }
+    },
+    {
+      "event": "python_spawn_audit",
+      "phase": "ffmpeg_null",
+      "monotonic_ns": 3515564882806,
+      "wall_ns": 1793643969205928209,
+      "executable": "ffmpeg",
+      "argv": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-filter_threads",
+        "1",
+        "-f",
+        "lavfi",
+        "-i",
+        "anullsrc=r=48000:cl=stereo",
+        "-t",
+        "0.01",
+        "-threads:a",
+        "1",
+        "-f",
+        "null",
+        "-"
+      ]
+    },
+    {
+      "event": "popen_return",
+      "phase": "ffmpeg_null",
+      "monotonic_ns": 3515565328662,
+      "wall_ns": 1793643969206374066,
+      "label": "ffmpeg_null",
+      "pid": 43,
+      "pgid": 43,
+      "parent_identity": {
+        "pid": 24,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "4593",
+        "nspid": "NSpid:\t4593\t24",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-filter_threads",
+        "1",
+        "-f",
+        "lavfi",
+        "-i",
+        "anullsrc=r=48000:cl=stereo",
+        "-t",
+        "0.01",
+        "-threads:a",
+        "1",
+        "-f",
+        "null",
+        "-"
+      ]
+    },
+    {
+      "event": "snapshot",
+      "phase": "ffmpeg_null_after_popen_return",
+      "monotonic_ns": 3515566208046,
+      "wall_ns": 1793643969207253469,
+      "label": "ffmpeg_null_after_popen_return",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "paths": {
+        "retired-canary-suk311g3": {
+          "original": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968875556182,
+            "ctime_ns": 1793643968875556182
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643969003560321,
+            "ctime_ns": 1793643969003560321
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228234\n"
+      }
+    },
+    {
+      "event": "child_reaped",
+      "phase": "ffmpeg_null_after_popen_return",
+      "monotonic_ns": 3515619581177,
+      "wall_ns": 1793643969260627171,
+      "label": "ffmpeg_null",
+      "pid": 43,
+      "returncode": 0,
+      "waitpid_reports_no_child": true,
+      "process_group_absent": true,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "event": "snapshot",
+      "phase": "ffmpeg_null_after_reaping",
+      "monotonic_ns": 3515620784796,
+      "wall_ns": 1793643969261830300,
+      "label": "ffmpeg_null_after_reaping",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "paths": {
+        "retired-canary-suk311g3": {
+          "original": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968875556182,
+            "ctime_ns": 1793643968875556182
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643969003560321,
+            "ctime_ns": 1793643969003560321
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228234\n"
+      }
+    },
+    {
+      "event": "snapshot",
+      "phase": "existing_movie_probe_before_spawn",
+      "monotonic_ns": 3515621592801,
+      "wall_ns": 1793643969262638405,
+      "label": "existing_movie_probe_before_spawn",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "paths": {
+        "retired-canary-suk311g3": {
+          "original": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968875556182,
+            "ctime_ns": 1793643968875556182
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643969003560321,
+            "ctime_ns": 1793643969003560321
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228234\n"
+      }
+    },
+    {
+      "event": "python_spawn_audit",
+      "phase": "existing_movie_probe",
+      "monotonic_ns": 3515621657710,
+      "wall_ns": 1793643969262703093,
+      "executable": "ffprobe",
+      "argv": [
+        "ffprobe",
+        "-v",
+        "error",
+        "-show_entries",
+        "format=duration",
+        "-of",
+        "json",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7b/proofs/silent_signal/reel.mp4"
+      ]
+    },
+    {
+      "event": "popen_return",
+      "phase": "existing_movie_probe",
+      "monotonic_ns": 3515622106350,
+      "wall_ns": 1793643969263151773,
+      "label": "existing_movie_probe",
+      "pid": 56,
+      "pgid": 56,
+      "parent_identity": {
+        "pid": 24,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "4593",
+        "nspid": "NSpid:\t4593\t24",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "command": [
+        "ffprobe",
+        "-v",
+        "error",
+        "-show_entries",
+        "format=duration",
+        "-of",
+        "json",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7b/proofs/silent_signal/reel.mp4"
+      ]
+    },
+    {
+      "event": "snapshot",
+      "phase": "existing_movie_probe_after_popen_return",
+      "monotonic_ns": 3515622720571,
+      "wall_ns": 1793643969263765944,
+      "label": "existing_movie_probe_after_popen_return",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "paths": {
+        "retired-canary-suk311g3": {
+          "original": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968875556182,
+            "ctime_ns": 1793643968875556182
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643969003560321,
+            "ctime_ns": 1793643969003560321
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228234\n"
+      }
+    },
+    {
+      "event": "child_reaped",
+      "phase": "existing_movie_probe_after_popen_return",
+      "monotonic_ns": 3515702695267,
+      "wall_ns": 1793643969343741381,
+      "label": "existing_movie_probe",
+      "pid": 56,
+      "returncode": 0,
+      "waitpid_reports_no_child": true,
+      "process_group_absent": true,
+      "stdout": "{\n    \"format\": {\n        \"duration\": \"3.000000\"\n    }\n}\n",
+      "stderr": ""
+    },
+    {
+      "event": "snapshot",
+      "phase": "existing_movie_probe_after_reaping",
+      "monotonic_ns": 3515703450422,
+      "wall_ns": 1793643969344495865,
+      "label": "existing_movie_probe_after_reaping",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "paths": {
+        "retired-canary-suk311g3": {
+          "original": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968875556182,
+            "ctime_ns": 1793643968875556182
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643969003560321,
+            "ctime_ns": 1793643969003560321
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228234\n"
+      }
+    },
+    {
+      "event": "snapshot",
+      "phase": "existing_movie_decode_before_spawn",
+      "monotonic_ns": 3515703983500,
+      "wall_ns": 1793643969345028924,
+      "label": "existing_movie_decode_before_spawn",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "paths": {
+        "retired-canary-suk311g3": {
+          "original": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968875556182,
+            "ctime_ns": 1793643968875556182
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643969003560321,
+            "ctime_ns": 1793643969003560321
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228234\n"
+      }
+    },
+    {
+      "event": "python_spawn_audit",
+      "phase": "existing_movie_decode",
+      "monotonic_ns": 3515704097784,
+      "wall_ns": 1793643969345143177,
+      "executable": "ffmpeg",
+      "argv": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-i",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7b/proofs/silent_signal/reel.mp4",
+        "-map",
+        "0:a:0",
+        "-vn",
+        "-threads:a",
+        "1",
+        "-t",
+        "0.01",
+        "-f",
+        "null",
+        "-"
+      ]
+    },
+    {
+      "event": "popen_return",
+      "phase": "existing_movie_decode",
+      "monotonic_ns": 3515704635679,
+      "wall_ns": 1793643969345681102,
+      "label": "existing_movie_decode",
+      "pid": 57,
+      "pgid": 57,
+      "parent_identity": {
+        "pid": 24,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "4593",
+        "nspid": "NSpid:\t4593\t24",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-i",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7b/proofs/silent_signal/reel.mp4",
+        "-map",
+        "0:a:0",
+        "-vn",
+        "-threads:a",
+        "1",
+        "-t",
+        "0.01",
+        "-f",
+        "null",
+        "-"
+      ]
+    },
+    {
+      "event": "snapshot",
+      "phase": "existing_movie_decode_after_popen_return",
+      "monotonic_ns": 3515705155808,
+      "wall_ns": 1793643969346201301,
+      "label": "existing_movie_decode_after_popen_return",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "paths": {
+        "retired-canary-suk311g3": {
+          "original": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968875556182,
+            "ctime_ns": 1793643968875556182
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643969003560321,
+            "ctime_ns": 1793643969003560321
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228234\n"
+      }
+    },
+    {
+      "event": "child_reaped",
+      "phase": "existing_movie_decode_after_popen_return",
+      "monotonic_ns": 3515770470585,
+      "wall_ns": 1793643969411516860,
+      "label": "existing_movie_decode",
+      "pid": 57,
+      "returncode": 0,
+      "waitpid_reports_no_child": true,
+      "process_group_absent": true,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "event": "snapshot",
+      "phase": "existing_movie_decode_after_reaping",
+      "monotonic_ns": 3515771216817,
+      "wall_ns": 1793643969412262200,
+      "label": "existing_movie_decode_after_reaping",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "paths": {
+        "retired-canary-suk311g3": {
+          "original": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968875556182,
+            "ctime_ns": 1793643968875556182
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643969003560321,
+            "ctime_ns": 1793643969003560321
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228234\n"
+      }
+    },
+    {
+      "event": "snapshot",
+      "phase": "final_before_observer_fd_close",
+      "monotonic_ns": 3515771942327,
+      "wall_ns": 1793643969412987770,
+      "label": "final_before_observer_fd_close",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "paths": {
+        "retired-canary-suk311g3": {
+          "original": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968875556182,
+            "ctime_ns": 1793643968875556182
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643969003560321,
+            "ctime_ns": 1793643969003560321
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228234\n"
+      }
+    },
+    {
+      "event": "snapshot",
+      "phase": "final_after_observer_fd_close",
+      "monotonic_ns": 3515772538581,
+      "wall_ns": 1793643969413583974,
+      "label": "final_after_observer_fd_close",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228234,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643969003560321,
+        "ctime_ns": 1793643969003560321
+      },
+      "paths": {
+        "retired-canary-suk311g3": {
+          "original": {
+            "dev": 27,
+            "ino": 2228235,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643968875556182,
+            "ctime_ns": 1793643968875556182
+          },
+          "retired": true,
+          "path": null
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228234\n"
+      }
+    }
+  ],
+  "complete": true,
+  "recreated_paths_never_removed": true
+}

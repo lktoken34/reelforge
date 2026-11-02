@@ -1,0 +1,18 @@
+{
+  "total": 1075,
+  "passed": 1073,
+  "new_integration_cases": 61,
+  "new_integration_failures": 0,
+  "failures": [
+    {
+      "test": "tests.test_audio::test_real_pcm_mix_aac_mux_repeat_and_clock",
+      "kind": "failure",
+      "message": "AssertionError: assert not [PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/pytest-phase7b-final/test_real_pcm_mix_aac_mux_repe0/first/.reelforge-audio-frh7q1o4')]\n +  where [PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/pytest-phase7b-final/test_real_pcm_mix_aac_mux_repe0/first/.reelforge-audio-frh7q1o4')] = list(<generator object Path.glob at 0x7fbd0e785140>)\n +    where <generator object Path.glob at 0x7fbd0e785140> = glob('.reelforge-audio-*')\n +      where glob = (PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/pytest-phase7b-final/test_real_pcm_mix_aac_mux_repe0') / 'first').glob"
+    },
+    {
+      "test": "tests.test_transaction_cleanup::test_two_audio_jobs_persistently_clean_after_native_work",
+      "kind": "failure",
+      "message": "AssertionError: assert not [PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/pytest-phase7b-final/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-89kp7bfq')]\n +  where [PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/pytest-phase7b-final/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-89kp7bfq')] = list(<generator object Path.glob at 0x7fbd0e787bc0>)\n +    where <generator object Path.glob at 0x7fbd0e787bc0> = glob('.reelforge-audio-*')\n +      where glob = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/pytest-phase7b-final/test_two_audio_jobs_persistent0/audio-0').glob"
+    }
+  ]
+}

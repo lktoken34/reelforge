@@ -1,0 +1,89 @@
+{
+  "policy": "Four preplanned jobs; final A repeat independent of earlier status; no retries",
+  "planned_jobs": [
+    [
+      "silent_signal",
+      "silent_signal"
+    ],
+    [
+      "abandoned_settlement",
+      "abandoned_settlement"
+    ],
+    [
+      "shelter_entrance",
+      "shelter_entrance"
+    ],
+    [
+      "signal_repeat",
+      "silent_signal"
+    ]
+  ],
+  "jobs": [
+    {
+      "job": "silent_signal",
+      "manifest": "silent_signal",
+      "command": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/.venv/bin/python",
+        "tools/reel.py",
+        "render",
+        "examples/reels/silent_signal.json",
+        "--output-dir",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7b/proofs/silent_signal"
+      ],
+      "exit_code": 1,
+      "wall_seconds": 0.15543376599998737,
+      "stdout": "{\"ok\": false, \"error\": {\"code\": \"REEL_RUNTIME\", \"message\": \"[Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7b/proofs'\"}}\n",
+      "stderr": ""
+    },
+    {
+      "job": "abandoned_settlement",
+      "manifest": "abandoned_settlement",
+      "command": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/.venv/bin/python",
+        "tools/reel.py",
+        "render",
+        "examples/reels/abandoned_settlement.json",
+        "--output-dir",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7b/proofs/abandoned_settlement"
+      ],
+      "exit_code": 1,
+      "wall_seconds": 0.1610949129999426,
+      "stdout": "{\"ok\": false, \"error\": {\"code\": \"REEL_RUNTIME\", \"message\": \"[Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7b/proofs'\"}}\n",
+      "stderr": ""
+    },
+    {
+      "job": "shelter_entrance",
+      "manifest": "shelter_entrance",
+      "command": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/.venv/bin/python",
+        "tools/reel.py",
+        "render",
+        "examples/reels/shelter_entrance.json",
+        "--output-dir",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7b/proofs/shelter_entrance"
+      ],
+      "exit_code": 1,
+      "wall_seconds": 0.19902527199997166,
+      "stdout": "{\"ok\": false, \"error\": {\"code\": \"REEL_RUNTIME\", \"message\": \"[Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7b/proofs'\"}}\n",
+      "stderr": ""
+    },
+    {
+      "job": "signal_repeat",
+      "manifest": "silent_signal",
+      "command": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/.venv/bin/python",
+        "tools/reel.py",
+        "render",
+        "examples/reels/silent_signal.json",
+        "--output-dir",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7b/proofs/signal_repeat"
+      ],
+      "exit_code": 1,
+      "wall_seconds": 0.19621268100001998,
+      "stdout": "{\"ok\": false, \"error\": {\"code\": \"REEL_RUNTIME\", \"message\": \"[Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7b/proofs'\"}}\n",
+      "stderr": ""
+    }
+  ],
+  "retries": 0,
+  "wall_seconds": 0.7157462080000414
+}

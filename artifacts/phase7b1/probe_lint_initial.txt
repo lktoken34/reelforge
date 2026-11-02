@@ -1,0 +1,45 @@
+E501 Line too long (103 > 100)
+  --> tools/investigate_persistence.py:76:101
+   |
+74 |                     while offset + 16 <= len(raw):
+75 |                         wd, mask, cookie, size = struct.unpack_from("iIII", raw, offset)
+76 |                         name = raw[offset+16:offset+16+size].split(b"\0",1)[0].decode(errors="replace")
+   |                                                                                                     ^^^
+77 |                         self.emit("inotify", watch=wd, mask=mask, cookie=cookie, name=name,
+78 |                                   timestamp_scope="Userspace drain time, writer PID unavailable")
+   |
+
+E501 Line too long (101 > 100)
+   --> tools/investigate_persistence.py:130:101
+    |
+128 |         name=path.name
+129 |         marker=path/'marker.txt'
+130 |         marker.write_text('retired canary; child processes receive neither this path nor contents\n')
+    |                                                                                                     ^
+131 |         fd=os.open(path,os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW | os.O_CLOEXEC)
+132 |         self.paths[name]={'original':self.stat(os.fstat(fd)),'retired':False,'observer_fd':fd}
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tools/investigate_persistence.py:153:16
+    |
+151 |             stdout,stderr=proc.communicate(timeout=10)
+152 |         except BaseException:
+153 |             try:os.killpg(pid,9)
+    |                ^
+154 |             except ProcessLookupError:pass
+155 |             proc.wait(timeout=2)
+    |
+
+E701 Multiple statements on one line (colon)
+   --> tools/investigate_persistence.py:154:38
+    |
+152 |         except BaseException:
+153 |             try:os.killpg(pid,9)
+154 |             except ProcessLookupError:pass
+    |                                      ^
+155 |             proc.wait(timeout=2)
+156 |             raise
+    |
+
+Found 5 errors (1 fixed, 4 remaining).

@@ -1,0 +1,89 @@
+E501 Line too long (103 > 100)
+  --> tools/summarize_persistence.py:36:101
+   |
+34 |                     "original_inode": state["original"], "restored_inode": state["path"],
+35 |                     "original_unlinked_inode": state.get("original_fd"),
+36 |                     "stable_parent_fd_identity": all(events[a]["parent_fd"][k] == event["parent_fd"][k]
+   |                                                                                                     ^^^
+37 |                                                        for k in ("dev", "ino")),
+38 |                     "stable_mount_view": events[a]["mounts"] == event["mounts"],
+   |
+
+E501 Line too long (101 > 100)
+  --> tools/summarize_persistence.py:44:101
+   |
+42 |                     "kernel_delete_notifications": deleting,
+43 |                     "python_mutation_events_in_window": [e for e in events[a:index+1]
+44 |                                                           if e["event"] == "python_mutation_audit"]})
+   |                                                                                                     ^
+45 |             previous[name] = (index, state["path"])
+46 |     children = next((e["processes"] for e in events if e["event"] == "all_children_final"), [])
+   |
+
+E501 Line too long (115 > 100)
+  --> tools/summarize_persistence.py:51:101
+   |
+49 |     return {"trace": str(path.relative_to(ROOT)),
+50 |             "trace_sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
+51 |             "mode_label_caveat": "Early mode field was hardcoded; module inventory determines engine independence",
+   |                                                                                                     ^^^^^^^^^^^^^^^
+52 |             "reelforge_modules_loaded": trace["reelforge_modules_loaded"],
+53 |             "identity": trace["identity"], "complete": trace["complete"],
+   |
+
+E501 Line too long (110 > 100)
+  --> tools/summarize_persistence.py:76:101
+   |
+74 |     inventories["mp4-control"] = summarize(OUT / "mp4-control/trace.json")
+75 |     for name in ("legacy-trace", "writer-trace", "confined-trace"):
+76 |         (OUT / (name+"-junit.xml")).write_bytes((ROOT / f"outputs/phase7b1-{name}/targeted.xml").read_bytes())
+   |                                                                                                     ^^^^^^^^^^
+77 |     guards = [json.loads(line) for line in (ROOT / "outputs/phase7b1-confined-trace/native_restrictions.jsonl").read_text().splitlines…
+78 |     (OUT / "native_restrictions.jsonl").write_text("".join(json.dumps(g)+"\n" for g in guards))
+   |
+
+E501 Line too long (137 > 100)
+  --> tools/summarize_persistence.py:77:101
+   |
+75 | …nfined-trace"):
+76 | …T / f"outputs/phase7b1-{name}/targeted.xml").read_bytes())
+77 | …outputs/phase7b1-confined-trace/native_restrictions.jsonl").read_text().splitlines()]
+   |                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+78 | …".join(json.dumps(g)+"\n" for g in guards))
+79 | …
+   |
+
+E501 Line too long (111 > 100)
+   --> tools/summarize_persistence.py:98:101
+    |
+ 96 |         "investigation": inventories,
+ 97 |         "confined_child_guard_verified": verified,
+ 98 |         "guard_scope": "Diagnostic child and inherited descendants only; no production or host policy changes",
+    |                                                                                                     ^^^^^^^^^^^
+ 99 |         "external_actor_isolated_from_traced_engine_processes": bool(controlled["restorations"]) and all(conditions),
+100 |         "specific_external_writer_identity": None,
+    |
+
+E501 Line too long (117 > 100)
+   --> tools/summarize_persistence.py:99:101
+    |
+ 97 |         "confined_child_guard_verified": verified,
+ 98 |         "guard_scope": "Diagnostic child and inherited descendants only; no production or host policy changes",
+ 99 |         "external_actor_isolated_from_traced_engine_processes": bool(controlled["restorations"]) and all(conditions),
+    |                                                                                                     ^^^^^^^^^^^^^^^^^
+100 |         "specific_external_writer_identity": None,
+101 |         "host_cleanup_gate": "blocked", "full_suites_run": 0,
+    |
+
+E501 Line too long (147 > 100)
+   --> tools/summarize_persistence.py:103:101
+    |
+101 | … 0,
+102 | …
+103 | …parent and its 55 confined native children; host service/mechanism remains unidentified"}
+    |                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+104 | …ine_processes"]
+105 | …umps(result, indent=2)+"\n")
+    |
+
+Found 8 errors.

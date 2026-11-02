@@ -1,0 +1,19 @@
+........................................................F.               [100%]
+=================================== FAILURES ===================================
+_________________ test_actual_audio_mix_mux_video_preservation _________________
+
+tmp_path = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/pytest-phase7b-targeted/test_actual_audio_mix_mux_vide0')
+
+    @pytest.mark.skipif(not NATIVE, reason="optional Cairo/FFmpeg")
+    def test_actual_audio_mix_mux_video_preservation(tmp_path):
+        # Reuse accepted video proof for audio integration, not an additional render.
+        source = ROOT / "artifacts/phase7a/proofs/silent_signal/scene.mp4"
+>       assert source.exists()
+E       AssertionError: assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7a/proofs/silent_signal/scene.mp4').exists
+
+tests/test_reels.py:328: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_reels.py::test_actual_audio_mix_mux_video_preservation - As...
+1 failed, 57 passed in 22.20s

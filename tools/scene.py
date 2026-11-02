@@ -46,7 +46,14 @@ def capabilities() -> dict:
 
 
 def render_scene(
-    compiled, output: Path, *, stills_only: bool = False, frame_evaluator=None, layer_evaluator=None
+    compiled,
+    output: Path,
+    *,
+    stills_only: bool = False,
+    frame_evaluator=None,
+    layer_evaluator=None,
+    encoder_staging: Path | None = None,
+    cancelled=None,
 ) -> dict:
     # Native imports occur only after native-free validation and graph compilation.
     from reelforge.media.encoder import FFmpegEncoder
@@ -80,7 +87,7 @@ def render_scene(
     maximum_paths = maximum_ops = 0
     cleanup_error = None
     verification = None
-    with JobMonitor(workspace=output) as monitor:
+    with JobMonitor(workspace=output, cancelled=cancelled) as monitor:
         if stills_only:
             for frame in (0, frames // 2, frames - 1):
                 commands = frame_evaluator(compiled, frame)
@@ -107,6 +114,7 @@ def render_scene(
                 frames=frames,
                 timeout=120,
                 cancelled=monitor.cancelled,
+                **({"staging_directory": encoder_staging} if encoder_staging else {}),
             ) as encoder:
                 monitor.encoder_pid = encoder.proc.pid
                 with renderer.surface(720, 1280) as surface:
@@ -172,6 +180,8 @@ def render_scene(
         "live_surfaces_after": renderer.active_surfaces,
         "surface_bytes_after": renderer.allocated_bytes,
     }
+    if encoder_staging is not None:
+        result["encoder_cleanup_deferred_to_job_owner"] = True
     report_file.write_text(json.dumps(result, indent=2) + "\n")
     if cleanup_error:
         raise OperationError(cleanup_error["code"], cleanup_error["message"])

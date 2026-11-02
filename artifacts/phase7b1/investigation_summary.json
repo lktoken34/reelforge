@@ -1,0 +1,4310 @@
+{
+  "base_commit": "a2587e7f42a4260aa2b5ed2941b15b05c6370d81",
+  "investigation": {
+    "control": {
+      "trace": "artifacts/phase7b1/control.json",
+      "trace_sha256": "a5e2fe693d5673d1975437e2ca6f10c2bf047af8c09b039fb08f10b2aa8149d5",
+      "mode_label_caveat": "Early mode field was hardcoded; module inventory determines engine independence",
+      "reelforge_modules_loaded": [],
+      "identity": {
+        "pid": 41,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "4528",
+        "nspid": "NSpid:\t4528\t41",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "complete": true,
+      "restorations": [],
+      "native_children": 0,
+      "all_native_children_reaped_and_groups_absent": false,
+      "native_process_records": [],
+      "test_exit_code": null,
+      "retired_paths_currently_present": {
+        "retired-canary-zer1xx81": false
+      },
+      "memory": null
+    },
+    "native-control": {
+      "trace": "artifacts/phase7b1/native-control.json",
+      "trace_sha256": "eef4d897d13507680a0e2868425c97e6822c24de9e4b2a9f074b400e0739d0c5",
+      "mode_label_caveat": "Early mode field was hardcoded; module inventory determines engine independence",
+      "reelforge_modules_loaded": [],
+      "identity": {
+        "pid": 24,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "4593",
+        "nspid": "NSpid:\t4593\t24",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "complete": true,
+      "restorations": [],
+      "native_children": 0,
+      "all_native_children_reaped_and_groups_absent": false,
+      "native_process_records": [],
+      "test_exit_code": null,
+      "retired_paths_currently_present": {
+        "retired-canary-suk311g3": false
+      },
+      "memory": null
+    },
+    "site-control": {
+      "trace": "artifacts/phase7b1/site-control.json",
+      "trace_sha256": "3b9ef5dcb966b91db0db9b540c7dee0c6d84c300dafc24c572d675b1e8cfe56c",
+      "mode_label_caveat": "Early mode field was hardcoded; module inventory determines engine independence",
+      "reelforge_modules_loaded": [],
+      "identity": {
+        "pid": 5,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "4667",
+        "nspid": "NSpid:\t4667\t5",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "complete": true,
+      "restorations": [],
+      "native_children": 0,
+      "all_native_children_reaped_and_groups_absent": false,
+      "native_process_records": [],
+      "test_exit_code": null,
+      "retired_paths_currently_present": {
+        "retired-canary-5ex8nlfl": false
+      },
+      "memory": null
+    },
+    "integrated-trace": {
+      "trace": "artifacts/phase7b1/integrated-trace.json",
+      "trace_sha256": "545e593d8452667771c71b98a5c4ab14c2de38c97a434faedb6fa3e0f1004845",
+      "mode_label_caveat": "Early mode field was hardcoded; module inventory determines engine independence",
+      "reelforge_modules_loaded": [
+        "reelforge",
+        "reelforge.audio",
+        "reelforge.core",
+        "reelforge.core.errors",
+        "reelforge.media",
+        "reelforge.core.streams",
+        "reelforge.media.process",
+        "reelforge.contracts",
+        "reelforge.contracts.project",
+        "reelforge.stories",
+        "reelforge.rendering",
+        "reelforge.rendering.model",
+        "reelforge.stories.audio_contract",
+        "reelforge.core.transaction",
+        "reelforge.audio.transaction",
+        "reelforge.audio.registry",
+        "reelforge.audio.processing",
+        "reelforge.reels",
+        "reelforge.media.verify",
+        "reelforge.resources",
+        "reelforge.resources.memory",
+        "reelforge.resources.monitor",
+        "reelforge.resources.deployment",
+        "reelforge.storyboards",
+        "reelforge.characters",
+        "reelforge.characters.rig",
+        "reelforge.characters.contact",
+        "reelforge.characters.presets",
+        "reelforge.direction",
+        "reelforge.blocking",
+        "reelforge.geometry",
+        "reelforge.procedural",
+        "reelforge.scenes",
+        "reelforge.rendering.diagnostic",
+        "reelforge.characters.secondary",
+        "reelforge.characters.rowan",
+        "reelforge.environments",
+        "reelforge.environments.artwork",
+        "reelforge.environments.polish",
+        "reelforge.scenes.transforms",
+        "reelforge.scenes.assets",
+        "reelforge.scenes.contract",
+        "reelforge.scenes.geometry",
+        "reelforge.environments.presets",
+        "reelforge.environments.scene",
+        "reelforge.scenes.graph",
+        "reelforge.procedural.contract",
+        "reelforge.procedural.planning",
+        "reelforge.procedural.drawing",
+        "reelforge.procedural.recipes",
+        "reelforge.procedural.compiler",
+        "reelforge.geometry.contract",
+        "reelforge.geometry.compiler",
+        "reelforge.geometry.composition",
+        "reelforge.blocking.timeline",
+        "reelforge.blocking.contract",
+        "reelforge.direction.contract",
+        "reelforge.characters.transition",
+        "reelforge.blocking.sampling",
+        "reelforge.direction.sampling",
+        "reelforge.storyboards.patterns",
+        "reelforge.storyboards.compiler",
+        "reelforge.reels.contract",
+        "reelforge.reels.workflow"
+      ],
+      "identity": {
+        "pid": 40,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "4791",
+        "nspid": "NSpid:\t4791\t40",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "complete": true,
+      "restorations": [],
+      "native_children": 18,
+      "all_native_children_reaped_and_groups_absent": true,
+      "native_process_records": [
+        {
+          "pid": 44,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 45,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 49,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 50,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 54,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 60,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 65,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 66,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 70,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 71,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 72,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 73,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 76,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 79,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 80,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 84,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 85,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 86,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        }
+      ],
+      "test_exit_code": null,
+      "retired_paths_currently_present": {
+        "job/.reelforge-audio-kiu79ey8": false
+      },
+      "memory": {
+        "oom_telemetry_continuous": true,
+        "memory_policy": "strict",
+        "observed_memory_sources": [
+          "guest_and_cgroup"
+        ],
+        "initial_memory": {
+          "host": {
+            "MemTotal": 10451427328,
+            "MemAvailable": 9774292992,
+            "SwapTotal": 0,
+            "SwapFree": 0
+          },
+          "cgroup_root": "/sys/fs/cgroup",
+          "cgroup": {
+            "memory.max": 8589934592,
+            "memory.current": 1951899648,
+            "memory.peak": 2034331648,
+            "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+            "memory.swap.max": "max",
+            "memory.swap.current": 0,
+            "cpu.max": "800000 100000"
+          },
+          "effective_available_bytes": 6638034944,
+          "memory_policy": "strict",
+          "fallback_enabled": false,
+          "fallback_used": false,
+          "memory_source": "guest_and_cgroup",
+          "controller_state": "observable",
+          "constraints": [
+            {
+              "path": "/sys/fs/cgroup",
+              "limit": 8589934592,
+              "usage": 1951899648
+            }
+          ],
+          "observations": {
+            "/proc/meminfo": {
+              "status": "present",
+              "value": "MemTotal:       10206472 kB\nMemFree:         8016104 kB\nMemAvailable:    9545208 kB\nBuffers:           15172 kB\nCached:          1730768 kB\nSwapCached:            0 kB\nActive:           616588 kB\nInactive:        1208520 kB\nActive(anon):         56 kB\nInactive(anon):   109028 kB\nActive(file):     616532 kB\nInactive(file):  1099492 kB\nUnevictable:       29924 kB\nMlocked:               0 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              1840 kB\nWriteback:             8 kB\nAnonPages:        108660 kB\nMapped:            71520 kB\nShmem:                12 kB\nKReclaimable:      84356 kB\nSlab:             131520 kB\nSReclaimable:      84356 kB\nSUnreclaim:        47164 kB\nKernelStack:        3444 kB\nPageTables:         3756 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     481624 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4632 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      4096 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      110592 kB\nDirectMap2M:     4440064 kB\nDirectMap1G:    16777216 kB"
+            },
+            "/proc/self/cgroup": {
+              "status": "present",
+              "value": "0::/"
+            },
+            "/proc/self/mountinfo": {
+              "status": "present",
+              "value": "93 63 0:27 / / rw,nosuid,nodev,relatime - overlay overlay rw,lowerdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/lower-0,upperdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/upper/upper,workdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/upper/work,index=off,metacopy=off\n94 93 0:30 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw\n95 94 0:31 /null /proc/keys rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n96 94 0:31 /null /proc/timer_list rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n97 94 0:30 /bus /proc/bus ro,nosuid,nodev,relatime - proc proc rw\n98 94 0:30 /fs /proc/fs ro,nosuid,nodev,relatime - proc proc rw\n99 94 0:30 /irq /proc/irq ro,nosuid,nodev,relatime - proc proc rw\n100 94 0:30 /sys /proc/sys ro,nosuid,nodev,relatime - proc proc rw\n101 93 0:31 / /dev rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n102 101 0:32 / /dev/pts rw,nosuid,nodev,noexec,relatime - devpts devpts rw,gid=5,mode=620,ptmxmode=666\n103 101 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw\n104 101 0:25 / /dev/mqueue rw,nosuid,nodev,noexec,relatime - mqueue mqueue rw\n105 93 0:20 / /sys ro,nosuid,nodev,noexec,relatime - sysfs sysfs rw\n106 105 0:24 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup2 rw,nsdelegate\n107 101 0:36 / /dev rw,nosuid,nodev,relatime - tmpfs tmpfs rw,mode=755\n108 107 0:31 /null /dev/null rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n109 107 0:31 /zero /dev/zero rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n110 107 0:31 /full /dev/full rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n111 107 0:31 /random /dev/random rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n112 107 0:31 /urandom /dev/urandom rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n113 107 0:31 /tty /dev/tty rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n114 107 0:37 / /dev/pts rw,nosuid,noexec,relatime - devpts devpts rw,mode=620,ptmxmode=666\n115 107 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw"
+            },
+            "/proc/cgroups": {
+              "status": "present",
+              "value": "#subsys_name\thierarchy\tnum_cgroups\tenabled\ncpu\t0\t4\t1\ncpuacct\t0\t4\t1\nblkio\t0\t4\t1\ndevices\t0\t4\t1\nfreezer\t0\t4\t1\nnet_cls\t0\t4\t1\nperf_event\t0\t4\t1\nnet_prio\t0\t4\t1\nhugetlb\t0\t4\t1\npids\t0\t4\t1"
+            },
+            "/sys/fs/cgroup/cgroup.controllers": {
+              "status": "present",
+              "value": "cpuset cpu io memory hugetlb pids"
+            },
+            "/sys/fs/cgroup/memory.max": {
+              "status": "present",
+              "value": "8589934592"
+            },
+            "/sys/fs/cgroup/memory.current": {
+              "status": "present",
+              "value": "1951899648"
+            },
+            "/sys/fs/cgroup/memory.peak": {
+              "status": "present",
+              "value": "2034331648"
+            },
+            "/sys/fs/cgroup/memory.events": {
+              "status": "present",
+              "value": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+            },
+            "/sys/fs/cgroup/memory.swap.max": {
+              "status": "present",
+              "value": "max"
+            },
+            "/sys/fs/cgroup/memory.swap.current": {
+              "status": "present",
+              "value": "0"
+            },
+            "/sys/fs/cgroup/cpu.max": {
+              "status": "present",
+              "value": "800000 100000"
+            }
+          },
+          "errors": [],
+          "limitations": [
+            "Visible namespaces cannot prove absence of hidden ancestor limits.",
+            "Guest availability may change suddenly with ballooning/external contention.",
+            "Software RSS/reserve monitoring is not a dedicated memory cgroup."
+          ],
+          "kernel_memory_controller": null,
+          "controller_version": "v2"
+        },
+        "final_memory": {
+          "host": {
+            "MemTotal": 10451427328,
+            "MemAvailable": 9718157312,
+            "SwapTotal": 0,
+            "SwapFree": 0
+          },
+          "cgroup_root": "/sys/fs/cgroup",
+          "cgroup": {
+            "memory.max": 8589934592,
+            "memory.current": 1957392384,
+            "memory.peak": 2034331648,
+            "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+            "memory.swap.max": "max",
+            "memory.swap.current": 0,
+            "cpu.max": "800000 100000"
+          },
+          "effective_available_bytes": 6632542208,
+          "memory_policy": "strict",
+          "fallback_enabled": false,
+          "fallback_used": false,
+          "memory_source": "guest_and_cgroup",
+          "controller_state": "observable",
+          "constraints": [
+            {
+              "path": "/sys/fs/cgroup",
+              "limit": 8589934592,
+              "usage": 1957392384
+            }
+          ],
+          "observations": {
+            "/proc/meminfo": {
+              "status": "present",
+              "value": "MemTotal:       10206472 kB\nMemFree:         7960068 kB\nMemAvailable:    9490388 kB\nBuffers:           15208 kB\nCached:          1731880 kB\nSwapCached:            0 kB\nActive:           617696 kB\nInactive:        1212336 kB\nActive(anon):         88 kB\nInactive(anon):   112764 kB\nActive(file):     617608 kB\nInactive(file):  1099572 kB\nUnevictable:       29956 kB\nMlocked:              32 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              2252 kB\nWriteback:            48 kB\nAnonPages:        112948 kB\nMapped:            71872 kB\nShmem:                12 kB\nKReclaimable:      84480 kB\nSlab:             131440 kB\nSReclaimable:      84480 kB\nSUnreclaim:        46960 kB\nKernelStack:        3248 kB\nPageTables:         3944 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     501512 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4648 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      4096 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      110592 kB\nDirectMap2M:     4440064 kB\nDirectMap1G:    16777216 kB"
+            },
+            "/proc/self/cgroup": {
+              "status": "present",
+              "value": "0::/"
+            },
+            "/proc/self/mountinfo": {
+              "status": "present",
+              "value": "93 63 0:27 / / rw,nosuid,nodev,relatime - overlay overlay rw,lowerdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/lower-0,upperdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/upper/upper,workdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/upper/work,index=off,metacopy=off\n94 93 0:30 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw\n95 94 0:31 /null /proc/keys rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n96 94 0:31 /null /proc/timer_list rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n97 94 0:30 /bus /proc/bus ro,nosuid,nodev,relatime - proc proc rw\n98 94 0:30 /fs /proc/fs ro,nosuid,nodev,relatime - proc proc rw\n99 94 0:30 /irq /proc/irq ro,nosuid,nodev,relatime - proc proc rw\n100 94 0:30 /sys /proc/sys ro,nosuid,nodev,relatime - proc proc rw\n101 93 0:31 / /dev rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n102 101 0:32 / /dev/pts rw,nosuid,nodev,noexec,relatime - devpts devpts rw,gid=5,mode=620,ptmxmode=666\n103 101 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw\n104 101 0:25 / /dev/mqueue rw,nosuid,nodev,noexec,relatime - mqueue mqueue rw\n105 93 0:20 / /sys ro,nosuid,nodev,noexec,relatime - sysfs sysfs rw\n106 105 0:24 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup2 rw,nsdelegate\n107 101 0:36 / /dev rw,nosuid,nodev,relatime - tmpfs tmpfs rw,mode=755\n108 107 0:31 /null /dev/null rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n109 107 0:31 /zero /dev/zero rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n110 107 0:31 /full /dev/full rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n111 107 0:31 /random /dev/random rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n112 107 0:31 /urandom /dev/urandom rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n113 107 0:31 /tty /dev/tty rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n114 107 0:37 / /dev/pts rw,nosuid,noexec,relatime - devpts devpts rw,mode=620,ptmxmode=666\n115 107 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw"
+            },
+            "/proc/cgroups": {
+              "status": "present",
+              "value": "#subsys_name\thierarchy\tnum_cgroups\tenabled\ncpu\t0\t4\t1\ncpuacct\t0\t4\t1\nblkio\t0\t4\t1\ndevices\t0\t4\t1\nfreezer\t0\t4\t1\nnet_cls\t0\t4\t1\nperf_event\t0\t4\t1\nnet_prio\t0\t4\t1\nhugetlb\t0\t4\t1\npids\t0\t4\t1"
+            },
+            "/sys/fs/cgroup/cgroup.controllers": {
+              "status": "present",
+              "value": "cpuset cpu io memory hugetlb pids"
+            },
+            "/sys/fs/cgroup/memory.max": {
+              "status": "present",
+              "value": "8589934592"
+            },
+            "/sys/fs/cgroup/memory.current": {
+              "status": "present",
+              "value": "1957392384"
+            },
+            "/sys/fs/cgroup/memory.peak": {
+              "status": "present",
+              "value": "2034331648"
+            },
+            "/sys/fs/cgroup/memory.events": {
+              "status": "present",
+              "value": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+            },
+            "/sys/fs/cgroup/memory.swap.max": {
+              "status": "present",
+              "value": "max"
+            },
+            "/sys/fs/cgroup/memory.swap.current": {
+              "status": "present",
+              "value": "0"
+            },
+            "/sys/fs/cgroup/cpu.max": {
+              "status": "present",
+              "value": "800000 100000"
+            }
+          },
+          "errors": [],
+          "limitations": [
+            "Visible namespaces cannot prove absence of hidden ancestor limits.",
+            "Guest availability may change suddenly with ballooning/external contention.",
+            "Software RSS/reserve monitoring is not a dedicated memory cgroup."
+          ],
+          "kernel_memory_controller": null,
+          "controller_version": "v2"
+        },
+        "initial_renderer_rss_bytes": 28573696,
+        "final_renderer_rss_bytes": 32763904,
+        "renderer_peak_rss_bytes": 32768000,
+        "waited_child_max_rss_bytes": 72544256,
+        "encoder_peak_rss_bytes": 0,
+        "all_children_peak_rss_bytes": 72892416,
+        "estimated_simultaneous_tree_peak_rss_bytes": 105406464,
+        "sampling_interval_seconds": 0.01,
+        "samples": 310,
+        "job_budget_bytes": 268435456,
+        "reserve_bytes": 67108864,
+        "limit_reason": null,
+        "minimum_effective_available_bytes": 6576267264,
+        "maximum_effective_available_bytes": 6638034944,
+        "memory_observations": 33,
+        "minimum_workspace_free_bytes": 62392766464,
+        "disk_reserve_bytes": 67108864,
+        "wall_seconds": 5.088271180999982,
+        "caveat": "Sampled sum of RSS can miss transient peaks and double-count shared pages; cgroup counters are shared, not a dedicated job limit."
+      }
+    },
+    "legacy-trace": {
+      "trace": "artifacts/phase7b1/legacy-trace.json",
+      "trace_sha256": "a5de8d868275820a6669142ec4de8aa19320e6202cb20b6519c358b032800a9b",
+      "mode_label_caveat": "Early mode field was hardcoded; module inventory determines engine independence",
+      "reelforge_modules_loaded": [
+        "reelforge",
+        "reelforge.audio",
+        "reelforge.core",
+        "reelforge.core.errors",
+        "reelforge.media",
+        "reelforge.core.streams",
+        "reelforge.media.process",
+        "reelforge.contracts",
+        "reelforge.contracts.project",
+        "reelforge.stories",
+        "reelforge.rendering",
+        "reelforge.rendering.model",
+        "reelforge.stories.audio_contract",
+        "reelforge.core.transaction",
+        "reelforge.audio.transaction",
+        "reelforge.audio.registry",
+        "reelforge.audio.processing",
+        "reelforge.reels",
+        "reelforge.media.verify",
+        "reelforge.resources",
+        "reelforge.resources.memory",
+        "reelforge.resources.monitor",
+        "reelforge.resources.deployment",
+        "reelforge.storyboards",
+        "reelforge.characters",
+        "reelforge.characters.rig",
+        "reelforge.characters.contact",
+        "reelforge.characters.presets",
+        "reelforge.direction",
+        "reelforge.blocking",
+        "reelforge.geometry",
+        "reelforge.procedural",
+        "reelforge.scenes",
+        "reelforge.rendering.diagnostic",
+        "reelforge.characters.secondary",
+        "reelforge.characters.rowan",
+        "reelforge.environments",
+        "reelforge.environments.artwork",
+        "reelforge.environments.polish",
+        "reelforge.scenes.transforms",
+        "reelforge.scenes.assets",
+        "reelforge.scenes.contract",
+        "reelforge.scenes.geometry",
+        "reelforge.environments.presets",
+        "reelforge.environments.scene",
+        "reelforge.scenes.graph",
+        "reelforge.procedural.contract",
+        "reelforge.procedural.planning",
+        "reelforge.procedural.drawing",
+        "reelforge.procedural.recipes",
+        "reelforge.procedural.compiler",
+        "reelforge.geometry.contract",
+        "reelforge.geometry.compiler",
+        "reelforge.geometry.composition",
+        "reelforge.blocking.timeline",
+        "reelforge.blocking.contract",
+        "reelforge.direction.contract",
+        "reelforge.characters.transition",
+        "reelforge.blocking.sampling",
+        "reelforge.direction.sampling",
+        "reelforge.storyboards.patterns",
+        "reelforge.storyboards.compiler",
+        "reelforge.reels.contract",
+        "reelforge.reels.workflow",
+        "reelforge.rendering.interface",
+        "reelforge.media.encoder",
+        "reelforge.stories.contract",
+        "reelforge.rendering.backends",
+        "reelforge.rendering.backends.cairo",
+        "reelforge.rendering.video_diagnostic",
+        "reelforge.stories.sampling"
+      ],
+      "identity": {
+        "pid": 40,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "5038",
+        "nspid": "NSpid:\t5038\t40",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "complete": true,
+      "restorations": [
+        {
+          "path": "pytest/audio-silent-template0/.reelforge-encode-ayee9o2x",
+          "last_absent_index": 109,
+          "first_present_index": 113,
+          "last_absent_ns": 3847605645608,
+          "first_present_ns": 3847674102709,
+          "observation_window_ms": 68.457101,
+          "original_inode": {
+            "dev": 27,
+            "ino": 2228273,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644297537213420,
+            "ctime_ns": 1793644297537213420
+          },
+          "restored_inode": {
+            "dev": 27,
+            "ino": 2228281,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644301269872525,
+            "ctime_ns": 1793644301269872525
+          },
+          "original_unlinked_inode": {
+            "dev": 27,
+            "ino": 2228273,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793644300517296939,
+            "ctime_ns": 1793644300523338435
+          },
+          "stable_parent_fd_identity": true,
+          "stable_mount_view": true,
+          "active_native_argv": [
+            "ffprobe",
+            "-v",
+            "error",
+            "-protocol_whitelist",
+            "file",
+            "-f",
+            "wav",
+            "-show_entries",
+            "stream=codec_type,codec_name,sample_rate,channels:format=format_name",
+            "-of",
+            "json",
+            "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-legacy-trace/pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-dh6z5qgl/.register-g6syihaz/input.wav"
+          ],
+          "active_native_pid": 58,
+          "kernel_create_notifications": [],
+          "kernel_delete_notifications": [],
+          "python_mutation_events_in_window": []
+        },
+        {
+          "path": "pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-dh6z5qgl",
+          "last_absent_index": 691,
+          "first_present_index": 695,
+          "last_absent_ns": 3851068974736,
+          "first_present_ns": 3851154093221,
+          "observation_window_ms": 85.118485,
+          "original_inode": {
+            "dev": 27,
+            "ino": 2228258,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644301165454958,
+            "ctime_ns": 1793644301165454958
+          },
+          "restored_inode": {
+            "dev": 27,
+            "ino": 2228306,
+            "mode": 16832,
+            "nlink": 5,
+            "size": 4096,
+            "mtime_ns": 1793644304787447001,
+            "ctime_ns": 1793644304787447001
+          },
+          "original_unlinked_inode": {
+            "dev": 27,
+            "ino": 2228258,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793644303729029862,
+            "ctime_ns": 1793644303729261452
+          },
+          "stable_parent_fd_identity": true,
+          "stable_mount_view": true,
+          "active_native_argv": [
+            "ffmpeg",
+            "-nostdin",
+            "-v",
+            "error",
+            "-xerror",
+            "-err_detect",
+            "explode",
+            "-threads",
+            "1",
+            "-protocol_whitelist",
+            "file",
+            "-f",
+            "wav",
+            "-i",
+            "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-legacy-trace/pytest/test_two_audio_jobs_persistent0/audio-1/.reelforge-audio-ca4ee19m/.register-qzcl9ugz/input.wav",
+            "-map",
+            "0:a:0",
+            "-vn",
+            "-sn",
+            "-dn",
+            "-threads:a",
+            "1",
+            "-f",
+            "null",
+            "-"
+          ],
+          "active_native_pid": 181,
+          "kernel_create_notifications": [],
+          "kernel_delete_notifications": [],
+          "python_mutation_events_in_window": []
+        }
+      ],
+      "native_children": 55,
+      "all_native_children_reaped_and_groups_absent": true,
+      "native_process_records": [
+        {
+          "pid": 44,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 45,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 50,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 51,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 55,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 57,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 58,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 59,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 63,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 64,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 68,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 69,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 73,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 74,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 78,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 79,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 83,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 84,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 88,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 96,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 101,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 102,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 106,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 107,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 108,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 109,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 112,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 115,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 116,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 120,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 154,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 155,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 156,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 160,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 161,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 165,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 166,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 170,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 171,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 175,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 176,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 180,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 181,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 185,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 193,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 198,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 199,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 203,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 204,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 205,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 206,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 209,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 212,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 213,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 217,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        }
+      ],
+      "test_exit_code": 1,
+      "retired_paths_currently_present": {
+        "pytest/audio-silent-template0/.reelforge-encode-ayee9o2x": true,
+        "pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-dh6z5qgl": true,
+        "pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-dh6z5qgl/.register-g6syihaz": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-dh6z5qgl/.register-x872ji6i": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-dh6z5qgl/.register-kxm6q4eb": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-dh6z5qgl/.register-58qtvkhx": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-dh6z5qgl/.register-agj289yj": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-dh6z5qgl/.register-yls98bt1": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-1/.reelforge-audio-ca4ee19m": true,
+        "pytest/test_two_audio_jobs_persistent0/audio-1/.reelforge-audio-ca4ee19m/.register-1h_pmz9e": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-1/.reelforge-audio-ca4ee19m/.register-fg8d8rra": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-1/.reelforge-audio-ca4ee19m/.register-90bd0pem": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-1/.reelforge-audio-ca4ee19m/.register-3e892xwq": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-1/.reelforge-audio-ca4ee19m/.register-91ux4e4x": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-1/.reelforge-audio-ca4ee19m/.register-qzcl9ugz": false
+      },
+      "memory": {
+        "oom_telemetry_continuous": true,
+        "memory_policy": "strict",
+        "observed_memory_sources": [
+          "guest_and_cgroup"
+        ],
+        "initial_memory": {
+          "host": {
+            "MemTotal": 10451427328,
+            "MemAvailable": 9766797312,
+            "SwapTotal": 0,
+            "SwapFree": 0
+          },
+          "cgroup_root": "/sys/fs/cgroup",
+          "cgroup": {
+            "memory.max": 8589934592,
+            "memory.current": 1959424000,
+            "memory.peak": 2034331648,
+            "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+            "memory.swap.max": "max",
+            "memory.swap.current": 0,
+            "cpu.max": "800000 100000"
+          },
+          "effective_available_bytes": 6630510592,
+          "memory_policy": "strict",
+          "fallback_enabled": false,
+          "fallback_used": false,
+          "memory_source": "guest_and_cgroup",
+          "controller_state": "observable",
+          "constraints": [
+            {
+              "path": "/sys/fs/cgroup",
+              "limit": 8589934592,
+              "usage": 1959424000
+            }
+          ],
+          "observations": {
+            "/proc/meminfo": {
+              "status": "present",
+              "value": "MemTotal:       10206472 kB\nMemFree:         8006552 kB\nMemAvailable:    9537888 kB\nBuffers:           15208 kB\nCached:          1732932 kB\nSwapCached:            0 kB\nActive:           619168 kB\nInactive:        1212920 kB\nActive(anon):         80 kB\nInactive(anon):   113784 kB\nActive(file):     619088 kB\nInactive(file):  1099136 kB\nUnevictable:       29940 kB\nMlocked:              16 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              1256 kB\nWriteback:             0 kB\nAnonPages:        113984 kB\nMapped:            71496 kB\nShmem:                12 kB\nKReclaimable:      84424 kB\nSlab:             138016 kB\nSReclaimable:      84424 kB\nSUnreclaim:        53592 kB\nKernelStack:        3260 kB\nPageTables:         3760 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     471692 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4616 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      4096 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      114688 kB\nDirectMap2M:     4435968 kB\nDirectMap1G:    16777216 kB"
+            },
+            "/proc/self/cgroup": {
+              "status": "present",
+              "value": "0::/"
+            },
+            "/proc/self/mountinfo": {
+              "status": "present",
+              "value": "93 63 0:27 / / rw,nosuid,nodev,relatime - overlay overlay rw,lowerdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/lower-0,upperdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/upper/upper,workdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/upper/work,index=off,metacopy=off\n94 93 0:30 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw\n95 94 0:31 /null /proc/keys rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n96 94 0:31 /null /proc/timer_list rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n97 94 0:30 /bus /proc/bus ro,nosuid,nodev,relatime - proc proc rw\n98 94 0:30 /fs /proc/fs ro,nosuid,nodev,relatime - proc proc rw\n99 94 0:30 /irq /proc/irq ro,nosuid,nodev,relatime - proc proc rw\n100 94 0:30 /sys /proc/sys ro,nosuid,nodev,relatime - proc proc rw\n101 93 0:31 / /dev rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n102 101 0:32 / /dev/pts rw,nosuid,nodev,noexec,relatime - devpts devpts rw,gid=5,mode=620,ptmxmode=666\n103 101 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw\n104 101 0:25 / /dev/mqueue rw,nosuid,nodev,noexec,relatime - mqueue mqueue rw\n105 93 0:20 / /sys ro,nosuid,nodev,noexec,relatime - sysfs sysfs rw\n106 105 0:24 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup2 rw,nsdelegate\n107 101 0:36 / /dev rw,nosuid,nodev,relatime - tmpfs tmpfs rw,mode=755\n108 107 0:31 /null /dev/null rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n109 107 0:31 /zero /dev/zero rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n110 107 0:31 /full /dev/full rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n111 107 0:31 /random /dev/random rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n112 107 0:31 /urandom /dev/urandom rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n113 107 0:31 /tty /dev/tty rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n114 107 0:37 / /dev/pts rw,nosuid,noexec,relatime - devpts devpts rw,mode=620,ptmxmode=666\n115 107 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw"
+            },
+            "/proc/cgroups": {
+              "status": "present",
+              "value": "#subsys_name\thierarchy\tnum_cgroups\tenabled\ncpu\t0\t4\t1\ncpuacct\t0\t4\t1\nblkio\t0\t4\t1\ndevices\t0\t4\t1\nfreezer\t0\t4\t1\nnet_cls\t0\t4\t1\nperf_event\t0\t4\t1\nnet_prio\t0\t4\t1\nhugetlb\t0\t4\t1\npids\t0\t4\t1"
+            },
+            "/sys/fs/cgroup/cgroup.controllers": {
+              "status": "present",
+              "value": "cpuset cpu io memory hugetlb pids"
+            },
+            "/sys/fs/cgroup/memory.max": {
+              "status": "present",
+              "value": "8589934592"
+            },
+            "/sys/fs/cgroup/memory.current": {
+              "status": "present",
+              "value": "1959424000"
+            },
+            "/sys/fs/cgroup/memory.peak": {
+              "status": "present",
+              "value": "2034331648"
+            },
+            "/sys/fs/cgroup/memory.events": {
+              "status": "present",
+              "value": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+            },
+            "/sys/fs/cgroup/memory.swap.max": {
+              "status": "present",
+              "value": "max"
+            },
+            "/sys/fs/cgroup/memory.swap.current": {
+              "status": "present",
+              "value": "0"
+            },
+            "/sys/fs/cgroup/cpu.max": {
+              "status": "present",
+              "value": "800000 100000"
+            }
+          },
+          "errors": [],
+          "limitations": [
+            "Visible namespaces cannot prove absence of hidden ancestor limits.",
+            "Guest availability may change suddenly with ballooning/external contention.",
+            "Software RSS/reserve monitoring is not a dedicated memory cgroup."
+          ],
+          "kernel_memory_controller": null,
+          "controller_version": "v2"
+        },
+        "final_memory": {
+          "host": {
+            "MemTotal": 10451427328,
+            "MemAvailable": 9675694080,
+            "SwapTotal": 0,
+            "SwapFree": 0
+          },
+          "cgroup_root": "/sys/fs/cgroup",
+          "cgroup": {
+            "memory.max": 8589934592,
+            "memory.current": 1976971264,
+            "memory.peak": 2034331648,
+            "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+            "memory.swap.max": "max",
+            "memory.swap.current": 0,
+            "cpu.max": "800000 100000"
+          },
+          "effective_available_bytes": 6612963328,
+          "memory_policy": "strict",
+          "fallback_enabled": false,
+          "fallback_used": false,
+          "memory_source": "guest_and_cgroup",
+          "controller_state": "observable",
+          "constraints": [
+            {
+              "path": "/sys/fs/cgroup",
+              "limit": 8589934592,
+              "usage": 1976971264
+            }
+          ],
+          "observations": {
+            "/proc/meminfo": {
+              "status": "present",
+              "value": "MemTotal:       10206472 kB\nMemFree:         7914072 kB\nMemAvailable:    9448920 kB\nBuffers:           15332 kB\nCached:          1736200 kB\nSwapCached:            0 kB\nActive:           620628 kB\nInactive:        1228588 kB\nActive(anon):         92 kB\nInactive(anon):   127508 kB\nActive(file):     620536 kB\nInactive(file):  1101080 kB\nUnevictable:       30004 kB\nMlocked:              80 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              3688 kB\nWriteback:             0 kB\nAnonPages:        127608 kB\nMapped:            73472 kB\nShmem:                12 kB\nKReclaimable:      84664 kB\nSlab:             138212 kB\nSReclaimable:      84664 kB\nSUnreclaim:        53548 kB\nKernelStack:        3264 kB\nPageTables:         3808 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     510688 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4648 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      4096 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      114688 kB\nDirectMap2M:     4435968 kB\nDirectMap1G:    16777216 kB"
+            },
+            "/proc/self/cgroup": {
+              "status": "present",
+              "value": "0::/"
+            },
+            "/proc/self/mountinfo": {
+              "status": "present",
+              "value": "93 63 0:27 / / rw,nosuid,nodev,relatime - overlay overlay rw,lowerdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/lower-0,upperdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/upper/upper,workdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/upper/work,index=off,metacopy=off\n94 93 0:30 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw\n95 94 0:31 /null /proc/keys rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n96 94 0:31 /null /proc/timer_list rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n97 94 0:30 /bus /proc/bus ro,nosuid,nodev,relatime - proc proc rw\n98 94 0:30 /fs /proc/fs ro,nosuid,nodev,relatime - proc proc rw\n99 94 0:30 /irq /proc/irq ro,nosuid,nodev,relatime - proc proc rw\n100 94 0:30 /sys /proc/sys ro,nosuid,nodev,relatime - proc proc rw\n101 93 0:31 / /dev rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n102 101 0:32 / /dev/pts rw,nosuid,nodev,noexec,relatime - devpts devpts rw,gid=5,mode=620,ptmxmode=666\n103 101 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw\n104 101 0:25 / /dev/mqueue rw,nosuid,nodev,noexec,relatime - mqueue mqueue rw\n105 93 0:20 / /sys ro,nosuid,nodev,noexec,relatime - sysfs sysfs rw\n106 105 0:24 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup2 rw,nsdelegate\n107 101 0:36 / /dev rw,nosuid,nodev,relatime - tmpfs tmpfs rw,mode=755\n108 107 0:31 /null /dev/null rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n109 107 0:31 /zero /dev/zero rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n110 107 0:31 /full /dev/full rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n111 107 0:31 /random /dev/random rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n112 107 0:31 /urandom /dev/urandom rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n113 107 0:31 /tty /dev/tty rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n114 107 0:37 / /dev/pts rw,nosuid,noexec,relatime - devpts devpts rw,mode=620,ptmxmode=666\n115 107 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw"
+            },
+            "/proc/cgroups": {
+              "status": "present",
+              "value": "#subsys_name\thierarchy\tnum_cgroups\tenabled\ncpu\t0\t4\t1\ncpuacct\t0\t4\t1\nblkio\t0\t4\t1\ndevices\t0\t4\t1\nfreezer\t0\t4\t1\nnet_cls\t0\t4\t1\nperf_event\t0\t4\t1\nnet_prio\t0\t4\t1\nhugetlb\t0\t4\t1\npids\t0\t4\t1"
+            },
+            "/sys/fs/cgroup/cgroup.controllers": {
+              "status": "present",
+              "value": "cpuset cpu io memory hugetlb pids"
+            },
+            "/sys/fs/cgroup/memory.max": {
+              "status": "present",
+              "value": "8589934592"
+            },
+            "/sys/fs/cgroup/memory.current": {
+              "status": "present",
+              "value": "1976971264"
+            },
+            "/sys/fs/cgroup/memory.peak": {
+              "status": "present",
+              "value": "2034331648"
+            },
+            "/sys/fs/cgroup/memory.events": {
+              "status": "present",
+              "value": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+            },
+            "/sys/fs/cgroup/memory.swap.max": {
+              "status": "present",
+              "value": "max"
+            },
+            "/sys/fs/cgroup/memory.swap.current": {
+              "status": "present",
+              "value": "0"
+            },
+            "/sys/fs/cgroup/cpu.max": {
+              "status": "present",
+              "value": "800000 100000"
+            }
+          },
+          "errors": [],
+          "limitations": [
+            "Visible namespaces cannot prove absence of hidden ancestor limits.",
+            "Guest availability may change suddenly with ballooning/external contention.",
+            "Software RSS/reserve monitoring is not a dedicated memory cgroup."
+          ],
+          "kernel_memory_controller": null,
+          "controller_version": "v2"
+        },
+        "initial_renderer_rss_bytes": 36315136,
+        "final_renderer_rss_bytes": 51720192,
+        "renderer_peak_rss_bytes": 51724288,
+        "waited_child_max_rss_bytes": 77283328,
+        "encoder_peak_rss_bytes": 0,
+        "all_children_peak_rss_bytes": 77864960,
+        "estimated_simultaneous_tree_peak_rss_bytes": 126177280,
+        "sampling_interval_seconds": 0.01,
+        "samples": 626,
+        "job_budget_bytes": 268435456,
+        "reserve_bytes": 67108864,
+        "limit_reason": null,
+        "minimum_effective_available_bytes": 6559174656,
+        "maximum_effective_available_bytes": 6630510592,
+        "memory_observations": 64,
+        "minimum_workspace_free_bytes": 62390030336,
+        "disk_reserve_bytes": 67108864,
+        "wall_seconds": 9.181569537999621,
+        "caveat": "Sampled sum of RSS can miss transient peaks and double-count shared pages; cgroup counters are shared, not a dedicated job limit."
+      }
+    },
+    "writer-trace": {
+      "trace": "artifacts/phase7b1/writer-trace.json",
+      "trace_sha256": "00bc63a70b84739bc628b772581c50cb56db912a2428e4ae000740b7f0132f8e",
+      "mode_label_caveat": "Early mode field was hardcoded; module inventory determines engine independence",
+      "reelforge_modules_loaded": [
+        "reelforge",
+        "reelforge.audio",
+        "reelforge.core",
+        "reelforge.core.errors",
+        "reelforge.media",
+        "reelforge.core.streams",
+        "reelforge.media.process",
+        "reelforge.contracts",
+        "reelforge.contracts.project",
+        "reelforge.stories",
+        "reelforge.rendering",
+        "reelforge.rendering.model",
+        "reelforge.stories.audio_contract",
+        "reelforge.core.transaction",
+        "reelforge.audio.transaction",
+        "reelforge.audio.registry",
+        "reelforge.audio.processing",
+        "reelforge.reels",
+        "reelforge.media.verify",
+        "reelforge.resources",
+        "reelforge.resources.memory",
+        "reelforge.resources.monitor",
+        "reelforge.resources.deployment",
+        "reelforge.storyboards",
+        "reelforge.characters",
+        "reelforge.characters.rig",
+        "reelforge.characters.contact",
+        "reelforge.characters.presets",
+        "reelforge.direction",
+        "reelforge.blocking",
+        "reelforge.geometry",
+        "reelforge.procedural",
+        "reelforge.scenes",
+        "reelforge.rendering.diagnostic",
+        "reelforge.characters.secondary",
+        "reelforge.characters.rowan",
+        "reelforge.environments",
+        "reelforge.environments.artwork",
+        "reelforge.environments.polish",
+        "reelforge.scenes.transforms",
+        "reelforge.scenes.assets",
+        "reelforge.scenes.contract",
+        "reelforge.scenes.geometry",
+        "reelforge.environments.presets",
+        "reelforge.environments.scene",
+        "reelforge.scenes.graph",
+        "reelforge.procedural.contract",
+        "reelforge.procedural.planning",
+        "reelforge.procedural.drawing",
+        "reelforge.procedural.recipes",
+        "reelforge.procedural.compiler",
+        "reelforge.geometry.contract",
+        "reelforge.geometry.compiler",
+        "reelforge.geometry.composition",
+        "reelforge.blocking.timeline",
+        "reelforge.blocking.contract",
+        "reelforge.direction.contract",
+        "reelforge.characters.transition",
+        "reelforge.blocking.sampling",
+        "reelforge.direction.sampling",
+        "reelforge.storyboards.patterns",
+        "reelforge.storyboards.compiler",
+        "reelforge.reels.contract",
+        "reelforge.reels.workflow",
+        "reelforge.rendering.interface",
+        "reelforge.media.encoder",
+        "reelforge.stories.contract",
+        "reelforge.rendering.backends",
+        "reelforge.rendering.backends.cairo",
+        "reelforge.rendering.video_diagnostic",
+        "reelforge.stories.sampling"
+      ],
+      "identity": {
+        "pid": 23,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "5612",
+        "nspid": "NSpid:\t5612\t23",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "complete": true,
+      "restorations": [
+        {
+          "path": "pytest/audio-silent-template0/.reelforge-encode-himwp8c3",
+          "last_absent_index": 271,
+          "first_present_index": 276,
+          "last_absent_ns": 4206140746073,
+          "first_present_ns": 4206193062042,
+          "observation_window_ms": 52.315969,
+          "original_inode": {
+            "dev": 27,
+            "ino": 2228280,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644656036508283,
+            "ctime_ns": 1793644656036508283
+          },
+          "restored_inode": {
+            "dev": 27,
+            "ino": 2228362,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644659818910768,
+            "ctime_ns": 1793644659818910768
+          },
+          "original_unlinked_inode": {
+            "dev": 27,
+            "ino": 2228280,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793644658488580811,
+            "ctime_ns": 1793644658490119595
+          },
+          "stable_parent_fd_identity": true,
+          "stable_mount_view": true,
+          "active_native_argv": [
+            "ffprobe",
+            "-v",
+            "error",
+            "-protocol_whitelist",
+            "file",
+            "-f",
+            "wav",
+            "-show_entries",
+            "stream=codec_type,codec_name,sample_rate,channels:format=format_name",
+            "-of",
+            "json",
+            "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-writer-trace/pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-szanvfzj/.register-b9eskxln/input.wav"
+          ],
+          "active_native_pid": 66,
+          "kernel_create_notifications": [],
+          "kernel_delete_notifications": [],
+          "python_mutation_events_in_window": []
+        },
+        {
+          "path": "pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-szanvfzj",
+          "last_absent_index": 786,
+          "first_present_index": 791,
+          "last_absent_ns": 4209100191563,
+          "first_present_ns": 4209168713350,
+          "observation_window_ms": 68.521787,
+          "original_inode": {
+            "dev": 27,
+            "ino": 2228292,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793644659068598432,
+            "ctime_ns": 1793644659068598432
+          },
+          "restored_inode": {
+            "dev": 27,
+            "ino": 2228381,
+            "mode": 16832,
+            "nlink": 5,
+            "size": 4096,
+            "mtime_ns": 1793644662795870636,
+            "ctime_ns": 1793644662795870636
+          },
+          "original_unlinked_inode": {
+            "dev": 27,
+            "ino": 2228292,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793644661381103899,
+            "ctime_ns": 1793644661381284052
+          },
+          "stable_parent_fd_identity": true,
+          "stable_mount_view": true,
+          "active_native_argv": [
+            "ffprobe",
+            "-v",
+            "error",
+            "-select_streams",
+            "a:0",
+            "-show_frames",
+            "-show_entries",
+            "frame=best_effort_timestamp_time,nb_samples",
+            "-of",
+            "json",
+            "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-writer-trace/pytest/test_two_audio_jobs_persistent0/audio-1/.reelforge-audio-g5lv7xev/pending.mp4"
+          ],
+          "active_native_pid": 186,
+          "kernel_create_notifications": [],
+          "kernel_delete_notifications": [],
+          "python_mutation_events_in_window": []
+        }
+      ],
+      "native_children": 55,
+      "all_native_children_reaped_and_groups_absent": true,
+      "native_process_records": [
+        {
+          "pid": 27,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 28,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 33,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 34,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 38,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 40,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 41,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 42,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 46,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 47,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 51,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 52,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 56,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 57,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 61,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 62,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 66,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 67,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 71,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 79,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 84,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 85,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 89,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 90,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 91,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 92,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 95,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 98,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 99,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 103,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 137,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 138,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 139,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 143,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 144,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 148,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 149,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 153,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 154,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 158,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 159,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 163,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 164,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 168,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 176,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 181,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 182,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 186,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 187,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 188,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 189,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 192,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 195,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 196,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 200,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        }
+      ],
+      "test_exit_code": 1,
+      "retired_paths_currently_present": {
+        "pytest/audio-silent-template0/.reelforge-encode-himwp8c3": true,
+        "pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-szanvfzj": true,
+        "pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-szanvfzj/.register-9o8u3i66": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-szanvfzj/.register-gzchfweu": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-szanvfzj/.register-a3u8wc61": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-szanvfzj/.register-ygn7fzie": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-szanvfzj/.register-mhrsayop": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-szanvfzj/.register-b9eskxln": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-1/.reelforge-audio-g5lv7xev": true,
+        "pytest/test_two_audio_jobs_persistent0/audio-1/.reelforge-audio-g5lv7xev/.register-_z7e0yy5": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-1/.reelforge-audio-g5lv7xev/.register-m6v9sc9c": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-1/.reelforge-audio-g5lv7xev/.register-4a_62gl2": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-1/.reelforge-audio-g5lv7xev/.register-r76sxarc": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-1/.reelforge-audio-g5lv7xev/.register-aae4m_fb": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-1/.reelforge-audio-g5lv7xev/.register-f9d0s281": false
+      },
+      "memory": {
+        "oom_telemetry_continuous": true,
+        "memory_policy": "strict",
+        "observed_memory_sources": [
+          "guest_and_cgroup"
+        ],
+        "initial_memory": {
+          "host": {
+            "MemTotal": 10451427328,
+            "MemAvailable": 9772613632,
+            "SwapTotal": 0,
+            "SwapFree": 0
+          },
+          "cgroup_root": "/sys/fs/cgroup",
+          "cgroup": {
+            "memory.max": 8589934592,
+            "memory.current": 1969410048,
+            "memory.peak": 2034331648,
+            "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+            "memory.swap.max": "max",
+            "memory.swap.current": 0,
+            "cpu.max": "800000 100000"
+          },
+          "effective_available_bytes": 6620524544,
+          "memory_policy": "strict",
+          "fallback_enabled": false,
+          "fallback_used": false,
+          "memory_source": "guest_and_cgroup",
+          "controller_state": "observable",
+          "constraints": [
+            {
+              "path": "/sys/fs/cgroup",
+              "limit": 8589934592,
+              "usage": 1969410048
+            }
+          ],
+          "observations": {
+            "/proc/meminfo": {
+              "status": "present",
+              "value": "MemTotal:       10206472 kB\nMemFree:         8003456 kB\nMemAvailable:    9543568 kB\nBuffers:           15336 kB\nCached:          1741376 kB\nSwapCached:            0 kB\nActive:           623864 kB\nInactive:        1217560 kB\nActive(anon):         76 kB\nInactive(anon):   114548 kB\nActive(file):     623788 kB\nInactive(file):  1103012 kB\nUnevictable:       29924 kB\nMlocked:               0 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              1416 kB\nWriteback:             0 kB\nAnonPages:        114768 kB\nMapped:            71448 kB\nShmem:                12 kB\nKReclaimable:      84820 kB\nSlab:             135244 kB\nSReclaimable:      84820 kB\nSUnreclaim:        50424 kB\nKernelStack:        3328 kB\nPageTables:         3640 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     473848 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4584 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      4096 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      122880 kB\nDirectMap2M:     4427776 kB\nDirectMap1G:    16777216 kB"
+            },
+            "/proc/self/cgroup": {
+              "status": "present",
+              "value": "0::/"
+            },
+            "/proc/self/mountinfo": {
+              "status": "present",
+              "value": "93 63 0:27 / / rw,nosuid,nodev,relatime - overlay overlay rw,lowerdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/lower-0,upperdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/upper/upper,workdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/upper/work,index=off,metacopy=off\n94 93 0:30 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw\n95 94 0:31 /null /proc/keys rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n96 94 0:31 /null /proc/timer_list rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n97 94 0:30 /bus /proc/bus ro,nosuid,nodev,relatime - proc proc rw\n98 94 0:30 /fs /proc/fs ro,nosuid,nodev,relatime - proc proc rw\n99 94 0:30 /irq /proc/irq ro,nosuid,nodev,relatime - proc proc rw\n100 94 0:30 /sys /proc/sys ro,nosuid,nodev,relatime - proc proc rw\n101 93 0:31 / /dev rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n102 101 0:32 / /dev/pts rw,nosuid,nodev,noexec,relatime - devpts devpts rw,gid=5,mode=620,ptmxmode=666\n103 101 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw\n104 101 0:25 / /dev/mqueue rw,nosuid,nodev,noexec,relatime - mqueue mqueue rw\n105 93 0:20 / /sys ro,nosuid,nodev,noexec,relatime - sysfs sysfs rw\n106 105 0:24 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup2 rw,nsdelegate\n107 101 0:36 / /dev rw,nosuid,nodev,relatime - tmpfs tmpfs rw,mode=755\n108 107 0:31 /null /dev/null rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n109 107 0:31 /zero /dev/zero rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n110 107 0:31 /full /dev/full rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n111 107 0:31 /random /dev/random rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n112 107 0:31 /urandom /dev/urandom rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n113 107 0:31 /tty /dev/tty rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n114 107 0:37 / /dev/pts rw,nosuid,noexec,relatime - devpts devpts rw,mode=620,ptmxmode=666\n115 107 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw"
+            },
+            "/proc/cgroups": {
+              "status": "present",
+              "value": "#subsys_name\thierarchy\tnum_cgroups\tenabled\ncpu\t0\t4\t1\ncpuacct\t0\t4\t1\nblkio\t0\t4\t1\ndevices\t0\t4\t1\nfreezer\t0\t4\t1\nnet_cls\t0\t4\t1\nperf_event\t0\t4\t1\nnet_prio\t0\t4\t1\nhugetlb\t0\t4\t1\npids\t0\t4\t1"
+            },
+            "/sys/fs/cgroup/cgroup.controllers": {
+              "status": "present",
+              "value": "cpuset cpu io memory hugetlb pids"
+            },
+            "/sys/fs/cgroup/memory.max": {
+              "status": "present",
+              "value": "8589934592"
+            },
+            "/sys/fs/cgroup/memory.current": {
+              "status": "present",
+              "value": "1969410048"
+            },
+            "/sys/fs/cgroup/memory.peak": {
+              "status": "present",
+              "value": "2034331648"
+            },
+            "/sys/fs/cgroup/memory.events": {
+              "status": "present",
+              "value": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+            },
+            "/sys/fs/cgroup/memory.swap.max": {
+              "status": "present",
+              "value": "max"
+            },
+            "/sys/fs/cgroup/memory.swap.current": {
+              "status": "present",
+              "value": "0"
+            },
+            "/sys/fs/cgroup/cpu.max": {
+              "status": "present",
+              "value": "800000 100000"
+            }
+          },
+          "errors": [],
+          "limitations": [
+            "Visible namespaces cannot prove absence of hidden ancestor limits.",
+            "Guest availability may change suddenly with ballooning/external contention.",
+            "Software RSS/reserve monitoring is not a dedicated memory cgroup."
+          ],
+          "kernel_memory_controller": null,
+          "controller_version": "v2"
+        },
+        "final_memory": {
+          "host": {
+            "MemTotal": 10451427328,
+            "MemAvailable": 9626861568,
+            "SwapTotal": 0,
+            "SwapFree": 0
+          },
+          "cgroup_root": "/sys/fs/cgroup",
+          "cgroup": {
+            "memory.max": 8589934592,
+            "memory.current": 1987858432,
+            "memory.peak": 2041290752,
+            "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+            "memory.swap.max": "max",
+            "memory.swap.current": 0,
+            "cpu.max": "800000 100000"
+          },
+          "effective_available_bytes": 6602076160,
+          "memory_policy": "strict",
+          "fallback_enabled": false,
+          "fallback_used": false,
+          "memory_source": "guest_and_cgroup",
+          "controller_state": "observable",
+          "constraints": [
+            {
+              "path": "/sys/fs/cgroup",
+              "limit": 8589934592,
+              "usage": 1987858432
+            }
+          ],
+          "observations": {
+            "/proc/meminfo": {
+              "status": "present",
+              "value": "MemTotal:       10206472 kB\nMemFree:         7857324 kB\nMemAvailable:    9401232 kB\nBuffers:           15432 kB\nCached:          1744820 kB\nSwapCached:            0 kB\nActive:           625420 kB\nInactive:        1233292 kB\nActive(anon):         92 kB\nInactive(anon):   128192 kB\nActive(file):     625328 kB\nInactive(file):  1105100 kB\nUnevictable:       30004 kB\nMlocked:              80 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              4112 kB\nWriteback:             0 kB\nAnonPages:        128300 kB\nMapped:            73384 kB\nShmem:                12 kB\nKReclaimable:      85160 kB\nSlab:             135648 kB\nSReclaimable:      85160 kB\nSUnreclaim:        50488 kB\nKernelStack:        3304 kB\nPageTables:         3816 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     512856 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4632 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      4096 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      122880 kB\nDirectMap2M:     4427776 kB\nDirectMap1G:    16777216 kB"
+            },
+            "/proc/self/cgroup": {
+              "status": "present",
+              "value": "0::/"
+            },
+            "/proc/self/mountinfo": {
+              "status": "present",
+              "value": "93 63 0:27 / / rw,nosuid,nodev,relatime - overlay overlay rw,lowerdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/lower-0,upperdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/upper/upper,workdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/upper/work,index=off,metacopy=off\n94 93 0:30 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw\n95 94 0:31 /null /proc/keys rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n96 94 0:31 /null /proc/timer_list rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n97 94 0:30 /bus /proc/bus ro,nosuid,nodev,relatime - proc proc rw\n98 94 0:30 /fs /proc/fs ro,nosuid,nodev,relatime - proc proc rw\n99 94 0:30 /irq /proc/irq ro,nosuid,nodev,relatime - proc proc rw\n100 94 0:30 /sys /proc/sys ro,nosuid,nodev,relatime - proc proc rw\n101 93 0:31 / /dev rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n102 101 0:32 / /dev/pts rw,nosuid,nodev,noexec,relatime - devpts devpts rw,gid=5,mode=620,ptmxmode=666\n103 101 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw\n104 101 0:25 / /dev/mqueue rw,nosuid,nodev,noexec,relatime - mqueue mqueue rw\n105 93 0:20 / /sys ro,nosuid,nodev,noexec,relatime - sysfs sysfs rw\n106 105 0:24 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup2 rw,nsdelegate\n107 101 0:36 / /dev rw,nosuid,nodev,relatime - tmpfs tmpfs rw,mode=755\n108 107 0:31 /null /dev/null rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n109 107 0:31 /zero /dev/zero rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n110 107 0:31 /full /dev/full rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n111 107 0:31 /random /dev/random rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n112 107 0:31 /urandom /dev/urandom rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n113 107 0:31 /tty /dev/tty rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n114 107 0:37 / /dev/pts rw,nosuid,noexec,relatime - devpts devpts rw,mode=620,ptmxmode=666\n115 107 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw"
+            },
+            "/proc/cgroups": {
+              "status": "present",
+              "value": "#subsys_name\thierarchy\tnum_cgroups\tenabled\ncpu\t0\t4\t1\ncpuacct\t0\t4\t1\nblkio\t0\t4\t1\ndevices\t0\t4\t1\nfreezer\t0\t4\t1\nnet_cls\t0\t4\t1\nperf_event\t0\t4\t1\nnet_prio\t0\t4\t1\nhugetlb\t0\t4\t1\npids\t0\t4\t1"
+            },
+            "/sys/fs/cgroup/cgroup.controllers": {
+              "status": "present",
+              "value": "cpuset cpu io memory hugetlb pids"
+            },
+            "/sys/fs/cgroup/memory.max": {
+              "status": "present",
+              "value": "8589934592"
+            },
+            "/sys/fs/cgroup/memory.current": {
+              "status": "present",
+              "value": "1987858432"
+            },
+            "/sys/fs/cgroup/memory.peak": {
+              "status": "present",
+              "value": "2041290752"
+            },
+            "/sys/fs/cgroup/memory.events": {
+              "status": "present",
+              "value": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+            },
+            "/sys/fs/cgroup/memory.swap.max": {
+              "status": "present",
+              "value": "max"
+            },
+            "/sys/fs/cgroup/memory.swap.current": {
+              "status": "present",
+              "value": "0"
+            },
+            "/sys/fs/cgroup/cpu.max": {
+              "status": "present",
+              "value": "800000 100000"
+            }
+          },
+          "errors": [],
+          "limitations": [
+            "Visible namespaces cannot prove absence of hidden ancestor limits.",
+            "Guest availability may change suddenly with ballooning/external contention.",
+            "Software RSS/reserve monitoring is not a dedicated memory cgroup."
+          ],
+          "kernel_memory_controller": null,
+          "controller_version": "v2"
+        },
+        "initial_renderer_rss_bytes": 36306944,
+        "final_renderer_rss_bytes": 51744768,
+        "renderer_peak_rss_bytes": 51748864,
+        "waited_child_max_rss_bytes": 77422592,
+        "encoder_peak_rss_bytes": 0,
+        "all_children_peak_rss_bytes": 77864960,
+        "estimated_simultaneous_tree_peak_rss_bytes": 126222336,
+        "sampling_interval_seconds": 0.01,
+        "samples": 576,
+        "job_budget_bytes": 268435456,
+        "reserve_bytes": 67108864,
+        "limit_reason": null,
+        "minimum_effective_available_bytes": 6552539136,
+        "maximum_effective_available_bytes": 6620524544,
+        "memory_observations": 59,
+        "minimum_workspace_free_bytes": 62381031424,
+        "disk_reserve_bytes": 67108864,
+        "wall_seconds": 8.206258156000331,
+        "caveat": "Sampled sum of RSS can miss transient peaks and double-count shared pages; cgroup counters are shared, not a dedicated job limit."
+      }
+    },
+    "wav-followup-control": {
+      "trace": "artifacts/phase7b1/wav-followup-control.json",
+      "trace_sha256": "7a01e001d07b0b1741752f045f19ce8a35b36e0c57fd92ed844d7a070e98407a",
+      "mode_label_caveat": "Early mode field was hardcoded; module inventory determines engine independence",
+      "reelforge_modules_loaded": [],
+      "identity": {
+        "pid": 23,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "5338",
+        "nspid": "NSpid:\t5338\t23",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "complete": true,
+      "restorations": [],
+      "native_children": 0,
+      "all_native_children_reaped_and_groups_absent": false,
+      "native_process_records": [],
+      "test_exit_code": null,
+      "retired_paths_currently_present": {
+        ".reelforge-audio-_h7r7ws2": false
+      },
+      "memory": null
+    },
+    "pipe-control": {
+      "trace": "artifacts/phase7b1/pipe-control.json",
+      "trace_sha256": "69bcb6b80e3e463ac9538dae87b543cda1f8144bea52173b37db7e3f007cd44e",
+      "mode_label_caveat": "Early mode field was hardcoded; module inventory determines engine independence",
+      "reelforge_modules_loaded": [],
+      "identity": {
+        "pid": 23,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "5411",
+        "nspid": "NSpid:\t5411\t23",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "complete": true,
+      "restorations": [],
+      "native_children": 0,
+      "all_native_children_reaped_and_groups_absent": false,
+      "native_process_records": [],
+      "test_exit_code": null,
+      "retired_paths_currently_present": {
+        ".reelforge-encode-81a6stcl": false
+      },
+      "memory": null
+    },
+    "paced-pipe": {
+      "trace": "artifacts/phase7b1/paced-pipe.json",
+      "trace_sha256": "bedaf3b49d887f747cf8acceb3aac88dbb02d2a2e7d47340e9709356ca3183db",
+      "mode_label_caveat": "Early mode field was hardcoded; module inventory determines engine independence",
+      "reelforge_modules_loaded": [],
+      "identity": {
+        "pid": 23,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "5536",
+        "nspid": "NSpid:\t5536\t23",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "complete": true,
+      "restorations": [],
+      "native_children": 0,
+      "all_native_children_reaped_and_groups_absent": false,
+      "native_process_records": [],
+      "test_exit_code": null,
+      "retired_paths_currently_present": {
+        ".reelforge-encode-m0z26dl_": false
+      },
+      "memory": null
+    },
+    "decoded-pipe": {
+      "trace": "artifacts/phase7b1/decoded-pipe.json",
+      "trace_sha256": "8abc00ec9f5de05703901d6a742e3b0df4626946354406bd71c5380cab79dc60",
+      "mode_label_caveat": "Early mode field was hardcoded; module inventory determines engine independence",
+      "reelforge_modules_loaded": [],
+      "identity": {
+        "pid": 23,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "5889",
+        "nspid": "NSpid:\t5889\t23",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "complete": true,
+      "restorations": [],
+      "native_children": 0,
+      "all_native_children_reaped_and_groups_absent": false,
+      "native_process_records": [],
+      "test_exit_code": null,
+      "retired_paths_currently_present": {
+        ".reelforge-encode-5ckcd16t": false
+      },
+      "memory": null
+    },
+    "confined-trace": {
+      "trace": "artifacts/phase7b1/confined-trace.json",
+      "trace_sha256": "30ffe7961c9ed2acdf6fd71098a0e05caad99d8a523d62c72a611275e8ad06aa",
+      "mode_label_caveat": "Early mode field was hardcoded; module inventory determines engine independence",
+      "reelforge_modules_loaded": [
+        "reelforge",
+        "reelforge.audio",
+        "reelforge.core",
+        "reelforge.core.errors",
+        "reelforge.media",
+        "reelforge.core.streams",
+        "reelforge.media.process",
+        "reelforge.contracts",
+        "reelforge.contracts.project",
+        "reelforge.stories",
+        "reelforge.rendering",
+        "reelforge.rendering.model",
+        "reelforge.stories.audio_contract",
+        "reelforge.core.transaction",
+        "reelforge.audio.transaction",
+        "reelforge.audio.registry",
+        "reelforge.audio.processing",
+        "reelforge.reels",
+        "reelforge.media.verify",
+        "reelforge.resources",
+        "reelforge.resources.memory",
+        "reelforge.resources.monitor",
+        "reelforge.resources.deployment",
+        "reelforge.storyboards",
+        "reelforge.characters",
+        "reelforge.characters.rig",
+        "reelforge.characters.contact",
+        "reelforge.characters.presets",
+        "reelforge.direction",
+        "reelforge.blocking",
+        "reelforge.geometry",
+        "reelforge.procedural",
+        "reelforge.scenes",
+        "reelforge.rendering.diagnostic",
+        "reelforge.characters.secondary",
+        "reelforge.characters.rowan",
+        "reelforge.environments",
+        "reelforge.environments.artwork",
+        "reelforge.environments.polish",
+        "reelforge.scenes.transforms",
+        "reelforge.scenes.assets",
+        "reelforge.scenes.contract",
+        "reelforge.scenes.geometry",
+        "reelforge.environments.presets",
+        "reelforge.environments.scene",
+        "reelforge.scenes.graph",
+        "reelforge.procedural.contract",
+        "reelforge.procedural.planning",
+        "reelforge.procedural.drawing",
+        "reelforge.procedural.recipes",
+        "reelforge.procedural.compiler",
+        "reelforge.geometry.contract",
+        "reelforge.geometry.compiler",
+        "reelforge.geometry.composition",
+        "reelforge.blocking.timeline",
+        "reelforge.blocking.contract",
+        "reelforge.direction.contract",
+        "reelforge.characters.transition",
+        "reelforge.blocking.sampling",
+        "reelforge.direction.sampling",
+        "reelforge.storyboards.patterns",
+        "reelforge.storyboards.compiler",
+        "reelforge.reels.contract",
+        "reelforge.reels.workflow",
+        "reelforge.rendering.interface",
+        "reelforge.media.encoder",
+        "reelforge.stories.contract",
+        "reelforge.rendering.backends",
+        "reelforge.rendering.backends.cairo",
+        "reelforge.rendering.video_diagnostic",
+        "reelforge.stories.sampling"
+      ],
+      "identity": {
+        "pid": 29,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "6032",
+        "nspid": "NSpid:\t6032\t29",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "complete": true,
+      "restorations": [
+        {
+          "path": "pytest/audio-silent-template0/.reelforge-encode-gg3lwtpk",
+          "last_absent_index": 368,
+          "first_present_index": 379,
+          "last_absent_ns": 4638749144420,
+          "first_present_ns": 4638824548970,
+          "observation_window_ms": 75.40455,
+          "original_inode": {
+            "dev": 27,
+            "ino": 2228335,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793645088717167437,
+            "ctime_ns": 1793645088717167437
+          },
+          "restored_inode": {
+            "dev": 27,
+            "ino": 2228373,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793645092446365844,
+            "ctime_ns": 1793645092446365844
+          },
+          "original_unlinked_inode": {
+            "dev": 27,
+            "ino": 2228335,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793645090928179466,
+            "ctime_ns": 1793645090928958655
+          },
+          "stable_parent_fd_identity": true,
+          "stable_mount_view": true,
+          "active_native_argv": [
+            "ffmpeg",
+            "-nostdin",
+            "-hide_banner",
+            "-v",
+            "error",
+            "-xerror",
+            "-max_alloc",
+            "67108864",
+            "-threads",
+            "1",
+            "-filter_threads",
+            "1",
+            "-filter_complex_threads",
+            "1",
+            "-protocol_whitelist",
+            "file",
+            "-f",
+            "wav",
+            "-i",
+            "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-confined-trace/pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-6n77xeig/assets/diag_opening.wav",
+            "-protocol_whitelist",
+            "file",
+            "-f",
+            "wav",
+            "-i",
+            "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-confined-trace/pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-6n77xeig/assets/diag_fence.wav",
+            "-protocol_whitelist",
+            "file",
+            "-f",
+            "wav",
+            "-i",
+            "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-confined-trace/pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-6n77xeig/assets/diag_suspense.wav",
+            "-filter_complex",
+            "[0:a:0]pan=stereo|c0=c0|c1=c0,aresample=48000:async=0:first_pts=0,aformat=sample_fmts=fltp:channel_layouts=stereo,atrim=start_sample=0:end_sample=57600,asetpts=PTS-STARTPTS,volume=0.3,adelay=1600S:all=1[a0];[1:a:0]aformat=channel_layouts=stereo,aresample=48000:async=0:first_pts=0,aformat=sample_fmts=fltp:channel_layouts=stereo,atrim=start_sample=0:end_sample=19200,asetpts=PTS-STARTPTS,volume=0.1,adelay=24000S:all=1[a1];[2:a:0]pan=stereo|c0=c0|c1=c0,aresample=48000:async=0:first_pts=0,aformat=sample_fmts=fltp:channel_layouts=stereo,atrim=start_sample=0:end_sample=86400,asetpts=PTS-STARTPTS,volume=0.2,adelay=38400S:all=1[a2];[a0][a1][a2]amix=inputs=3:duration=longest:dropout_transition=0:normalize=0,apad=whole_len=48000,atrim=end_sample=48000,asetpts=N/SR/TB[mix]",
+            "-map",
+            "[mix]",
+            "-vn",
+            "-sn",
+            "-dn",
+            "-threads:a",
+            "1",
+            "-c:a",
+            "pcm_f32le",
+            "-ar",
+            "48000",
+            "-ac",
+            "2",
+            "-f",
+            "f32le",
+            "-n",
+            "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-confined-trace/pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-6n77xeig/reference.f32"
+          ],
+          "active_native_pid": 77,
+          "kernel_create_notifications": [
+            {
+              "event": "fanotify",
+              "phase": "native_after_constructor",
+              "monotonic_ns": 4638796410392,
+              "wall_ns": 1793645092437456757,
+              "mask": 1073742080,
+              "pid": 0,
+              "names": [
+                ".reelforge-encode-gg3lwtpk"
+              ],
+              "version": 3,
+              "creator_pid_scope": "Unprivileged group: non-listener processes are redacted to 0; calibration required"
+            }
+          ],
+          "kernel_delete_notifications": [
+            {
+              "event": "fanotify",
+              "phase": "owned_cleanup_before",
+              "monotonic_ns": 4637287971369,
+              "wall_ns": 1793645090929016682,
+              "mask": 1073742336,
+              "pid": 29,
+              "names": [
+                ".reelforge-encode-gg3lwtpk"
+              ],
+              "version": 3,
+              "creator_pid_scope": "Unprivileged group: non-listener processes are redacted to 0; calibration required"
+            }
+          ],
+          "python_mutation_events_in_window": []
+        },
+        {
+          "path": "pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-6n77xeig",
+          "last_absent_index": 919,
+          "first_present_index": 929,
+          "last_absent_ns": 4641533710133,
+          "first_present_ns": 4641597018283,
+          "observation_window_ms": 63.30815,
+          "original_inode": {
+            "dev": 27,
+            "ino": 2228356,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793645091501571555,
+            "ctime_ns": 1793645091501571555
+          },
+          "restored_inode": {
+            "dev": 27,
+            "ino": 2228414,
+            "mode": 16832,
+            "nlink": 4,
+            "size": 4096,
+            "mtime_ns": 1793645095235116699,
+            "ctime_ns": 1793645095235116699
+          },
+          "original_unlinked_inode": {
+            "dev": 27,
+            "ino": 2228356,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793645093865312497,
+            "ctime_ns": 1793645093871655549
+          },
+          "stable_parent_fd_identity": true,
+          "stable_mount_view": true,
+          "active_native_argv": [
+            "ffmpeg",
+            "-nostdin",
+            "-hide_banner",
+            "-v",
+            "error",
+            "-xerror",
+            "-max_alloc",
+            "67108864",
+            "-threads",
+            "1",
+            "-filter_threads",
+            "1",
+            "-filter_complex_threads",
+            "1",
+            "-protocol_whitelist",
+            "file",
+            "-i",
+            "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-confined-trace/pytest/test_two_audio_jobs_persistent0/audio-1/.reelforge-audio-63fog8_9/pending.mp4",
+            "-map",
+            "0:a:0",
+            "-vn",
+            "-sn",
+            "-dn",
+            "-c:a",
+            "pcm_f32le",
+            "-ar",
+            "48000",
+            "-ac",
+            "2",
+            "-threads:a",
+            "1",
+            "-f",
+            "f32le",
+            "-n",
+            "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-confined-trace/pytest/test_two_audio_jobs_persistent0/audio-1/.reelforge-audio-63fog8_9/decoded.f32"
+          ],
+          "active_native_pid": 188,
+          "kernel_create_notifications": [
+            {
+              "event": "fanotify",
+              "phase": "native_after_constructor",
+              "monotonic_ns": 4641554140327,
+              "wall_ns": 1793645095195186391,
+              "mask": 1073742080,
+              "pid": 0,
+              "names": [
+                ".reelforge-audio-6n77xeig"
+              ],
+              "version": 3,
+              "creator_pid_scope": "Unprivileged group: non-listener processes are redacted to 0; calibration required"
+            }
+          ],
+          "kernel_delete_notifications": [
+            {
+              "event": "fanotify",
+              "phase": "owned_cleanup_before",
+              "monotonic_ns": 4640230659871,
+              "wall_ns": 1793645093871705184,
+              "mask": 1073742336,
+              "pid": 29,
+              "names": [
+                ".reelforge-audio-6n77xeig"
+              ],
+              "version": 3,
+              "creator_pid_scope": "Unprivileged group: non-listener processes are redacted to 0; calibration required"
+            }
+          ],
+          "python_mutation_events_in_window": []
+        }
+      ],
+      "native_children": 55,
+      "all_native_children_reaped_and_groups_absent": true,
+      "native_process_records": [
+        {
+          "pid": 33,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 34,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 39,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 40,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 44,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 46,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 47,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 48,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 52,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 53,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 57,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 58,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 62,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 63,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 67,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 68,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 72,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 73,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 77,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 85,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 90,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 91,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 95,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 96,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 97,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 98,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 101,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 104,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 105,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 109,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 143,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 144,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 145,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 149,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 150,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 154,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 155,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 159,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 160,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 164,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 165,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 169,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 170,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 174,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 182,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 187,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 188,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 192,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 193,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 194,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 195,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 198,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 201,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 202,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 206,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        }
+      ],
+      "test_exit_code": 1,
+      "retired_paths_currently_present": {
+        "pytest/audio-silent-template0/.reelforge-encode-gg3lwtpk": true,
+        "pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-6n77xeig": true,
+        "pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-6n77xeig/.register-pcps855j": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-6n77xeig/.register-_ofhdw4y": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-6n77xeig/.register-4gbx9g_v": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-6n77xeig/.register-36w0wehu": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-6n77xeig/.register-_kuj1t2_": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-6n77xeig/.register-ft7jh2sn": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-1/.reelforge-audio-63fog8_9": true,
+        "pytest/test_two_audio_jobs_persistent0/audio-1/.reelforge-audio-63fog8_9/.register-dw3vlaes": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-1/.reelforge-audio-63fog8_9/.register-dmpiauk4": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-1/.reelforge-audio-63fog8_9/.register-opzt4bmb": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-1/.reelforge-audio-63fog8_9/.register-x2ecsg5i": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-1/.reelforge-audio-63fog8_9/.register-wubbiihn": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-1/.reelforge-audio-63fog8_9/.register-nuyiznxr": false
+      },
+      "memory": {
+        "oom_telemetry_continuous": true,
+        "memory_policy": "strict",
+        "observed_memory_sources": [
+          "guest_and_cgroup"
+        ],
+        "initial_memory": {
+          "host": {
+            "MemTotal": 10451427328,
+            "MemAvailable": 9772716032,
+            "SwapTotal": 0,
+            "SwapFree": 0
+          },
+          "cgroup_root": "/sys/fs/cgroup",
+          "cgroup": {
+            "memory.max": 8589934592,
+            "memory.current": 1977643008,
+            "memory.peak": 2083954688,
+            "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+            "memory.swap.max": "max",
+            "memory.swap.current": 0,
+            "cpu.max": "800000 100000"
+          },
+          "effective_available_bytes": 6612291584,
+          "memory_policy": "strict",
+          "fallback_enabled": false,
+          "fallback_used": false,
+          "memory_source": "guest_and_cgroup",
+          "controller_state": "observable",
+          "constraints": [
+            {
+              "path": "/sys/fs/cgroup",
+              "limit": 8589934592,
+              "usage": 1977643008
+            }
+          ],
+          "observations": {
+            "/proc/meminfo": {
+              "status": "present",
+              "value": "MemTotal:       10206472 kB\nMemFree:         7995292 kB\nMemAvailable:    9543668 kB\nBuffers:           15476 kB\nCached:          1749188 kB\nSwapCached:            0 kB\nActive:           627728 kB\nInactive:        1220204 kB\nActive(anon):         68 kB\nInactive(anon):   113116 kB\nActive(file):     627660 kB\nInactive(file):  1107088 kB\nUnevictable:       29924 kB\nMlocked:               0 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              1156 kB\nWriteback:             0 kB\nAnonPages:        113480 kB\nMapped:            71520 kB\nShmem:                12 kB\nKReclaimable:      85456 kB\nSlab:             133084 kB\nSReclaimable:      85456 kB\nSUnreclaim:        47628 kB\nKernelStack:        3288 kB\nPageTables:         3868 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     473956 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4584 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      4096 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      129024 kB\nDirectMap2M:     4421632 kB\nDirectMap1G:    16777216 kB"
+            },
+            "/proc/self/cgroup": {
+              "status": "present",
+              "value": "0::/"
+            },
+            "/proc/self/mountinfo": {
+              "status": "present",
+              "value": "93 63 0:27 / / rw,nosuid,nodev,relatime - overlay overlay rw,lowerdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/lower-0,upperdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/upper/upper,workdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/upper/work,index=off,metacopy=off\n94 93 0:30 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw\n95 94 0:31 /null /proc/keys rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n96 94 0:31 /null /proc/timer_list rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n97 94 0:30 /bus /proc/bus ro,nosuid,nodev,relatime - proc proc rw\n98 94 0:30 /fs /proc/fs ro,nosuid,nodev,relatime - proc proc rw\n99 94 0:30 /irq /proc/irq ro,nosuid,nodev,relatime - proc proc rw\n100 94 0:30 /sys /proc/sys ro,nosuid,nodev,relatime - proc proc rw\n101 93 0:31 / /dev rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n102 101 0:32 / /dev/pts rw,nosuid,nodev,noexec,relatime - devpts devpts rw,gid=5,mode=620,ptmxmode=666\n103 101 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw\n104 101 0:25 / /dev/mqueue rw,nosuid,nodev,noexec,relatime - mqueue mqueue rw\n105 93 0:20 / /sys ro,nosuid,nodev,noexec,relatime - sysfs sysfs rw\n106 105 0:24 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup2 rw,nsdelegate\n107 101 0:36 / /dev rw,nosuid,nodev,relatime - tmpfs tmpfs rw,mode=755\n108 107 0:31 /null /dev/null rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n109 107 0:31 /zero /dev/zero rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n110 107 0:31 /full /dev/full rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n111 107 0:31 /random /dev/random rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n112 107 0:31 /urandom /dev/urandom rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n113 107 0:31 /tty /dev/tty rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n114 107 0:37 / /dev/pts rw,nosuid,noexec,relatime - devpts devpts rw,mode=620,ptmxmode=666\n115 107 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw"
+            },
+            "/proc/cgroups": {
+              "status": "present",
+              "value": "#subsys_name\thierarchy\tnum_cgroups\tenabled\ncpu\t0\t4\t1\ncpuacct\t0\t4\t1\nblkio\t0\t4\t1\ndevices\t0\t4\t1\nfreezer\t0\t4\t1\nnet_cls\t0\t4\t1\nperf_event\t0\t4\t1\nnet_prio\t0\t4\t1\nhugetlb\t0\t4\t1\npids\t0\t4\t1"
+            },
+            "/sys/fs/cgroup/cgroup.controllers": {
+              "status": "present",
+              "value": "cpuset cpu io memory hugetlb pids"
+            },
+            "/sys/fs/cgroup/memory.max": {
+              "status": "present",
+              "value": "8589934592"
+            },
+            "/sys/fs/cgroup/memory.current": {
+              "status": "present",
+              "value": "1977643008"
+            },
+            "/sys/fs/cgroup/memory.peak": {
+              "status": "present",
+              "value": "2083954688"
+            },
+            "/sys/fs/cgroup/memory.events": {
+              "status": "present",
+              "value": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+            },
+            "/sys/fs/cgroup/memory.swap.max": {
+              "status": "present",
+              "value": "max"
+            },
+            "/sys/fs/cgroup/memory.swap.current": {
+              "status": "present",
+              "value": "0"
+            },
+            "/sys/fs/cgroup/cpu.max": {
+              "status": "present",
+              "value": "800000 100000"
+            }
+          },
+          "errors": [],
+          "limitations": [
+            "Visible namespaces cannot prove absence of hidden ancestor limits.",
+            "Guest availability may change suddenly with ballooning/external contention.",
+            "Software RSS/reserve monitoring is not a dedicated memory cgroup."
+          ],
+          "kernel_memory_controller": null,
+          "controller_version": "v2"
+        },
+        "final_memory": {
+          "host": {
+            "MemTotal": 10451427328,
+            "MemAvailable": 9663041536,
+            "SwapTotal": 0,
+            "SwapFree": 0
+          },
+          "cgroup_root": "/sys/fs/cgroup",
+          "cgroup": {
+            "memory.max": 8589934592,
+            "memory.current": 1995497472,
+            "memory.peak": 2083954688,
+            "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+            "memory.swap.max": "max",
+            "memory.swap.current": 0,
+            "cpu.max": "800000 100000"
+          },
+          "effective_available_bytes": 6594437120,
+          "memory_policy": "strict",
+          "fallback_enabled": false,
+          "fallback_used": false,
+          "memory_source": "guest_and_cgroup",
+          "controller_state": "observable",
+          "constraints": [
+            {
+              "path": "/sys/fs/cgroup",
+              "limit": 8589934592,
+              "usage": 1995497472
+            }
+          ],
+          "observations": {
+            "/proc/meminfo": {
+              "status": "present",
+              "value": "MemTotal:       10206472 kB\nMemFree:         7884216 kB\nMemAvailable:    9436564 kB\nBuffers:           15560 kB\nCached:          1752724 kB\nSwapCached:            0 kB\nActive:           629292 kB\nInactive:        1236204 kB\nActive(anon):         92 kB\nInactive(anon):   126936 kB\nActive(file):     629200 kB\nInactive(file):  1109268 kB\nUnevictable:       30004 kB\nMlocked:              80 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              3988 kB\nWriteback:            92 kB\nAnonPages:        127028 kB\nMapped:            73428 kB\nShmem:                12 kB\nKReclaimable:      85956 kB\nSlab:             133568 kB\nSReclaimable:      85956 kB\nSUnreclaim:        47612 kB\nKernelStack:        3284 kB\nPageTables:         3952 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     512968 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4648 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      4096 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      165888 kB\nDirectMap2M:     4384768 kB\nDirectMap1G:    16777216 kB"
+            },
+            "/proc/self/cgroup": {
+              "status": "present",
+              "value": "0::/"
+            },
+            "/proc/self/mountinfo": {
+              "status": "present",
+              "value": "93 63 0:27 / / rw,nosuid,nodev,relatime - overlay overlay rw,lowerdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/lower-0,upperdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/upper/upper,workdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/upper/work,index=off,metacopy=off\n94 93 0:30 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw\n95 94 0:31 /null /proc/keys rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n96 94 0:31 /null /proc/timer_list rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n97 94 0:30 /bus /proc/bus ro,nosuid,nodev,relatime - proc proc rw\n98 94 0:30 /fs /proc/fs ro,nosuid,nodev,relatime - proc proc rw\n99 94 0:30 /irq /proc/irq ro,nosuid,nodev,relatime - proc proc rw\n100 94 0:30 /sys /proc/sys ro,nosuid,nodev,relatime - proc proc rw\n101 93 0:31 / /dev rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n102 101 0:32 / /dev/pts rw,nosuid,nodev,noexec,relatime - devpts devpts rw,gid=5,mode=620,ptmxmode=666\n103 101 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw\n104 101 0:25 / /dev/mqueue rw,nosuid,nodev,noexec,relatime - mqueue mqueue rw\n105 93 0:20 / /sys ro,nosuid,nodev,noexec,relatime - sysfs sysfs rw\n106 105 0:24 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup2 rw,nsdelegate\n107 101 0:36 / /dev rw,nosuid,nodev,relatime - tmpfs tmpfs rw,mode=755\n108 107 0:31 /null /dev/null rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n109 107 0:31 /zero /dev/zero rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n110 107 0:31 /full /dev/full rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n111 107 0:31 /random /dev/random rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n112 107 0:31 /urandom /dev/urandom rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n113 107 0:31 /tty /dev/tty rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n114 107 0:37 / /dev/pts rw,nosuid,noexec,relatime - devpts devpts rw,mode=620,ptmxmode=666\n115 107 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw"
+            },
+            "/proc/cgroups": {
+              "status": "present",
+              "value": "#subsys_name\thierarchy\tnum_cgroups\tenabled\ncpu\t0\t4\t1\ncpuacct\t0\t4\t1\nblkio\t0\t4\t1\ndevices\t0\t4\t1\nfreezer\t0\t4\t1\nnet_cls\t0\t4\t1\nperf_event\t0\t4\t1\nnet_prio\t0\t4\t1\nhugetlb\t0\t4\t1\npids\t0\t4\t1"
+            },
+            "/sys/fs/cgroup/cgroup.controllers": {
+              "status": "present",
+              "value": "cpuset cpu io memory hugetlb pids"
+            },
+            "/sys/fs/cgroup/memory.max": {
+              "status": "present",
+              "value": "8589934592"
+            },
+            "/sys/fs/cgroup/memory.current": {
+              "status": "present",
+              "value": "1995497472"
+            },
+            "/sys/fs/cgroup/memory.peak": {
+              "status": "present",
+              "value": "2083954688"
+            },
+            "/sys/fs/cgroup/memory.events": {
+              "status": "present",
+              "value": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+            },
+            "/sys/fs/cgroup/memory.swap.max": {
+              "status": "present",
+              "value": "max"
+            },
+            "/sys/fs/cgroup/memory.swap.current": {
+              "status": "present",
+              "value": "0"
+            },
+            "/sys/fs/cgroup/cpu.max": {
+              "status": "present",
+              "value": "800000 100000"
+            }
+          },
+          "errors": [],
+          "limitations": [
+            "Visible namespaces cannot prove absence of hidden ancestor limits.",
+            "Guest availability may change suddenly with ballooning/external contention.",
+            "Software RSS/reserve monitoring is not a dedicated memory cgroup."
+          ],
+          "kernel_memory_controller": null,
+          "controller_version": "v2"
+        },
+        "initial_renderer_rss_bytes": 36401152,
+        "final_renderer_rss_bytes": 51986432,
+        "renderer_peak_rss_bytes": 51990528,
+        "waited_child_max_rss_bytes": 78848000,
+        "encoder_peak_rss_bytes": 0,
+        "all_children_peak_rss_bytes": 79339520,
+        "estimated_simultaneous_tree_peak_rss_bytes": 127926272,
+        "sampling_interval_seconds": 0.01,
+        "samples": 566,
+        "job_budget_bytes": 268435456,
+        "reserve_bytes": 67108864,
+        "limit_reason": null,
+        "minimum_effective_available_bytes": 6545367040,
+        "maximum_effective_available_bytes": 6612291584,
+        "memory_observations": 58,
+        "minimum_workspace_free_bytes": 62372872192,
+        "disk_reserve_bytes": 67108864,
+        "wall_seconds": 8.127891716000704,
+        "caveat": "Sampled sum of RSS can miss transient peaks and double-count shared pages; cgroup counters are shared, not a dedicated job limit."
+      }
+    },
+    "final-confined-trace": {
+      "trace": "artifacts/phase7b1/final-confined-trace.json",
+      "trace_sha256": "1d9e99e4320d3a6c3273c5c8fdb8ab0dd266fdf814939c880009ece7a14f0235",
+      "mode_label_caveat": "Early mode field was hardcoded; module inventory determines engine independence",
+      "reelforge_modules_loaded": [
+        "reelforge",
+        "reelforge.audio",
+        "reelforge.core",
+        "reelforge.core.errors",
+        "reelforge.media",
+        "reelforge.core.streams",
+        "reelforge.media.process",
+        "reelforge.contracts",
+        "reelforge.contracts.project",
+        "reelforge.stories",
+        "reelforge.rendering",
+        "reelforge.rendering.model",
+        "reelforge.stories.audio_contract",
+        "reelforge.core.transaction",
+        "reelforge.audio.transaction",
+        "reelforge.audio.registry",
+        "reelforge.audio.processing",
+        "reelforge.reels",
+        "reelforge.media.verify",
+        "reelforge.resources",
+        "reelforge.resources.memory",
+        "reelforge.resources.monitor",
+        "reelforge.resources.deployment",
+        "reelforge.storyboards",
+        "reelforge.characters",
+        "reelforge.characters.rig",
+        "reelforge.characters.contact",
+        "reelforge.characters.presets",
+        "reelforge.direction",
+        "reelforge.blocking",
+        "reelforge.geometry",
+        "reelforge.procedural",
+        "reelforge.scenes",
+        "reelforge.rendering.diagnostic",
+        "reelforge.characters.secondary",
+        "reelforge.characters.rowan",
+        "reelforge.environments",
+        "reelforge.environments.artwork",
+        "reelforge.environments.polish",
+        "reelforge.scenes.transforms",
+        "reelforge.scenes.assets",
+        "reelforge.scenes.contract",
+        "reelforge.scenes.geometry",
+        "reelforge.environments.presets",
+        "reelforge.environments.scene",
+        "reelforge.scenes.graph",
+        "reelforge.procedural.contract",
+        "reelforge.procedural.planning",
+        "reelforge.procedural.drawing",
+        "reelforge.procedural.recipes",
+        "reelforge.procedural.compiler",
+        "reelforge.geometry.contract",
+        "reelforge.geometry.compiler",
+        "reelforge.geometry.composition",
+        "reelforge.blocking.timeline",
+        "reelforge.blocking.contract",
+        "reelforge.direction.contract",
+        "reelforge.characters.transition",
+        "reelforge.blocking.sampling",
+        "reelforge.direction.sampling",
+        "reelforge.storyboards.patterns",
+        "reelforge.storyboards.compiler",
+        "reelforge.reels.contract",
+        "reelforge.reels.workflow",
+        "reelforge.rendering.interface",
+        "reelforge.media.encoder",
+        "reelforge.stories.contract",
+        "reelforge.rendering.backends",
+        "reelforge.rendering.backends.cairo",
+        "reelforge.rendering.video_diagnostic",
+        "reelforge.stories.sampling"
+      ],
+      "identity": {
+        "pid": 11,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "6432",
+        "nspid": "NSpid:\t6432\t11",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "complete": true,
+      "restorations": [
+        {
+          "path": "pytest/audio-silent-template0/.reelforge-encode-nwtd9lax",
+          "last_absent_index": 333,
+          "first_present_index": 341,
+          "last_absent_ns": 4948451472897,
+          "first_present_ns": 4948522438817,
+          "observation_window_ms": 70.96592,
+          "original_inode": {
+            "dev": 27,
+            "ino": 2228466,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793645398337480941,
+            "ctime_ns": 1793645398337480941
+          },
+          "restored_inode": {
+            "dev": 27,
+            "ino": 2228484,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793645402142730594,
+            "ctime_ns": 1793645402142730594
+          },
+          "original_unlinked_inode": {
+            "dev": 27,
+            "ino": 2228466,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793645400697542992,
+            "ctime_ns": 1793645400704250400
+          },
+          "stable_parent_fd_identity": true,
+          "stable_mount_view": true,
+          "active_native_argv": [
+            "ffmpeg",
+            "-nostdin",
+            "-v",
+            "error",
+            "-xerror",
+            "-err_detect",
+            "explode",
+            "-threads",
+            "1",
+            "-protocol_whitelist",
+            "file",
+            "-f",
+            "wav",
+            "-i",
+            "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-final-confined-trace/pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-gilqbpok/.register-x1xoytgi/input.wav",
+            "-map",
+            "0:a:0",
+            "-vn",
+            "-sn",
+            "-dn",
+            "-threads:a",
+            "1",
+            "-f",
+            "null",
+            "-"
+          ],
+          "active_native_pid": 55,
+          "kernel_create_notifications": [
+            {
+              "event": "fanotify",
+              "phase": "native_after_constructor",
+              "monotonic_ns": 4948496724364,
+              "wall_ns": 1793645402137769707,
+              "mask": 1073742080,
+              "pid": 0,
+              "names": [
+                ".reelforge-encode-nwtd9lax"
+              ],
+              "version": 3,
+              "creator_pid_scope": "Unprivileged group: non-listener processes are redacted to 0; calibration required"
+            }
+          ],
+          "kernel_delete_notifications": [
+            {
+              "event": "fanotify",
+              "phase": "owned_cleanup_return_absent",
+              "monotonic_ns": 4947063355214,
+              "wall_ns": 1793645400704400637,
+              "mask": 1073742336,
+              "pid": 11,
+              "names": [
+                ".reelforge-encode-nwtd9lax"
+              ],
+              "version": 3,
+              "creator_pid_scope": "Unprivileged group: non-listener processes are redacted to 0; calibration required"
+            }
+          ],
+          "python_mutation_events_in_window": []
+        },
+        {
+          "path": "pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-gilqbpok",
+          "last_absent_index": 906,
+          "first_present_index": 912,
+          "last_absent_ns": 4951254159991,
+          "first_present_ns": 4951324542240,
+          "observation_window_ms": 70.382249,
+          "original_inode": {
+            "dev": 27,
+            "ino": 2228472,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793645401284590083,
+            "ctime_ns": 1793645401284590083
+          },
+          "restored_inode": {
+            "dev": 27,
+            "ino": 2228503,
+            "mode": 16832,
+            "nlink": 4,
+            "size": 4096,
+            "mtime_ns": 1793645404963377967,
+            "ctime_ns": 1793645404963377967
+          },
+          "original_unlinked_inode": {
+            "dev": 27,
+            "ino": 2228472,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793645403653620596,
+            "ctime_ns": 1793645403658074369
+          },
+          "stable_parent_fd_identity": true,
+          "stable_mount_view": true,
+          "active_native_argv": [
+            "ffprobe",
+            "-v",
+            "error",
+            "-show_entries",
+            "stream=codec_type,codec_name,sample_rate,channels,start_time,duration,time_base:format=duration",
+            "-of",
+            "json",
+            "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-final-confined-trace/pytest/test_two_audio_jobs_persistent0/audio-1/.reelforge-audio-52c4frqs/pending.mp4"
+          ],
+          "active_native_pid": 169,
+          "kernel_create_notifications": [
+            {
+              "event": "fanotify",
+              "phase": "native_before_constructor",
+              "monotonic_ns": 4951326191250,
+              "wall_ns": 1793645404967236573,
+              "mask": 1073742080,
+              "pid": 0,
+              "names": [
+                ".reelforge-audio-gilqbpok"
+              ],
+              "version": 3,
+              "creator_pid_scope": "Unprivileged group: non-listener processes are redacted to 0; calibration required"
+            }
+          ],
+          "kernel_delete_notifications": [
+            {
+              "event": "fanotify",
+              "phase": "owned_cleanup_return_absent",
+              "monotonic_ns": 4950017205407,
+              "wall_ns": 1793645403658250720,
+              "mask": 1073742336,
+              "pid": 11,
+              "names": [
+                ".reelforge-audio-gilqbpok"
+              ],
+              "version": 3,
+              "creator_pid_scope": "Unprivileged group: non-listener processes are redacted to 0; calibration required"
+            }
+          ],
+          "python_mutation_events_in_window": []
+        }
+      ],
+      "native_children": 55,
+      "all_native_children_reaped_and_groups_absent": true,
+      "native_process_records": [
+        {
+          "pid": 15,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 16,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 21,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 22,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 26,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 28,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 29,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 30,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 34,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 35,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 39,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 40,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 44,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 45,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 49,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 50,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 54,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 55,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 59,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 67,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 72,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 73,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 77,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 78,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 79,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 80,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 83,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 86,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 87,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 91,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 125,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 126,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 127,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 131,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 132,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 136,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 137,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 141,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 142,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 146,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 147,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 151,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 152,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 156,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 164,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 169,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 170,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 174,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 175,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 176,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 177,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 180,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 183,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 184,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        },
+        {
+          "pid": 188,
+          "returncode": 0,
+          "waitpid_reports_no_child": true,
+          "process_group_absent": true,
+          "stdout_closed": true,
+          "stderr_closed": true
+        }
+      ],
+      "test_exit_code": 1,
+      "retired_paths_currently_present": {
+        "pytest/audio-silent-template0/.reelforge-encode-nwtd9lax": true,
+        "pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-gilqbpok": true,
+        "pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-gilqbpok/.register-5cl30xt7": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-gilqbpok/.register-8cp5ua1p": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-gilqbpok/.register-1253wfqr": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-gilqbpok/.register-fzfaz86g": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-gilqbpok/.register-veg9osj0": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-gilqbpok/.register-x1xoytgi": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-1/.reelforge-audio-52c4frqs": true,
+        "pytest/test_two_audio_jobs_persistent0/audio-1/.reelforge-audio-52c4frqs/.register-d6ibs2x3": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-1/.reelforge-audio-52c4frqs/.register-mwmtdvsp": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-1/.reelforge-audio-52c4frqs/.register-5pp4eff3": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-1/.reelforge-audio-52c4frqs/.register-54lai3p8": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-1/.reelforge-audio-52c4frqs/.register-_ksduqz2": false,
+        "pytest/test_two_audio_jobs_persistent0/audio-1/.reelforge-audio-52c4frqs/.register-zn246ror": false
+      },
+      "memory": {
+        "oom_telemetry_continuous": true,
+        "memory_policy": "strict",
+        "observed_memory_sources": [
+          "guest_and_cgroup"
+        ],
+        "initial_memory": {
+          "host": {
+            "MemTotal": 10451427328,
+            "MemAvailable": 9770737664,
+            "SwapTotal": 0,
+            "SwapFree": 0
+          },
+          "cgroup_root": "/sys/fs/cgroup",
+          "cgroup": {
+            "memory.max": 8589934592,
+            "memory.current": 1993302016,
+            "memory.peak": 2083954688,
+            "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+            "memory.swap.max": "max",
+            "memory.swap.current": 0,
+            "cpu.max": "800000 100000"
+          },
+          "effective_available_bytes": 6596632576,
+          "memory_policy": "strict",
+          "fallback_enabled": false,
+          "fallback_used": false,
+          "memory_source": "guest_and_cgroup",
+          "controller_state": "observable",
+          "constraints": [
+            {
+              "path": "/sys/fs/cgroup",
+              "limit": 8589934592,
+              "usage": 1993302016
+            }
+          ],
+          "observations": {
+            "/proc/meminfo": {
+              "status": "present",
+              "value": "MemTotal:       10206472 kB\nMemFree:         7978168 kB\nMemAvailable:    9541736 kB\nBuffers:           15572 kB\nCached:          1763880 kB\nSwapCached:            0 kB\nActive:           638280 kB\nInactive:        1224544 kB\nActive(anon):         52 kB\nInactive(anon):   113232 kB\nActive(file):     638228 kB\nInactive(file):  1111312 kB\nUnevictable:       29924 kB\nMlocked:               0 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              1200 kB\nWriteback:             0 kB\nAnonPages:        113640 kB\nMapped:            71684 kB\nShmem:                12 kB\nKReclaimable:      86256 kB\nSlab:             139868 kB\nSReclaimable:      86256 kB\nSUnreclaim:        53612 kB\nKernelStack:        3104 kB\nPageTables:         3820 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     471796 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4456 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      8192 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      165888 kB\nDirectMap2M:     4384768 kB\nDirectMap1G:    16777216 kB"
+            },
+            "/proc/self/cgroup": {
+              "status": "present",
+              "value": "0::/"
+            },
+            "/proc/self/mountinfo": {
+              "status": "present",
+              "value": "93 63 0:27 / / rw,nosuid,nodev,relatime - overlay overlay rw,lowerdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/lower-0,upperdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/upper/upper,workdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/upper/work,index=off,metacopy=off\n94 93 0:30 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw\n95 94 0:31 /null /proc/keys rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n96 94 0:31 /null /proc/timer_list rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n97 94 0:30 /bus /proc/bus ro,nosuid,nodev,relatime - proc proc rw\n98 94 0:30 /fs /proc/fs ro,nosuid,nodev,relatime - proc proc rw\n99 94 0:30 /irq /proc/irq ro,nosuid,nodev,relatime - proc proc rw\n100 94 0:30 /sys /proc/sys ro,nosuid,nodev,relatime - proc proc rw\n101 93 0:31 / /dev rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n102 101 0:32 / /dev/pts rw,nosuid,nodev,noexec,relatime - devpts devpts rw,gid=5,mode=620,ptmxmode=666\n103 101 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw\n104 101 0:25 / /dev/mqueue rw,nosuid,nodev,noexec,relatime - mqueue mqueue rw\n105 93 0:20 / /sys ro,nosuid,nodev,noexec,relatime - sysfs sysfs rw\n106 105 0:24 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup2 rw,nsdelegate\n107 101 0:36 / /dev rw,nosuid,nodev,relatime - tmpfs tmpfs rw,mode=755\n108 107 0:31 /null /dev/null rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n109 107 0:31 /zero /dev/zero rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n110 107 0:31 /full /dev/full rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n111 107 0:31 /random /dev/random rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n112 107 0:31 /urandom /dev/urandom rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n113 107 0:31 /tty /dev/tty rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n114 107 0:37 / /dev/pts rw,nosuid,noexec,relatime - devpts devpts rw,mode=620,ptmxmode=666\n115 107 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw"
+            },
+            "/proc/cgroups": {
+              "status": "present",
+              "value": "#subsys_name\thierarchy\tnum_cgroups\tenabled\ncpu\t0\t4\t1\ncpuacct\t0\t4\t1\nblkio\t0\t4\t1\ndevices\t0\t4\t1\nfreezer\t0\t4\t1\nnet_cls\t0\t4\t1\nperf_event\t0\t4\t1\nnet_prio\t0\t4\t1\nhugetlb\t0\t4\t1\npids\t0\t4\t1"
+            },
+            "/sys/fs/cgroup/cgroup.controllers": {
+              "status": "present",
+              "value": "cpuset cpu io memory hugetlb pids"
+            },
+            "/sys/fs/cgroup/memory.max": {
+              "status": "present",
+              "value": "8589934592"
+            },
+            "/sys/fs/cgroup/memory.current": {
+              "status": "present",
+              "value": "1993302016"
+            },
+            "/sys/fs/cgroup/memory.peak": {
+              "status": "present",
+              "value": "2083954688"
+            },
+            "/sys/fs/cgroup/memory.events": {
+              "status": "present",
+              "value": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+            },
+            "/sys/fs/cgroup/memory.swap.max": {
+              "status": "present",
+              "value": "max"
+            },
+            "/sys/fs/cgroup/memory.swap.current": {
+              "status": "present",
+              "value": "0"
+            },
+            "/sys/fs/cgroup/cpu.max": {
+              "status": "present",
+              "value": "800000 100000"
+            }
+          },
+          "errors": [],
+          "limitations": [
+            "Visible namespaces cannot prove absence of hidden ancestor limits.",
+            "Guest availability may change suddenly with ballooning/external contention.",
+            "Software RSS/reserve monitoring is not a dedicated memory cgroup."
+          ],
+          "kernel_memory_controller": null,
+          "controller_version": "v2"
+        },
+        "final_memory": {
+          "host": {
+            "MemTotal": 10451427328,
+            "MemAvailable": 9688760320,
+            "SwapTotal": 0,
+            "SwapFree": 0
+          },
+          "cgroup_root": "/sys/fs/cgroup",
+          "cgroup": {
+            "memory.max": 8589934592,
+            "memory.current": 2011799552,
+            "memory.peak": 2083954688,
+            "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+            "memory.swap.max": "max",
+            "memory.swap.current": 0,
+            "cpu.max": "800000 100000"
+          },
+          "effective_available_bytes": 6578135040,
+          "memory_policy": "strict",
+          "fallback_enabled": false,
+          "fallback_used": false,
+          "memory_source": "guest_and_cgroup",
+          "controller_state": "observable",
+          "constraints": [
+            {
+              "path": "/sys/fs/cgroup",
+              "limit": 8589934592,
+              "usage": 2011799552
+            }
+          ],
+          "observations": {
+            "/proc/meminfo": {
+              "status": "present",
+              "value": "MemTotal:       10206472 kB\nMemFree:         7894352 kB\nMemAvailable:    9461680 kB\nBuffers:           15652 kB\nCached:          1767332 kB\nSwapCached:            0 kB\nActive:           639776 kB\nInactive:        1240648 kB\nActive(anon):         92 kB\nInactive(anon):   127172 kB\nActive(file):     639684 kB\nInactive(file):  1113476 kB\nUnevictable:       29988 kB\nMlocked:              64 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              3960 kB\nWriteback:            92 kB\nAnonPages:        127280 kB\nMapped:            73320 kB\nShmem:                12 kB\nKReclaimable:      86532 kB\nSlab:             139848 kB\nSReclaimable:      86532 kB\nSUnreclaim:        53316 kB\nKernelStack:        3252 kB\nPageTables:         3980 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     527216 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4632 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      8192 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      186368 kB\nDirectMap2M:     4364288 kB\nDirectMap1G:    16777216 kB"
+            },
+            "/proc/self/cgroup": {
+              "status": "present",
+              "value": "0::/"
+            },
+            "/proc/self/mountinfo": {
+              "status": "present",
+              "value": "93 63 0:27 / / rw,nosuid,nodev,relatime - overlay overlay rw,lowerdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/lower-0,upperdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/upper/upper,workdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/upper/work,index=off,metacopy=off\n94 93 0:30 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw\n95 94 0:31 /null /proc/keys rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n96 94 0:31 /null /proc/timer_list rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n97 94 0:30 /bus /proc/bus ro,nosuid,nodev,relatime - proc proc rw\n98 94 0:30 /fs /proc/fs ro,nosuid,nodev,relatime - proc proc rw\n99 94 0:30 /irq /proc/irq ro,nosuid,nodev,relatime - proc proc rw\n100 94 0:30 /sys /proc/sys ro,nosuid,nodev,relatime - proc proc rw\n101 93 0:31 / /dev rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n102 101 0:32 / /dev/pts rw,nosuid,nodev,noexec,relatime - devpts devpts rw,gid=5,mode=620,ptmxmode=666\n103 101 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw\n104 101 0:25 / /dev/mqueue rw,nosuid,nodev,noexec,relatime - mqueue mqueue rw\n105 93 0:20 / /sys ro,nosuid,nodev,noexec,relatime - sysfs sysfs rw\n106 105 0:24 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup2 rw,nsdelegate\n107 101 0:36 / /dev rw,nosuid,nodev,relatime - tmpfs tmpfs rw,mode=755\n108 107 0:31 /null /dev/null rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n109 107 0:31 /zero /dev/zero rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n110 107 0:31 /full /dev/full rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n111 107 0:31 /random /dev/random rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n112 107 0:31 /urandom /dev/urandom rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n113 107 0:31 /tty /dev/tty rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n114 107 0:37 / /dev/pts rw,nosuid,noexec,relatime - devpts devpts rw,mode=620,ptmxmode=666\n115 107 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw"
+            },
+            "/proc/cgroups": {
+              "status": "present",
+              "value": "#subsys_name\thierarchy\tnum_cgroups\tenabled\ncpu\t0\t4\t1\ncpuacct\t0\t4\t1\nblkio\t0\t4\t1\ndevices\t0\t4\t1\nfreezer\t0\t4\t1\nnet_cls\t0\t4\t1\nperf_event\t0\t4\t1\nnet_prio\t0\t4\t1\nhugetlb\t0\t4\t1\npids\t0\t4\t1"
+            },
+            "/sys/fs/cgroup/cgroup.controllers": {
+              "status": "present",
+              "value": "cpuset cpu io memory hugetlb pids"
+            },
+            "/sys/fs/cgroup/memory.max": {
+              "status": "present",
+              "value": "8589934592"
+            },
+            "/sys/fs/cgroup/memory.current": {
+              "status": "present",
+              "value": "2011799552"
+            },
+            "/sys/fs/cgroup/memory.peak": {
+              "status": "present",
+              "value": "2083954688"
+            },
+            "/sys/fs/cgroup/memory.events": {
+              "status": "present",
+              "value": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+            },
+            "/sys/fs/cgroup/memory.swap.max": {
+              "status": "present",
+              "value": "max"
+            },
+            "/sys/fs/cgroup/memory.swap.current": {
+              "status": "present",
+              "value": "0"
+            },
+            "/sys/fs/cgroup/cpu.max": {
+              "status": "present",
+              "value": "800000 100000"
+            }
+          },
+          "errors": [],
+          "limitations": [
+            "Visible namespaces cannot prove absence of hidden ancestor limits.",
+            "Guest availability may change suddenly with ballooning/external contention.",
+            "Software RSS/reserve monitoring is not a dedicated memory cgroup."
+          ],
+          "kernel_memory_controller": null,
+          "controller_version": "v2"
+        },
+        "initial_renderer_rss_bytes": 36270080,
+        "final_renderer_rss_bytes": 51867648,
+        "renderer_peak_rss_bytes": 51871744,
+        "waited_child_max_rss_bytes": 77152256,
+        "encoder_peak_rss_bytes": 0,
+        "all_children_peak_rss_bytes": 77873152,
+        "estimated_simultaneous_tree_peak_rss_bytes": 126337024,
+        "sampling_interval_seconds": 0.01,
+        "samples": 612,
+        "job_budget_bytes": 268435456,
+        "reserve_bytes": 67108864,
+        "limit_reason": null,
+        "minimum_effective_available_bytes": 6529458176,
+        "maximum_effective_available_bytes": 6596632576,
+        "memory_observations": 63,
+        "minimum_workspace_free_bytes": 62357848064,
+        "disk_reserve_bytes": 67108864,
+        "wall_seconds": 8.514195512000697,
+        "caveat": "Sampled sum of RSS can miss transient peaks and double-count shared pages; cgroup counters are shared, not a dedicated job limit."
+      }
+    },
+    "mp4-control": {
+      "trace": "artifacts/phase7b1/mp4-control/trace.json",
+      "trace_sha256": "e28b254ccaaadc9ffcd5c0c9648e56e7ea9505478613c00e4848b152da178b1e",
+      "mode_label_caveat": "Early mode field was hardcoded; module inventory determines engine independence",
+      "reelforge_modules_loaded": [],
+      "identity": {
+        "pid": 23,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "4924",
+        "nspid": "NSpid:\t4924\t23",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "complete": true,
+      "restorations": [],
+      "native_children": 0,
+      "all_native_children_reaped_and_groups_absent": false,
+      "native_process_records": [],
+      "test_exit_code": null,
+      "retired_paths_currently_present": {
+        ".reelforge-audio-4vph4ws7": false
+      },
+      "memory": null
+    }
+  },
+  "confined_child_guard_verified": true,
+  "guard_scope": "Diagnostic child and inherited descendants only; no production or host policy changes",
+  "external_actor_isolated_from_traced_engine_processes": true,
+  "specific_external_writer_identity": null,
+  "host_cleanup_gate": "blocked",
+  "full_suites_run": 0,
+  "original_phase7b_movies_regenerated": false,
+  "result_scope": "Recreation outside traced Python parent and its 55 confined native children; host service/mechanism remains unidentified"
+}

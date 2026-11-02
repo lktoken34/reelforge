@@ -1,0 +1,12 @@
+E501 Line too long (132 > 100)
+   --> tools/trace_reel_cleanup.py:194:101
+    |
+192 |               patch.object(media_encoder, "OwnedDirectory", ObservedOwner),
+193 |               patch.object(core_transaction, "OwnedDirectory", ObservedOwner)):
+194 |             code = pytest.main(["-q", "tests/test_transaction_cleanup.py::test_two_audio_jobs_persistently_clean_after_native_work",
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+195 |                 "--basetemp", str(probe.root / "pytest"),
+196 |                 "--junitxml=" + str(probe.root / "targeted.xml")])
+    |
+
+Found 2 errors (1 fixed, 1 remaining).

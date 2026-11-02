@@ -1,0 +1,2523 @@
+{
+  "probe_version": 1,
+  "mode": "engine-independent control",
+  "reelforge_modules_loaded": [],
+  "identity": {
+    "pid": 5,
+    "ppid": 2,
+    "pgid": 1,
+    "procfs_self": "4667",
+    "nspid": "NSpid:\t4667\t5",
+    "pid_ns": "pid:[4026532277]",
+    "mount_ns": "mnt:[4026532275]"
+  },
+  "probe_root": "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-site-control",
+  "events": [
+    {
+      "event": "initial",
+      "phase": "initial",
+      "monotonic_ns": 3537897676314,
+      "wall_ns": 1793643991538722478,
+      "identity": {
+        "pid": 5,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "4667",
+        "nspid": "NSpid:\t4667\t5",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228239\n"
+      }
+    },
+    {
+      "event": "python_mutation_audit",
+      "phase": "initial",
+      "monotonic_ns": 3537897732739,
+      "wall_ns": 1793643991538778143,
+      "operation": "os.mkdir",
+      "arguments": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-site-control/retired-canary-5ex8nlfl"
+      ]
+    },
+    {
+      "event": "inotify",
+      "phase": "initial",
+      "monotonic_ns": 3537897864349,
+      "wall_ns": 1793643991538909812,
+      "watch": 1,
+      "mask": 1073742080,
+      "cookie": 0,
+      "name": "retired-canary-5ex8nlfl",
+      "timestamp_scope": "Userspace drain time, writer PID unavailable"
+    },
+    {
+      "event": "inotify",
+      "phase": "native_named_output_before_spawn",
+      "monotonic_ns": 3537898064692,
+      "wall_ns": 1793643991539110136,
+      "watch": 1,
+      "mask": 1073741856,
+      "cookie": 0,
+      "name": "retired-canary-5ex8nlfl",
+      "timestamp_scope": "Userspace drain time, writer PID unavailable"
+    },
+    {
+      "event": "snapshot",
+      "phase": "native_named_output_before_spawn",
+      "monotonic_ns": 3537898612922,
+      "wall_ns": 1793643991539658396,
+      "label": "native_named_output_before_spawn",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793643991536266330,
+        "ctime_ns": 1793643991536266330
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793643991536266330,
+        "ctime_ns": 1793643991536266330
+      },
+      "paths": {
+        "retired-canary-5ex8nlfl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991536266330,
+            "ctime_ns": 1793643991536266330
+          },
+          "retired": false,
+          "path": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991536266330,
+            "ctime_ns": 1793643991536266330
+          },
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991536266330,
+            "ctime_ns": 1793643991536266330
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228239\n"
+      }
+    },
+    {
+      "event": "python_spawn_audit",
+      "phase": "native_named_output",
+      "monotonic_ns": 3537898671421,
+      "wall_ns": 1793643991539716784,
+      "executable": "ffmpeg",
+      "argv": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-filter_threads",
+        "1",
+        "-f",
+        "lavfi",
+        "-i",
+        "sine=frequency=440:sample_rate=48000",
+        "-t",
+        "0.01",
+        "-c:a",
+        "pcm_s16le",
+        "-threads:a",
+        "1",
+        "-n",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-site-control/retired-canary-5ex8nlfl/native.wav"
+      ]
+    },
+    {
+      "event": "popen_return",
+      "phase": "native_named_output",
+      "monotonic_ns": 3537899058287,
+      "wall_ns": 1793643991540103700,
+      "label": "native_named_output",
+      "pid": 7,
+      "pgid": 7,
+      "parent_identity": {
+        "pid": 5,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "4667",
+        "nspid": "NSpid:\t4667\t5",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-filter_threads",
+        "1",
+        "-f",
+        "lavfi",
+        "-i",
+        "sine=frequency=440:sample_rate=48000",
+        "-t",
+        "0.01",
+        "-c:a",
+        "pcm_s16le",
+        "-threads:a",
+        "1",
+        "-n",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-site-control/retired-canary-5ex8nlfl/native.wav"
+      ]
+    },
+    {
+      "event": "snapshot",
+      "phase": "native_named_output_after_popen_return",
+      "monotonic_ns": 3537899678105,
+      "wall_ns": 1793643991540723669,
+      "label": "native_named_output_after_popen_return",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793643991536266330,
+        "ctime_ns": 1793643991536266330
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793643991536266330,
+        "ctime_ns": 1793643991536266330
+      },
+      "paths": {
+        "retired-canary-5ex8nlfl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991536266330,
+            "ctime_ns": 1793643991536266330
+          },
+          "retired": false,
+          "path": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991536266330,
+            "ctime_ns": 1793643991536266330
+          },
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991536266330,
+            "ctime_ns": 1793643991536266330
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228239\n"
+      }
+    },
+    {
+      "event": "child_reaped",
+      "phase": "native_named_output_after_popen_return",
+      "monotonic_ns": 3537965447979,
+      "wall_ns": 1793643991606494234,
+      "label": "native_named_output",
+      "pid": 7,
+      "returncode": 0,
+      "waitpid_reports_no_child": true,
+      "process_group_absent": true,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "event": "snapshot",
+      "phase": "native_named_output_after_reaping",
+      "monotonic_ns": 3537966253038,
+      "wall_ns": 1793643991607298502,
+      "label": "native_named_output_after_reaping",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793643991536266330,
+        "ctime_ns": 1793643991536266330
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793643991536266330,
+        "ctime_ns": 1793643991536266330
+      },
+      "paths": {
+        "retired-canary-5ex8nlfl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991536266330,
+            "ctime_ns": 1793643991536266330
+          },
+          "retired": false,
+          "path": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991600268274,
+            "ctime_ns": 1793643991600268274
+          },
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991600268274,
+            "ctime_ns": 1793643991600268274
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228239\n"
+      }
+    },
+    {
+      "event": "snapshot",
+      "phase": "native_named_probe_before_spawn",
+      "monotonic_ns": 3537966978787,
+      "wall_ns": 1793643991608024230,
+      "label": "native_named_probe_before_spawn",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793643991536266330,
+        "ctime_ns": 1793643991536266330
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793643991536266330,
+        "ctime_ns": 1793643991536266330
+      },
+      "paths": {
+        "retired-canary-5ex8nlfl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991536266330,
+            "ctime_ns": 1793643991536266330
+          },
+          "retired": false,
+          "path": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991600268274,
+            "ctime_ns": 1793643991600268274
+          },
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991600268274,
+            "ctime_ns": 1793643991600268274
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228239\n"
+      }
+    },
+    {
+      "event": "python_spawn_audit",
+      "phase": "native_named_probe",
+      "monotonic_ns": 3537967047051,
+      "wall_ns": 1793643991608092414,
+      "executable": "ffprobe",
+      "argv": [
+        "ffprobe",
+        "-v",
+        "error",
+        "-show_entries",
+        "format=duration",
+        "-of",
+        "json",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-site-control/retired-canary-5ex8nlfl/native.wav"
+      ]
+    },
+    {
+      "event": "popen_return",
+      "phase": "native_named_probe",
+      "monotonic_ns": 3537967677816,
+      "wall_ns": 1793643991608723249,
+      "label": "native_named_probe",
+      "pid": 20,
+      "pgid": 20,
+      "parent_identity": {
+        "pid": 5,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "4667",
+        "nspid": "NSpid:\t4667\t5",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "command": [
+        "ffprobe",
+        "-v",
+        "error",
+        "-show_entries",
+        "format=duration",
+        "-of",
+        "json",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-site-control/retired-canary-5ex8nlfl/native.wav"
+      ]
+    },
+    {
+      "event": "snapshot",
+      "phase": "native_named_probe_after_popen_return",
+      "monotonic_ns": 3537968541694,
+      "wall_ns": 1793643991609587277,
+      "label": "native_named_probe_after_popen_return",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793643991536266330,
+        "ctime_ns": 1793643991536266330
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793643991536266330,
+        "ctime_ns": 1793643991536266330
+      },
+      "paths": {
+        "retired-canary-5ex8nlfl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991536266330,
+            "ctime_ns": 1793643991536266330
+          },
+          "retired": false,
+          "path": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991600268274,
+            "ctime_ns": 1793643991600268274
+          },
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991600268274,
+            "ctime_ns": 1793643991600268274
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228239\n"
+      }
+    },
+    {
+      "event": "child_reaped",
+      "phase": "native_named_probe_after_popen_return",
+      "monotonic_ns": 3538030711005,
+      "wall_ns": 1793643991671757480,
+      "label": "native_named_probe",
+      "pid": 20,
+      "returncode": 0,
+      "waitpid_reports_no_child": true,
+      "process_group_absent": true,
+      "stdout": "{\n    \"format\": {\n        \"duration\": \"0.010000\"\n    }\n}\n",
+      "stderr": ""
+    },
+    {
+      "event": "snapshot",
+      "phase": "native_named_probe_after_reaping",
+      "monotonic_ns": 3538031664869,
+      "wall_ns": 1793643991672710313,
+      "label": "native_named_probe_after_reaping",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793643991536266330,
+        "ctime_ns": 1793643991536266330
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793643991536266330,
+        "ctime_ns": 1793643991536266330
+      },
+      "paths": {
+        "retired-canary-5ex8nlfl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991536266330,
+            "ctime_ns": 1793643991536266330
+          },
+          "retired": false,
+          "path": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991600268274,
+            "ctime_ns": 1793643991600268274
+          },
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991600268274,
+            "ctime_ns": 1793643991600268274
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228239\n"
+      }
+    },
+    {
+      "event": "snapshot",
+      "phase": "canary_before_cleanup",
+      "monotonic_ns": 3538032347613,
+      "wall_ns": 1793643991673393017,
+      "label": "canary_before_cleanup",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793643991536266330,
+        "ctime_ns": 1793643991536266330
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 3,
+        "size": 4096,
+        "mtime_ns": 1793643991536266330,
+        "ctime_ns": 1793643991536266330
+      },
+      "paths": {
+        "retired-canary-5ex8nlfl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991536266330,
+            "ctime_ns": 1793643991536266330
+          },
+          "retired": false,
+          "path": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991600268274,
+            "ctime_ns": 1793643991600268274
+          },
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991600268274,
+            "ctime_ns": 1793643991600268274
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228239\n"
+      }
+    },
+    {
+      "event": "python_mutation_audit",
+      "phase": "canary_before_cleanup",
+      "monotonic_ns": 3538032359361,
+      "wall_ns": 1793643991673404684,
+      "operation": "os.remove",
+      "arguments": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-site-control/retired-canary-5ex8nlfl/marker.txt"
+      ]
+    },
+    {
+      "event": "python_mutation_audit",
+      "phase": "canary_before_cleanup",
+      "monotonic_ns": 3538032399422,
+      "wall_ns": 1793643991673444735,
+      "operation": "os.remove",
+      "arguments": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-site-control/retired-canary-5ex8nlfl/native.wav"
+      ]
+    },
+    {
+      "event": "python_mutation_audit",
+      "phase": "canary_before_cleanup",
+      "monotonic_ns": 3538032416027,
+      "wall_ns": 1793643991673461340,
+      "operation": "os.rmdir",
+      "arguments": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b1-site-control/retired-canary-5ex8nlfl"
+      ]
+    },
+    {
+      "event": "snapshot",
+      "phase": "canary_after_cleanup",
+      "monotonic_ns": 3538033302099,
+      "wall_ns": 1793643991674347552,
+      "label": "canary_after_cleanup",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "paths": {
+        "retired-canary-5ex8nlfl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991536266330,
+            "ctime_ns": 1793643991536266330
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643991672270462,
+            "ctime_ns": 1793643991672270462
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228239\n"
+      }
+    },
+    {
+      "event": "inotify",
+      "phase": "canary_after_cleanup",
+      "monotonic_ns": 3538033345780,
+      "wall_ns": 1793643991674391274,
+      "watch": 1,
+      "mask": 1073742336,
+      "cookie": 0,
+      "name": "retired-canary-5ex8nlfl",
+      "timestamp_scope": "Userspace drain time, writer PID unavailable"
+    },
+    {
+      "event": "snapshot",
+      "phase": "no_child_time_control",
+      "monotonic_ns": 3538134853746,
+      "wall_ns": 1793643991775900170,
+      "label": "no_child_time_control",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "paths": {
+        "retired-canary-5ex8nlfl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991536266330,
+            "ctime_ns": 1793643991536266330
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643991672270462,
+            "ctime_ns": 1793643991672270462
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228239\n"
+      }
+    },
+    {
+      "event": "snapshot",
+      "phase": "true_noop_before_spawn",
+      "monotonic_ns": 3538135670322,
+      "wall_ns": 1793643991776715806,
+      "label": "true_noop_before_spawn",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "paths": {
+        "retired-canary-5ex8nlfl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991536266330,
+            "ctime_ns": 1793643991536266330
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643991672270462,
+            "ctime_ns": 1793643991672270462
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228239\n"
+      }
+    },
+    {
+      "event": "python_spawn_audit",
+      "phase": "true_noop",
+      "monotonic_ns": 3538135737915,
+      "wall_ns": 1793643991776783258,
+      "executable": "/bin/true",
+      "argv": [
+        "/bin/true"
+      ]
+    },
+    {
+      "event": "popen_return",
+      "phase": "true_noop",
+      "monotonic_ns": 3538136179283,
+      "wall_ns": 1793643991777224726,
+      "label": "true_noop",
+      "pid": 21,
+      "pgid": 21,
+      "parent_identity": {
+        "pid": 5,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "4667",
+        "nspid": "NSpid:\t4667\t5",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "command": [
+        "/bin/true"
+      ]
+    },
+    {
+      "event": "snapshot",
+      "phase": "true_noop_after_popen_return",
+      "monotonic_ns": 3538137055660,
+      "wall_ns": 1793643991778101234,
+      "label": "true_noop_after_popen_return",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "paths": {
+        "retired-canary-5ex8nlfl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991536266330,
+            "ctime_ns": 1793643991536266330
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643991672270462,
+            "ctime_ns": 1793643991672270462
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228239\n"
+      }
+    },
+    {
+      "event": "child_reaped",
+      "phase": "true_noop_after_popen_return",
+      "monotonic_ns": 3538137393802,
+      "wall_ns": 1793643991778439205,
+      "label": "true_noop",
+      "pid": 21,
+      "returncode": 0,
+      "waitpid_reports_no_child": true,
+      "process_group_absent": true,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "event": "snapshot",
+      "phase": "true_noop_after_reaping",
+      "monotonic_ns": 3538137949003,
+      "wall_ns": 1793643991778994426,
+      "label": "true_noop_after_reaping",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "paths": {
+        "retired-canary-5ex8nlfl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991536266330,
+            "ctime_ns": 1793643991536266330
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643991672270462,
+            "ctime_ns": 1793643991672270462
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228239\n"
+      }
+    },
+    {
+      "event": "snapshot",
+      "phase": "python_noop_before_spawn",
+      "monotonic_ns": 3538139126626,
+      "wall_ns": 1793643991780172050,
+      "label": "python_noop_before_spawn",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "paths": {
+        "retired-canary-5ex8nlfl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991536266330,
+            "ctime_ns": 1793643991536266330
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643991672270462,
+            "ctime_ns": 1793643991672270462
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228239\n"
+      }
+    },
+    {
+      "event": "python_spawn_audit",
+      "phase": "python_noop",
+      "monotonic_ns": 3538139170703,
+      "wall_ns": 1793643991780216086,
+      "executable": "/workspace/scratch/ade48aa5d272/reelforge-phase6b/.venv/bin/python",
+      "argv": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/.venv/bin/python",
+        "-I",
+        "-S",
+        "-c",
+        "import os,time;print(\"child_pid\",os.getpid());time.sleep(.03)"
+      ]
+    },
+    {
+      "event": "popen_return",
+      "phase": "python_noop",
+      "monotonic_ns": 3538140197458,
+      "wall_ns": 1793643991781242911,
+      "label": "python_noop",
+      "pid": 22,
+      "pgid": 22,
+      "parent_identity": {
+        "pid": 5,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "4667",
+        "nspid": "NSpid:\t4667\t5",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "command": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/.venv/bin/python",
+        "-I",
+        "-S",
+        "-c",
+        "import os,time;print(\"child_pid\",os.getpid());time.sleep(.03)"
+      ]
+    },
+    {
+      "event": "snapshot",
+      "phase": "python_noop_after_popen_return",
+      "monotonic_ns": 3538140788413,
+      "wall_ns": 1793643991781833796,
+      "label": "python_noop_after_popen_return",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "paths": {
+        "retired-canary-5ex8nlfl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991536266330,
+            "ctime_ns": 1793643991536266330
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643991672270462,
+            "ctime_ns": 1793643991672270462
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228239\n"
+      }
+    },
+    {
+      "event": "child_reaped",
+      "phase": "python_noop_after_popen_return",
+      "monotonic_ns": 3538182636953,
+      "wall_ns": 1793643991823683017,
+      "label": "python_noop",
+      "pid": 22,
+      "returncode": 0,
+      "waitpid_reports_no_child": true,
+      "process_group_absent": true,
+      "stdout": "child_pid 22\n",
+      "stderr": ""
+    },
+    {
+      "event": "snapshot",
+      "phase": "python_noop_after_reaping",
+      "monotonic_ns": 3538183367659,
+      "wall_ns": 1793643991824413083,
+      "label": "python_noop_after_reaping",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "paths": {
+        "retired-canary-5ex8nlfl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991536266330,
+            "ctime_ns": 1793643991536266330
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643991672270462,
+            "ctime_ns": 1793643991672270462
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228239\n"
+      }
+    },
+    {
+      "event": "snapshot",
+      "phase": "ffmpeg_version_before_spawn",
+      "monotonic_ns": 3538185296230,
+      "wall_ns": 1793643991826341733,
+      "label": "ffmpeg_version_before_spawn",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "paths": {
+        "retired-canary-5ex8nlfl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991536266330,
+            "ctime_ns": 1793643991536266330
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643991672270462,
+            "ctime_ns": 1793643991672270462
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228239\n"
+      }
+    },
+    {
+      "event": "python_spawn_audit",
+      "phase": "ffmpeg_version",
+      "monotonic_ns": 3538185360467,
+      "wall_ns": 1793643991826405800,
+      "executable": "ffmpeg",
+      "argv": [
+        "ffmpeg",
+        "-version"
+      ]
+    },
+    {
+      "event": "popen_return",
+      "phase": "ffmpeg_version",
+      "monotonic_ns": 3538186292403,
+      "wall_ns": 1793643991827338016,
+      "label": "ffmpeg_version",
+      "pid": 23,
+      "pgid": 23,
+      "parent_identity": {
+        "pid": 5,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "4667",
+        "nspid": "NSpid:\t4667\t5",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "command": [
+        "ffmpeg",
+        "-version"
+      ]
+    },
+    {
+      "event": "snapshot",
+      "phase": "ffmpeg_version_after_popen_return",
+      "monotonic_ns": 3538187258836,
+      "wall_ns": 1793643991828304430,
+      "label": "ffmpeg_version_after_popen_return",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "paths": {
+        "retired-canary-5ex8nlfl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991536266330,
+            "ctime_ns": 1793643991536266330
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643991672270462,
+            "ctime_ns": 1793643991672270462
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228239\n"
+      }
+    },
+    {
+      "event": "child_reaped",
+      "phase": "ffmpeg_version_after_popen_return",
+      "monotonic_ns": 3538263373079,
+      "wall_ns": 1793643991904419413,
+      "label": "ffmpeg_version",
+      "pid": 23,
+      "returncode": 0,
+      "waitpid_reports_no_child": true,
+      "process_group_absent": true,
+      "stdout": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers\nbuilt with gcc 13 (Ubuntu 13.2.0-23ubuntu3)\nconfiguration: --prefix=/usr --extra-version=3ubuntu5 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --disable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared\nlibavutil      58. 29.100 / 58. 29.100\nlibavcodec     60. 31.102 / 60. 31.102\nlibavformat    60. 16.100 / 60. 16.100\nlibavdevice    60.  3.100 / 60.  3.100\nlibavfilter     9. 12.100 /  9. 12.100\nlibswscale      7.  5.100 /  7.  5.100\nlibswresample   4. 12.100 /  4. 12.100\nlibpostproc    57.  3.100 / 57.  3.100\n",
+      "stderr": ""
+    },
+    {
+      "event": "snapshot",
+      "phase": "ffmpeg_version_after_reaping",
+      "monotonic_ns": 3538264397911,
+      "wall_ns": 1793643991905443344,
+      "label": "ffmpeg_version_after_reaping",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "paths": {
+        "retired-canary-5ex8nlfl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991536266330,
+            "ctime_ns": 1793643991536266330
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643991672270462,
+            "ctime_ns": 1793643991672270462
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228239\n"
+      }
+    },
+    {
+      "event": "snapshot",
+      "phase": "ffmpeg_null_before_spawn",
+      "monotonic_ns": 3538265111291,
+      "wall_ns": 1793643991906156844,
+      "label": "ffmpeg_null_before_spawn",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "paths": {
+        "retired-canary-5ex8nlfl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991536266330,
+            "ctime_ns": 1793643991536266330
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643991672270462,
+            "ctime_ns": 1793643991672270462
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228239\n"
+      }
+    },
+    {
+      "event": "python_spawn_audit",
+      "phase": "ffmpeg_null",
+      "monotonic_ns": 3538265170350,
+      "wall_ns": 1793643991906215714,
+      "executable": "ffmpeg",
+      "argv": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-filter_threads",
+        "1",
+        "-f",
+        "lavfi",
+        "-i",
+        "anullsrc=r=48000:cl=stereo",
+        "-t",
+        "0.01",
+        "-threads:a",
+        "1",
+        "-f",
+        "null",
+        "-"
+      ]
+    },
+    {
+      "event": "popen_return",
+      "phase": "ffmpeg_null",
+      "monotonic_ns": 3538265685551,
+      "wall_ns": 1793643991906730984,
+      "label": "ffmpeg_null",
+      "pid": 24,
+      "pgid": 24,
+      "parent_identity": {
+        "pid": 5,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "4667",
+        "nspid": "NSpid:\t4667\t5",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-filter_threads",
+        "1",
+        "-f",
+        "lavfi",
+        "-i",
+        "anullsrc=r=48000:cl=stereo",
+        "-t",
+        "0.01",
+        "-threads:a",
+        "1",
+        "-f",
+        "null",
+        "-"
+      ]
+    },
+    {
+      "event": "snapshot",
+      "phase": "ffmpeg_null_after_popen_return",
+      "monotonic_ns": 3538266434815,
+      "wall_ns": 1793643991907480229,
+      "label": "ffmpeg_null_after_popen_return",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "paths": {
+        "retired-canary-5ex8nlfl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991536266330,
+            "ctime_ns": 1793643991536266330
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643991672270462,
+            "ctime_ns": 1793643991672270462
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228239\n"
+      }
+    },
+    {
+      "event": "child_reaped",
+      "phase": "ffmpeg_null_after_popen_return",
+      "monotonic_ns": 3538329303952,
+      "wall_ns": 1793643991970350006,
+      "label": "ffmpeg_null",
+      "pid": 24,
+      "returncode": 0,
+      "waitpid_reports_no_child": true,
+      "process_group_absent": true,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "event": "snapshot",
+      "phase": "ffmpeg_null_after_reaping",
+      "monotonic_ns": 3538330175562,
+      "wall_ns": 1793643991971221035,
+      "label": "ffmpeg_null_after_reaping",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "paths": {
+        "retired-canary-5ex8nlfl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991536266330,
+            "ctime_ns": 1793643991536266330
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643991672270462,
+            "ctime_ns": 1793643991672270462
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228239\n"
+      }
+    },
+    {
+      "event": "snapshot",
+      "phase": "existing_movie_probe_before_spawn",
+      "monotonic_ns": 3538330880289,
+      "wall_ns": 1793643991971925702,
+      "label": "existing_movie_probe_before_spawn",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "paths": {
+        "retired-canary-5ex8nlfl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991536266330,
+            "ctime_ns": 1793643991536266330
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643991672270462,
+            "ctime_ns": 1793643991672270462
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228239\n"
+      }
+    },
+    {
+      "event": "python_spawn_audit",
+      "phase": "existing_movie_probe",
+      "monotonic_ns": 3538330934260,
+      "wall_ns": 1793643991971979604,
+      "executable": "ffprobe",
+      "argv": [
+        "ffprobe",
+        "-v",
+        "error",
+        "-show_entries",
+        "format=duration",
+        "-of",
+        "json",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7b/proofs/silent_signal/reel.mp4"
+      ]
+    },
+    {
+      "event": "popen_return",
+      "phase": "existing_movie_probe",
+      "monotonic_ns": 3538331469245,
+      "wall_ns": 1793643991972514708,
+      "label": "existing_movie_probe",
+      "pid": 37,
+      "pgid": 37,
+      "parent_identity": {
+        "pid": 5,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "4667",
+        "nspid": "NSpid:\t4667\t5",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "command": [
+        "ffprobe",
+        "-v",
+        "error",
+        "-show_entries",
+        "format=duration",
+        "-of",
+        "json",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7b/proofs/silent_signal/reel.mp4"
+      ]
+    },
+    {
+      "event": "snapshot",
+      "phase": "existing_movie_probe_after_popen_return",
+      "monotonic_ns": 3538332286332,
+      "wall_ns": 1793643991973331766,
+      "label": "existing_movie_probe_after_popen_return",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "paths": {
+        "retired-canary-5ex8nlfl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991536266330,
+            "ctime_ns": 1793643991536266330
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643991672270462,
+            "ctime_ns": 1793643991672270462
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228239\n"
+      }
+    },
+    {
+      "event": "child_reaped",
+      "phase": "existing_movie_probe_after_popen_return",
+      "monotonic_ns": 3538495703926,
+      "wall_ns": 1793643992136750211,
+      "label": "existing_movie_probe",
+      "pid": 37,
+      "returncode": 0,
+      "waitpid_reports_no_child": true,
+      "process_group_absent": true,
+      "stdout": "{\n    \"format\": {\n        \"duration\": \"3.000000\"\n    }\n}\n",
+      "stderr": ""
+    },
+    {
+      "event": "snapshot",
+      "phase": "existing_movie_probe_after_reaping",
+      "monotonic_ns": 3538497746960,
+      "wall_ns": 1793643992138792384,
+      "label": "existing_movie_probe_after_reaping",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "paths": {
+        "retired-canary-5ex8nlfl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991536266330,
+            "ctime_ns": 1793643991536266330
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643991672270462,
+            "ctime_ns": 1793643991672270462
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228239\n"
+      }
+    },
+    {
+      "event": "snapshot",
+      "phase": "existing_movie_decode_before_spawn",
+      "monotonic_ns": 3538498271244,
+      "wall_ns": 1793643992139316627,
+      "label": "existing_movie_decode_before_spawn",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "paths": {
+        "retired-canary-5ex8nlfl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991536266330,
+            "ctime_ns": 1793643991536266330
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643991672270462,
+            "ctime_ns": 1793643991672270462
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228239\n"
+      }
+    },
+    {
+      "event": "python_spawn_audit",
+      "phase": "existing_movie_decode",
+      "monotonic_ns": 3538498325567,
+      "wall_ns": 1793643992139370900,
+      "executable": "ffmpeg",
+      "argv": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-i",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7b/proofs/silent_signal/reel.mp4",
+        "-map",
+        "0:a:0",
+        "-vn",
+        "-threads:a",
+        "1",
+        "-t",
+        "0.01",
+        "-f",
+        "null",
+        "-"
+      ]
+    },
+    {
+      "event": "popen_return",
+      "phase": "existing_movie_decode",
+      "monotonic_ns": 3538499184197,
+      "wall_ns": 1793643992140229640,
+      "label": "existing_movie_decode",
+      "pid": 38,
+      "pgid": 38,
+      "parent_identity": {
+        "pid": 5,
+        "ppid": 2,
+        "pgid": 1,
+        "procfs_self": "4667",
+        "nspid": "NSpid:\t4667\t5",
+        "pid_ns": "pid:[4026532277]",
+        "mount_ns": "mnt:[4026532275]"
+      },
+      "command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-i",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase7b/proofs/silent_signal/reel.mp4",
+        "-map",
+        "0:a:0",
+        "-vn",
+        "-threads:a",
+        "1",
+        "-t",
+        "0.01",
+        "-f",
+        "null",
+        "-"
+      ]
+    },
+    {
+      "event": "snapshot",
+      "phase": "existing_movie_decode_after_popen_return",
+      "monotonic_ns": 3538500092993,
+      "wall_ns": 1793643992141138416,
+      "label": "existing_movie_decode_after_popen_return",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "paths": {
+        "retired-canary-5ex8nlfl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991536266330,
+            "ctime_ns": 1793643991536266330
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643991672270462,
+            "ctime_ns": 1793643991672270462
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228239\n"
+      }
+    },
+    {
+      "event": "child_reaped",
+      "phase": "existing_movie_decode_after_popen_return",
+      "monotonic_ns": 3538607930839,
+      "wall_ns": 1793643992248977254,
+      "label": "existing_movie_decode",
+      "pid": 38,
+      "returncode": 0,
+      "waitpid_reports_no_child": true,
+      "process_group_absent": true,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "event": "snapshot",
+      "phase": "existing_movie_decode_after_reaping",
+      "monotonic_ns": 3538610607832,
+      "wall_ns": 1793643992251653416,
+      "label": "existing_movie_decode_after_reaping",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "paths": {
+        "retired-canary-5ex8nlfl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991536266330,
+            "ctime_ns": 1793643991536266330
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643991672270462,
+            "ctime_ns": 1793643991672270462
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228239\n"
+      }
+    },
+    {
+      "event": "snapshot",
+      "phase": "final_before_observer_fd_close",
+      "monotonic_ns": 3538611433573,
+      "wall_ns": 1793643992252478976,
+      "label": "final_before_observer_fd_close",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "paths": {
+        "retired-canary-5ex8nlfl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991536266330,
+            "ctime_ns": 1793643991536266330
+          },
+          "retired": true,
+          "path": null,
+          "original_fd": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 0,
+            "size": 0,
+            "mtime_ns": 1793643991672270462,
+            "ctime_ns": 1793643991672270462
+          }
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228239\n"
+      }
+    },
+    {
+      "event": "snapshot",
+      "phase": "final_after_observer_fd_close",
+      "monotonic_ns": 3538612648633,
+      "wall_ns": 1793643992253694106,
+      "label": "final_after_observer_fd_close",
+      "parent_fd": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "parent_path": {
+        "dev": 27,
+        "ino": 2228239,
+        "mode": 16877,
+        "nlink": 2,
+        "size": 4096,
+        "mtime_ns": 1793643991672270462,
+        "ctime_ns": 1793643991672270462
+      },
+      "paths": {
+        "retired-canary-5ex8nlfl": {
+          "original": {
+            "dev": 27,
+            "ino": 2228240,
+            "mode": 16832,
+            "nlink": 2,
+            "size": 4096,
+            "mtime_ns": 1793643991536266330,
+            "ctime_ns": 1793643991536266330
+          },
+          "retired": true,
+          "path": null
+        }
+      },
+      "mounts": {
+        "mountinfo_sha256": "815380ece1f5f6e5be5ce4388efa0d8dea10a2370f8617cb02602bfb27ac53b4",
+        "applicable_mounts": [
+          {
+            "mount_id": "93",
+            "parent_id": "63",
+            "device": "0:27",
+            "mount_root": "/",
+            "mount_point": "/",
+            "type": "overlay",
+            "source": "overlay"
+          }
+        ],
+        "parent_fdinfo": "pos:\t0\nflags:\t02700000\nmnt_id:\t93\nino:\t2228239\n"
+      }
+    }
+  ],
+  "complete": true,
+  "recreated_paths_never_removed": true
+}

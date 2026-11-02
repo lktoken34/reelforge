@@ -161,3 +161,24 @@ was needed: compile into accepted blocking/direction documents and reuse the ren
 Use targeted tests and at most one final full-suite attempt; retain host cleanup restoration
 failures without encode/test retries or unrelated fixes. No delegation, GitHub push, deployment,
 Muse Spark or Phase 7B. Stop after local commit and complete Phase 7A archive for review.
+
+## Current Phase 7B integration assignment
+
+Approved Phase 7A baseline: 763d8528a7526614703cec4ad1292d1b037bdfca. Work only on
+phase7b-integrated-reel-workflow, reel-0.1 and narrow integration adapters. Read
+REEL_INTEGRATION_BOUNDARIES.md, INTEGRATED_REELS.md and PHASE7B_REPORT.md in docs.
+Prior uncommitted work was lost to workspace rollback; replacement implementation and
+fresh evidence must be identified. Save durable checkpoints. Preserve all 1014 accepted
+tests and defaults. One final full-suite attempt for this replacement, no failed render
+retries and no cleanup sweeps. No delegation, push, CI, deployment, Muse Spark or Phase7C.
+Stop after local commit and verified complete archive for independent review.
+
+## Phase 7B.1 cleanup investigation
+
+Start from existing a2587e7f42a4260aa2b5ed2941b15b05c6370d81; preserve its source, tests and
+AV evidence. Read docs/PHASE7B1_REPORT.md. Diagnostics isolate observed directory recreation
+outside the traced engine parent and its 55 confined native children; exact host writer remains
+unknown and this host cleanup gate still fails. No production runtime fix is justified. The
+native_directory_guard is diagnostic only, never a manifest capability or production policy.
+No old-path deletion/reacquisition, assertion changes, proof-movie regeneration, full-suite
+reruns, delegation, GitHub push, CI or deployment. Stop after verified local export/review.

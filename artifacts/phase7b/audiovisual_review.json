@@ -1,0 +1,19 @@
+{
+  "method": "Full video/audio decodes, rational PTS and sample clock, cue/beat schedules, PCM waveforms and actual decoded frames 0/30/45/60/72/89; contact sheet, B six-frame sheet and AV timeline viewed",
+  "speech_provided": false,
+  "audio": "Unchanged registered diagnostic fixtures, not professional narration or final sound design",
+  "event_frames": {
+    "A_reveal": 45,
+    "B_reaction": 45,
+    "B_cut": 60,
+    "C_reaction": 72
+  },
+  "B_sfx_overlap_frames": [
+    54,
+    57
+  ],
+  "independent_playback_listening_required": true,
+  "artistic_approval": false,
+  "persistent_cleanup_review_passed": false,
+  "report": "docs/PHASE7B_REPORT.md"
+}

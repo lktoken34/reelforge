@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/ade48aa5d272/reelforge-phase6b/tools/review_reels.py", line 273, in <module>
+    collect()
+  File "/workspace/scratch/ade48aa5d272/reelforge-phase6b/tools/review_reels.py", line 152, in collect
+    scratch.mkdir(exist_ok=False)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileExistsError: [Errno 17] File exists: '/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase7b-decoded-review'

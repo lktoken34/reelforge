@@ -1,0 +1,831 @@
+{
+  "silent_signal": {
+    "source_job": "silent_signal",
+    "success": true,
+    "all_90_source_frames_match_phase7a": true,
+    "cue_timing": [
+      {
+        "asset_id": "diag_opening",
+        "start_frame": 0,
+        "scheduled_start_sample": 0,
+        "trim_start_frame": 0,
+        "trim_end_frame": 36,
+        "effective_samples": 57600,
+        "isolated_mixed_window": true,
+        "reference_audible_start_sample": 10,
+        "decoded_audible_start_sample": 8,
+        "onset_error_samples": -2,
+        "onset_error_ms": -0.041666666666666664
+      },
+      {
+        "asset_id": "diag_fence",
+        "start_frame": 45,
+        "scheduled_start_sample": 72000,
+        "trim_start_frame": 0,
+        "trim_end_frame": 12,
+        "effective_samples": 19200,
+        "isolated_mixed_window": true,
+        "reference_audible_start_sample": 72023,
+        "decoded_audible_start_sample": 72023,
+        "onset_error_samples": 0,
+        "onset_error_ms": 0.0
+      }
+    ],
+    "audible_drift_samples": -156,
+    "audible_drift_ms": -3.25,
+    "mix": {
+      "samples_per_channel": 144000,
+      "peak": 0.07200046628713608,
+      "rms": 0.026616224490796505,
+      "energy": 204.025940969609,
+      "sha256": "4b964e2b677ca5b4713346686ab7ebf5b555c1eb34c4004c90fc120a5daba5ea"
+    },
+    "decoded_pcm": {
+      "samples_per_channel": 144384,
+      "peak": 0.07345587015151978,
+      "rms": 0.026529768942129488,
+      "energy": 203.24318875097444,
+      "sha256": "21906204c49e01d336fe5b861f4ffa336edae2d5be745def4207047dc18539cb"
+    },
+    "terminal_padding_samples": 384,
+    "total_wall_seconds": 8.535325290999936,
+    "workflow_fps": 10.544413590762662,
+    "encoded_fps": 19.495636202718345,
+    "memory": {
+      "oom_telemetry_continuous": true,
+      "memory_policy": "strict",
+      "observed_memory_sources": [
+        "guest_and_cgroup"
+      ],
+      "initial_memory": {
+        "host": {
+          "MemTotal": 10451427328,
+          "MemAvailable": 9784606720,
+          "SwapTotal": 0,
+          "SwapFree": 0
+        },
+        "cgroup_root": "/sys/fs/cgroup",
+        "cgroup": {
+          "memory.max": 8589934592,
+          "memory.current": 1511436288,
+          "memory.peak": 1554919424,
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+          "memory.swap.max": "max",
+          "memory.swap.current": 0,
+          "cpu.max": "800000 100000"
+        },
+        "effective_available_bytes": 7078498304,
+        "memory_policy": "strict",
+        "fallback_enabled": false,
+        "fallback_used": false,
+        "memory_source": "guest_and_cgroup",
+        "controller_state": "observable",
+        "constraints": [
+          {
+            "path": "/sys/fs/cgroup",
+            "limit": 8589934592,
+            "usage": 1511436288
+          }
+        ],
+        "observations": {
+          "/proc/meminfo": {
+            "status": "present",
+            "value": "MemTotal:       10206472 kB\nMemFree:         8457292 kB\nMemAvailable:    9555280 kB\nBuffers:           11376 kB\nCached:          1312492 kB\nSwapCached:            0 kB\nActive:           194332 kB\nInactive:        1218828 kB\nActive(anon):         80 kB\nInactive(anon):   119128 kB\nActive(file):     194252 kB\nInactive(file):  1099700 kB\nUnevictable:       29940 kB\nMlocked:              16 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              6008 kB\nWriteback:             0 kB\nAnonPages:        119156 kB\nMapped:            71464 kB\nShmem:                12 kB\nKReclaimable:      66268 kB\nSlab:             113108 kB\nSReclaimable:      66268 kB\nSUnreclaim:        46840 kB\nKernelStack:        3336 kB\nPageTables:         3768 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     512864 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4616 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:       65536 kB\nDirectMap2M:     4485120 kB\nDirectMap1G:    16777216 kB"
+          },
+          "/proc/self/cgroup": {
+            "status": "present",
+            "value": "0::/"
+          },
+          "/proc/self/mountinfo": {
+            "status": "present",
+            "value": "93 63 0:27 / / rw,nosuid,nodev,relatime - overlay overlay rw,lowerdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/lower-0,upperdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/upper/upper,workdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/upper/work,index=off,metacopy=off\n94 93 0:30 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw\n95 94 0:31 /null /proc/keys rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n96 94 0:31 /null /proc/timer_list rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n97 94 0:30 /bus /proc/bus ro,nosuid,nodev,relatime - proc proc rw\n98 94 0:30 /fs /proc/fs ro,nosuid,nodev,relatime - proc proc rw\n99 94 0:30 /irq /proc/irq ro,nosuid,nodev,relatime - proc proc rw\n100 94 0:30 /sys /proc/sys ro,nosuid,nodev,relatime - proc proc rw\n101 93 0:31 / /dev rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n102 101 0:32 / /dev/pts rw,nosuid,nodev,noexec,relatime - devpts devpts rw,gid=5,mode=620,ptmxmode=666\n103 101 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw\n104 101 0:25 / /dev/mqueue rw,nosuid,nodev,noexec,relatime - mqueue mqueue rw\n105 93 0:20 / /sys ro,nosuid,nodev,noexec,relatime - sysfs sysfs rw\n106 105 0:24 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup2 rw,nsdelegate\n107 101 0:36 / /dev rw,nosuid,nodev,relatime - tmpfs tmpfs rw,mode=755\n108 107 0:31 /null /dev/null rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n109 107 0:31 /zero /dev/zero rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n110 107 0:31 /full /dev/full rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n111 107 0:31 /random /dev/random rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n112 107 0:31 /urandom /dev/urandom rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n113 107 0:31 /tty /dev/tty rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n114 107 0:37 / /dev/pts rw,nosuid,noexec,relatime - devpts devpts rw,mode=620,ptmxmode=666\n115 107 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw"
+          },
+          "/proc/cgroups": {
+            "status": "present",
+            "value": "#subsys_name\thierarchy\tnum_cgroups\tenabled\ncpu\t0\t4\t1\ncpuacct\t0\t4\t1\nblkio\t0\t4\t1\ndevices\t0\t4\t1\nfreezer\t0\t4\t1\nnet_cls\t0\t4\t1\nperf_event\t0\t4\t1\nnet_prio\t0\t4\t1\nhugetlb\t0\t4\t1\npids\t0\t4\t1"
+          },
+          "/sys/fs/cgroup/cgroup.controllers": {
+            "status": "present",
+            "value": "cpuset cpu io memory hugetlb pids"
+          },
+          "/sys/fs/cgroup/memory.max": {
+            "status": "present",
+            "value": "8589934592"
+          },
+          "/sys/fs/cgroup/memory.current": {
+            "status": "present",
+            "value": "1511436288"
+          },
+          "/sys/fs/cgroup/memory.peak": {
+            "status": "present",
+            "value": "1554919424"
+          },
+          "/sys/fs/cgroup/memory.events": {
+            "status": "present",
+            "value": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+          },
+          "/sys/fs/cgroup/memory.swap.max": {
+            "status": "present",
+            "value": "max"
+          },
+          "/sys/fs/cgroup/memory.swap.current": {
+            "status": "present",
+            "value": "0"
+          },
+          "/sys/fs/cgroup/cpu.max": {
+            "status": "present",
+            "value": "800000 100000"
+          }
+        },
+        "errors": [],
+        "limitations": [
+          "Visible namespaces cannot prove absence of hidden ancestor limits.",
+          "Guest availability may change suddenly with ballooning/external contention.",
+          "Software RSS/reserve monitoring is not a dedicated memory cgroup."
+        ],
+        "kernel_memory_controller": null,
+        "controller_version": "v2"
+      },
+      "final_memory": {
+        "host": {
+          "MemTotal": 10451427328,
+          "MemAvailable": 9704525824,
+          "SwapTotal": 0,
+          "SwapFree": 0
+        },
+        "cgroup_root": "/sys/fs/cgroup",
+        "cgroup": {
+          "memory.max": 8589934592,
+          "memory.current": 1517957120,
+          "memory.peak": 1574035456,
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+          "memory.swap.max": "max",
+          "memory.swap.current": 0,
+          "cpu.max": "800000 100000"
+        },
+        "effective_available_bytes": 7071977472,
+        "memory_policy": "strict",
+        "fallback_enabled": false,
+        "fallback_used": false,
+        "memory_source": "guest_and_cgroup",
+        "controller_state": "observable",
+        "constraints": [
+          {
+            "path": "/sys/fs/cgroup",
+            "limit": 8589934592,
+            "usage": 1517957120
+          }
+        ],
+        "observations": {
+          "/proc/meminfo": {
+            "status": "present",
+            "value": "MemTotal:       10206472 kB\nMemFree:         8377968 kB\nMemAvailable:    9477076 kB\nBuffers:           11396 kB\nCached:          1313452 kB\nSwapCached:            0 kB\nActive:           195364 kB\nInactive:        1224500 kB\nActive(anon):        100 kB\nInactive(anon):   124784 kB\nActive(file):     195264 kB\nInactive(file):  1099716 kB\nUnevictable:       29956 kB\nMlocked:              32 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:               464 kB\nWriteback:            48 kB\nAnonPages:        124900 kB\nMapped:            72888 kB\nShmem:                12 kB\nKReclaimable:      66456 kB\nSlab:             113556 kB\nSReclaimable:      66456 kB\nSUnreclaim:        47100 kB\nKernelStack:        3360 kB\nPageTables:         3768 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     550344 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4680 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:       65536 kB\nDirectMap2M:     4485120 kB\nDirectMap1G:    16777216 kB"
+          },
+          "/proc/self/cgroup": {
+            "status": "present",
+            "value": "0::/"
+          },
+          "/proc/self/mountinfo": {
+            "status": "present",
+            "value": "93 63 0:27 / / rw,nosuid,nodev,relatime - overlay overlay rw,lowerdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/lower-0,upperdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/upper/upper,workdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/upper/work,index=off,metacopy=off\n94 93 0:30 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw\n95 94 0:31 /null /proc/keys rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n96 94 0:31 /null /proc/timer_list rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n97 94 0:30 /bus /proc/bus ro,nosuid,nodev,relatime - proc proc rw\n98 94 0:30 /fs /proc/fs ro,nosuid,nodev,relatime - proc proc rw\n99 94 0:30 /irq /proc/irq ro,nosuid,nodev,relatime - proc proc rw\n100 94 0:30 /sys /proc/sys ro,nosuid,nodev,relatime - proc proc rw\n101 93 0:31 / /dev rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n102 101 0:32 / /dev/pts rw,nosuid,nodev,noexec,relatime - devpts devpts rw,gid=5,mode=620,ptmxmode=666\n103 101 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw\n104 101 0:25 / /dev/mqueue rw,nosuid,nodev,noexec,relatime - mqueue mqueue rw\n105 93 0:20 / /sys ro,nosuid,nodev,noexec,relatime - sysfs sysfs rw\n106 105 0:24 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup2 rw,nsdelegate\n107 101 0:36 / /dev rw,nosuid,nodev,relatime - tmpfs tmpfs rw,mode=755\n108 107 0:31 /null /dev/null rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n109 107 0:31 /zero /dev/zero rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n110 107 0:31 /full /dev/full rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n111 107 0:31 /random /dev/random rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n112 107 0:31 /urandom /dev/urandom rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n113 107 0:31 /tty /dev/tty rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n114 107 0:37 / /dev/pts rw,nosuid,noexec,relatime - devpts devpts rw,mode=620,ptmxmode=666\n115 107 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw"
+          },
+          "/proc/cgroups": {
+            "status": "present",
+            "value": "#subsys_name\thierarchy\tnum_cgroups\tenabled\ncpu\t0\t4\t1\ncpuacct\t0\t4\t1\nblkio\t0\t4\t1\ndevices\t0\t4\t1\nfreezer\t0\t4\t1\nnet_cls\t0\t4\t1\nperf_event\t0\t4\t1\nnet_prio\t0\t4\t1\nhugetlb\t0\t4\t1\npids\t0\t4\t1"
+          },
+          "/sys/fs/cgroup/cgroup.controllers": {
+            "status": "present",
+            "value": "cpuset cpu io memory hugetlb pids"
+          },
+          "/sys/fs/cgroup/memory.max": {
+            "status": "present",
+            "value": "8589934592"
+          },
+          "/sys/fs/cgroup/memory.current": {
+            "status": "present",
+            "value": "1517957120"
+          },
+          "/sys/fs/cgroup/memory.peak": {
+            "status": "present",
+            "value": "1574035456"
+          },
+          "/sys/fs/cgroup/memory.events": {
+            "status": "present",
+            "value": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+          },
+          "/sys/fs/cgroup/memory.swap.max": {
+            "status": "present",
+            "value": "max"
+          },
+          "/sys/fs/cgroup/memory.swap.current": {
+            "status": "present",
+            "value": "0"
+          },
+          "/sys/fs/cgroup/cpu.max": {
+            "status": "present",
+            "value": "800000 100000"
+          }
+        },
+        "errors": [],
+        "limitations": [
+          "Visible namespaces cannot prove absence of hidden ancestor limits.",
+          "Guest availability may change suddenly with ballooning/external contention.",
+          "Software RSS/reserve monitoring is not a dedicated memory cgroup."
+        ],
+        "kernel_memory_controller": null,
+        "controller_version": "v2"
+      },
+      "initial_renderer_rss_bytes": 25210880,
+      "final_renderer_rss_bytes": 31494144,
+      "renderer_peak_rss_bytes": 35045376,
+      "waited_child_max_rss_bytes": 72626176,
+      "encoder_peak_rss_bytes": 0,
+      "all_children_peak_rss_bytes": 72884224,
+      "estimated_simultaneous_tree_peak_rss_bytes": 104550400,
+      "sampling_interval_seconds": 0.01,
+      "samples": 613,
+      "job_budget_bytes": 268435456,
+      "reserve_bytes": 67108864,
+      "limit_reason": null,
+      "minimum_effective_available_bytes": 7016046592,
+      "maximum_effective_available_bytes": 7078498304,
+      "memory_observations": 63,
+      "minimum_workspace_free_bytes": 62824370176,
+      "disk_reserve_bytes": 67108864,
+      "wall_seconds": 9.211327242000038,
+      "caveat": "Sampled sum of RSS can miss transient peaks and double-count shared pages; cgroup counters are shared, not a dedicated job limit."
+    },
+    "storage": {
+      "stage_samples_bytes": {
+        "registry_validation": 256496,
+        "silent_render": 1902478,
+        "mix": 3054478,
+        "mux": 3887920,
+        "verify": 5042992
+      },
+      "sampled_logical_peak_bytes": 5042992,
+      "preflight_estimate_bytes": 104272368,
+      "disk_reserve_bytes": 67108864,
+      "scope": "Logical stage boundaries; hard links double-counted; transient peaks may be missed"
+    },
+    "stream_copy_unchanged": true,
+    "exact_pts": true
+  },
+  "abandoned_settlement": {
+    "source_job": "abandoned_settlement",
+    "success": true,
+    "all_90_source_frames_match_phase7a": true,
+    "cue_timing": [
+      {
+        "asset_id": "diag_opening",
+        "start_frame": 0,
+        "scheduled_start_sample": 0,
+        "trim_start_frame": 0,
+        "trim_end_frame": 36,
+        "effective_samples": 57600,
+        "isolated_mixed_window": true,
+        "reference_audible_start_sample": 10,
+        "decoded_audible_start_sample": 8,
+        "onset_error_samples": -2,
+        "onset_error_ms": -0.041666666666666664
+      },
+      {
+        "asset_id": "diag_fence",
+        "start_frame": 45,
+        "scheduled_start_sample": 72000,
+        "trim_start_frame": 0,
+        "trim_end_frame": 12,
+        "effective_samples": 19200,
+        "isolated_mixed_window": false,
+        "reference_audible_start_sample": 72023,
+        "decoded_audible_start_sample": 72023,
+        "onset_error_samples": 0,
+        "onset_error_ms": 0.0
+      },
+      {
+        "asset_id": "diag_suspense",
+        "start_frame": 54,
+        "scheduled_start_sample": 86400,
+        "trim_start_frame": 18,
+        "trim_end_frame": 54,
+        "effective_samples": 57600,
+        "isolated_mixed_window": false,
+        "reference_audible_start_sample": 85376,
+        "decoded_audible_start_sample": 85376,
+        "onset_error_samples": 0,
+        "onset_error_ms": 0.0
+      }
+    ],
+    "audible_drift_samples": 2,
+    "audible_drift_ms": 0.041666666666666664,
+    "mix": {
+      "samples_per_channel": 144000,
+      "peak": 0.07200046628713608,
+      "rms": 0.030634454095110668,
+      "energy": 270.2792959791675,
+      "sha256": "9b9274249b8b2e6dcae2458274056ffb213f43fb6db3c9422ee4e97c5be9364d"
+    },
+    "decoded_pcm": {
+      "samples_per_channel": 144384,
+      "peak": 0.07345587015151978,
+      "rms": 0.030541563252563745,
+      "energy": 269.35906122416054,
+      "sha256": "29b732f9ebe00e6dba2a0da2dfb94117908d1c5fdba9a7e164881b040d456f5b"
+    },
+    "terminal_padding_samples": 384,
+    "total_wall_seconds": 7.26211419599997,
+    "workflow_fps": 12.393085205073298,
+    "encoded_fps": 25.990965182405183,
+    "memory": {
+      "oom_telemetry_continuous": true,
+      "memory_policy": "strict",
+      "observed_memory_sources": [
+        "guest_and_cgroup"
+      ],
+      "initial_memory": {
+        "host": {
+          "MemTotal": 10451427328,
+          "MemAvailable": 9688498176,
+          "SwapTotal": 0,
+          "SwapFree": 0
+        },
+        "cgroup_root": "/sys/fs/cgroup",
+        "cgroup": {
+          "memory.max": 8589934592,
+          "memory.current": 1513082880,
+          "memory.peak": 1574035456,
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+          "memory.swap.max": "max",
+          "memory.swap.current": 0,
+          "cpu.max": "800000 100000"
+        },
+        "effective_available_bytes": 7076851712,
+        "memory_policy": "strict",
+        "fallback_enabled": false,
+        "fallback_used": false,
+        "memory_source": "guest_and_cgroup",
+        "controller_state": "observable",
+        "constraints": [
+          {
+            "path": "/sys/fs/cgroup",
+            "limit": 8589934592,
+            "usage": 1513082880
+          }
+        ],
+        "observations": {
+          "/proc/meminfo": {
+            "status": "present",
+            "value": "MemTotal:       10206472 kB\nMemFree:         8362352 kB\nMemAvailable:    9461424 kB\nBuffers:           11396 kB\nCached:          1313488 kB\nSwapCached:            0 kB\nActive:           195216 kB\nInactive:        1219600 kB\nActive(anon):         92 kB\nInactive(anon):   119752 kB\nActive(file):     195124 kB\nInactive(file):  1099848 kB\nUnevictable:       29956 kB\nMlocked:              32 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:               328 kB\nWriteback:             0 kB\nAnonPages:        120124 kB\nMapped:            71548 kB\nShmem:                12 kB\nKReclaimable:      66400 kB\nSlab:             113380 kB\nSReclaimable:      66400 kB\nSUnreclaim:        46980 kB\nKernelStack:        3344 kB\nPageTables:         3580 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     497188 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4632 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:       65536 kB\nDirectMap2M:     4485120 kB\nDirectMap1G:    16777216 kB"
+          },
+          "/proc/self/cgroup": {
+            "status": "present",
+            "value": "0::/"
+          },
+          "/proc/self/mountinfo": {
+            "status": "present",
+            "value": "93 63 0:27 / / rw,nosuid,nodev,relatime - overlay overlay rw,lowerdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/lower-0,upperdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/upper/upper,workdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/upper/work,index=off,metacopy=off\n94 93 0:30 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw\n95 94 0:31 /null /proc/keys rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n96 94 0:31 /null /proc/timer_list rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n97 94 0:30 /bus /proc/bus ro,nosuid,nodev,relatime - proc proc rw\n98 94 0:30 /fs /proc/fs ro,nosuid,nodev,relatime - proc proc rw\n99 94 0:30 /irq /proc/irq ro,nosuid,nodev,relatime - proc proc rw\n100 94 0:30 /sys /proc/sys ro,nosuid,nodev,relatime - proc proc rw\n101 93 0:31 / /dev rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n102 101 0:32 / /dev/pts rw,nosuid,nodev,noexec,relatime - devpts devpts rw,gid=5,mode=620,ptmxmode=666\n103 101 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw\n104 101 0:25 / /dev/mqueue rw,nosuid,nodev,noexec,relatime - mqueue mqueue rw\n105 93 0:20 / /sys ro,nosuid,nodev,noexec,relatime - sysfs sysfs rw\n106 105 0:24 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup2 rw,nsdelegate\n107 101 0:36 / /dev rw,nosuid,nodev,relatime - tmpfs tmpfs rw,mode=755\n108 107 0:31 /null /dev/null rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n109 107 0:31 /zero /dev/zero rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n110 107 0:31 /full /dev/full rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n111 107 0:31 /random /dev/random rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n112 107 0:31 /urandom /dev/urandom rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n113 107 0:31 /tty /dev/tty rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n114 107 0:37 / /dev/pts rw,nosuid,noexec,relatime - devpts devpts rw,mode=620,ptmxmode=666\n115 107 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw"
+          },
+          "/proc/cgroups": {
+            "status": "present",
+            "value": "#subsys_name\thierarchy\tnum_cgroups\tenabled\ncpu\t0\t4\t1\ncpuacct\t0\t4\t1\nblkio\t0\t4\t1\ndevices\t0\t4\t1\nfreezer\t0\t4\t1\nnet_cls\t0\t4\t1\nperf_event\t0\t4\t1\nnet_prio\t0\t4\t1\nhugetlb\t0\t4\t1\npids\t0\t4\t1"
+          },
+          "/sys/fs/cgroup/cgroup.controllers": {
+            "status": "present",
+            "value": "cpuset cpu io memory hugetlb pids"
+          },
+          "/sys/fs/cgroup/memory.max": {
+            "status": "present",
+            "value": "8589934592"
+          },
+          "/sys/fs/cgroup/memory.current": {
+            "status": "present",
+            "value": "1513082880"
+          },
+          "/sys/fs/cgroup/memory.peak": {
+            "status": "present",
+            "value": "1574035456"
+          },
+          "/sys/fs/cgroup/memory.events": {
+            "status": "present",
+            "value": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+          },
+          "/sys/fs/cgroup/memory.swap.max": {
+            "status": "present",
+            "value": "max"
+          },
+          "/sys/fs/cgroup/memory.swap.current": {
+            "status": "present",
+            "value": "0"
+          },
+          "/sys/fs/cgroup/cpu.max": {
+            "status": "present",
+            "value": "800000 100000"
+          }
+        },
+        "errors": [],
+        "limitations": [
+          "Visible namespaces cannot prove absence of hidden ancestor limits.",
+          "Guest availability may change suddenly with ballooning/external contention.",
+          "Software RSS/reserve monitoring is not a dedicated memory cgroup."
+        ],
+        "kernel_memory_controller": null,
+        "controller_version": "v2"
+      },
+      "final_memory": {
+        "host": {
+          "MemTotal": 10451427328,
+          "MemAvailable": 9671118848,
+          "SwapTotal": 0,
+          "SwapFree": 0
+        },
+        "cgroup_root": "/sys/fs/cgroup",
+        "cgroup": {
+          "memory.max": 8589934592,
+          "memory.current": 1523605504,
+          "memory.peak": 1579048960,
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+          "memory.swap.max": "max",
+          "memory.swap.current": 0,
+          "cpu.max": "800000 100000"
+        },
+        "effective_available_bytes": 7066329088,
+        "memory_policy": "strict",
+        "fallback_enabled": false,
+        "fallback_used": false,
+        "memory_source": "guest_and_cgroup",
+        "controller_state": "observable",
+        "constraints": [
+          {
+            "path": "/sys/fs/cgroup",
+            "limit": 8589934592,
+            "usage": 1523605504
+          }
+        ],
+        "observations": {
+          "/proc/meminfo": {
+            "status": "present",
+            "value": "MemTotal:       10206472 kB\nMemFree:         8339692 kB\nMemAvailable:    9444452 kB\nBuffers:           11444 kB\nCached:          1318940 kB\nSwapCached:            0 kB\nActive:           195796 kB\nInactive:        1228688 kB\nActive(anon):        108 kB\nInactive(anon):   123868 kB\nActive(file):     195688 kB\nInactive(file):  1104820 kB\nUnevictable:       29956 kB\nMlocked:              32 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              5496 kB\nWriteback:             4 kB\nAnonPages:        124184 kB\nMapped:            72936 kB\nShmem:                12 kB\nKReclaimable:      66700 kB\nSlab:             113544 kB\nSReclaimable:      66700 kB\nSUnreclaim:        46844 kB\nKernelStack:        3408 kB\nPageTables:         3984 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     536020 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4664 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:       65536 kB\nDirectMap2M:     4485120 kB\nDirectMap1G:    16777216 kB"
+          },
+          "/proc/self/cgroup": {
+            "status": "present",
+            "value": "0::/"
+          },
+          "/proc/self/mountinfo": {
+            "status": "present",
+            "value": "93 63 0:27 / / rw,nosuid,nodev,relatime - overlay overlay rw,lowerdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/lower-0,upperdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/upper/upper,workdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/upper/work,index=off,metacopy=off\n94 93 0:30 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw\n95 94 0:31 /null /proc/keys rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n96 94 0:31 /null /proc/timer_list rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n97 94 0:30 /bus /proc/bus ro,nosuid,nodev,relatime - proc proc rw\n98 94 0:30 /fs /proc/fs ro,nosuid,nodev,relatime - proc proc rw\n99 94 0:30 /irq /proc/irq ro,nosuid,nodev,relatime - proc proc rw\n100 94 0:30 /sys /proc/sys ro,nosuid,nodev,relatime - proc proc rw\n101 93 0:31 / /dev rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n102 101 0:32 / /dev/pts rw,nosuid,nodev,noexec,relatime - devpts devpts rw,gid=5,mode=620,ptmxmode=666\n103 101 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw\n104 101 0:25 / /dev/mqueue rw,nosuid,nodev,noexec,relatime - mqueue mqueue rw\n105 93 0:20 / /sys ro,nosuid,nodev,noexec,relatime - sysfs sysfs rw\n106 105 0:24 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup2 rw,nsdelegate\n107 101 0:36 / /dev rw,nosuid,nodev,relatime - tmpfs tmpfs rw,mode=755\n108 107 0:31 /null /dev/null rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n109 107 0:31 /zero /dev/zero rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n110 107 0:31 /full /dev/full rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n111 107 0:31 /random /dev/random rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n112 107 0:31 /urandom /dev/urandom rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n113 107 0:31 /tty /dev/tty rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n114 107 0:37 / /dev/pts rw,nosuid,noexec,relatime - devpts devpts rw,mode=620,ptmxmode=666\n115 107 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw"
+          },
+          "/proc/cgroups": {
+            "status": "present",
+            "value": "#subsys_name\thierarchy\tnum_cgroups\tenabled\ncpu\t0\t4\t1\ncpuacct\t0\t4\t1\nblkio\t0\t4\t1\ndevices\t0\t4\t1\nfreezer\t0\t4\t1\nnet_cls\t0\t4\t1\nperf_event\t0\t4\t1\nnet_prio\t0\t4\t1\nhugetlb\t0\t4\t1\npids\t0\t4\t1"
+          },
+          "/sys/fs/cgroup/cgroup.controllers": {
+            "status": "present",
+            "value": "cpuset cpu io memory hugetlb pids"
+          },
+          "/sys/fs/cgroup/memory.max": {
+            "status": "present",
+            "value": "8589934592"
+          },
+          "/sys/fs/cgroup/memory.current": {
+            "status": "present",
+            "value": "1523605504"
+          },
+          "/sys/fs/cgroup/memory.peak": {
+            "status": "present",
+            "value": "1579048960"
+          },
+          "/sys/fs/cgroup/memory.events": {
+            "status": "present",
+            "value": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+          },
+          "/sys/fs/cgroup/memory.swap.max": {
+            "status": "present",
+            "value": "max"
+          },
+          "/sys/fs/cgroup/memory.swap.current": {
+            "status": "present",
+            "value": "0"
+          },
+          "/sys/fs/cgroup/cpu.max": {
+            "status": "present",
+            "value": "800000 100000"
+          }
+        },
+        "errors": [],
+        "limitations": [
+          "Visible namespaces cannot prove absence of hidden ancestor limits.",
+          "Guest availability may change suddenly with ballooning/external contention.",
+          "Software RSS/reserve monitoring is not a dedicated memory cgroup."
+        ],
+        "kernel_memory_controller": null,
+        "controller_version": "v2"
+      },
+      "initial_renderer_rss_bytes": 25247744,
+      "final_renderer_rss_bytes": 30679040,
+      "renderer_peak_rss_bytes": 33849344,
+      "waited_child_max_rss_bytes": 72527872,
+      "encoder_peak_rss_bytes": 0,
+      "all_children_peak_rss_bytes": 72871936,
+      "estimated_simultaneous_tree_peak_rss_bytes": 103534592,
+      "sampling_interval_seconds": 0.01,
+      "samples": 502,
+      "job_budget_bytes": 268435456,
+      "reserve_bytes": 67108864,
+      "limit_reason": null,
+      "minimum_effective_available_bytes": 7011000320,
+      "maximum_effective_available_bytes": 7076851712,
+      "memory_observations": 52,
+      "minimum_workspace_free_bytes": 62818582528,
+      "disk_reserve_bytes": 67108864,
+      "wall_seconds": 7.912855414999967,
+      "caveat": "Sampled sum of RSS can miss transient peaks and double-count shared pages; cgroup counters are shared, not a dedicated job limit."
+    },
+    "storage": {
+      "stage_samples_bytes": {
+        "registry_validation": 602184,
+        "silent_render": 1539401,
+        "mix": 2691401,
+        "mux": 3187928,
+        "verify": 4343000
+      },
+      "sampled_logical_peak_bytes": 4343000,
+      "preflight_estimate_bytes": 104618056,
+      "disk_reserve_bytes": 67108864,
+      "scope": "Logical stage boundaries; hard links double-counted; transient peaks may be missed"
+    },
+    "stream_copy_unchanged": true,
+    "exact_pts": true
+  },
+  "shelter_entrance": {
+    "source_job": "shelter_entrance",
+    "success": true,
+    "all_90_source_frames_match_phase7a": true,
+    "cue_timing": [
+      {
+        "asset_id": "diag_opening",
+        "start_frame": 0,
+        "scheduled_start_sample": 0,
+        "trim_start_frame": 0,
+        "trim_end_frame": 36,
+        "effective_samples": 57600,
+        "isolated_mixed_window": true,
+        "reference_audible_start_sample": 10,
+        "decoded_audible_start_sample": 8,
+        "onset_error_samples": -2,
+        "onset_error_ms": -0.041666666666666664
+      },
+      {
+        "asset_id": "diag_fence",
+        "start_frame": 72,
+        "scheduled_start_sample": 115200,
+        "trim_start_frame": 0,
+        "trim_end_frame": 12,
+        "effective_samples": 19200,
+        "isolated_mixed_window": true,
+        "reference_audible_start_sample": 115223,
+        "decoded_audible_start_sample": 115223,
+        "onset_error_samples": 0,
+        "onset_error_ms": 0.0
+      }
+    ],
+    "audible_drift_samples": 1,
+    "audible_drift_ms": 0.020833333333333332,
+    "mix": {
+      "samples_per_channel": 144000,
+      "peak": 0.07200046628713608,
+      "rms": 0.026557760803647492,
+      "energy": 203.13062176428147,
+      "sha256": "5327a1a4f8450881f8428fd74ada6b419153445431e51c50bde5ea12badbe77d"
+    },
+    "decoded_pcm": {
+      "samples_per_channel": 144384,
+      "peak": 0.07345587015151978,
+      "rms": 0.02647240491034067,
+      "energy": 202.36521321455834,
+      "sha256": "2280066435a644f5470e9e600527bbf994852ffb8e44465af14fd6ba7c83809e"
+    },
+    "terminal_padding_samples": 384,
+    "total_wall_seconds": 7.360296587999983,
+    "workflow_fps": 12.22776812373749,
+    "encoded_fps": 26.065796595164954,
+    "memory": {
+      "oom_telemetry_continuous": true,
+      "memory_policy": "strict",
+      "observed_memory_sources": [
+        "guest_and_cgroup"
+      ],
+      "initial_memory": {
+        "host": {
+          "MemTotal": 10451427328,
+          "MemAvailable": 9672372224,
+          "SwapTotal": 0,
+          "SwapFree": 0
+        },
+        "cgroup_root": "/sys/fs/cgroup",
+        "cgroup": {
+          "memory.max": 8589934592,
+          "memory.current": 1519853568,
+          "memory.peak": 1579048960,
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+          "memory.swap.max": "max",
+          "memory.swap.current": 0,
+          "cpu.max": "800000 100000"
+        },
+        "effective_available_bytes": 7070081024,
+        "memory_policy": "strict",
+        "fallback_enabled": false,
+        "fallback_used": false,
+        "memory_source": "guest_and_cgroup",
+        "controller_state": "observable",
+        "constraints": [
+          {
+            "path": "/sys/fs/cgroup",
+            "limit": 8589934592,
+            "usage": 1519853568
+          }
+        ],
+        "observations": {
+          "/proc/meminfo": {
+            "status": "present",
+            "value": "MemTotal:       10206472 kB\nMemFree:         8340816 kB\nMemAvailable:    9445676 kB\nBuffers:           11444 kB\nCached:          1319108 kB\nSwapCached:            0 kB\nActive:           195776 kB\nInactive:        1224996 kB\nActive(anon):        100 kB\nInactive(anon):   120036 kB\nActive(file):     195676 kB\nInactive(file):  1104960 kB\nUnevictable:       29940 kB\nMlocked:              16 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              5484 kB\nWriteback:             0 kB\nAnonPages:        120388 kB\nMapped:            71572 kB\nShmem:                12 kB\nKReclaimable:      66648 kB\nSlab:             113384 kB\nSReclaimable:      66648 kB\nSUnreclaim:        46736 kB\nKernelStack:        3328 kB\nPageTables:         3696 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     499496 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4616 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:       65536 kB\nDirectMap2M:     4485120 kB\nDirectMap1G:    16777216 kB"
+          },
+          "/proc/self/cgroup": {
+            "status": "present",
+            "value": "0::/"
+          },
+          "/proc/self/mountinfo": {
+            "status": "present",
+            "value": "93 63 0:27 / / rw,nosuid,nodev,relatime - overlay overlay rw,lowerdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/lower-0,upperdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/upper/upper,workdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/upper/work,index=off,metacopy=off\n94 93 0:30 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw\n95 94 0:31 /null /proc/keys rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n96 94 0:31 /null /proc/timer_list rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n97 94 0:30 /bus /proc/bus ro,nosuid,nodev,relatime - proc proc rw\n98 94 0:30 /fs /proc/fs ro,nosuid,nodev,relatime - proc proc rw\n99 94 0:30 /irq /proc/irq ro,nosuid,nodev,relatime - proc proc rw\n100 94 0:30 /sys /proc/sys ro,nosuid,nodev,relatime - proc proc rw\n101 93 0:31 / /dev rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n102 101 0:32 / /dev/pts rw,nosuid,nodev,noexec,relatime - devpts devpts rw,gid=5,mode=620,ptmxmode=666\n103 101 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw\n104 101 0:25 / /dev/mqueue rw,nosuid,nodev,noexec,relatime - mqueue mqueue rw\n105 93 0:20 / /sys ro,nosuid,nodev,noexec,relatime - sysfs sysfs rw\n106 105 0:24 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup2 rw,nsdelegate\n107 101 0:36 / /dev rw,nosuid,nodev,relatime - tmpfs tmpfs rw,mode=755\n108 107 0:31 /null /dev/null rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n109 107 0:31 /zero /dev/zero rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n110 107 0:31 /full /dev/full rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n111 107 0:31 /random /dev/random rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n112 107 0:31 /urandom /dev/urandom rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n113 107 0:31 /tty /dev/tty rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n114 107 0:37 / /dev/pts rw,nosuid,noexec,relatime - devpts devpts rw,mode=620,ptmxmode=666\n115 107 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw"
+          },
+          "/proc/cgroups": {
+            "status": "present",
+            "value": "#subsys_name\thierarchy\tnum_cgroups\tenabled\ncpu\t0\t4\t1\ncpuacct\t0\t4\t1\nblkio\t0\t4\t1\ndevices\t0\t4\t1\nfreezer\t0\t4\t1\nnet_cls\t0\t4\t1\nperf_event\t0\t4\t1\nnet_prio\t0\t4\t1\nhugetlb\t0\t4\t1\npids\t0\t4\t1"
+          },
+          "/sys/fs/cgroup/cgroup.controllers": {
+            "status": "present",
+            "value": "cpuset cpu io memory hugetlb pids"
+          },
+          "/sys/fs/cgroup/memory.max": {
+            "status": "present",
+            "value": "8589934592"
+          },
+          "/sys/fs/cgroup/memory.current": {
+            "status": "present",
+            "value": "1519853568"
+          },
+          "/sys/fs/cgroup/memory.peak": {
+            "status": "present",
+            "value": "1579048960"
+          },
+          "/sys/fs/cgroup/memory.events": {
+            "status": "present",
+            "value": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+          },
+          "/sys/fs/cgroup/memory.swap.max": {
+            "status": "present",
+            "value": "max"
+          },
+          "/sys/fs/cgroup/memory.swap.current": {
+            "status": "present",
+            "value": "0"
+          },
+          "/sys/fs/cgroup/cpu.max": {
+            "status": "present",
+            "value": "800000 100000"
+          }
+        },
+        "errors": [],
+        "limitations": [
+          "Visible namespaces cannot prove absence of hidden ancestor limits.",
+          "Guest availability may change suddenly with ballooning/external contention.",
+          "Software RSS/reserve monitoring is not a dedicated memory cgroup."
+        ],
+        "kernel_memory_controller": null,
+        "controller_version": "v2"
+      },
+      "final_memory": {
+        "host": {
+          "MemTotal": 10451427328,
+          "MemAvailable": 9710714880,
+          "SwapTotal": 0,
+          "SwapFree": 0
+        },
+        "cgroup_root": "/sys/fs/cgroup",
+        "cgroup": {
+          "memory.max": 8589934592,
+          "memory.current": 1529139200,
+          "memory.peak": 1584943104,
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+          "memory.swap.max": "max",
+          "memory.swap.current": 0,
+          "cpu.max": "800000 100000"
+        },
+        "effective_available_bytes": 7060795392,
+        "memory_policy": "strict",
+        "fallback_enabled": false,
+        "fallback_used": false,
+        "memory_source": "guest_and_cgroup",
+        "controller_state": "observable",
+        "constraints": [
+          {
+            "path": "/sys/fs/cgroup",
+            "limit": 8589934592,
+            "usage": 1529139200
+          }
+        ],
+        "observations": {
+          "/proc/meminfo": {
+            "status": "present",
+            "value": "MemTotal:       10206472 kB\nMemFree:         8372940 kB\nMemAvailable:    9483120 kB\nBuffers:           11508 kB\nCached:          1324144 kB\nSwapCached:            0 kB\nActive:           197092 kB\nInactive:        1232636 kB\nActive(anon):        108 kB\nInactive(anon):   123836 kB\nActive(file):     196984 kB\nInactive(file):  1108800 kB\nUnevictable:       29956 kB\nMlocked:              32 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              9964 kB\nWriteback:             8 kB\nAnonPages:        124056 kB\nMapped:            73112 kB\nShmem:                12 kB\nKReclaimable:      66988 kB\nSlab:             113872 kB\nSReclaimable:      66988 kB\nSUnreclaim:        46884 kB\nKernelStack:        3376 kB\nPageTables:         4176 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103236 kB\nCommitted_AS:     533208 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4712 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:       65536 kB\nDirectMap2M:     4485120 kB\nDirectMap1G:    16777216 kB"
+          },
+          "/proc/self/cgroup": {
+            "status": "present",
+            "value": "0::/"
+          },
+          "/proc/self/mountinfo": {
+            "status": "present",
+            "value": "93 63 0:27 / / rw,nosuid,nodev,relatime - overlay overlay rw,lowerdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/lower-0,upperdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/upper/upper,workdir=/run/kata-containers/erofs-multi-layer/40823d960cc046d9b4dff40d4b974098/upper/work,index=off,metacopy=off\n94 93 0:30 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw\n95 94 0:31 /null /proc/keys rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n96 94 0:31 /null /proc/timer_list rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n97 94 0:30 /bus /proc/bus ro,nosuid,nodev,relatime - proc proc rw\n98 94 0:30 /fs /proc/fs ro,nosuid,nodev,relatime - proc proc rw\n99 94 0:30 /irq /proc/irq ro,nosuid,nodev,relatime - proc proc rw\n100 94 0:30 /sys /proc/sys ro,nosuid,nodev,relatime - proc proc rw\n101 93 0:31 / /dev rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n102 101 0:32 / /dev/pts rw,nosuid,nodev,noexec,relatime - devpts devpts rw,gid=5,mode=620,ptmxmode=666\n103 101 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw\n104 101 0:25 / /dev/mqueue rw,nosuid,nodev,noexec,relatime - mqueue mqueue rw\n105 93 0:20 / /sys ro,nosuid,nodev,noexec,relatime - sysfs sysfs rw\n106 105 0:24 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup2 rw,nsdelegate\n107 101 0:36 / /dev rw,nosuid,nodev,relatime - tmpfs tmpfs rw,mode=755\n108 107 0:31 /null /dev/null rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n109 107 0:31 /zero /dev/zero rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n110 107 0:31 /full /dev/full rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n111 107 0:31 /random /dev/random rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n112 107 0:31 /urandom /dev/urandom rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n113 107 0:31 /tty /dev/tty rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n114 107 0:37 / /dev/pts rw,nosuid,noexec,relatime - devpts devpts rw,mode=620,ptmxmode=666\n115 107 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw"
+          },
+          "/proc/cgroups": {
+            "status": "present",
+            "value": "#subsys_name\thierarchy\tnum_cgroups\tenabled\ncpu\t0\t4\t1\ncpuacct\t0\t4\t1\nblkio\t0\t4\t1\ndevices\t0\t4\t1\nfreezer\t0\t4\t1\nnet_cls\t0\t4\t1\nperf_event\t0\t4\t1\nnet_prio\t0\t4\t1\nhugetlb\t0\t4\t1\npids\t0\t4\t1"
+          },
+          "/sys/fs/cgroup/cgroup.controllers": {
+            "status": "present",
+            "value": "cpuset cpu io memory hugetlb pids"
+          },
+          "/sys/fs/cgroup/memory.max": {
+            "status": "present",
+            "value": "8589934592"
+          },
+          "/sys/fs/cgroup/memory.current": {
+            "status": "present",
+            "value": "1529139200"
+          },
+          "/sys/fs/cgroup/memory.peak": {
+            "status": "present",
+            "value": "1584943104"
+          },
+          "/sys/fs/cgroup/memory.events": {
+            "status": "present",
+            "value": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+          },
+          "/sys/fs/cgroup/memory.swap.max": {
+            "status": "present",
+            "value": "max"
+          },
+          "/sys/fs/cgroup/memory.swap.current": {
+            "status": "present",
+            "value": "0"
+          },
+          "/sys/fs/cgroup/cpu.max": {
+            "status": "present",
+            "value": "800000 100000"
+          }
+        },
+        "errors": [],
+        "limitations": [
+          "Visible namespaces cannot prove absence of hidden ancestor limits.",
+          "Guest availability may change suddenly with ballooning/external contention.",
+          "Software RSS/reserve monitoring is not a dedicated memory cgroup."
+        ],
+        "kernel_memory_controller": null,
+        "controller_version": "v2"
+      },
+      "initial_renderer_rss_bytes": 25186304,
+      "final_renderer_rss_bytes": 30146560,
+      "renderer_peak_rss_bytes": 33288192,
+      "waited_child_max_rss_bytes": 72245248,
+      "encoder_peak_rss_bytes": 0,
+      "all_children_peak_rss_bytes": 72581120,
+      "estimated_simultaneous_tree_peak_rss_bytes": 102776832,
+      "sampling_interval_seconds": 0.01,
+      "samples": 515,
+      "job_budget_bytes": 268435456,
+      "reserve_bytes": 67108864,
+      "limit_reason": null,
+      "minimum_effective_available_bytes": 7005401088,
+      "maximum_effective_available_bytes": 7070081024,
+      "memory_observations": 53,
+      "minimum_workspace_free_bytes": 62813544448,
+      "disk_reserve_bytes": 67108864,
+      "wall_seconds": 7.93018194199999,
+      "caveat": "Sampled sum of RSS can miss transient peaks and double-count shared pages; cgroup counters are shared, not a dedicated job limit."
+    },
+    "storage": {
+      "stage_samples_bytes": {
+        "registry_validation": 256496,
+        "silent_render": 1501884,
+        "mix": 2653884,
+        "mux": 3288095,
+        "verify": 4443167
+      },
+      "sampled_logical_peak_bytes": 4443167,
+      "preflight_estimate_bytes": 104272368,
+      "disk_reserve_bytes": 67108864,
+      "scope": "Logical stage boundaries; hard links double-counted; transient peaks may be missed"
+    },
+    "stream_copy_unchanged": true,
+    "exact_pts": true
+  }
+}

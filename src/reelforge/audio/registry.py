@@ -6,6 +6,7 @@ import re
 import shutil
 import struct
 import wave
+from contextlib import nullcontext
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from threading import Event
@@ -62,7 +63,12 @@ class ResolvedCue:
 
 
 def inspect_wav(
-    path: Path, role: str, *, cancelled: Event | None = None, workspace: Path | None = None
+    path: Path,
+    role: str,
+    *,
+    cancelled: Event | None = None,
+    workspace: Path | None = None,
+    staging_directory: Path | None = None,
 ) -> dict:
     from reelforge.media.process import run_bounded
 
@@ -100,7 +106,14 @@ def inspect_wav(
     source_hash = digest(path)
     # Native decoders only see an immutable private copy, not a shared registry pathname.
     # Per-validation paths also isolate native filesystem snapshots between successive jobs.
-    with private_directory(workspace or Path.cwd(), ".register-") as staging:
+    if staging_directory is not None:
+        staging_directory.mkdir(exist_ok=False)
+    context = (
+        nullcontext(staging_directory)
+        if staging_directory is not None
+        else private_directory(workspace or Path.cwd(), ".register-")
+    )
+    with context as staging:
         decoder_path = staging / "input.wav"
         shutil.copyfile(path, decoder_path)
         if digest(decoder_path) != source_hash:
@@ -225,6 +238,8 @@ class AudioRegistry:
         *,
         cancelled: Event | None = None,
         workspace: Path | None = None,
+        validate_media: bool = True,
+        validation_root: Path | None = None,
     ) -> tuple[ResolvedCue, ...]:
         result = []
         checked = {}
@@ -236,11 +251,17 @@ class AudioRegistry:
             if asset.role != role:
                 error(f"{asset.id}: expected registered role {role}")
             path = self.root / asset.file
-            if path.is_symlink() or not path.resolve().is_relative_to(self.root):
+            if validate_media and (
+                path.is_symlink() or not path.resolve().is_relative_to(self.root)
+            ):
                 error(f"{asset.id}: asset path escapes the registry")
-            if asset.id not in checked:
+            if validate_media and asset.id not in checked:
                 actual = inspect_wav(
-                    path, asset.role, cancelled=cancelled, workspace=workspace or self.root
+                    path,
+                    asset.role,
+                    cancelled=cancelled,
+                    workspace=workspace or self.root,
+                    staging_directory=(validation_root / asset.id if validation_root else None),
                 )
                 if any(actual[key] != getattr(asset, key) for key in actual):
                     error(f"{asset.id}: bytes/metadata changed; register a new trusted take")
@@ -248,19 +269,20 @@ class AudioRegistry:
             end = asset.usable_frames if cue.trim_end_frame is None else cue.trim_end_frame
             if not 0 <= cue.trim_start_frame < end <= asset.usable_frames:
                 error(f"{asset.id}: trim must lie within [0, {asset.usable_frames}] usable frames")
-            with wave.open(str(path), "rb") as w:
-                first = cue.trim_start_frame * asset.sample_rate // 30
-                remaining = end * asset.sample_rate // 30 - first
-                w.setpos(first)
-                audible = False
-                while remaining:
-                    block = w.readframes(min(4096, remaining))
-                    remaining -= len(block) // (asset.channels * 2)
-                    if not block:
-                        error(f"{asset.id}: truncated trim range")
-                    audible = audible or any(block)
-                if not audible:
-                    error(f"{asset.id}: selected trim is entirely silent")
+            if validate_media:
+                with wave.open(str(path), "rb") as w:
+                    first = cue.trim_start_frame * asset.sample_rate // 30
+                    remaining = end * asset.sample_rate // 30 - first
+                    w.setpos(first)
+                    audible = False
+                    while remaining:
+                        block = w.readframes(min(4096, remaining))
+                        remaining -= len(block) // (asset.channels * 2)
+                        if not block:
+                            error(f"{asset.id}: truncated trim range")
+                        audible = audible or any(block)
+                    if not audible:
+                        error(f"{asset.id}: selected trim is entirely silent")
             samples = min(end - cue.trim_start_frame, frames - cue.start_frame) * 1600
             result.append(ResolvedCue(cue, asset, path, end, samples))
         # Conservative peak headroom at each overlap, without normalizing quiet cues upward.

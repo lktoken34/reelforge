@@ -1,0 +1,8 @@
+{
+  "first_status": true,
+  "repeat_status": true,
+  "all_90_source_frames_equal": true,
+  "all_90_decoded_frames_equal": true,
+  "mixed_pcm_equal": true,
+  "decoded_aac_pcm_equal": true
+}
