@@ -1,0 +1,14 @@
+{
+  "reserved_name.json": {
+    "code": "GEOMETRY_NAMESPACE",
+    "path": "/assets/0/id"
+  },
+  "open_fill.json": {
+    "code": "GEOMETRY_PATH",
+    "path": "/assets/0/shapes/0/path"
+  },
+  "unknown_field.json": {
+    "code": "GEOMETRY_INVALID",
+    "path": ""
+  }
+}

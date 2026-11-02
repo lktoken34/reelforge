@@ -1,0 +1,27 @@
+{
+  "contract": "geometry-0.1",
+  "assets": [
+    {
+      "id": "wash_station",
+      "private_id": "generated_agent_wash_station",
+      "size": [
+        220,
+        262
+      ],
+      "anchors": {
+        "center": [
+          110,
+          131
+        ],
+        "origin": [
+          110,
+          253
+        ]
+      },
+      "paths": 30,
+      "operations": 106,
+      "geometry_sha256": "4d25cd9623e3ee3daa52ecc1ccd1a6cdea945ebea752369055ff05c479efc934",
+      "character_support": false
+    }
+  ]
+}

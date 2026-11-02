@@ -1,0 +1,402 @@
+{
+  "contract": "composition-0.1",
+  "geometry": {
+    "contract": "geometry-0.1",
+    "assets": [
+      {
+        "id": "damaged_mast",
+        "private_id": "generated_agent_damaged_mast",
+        "size": [
+          192,
+          292
+        ],
+        "anchors": {
+          "center": [
+            96.0,
+            146.0
+          ],
+          "origin": [
+            96.0,
+            287
+          ]
+        },
+        "paths": 32,
+        "operations": 111,
+        "geometry_sha256": "4d7849aef55275a8b80f612c9541d110c7c90530e2e4bdf0fc08694ca54661ec",
+        "character_support": false
+      },
+      {
+        "id": "water_cart",
+        "private_id": "generated_agent_water_cart",
+        "size": [
+          200,
+          174
+        ],
+        "anchors": {
+          "center": [
+            100.0,
+            87.0
+          ],
+          "origin": [
+            100.0,
+            169
+          ]
+        },
+        "paths": 34,
+        "operations": 139,
+        "geometry_sha256": "7f3674551a20496420be6ac7ec495b751a518a8a8c3eaeb925ddd13d2cf82dfa",
+        "character_support": false
+      },
+      {
+        "id": "watchtower",
+        "private_id": "generated_agent_watchtower",
+        "size": [
+          224,
+          304
+        ],
+        "anchors": {
+          "center": [
+            112.0,
+            152.0
+          ],
+          "origin": [
+            112.0,
+            299
+          ]
+        },
+        "paths": 37,
+        "operations": 120,
+        "geometry_sha256": "e7b0e2f953b88a8c3711a50e443c2f80935fff6d54f38cb342bbb100bdfd4049",
+        "character_support": false
+      },
+      {
+        "id": "field_radio",
+        "private_id": "generated_agent_field_radio",
+        "size": [
+          176,
+          152
+        ],
+        "anchors": {
+          "center": [
+            88.0,
+            76.0
+          ],
+          "origin": [
+            88.0,
+            147
+          ]
+        },
+        "paths": 25,
+        "operations": 106,
+        "geometry_sha256": "5740b1b4c94ab51b84d12b9ece912561e6339ef639ae84cda3397c0f57f9b388",
+        "character_support": false
+      }
+    ]
+  },
+  "graph": {
+    "schema_version": "scene-0.1",
+    "title": "Orchard Checkpoint",
+    "frame": 45,
+    "hierarchy": [
+      {
+        "id": "root",
+        "parent": null,
+        "kind": "root",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0.0
+        },
+        "visible": true,
+        "layer": null,
+        "depth": null
+      },
+      {
+        "id": "sky_layer",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0.0
+        },
+        "visible": true,
+        "layer": "sky_layer",
+        "depth": 0
+      },
+      {
+        "id": "sky",
+        "parent": "sky_layer",
+        "kind": "background",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0.0
+        },
+        "visible": true,
+        "layer": "sky_layer",
+        "depth": 0
+      },
+      {
+        "id": "distance",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0.0
+        },
+        "visible": true,
+        "layer": "distance",
+        "depth": 0.18
+      },
+      {
+        "id": "hills",
+        "parent": "distance",
+        "kind": "background",
+        "world": {
+          "x": 180.0,
+          "y": 345.0,
+          "scale": 1,
+          "angle": 0.0
+        },
+        "visible": true,
+        "layer": "distance",
+        "depth": 0.18
+      },
+      {
+        "id": "terrain",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0.0
+        },
+        "visible": true,
+        "layer": "terrain",
+        "depth": 1
+      },
+      {
+        "id": "ground",
+        "parent": "terrain",
+        "kind": "environment",
+        "world": {
+          "x": 180.0,
+          "y": 505.0,
+          "scale": 1.1,
+          "angle": 0.0
+        },
+        "visible": true,
+        "layer": "terrain",
+        "depth": 1
+      },
+      {
+        "id": "structures",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0.0
+        },
+        "visible": true,
+        "layer": "structures",
+        "depth": 0.85
+      },
+      {
+        "id": "outpost",
+        "parent": "structures",
+        "kind": "group",
+        "world": {
+          "x": 236.0,
+          "y": 425.0,
+          "scale": 0.62,
+          "angle": 0.0
+        },
+        "visible": true,
+        "layer": "structures",
+        "depth": 0.85
+      },
+      {
+        "id": "building",
+        "parent": "outpost",
+        "kind": "asset",
+        "world": {
+          "x": 236.0,
+          "y": 425.0,
+          "scale": 0.62,
+          "angle": 0.0
+        },
+        "visible": true,
+        "layer": "structures",
+        "depth": 0.85
+      },
+      {
+        "id": "gate",
+        "parent": "outpost",
+        "kind": "asset",
+        "world": {
+          "x": 123.16,
+          "y": 438.64,
+          "scale": 0.496,
+          "angle": 0.0
+        },
+        "visible": true,
+        "layer": "structures",
+        "depth": 0.85
+      },
+      {
+        "id": "trees",
+        "parent": "structures",
+        "kind": "group",
+        "world": {
+          "x": 34.0,
+          "y": 425.0,
+          "scale": 1,
+          "angle": 0.0
+        },
+        "visible": true,
+        "layer": "structures",
+        "depth": 0.85
+      },
+      {
+        "id": "lone_tree",
+        "parent": "trees",
+        "kind": "asset",
+        "world": {
+          "x": 34.0,
+          "y": 425.0,
+          "scale": 0.87,
+          "angle": 0.0
+        },
+        "visible": true,
+        "layer": "structures",
+        "depth": 0.85
+      },
+      {
+        "id": "receiver",
+        "parent": "structures",
+        "kind": "asset",
+        "world": {
+          "x": 169.8,
+          "y": 476.2,
+          "scale": 0.4,
+          "angle": 0.0
+        },
+        "visible": true,
+        "layer": "structures",
+        "depth": 0.85
+      },
+      {
+        "id": "relay",
+        "parent": "structures",
+        "kind": "asset",
+        "world": {
+          "x": 202.6,
+          "y": 323.45,
+          "scale": 0.65,
+          "angle": 0.0
+        },
+        "visible": true,
+        "layer": "structures",
+        "depth": 0.85
+      },
+      {
+        "id": "people",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0.0
+        },
+        "visible": true,
+        "layer": "people",
+        "depth": 1
+      },
+      {
+        "id": "rowan",
+        "parent": "people",
+        "kind": "character",
+        "world": {
+          "x": 95.0,
+          "y": 504.0,
+          "scale": 0.57,
+          "angle": 0.0
+        },
+        "visible": true,
+        "layer": "people",
+        "depth": 1
+      },
+      {
+        "id": "foreground",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0.0
+        },
+        "visible": true,
+        "layer": "foreground",
+        "depth": 1.4
+      },
+      {
+        "id": "right_edge",
+        "parent": "foreground",
+        "kind": "asset",
+        "world": {
+          "x": 389.0,
+          "y": 570.0,
+          "scale": 1.6,
+          "angle": 0.0
+        },
+        "visible": true,
+        "layer": "foreground",
+        "depth": 1.4
+      }
+    ],
+    "painter_ids": [
+      "sky",
+      "hills",
+      "ground",
+      "building",
+      "gate",
+      "lone_tree",
+      "receiver",
+      "relay",
+      "rowan",
+      "right_edge"
+    ],
+    "path_allowance": 1337,
+    "operation_allowance": 24517,
+    "character_ground_contacts": {
+      "rowan": {
+        "ground_id": "ground",
+        "world": [
+          95.0,
+          504.0
+        ],
+        "screen": [
+          92.5434741102091,
+          507.8987624136664
+        ]
+      }
+    },
+    "camera": {
+      "x": 0.10111933999934752,
+      "y": -1.0168532233332246,
+      "zoom": 1.0277106652916652
+    }
+  },
+  "character_support_for_authored_assets": false
+}

@@ -1,0 +1,6 @@
+A portable emergency wash station, previously absent from the example set: two upright
+steel posts joined by a rounded overhead pipe, a downward shower head, a hose leading
+to an olive side tank with a hand pump, a shallow grated drain tray, and an orange valve.
+The clear opening should be person-sized next to Rowan. Show structural connections,
+front/side material cues and a small safety marker. Static vector object only; no water
+simulation, character interaction or automatic inference by the engine is requested.

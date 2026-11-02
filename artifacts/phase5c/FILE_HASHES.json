@@ -1,0 +1,609 @@
+{
+  "scope": "Phase 5C source, declarative assets, compositions, reports and visual proofs; excludes this inventory and private transactions",
+  "files": {
+    "artifacts/phase5c/asset_showcases.png": {
+      "bytes": 76572,
+      "sha256": "64ec94a1321bc3876fa22a993e9f790685411580f4faea11c80e14d867e5cfa3"
+    },
+    "artifacts/phase5c/base_install_tests.txt": {
+      "bytes": 545,
+      "sha256": "fbc27019ec97b265fa006d2689674b35aa529a5cf09169fbbb4d157046c7dad1"
+    },
+    "artifacts/phase5c/build.txt": {
+      "bytes": 237,
+      "sha256": "097eb48f7fb15697e9461998bc43c5d21a121674896292ec2b1cc9047b025f34"
+    },
+    "artifacts/phase5c/camera_contact_sheet.png": {
+      "bytes": 585851,
+      "sha256": "41b64042acf65ed1f252fbe898783a4389af90664d4c6ed9897415330e6f3388"
+    },
+    "artifacts/phase5c/capabilities.json": {
+      "bytes": 1332,
+      "sha256": "cae74acb10bcf46c9a5cb6558e218d9abe04dcda586228f0849a5cf5d331dec3"
+    },
+    "artifacts/phase5c/compatibility_and_decode.json": {
+      "bytes": 61081,
+      "sha256": "c1357b87b40745415041611c456349ba1062e3aa5c25dad2ac85119db927d42d"
+    },
+    "artifacts/phase5c/compiler_before_heldout.json": {
+      "bytes": 781,
+      "sha256": "9afe9b55fb9dbeadb142a91564d600dc21ac5eb54a1d73cdf1bcae1d95cdc93c"
+    },
+    "artifacts/phase5c/composition-0.1.schema.json": {
+      "bytes": 28456,
+      "sha256": "99f6292424b7e407b6abdefd184bb1535e753fc9c83257622babf8b96d6ccfa1"
+    },
+    "artifacts/phase5c/decoded_contact_sheet.png": {
+      "bytes": 655985,
+      "sha256": "4c06e48142e009bb663ba2083bef91c1b74e0eb9d6582d2c5fab2590df9fc004"
+    },
+    "artifacts/phase5c/determinism.json": {
+      "bytes": 18665,
+      "sha256": "223f180873a9475d586a99c2592591931b0f96dc30427657c0aef1be80824f4d"
+    },
+    "artifacts/phase5c/full_tests.txt": {
+      "bytes": 3161,
+      "sha256": "72b27de3dc4ffd21bbbe4e5da81f31b80e403ac96dff14faff9d3f2fb825c64d"
+    },
+    "artifacts/phase5c/geometry-0.1.schema.json": {
+      "bytes": 14840,
+      "sha256": "913180c8eaa6a3bfab747d02f2a45dd45d7366438b10348e70ffe8f97bbd1a5d"
+    },
+    "artifacts/phase5c/heldout_evidence.json": {
+      "bytes": 959,
+      "sha256": "cc596634e0338e933baf834c512158c56bb140ada4e80df926b52c29413cb779"
+    },
+    "artifacts/phase5c/heldout_station_inspection.json": {
+      "bytes": 9790,
+      "sha256": "9e4d64460e47acd8c0ac478fb72fdd4a07844e563e9d4721c3382d8ca29ad5e8"
+    },
+    "artifacts/phase5c/heldout_wash_station_inspection.json": {
+      "bytes": 511,
+      "sha256": "c73c266724230de96b00f37e2bb27bfdd9261c96dcc7a37d7e093bb1f42316c2"
+    },
+    "artifacts/phase5c/installed_wheel_smoke.json": {
+      "bytes": 7200,
+      "sha256": "766f914870e1fdc0ff9a2a7dc3108e9315c71c3378bc2b944ca05cfef406d2f0"
+    },
+    "artifacts/phase5c/lint.txt": {
+      "bytes": 48,
+      "sha256": "d6d2179e96f4f76fb3ed873bf11624ab3505e6cfbc1e783051298efa0e0be28b"
+    },
+    "artifacts/phase5c/orchard_checkpoint_inspection.json": {
+      "bytes": 8450,
+      "sha256": "7eff57ca702e30721f6ccb763ccb7fe90136a0144b61a0712ffc98226baf0f36"
+    },
+    "artifacts/phase5c/performance_summary.json": {
+      "bytes": 6417,
+      "sha256": "d53d594920e80bbd3852f85eb97777e5aa7233012eb1f3cb8584ab3097371b70"
+    },
+    "artifacts/phase5c/proof_execution.json": {
+      "bytes": 8559,
+      "sha256": "99d37d4beec0a689eb53f1fab6d18af3524131f9599cb7ae42c43f2ceac499a0"
+    },
+    "artifacts/phase5c/proofs/asset_damaged_mast/frame_000.png": {
+      "bytes": 52774,
+      "sha256": "3468a4f6ae68144d8c1f33c267cf62ad9f414919635782cb3d87ea41c44f1adc"
+    },
+    "artifacts/phase5c/proofs/asset_damaged_mast/frame_045.png": {
+      "bytes": 52774,
+      "sha256": "3468a4f6ae68144d8c1f33c267cf62ad9f414919635782cb3d87ea41c44f1adc"
+    },
+    "artifacts/phase5c/proofs/asset_damaged_mast/frame_089.png": {
+      "bytes": 52774,
+      "sha256": "3468a4f6ae68144d8c1f33c267cf62ad9f414919635782cb3d87ea41c44f1adc"
+    },
+    "artifacts/phase5c/proofs/asset_damaged_mast/geometry_job.json": {
+      "bytes": 14600,
+      "sha256": "fdbc4a2f585a766beb1b0e245ff88c893877f5bf8bc9a7fffbc6e591bd7bc10f"
+    },
+    "artifacts/phase5c/proofs/asset_damaged_mast/layer_objects.png": {
+      "bytes": 60324,
+      "sha256": "80e4acc62462bdd24a4b2d0f968e62cd059944eb134224596cb8b8b221102b09"
+    },
+    "artifacts/phase5c/proofs/asset_damaged_mast/stills_report.json": {
+      "bytes": 16496,
+      "sha256": "f56682d7a7374992794a192b9def510925d152c3692085981a892e460ea68fab"
+    },
+    "artifacts/phase5c/proofs/asset_field_radio/frame_000.png": {
+      "bytes": 21269,
+      "sha256": "f86d294d2df76d6b78306d0d11a55ddfeeb8c57f126597049b0da18a42800059"
+    },
+    "artifacts/phase5c/proofs/asset_field_radio/frame_045.png": {
+      "bytes": 21269,
+      "sha256": "f86d294d2df76d6b78306d0d11a55ddfeeb8c57f126597049b0da18a42800059"
+    },
+    "artifacts/phase5c/proofs/asset_field_radio/frame_089.png": {
+      "bytes": 21269,
+      "sha256": "f86d294d2df76d6b78306d0d11a55ddfeeb8c57f126597049b0da18a42800059"
+    },
+    "artifacts/phase5c/proofs/asset_field_radio/geometry_job.json": {
+      "bytes": 14599,
+      "sha256": "cc13b21a341ed906ee4e0bd25d4428bb1971bb63533fd6322e1032887846f119"
+    },
+    "artifacts/phase5c/proofs/asset_field_radio/layer_objects.png": {
+      "bytes": 23369,
+      "sha256": "a40c719f5806f0e5d9ed3848f47c670d53b8fa7313d12e51ed4bf7dfd1413b0c"
+    },
+    "artifacts/phase5c/proofs/asset_field_radio/stills_report.json": {
+      "bytes": 16502,
+      "sha256": "d422f8af9979af5e25f74006765560332175653441a9ef557374cbdf86b5f9ae"
+    },
+    "artifacts/phase5c/proofs/asset_wash_station/frame_000.png": {
+      "bytes": 22448,
+      "sha256": "a9df8a2ed13ec0391f4619204cd96ab6a7b311fafb7eb1334c13bed07f193899"
+    },
+    "artifacts/phase5c/proofs/asset_wash_station/frame_045.png": {
+      "bytes": 22448,
+      "sha256": "a9df8a2ed13ec0391f4619204cd96ab6a7b311fafb7eb1334c13bed07f193899"
+    },
+    "artifacts/phase5c/proofs/asset_wash_station/frame_089.png": {
+      "bytes": 22448,
+      "sha256": "a9df8a2ed13ec0391f4619204cd96ab6a7b311fafb7eb1334c13bed07f193899"
+    },
+    "artifacts/phase5c/proofs/asset_wash_station/geometry_job.json": {
+      "bytes": 14600,
+      "sha256": "da252bdbd173c748813fbe05a5bcc405014169d47d00009ddda710cedc275bd9"
+    },
+    "artifacts/phase5c/proofs/asset_wash_station/layer_objects.png": {
+      "bytes": 24518,
+      "sha256": "15445d17486b0b4bb7b59160181da7d012f0cbe8b7de8f330972b18b559615c9"
+    },
+    "artifacts/phase5c/proofs/asset_wash_station/stills_report.json": {
+      "bytes": 16508,
+      "sha256": "b0e99a809ec144cfefa76ab1e7c91c1b89dbc8f45658808d11005d1dcb5d3f23"
+    },
+    "artifacts/phase5c/proofs/asset_watchtower/frame_000.png": {
+      "bytes": 37566,
+      "sha256": "7a654db5325f59520db10f0be4eec5e4ff339a459de9b95967086d1527097fba"
+    },
+    "artifacts/phase5c/proofs/asset_watchtower/frame_045.png": {
+      "bytes": 37566,
+      "sha256": "7a654db5325f59520db10f0be4eec5e4ff339a459de9b95967086d1527097fba"
+    },
+    "artifacts/phase5c/proofs/asset_watchtower/frame_089.png": {
+      "bytes": 37566,
+      "sha256": "7a654db5325f59520db10f0be4eec5e4ff339a459de9b95967086d1527097fba"
+    },
+    "artifacts/phase5c/proofs/asset_watchtower/geometry_job.json": {
+      "bytes": 14599,
+      "sha256": "68112b0a1762e1883f2f3395e89e95e5cdcbe0889b86186fe3fc8160e6cd61ec"
+    },
+    "artifacts/phase5c/proofs/asset_watchtower/layer_objects.png": {
+      "bytes": 44910,
+      "sha256": "20fe9ccc72dd0e0fd185056b6b60e4b7a205bd025fcf6a39cabd27d244ad8dc2"
+    },
+    "artifacts/phase5c/proofs/asset_watchtower/stills_report.json": {
+      "bytes": 16496,
+      "sha256": "83b84133d89ffcdd41d09de4d15ed5e966096ae476efab61c2fb6791f559429a"
+    },
+    "artifacts/phase5c/proofs/asset_water_cart/frame_000.png": {
+      "bytes": 23006,
+      "sha256": "b052b2d1e7dfe55aeb71cea371708a5a011f1421e12244951ab19ecf0da17044"
+    },
+    "artifacts/phase5c/proofs/asset_water_cart/frame_045.png": {
+      "bytes": 23006,
+      "sha256": "b052b2d1e7dfe55aeb71cea371708a5a011f1421e12244951ab19ecf0da17044"
+    },
+    "artifacts/phase5c/proofs/asset_water_cart/frame_089.png": {
+      "bytes": 23006,
+      "sha256": "b052b2d1e7dfe55aeb71cea371708a5a011f1421e12244951ab19ecf0da17044"
+    },
+    "artifacts/phase5c/proofs/asset_water_cart/geometry_job.json": {
+      "bytes": 14600,
+      "sha256": "e0ecfb2728dba6c3b7c25e291ac088b8e0468a86142e95bddbe85451bcb7761e"
+    },
+    "artifacts/phase5c/proofs/asset_water_cart/layer_objects.png": {
+      "bytes": 24675,
+      "sha256": "b35358eddccfc35f52e381347f1d144ecf960a436dc1a15c527c2d6b5661ebec"
+    },
+    "artifacts/phase5c/proofs/asset_water_cart/stills_report.json": {
+      "bytes": 16472,
+      "sha256": "2551727f0db2f09448241fd83f1474137e666daabda5c71b8659a7f031bb3543"
+    },
+    "artifacts/phase5c/proofs/heldout_station_stills/frame_000.png": {
+      "bytes": 165376,
+      "sha256": "9fd96673bb2c4998404b8e62811d39e249047107031fa65b55378319314342b2"
+    },
+    "artifacts/phase5c/proofs/heldout_station_stills/frame_045.png": {
+      "bytes": 166547,
+      "sha256": "ed3aefa169d078416c636eab99f44e1a9e75463b32ad9ba4fb0f500163f2a7fe"
+    },
+    "artifacts/phase5c/proofs/heldout_station_stills/frame_089.png": {
+      "bytes": 165303,
+      "sha256": "c91aad369f9a402c149799a117251caf68cab831143997db0f5cae0eb98b3cde"
+    },
+    "artifacts/phase5c/proofs/heldout_station_stills/geometry_job.json": {
+      "bytes": 14597,
+      "sha256": "3c8f0095cd9005decc862eeef34ee2c76ef30b7b4f79eaf96a7a61b368eced6e"
+    },
+    "artifacts/phase5c/proofs/heldout_station_stills/layer_layer_backdrop.png": {
+      "bytes": 16400,
+      "sha256": "bb30f1708d71b7aa4c2c588e394a083f1adc8652c5d88411448db93c3cc5d9ae"
+    },
+    "artifacts/phase5c/proofs/heldout_station_stills/layer_layer_distance.png": {
+      "bytes": 40765,
+      "sha256": "cc9dfcdb1c95f5cd2e850cc0a5e4c9fe59113123fc13fa21106e2292084327c4"
+    },
+    "artifacts/phase5c/proofs/heldout_station_stills/layer_layer_foreground.png": {
+      "bytes": 30921,
+      "sha256": "54a4ee0546f8ac42049d39ab3d8195377d2f4211113d15c69b8da4bad0a6ff6f"
+    },
+    "artifacts/phase5c/proofs/heldout_station_stills/layer_layer_ground.png": {
+      "bytes": 46525,
+      "sha256": "42d9d20a835afe3715827804939255bc7a09de6b03817cf2494e14f005bf6efb"
+    },
+    "artifacts/phase5c/proofs/heldout_station_stills/layer_layer_objects.png": {
+      "bytes": 120768,
+      "sha256": "bb644fd8288293af1397dababe52bc7091dfa11faaefac0b915b1f582f54e0fe"
+    },
+    "artifacts/phase5c/proofs/heldout_station_stills/layer_layer_people.png": {
+      "bytes": 25492,
+      "sha256": "512d13f173ce936267c1346a8e062644b138344b00e01a5202af8450c1ebddd6"
+    },
+    "artifacts/phase5c/proofs/heldout_station_stills/layer_layer_sky.png": {
+      "bytes": 15522,
+      "sha256": "7fbc0121591d7af155e7380fb0bc098a817cdb48803cee3d6544a67e0aa4cb27"
+    },
+    "artifacts/phase5c/proofs/heldout_station_stills/stills_report.json": {
+      "bytes": 24361,
+      "sha256": "33cf97159dd563d853b16bc29c095984693d31661cc35870f1d47733ebc642b2"
+    },
+    "artifacts/phase5c/proofs/orchard_checkpoint_stills/frame_000.png": {
+      "bytes": 183602,
+      "sha256": "ff7f0e930ac8d48a223d44e2811f22fe4c58fb4ef4634e7f74e6e6f90617a4cb"
+    },
+    "artifacts/phase5c/proofs/orchard_checkpoint_stills/frame_045.png": {
+      "bytes": 182028,
+      "sha256": "b6f75da74e7629b985f19e2902dc9821345190b049f26ecbd160628cbd96798f"
+    },
+    "artifacts/phase5c/proofs/orchard_checkpoint_stills/frame_089.png": {
+      "bytes": 180204,
+      "sha256": "491cf9bbb58ba2947fc2e2afd8ff6c62ad4adf5650b8f1b935ef9b756742c868"
+    },
+    "artifacts/phase5c/proofs/orchard_checkpoint_stills/geometry_job.json": {
+      "bytes": 14598,
+      "sha256": "9cd14d289cb15540e249fbc3c452f9733371c2f2ba1e3bf618b4e9b83bb36930"
+    },
+    "artifacts/phase5c/proofs/orchard_checkpoint_stills/layer_distance.png": {
+      "bytes": 18296,
+      "sha256": "b2383c1b05c3cd2157aafc52766e1a484f1f4ed282f8f41bcab71531365c5fd2"
+    },
+    "artifacts/phase5c/proofs/orchard_checkpoint_stills/layer_foreground.png": {
+      "bytes": 6001,
+      "sha256": "1fa25cea255a158d18e6a591ad466933d3516653263e9f923ad1bfdb730a75d0"
+    },
+    "artifacts/phase5c/proofs/orchard_checkpoint_stills/layer_people.png": {
+      "bytes": 30720,
+      "sha256": "da2eb681f97d75ad2945386325f377d7106e05964d4c462ca8e0186b42850b01"
+    },
+    "artifacts/phase5c/proofs/orchard_checkpoint_stills/layer_sky_layer.png": {
+      "bytes": 34548,
+      "sha256": "3c5b0279cf131411da5ab00ea7e7f2f56e5e1514e7fcaab939114da272b496a6"
+    },
+    "artifacts/phase5c/proofs/orchard_checkpoint_stills/layer_structures.png": {
+      "bytes": 85178,
+      "sha256": "8b1daf2ff32c000b7700c2acb8859c5f8384a29f46b1b9c5092f0a2e09d08127"
+    },
+    "artifacts/phase5c/proofs/orchard_checkpoint_stills/layer_terrain.png": {
+      "bytes": 78678,
+      "sha256": "b02e802a1c9d9739b767a2dda527849864186c0e2be4233080288bea3c88126e"
+    },
+    "artifacts/phase5c/proofs/orchard_checkpoint_stills/stills_report.json": {
+      "bytes": 21499,
+      "sha256": "6f2467dd3b3e36ec09201234a25661757cde4a7c9c91bb10d8a4622949c5f935"
+    },
+    "artifacts/phase5c/proofs/settlement_checkpoint_stills/frame_000.png": {
+      "bytes": 134609,
+      "sha256": "7375ca6ecffef2be540d81af40287bfd204109c94adb168a607c1720de68ae69"
+    },
+    "artifacts/phase5c/proofs/settlement_checkpoint_stills/frame_045.png": {
+      "bytes": 135820,
+      "sha256": "b53ea07c5bb3fdbdd574534ec84bc2f8be05baf8ff05dc7c77471c5faaaa45d6"
+    },
+    "artifacts/phase5c/proofs/settlement_checkpoint_stills/frame_089.png": {
+      "bytes": 136513,
+      "sha256": "4b7450a9df7b1cc01ace0d6fba8badd56aa8c4363c14e8c622213bfab8002d64"
+    },
+    "artifacts/phase5c/proofs/settlement_checkpoint_stills/geometry_job.json": {
+      "bytes": 14597,
+      "sha256": "28c859d50a3272b2a14d2ec715f5d96eb5ae8e92dc6c42c67e76e4a2a3a16bc2"
+    },
+    "artifacts/phase5c/proofs/settlement_checkpoint_stills/layer_layer_backdrop.png": {
+      "bytes": 17243,
+      "sha256": "173e12a51b1a8cefd329fb8565a6619493d1ddcf4e20c2609cfc7a444b7408a0"
+    },
+    "artifacts/phase5c/proofs/settlement_checkpoint_stills/layer_layer_distance.png": {
+      "bytes": 11477,
+      "sha256": "02b1c60960ef81f6a2ecd7768663b31205390e0f95ba6885814da8b45380be9f"
+    },
+    "artifacts/phase5c/proofs/settlement_checkpoint_stills/layer_layer_foreground.png": {
+      "bytes": 7138,
+      "sha256": "e7d8e83b4524d6cc973f8f3625f9d060496714282aba2c9648ed56026575c963"
+    },
+    "artifacts/phase5c/proofs/settlement_checkpoint_stills/layer_layer_ground.png": {
+      "bytes": 48454,
+      "sha256": "dfc28f5bccb02dddc4810636de90fad2abcd19de85f4c84e463ed25c3601a11b"
+    },
+    "artifacts/phase5c/proofs/settlement_checkpoint_stills/layer_layer_objects.png": {
+      "bytes": 91088,
+      "sha256": "61f55e86cecd8ff3f62f2d758be0c78c191cdfa1a284d77e0ee228296d85abd4"
+    },
+    "artifacts/phase5c/proofs/settlement_checkpoint_stills/layer_layer_people.png": {
+      "bytes": 25461,
+      "sha256": "cbd3456d3eef936531d5e40add2a9b998614e2ee91fc5993ea2c50827b669d75"
+    },
+    "artifacts/phase5c/proofs/settlement_checkpoint_stills/layer_layer_sky.png": {
+      "bytes": 15214,
+      "sha256": "8caf2718e51ae4bfbf4536288ba372e07ae0b7805bd705627fed2dd61b929392"
+    },
+    "artifacts/phase5c/proofs/settlement_checkpoint_stills/stills_report.json": {
+      "bytes": 24973,
+      "sha256": "4431a9c6b51a0381bd6e209e7242da47532c92bad5b6ac3296b0f68b4bf9e979"
+    },
+    "artifacts/phase5c/proofs/settlement_checkpoint_video/render_report.json": {
+      "bytes": 40047,
+      "sha256": "0cbf29a0b9fcb153ea8a8b61d3951fcd20b29ac00b3c0f269418f1febdb874b0"
+    },
+    "artifacts/phase5c/proofs/settlement_checkpoint_video/scene.mp4": {
+      "bytes": 968354,
+      "sha256": "f26ac0bbb6207ab9bccc9cd964e422fd949a8dc197fc08f6a597af95e6926011"
+    },
+    "artifacts/phase5c/proofs/settlement_repeat/render_report.json": {
+      "bytes": 40046,
+      "sha256": "09ff9ab82fe78255d0064e9b4e651ffb304c96d8018f06682dc2a257889f2fbe"
+    },
+    "artifacts/phase5c/proofs/settlement_repeat/scene.mp4": {
+      "bytes": 968354,
+      "sha256": "f26ac0bbb6207ab9bccc9cd964e422fd949a8dc197fc08f6a597af95e6926011"
+    },
+    "artifacts/phase5c/proofs/shelter_supply_stills/frame_000.png": {
+      "bytes": 148513,
+      "sha256": "768f957d78e2e16ff881e87d5e59003c078748e4fd1859ce9bc878feb9bf6eda"
+    },
+    "artifacts/phase5c/proofs/shelter_supply_stills/frame_045.png": {
+      "bytes": 146979,
+      "sha256": "02e6b86c1647ec65c6aff5f5d3c8caaf149061a6cdcf8a0957609919d3312262"
+    },
+    "artifacts/phase5c/proofs/shelter_supply_stills/frame_089.png": {
+      "bytes": 146079,
+      "sha256": "960128ed011da76eb2189d35e2581e6b5e3bb19fbbbccbb1e388bc641a3b2bd9"
+    },
+    "artifacts/phase5c/proofs/shelter_supply_stills/geometry_job.json": {
+      "bytes": 14597,
+      "sha256": "48a0579c8627fcb5ad962cb1305f81e1208da64b8836b7fd331ed1d8aa3bc885"
+    },
+    "artifacts/phase5c/proofs/shelter_supply_stills/layer_layer_backdrop.png": {
+      "bytes": 14968,
+      "sha256": "f273e594ae6f061c5e9096856ae7b56de24165e86b7cdf4ef38e5b15ab6a3bc8"
+    },
+    "artifacts/phase5c/proofs/shelter_supply_stills/layer_layer_distance.png": {
+      "bytes": 18121,
+      "sha256": "5dc6d4b1b63e022bf0f1ade2115ff3119689c4b389cf562f55a9dd0c9a15549f"
+    },
+    "artifacts/phase5c/proofs/shelter_supply_stills/layer_layer_foreground.png": {
+      "bytes": 27027,
+      "sha256": "9d79f64e5861e9ed962034767ba4c92edaf357fd24062c5e83d1c815d589ae1d"
+    },
+    "artifacts/phase5c/proofs/shelter_supply_stills/layer_layer_ground.png": {
+      "bytes": 43990,
+      "sha256": "b5f264aa469967034d24ccdd576c80e11715211dc7943fa97f942fd0a04e1f6b"
+    },
+    "artifacts/phase5c/proofs/shelter_supply_stills/layer_layer_objects.png": {
+      "bytes": 110943,
+      "sha256": "163db61a7968b78378ce1ba4c643071a99bf802ccb5b93727b9858674bbd6c6b"
+    },
+    "artifacts/phase5c/proofs/shelter_supply_stills/layer_layer_people.png": {
+      "bytes": 26196,
+      "sha256": "0edc3823aa551bd4349ad28ea0cfeade780444e425ca7cc6a2ecd2e7e206598a"
+    },
+    "artifacts/phase5c/proofs/shelter_supply_stills/layer_layer_sky.png": {
+      "bytes": 14881,
+      "sha256": "a9d6eaee3d197a5c35b5b68f5a8916f698e0c3a60aa2e29b997eee34455403ed"
+    },
+    "artifacts/phase5c/proofs/shelter_supply_stills/stills_report.json": {
+      "bytes": 24562,
+      "sha256": "c5b34dbb31744aa7f173ac5cfed3f4ccf41fbeca9a7e6a7b488876d2d95a5744"
+    },
+    "artifacts/phase5c/proofs/woodland_relay_stills/frame_000.png": {
+      "bytes": 179814,
+      "sha256": "71707d032fcf699fef475d0794121a254d6d1f5c0d2334f06de98fe885ab7329"
+    },
+    "artifacts/phase5c/proofs/woodland_relay_stills/frame_045.png": {
+      "bytes": 182433,
+      "sha256": "6c62fba23fdd7f2fd9425f58a9d82a4def3dada47bc257e72d27c94ef9e0a107"
+    },
+    "artifacts/phase5c/proofs/woodland_relay_stills/frame_089.png": {
+      "bytes": 181488,
+      "sha256": "0db841742e79fb2c7e3599d7afef277dc1a7f191e136877cb12e03d8a1af6cc3"
+    },
+    "artifacts/phase5c/proofs/woodland_relay_stills/geometry_job.json": {
+      "bytes": 14597,
+      "sha256": "9bfeab3eae9ad2f616cfeb5de9479c2e8d544dd0d0aa8d2ef208c558fdf5686c"
+    },
+    "artifacts/phase5c/proofs/woodland_relay_stills/layer_layer_backdrop.png": {
+      "bytes": 17419,
+      "sha256": "2431436b06c4250a28ac9198cc4a5264533dd35d8515883f2528addf9a828e73"
+    },
+    "artifacts/phase5c/proofs/woodland_relay_stills/layer_layer_distance.png": {
+      "bytes": 42134,
+      "sha256": "57460b0619507c2f5de5d2449f8102587d75cfb468108209a0a5cf0638507094"
+    },
+    "artifacts/phase5c/proofs/woodland_relay_stills/layer_layer_foreground.png": {
+      "bytes": 25365,
+      "sha256": "d4618efcb216187ee601e50e305ee146da0e755b19ccc40fd7590d605a5cd95e"
+    },
+    "artifacts/phase5c/proofs/woodland_relay_stills/layer_layer_ground.png": {
+      "bytes": 44939,
+      "sha256": "924db85d3634d8065ebd4bf2eebf90566a6d61e4246fe15cd1c46df515da97df"
+    },
+    "artifacts/phase5c/proofs/woodland_relay_stills/layer_layer_objects.png": {
+      "bytes": 145148,
+      "sha256": "4a8025051b5197656e78e55bf2f3bc6ae971364251d01577afb7fa771c670849"
+    },
+    "artifacts/phase5c/proofs/woodland_relay_stills/layer_layer_people.png": {
+      "bytes": 25774,
+      "sha256": "43f8605136b6c3a1abfde807ec050c16d63944432cf36435b7a11bb339122937"
+    },
+    "artifacts/phase5c/proofs/woodland_relay_stills/layer_layer_sky.png": {
+      "bytes": 15502,
+      "sha256": "649964cb78be19a62dcaa23790d6ed5f40b27297e0cf41e6649ef1ccabc92e3c"
+    },
+    "artifacts/phase5c/proofs/woodland_relay_stills/stills_report.json": {
+      "bytes": 24982,
+      "sha256": "3b06726f9e211a9adc136cc071d179f58a13b7460783807487dbfebbbd46280e"
+    },
+    "artifacts/phase5c/proofs/woodland_relay_video/geometry_job.json": {
+      "bytes": 14612,
+      "sha256": "fe98365595cf8d2298e51b1f143ff72b502c7bd035e5b345c4e21e1132dc6fbb"
+    },
+    "artifacts/phase5c/proofs/woodland_relay_video/render_report.json": {
+      "bytes": 39825,
+      "sha256": "2229ff43a1c9c38a712b2dcd62561e860ce021272c9a3b418a32b2a853258614"
+    },
+    "artifacts/phase5c/proofs/woodland_relay_video/scene.mp4": {
+      "bytes": 909407,
+      "sha256": "8dd500e48a420adb7730814ddd2d5d43c56c65a3e5f1e552505a6d0a5ac0a1fb"
+    },
+    "artifacts/phase5c/reuse_comparison.png": {
+      "bytes": 208994,
+      "sha256": "19acee9a39050f90c2a0bf4eeb80d9873cae72783388580f67be125a929c267a"
+    },
+    "artifacts/phase5c/review_job_resources.json": {
+      "bytes": 14123,
+      "sha256": "73f3f858ce7df076218eadf6d42f7e367db02292df41ee499332794c211233eb"
+    },
+    "artifacts/phase5c/scene_compositions.png": {
+      "bytes": 363687,
+      "sha256": "c0f59292114c168410bbe8b6c94ff7ae081c7c8a88cf2e8adc9b633996968f93"
+    },
+    "artifacts/phase5c/settlement_checkpoint_inspection.json": {
+      "bytes": 11923,
+      "sha256": "3810e995f7f6ea039814c6ca68fcc9b07f9261320bccb0bdc282e6d236d91bcd"
+    },
+    "artifacts/phase5c/shelter_supply_inspection.json": {
+      "bytes": 11510,
+      "sha256": "0b92a3307e5e6df142878e993346cd86c60ba64ac2b8d8977e7ab53bdf1a6b17"
+    },
+    "artifacts/phase5c/survival_objects_inspection.json": {
+      "bytes": 1899,
+      "sha256": "df1a23777c8ab947aef28dc225496b3bc17370f7d26e347c07312c5a3463427f"
+    },
+    "artifacts/phase5c/targeted_tests.txt": {
+      "bytes": 180,
+      "sha256": "51dbee2b2fc1f2f374e1304870c1496491792c73b8362aadd966c3aa924a0c1e"
+    },
+    "artifacts/phase5c/test_execution.json": {
+      "bytes": 269,
+      "sha256": "068a3864c00ff9bd728a5b42fdd81fa49deef52276570078ed9714a2a198ad70"
+    },
+    "artifacts/phase5c/tests.xml": {
+      "bytes": 1148930,
+      "sha256": "6d743c0bf40c48b83995a039ba7734602dd09abfbe76aa1c4aaaa2dd49773eb1"
+    },
+    "artifacts/phase5c/versions.json": {
+      "bytes": 1711,
+      "sha256": "100956fb38bc449de2489afce5a5906c7db2aa887f0be4898a4413a3616f3ded"
+    },
+    "artifacts/phase5c/video_repeat.json": {
+      "bytes": 230,
+      "sha256": "6e1805643b38497013935eafe053256241bd270151d5874dd0dd456eadfead6c"
+    },
+    "artifacts/phase5c/woodland_relay_inspection.json": {
+      "bytes": 11924,
+      "sha256": "e37ded4d214e5e80a108ca9a58d8220f26f52055f0086c1cd6f47ef3dd2fd122"
+    },
+    "docs/NOVEL_GEOMETRY.md": {
+      "bytes": 14041,
+      "sha256": "ce7163491dc39e6105eecd56de68cc147c8a57668644cee5f4ae15f2be240d4e"
+    },
+    "docs/PHASE5C_ASSIGNMENT.md": {
+      "bytes": 14012,
+      "sha256": "cd93aaaa93792175b380384393342dc1e3490540b04dd4a344eac3c5bccea80b"
+    },
+    "docs/PHASE5C_REPORT.md": {
+      "bytes": 14829,
+      "sha256": "63f745499a0ea5e0af3afd44f3ee21f53888b7a542cff57d4be4e3573c9e7bba"
+    },
+    "examples/compositions/heldout_station.json": {
+      "bytes": 12703,
+      "sha256": "25d8d2f6ba1f9d39f3a97afcdf76253f2a3a624da593a1d1a37240c44ea802d5"
+    },
+    "examples/compositions/orchard_checkpoint.json": {
+      "bytes": 58659,
+      "sha256": "1e41236ac46799b4f4afa42c6f18a6f0c7f8722a5116e9cbf81fca7708511226"
+    },
+    "examples/compositions/settlement_checkpoint.json": {
+      "bytes": 53592,
+      "sha256": "18b570fec330b163c47dfc5cd146c2c0afbc2a034d89d0fac43ab48f20bb762d"
+    },
+    "examples/compositions/shelter_supply.json": {
+      "bytes": 53578,
+      "sha256": "646a275f93916485b862da5b87e32434e763ee352897f9b116fa5e9f129f9684"
+    },
+    "examples/compositions/woodland_relay.json": {
+      "bytes": 53578,
+      "sha256": "b7fba917f73ce37b4ec9fd31755524e93c37d324d59c2829928510df5c8348b3"
+    },
+    "examples/geometry/heldout_description.txt": {
+      "bytes": 521,
+      "sha256": "a523fc95e3aa81e63a74a0ce011dc898fe55314df66657eb58a94ec972d1327c"
+    },
+    "examples/geometry/heldout_wash_station.json": {
+      "bytes": 10605,
+      "sha256": "44db66e34f5c4a9984430f7d32c37065f59e9d1d1644777876f0d908e62d6bf8"
+    },
+    "examples/geometry/invalid/expected_errors.json": {
+      "bytes": 267,
+      "sha256": "ad8bfe22640a1155648e0ecb3e64bad4a9e472e8ff5e79a69992988594fab4fb"
+    },
+    "examples/geometry/invalid/open_fill.json": {
+      "bytes": 569,
+      "sha256": "d5bc7b8b17bfd4dc5eab1bdc70c0d691d24fbcea0ce8aa5eaeda68758e4a926a"
+    },
+    "examples/geometry/invalid/reserved_name.json": {
+      "bytes": 467,
+      "sha256": "f79528b6b0959abe5cea03da5d568a9eaff548bc93f06c2cbf311145a456ed26"
+    },
+    "examples/geometry/invalid/unknown_field.json": {
+      "bytes": 493,
+      "sha256": "6c1dd9b37fb78a9879294f37bfa5be4196ce5570d95931779bdc06d972d7dc32"
+    },
+    "examples/geometry/survival_objects.json": {
+      "bytes": 46888,
+      "sha256": "fc1fb332dae6e4c170f51d759aefc03e94bb5cf94e08ac015672f0debe72d161"
+    },
+    "src/reelforge/geometry/__init__.py": {
+      "bytes": 83,
+      "sha256": "6242e0d53202a4a6299203da007090bf6de85f77d2c433ee519ee7209b6f6686"
+    },
+    "src/reelforge/geometry/compiler.py": {
+      "bytes": 3249,
+      "sha256": "bd788e9e43548dfe2084c581a5db399faaa1575b289a477178a62db0cc72deab"
+    },
+    "src/reelforge/geometry/composition.py": {
+      "bytes": 6846,
+      "sha256": "021444e5ed396f7f1f51cc2947fc0ba1e633063d59e03f5731f63f159029a4c3"
+    },
+    "src/reelforge/geometry/contract.py": {
+      "bytes": 15658,
+      "sha256": "3affabffacb148bf61ae72e1277996292ea7da8109171d88de336ddce59649ca"
+    },
+    "src/reelforge/geometry/schema.py": {
+      "bytes": 6263,
+      "sha256": "eb9d1cd313db79d5bec537e3cf11a15f4db59b19d29a6ede423ca7433f316dd9"
+    },
+    "tests/test_geometry.py": {
+      "bytes": 23193,
+      "sha256": "91b7ef358faa6524bec1b38b314bf9d9d24c321fa389522f533b134cb46f8163"
+    },
+    "tools/geometry.py": {
+      "bytes": 7257,
+      "sha256": "85afef747f6f749e31f6a5d1d0c913c2f49d94f065000a5ffa289d2f745413dd"
+    },
+    "tools/review_geometry.py": {
+      "bytes": 9443,
+      "sha256": "e9aef24e3f44b773a994d063d06caf8f433367dcea638623046567e1df041144"
+    }
+  }
+}
