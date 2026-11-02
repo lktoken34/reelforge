@@ -1,0 +1,81 @@
+........................................................................ [  8%]
+........................................................................ [ 16%]
+........................................................................ [ 25%]
+........................................................................ [ 33%]
+........................................................................ [ 41%]
+........................................................................ [ 50%]
+........................................................................ [ 58%]
+........................................................................ [ 66%]
+........................................................................ [ 75%]
+........................................................................ [ 83%]
+........................................................................ [ 91%]
+.......................................F.F............................   [100%]
+=================================== FAILURES ===================================
+___________ test_two_audio_jobs_persistently_clean_after_native_work ___________
+
+tmp_path = PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase6a-final/test_two_audio_jobs_persistent0')
+workflow = (<module 'render_audio_story' from '/workspace/scratch/2a96718c6b46/reelforge/tools/render_audio_story.py'>, Story(sch...(character='rowan_01', action='idle', direction='right', speed=1.0, expression='calm', intensity=1.0)),), audio=None)])
+
+    def test_two_audio_jobs_persistently_clean_after_native_work(tmp_path, workflow):
+        _, _, run, _ = workflow
+        outputs = []
+        for i in range(2):
+            out = tmp_path / f"audio-{i}"
+            report = run(out)
+            assert report["transaction_clean"]
+            outputs.append(out)
+            rc, _, _ = run_bounded(
+                ["ffmpeg", "-v", "error", "-i", str(out / "story.mp4"), "-f", "null", "-"]
+            )
+            assert rc == 0
+            for previous in outputs:
+>               assert not list(previous.glob(".reelforge-audio-*"))
+E               AssertionError: assert not [PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase6a-final/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-wz1r8mlb')]
+E                +  where [PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase6a-final/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-wz1r8mlb')] = list(<generator object Path.glob at 0x7fa8a2206680>)
+E                +    where <generator object Path.glob at 0x7fa8a2206680> = glob('.reelforge-audio-*')
+E                +      where glob = PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase6a-final/test_two_audio_jobs_persistent0/audio-0').glob
+
+tests/test_transaction_cleanup.py:220: AssertionError
+____________ test_engineering_worker_accepts_long_render_arguments _____________
+
+tmp_path = PosixPath('/workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase6a-final/test_engineering_worker_accept0')
+
+    def test_engineering_worker_accepts_long_render_arguments(tmp_path):
+        import json
+        import subprocess
+        import sys
+        from pathlib import Path
+    
+        script = Path(__file__).resolve().parents[1] / "tools/render_video.py"
+        output, report = tmp_path / "long.mp4", tmp_path / "long.json"
+        result = subprocess.run(
+            [
+                sys.executable,
+                str(script),
+                "--width",
+                "360",
+                "--frames",
+                "450",
+                "--timeout",
+                "180",
+                "--output",
+                str(output),
+                "--report",
+                str(report),
+            ],
+            capture_output=True,
+            text=True,
+            timeout=60,
+        )
+>       assert result.returncode == 0, result.stderr
+E       AssertionError: {"ok": false, "technical_rendering_success": false, "memory_policy": "strict", "deployment_gate_approved": false, "error": {"code": "TRANSACTION_CLEANUP", "message": "Completed transaction path reappeared: /workspace/scratch/2a96718c6b46/reelforge/outputs/pytest-phase6a-final/test_engineering_worker_accept0/.reelforge-encode-qbr40quc"}, "render_ready": false}
+E         
+E       assert 2 == 0
+E        +  where 2 = CompletedProcess(args=['/workspace/scratch/2a96718c6b46/reelforge/.venv/bin/python', '/workspace/scratch/2a96718c6b46/...e/outputs/pytest-phase6a-final/test_engineering_worker_accept0/.reelforge-encode-qbr40quc"}, "render_ready": false}\n').returncode
+
+tests/test_video_integration.py:80: AssertionError
+- generated xml file: /workspace/scratch/2a96718c6b46/reelforge/outputs/phase6a-final.xml -
+=========================== short test summary info ============================
+FAILED tests/test_transaction_cleanup.py::test_two_audio_jobs_persistently_clean_after_native_work
+FAILED tests/test_video_integration.py::test_engineering_worker_accepts_long_render_arguments
+2 failed, 860 passed in 87.46s (0:01:27)

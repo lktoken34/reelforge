@@ -1,0 +1,613 @@
+{
+  "scope": "Phase 6A source, contracts, diagnostics, reports and final visual proofs; excludes private transactions and this inventory",
+  "files": {
+    "artifacts/phase6a/base_install_tests.txt": {
+      "bytes": 327,
+      "sha256": "e6c61b3dcb665fe9304786a06bd07a21074fc9da5671252af9aa0b4be097bf04"
+    },
+    "artifacts/phase6a/blocking-0.1.schema.json": {
+      "bytes": 42561,
+      "sha256": "1640a7136d815ca7a1a6b3ed2450928f8d27d34a2fafd1d68561bd6069f3ba3c"
+    },
+    "artifacts/phase6a/build.txt": {
+      "bytes": 237,
+      "sha256": "097eb48f7fb15697e9461998bc43c5d21a121674896292ec2b1cc9047b025f34"
+    },
+    "artifacts/phase6a/capabilities.json": {
+      "bytes": 911,
+      "sha256": "e7139b05dbcbbab76d841ecfee68860c98d610662426d2fabd1438952ff69d95"
+    },
+    "artifacts/phase6a/compatibility_and_decode.json": {
+      "bytes": 71102,
+      "sha256": "e03b5a4fe86a1dd6835e2d49708b3e30826225c0079f1adf72416f3d56092114"
+    },
+    "artifacts/phase6a/decoded_contact_sheet.png": {
+      "bytes": 506361,
+      "sha256": "6c069a21c9e81b578effeb92eb19ef7705023303bb30403027e09c02d39be060"
+    },
+    "artifacts/phase6a/full_tests.txt": {
+      "bytes": 5068,
+      "sha256": "253dc9a0aaf32e3f972f7fbf8a26392d777fb7fdf8f277b7869b91c36c702f4e"
+    },
+    "artifacts/phase6a/historical_shelter_render_report.json": {
+      "bytes": 38478,
+      "sha256": "bf4db56fa6282d6130753c794242e9a0b4b4a8eb1deac15c658e5ac4fa34b5df"
+    },
+    "artifacts/phase6a/installed_wheel_smoke.json": {
+      "bytes": 4869,
+      "sha256": "59a6324d300123b5f858f7b779454661dca05cdb6dce9bed88c7e98634b3a725"
+    },
+    "artifacts/phase6a/lint.txt": {
+      "bytes": 48,
+      "sha256": "a5a4738e9ea0c50bb26771ed5625a7479b0afdb9d34415fbef0907f4e8d6d5d4"
+    },
+    "artifacts/phase6a/motion_metrics.json": {
+      "bytes": 22894,
+      "sha256": "217ccccf9977a4c85d959f2e4aa9f06192b152343ca89d98c88875308e1051e5"
+    },
+    "artifacts/phase6a/motion_only_tests.txt": {
+      "bytes": 99,
+      "sha256": "29def85e41bf5b40be6b5ce81615f8e1d2933291444966edc94d968acb6d4c0d"
+    },
+    "artifacts/phase6a/motion_transitions.png": {
+      "bytes": 342007,
+      "sha256": "2e35cdb805eacca904c9f55af9f9dd6cd78c4dacd7414f1cfa0d74da343a5606"
+    },
+    "artifacts/phase6a/performance_summary.json": {
+      "bytes": 17352,
+      "sha256": "90e98c4ae42e98b5320c32273f0e72060603d85ba3c45ea42eaa4d8cfc6a1722"
+    },
+    "artifacts/phase6a/proof_execution.json": {
+      "bytes": 4421,
+      "sha256": "b405af32b1c1a7d3fafe2306aedb92f0c9efe960ee6531221565c4e0d64b1042"
+    },
+    "artifacts/phase6a/proofs/settlement_escape_stills/blocking_job.json": {
+      "bytes": 15948,
+      "sha256": "819733b889a1f1acca84d3161a4abaa34831d40245e1cf57f2b1eabe99015166"
+    },
+    "artifacts/phase6a/proofs/settlement_escape_stills/frame_000.png": {
+      "bytes": 102453,
+      "sha256": "93b522b7be626480dff9585545451d782c3da1934fe36cbce999f7bc5de14035"
+    },
+    "artifacts/phase6a/proofs/settlement_escape_stills/frame_045.png": {
+      "bytes": 101758,
+      "sha256": "2f145cd68154e57b2823777b913fbdd6587e3238aaac7022ce09402b878e998f"
+    },
+    "artifacts/phase6a/proofs/settlement_escape_stills/frame_089.png": {
+      "bytes": 86644,
+      "sha256": "4b14bd8c4742101e9f147f7e2500e7a668ad9af1b0d3b5b0e0c1e089de115e16"
+    },
+    "artifacts/phase6a/proofs/settlement_escape_stills/layer_layer_backdrop.png": {
+      "bytes": 16276,
+      "sha256": "e27ea321c9428153d322ac03d59a7f6d9bee695be6f985f3bcaa83beb98f8491"
+    },
+    "artifacts/phase6a/proofs/settlement_escape_stills/layer_layer_distance.png": {
+      "bytes": 10355,
+      "sha256": "0ee86d01a29ca92030459ce3042816eb6ef2c3f65780def51e580d9d553f4320"
+    },
+    "artifacts/phase6a/proofs/settlement_escape_stills/layer_layer_foreground.png": {
+      "bytes": 17790,
+      "sha256": "2578b1c11272e0a93d8e92b7eadadce1915b7295b6d421eedb9732ccc0143a27"
+    },
+    "artifacts/phase6a/proofs/settlement_escape_stills/layer_layer_ground.png": {
+      "bytes": 42099,
+      "sha256": "9cecbfd05aaa4ecd63eea9a497130532f0dc82da492b5df91dc0fc40fb4d6c11"
+    },
+    "artifacts/phase6a/proofs/settlement_escape_stills/layer_layer_objects.png": {
+      "bytes": 38688,
+      "sha256": "c74f5be204a2018d52cf2a71c312013537d4acdd8ee036c94d9c053979a5cced"
+    },
+    "artifacts/phase6a/proofs/settlement_escape_stills/layer_layer_people.png": {
+      "bytes": 26387,
+      "sha256": "dd260bae946f74a74e8755c01579b22190eb633fb671d8b3e5eec1c964bcfdaa"
+    },
+    "artifacts/phase6a/proofs/settlement_escape_stills/layer_layer_sky.png": {
+      "bytes": 15958,
+      "sha256": "2a0d2f31d54e1b34c110f3e50dbce946bc3f4be2b4845430a9950bf0c0cc4607"
+    },
+    "artifacts/phase6a/proofs/settlement_escape_stills/stills_report.json": {
+      "bytes": 24011,
+      "sha256": "4879d566f100c228ec8e5a1a011e2c64e573d3656fa2720a59116066cf89be87"
+    },
+    "artifacts/phase6a/proofs/settlement_escape_transitions/frame_000.png": {
+      "bytes": 102453,
+      "sha256": "93b522b7be626480dff9585545451d782c3da1934fe36cbce999f7bc5de14035"
+    },
+    "artifacts/phase6a/proofs/settlement_escape_transitions/frame_020.png": {
+      "bytes": 102657,
+      "sha256": "6afee1244d9446268a2feb733b1ae9778dd18cfdb023fd9f4a8093eea0f602c7"
+    },
+    "artifacts/phase6a/proofs/settlement_escape_transitions/frame_021.png": {
+      "bytes": 102813,
+      "sha256": "6bb0da43925b920e55f6fb69b1cb37f2904b9ec27e4e5ce35931fff4df43124d"
+    },
+    "artifacts/phase6a/proofs/settlement_escape_transitions/frame_022.png": {
+      "bytes": 103064,
+      "sha256": "c8b7ae8981314d93f476e2fbce4474416c20f7f8c5a02a63f492c76eb227697a"
+    },
+    "artifacts/phase6a/proofs/settlement_escape_transitions/frame_024.png": {
+      "bytes": 103657,
+      "sha256": "d0f7d234110d2822299d8e7f22505b74a1b2d5164f6822e74c189b178d10d828"
+    },
+    "artifacts/phase6a/proofs/settlement_escape_transitions/frame_025.png": {
+      "bytes": 103948,
+      "sha256": "380039ebeea9eb07e4d532c65b7226fe19e438d7402d18b80a1c1195027fb43a"
+    },
+    "artifacts/phase6a/proofs/settlement_escape_transitions/frame_026.png": {
+      "bytes": 104071,
+      "sha256": "f507c2315dcb462912653def36a195af2b12022bd32e68707e325fb94d97d218"
+    },
+    "artifacts/phase6a/proofs/settlement_escape_transitions/frame_035.png": {
+      "bytes": 103770,
+      "sha256": "5d9e7f01012ab492bca864943825398f519b28266360194af7e9a864d78fad82"
+    },
+    "artifacts/phase6a/proofs/settlement_escape_transitions/frame_036.png": {
+      "bytes": 103242,
+      "sha256": "d4afb220be1f75e55c848e11cd34648f2e0f73553cc2355b86aca865b36608c1"
+    },
+    "artifacts/phase6a/proofs/settlement_escape_transitions/frame_037.png": {
+      "bytes": 103052,
+      "sha256": "8726873950172c00c081b01a66dd37ec099b397f2646b02678e96a5a18bd8937"
+    },
+    "artifacts/phase6a/proofs/settlement_escape_transitions/frame_038.png": {
+      "bytes": 102999,
+      "sha256": "b94d42563cc998befe451808bd988d198a7d0af7856a7568883cf97a95fe7258"
+    },
+    "artifacts/phase6a/proofs/settlement_escape_transitions/frame_039.png": {
+      "bytes": 102878,
+      "sha256": "f6de099559a346cd10d9fb5295a2b8896f650fc4d3e7e1f395fbdde2d10ce530"
+    },
+    "artifacts/phase6a/proofs/settlement_escape_transitions/frame_045.png": {
+      "bytes": 101758,
+      "sha256": "2f145cd68154e57b2823777b913fbdd6587e3238aaac7022ce09402b878e998f"
+    },
+    "artifacts/phase6a/proofs/settlement_escape_transitions/frame_089.png": {
+      "bytes": 86644,
+      "sha256": "4b14bd8c4742101e9f147f7e2500e7a668ad9af1b0d3b5b0e0c1e089de115e16"
+    },
+    "artifacts/phase6a/proofs/settlement_escape_video/blocking_job.json": {
+      "bytes": 15963,
+      "sha256": "b3fa001c0441f3bcf09b9ad95dd8aa62824f7b5b5e703e07fe1000eb1a9f184f"
+    },
+    "artifacts/phase6a/proofs/settlement_escape_video/render_report.json": {
+      "bytes": 38874,
+      "sha256": "5d28c7cc4c0d62a8710d773afa6f1f608195bd39d02becf698c4640c6bbcd994"
+    },
+    "artifacts/phase6a/proofs/settlement_escape_video/scene.mp4": {
+      "bytes": 265819,
+      "sha256": "d5e47a902c9472404c278a45604fffef6b1c29851248e25c148f72212380d804"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_stills/blocking_job.json": {
+      "bytes": 16454,
+      "sha256": "be606a899ad5a07b6b0f32dbee3a7c7c2ead1cf51c2e71f4b1db1a577dccc4ff"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_stills/frame_000.png": {
+      "bytes": 124744,
+      "sha256": "c8f95ff6c31ac1b6de7f1ef287826b2034fe0ca47f2c8edecce252d1fbca1aba"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_stills/frame_045.png": {
+      "bytes": 124828,
+      "sha256": "1f890f2b5d425c08a0ec31e363c32d643d9db29642b740a273ebe54b8d3e213a"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_stills/frame_089.png": {
+      "bytes": 124704,
+      "sha256": "8fa4907a80e38bf679db78d488a36a6fcb8406267e73cfd82a602b2fe0c9ea09"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_stills/layer_layer_backdrop.png": {
+      "bytes": 14971,
+      "sha256": "3d7ce2bbe9f0ab78478bf67fa7d4b0fe9be222dad61b649536fc2d93d0980a76"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_stills/layer_layer_distance.png": {
+      "bytes": 17788,
+      "sha256": "c72ee8a5761164937d48e1ece5e7ca5586f26cbf9ed3fb95cf7b22988a7dcb5f"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_stills/layer_layer_foreground.png": {
+      "bytes": 30482,
+      "sha256": "dce719383e113d51e6e2f0809502993ebbca1fd09d2a7e33118625b6f5883d98"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_stills/layer_layer_ground.png": {
+      "bytes": 42867,
+      "sha256": "5eada456a91db2b47d4acb15db524a32249e657c7189040fb07efd48acf31ad4"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_stills/layer_layer_objects.png": {
+      "bytes": 74827,
+      "sha256": "67079f2bbbd9d144a0b6d99aaee700d656bc60dc1cd82949290324c91b360bd1"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_stills/layer_layer_people.png": {
+      "bytes": 24574,
+      "sha256": "13b108a2fe362c34426e6401262c17db6ef232f3a43b4f4d2bd4157e1f1ad045"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_stills/layer_layer_sky.png": {
+      "bytes": 14881,
+      "sha256": "a9d6eaee3d197a5c35b5b68f5a8916f698e0c3a60aa2e29b997eee34455403ed"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_stills/stills_report.json": {
+      "bytes": 23632,
+      "sha256": "154dc4e82cf2ce9c40473ac0a231cb8aa72eb86ddde66be5b3c02944871898ca"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_transitions/frame_000.png": {
+      "bytes": 124744,
+      "sha256": "c8f95ff6c31ac1b6de7f1ef287826b2034fe0ca47f2c8edecce252d1fbca1aba"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_transitions/frame_005.png": {
+      "bytes": 124695,
+      "sha256": "ab5cd7c2d35eb2c23b859d497e82bf5b37113b7c4fca0c12db5f9cbbb6d8e450"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_transitions/frame_006.png": {
+      "bytes": 124780,
+      "sha256": "01b8ee8ac3f84b5b79d4c2a3056e4cc7027e986352d535e8a291bf80128b1a71"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_transitions/frame_007.png": {
+      "bytes": 124586,
+      "sha256": "e4eaeaecc97d62f053344d577c959640ebca1aa52fb2f33a0c9c3e1fcb876a01"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_transitions/frame_028.png": {
+      "bytes": 126036,
+      "sha256": "66216978c58e868a03f63564ae7bd663e1fc4bd7db7d4ddc72042c99294f76cc"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_transitions/frame_029.png": {
+      "bytes": 126215,
+      "sha256": "579877be7ba11e0e6f6b3a27ad7f536899b7d4394c8f748861aef7b6807ff5aa"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_transitions/frame_030.png": {
+      "bytes": 126149,
+      "sha256": "f03358d48b714be1f80bb736dab5b9e0ad63227c1f5ab1a1f64b3703a486e041"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_transitions/frame_041.png": {
+      "bytes": 125536,
+      "sha256": "78e43ccc8ade81b29f99bb2d78f0d9c5e664ea30423f94a5238db9c5b41579a6"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_transitions/frame_042.png": {
+      "bytes": 125485,
+      "sha256": "5452aa7bb0989606a9de5027c95cf7f4123cfd2fd805608f13b4f46abe256a3b"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_transitions/frame_043.png": {
+      "bytes": 125370,
+      "sha256": "b97329d3f1e362efbcd57faa2f75e8c14be72469308d43350aa77ab1c2ad6b18"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_transitions/frame_045.png": {
+      "bytes": 124828,
+      "sha256": "1f890f2b5d425c08a0ec31e363c32d643d9db29642b740a273ebe54b8d3e213a"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_transitions/frame_047.png": {
+      "bytes": 124878,
+      "sha256": "9b9fc011b377a914d61b074fa97425a3bd0163dbdca1449674c3d062abd710e1"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_transitions/frame_048.png": {
+      "bytes": 125297,
+      "sha256": "3b4d0a9e3f2dce8e025c4f0eeb7d7027222be2d4d00e77822b6da65301987325"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_transitions/frame_049.png": {
+      "bytes": 125581,
+      "sha256": "02dffe496ac3df970e37bf4456c4f05bb637e0a307a4aaba8ddbabd480c77e98"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_transitions/frame_065.png": {
+      "bytes": 124983,
+      "sha256": "6273b96f05a251a3a8a7e333d305a79cb5115fcafc20f86f5e3141f5da448abd"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_transitions/frame_066.png": {
+      "bytes": 124934,
+      "sha256": "9316250bc5062d8cb2975acad36962f09e454f281f65055212a2d5f6af7862b4"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_transitions/frame_067.png": {
+      "bytes": 125134,
+      "sha256": "1a55e3f6715eef8ca9981351052f37ec5eceddd239d36abf2309254abde9efb9"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_transitions/frame_074.png": {
+      "bytes": 129840,
+      "sha256": "d2acf8f314b44752e8adde0d857ea6b547398abb01cc20f5beb4086b68f2a787"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_transitions/frame_075.png": {
+      "bytes": 129826,
+      "sha256": "ae59c2aeab8dff1b6bcb461dc84b1973f76f042c0e00738e6cbc31378d150a9d"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_transitions/frame_076.png": {
+      "bytes": 129108,
+      "sha256": "f8264c181bfc10ebe85f6c24591244edb62456c82ad4cf7cf4f19ffe59b588d2"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_transitions/frame_083.png": {
+      "bytes": 124801,
+      "sha256": "5d540b0950d76a9945531c685371f24ce5503b89ef8d8cedbc06ddb98f12c766"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_transitions/frame_084.png": {
+      "bytes": 124713,
+      "sha256": "2b5ec0fda39e3a94c9bfcaa1ca49f3addb4a7de5b5fcb7fea2978b9e656d76a0"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_transitions/frame_085.png": {
+      "bytes": 124770,
+      "sha256": "01df71706fec32e2a0f10338fd904babcaa5bb0f91cb223569e27613f2a4c166"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_transitions/frame_089.png": {
+      "bytes": 124704,
+      "sha256": "8fa4907a80e38bf679db78d488a36a6fcb8406267e73cfd82a602b2fe0c9ea09"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_video/blocking_job.json": {
+      "bytes": 16471,
+      "sha256": "2ef10f800467844bb3c828658393e37d22cff2e87bf2d21f17dafee308ee0c9f"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_video/render_report.json": {
+      "bytes": 38485,
+      "sha256": "82b24db69b8e5ce7ee60d4e07db250c94fe9e6332b1da87b00ef7480ea5ff801"
+    },
+    "artifacts/phase6a/proofs/shelter_approach_video/scene.mp4": {
+      "bytes": 232804,
+      "sha256": "c5906b23c67a00037df089b97fd307b861ed177acab6f307c287c51474ee9209"
+    },
+    "artifacts/phase6a/proofs/woodland_repeat/blocking_job.json": {
+      "bytes": 16197,
+      "sha256": "6b5b1584d0954859c4571105b58904d688fdb5ff1403322488a58d824eef495c"
+    },
+    "artifacts/phase6a/proofs/woodland_repeat/render_report.json": {
+      "bytes": 39836,
+      "sha256": "85388cdc26fc535160910504317f01fda381a4469324676f448bef10650c464e"
+    },
+    "artifacts/phase6a/proofs/woodland_repeat/scene.mp4": {
+      "bytes": 252120,
+      "sha256": "54d7a76f27b7fcd9d32c5723c725c850028c13ca531ad8c17dacc2cd93136eac"
+    },
+    "artifacts/phase6a/proofs/woodland_traversal_stills/blocking_job.json": {
+      "bytes": 16181,
+      "sha256": "6cd41682b1410e5d739736a038414ebd390604ed6814bfa0ff94e18ebfa9e0e4"
+    },
+    "artifacts/phase6a/proofs/woodland_traversal_stills/frame_000.png": {
+      "bytes": 175882,
+      "sha256": "1fff7e48ed040bbdb2372fd694fc1bfc9f0ebfb273464f4bc388ab52882e0205"
+    },
+    "artifacts/phase6a/proofs/woodland_traversal_stills/frame_045.png": {
+      "bytes": 177429,
+      "sha256": "f55b2adefe1acc35eb5c904aeacbcde42aa6fc14c7947c3aba0c5ce61fe9b414"
+    },
+    "artifacts/phase6a/proofs/woodland_traversal_stills/frame_089.png": {
+      "bytes": 176972,
+      "sha256": "017f6b13f204007777e073e5f66f1cff002d282e82c72f3609189377acfb12e4"
+    },
+    "artifacts/phase6a/proofs/woodland_traversal_stills/layer_layer_backdrop.png": {
+      "bytes": 17260,
+      "sha256": "5d97a0e1f9493c204a00fe7e404b3711c52bd41e2880c13b225f36c06839e864"
+    },
+    "artifacts/phase6a/proofs/woodland_traversal_stills/layer_layer_distance.png": {
+      "bytes": 41319,
+      "sha256": "3bac3c3a1efb6b0587586a540307d9f49484d9eefb42db2adb0898273c3aeebc"
+    },
+    "artifacts/phase6a/proofs/woodland_traversal_stills/layer_layer_foreground.png": {
+      "bytes": 26719,
+      "sha256": "2562a8ef96765af2af07093f3069ddacc347a55430e5cd964d7e949df9b6eb59"
+    },
+    "artifacts/phase6a/proofs/woodland_traversal_stills/layer_layer_ground.png": {
+      "bytes": 44906,
+      "sha256": "8678b8b43511681bcb7c3242e3d2747bdc93d7d4b6fedea1e2bee57d06adde57"
+    },
+    "artifacts/phase6a/proofs/woodland_traversal_stills/layer_layer_objects.png": {
+      "bytes": 140757,
+      "sha256": "3a672ad60e5fc9ff74081f4c0c6516e257e1baf86aafe55d70cbbcec47b74e44"
+    },
+    "artifacts/phase6a/proofs/woodland_traversal_stills/layer_layer_people.png": {
+      "bytes": 24693,
+      "sha256": "1155b0e3deb46c167a6c9bcba1dd41dca94218b0ba4cb23e109661535a61906c"
+    },
+    "artifacts/phase6a/proofs/woodland_traversal_stills/layer_layer_sky.png": {
+      "bytes": 15502,
+      "sha256": "649964cb78be19a62dcaa23790d6ed5f40b27297e0cf41e6649ef1ccabc92e3c"
+    },
+    "artifacts/phase6a/proofs/woodland_traversal_stills/stills_report.json": {
+      "bytes": 24996,
+      "sha256": "637807d1d9b2df6d761b0d9d59ca5c4dafbeb32fefddde4b851f8d9861147c65"
+    },
+    "artifacts/phase6a/proofs/woodland_traversal_transitions/frame_000.png": {
+      "bytes": 175882,
+      "sha256": "1fff7e48ed040bbdb2372fd694fc1bfc9f0ebfb273464f4bc388ab52882e0205"
+    },
+    "artifacts/phase6a/proofs/woodland_traversal_transitions/frame_008.png": {
+      "bytes": 175689,
+      "sha256": "6e05889c5c43c7690a80c10141123440bf0f6648559ce82bceec7881a9a01027"
+    },
+    "artifacts/phase6a/proofs/woodland_traversal_transitions/frame_009.png": {
+      "bytes": 175886,
+      "sha256": "309a5824d2f63f7128781e60a4731918bf9ff9aaa0dac247be3a02ffd99b1f8c"
+    },
+    "artifacts/phase6a/proofs/woodland_traversal_transitions/frame_010.png": {
+      "bytes": 175849,
+      "sha256": "c076f66740ae81f7973c94b648848bca38d51b88f0baea09f8c4f231a936125e"
+    },
+    "artifacts/phase6a/proofs/woodland_traversal_transitions/frame_033.png": {
+      "bytes": 176877,
+      "sha256": "3948eca49a1a7c3c8da3fe8287d0f80d3228653a2118b1c9462aa86b2e2b397f"
+    },
+    "artifacts/phase6a/proofs/woodland_traversal_transitions/frame_034.png": {
+      "bytes": 176927,
+      "sha256": "ab0bba70897e4d1495931f79b0f3bdfde96a4549f522fedbf69fb87abd617918"
+    },
+    "artifacts/phase6a/proofs/woodland_traversal_transitions/frame_035.png": {
+      "bytes": 176960,
+      "sha256": "f5d715c0837b34c68374257a0456f6e492b58b57f8cf27cdca112dc4da399d62"
+    },
+    "artifacts/phase6a/proofs/woodland_traversal_transitions/frame_045.png": {
+      "bytes": 177429,
+      "sha256": "f55b2adefe1acc35eb5c904aeacbcde42aa6fc14c7947c3aba0c5ce61fe9b414"
+    },
+    "artifacts/phase6a/proofs/woodland_traversal_transitions/frame_046.png": {
+      "bytes": 177581,
+      "sha256": "da12e7f44d2c2ceea1e914956c6fb5e48a55820c027dd0cf378a61287a6815f5"
+    },
+    "artifacts/phase6a/proofs/woodland_traversal_transitions/frame_047.png": {
+      "bytes": 177365,
+      "sha256": "cc3b0bdd4468f8784934dca128d96fde84aa6e93cabb53a9539ebbb3ddca95dd"
+    },
+    "artifacts/phase6a/proofs/woodland_traversal_transitions/frame_053.png": {
+      "bytes": 177027,
+      "sha256": "ab29f518fe29b3fe5310bfddd919c90ca351f022bf3a657edc3c274693d04b45"
+    },
+    "artifacts/phase6a/proofs/woodland_traversal_transitions/frame_054.png": {
+      "bytes": 177411,
+      "sha256": "65f0a157dd30a96036a2b182682afbaf3cc39052d59d8062333244ec30700b1e"
+    },
+    "artifacts/phase6a/proofs/woodland_traversal_transitions/frame_055.png": {
+      "bytes": 177679,
+      "sha256": "e9878544be7a088f68040655a21d84315bce025f30e22c24c37be73bd0695561"
+    },
+    "artifacts/phase6a/proofs/woodland_traversal_transitions/frame_065.png": {
+      "bytes": 176711,
+      "sha256": "3c666b67db091c6d032edff40546a9eda75b7a358f86e105343159bf63c7c9e0"
+    },
+    "artifacts/phase6a/proofs/woodland_traversal_transitions/frame_066.png": {
+      "bytes": 176626,
+      "sha256": "f24e3ba5daf1e0e9e2d63d3f7bf84ccb38aa9da0fdfe63d186ea4232233675c9"
+    },
+    "artifacts/phase6a/proofs/woodland_traversal_transitions/frame_067.png": {
+      "bytes": 176694,
+      "sha256": "4e487c2f206610c833bcac6fbac0c7535b8d2371bf694801bb99620bb50a259e"
+    },
+    "artifacts/phase6a/proofs/woodland_traversal_transitions/frame_089.png": {
+      "bytes": 176972,
+      "sha256": "017f6b13f204007777e073e5f66f1cff002d282e82c72f3609189377acfb12e4"
+    },
+    "artifacts/phase6a/proofs/woodland_traversal_video/blocking_job.json": {
+      "bytes": 16197,
+      "sha256": "9ee38d31e8b2e11193cf23f6db2eeb3a253981fc09139b495649036355e20b7a"
+    },
+    "artifacts/phase6a/proofs/woodland_traversal_video/render_report.json": {
+      "bytes": 39845,
+      "sha256": "b62d4a9a1a2859e40a75fc40e32c90733e36670daa52750acd668ab87a0fd3dc"
+    },
+    "artifacts/phase6a/proofs/woodland_traversal_video/scene.mp4": {
+      "bytes": 252120,
+      "sha256": "54d7a76f27b7fcd9d32c5723c725c850028c13ca531ad8c17dacc2cd93136eac"
+    },
+    "artifacts/phase6a/repeat_consistency.json": {
+      "bytes": 139,
+      "sha256": "87602ddb482f5bee801e0f4f741df36761e4b8ef28dad03d9956bc1efab48658"
+    },
+    "artifacts/phase6a/review_job_resources.json": {
+      "bytes": 14074,
+      "sha256": "7413c6b73bb9da91f8de33b7c8f4e70ec0f2fb4cc0215d7dd5ca4eca2fa6b2eb"
+    },
+    "artifacts/phase6a/route_support.png": {
+      "bytes": 36367,
+      "sha256": "4fc55ead56275e63d52fd93fd95d55892213d9b89e8baa4d3a23919a142e9837"
+    },
+    "artifacts/phase6a/settlement_escape_frames.json": {
+      "bytes": 327624,
+      "sha256": "afd77158fb023ee003a00502e653d85dd93f9d092c03dd718148ec6b813b160b"
+    },
+    "artifacts/phase6a/settlement_escape_transitions.png": {
+      "bytes": 187110,
+      "sha256": "f383986aa879e2cecedaecb6966cb2a697cb540fefd9c338d7d9cb63fb9c469a"
+    },
+    "artifacts/phase6a/shelter_approach_frames.json": {
+      "bytes": 323180,
+      "sha256": "9145f98b5191850707d4aa4fcb2ed8d15d65a227e4bd878c57cd02284d9f142c"
+    },
+    "artifacts/phase6a/shelter_approach_transitions.png": {
+      "bytes": 326423,
+      "sha256": "fd91c6df1195412768940c0ef1a2e95de01455311b56edc731097ce3720fa205"
+    },
+    "artifacts/phase6a/studies_contact_sheet.png": {
+      "bytes": 180538,
+      "sha256": "aa994cfb06aba3d9366f25c7c50a1535db1fcf8c52bd113aea0aef85dbcc0233"
+    },
+    "artifacts/phase6a/targeted_initial.txt": {
+      "bytes": 3297,
+      "sha256": "3b4bf15ad92397b742f5b0ed1a25e94b3481a340756f8369b381af52f3d2284f"
+    },
+    "artifacts/phase6a/targeted_tests.txt": {
+      "bytes": 261,
+      "sha256": "5e65d742b5b249e6e84fd6c25ee2fcd1f052ceda7a7b321cdc4a69d36425cb24"
+    },
+    "artifacts/phase6a/test_execution.json": {
+      "bytes": 350,
+      "sha256": "a15df01006f91bc67176ba822b489c66283686c0b18d7ae6038a63a90a019373"
+    },
+    "artifacts/phase6a/tests.xml": {
+      "bytes": 1159503,
+      "sha256": "93597bf4c781f0097ef9195f76134ab76708cc2fa33de7117c58afff3f739dab"
+    },
+    "artifacts/phase6a/timeline_inspections.json": {
+      "bytes": 6018,
+      "sha256": "857e6085f79633b8338141e325bc37454fe0f275020481d2491ea16eec2c1833"
+    },
+    "artifacts/phase6a/turn_refinement_execution.json": {
+      "bytes": 436,
+      "sha256": "be7ab9929b56f8cf86132829da44320368ace9d10456ab90f52f3b07548ec50e"
+    },
+    "artifacts/phase6a/versions.json": {
+      "bytes": 1711,
+      "sha256": "100956fb38bc449de2489afce5a5906c7db2aa887f0be4898a4413a3616f3ded"
+    },
+    "artifacts/phase6a/woodland_traversal_frames.json": {
+      "bytes": 321750,
+      "sha256": "e5d78d84e2d3a0869ff6117d853d878a4a8dd6deca0d99203f573a0d99338479"
+    },
+    "artifacts/phase6a/woodland_traversal_transitions.png": {
+      "bytes": 320837,
+      "sha256": "e45214c971fb5cca117fb2039ca6fdaf1a8065fa00f275b0694e71c97317c14b"
+    },
+    "docs/BLOCKING.md": {
+      "bytes": 14954,
+      "sha256": "771a07262f96d326b1ff15b5ec7cba63cb705cb2ed9532a04d1ba70854c70ca9"
+    },
+    "docs/PHASE6A_ASSIGNMENT.md": {
+      "bytes": 14897,
+      "sha256": "16f8bcfcb73637ff5336d4ef2d5e22b97249af96af9eedb02982e18f0cee8569"
+    },
+    "docs/PHASE6A_REPORT.md": {
+      "bytes": 12678,
+      "sha256": "4b24de7032e128fc2c5a9fd2dbc92d78ee2f4d6fdde43bf32246c40478853ae9"
+    },
+    "examples/blocking/settlement_escape.json": {
+      "bytes": 1589,
+      "sha256": "6122777223531cd1e065c8af88e5536363fc4fa8793561b9468d4146bdeec917"
+    },
+    "examples/blocking/shelter_approach.json": {
+      "bytes": 2105,
+      "sha256": "6f923213cfe89fcca58e96ed89c3de5e8148e0579be538f4b1ecd54f3033352c"
+    },
+    "examples/blocking/woodland_traversal.json": {
+      "bytes": 60349,
+      "sha256": "0f69763d97fd03d6c2ea23c21fe336e8d9cf43c87023c4eca1959fd914acde10"
+    },
+    "src/reelforge/blocking/__init__.py": {
+      "bytes": 86,
+      "sha256": "bcfb6a5c4573518fef971ae45df25af3f1835e4d77c3143ab3eb2449c0d822c1"
+    },
+    "src/reelforge/blocking/contract.py": {
+      "bytes": 12351,
+      "sha256": "b076e973409028ccef1a35a559c5e0ad9616a7ef8481566e17edf6eb8f21a2e5"
+    },
+    "src/reelforge/blocking/sampling.py": {
+      "bytes": 9833,
+      "sha256": "2004d5264fdaa6f910a1e625cb24c100cad2ef4f4da9929055ae046618dd5622"
+    },
+    "src/reelforge/blocking/schema.py": {
+      "bytes": 2908,
+      "sha256": "91377c6f7339469e2850ae7d4035e252493aa57091a59d109da79b6284b5c189"
+    },
+    "src/reelforge/blocking/timeline.py": {
+      "bytes": 7300,
+      "sha256": "7434ea021c01bb3ba767e5a2f2fd54c586041302ee340257d8f125b8bff98cf7"
+    },
+    "src/reelforge/characters/transition.py": {
+      "bytes": 4976,
+      "sha256": "af2d2c5c0c933acab3b70235d6ee090056201b2ed92eeeb2cb5ade74cdcd23eb"
+    },
+    "src/reelforge/scenes/graph.py": {
+      "bytes": 11270,
+      "sha256": "9799db72fbd763813e1ce3d1dbee80536c51d283a8ec74c6e7465ba433f8a68f"
+    },
+    "tests/test_blocking.py": {
+      "bytes": 14524,
+      "sha256": "78163339b7868a44e1cd653ae75ef9bcb043885d94260ae7536b01243ea057a0"
+    },
+    "tools/blocking.py": {
+      "bytes": 6338,
+      "sha256": "1034d9c58a09b6aa73e1667965e08004d08c731c725d240ade12add3e621a1e0"
+    },
+    "tools/review_blocking.py": {
+      "bytes": 14293,
+      "sha256": "40ae217438129cebe8a768b7a3d4e6f2b52175757655f7c5e7ae1639d1b4c8c9"
+    },
+    "tools/scene.py": {
+      "bytes": 10220,
+      "sha256": "cb85b7082c943471f22c79d6b2238b48c71e8b5b57c71e4ad4ce978ffa2e609a"
+    }
+  }
+}

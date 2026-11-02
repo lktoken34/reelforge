@@ -1,0 +1,14 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "pytest",
+    "--basetemp",
+    "outputs/pytest-phase6a-final",
+    "--junitxml=outputs/phase6a-final.xml",
+    "-q"
+  ],
+  "returncode": 1,
+  "policy": "Exactly one final complete local-suite attempt; no rerun after known restoration failures",
+  "capture": "Saved after pytest child reaped"
+}

@@ -1,0 +1,99 @@
+{
+  "scope": "Three studies and one controlled repeat, no retries",
+  "jobs": [
+    {
+      "command": [
+        "/workspace/scratch/2a96718c6b46/reelforge/.venv/bin/python",
+        "/workspace/scratch/2a96718c6b46/reelforge/tools/blocking.py",
+        "render",
+        "/workspace/scratch/2a96718c6b46/reelforge/examples/blocking/woodland_traversal.json",
+        "--output-dir",
+        "/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase6a/proofs/woodland_traversal_stills",
+        "--stills-only"
+      ],
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"report\": \"/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase6a/proofs/woodland_traversal_stills\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/2a96718c6b46/reelforge/.venv/bin/python",
+        "/workspace/scratch/2a96718c6b46/reelforge/tools/blocking.py",
+        "render",
+        "/workspace/scratch/2a96718c6b46/reelforge/examples/blocking/woodland_traversal.json",
+        "--output-dir",
+        "/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase6a/proofs/woodland_traversal_video"
+      ],
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"report\": \"/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase6a/proofs/woodland_traversal_video\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/2a96718c6b46/reelforge/.venv/bin/python",
+        "/workspace/scratch/2a96718c6b46/reelforge/tools/blocking.py",
+        "render",
+        "/workspace/scratch/2a96718c6b46/reelforge/examples/blocking/settlement_escape.json",
+        "--output-dir",
+        "/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase6a/proofs/settlement_escape_stills",
+        "--stills-only"
+      ],
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"report\": \"/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase6a/proofs/settlement_escape_stills\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/2a96718c6b46/reelforge/.venv/bin/python",
+        "/workspace/scratch/2a96718c6b46/reelforge/tools/blocking.py",
+        "render",
+        "/workspace/scratch/2a96718c6b46/reelforge/examples/blocking/settlement_escape.json",
+        "--output-dir",
+        "/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase6a/proofs/settlement_escape_video"
+      ],
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"report\": \"/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase6a/proofs/settlement_escape_video\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/2a96718c6b46/reelforge/.venv/bin/python",
+        "/workspace/scratch/2a96718c6b46/reelforge/tools/blocking.py",
+        "render",
+        "/workspace/scratch/2a96718c6b46/reelforge/examples/blocking/shelter_approach.json",
+        "--output-dir",
+        "/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase6a/proofs/shelter_approach_stills",
+        "--stills-only"
+      ],
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"report\": \"/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase6a/proofs/shelter_approach_stills\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/2a96718c6b46/reelforge/.venv/bin/python",
+        "/workspace/scratch/2a96718c6b46/reelforge/tools/blocking.py",
+        "render",
+        "/workspace/scratch/2a96718c6b46/reelforge/examples/blocking/shelter_approach.json",
+        "--output-dir",
+        "/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase6a/proofs/shelter_approach_video"
+      ],
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"report\": \"/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase6a/proofs/shelter_approach_video\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/2a96718c6b46/reelforge/.venv/bin/python",
+        "/workspace/scratch/2a96718c6b46/reelforge/tools/blocking.py",
+        "render",
+        "/workspace/scratch/2a96718c6b46/reelforge/examples/blocking/woodland_traversal.json",
+        "--output-dir",
+        "/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase6a/proofs/woodland_repeat"
+      ],
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"report\": \"/workspace/scratch/2a96718c6b46/reelforge/artifacts/phase6a/proofs/woodland_repeat\"}\n",
+      "stderr": ""
+    }
+  ]
+}

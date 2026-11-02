@@ -81,7 +81,7 @@ def step(clock, start, hip):
     return anchor, duty, 19 + 12 * running
 
 
-def contact_targets(seconds: float, clock: LocomotionClock = CLOCK):
+def contact_targets(seconds: float, clock: LocomotionClock = CLOCK, *, stepper=step):
     finite(seconds)
     if not 0 <= seconds <= 600:
         raise RenderError("Contact time must be 0..600")
@@ -91,12 +91,12 @@ def contact_targets(seconds: float, clock: LocomotionClock = CLOCK):
         k = math.floor(cycles + offset)
         p = cycles + offset - k
         start = k - offset
-        anchor, duty, lift = step(clock, start, hip)
+        anchor, duty, lift = stepper(clock, start, hip)
         pitch, pivot, state = foot_roll(p, duty, seeded=start <= 0)
         if p < duty:
             x, y = anchor, 0
         else:
-            next_anchor, _, _ = step(clock, start + 1, hip)
+            next_anchor, _, _ = stepper(clock, start + 1, hip)
             u = (p - duty) / (1 - duty)
             x = anchor + (next_anchor - anchor) * ease(u)
             y = lift * math.sin(math.pi * u) ** 2 * (1 + 0.18 * math.sin(math.tau * u))
@@ -104,7 +104,7 @@ def contact_targets(seconds: float, clock: LocomotionClock = CLOCK):
     return tuple(feet)
 
 
-def transition_pose(seconds: float, clock: LocomotionClock = CLOCK):
+def transition_pose(seconds: float, clock: LocomotionClock = CLOCK, *, feet=None):
     finite(seconds)
     if not 0 <= seconds <= 600:
         raise RenderError("Transition time must be 0..600")
@@ -117,7 +117,7 @@ def transition_pose(seconds: float, clock: LocomotionClock = CLOCK):
     body = blend(blend(idle, walk, activity), run, running)
     distance = clock.distance(seconds)
     body = Pose(Rigid(body.root.x + distance, body.root.y), body.angles)
-    planted = plant_feet(body, contact_targets(seconds, clock), SKELETON)
+    planted = plant_feet(body, contact_targets(seconds, clock) if feet is None else feet, SKELETON)
     return Pose(Rigid(planted.root.x - distance, planted.root.y), planted.angles), distance
 
 

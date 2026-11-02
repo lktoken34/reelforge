@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "setup": "Fresh no-Cairo venv using pinned distributions copied from accepted uv environment; new project wheel installed separately with --no-deps; uv pip check passed. No online dependency-resolution claim.",
+  "outside_checkout": true,
+  "checks": [
+    {
+      "command": [
+        "uv",
+        "pip",
+        "check",
+        "--python",
+        "/workspace/scratch/2a96718c6b46/reelforge/outputs/phase6a-wheel-smoke/bin/python"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "Using Python 3.12.14 environment at: /workspace/scratch/2a96718c6b46/reelforge/outputs/phase6a-wheel-smoke\nChecked 12 packages in 0.65ms\nAll installed packages are compatible\n"
+    },
+    {
+      "command": [
+        "/workspace/scratch/2a96718c6b46/reelforge/outputs/phase6a-wheel-smoke/bin/reelforge",
+        "capabilities"
+      ],
+      "returncode": 0,
+      "stdout": "{\"commands\": [\"capabilities\", \"schema\", \"validate\"], \"engine_version\": \"0.6.0\", \"limits\": {\"input_bytes\": 1048576, \"issues\": 32, \"nesting\": 32, \"total_frames\": 18000}, \"ok\": true, \"phase\": 1, \"profiles\": {\"preview_360p\": [360, 640], \"target_720p\": [720, 1280]}, \"render_available\": false, \"schema_versions\": [\"2.0-draft1\"]}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/2a96718c6b46/reelforge/outputs/phase6a-wheel-smoke/bin/reelforge",
+        "schema"
+      ],
+      "returncode": 0,
+      "stdout": "{\"$id\": \"urn:reelforge:project:2.0-draft1\", \"$schema\": \"https://json-schema.org/draft/2020-12/schema\", \"additionalProperties\": false, \"properties\": {\"output\": {\"additionalProperties\": false, \"properties\": {\"fps\": {\"enum\": [24, 25, 30], \"type\": \"integer\"}, \"profile\": {\"enum\": [\"preview_360p\", \"target_720p\"]}}, \"required\": [\"profile\", \"fps\"], \"type\": \"object\"}, \"project_id\": {\"pattern\": \"^[a-z][a-z0-9_]{0,63}(?![\\\\s\\\\S])\", \"type\": \"string\"}, \"scenes\": {\"items\": {\"additionalProperties\": false, \"properties\": {\"duration_frames\": {\"maximum\": 1800, \"minimum\": 1, \"type\": \"integer\"}, \"id\": {\"pattern\": \"^[a-z][a-z0-9_]{0,63}(?![\\\\s\\\\S])\", \"type\": \"string\"}, \"intent\": {\"maxLength\": 2000, \"minLength\": 1, \"pattern\": \"\\\\S\", \"type\": \"string\"}}, \"required\": [\"id\", \"duration_frames\", \"intent\"], \"type\": \"object\"}, \"maxItems\": 256, \"minItems\": 1, \"type\": \"array\"}, \"schema_version\": {\"const\": \"2.0-draft1\"}, \"seed\": {\"maximum\": 2147483647, \"minimum\": 0, \"type\": \"integer\"}}, \"required\": [\"schema_version\", \"project_id\", \"seed\", \"output\", \"scenes\"], \"title\": \"ReelForge foundation manifest; not a renderable scene language\", \"type\": \"object\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/2a96718c6b46/reelforge/outputs/phase6a-wheel-smoke/bin/reelforge",
+        "validate",
+        "/workspace/scratch/2a96718c6b46/reelforge/examples/foundation/project.json"
+      ],
+      "returncode": 0,
+      "stdout": "{\"manifest_sha256\": \"3bfca4a208d36926c78335c6e2441a2c7bbb55456b35bfec4ea2631b4972f983\", \"ok\": true, \"render_ready\": false, \"scene_count\": 2, \"schema_version\": \"2.0-draft1\", \"total_frames\": 150}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/2a96718c6b46/reelforge/outputs/phase6a-wheel-smoke/bin/python",
+        "-c",
+        "import json,sys,importlib.util\nfrom pathlib import Path\nimport reelforge\nfrom reelforge.blocking.contract import load_blocking\nfrom reelforge.blocking.sampling import inspect_frame\nassert importlib.util.find_spec('cairo') is None\nassert 'site-packages' in reelforge.__file__\nroot=Path(sys.argv[1]);examples={}\nfor p in (root/'examples/blocking').glob('*.json'):\n plan=load_blocking(p);examples[p.name]=inspect_frame(plan,45)['position']\nassert len(examples)==3 and 'cairo' not in sys.modules\nprint(json.dumps({'module':reelforge.__file__,'native_free_motion_examples':examples}))\n",
+        "/workspace/scratch/2a96718c6b46/reelforge"
+      ],
+      "returncode": 0,
+      "stdout": "{\"module\": \"/workspace/scratch/2a96718c6b46/reelforge/outputs/phase6a-wheel-smoke/lib/python3.12/site-packages/reelforge/__init__.py\", \"native_free_motion_examples\": {\"woodland_traversal.json\": [169.12, 550], \"settlement_escape.json\": [180.0, 550], \"shelter_approach.json\": [197.8884839650146, 470]}}\n",
+      "stderr": ""
+    }
+  ],
+  "base_blocking_tests": "............................................................s....s.      [100%]\n=========================== short test summary info ============================\nSKIPPED [1] tests/test_blocking.py:243: optional Cairo/FFmpeg integration\nSKIPPED [1] tests/test_blocking.py:352: optional Cairo/FFmpeg\n65 passed, 2 skipped in 4.47s\n"
+}

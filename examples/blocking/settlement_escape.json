@@ -1,0 +1,81 @@
+{
+  "schema_version": "blocking-0.1",
+  "title": "Settlement escape \u2014 accelerate and depart",
+  "base": {
+    "schema_version": "environment-0.1",
+    "title": "Settlement Street \u2014 seed 33",
+    "family": "settlement_street",
+    "seed": 33,
+    "composition": {
+      "density": 2,
+      "path_alignment": 0,
+      "structure": 0.7,
+      "framing": 0.8,
+      "detail": "rich"
+    },
+    "art_direction": {
+      "lighting": "dusk",
+      "atmosphere": 0.7
+    },
+    "rowan": {
+      "enabled": true,
+      "action": "look_around",
+      "side": "left"
+    }
+  },
+  "actor_id": "rowan",
+  "support_id": "ground",
+  "corridor": "level_field",
+  "start": {
+    "position": [
+      118,
+      550
+    ],
+    "facing": "right"
+  },
+  "camera": "exit_right",
+  "segments": [
+    {
+      "id": "walk",
+      "start_frame": 0,
+      "end_frame": 21,
+      "mode": "walk",
+      "destination": [
+        128.5,
+        550
+      ],
+      "end_speed": 30,
+      "facing": "right",
+      "acting": "none",
+      "expression": "concerned"
+    },
+    {
+      "id": "accelerate",
+      "start_frame": 21,
+      "end_frame": 36,
+      "mode": "run",
+      "destination": [
+        156,
+        550
+      ],
+      "end_speed": 80,
+      "facing": "right",
+      "acting": "none",
+      "expression": "determined"
+    },
+    {
+      "id": "escape",
+      "start_frame": 36,
+      "end_frame": 90,
+      "mode": "run",
+      "destination": [
+        300,
+        550
+      ],
+      "end_speed": 80,
+      "facing": "right",
+      "acting": "none",
+      "expression": "determined"
+    }
+  ]
+}

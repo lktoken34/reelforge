@@ -244,3 +244,10 @@ The production episode interface remains not render-ready.
 compound objects and placement in accepted scenes/procedural environments. Discover with
 `python tools/geometry.py capabilities`; review [the evidence](docs/PHASE5C_REPORT.md).
 The installed production episode CLI remains unchanged and not render-ready.
+
+## Experimental character blocking (Phase 6A)
+
+[blocking-0.1](docs/BLOCKING.md) adds bounded horizontal travel, distance-driven gait,
+stopping, acting and stationary facing changes over accepted scenes/environments and
+JSON-authored props. Discover with `python tools/blocking.py capabilities`; see
+[the motion and resource evidence](docs/PHASE6A_REPORT.md). Production remains not render-ready.

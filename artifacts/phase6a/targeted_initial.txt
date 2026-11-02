@@ -1,0 +1,61 @@
+..................................................F.......F............. [ 67%]
+..................................                                       [100%]
+=================================== FAILURES ===================================
+_____ test_continuous_position_velocity_pose_and_phase[settlement_escape] ______
+
+name = 'settlement_escape'
+
+    @pytest.mark.parametrize("name", ["woodland_traversal", "settlement_escape", "shelter_approach"])
+    def test_continuous_position_velocity_pose_and_phase(name):
+        p = load_blocking(ROOT / f"examples/blocking/{name}.json")
+        eps = 1e-6
+        for a, b in zip(p.segments, p.segments[1:]):
+            assert a.position(a.end / 30) == pytest.approx(b.position(b.start / 30), abs=1e-10)
+            assert a.velocity(a.end / 30) == pytest.approx(b.velocity(b.start / 30), abs=1e-10)
+            t = b.start / 30
+            pa = sample(p, t - eps)[2]
+            pb = sample(p, t + eps)[2]
+            assert math.hypot(pa.root.x - pb.root.x, pa.root.y - pb.root.y) < 0.005
+            assert max(abs(dict(pa.angles).get(k, 0) - v) for k, v in pb.angles) < 0.001
+        for c in p.clocks:
+            for i in range(1, 20):
+                t = c.start + (c.end - c.start) * i / 20
+                derivative = (c.cycles(t + eps) - c.cycles(t - eps)) / (2 * eps)
+                assert derivative == pytest.approx(
+                    c.speed(t) * c.inverse_stride(t) * c.factor, abs=2e-5
+                )
+>               assert (c.distance(t + eps) - c.distance(t - eps)) / (2 * eps) == pytest.approx(
+                    c.speed(t), abs=2e-5
+                )
+E               assert 170.21271276718153 == 170.2127659574468 ± 2.0e-05
+E                 
+E                 comparison failed
+E                 Obtained: 170.21271276718153
+E                 Expected: 170.2127659574468 ± 2.0e-05
+
+tests/test_blocking.py:143: AssertionError
+__________ test_decorative_geometry_and_wrong_parallax_cannot_support __________
+
+data = {'actor_id': 'rowan', 'base': {'base': {'art_direction': {'atmosphere': 0.7, 'lighting': 'dusk'}, 'composition': {'den...er', 'order': 20, ...}], 'schema_version': 'composition-0.1', ...}, 'camera': 'locked', 'corridor': 'level_field', ...}
+
+    def test_decorative_geometry_and_wrong_parallax_cannot_support(data):
+        d = copy.deepcopy(data)
+        d["support_id"] = "supply"
+        with pytest.raises(InputError):
+            compile_blocking(d)
+        # A complete continuous route is checked, including footprint beyond the center.
+        d = copy.deepcopy(data)
+        d["start"]["position"][0] = 66
+        d["segments"][0]["destination"][0] = 66
+        d["segments"][1]["destination"][0] = 106
+        d["segments"][2]["destination"][0] = 113
+        d["segments"][3]["destination"][0] = 113
+>       with pytest.raises(InputError) as e:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'reelforge.core.errors.InputError'>
+
+tests/test_blocking.py:221: Failed
+=========================== short test summary info ============================
+FAILED tests/test_blocking.py::test_continuous_position_velocity_pose_and_phase[settlement_escape]
+FAILED tests/test_blocking.py::test_decorative_geometry_and_wrong_parallax_cannot_support
+2 failed, 104 passed in 7.48s

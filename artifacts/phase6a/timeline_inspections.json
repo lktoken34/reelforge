@@ -1,0 +1,338 @@
+{
+  "settlement_escape": {
+    "contract": "blocking-0.1",
+    "frames": 90,
+    "corridor_world": [
+      65.0,
+      465.0,
+      305.0,
+      570.0
+    ],
+    "support_world": [
+      5.0,
+      435.0,
+      355.0,
+      640.0
+    ],
+    "actor_scale": 0.47,
+    "base_graph_is_stationary_reference": true,
+    "segments": [
+      {
+        "id": "walk",
+        "range": [
+          0,
+          21
+        ],
+        "mode": "walk",
+        "position": [
+          118,
+          128.5,
+          550
+        ],
+        "velocity": [
+          0.0,
+          30
+        ],
+        "facing": "right",
+        "acting": "none",
+        "expression": "concerned"
+      },
+      {
+        "id": "accelerate",
+        "range": [
+          21,
+          36
+        ],
+        "mode": "run",
+        "position": [
+          128.5,
+          156,
+          550
+        ],
+        "velocity": [
+          30,
+          80
+        ],
+        "facing": "right",
+        "acting": "none",
+        "expression": "determined"
+      },
+      {
+        "id": "escape",
+        "range": [
+          36,
+          90
+        ],
+        "mode": "run",
+        "position": [
+          156,
+          300,
+          550
+        ],
+        "velocity": [
+          80,
+          80
+        ],
+        "facing": "right",
+        "acting": "none",
+        "expression": "determined"
+      }
+    ],
+    "clocks": [
+      {
+        "start": 0.0,
+        "end": 3.0,
+        "distance_rig": 387.2340425531915,
+        "cycles": 2.802080630513752,
+        "phase_factor": 1.0,
+        "contact_step_count": 24
+      }
+    ],
+    "paths_allowance": 2408,
+    "operations_allowance": 42400
+  },
+  "shelter_approach": {
+    "contract": "blocking-0.1",
+    "frames": 90,
+    "corridor_world": [
+      65.0,
+      465.0,
+      305.0,
+      570.0
+    ],
+    "support_world": [
+      5.0,
+      435.0,
+      355.0,
+      640.0
+    ],
+    "actor_scale": 0.47,
+    "base_graph_is_stationary_reference": true,
+    "segments": [
+      {
+        "id": "observe",
+        "range": [
+          0,
+          6
+        ],
+        "mode": "idle",
+        "position": [
+          165,
+          165,
+          470
+        ],
+        "velocity": [
+          0.0,
+          0
+        ],
+        "facing": "right",
+        "acting": "idle",
+        "expression": "concerned"
+      },
+      {
+        "id": "approach",
+        "range": [
+          6,
+          48
+        ],
+        "mode": "walk",
+        "position": [
+          165,
+          201,
+          470
+        ],
+        "velocity": [
+          0,
+          30
+        ],
+        "facing": "right",
+        "acting": "none",
+        "expression": "concerned"
+      },
+      {
+        "id": "brake",
+        "range": [
+          48,
+          66
+        ],
+        "mode": "stop",
+        "position": [
+          201,
+          210,
+          470
+        ],
+        "velocity": [
+          30,
+          0
+        ],
+        "facing": "right",
+        "acting": "none",
+        "expression": "concerned"
+      },
+      {
+        "id": "look_back",
+        "range": [
+          66,
+          84
+        ],
+        "mode": "turn",
+        "position": [
+          210,
+          210,
+          470
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "facing": "left",
+        "acting": "look_around",
+        "expression": "concerned"
+      },
+      {
+        "id": "hold",
+        "range": [
+          84,
+          90
+        ],
+        "mode": "idle",
+        "position": [
+          210,
+          210,
+          470
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "facing": "left",
+        "acting": "idle",
+        "expression": "concerned"
+      }
+    ],
+    "clocks": [
+      {
+        "start": 0.2,
+        "end": 2.2,
+        "distance_rig": 95.74468085106383,
+        "cycles": 1.56,
+        "phase_factor": 1.0427733333333336,
+        "contact_step_count": 20
+      }
+    ],
+    "paths_allowance": 1956,
+    "operations_allowance": 35600
+  },
+  "woodland_traversal": {
+    "contract": "blocking-0.1",
+    "frames": 90,
+    "corridor_world": [
+      65.0,
+      465.0,
+      305.0,
+      570.0
+    ],
+    "support_world": [
+      5.0,
+      435.0,
+      355.0,
+      640.0
+    ],
+    "actor_scale": 0.47,
+    "base_graph_is_stationary_reference": true,
+    "segments": [
+      {
+        "id": "quiet",
+        "range": [
+          0,
+          9
+        ],
+        "mode": "idle",
+        "position": [
+          140,
+          140,
+          550
+        ],
+        "velocity": [
+          0.0,
+          0
+        ],
+        "facing": "right",
+        "acting": "idle",
+        "expression": "concerned"
+      },
+      {
+        "id": "walk",
+        "range": [
+          9,
+          54
+        ],
+        "mode": "walk",
+        "position": [
+          140,
+          180,
+          550
+        ],
+        "velocity": [
+          0,
+          35
+        ],
+        "facing": "right",
+        "acting": "none",
+        "expression": "concerned"
+      },
+      {
+        "id": "settle",
+        "range": [
+          54,
+          66
+        ],
+        "mode": "stop",
+        "position": [
+          180,
+          187,
+          550
+        ],
+        "velocity": [
+          35,
+          0
+        ],
+        "facing": "right",
+        "acting": "none",
+        "expression": "concerned"
+      },
+      {
+        "id": "listen",
+        "range": [
+          66,
+          90
+        ],
+        "mode": "idle",
+        "position": [
+          187,
+          187,
+          550
+        ],
+        "velocity": [
+          0,
+          0
+        ],
+        "facing": "right",
+        "acting": "look_around",
+        "expression": "concerned"
+      }
+    ],
+    "clocks": [
+      {
+        "start": 0.3,
+        "end": 2.2,
+        "distance_rig": 100.0,
+        "cycles": 1.56,
+        "phase_factor": 0.9983999999999998,
+        "contact_step_count": 20
+      }
+    ],
+    "paths_allowance": 2223,
+    "operations_allowance": 46056
+  }
+}

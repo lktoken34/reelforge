@@ -1,0 +1,14 @@
+{
+  "scope": "One artistic refinement: short central turn dissolve, no retry of failed jobs",
+  "command": [
+    ".venv/bin/python",
+    "tools/blocking.py",
+    "render",
+    "examples/blocking/shelter_approach.json",
+    "--output-dir",
+    "artifacts/phase6a/proofs/shelter_approach_video"
+  ],
+  "returncode": 0,
+  "stdout": "{\"success\": true, \"report\": \"artifacts/phase6a/proofs/shelter_approach_video\"}\n",
+  "stderr": ""
+}

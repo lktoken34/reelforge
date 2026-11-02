@@ -45,7 +45,9 @@ def capabilities() -> dict:
     }
 
 
-def render_scene(compiled, output: Path, *, stills_only: bool = False) -> dict:
+def render_scene(
+    compiled, output: Path, *, stills_only: bool = False, frame_evaluator=None, layer_evaluator=None
+) -> dict:
     # Native imports occur only after native-free validation and graph compilation.
     from reelforge.media.encoder import FFmpegEncoder
     from reelforge.media.verify import verify_video
@@ -54,6 +56,8 @@ def render_scene(compiled, output: Path, *, stills_only: bool = False) -> dict:
     from reelforge.resources.deployment import check_workspace, memory_observability
     from reelforge.resources.monitor import JobMonitor
 
+    frame_evaluator = frame_evaluator or scene_frame
+    layer_evaluator = layer_evaluator or evaluate_layers
     output = output.resolve()
     try:
         output.mkdir(parents=True, exist_ok=False)
@@ -79,14 +83,14 @@ def render_scene(compiled, output: Path, *, stills_only: bool = False) -> dict:
     with JobMonitor(workspace=output) as monitor:
         if stills_only:
             for frame in (0, frames // 2, frames - 1):
-                commands = scene_frame(compiled, frame)
+                commands = frame_evaluator(compiled, frame)
                 with renderer.surface(720, 1280) as surface:
                     renderer.draw(
                         surface, commands, background=color("243e49"), logical_size=(360, 640)
                     )
                     hashes[str(frame)] = surface.pixel_sha256()
                     surface.write_png(output / f"frame_{frame:03}.png")
-            for layer in evaluate_layers(compiled, frames // 2):
+            for layer in layer_evaluator(compiled, frames // 2):
                 with renderer.surface(720, 1280) as surface:
                     renderer.draw(
                         surface,
@@ -108,7 +112,7 @@ def render_scene(compiled, output: Path, *, stills_only: bool = False) -> dict:
                 with renderer.surface(720, 1280) as surface:
                     for frame in range(frames):
                         tick = time.perf_counter()
-                        commands = scene_frame(compiled, frame)
+                        commands = frame_evaluator(compiled, frame)
                         timing["geometry_seconds"] += time.perf_counter() - tick
                         paths, ops = cost(commands)
                         maximum_paths = max(maximum_paths, paths)

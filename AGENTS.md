@@ -125,3 +125,15 @@ phase5c-novel-vector-geometry. Read docs/NOVEL_GEOMETRY.md and docs/PHASE5C_REPO
 Keep all 692 accepted tests and the legacy scene, environment, story, audio, renderer,
 resource and transaction semantics. No delegation, push, deployment, or Phase 6A.
 Stop after local commit and complete Phase 5C ZIP export for independent review.
+
+## Current Phase 6A assignment
+
+Phase 5C passed accepted-branch CI. The exact approved base is
+15b17f795d65adf1eb9d35d28f349084681372b4; the new assignment supersedes historical
+phase-stop/independent-diagnostic notes above. Work only on bounded blocking-0.1 on
+phase6a-character-motion-blocking. Read docs/BLOCKING.md and docs/PHASE6A_REPORT.md.
+Preserve all 795 tests and legacy outputs/policies. Use targeted tests during development
+and exactly one final full local-suite attempt; retain restoration failures without reruns.
+Publication uses one standard CI run, not a separate diagnostic branch by default.
+No delegation, GitHub push, deployment, Muse Spark or Phase 6B is authorized.
+Stop after the local commit and complete Phase 6A Git archive for independent review.

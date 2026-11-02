@@ -1,0 +1,5 @@
+............................................................s....s.      [100%]
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_blocking.py:243: optional Cairo/FFmpeg integration
+SKIPPED [1] tests/test_blocking.py:352: optional Cairo/FFmpeg
+65 passed, 2 skipped in 4.47s

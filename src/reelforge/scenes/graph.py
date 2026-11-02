@@ -44,6 +44,15 @@ class CompiledScene:
 
 
 @dataclass(frozen=True)
+class CharacterFrame:
+    """Trusted per-frame character sample; JSON never supplies commands or world transforms."""
+
+    node_id: str
+    world: Placement
+    commands: tuple[DrawPath, ...]
+
+
+@dataclass(frozen=True)
 class EvaluatedLayer:
     id: str
     depth: float
@@ -190,7 +199,9 @@ def camera_at(compiled: CompiledScene, frame: int) -> Camera:
     return Camera(5 + 15 * u, 3 + 5 * u, 1.015 + 0.07 * u)
 
 
-def evaluate_layers(compiled: CompiledScene, frame: int) -> tuple[EvaluatedLayer, ...]:
+def evaluate_layers(
+    compiled: CompiledScene, frame: int, *, character_override: CharacterFrame | None = None
+) -> tuple[EvaluatedLayer, ...]:
     camera = camera_at(compiled, frame)
     scene = compiled.scene
     lookup = {n.id: n for n in scene.nodes}
@@ -210,10 +221,19 @@ def evaluate_layers(compiled: CompiledScene, frame: int) -> tuple[EvaluatedLayer
             n = lookup[name]
             sealed = next((g for g in compiled.generated if g.asset.id == n.asset_id), None)
             asset = sealed.asset if sealed else asset_by_id(n.asset_id)
-            world = camera_world.compose(r.world)
+            override = (
+                character_override
+                if character_override and character_override.node_id == name
+                else None
+            )
+            if override and n.kind != "character":
+                fail("/override", "Only a trusted character frame override is supported")
+            world = camera_world.compose(override.world if override else r.world)
             emitted.append(name)
             local = (
-                sealed.commands
+                override.commands
+                if override
+                else sealed.commands
                 if sealed
                 else recipe(
                     asset,
