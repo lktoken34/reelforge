@@ -14,7 +14,9 @@ jobs:
       - run: uv sync --frozen
       - run: uv run --frozen ruff check .
       - run: uv run --frozen ruff format --check .
-      - run: uv run --frozen pytest
+      - name: Create workspace scratch parent
+        run: mkdir -p outputs
+      - run: uv run --frozen pytest --basetemp outputs/test-temp
       - run: uv run --frozen python tools/validate_story.py examples/stories/last_farm.json
       - run: uv run --frozen python -m build --no-isolation
       - name: Verify installed wheel outside checkout
