@@ -1,0 +1,7655 @@
+{
+  "units": "World/logical: 360x640; output pixels = 2x logical; 30 FPS",
+  "frames": [
+    {
+      "frame": 0,
+      "source_frame": 0,
+      "seconds": 0.0,
+      "shot": "wide_apron",
+      "behavior": "establishing",
+      "cut": false,
+      "camera": {
+        "x": 0.0,
+        "y": 0.0,
+        "zoom": 1.0
+      },
+      "target_world": [
+        180.0,
+        470.0
+      ],
+      "target_depth": 1.0,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        180.0,
+        470.0
+      ],
+      "focal_screen": [
+        180.0,
+        470.0
+      ],
+      "desired_screen": [
+        180.0,
+        470.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        165.0,
+        470
+      ],
+      "actor_bounds_logical": [
+        142.65343571666355,
+        352.9059140060124,
+        187.33947972299075,
+        471.269
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.48": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1.4": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        }
+      },
+      "geometry_sha256": "4a2fa1b3bfafbe2af4f944468923fba709b85041f443388d2a036b75c9fb9a52",
+      "motion_sha256": "9b011d8496249b433f6255503f549d299035451d8e3e861668f8d7291cf7c110"
+    },
+    {
+      "frame": 1,
+      "source_frame": 1,
+      "seconds": 0.03333333333333333,
+      "shot": "wide_apron",
+      "behavior": "establishing",
+      "cut": false,
+      "camera": {
+        "x": 0.0,
+        "y": 0.0,
+        "zoom": 1.0
+      },
+      "target_world": [
+        180.0,
+        470.0
+      ],
+      "target_depth": 1.0,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        180.0,
+        470.0
+      ],
+      "focal_screen": [
+        180.0,
+        470.0
+      ],
+      "desired_screen": [
+        180.0,
+        470.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        165.0,
+        470
+      ],
+      "actor_bounds_logical": [
+        142.7126975055324,
+        352.9032824624875,
+        187.39214857304097,
+        471.269
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.48": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1.4": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        }
+      },
+      "geometry_sha256": "4b37dbb724a637450631c2148e8a7d66a737fbfb990301e5776db151422e8a10",
+      "motion_sha256": "3f18c88d9266e0f3587e5c7c73fc4414b3748f5aecf8dd060aef26245a9e15ce"
+    },
+    {
+      "frame": 2,
+      "source_frame": 2,
+      "seconds": 0.06666666666666667,
+      "shot": "wide_apron",
+      "behavior": "establishing",
+      "cut": false,
+      "camera": {
+        "x": 0.0,
+        "y": 0.0,
+        "zoom": 1.0
+      },
+      "target_world": [
+        180.0,
+        470.0
+      ],
+      "target_depth": 1.0,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        180.0,
+        470.0
+      ],
+      "focal_screen": [
+        180.0,
+        470.0
+      ],
+      "desired_screen": [
+        180.0,
+        470.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        165.0,
+        470
+      ],
+      "actor_bounds_logical": [
+        142.77133885999484,
+        352.8978994419311,
+        187.44452139755086,
+        471.269
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.48": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1.4": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        }
+      },
+      "geometry_sha256": "d7fcffd52913e09763f21edb34b9f9f18bf981f30ea71423052d971e0d9f45af",
+      "motion_sha256": "4c56cc4b57f77db90757497e4b7e0a1efda9fa73c0e7051ae2512e75fc6d25fb"
+    },
+    {
+      "frame": 3,
+      "source_frame": 3,
+      "seconds": 0.1,
+      "shot": "wide_apron",
+      "behavior": "establishing",
+      "cut": false,
+      "camera": {
+        "x": 0.0,
+        "y": 0.0,
+        "zoom": 1.0
+      },
+      "target_world": [
+        180.0,
+        470.0
+      ],
+      "target_depth": 1.0,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        180.0,
+        470.0
+      ],
+      "focal_screen": [
+        180.0,
+        470.0
+      ],
+      "desired_screen": [
+        180.0,
+        470.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        165.0,
+        470
+      ],
+      "actor_bounds_logical": [
+        142.82567225311206,
+        352.870128873721,
+        187.49641520034044,
+        471.269
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.48": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1.4": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        }
+      },
+      "geometry_sha256": "388df12dc772aeac25cfb04d8a318b88c74b361a4e95b4142b65ab737f5f23a4",
+      "motion_sha256": "5831a25256dc09df7b7cbd5ee420372bff37d28afcf699c57dd6c82135ae7ffc"
+    },
+    {
+      "frame": 4,
+      "source_frame": 4,
+      "seconds": 0.13333333333333333,
+      "shot": "wide_apron",
+      "behavior": "establishing",
+      "cut": false,
+      "camera": {
+        "x": 0.0,
+        "y": 0.0,
+        "zoom": 1.0
+      },
+      "target_world": [
+        180.0,
+        470.0
+      ],
+      "target_depth": 1.0,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        180.0,
+        470.0
+      ],
+      "focal_screen": [
+        180.0,
+        470.0
+      ],
+      "desired_screen": [
+        180.0,
+        470.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        165.0,
+        470
+      ],
+      "actor_bounds_logical": [
+        142.95357352797677,
+        353.0029379561295,
+        187.6227522311486,
+        471.269
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.48": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1.4": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        }
+      },
+      "geometry_sha256": "3de16d9194b5372a081c2a530095ee882453f6285d95ec237f9a09531519ddd8",
+      "motion_sha256": "b73b386f60504addc8c724c04cd818b46412a041102278412b9d811749f716fe"
+    },
+    {
+      "frame": 5,
+      "source_frame": 5,
+      "seconds": 0.16666666666666666,
+      "shot": "wide_apron",
+      "behavior": "establishing",
+      "cut": false,
+      "camera": {
+        "x": 0.0,
+        "y": 0.0,
+        "zoom": 1.0
+      },
+      "target_world": [
+        180.0,
+        470.0
+      ],
+      "target_depth": 1.0,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        180.0,
+        470.0
+      ],
+      "focal_screen": [
+        180.0,
+        470.0
+      ],
+      "desired_screen": [
+        180.0,
+        470.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        165.0,
+        470
+      ],
+      "actor_bounds_logical": [
+        143.00331217333502,
+        352.97788824566743,
+        187.6699885155906,
+        471.269
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.48": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1.4": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        }
+      },
+      "geometry_sha256": "738bbd8bd5ae8c39996363cd8f75bfcbf642b93f7939196c58eb1631e75f17bc",
+      "motion_sha256": "154e3d791ba4e7aabf3adfaeedd875726bc5538b1851878f04cfb3ac98777ee1"
+    },
+    {
+      "frame": 6,
+      "source_frame": 6,
+      "seconds": 0.2,
+      "shot": "wide_apron",
+      "behavior": "establishing",
+      "cut": false,
+      "camera": {
+        "x": 0.0,
+        "y": 0.0,
+        "zoom": 1.0
+      },
+      "target_world": [
+        180.0,
+        470.0
+      ],
+      "target_depth": 1.0,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        180.0,
+        470.0
+      ],
+      "focal_screen": [
+        180.0,
+        470.0
+      ],
+      "desired_screen": [
+        180.0,
+        470.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        165.0,
+        470
+      ],
+      "actor_bounds_logical": [
+        142.98487275240316,
+        352.7900083591466,
+        187.64746376009109,
+        471.269
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.48": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1.4": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        }
+      },
+      "geometry_sha256": "66006d5852e3e527547750e608ddc4b3250f043cdbfce310c970bf265c0cb33e",
+      "motion_sha256": "e92d7236a7a87c298ea8bf0ba2ff4727000bcc9f01df0a13e859047176eb17ca"
+    },
+    {
+      "frame": 7,
+      "source_frame": 7,
+      "seconds": 0.23333333333333334,
+      "shot": "wide_apron",
+      "behavior": "establishing",
+      "cut": false,
+      "camera": {
+        "x": 0.0,
+        "y": 0.0,
+        "zoom": 1.0
+      },
+      "target_world": [
+        180.0,
+        470.0
+      ],
+      "target_depth": 1.0,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        180.0,
+        470.0
+      ],
+      "focal_screen": [
+        180.0,
+        470.0
+      ],
+      "desired_screen": [
+        180.0,
+        470.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        165.0370100421121,
+        470
+      ],
+      "actor_bounds_logical": [
+        143.14427908380964,
+        352.9461930066923,
+        187.8058432607512,
+        471.269
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.48": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1.4": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        }
+      },
+      "geometry_sha256": "270480eead020be5f328743c10a16bde3231563f06a29878cafce4c6dae57af6",
+      "motion_sha256": "7f29eaf2efefae468a13afa4f7292cd7778392f28d882e87849cd0b0506a6dec"
+    },
+    {
+      "frame": 8,
+      "source_frame": 8,
+      "seconds": 0.26666666666666666,
+      "shot": "wide_apron",
+      "behavior": "establishing",
+      "cut": false,
+      "camera": {
+        "x": 0.0,
+        "y": 0.0,
+        "zoom": 1.0
+      },
+      "target_world": [
+        180.0,
+        470.0
+      ],
+      "target_depth": 1.0,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        180.0,
+        470.0
+      ],
+      "focal_screen": [
+        180.0,
+        470.0
+      ],
+      "desired_screen": [
+        180.0,
+        470.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        165.1464204729511,
+        470
+      ],
+      "actor_bounds_logical": [
+        143.37056927229358,
+        353.1002155175497,
+        188.0313629934431,
+        471.269
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.48": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1.4": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        }
+      },
+      "geometry_sha256": "ec1018143c1ad1639f4a31c7072b1bce029805a2ff02733533ee6d779caf0dbe",
+      "motion_sha256": "e6970e237540585e3a063f817c2f86b354ef21bc7de2721f9b1090d4a19ecbd8"
+    },
+    {
+      "frame": 9,
+      "source_frame": 9,
+      "seconds": 0.3,
+      "shot": "wide_apron",
+      "behavior": "establishing",
+      "cut": false,
+      "camera": {
+        "x": 0.0,
+        "y": 0.0,
+        "zoom": 1.0
+      },
+      "target_world": [
+        180.0,
+        470.0
+      ],
+      "target_depth": 1.0,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        180.0,
+        470.0
+      ],
+      "focal_screen": [
+        180.0,
+        470.0
+      ],
+      "desired_screen": [
+        180.0,
+        470.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        165.32580174927114,
+        470
+      ],
+      "actor_bounds_logical": [
+        143.6663714421655,
+        353.2505031000343,
+        188.32650670904292,
+        471.269
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.48": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1.4": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        }
+      },
+      "geometry_sha256": "27924ff749dd3a8582938f0cae6fdef2a41d429e200dc31e470cde7b4cd384f4",
+      "motion_sha256": "f54f15d5ba5853d953d3b555587e28481c255c5112adef47c712b55fff1342eb"
+    },
+    {
+      "frame": 10,
+      "source_frame": 10,
+      "seconds": 0.3333333333333333,
+      "shot": "wide_apron",
+      "behavior": "establishing",
+      "cut": false,
+      "camera": {
+        "x": 0.0,
+        "y": 0.0,
+        "zoom": 1.0
+      },
+      "target_world": [
+        180.0,
+        470.0
+      ],
+      "target_depth": 1.0,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        180.0,
+        470.0
+      ],
+      "focal_screen": [
+        180.0,
+        470.0
+      ],
+      "desired_screen": [
+        180.0,
+        470.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        165.57272432782636,
+        470
+      ],
+      "actor_bounds_logical": [
+        144.03403449718047,
+        353.39429881423774,
+        188.6934461521069,
+        471.269
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.48": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1.4": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        }
+      },
+      "geometry_sha256": "be9704cf9dabb56ee37900da4dcbcb64e84c4dcad56a30ee03cbf5e30dbe4704",
+      "motion_sha256": "0e6d02b399dde66099ea4a89d33e5fd48c5cceec2e37235b4ebf49d79ace8c4b"
+    },
+    {
+      "frame": 11,
+      "source_frame": 11,
+      "seconds": 0.36666666666666664,
+      "shot": "wide_apron",
+      "behavior": "establishing",
+      "cut": false,
+      "camera": {
+        "x": 0.0,
+        "y": 0.0,
+        "zoom": 1.0
+      },
+      "target_world": [
+        180.0,
+        470.0
+      ],
+      "target_depth": 1.0,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        180.0,
+        470.0
+      ],
+      "focal_screen": [
+        180.0,
+        470.0
+      ],
+      "desired_screen": [
+        180.0,
+        470.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        165.8847586653709,
+        470
+      ],
+      "actor_bounds_logical": [
+        144.47561485975092,
+        353.52738496829,
+        189.1340289644011,
+        471.269
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.48": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1.4": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        }
+      },
+      "geometry_sha256": "529e0dc08855ce3872164346c65723ffa2d77ab4db1888f611f5eda00160b005",
+      "motion_sha256": "fee3b8d5948c6981cddb0a3872ad37ecfa310c1d03abd9b90209ddc682433051"
+    },
+    {
+      "frame": 12,
+      "source_frame": 12,
+      "seconds": 0.4,
+      "shot": "wide_apron",
+      "behavior": "establishing",
+      "cut": false,
+      "camera": {
+        "x": 0.0,
+        "y": 0.0,
+        "zoom": 1.0
+      },
+      "target_world": [
+        180.0,
+        470.0
+      ],
+      "target_depth": 1.0,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        180.0,
+        470.0
+      ],
+      "focal_screen": [
+        180.0,
+        470.0
+      ],
+      "desired_screen": [
+        180.0,
+        470.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        166.2594752186589,
+        470
+      ],
+      "actor_bounds_logical": [
+        144.99275318696348,
+        353.6441413564977,
+        189.64966847835322,
+        471.269
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.48": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1.4": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        }
+      },
+      "geometry_sha256": "14e4430fecd00c3f46d8ef8fff8a04951259b40312a9b14d9e49e7cf7132e095",
+      "motion_sha256": "12addad1a8527a77dc5295d87c05f94ccf66572a640a55f2fc72ad0c613c2662"
+    },
+    {
+      "frame": 13,
+      "source_frame": 13,
+      "seconds": 0.43333333333333335,
+      "shot": "wide_apron",
+      "behavior": "establishing",
+      "cut": false,
+      "camera": {
+        "x": 0.0,
+        "y": 0.0,
+        "zoom": 1.0
+      },
+      "target_world": [
+        180.0,
+        470.0
+      ],
+      "target_depth": 1.0,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        180.0,
+        470.0
+      ],
+      "focal_screen": [
+        180.0,
+        470.0
+      ],
+      "desired_screen": [
+        180.0,
+        470.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        166.69444444444446,
+        470
+      ],
+      "actor_bounds_logical": [
+        145.5864400804312,
+        353.7380432233215,
+        190.2411372285207,
+        471.269
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.48": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1.4": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        }
+      },
+      "geometry_sha256": "c9ee1450566a88acd0fce545bc90c871e265e42614257bf1faa6ed4a12f81f12",
+      "motion_sha256": "11dff6b9bfdbe9525205843b266e68f8f14b96c04a206f3f43cbd86bee2f16b9"
+    },
+    {
+      "frame": 14,
+      "source_frame": 14,
+      "seconds": 0.4666666666666667,
+      "shot": "wide_apron",
+      "behavior": "establishing",
+      "cut": false,
+      "camera": {
+        "x": 0.0,
+        "y": 0.0,
+        "zoom": 1.0
+      },
+      "target_world": [
+        180.0,
+        470.0
+      ],
+      "target_depth": 1.0,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        180.0,
+        470.0
+      ],
+      "focal_screen": [
+        180.0,
+        470.0
+      ],
+      "desired_screen": [
+        180.0,
+        470.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        167.1872367994817,
+        470
+      ],
+      "actor_bounds_logical": [
+        146.25667987095986,
+        353.8026880024224,
+        190.90827876230557,
+        471.269
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.48": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1.4": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        }
+      },
+      "geometry_sha256": "7901bfcd795756cee90b08080dd40c1b873596cd38c259b68383d0fc021b6f12",
+      "motion_sha256": "80c9a23bdffa47ffb0b1bb1a50615b024092ec9d69036287cb3125bb5334ccee"
+    },
+    {
+      "frame": 15,
+      "source_frame": 15,
+      "seconds": 0.5,
+      "shot": "wide_apron",
+      "behavior": "establishing",
+      "cut": false,
+      "camera": {
+        "x": 0.0,
+        "y": 0.0,
+        "zoom": 1.0
+      },
+      "target_world": [
+        180.0,
+        470.0
+      ],
+      "target_depth": 1.0,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        180.0,
+        470.0
+      ],
+      "focal_screen": [
+        180.0,
+        470.0
+      ],
+      "desired_screen": [
+        180.0,
+        470.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        167.73542274052477,
+        470
+      ],
+      "actor_bounds_logical": [
+        147.00207324217803,
+        353.8333622078192,
+        191.64966578787963,
+        471.269
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.48": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1.4": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        }
+      },
+      "geometry_sha256": "0c26973eb5badcf74a978b5131627cce795b0ccc88dfb25afacde474e82e8b2f",
+      "motion_sha256": "94109dfecaa023e425707d77650476208d07e8e1365c53807589222024409076"
+    },
+    {
+      "frame": 16,
+      "source_frame": 16,
+      "seconds": 0.5333333333333333,
+      "shot": "wide_apron",
+      "behavior": "establishing",
+      "cut": false,
+      "camera": {
+        "x": 0.0,
+        "y": 0.0,
+        "zoom": 1.0
+      },
+      "target_world": [
+        180.0,
+        470.0
+      ],
+      "target_depth": 1.0,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        180.0,
+        470.0
+      ],
+      "focal_screen": [
+        180.0,
+        470.0
+      ],
+      "desired_screen": [
+        180.0,
+        470.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        168.33657272432782,
+        470
+      ],
+      "actor_bounds_logical": [
+        147.81935616430903,
+        353.82901134225654,
+        192.46224302522344,
+        471.269
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.48": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1.4": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        }
+      },
+      "geometry_sha256": "84b8e8b5a5a1a54e3eccad2236461ccaf00fca9370a679340895446b55765abb",
+      "motion_sha256": "4d1150bbe7d83654518c89629b491af545380430cacf92564a7202f1392b1c0e"
+    },
+    {
+      "frame": 17,
+      "source_frame": 17,
+      "seconds": 0.5666666666666667,
+      "shot": "wide_apron",
+      "behavior": "establishing",
+      "cut": false,
+      "camera": {
+        "x": 0.0,
+        "y": 0.0,
+        "zoom": 1.0
+      },
+      "target_world": [
+        180.0,
+        470.0
+      ],
+      "target_depth": 1.0,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        180.0,
+        470.0
+      ],
+      "focal_screen": [
+        180.0,
+        470.0
+      ],
+      "desired_screen": [
+        180.0,
+        470.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        168.98825720764495,
+        470
+      ],
+      "actor_bounds_logical": [
+        148.70295761434357,
+        353.7942708291267,
+        193.3409948933304,
+        471.269
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.48": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1.4": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        }
+      },
+      "geometry_sha256": "d022efc94d99c8ef04037c147c836636bb70af5c082ec9ff2e5eb3e06239a0fc",
+      "motion_sha256": "c5fd483c401ec66a96bc1030c2a590e09aa0c17bc5bfb33913ec00b49dd09831"
+    },
+    {
+      "frame": 18,
+      "source_frame": 18,
+      "seconds": 0.6,
+      "shot": "wide_apron",
+      "behavior": "establishing",
+      "cut": false,
+      "camera": {
+        "x": 0.0,
+        "y": 0.0,
+        "zoom": 1.0
+      },
+      "target_world": [
+        180.0,
+        470.0
+      ],
+      "target_depth": 1.0,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        180.0,
+        470.0
+      ],
+      "focal_screen": [
+        180.0,
+        470.0
+      ],
+      "desired_screen": [
+        180.0,
+        470.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        169.68804664723032,
+        470
+      ],
+      "actor_bounds_logical": [
+        149.6446700236415,
+        353.74100091152314,
+        194.2786695115972,
+        471.269
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.48": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1.4": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        }
+      },
+      "geometry_sha256": "5ca7b129c13002bacb7f17314cca1f6b59f9c55d940406df7099106749097501",
+      "motion_sha256": "4b8fe2fdbe4125274ebca114ed4aec405a2d1c191df7b4d27822aecee750ddb7"
+    },
+    {
+      "frame": 19,
+      "source_frame": 19,
+      "seconds": 0.6333333333333333,
+      "shot": "wide_apron",
+      "behavior": "establishing",
+      "cut": false,
+      "camera": {
+        "x": 0.0,
+        "y": 0.0,
+        "zoom": 1.0
+      },
+      "target_world": [
+        180.0,
+        470.0
+      ],
+      "target_depth": 1.0,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        180.0,
+        470.0
+      ],
+      "focal_screen": [
+        180.0,
+        470.0
+      ],
+      "desired_screen": [
+        180.0,
+        470.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        170.43351149983803,
+        470
+      ],
+      "actor_bounds_logical": [
+        150.63355064588058,
+        353.6886200511945,
+        195.26558031166763,
+        471.269
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.48": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1.4": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        }
+      },
+      "geometry_sha256": "163e8c92bc758fe24ba4a990b1bdc2a0bcec756e589f62b3344ab75629fe49f1",
+      "motion_sha256": "6ee98c47d5f2904e5a1254cf7e1145c30321660c0f8842bdcf7c2619fb328ba1"
+    },
+    {
+      "frame": 20,
+      "source_frame": 20,
+      "seconds": 0.6666666666666666,
+      "shot": "wide_apron",
+      "behavior": "establishing",
+      "cut": false,
+      "camera": {
+        "x": 0.0,
+        "y": 0.0,
+        "zoom": 1.0
+      },
+      "target_world": [
+        180.0,
+        470.0
+      ],
+      "target_depth": 1.0,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        180.0,
+        470.0
+      ],
+      "focal_screen": [
+        180.0,
+        470.0
+      ],
+      "desired_screen": [
+        180.0,
+        470.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        171.22222222222223,
+        470
+      ],
+      "actor_bounds_logical": [
+        151.65616274165285,
+        353.6625434517812,
+        196.28951596031993,
+        471.269
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.48": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1.4": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        }
+      },
+      "geometry_sha256": "478d2121122751f5dc6f466e37ac47a0d1e1e6e5ae75e2c0f8c4bc8e98ec514b",
+      "motion_sha256": "1a2f1799e6f53dc5874a709c936eaec65c908dc7ce829426de1b8b38a936ab85"
+    },
+    {
+      "frame": 21,
+      "source_frame": 21,
+      "seconds": 0.7,
+      "shot": "wide_apron",
+      "behavior": "establishing",
+      "cut": false,
+      "camera": {
+        "x": 0.0,
+        "y": 0.0,
+        "zoom": 1.0
+      },
+      "target_world": [
+        180.0,
+        470.0
+      ],
+      "target_depth": 1.0,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        180.0,
+        470.0
+      ],
+      "focal_screen": [
+        180.0,
+        470.0
+      ],
+      "desired_screen": [
+        180.0,
+        470.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        172.05174927113703,
+        470
+      ],
+      "actor_bounds_logical": [
+        152.6971987758557,
+        353.6902916575423,
+        197.3358370711986,
+        471.269
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.48": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1.4": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        }
+      },
+      "geometry_sha256": "1270d150fd5e631f98ba9bf43ddd7a4213c7ed0d005bef4662561bf5c10addbb",
+      "motion_sha256": "f2a443519d5015d0874a3bbb48f292c3c13720987bd2842637bac47d914b445a"
+    },
+    {
+      "frame": 22,
+      "source_frame": 22,
+      "seconds": 0.7333333333333333,
+      "shot": "wide_apron",
+      "behavior": "establishing",
+      "cut": false,
+      "camera": {
+        "x": 0.0,
+        "y": 0.0,
+        "zoom": 1.0
+      },
+      "target_world": [
+        180.0,
+        470.0
+      ],
+      "target_depth": 1.0,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        180.0,
+        470.0
+      ],
+      "focal_screen": [
+        180.0,
+        470.0
+      ],
+      "desired_screen": [
+        180.0,
+        470.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        172.91966310333657,
+        470
+      ],
+      "actor_bounds_logical": [
+        153.74041323913903,
+        353.79538348650175,
+        198.38791048527983,
+        471.269
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.48": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1.4": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        }
+      },
+      "geometry_sha256": "f3a2b717b78a361429ac264b83eabdb557ea994f09e198ae453e05f105db4f90",
+      "motion_sha256": "67e8238064ae55d1a3b2bcb03f69c53f60cf2ce1eb221dcfa5fcc4d23dcae817"
+    },
+    {
+      "frame": 23,
+      "source_frame": 23,
+      "seconds": 0.7666666666666667,
+      "shot": "wide_apron",
+      "behavior": "establishing",
+      "cut": false,
+      "camera": {
+        "x": 0.0,
+        "y": 0.0,
+        "zoom": 1.0
+      },
+      "target_world": [
+        180.0,
+        470.0
+      ],
+      "target_depth": 1.0,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        180.0,
+        470.0
+      ],
+      "focal_screen": [
+        180.0,
+        470.0
+      ],
+      "desired_screen": [
+        180.0,
+        470.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        173.823534175575,
+        470
+      ],
+      "actor_bounds_logical": [
+        154.76969533305936,
+        353.98993097949347,
+        199.42806114057495,
+        471.269
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.48": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "1.4": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        }
+      },
+      "geometry_sha256": "6cb5cf440b975c7841030ce6de3ae216ffb7b0abefd06a6a40c1bdaa32419f94",
+      "motion_sha256": "4e05032f0fa789199f043f6a2c8bacd2387933f907687d4ed97538bb2f0d9243"
+    },
+    {
+      "frame": 24,
+      "source_frame": 24,
+      "seconds": 0.8,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": true,
+      "camera": {
+        "x": 4.3529411764705745,
+        "y": 6.48235294117646,
+        "zoom": 1.04
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        174.76093294460642,
+        470
+      ],
+      "actor_bounds_logical": [
+        150.44798839151247,
+        345.9561016831943,
+        197.13932543293643,
+        467.6374070588235
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -2.0795294117647205,
+          "ty": -4.046823529411801,
+          "rotation": 0,
+          "sx": 1.0072,
+          "sy": 1.0072
+        },
+        "0.48": {
+          "tx": -5.545411764705895,
+          "ty": -10.791529411764742,
+          "rotation": 0,
+          "sx": 1.0192,
+          "sy": 1.0192
+        },
+        "1": {
+          "tx": -11.552941176470581,
+          "ty": -22.482352941176472,
+          "rotation": 0,
+          "sx": 1.04,
+          "sy": 1.04
+        },
+        "1.4": {
+          "tx": -16.174117647058814,
+          "ty": -31.475294117647064,
+          "rotation": 0,
+          "sx": 1.056,
+          "sy": 1.056
+        }
+      },
+      "geometry_sha256": "e7d4b47d5582618b9304e81d44a901a6efe04c82e0535844b2adac2d71178e3d",
+      "motion_sha256": "a34085518b617e9a9b6cc64e89ab86bf5b79a92b5694510e3f7f2ec3caca1bda"
+    },
+    {
+      "frame": 25,
+      "source_frame": 25,
+      "seconds": 0.8333333333333334,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 4.3529411764705745,
+        "y": 6.48235294117646,
+        "zoom": 1.04
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        175.72942986718496,
+        470
+      ],
+      "actor_bounds_logical": [
+        151.43683388583,
+        346.2545252457916,
+        200.56741619072832,
+        467.6374070588235
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -2.0795294117647205,
+          "ty": -4.046823529411801,
+          "rotation": 0,
+          "sx": 1.0072,
+          "sy": 1.0072
+        },
+        "0.48": {
+          "tx": -5.545411764705895,
+          "ty": -10.791529411764742,
+          "rotation": 0,
+          "sx": 1.0192,
+          "sy": 1.0192
+        },
+        "1": {
+          "tx": -11.552941176470581,
+          "ty": -22.482352941176472,
+          "rotation": 0,
+          "sx": 1.04,
+          "sy": 1.04
+        },
+        "1.4": {
+          "tx": -16.174117647058814,
+          "ty": -31.475294117647064,
+          "rotation": 0,
+          "sx": 1.056,
+          "sy": 1.056
+        }
+      },
+      "geometry_sha256": "5b1588c839ecb33d65336cf4a2e8961527b8be01036d17467646fc86f94b9c84",
+      "motion_sha256": "4a12d9feae994810643d3abb782d71768ff82cb3dec6cbd3477ade05971e624a"
+    },
+    {
+      "frame": 26,
+      "source_frame": 26,
+      "seconds": 0.8666666666666667,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 4.3529411764705745,
+        "y": 6.48235294117646,
+        "zoom": 1.04
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        176.72659540006478,
+        470
+      ],
+      "actor_bounds_logical": [
+        152.36882391268819,
+        346.5362693771388,
+        203.4296641362741,
+        467.6374070588235
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -2.0795294117647205,
+          "ty": -4.046823529411801,
+          "rotation": 0,
+          "sx": 1.0072,
+          "sy": 1.0072
+        },
+        "0.48": {
+          "tx": -5.545411764705895,
+          "ty": -10.791529411764742,
+          "rotation": 0,
+          "sx": 1.0192,
+          "sy": 1.0192
+        },
+        "1": {
+          "tx": -11.552941176470581,
+          "ty": -22.482352941176472,
+          "rotation": 0,
+          "sx": 1.04,
+          "sy": 1.04
+        },
+        "1.4": {
+          "tx": -16.174117647058814,
+          "ty": -31.475294117647064,
+          "rotation": 0,
+          "sx": 1.056,
+          "sy": 1.056
+        }
+      },
+      "geometry_sha256": "afcc1f3cced3309a39fd83a1486d884812f03580cb3a86e08d7122c153d71f3b",
+      "motion_sha256": "cc48c751043b5d1011fcca877162bb231abbe767602a9551af7d6a7cd60a665d"
+    },
+    {
+      "frame": 27,
+      "source_frame": 27,
+      "seconds": 0.9,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 4.3529411764705745,
+        "y": 6.48235294117646,
+        "zoom": 1.04
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        177.75,
+        470
+      ],
+      "actor_bounds_logical": [
+        152.38343662923276,
+        346.80718109894264,
+        205.61826549969044,
+        467.6374070588235
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -2.0795294117647205,
+          "ty": -4.046823529411801,
+          "rotation": 0,
+          "sx": 1.0072,
+          "sy": 1.0072
+        },
+        "0.48": {
+          "tx": -5.545411764705895,
+          "ty": -10.791529411764742,
+          "rotation": 0,
+          "sx": 1.0192,
+          "sy": 1.0192
+        },
+        "1": {
+          "tx": -11.552941176470581,
+          "ty": -22.482352941176472,
+          "rotation": 0,
+          "sx": 1.04,
+          "sy": 1.04
+        },
+        "1.4": {
+          "tx": -16.174117647058814,
+          "ty": -31.475294117647064,
+          "rotation": 0,
+          "sx": 1.056,
+          "sy": 1.056
+        }
+      },
+      "geometry_sha256": "c753cadeff85f295e237762fd818bdcab12d49e0e6ab077925155956a103b017",
+      "motion_sha256": "6e035c1815dd211f5890ca0d1970b7d59bee75bfbb096134a6b0d4de028c4870"
+    },
+    {
+      "frame": 28,
+      "source_frame": 28,
+      "seconds": 0.9333333333333333,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 4.3781656662664945,
+        "y": 6.489920288115226,
+        "zoom": 1.0405044897959184
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        178.79721412374474,
+        470
+      ],
+      "actor_bounds_logical": [
+        152.8207295611181,
+        346.97915304991295,
+        207.01517902375784,
+        467.66579419515006
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -2.100415289315708,
+          "ty": -4.084508917166827,
+          "rotation": 0,
+          "sx": 1.0072908081632652,
+          "sy": 1.0072908081632652
+        },
+        "0.48": {
+          "tx": -5.601107438175248,
+          "ty": -10.892023779111598,
+          "rotation": 0,
+          "sx": 1.0194421551020407,
+          "sy": 1.0194421551020407
+        },
+        "1": {
+          "tx": -11.6689738295318,
+          "ty": -22.69171620648257,
+          "rotation": 0,
+          "sx": 1.0405044897959184,
+          "sy": 1.0405044897959184
+        },
+        "1.4": {
+          "tx": -16.33656336134452,
+          "ty": -31.7684026890756,
+          "rotation": 0,
+          "sx": 1.0567062857142857,
+          "sy": 1.0567062857142857
+        }
+      },
+      "geometry_sha256": "50db52ac22a609a3edf31f047345f8fd8837e6d8f9e6efbd21e0e6e12470398e",
+      "motion_sha256": "7810c0b485ca13d509ae0f202fdfc57656773065a295a7f43caea2beb0909ef2"
+    },
+    {
+      "frame": 29,
+      "source_frame": 29,
+      "seconds": 0.9666666666666667,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 4.451879951980787,
+        "y": 6.5120345738294905,
+        "zoom": 1.0419787755102041
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        179.8658082280531,
+        470
+      ],
+      "actor_bounds_logical": [
+        154.30671643714513,
+        346.94449419697173,
+        207.3670721067441,
+        467.7487507780072
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -2.161450717887135,
+          "ty": -4.19463806002396,
+          "rotation": 0,
+          "sx": 1.0075561795918366,
+          "sy": 1.0075561795918366
+        },
+        "0.48": {
+          "tx": -5.763868581032414,
+          "ty": -11.185701493397348,
+          "rotation": 0,
+          "sx": 1.020149812244898,
+          "sy": 1.020149812244898
+        },
+        "1": {
+          "tx": -12.008059543817529,
+          "ty": -23.303544777911142,
+          "rotation": 0,
+          "sx": 1.0419787755102041,
+          "sy": 1.0419787755102041
+        },
+        "1.4": {
+          "tx": -16.811283361344543,
+          "ty": -32.624962689075595,
+          "rotation": 0,
+          "sx": 1.0587702857142858,
+          "sy": 1.0587702857142858
+        }
+      },
+      "geometry_sha256": "496f02b2295fac3d699a0301115da0b5b76b219be8a70ddc86c96c22d671bbe8",
+      "motion_sha256": "962ae0f185648284cba99c5ac46f82dc65addb1c052fbbe86b7a33aeade939f0"
+    },
+    {
+      "frame": 30,
+      "source_frame": 30,
+      "seconds": 1.0,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 4.5711452581032495,
+        "y": 6.547814165666269,
+        "zoom": 1.0443640816326532
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        180.9533527696793,
+        470
+      ],
+      "actor_bounds_logical": [
+        155.2991614240217,
+        346.5988521694993,
+        206.89016206307397,
+        467.8829695682113
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -2.2602023913565397,
+          "ty": -4.3728204273709395,
+          "rotation": 0,
+          "sx": 1.0079855346938775,
+          "sy": 1.0079855346938775
+        },
+        "0.48": {
+          "tx": -6.027206376950772,
+          "ty": -11.660854472989172,
+          "rotation": 0,
+          "sx": 1.0212947591836734,
+          "sy": 1.0212947591836734
+        },
+        "1": {
+          "tx": -12.556679951980817,
+          "ty": -24.29344681872753,
+          "rotation": 0,
+          "sx": 1.0443640816326532,
+          "sy": 1.0443640816326532
+        },
+        "1.4": {
+          "tx": -17.57935193277313,
+          "ty": -34.010825546218506,
+          "rotation": 0,
+          "sx": 1.0621097142857143,
+          "sy": 1.0621097142857143
+        }
+      },
+      "geometry_sha256": "a8f743925265016017ea56695d082cba9afd8734b029ffd0636699f9c35ac77a",
+      "motion_sha256": "11a714beb0bd0a9df82e476e84c6ddb86174f2d968782115074ce4edcfe03171"
+    },
+    {
+      "frame": 31,
+      "source_frame": 31,
+      "seconds": 1.0333333333333334,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 4.733022809123648,
+        "y": 6.596377430972378,
+        "zoom": 1.0476016326530613
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        182.0574182053774,
+        470
+      ],
+      "actor_bounds_logical": [
+        155.83113397865569,
+        346.0762744814029,
+        205.51959013837106,
+        468.06514332657866
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -2.3942370036014533,
+          "ty": -4.614665488595465,
+          "rotation": 0,
+          "sx": 1.008568293877551,
+          "sy": 1.008568293877551
+        },
+        "0.48": {
+          "tx": -6.384632009603848,
+          "ty": -12.305774636254514,
+          "rotation": 0,
+          "sx": 1.0228487836734694,
+          "sy": 1.0228487836734694
+        },
+        "1": {
+          "tx": -13.301316686674678,
+          "ty": -25.63703049219689,
+          "rotation": 0,
+          "sx": 1.0476016326530613,
+          "sy": 1.0476016326530613
+        },
+        "1.4": {
+          "tx": -18.621843361344567,
+          "ty": -35.89184268907568,
+          "rotation": 0,
+          "sx": 1.0666422857142859,
+          "sy": 1.0666422857142859
+        }
+      },
+      "geometry_sha256": "60bf27a58580a48b32cbd777819ceaa3611c479300bee65cbaa12bd6b43f3ccf",
+      "motion_sha256": "fb87e33be0854da32a1ba1fca87ba2f7ea2be490a042b2727c037fdc2ecc414f"
+    },
+    {
+      "frame": 32,
+      "source_frame": 32,
+      "seconds": 1.0666666666666667,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 4.934573829531814,
+        "y": 6.656842737094902,
+        "zoom": 1.0516326530612246
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        183.17557499190153,
+        470
+      ],
+      "actor_bounds_logical": [
+        156.3416847971028,
+        345.45044561970496,
+        203.2730880340608,
+        468.29196481392546
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -2.561121248499419,
+          "ty": -4.915782713085287,
+          "rotation": 0,
+          "sx": 1.0092938775510205,
+          "sy": 1.0092938775510205
+        },
+        "0.48": {
+          "tx": -6.8296566626650765,
+          "ty": -13.108753901560679,
+          "rotation": 0,
+          "sx": 1.0247836734693878,
+          "sy": 1.0247836734693878
+        },
+        "1": {
+          "tx": -14.228451380552233,
+          "ty": -27.309903961584723,
+          "rotation": 0,
+          "sx": 1.0516326530612246,
+          "sy": 1.0516326530612246
+        },
+        "1.4": {
+          "tx": -19.91983193277311,
+          "ty": -38.233865546218574,
+          "rotation": 0,
+          "sx": 1.0722857142857143,
+          "sy": 1.0722857142857143
+        }
+      },
+      "geometry_sha256": "a8d60740535d72578491578743ebe53918b6f77052d143a9309e5a6d1d0a8c5f",
+      "motion_sha256": "fc68f36eace2c1b891b8c27eca9ab6edbc250369d3e76df682841b695c0cfd7c"
+    },
+    {
+      "frame": 33,
+      "source_frame": 33,
+      "seconds": 1.1,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 5.1728595438175144,
+        "y": 6.728328451380588,
+        "zoom": 1.0563983673469388
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        184.30539358600583,
+        470
+      ],
+      "actor_bounds_logical": [
+        156.85703195452155,
+        344.8106478021964,
+        203.99026849992018,
+        468.5601267910684
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -2.7584218199279684,
+          "ty": -5.271781570228097,
+          "rotation": 0,
+          "sx": 1.010151706122449,
+          "sy": 1.010151706122449
+        },
+        "0.48": {
+          "tx": -7.355791519807903,
+          "ty": -14.058084187274895,
+          "rotation": 0,
+          "sx": 1.0270712163265305,
+          "sy": 1.0270712163265305
+        },
+        "1": {
+          "tx": -15.324565666266501,
+          "ty": -29.287675390156114,
+          "rotation": 0,
+          "sx": 1.0563983673469388,
+          "sy": 1.0563983673469388
+        },
+        "1.4": {
+          "tx": -21.454391932773092,
+          "ty": -41.00274554621854,
+          "rotation": 0,
+          "sx": 1.0789577142857143,
+          "sy": 1.0789577142857143
+        }
+      },
+      "geometry_sha256": "bc78f82f2e02e0f991034d3b06a100cba87f4816eefb3863a1757aba154a1e05",
+      "motion_sha256": "5cd80662c3be47db52c0ecdaa96cf3887416c587cb981e8498d4adb135e0aeb8"
+    },
+    {
+      "frame": 34,
+      "source_frame": 34,
+      "seconds": 1.1333333333333333,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 5.4449411764705795,
+        "y": 6.809952941176522,
+        "zoom": 1.0618400000000001
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        185.44444444444446,
+        470
+      ],
+      "actor_bounds_logical": [
+        157.402892489883,
+        344.2444467356963,
+        204.7795604373762,
+        468.8663220188235
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -2.983705411764726,
+          "ty": -5.678271529411822,
+          "rotation": 0,
+          "sx": 1.0111312000000001,
+          "sy": 1.0111312000000001
+        },
+        "0.48": {
+          "tx": -7.956547764705881,
+          "ty": -15.142057411764739,
+          "rotation": 0,
+          "sx": 1.0296832,
+          "sy": 1.0296832
+        },
+        "1": {
+          "tx": -16.5761411764706,
+          "ty": -31.54595294117657,
+          "rotation": 0,
+          "sx": 1.0618400000000001,
+          "sy": 1.0618400000000001
+        },
+        "1.4": {
+          "tx": -23.20659764705885,
+          "ty": -44.16433411764721,
+          "rotation": 0,
+          "sx": 1.0865760000000002,
+          "sy": 1.0865760000000002
+        }
+      },
+      "geometry_sha256": "8864f442eb2455fc46d2fc93ef0fbc8e85a0d7988cdf89c422fae99963b4e6ff",
+      "motion_sha256": "1da6af91893388ac23dd2ddd193e5ca10d62d3dd5f6fcbe1bd0a3a068b41d526"
+    },
+    {
+      "frame": 35,
+      "source_frame": 35,
+      "seconds": 1.1666666666666667,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 5.747879951980775,
+        "y": 6.900834573829517,
+        "zoom": 1.067898775510204
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        186.59029802397149,
+        470
+      ],
+      "actor_bounds_logical": [
+        158.00391631065284,
+        343.81625772473535,
+        205.66320268880244,
+        469.2072432580072
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -3.2345387178871414,
+          "ty": -6.1308620600239845,
+          "rotation": 0,
+          "sx": 1.0122217795918367,
+          "sy": 1.0122217795918367
+        },
+        "0.48": {
+          "tx": -8.625436581032417,
+          "ty": -16.34896549339738,
+          "rotation": 0,
+          "sx": 1.032591412244898,
+          "sy": 1.032591412244898
+        },
+        "1": {
+          "tx": -17.969659543817507,
+          "ty": -34.06034477791114,
+          "rotation": 0,
+          "sx": 1.067898775510204,
+          "sy": 1.067898775510204
+        },
+        "1.4": {
+          "tx": -25.157523361344502,
+          "ty": -47.68448268907559,
+          "rotation": 0,
+          "sx": 1.0950582857142857,
+          "sy": 1.0950582857142857
+        }
+      },
+      "geometry_sha256": "1d88c9e96c7063e384e9b090c5efcc5a4092dba5e109aedba4958044c35168b7",
+      "motion_sha256": "743143e40af9284e4ddf2bde67a50157fba65fb035f34ffbbd57b0ca9e5e2d2f"
+    },
+    {
+      "frame": 36,
+      "source_frame": 36,
+      "seconds": 1.2,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 6.078737094837934,
+        "y": 7.0000917166867245,
+        "zoom": 1.074515918367347
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        187.74052478134112,
+        470
+      ],
+      "actor_bounds_logical": [
+        158.68194422287468,
+        343.55003412273106,
+        206.6556399177849,
+        469.5795832694358
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -3.5084884321728804,
+          "ty": -6.625162631452615,
+          "rotation": 0,
+          "sx": 1.0134128653061225,
+          "sy": 1.0134128653061225
+        },
+        "0.48": {
+          "tx": -9.355969152460988,
+          "ty": -17.66710035054025,
+          "rotation": 0,
+          "sx": 1.0357676408163266,
+          "sy": 1.0357676408163266
+        },
+        "1": {
+          "tx": -19.491602400960385,
+          "ty": -36.8064590636255,
+          "rotation": 0,
+          "sx": 1.074515918367347,
+          "sy": 1.074515918367347
+        },
+        "1.4": {
+          "tx": -27.288243361344556,
+          "ty": -51.52904268907574,
+          "rotation": 0,
+          "sx": 1.1043222857142858,
+          "sy": 1.1043222857142858
+        }
+      },
+      "geometry_sha256": "592680ba46bcdee73ce969a10b3384ffe53050805c38a5fa04fca4b75bb0904c",
+      "motion_sha256": "80c50cc52788d2c91c5b7e40b54e4a9dae6fb0791753fc13cb7ae8af90ce2cda"
+    },
+    {
+      "frame": 37,
+      "source_frame": 37,
+      "seconds": 1.2333333333333334,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 6.434573829531821,
+        "y": 7.106842737094827,
+        "zoom": 1.0816326530612246
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        188.89269517330743,
+        470
+      ],
+      "actor_bounds_logical": [
+        159.45309250710864,
+        343.4214698660251,
+        207.76354988389156,
+        469.98003481392556
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -3.803121248499393,
+          "ty": -7.156782713085214,
+          "rotation": 0,
+          "sx": 1.0146938775510204,
+          "sy": 1.0146938775510204
+        },
+        "0.48": {
+          "tx": -10.141656662665074,
+          "ty": -19.084753901560628,
+          "rotation": 0,
+          "sx": 1.0391836734693878,
+          "sy": 1.0391836734693878
+        },
+        "1": {
+          "tx": -21.128451380552246,
+          "ty": -39.75990396158466,
+          "rotation": 0,
+          "sx": 1.0816326530612246,
+          "sy": 1.0816326530612246
+        },
+        "1.4": {
+          "tx": -29.579831932773125,
+          "ty": -55.66386554621849,
+          "rotation": 0,
+          "sx": 1.1142857142857143,
+          "sy": 1.1142857142857143
+        }
+      },
+      "geometry_sha256": "5db58ac15eb43b1baa5d239617af37f26487f2902d159387ad2062ffd3d7716c",
+      "motion_sha256": "efbf8e4d40ab033f59e5c9714a5147412e54cc18173f1fa7e4fe8f8c6ff45c53"
+    },
+    {
+      "frame": 38,
+      "source_frame": 38,
+      "seconds": 1.2666666666666666,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 6.812451380552234,
+        "y": 7.220206002400975,
+        "zoom": 1.0891902040816326
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        190.04437965662456,
+        470
+      ],
+      "actor_bounds_logical": [
+        160.3165240478841,
+        343.3152965911156,
+        208.9869400880215,
+        470.40529065229293
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -4.116003860744297,
+          "ty": -7.72133177430972,
+          "rotation": 0,
+          "sx": 1.0160542367346939,
+          "sy": 1.0160542367346939
+        },
+        "0.48": {
+          "tx": -10.976010295318138,
+          "ty": -20.590218064825947,
+          "rotation": 0,
+          "sx": 1.0428112979591837,
+          "sy": 1.0428112979591837
+        },
+        "1": {
+          "tx": -22.8666881152461,
+          "ty": -42.89628763505401,
+          "rotation": 0,
+          "sx": 1.0891902040816326,
+          "sy": 1.0891902040816326
+        },
+        "1.4": {
+          "tx": -32.01336336134456,
+          "ty": -60.05480268907565,
+          "rotation": 0,
+          "sx": 1.1248662857142857,
+          "sy": 1.1248662857142857
+        }
+      },
+      "geometry_sha256": "3ab5f11b7838a9147f82deea565d219da31a2c67150731a71e8eebd02a4d5e92",
+      "motion_sha256": "792873a91e7cf32c335a99d547d3a420aba1a3228bd6d637b2b907367f746720"
+    },
+    {
+      "frame": 39,
+      "source_frame": 39,
+      "seconds": 1.3,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 7.20943097238894,
+        "y": 7.339299879951983,
+        "zoom": 1.0971297959183675
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        191.19314868804665,
+        470
+      ],
+      "actor_bounds_logical": [
+        161.26859613371855,
+        343.12932514913246,
+        212.59519468575738,
+        470.85204354535415
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -4.444702962785124,
+          "ty": -8.314419284513836,
+          "rotation": 0,
+          "sx": 1.0174833632653062,
+          "sy": 1.0174833632653062
+        },
+        "0.48": {
+          "tx": -11.852541234093625,
+          "ty": -22.17178475870347,
+          "rotation": 0,
+          "sx": 1.0466223020408163,
+          "sy": 1.0466223020408163
+        },
+        "1": {
+          "tx": -24.692794237695082,
+          "ty": -46.19121824729896,
+          "rotation": 0,
+          "sx": 1.0971297959183675,
+          "sy": 1.0971297959183675
+        },
+        "1.4": {
+          "tx": -34.569911932773124,
+          "ty": -64.66770554621857,
+          "rotation": 0,
+          "sx": 1.1359817142857145,
+          "sy": 1.1359817142857145
+        }
+      },
+      "geometry_sha256": "b0d86ae12d133452701c9ca0171a32cf087d0c6de56307311e5b1f2ea640e128",
+      "motion_sha256": "7b90689b1071834584282c59ab5da48f0f88ee69ac188c627c61951ffb476ce8"
+    },
+    {
+      "frame": 40,
+      "source_frame": 40,
+      "seconds": 1.3333333333333333,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 7.622573829531836,
+        "y": 7.463242737094869,
+        "zoom": 1.1053926530612246
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        192.33657272432782,
+        470
+      ],
+      "actor_bounds_logical": [
+        162.32099030299023,
+        342.89662077360134,
+        217.58216009976567,
+        471.3169862539255
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -4.78678524849939,
+          "ty": -8.931654713085209,
+          "rotation": 0,
+          "sx": 1.0189706775510203,
+          "sy": 1.0189706775510203
+        },
+        "0.48": {
+          "tx": -12.76476066266508,
+          "ty": -23.817745901560645,
+          "rotation": 0,
+          "sx": 1.0505884734693878,
+          "sy": 1.0505884734693878
+        },
+        "1": {
+          "tx": -26.59325138055226,
+          "ty": -49.6203039615847,
+          "rotation": 0,
+          "sx": 1.1053926530612246,
+          "sy": 1.1053926530612246
+        },
+        "1.4": {
+          "tx": -37.23055193277314,
+          "ty": -69.46842554621853,
+          "rotation": 0,
+          "sx": 1.1475497142857143,
+          "sy": 1.1475497142857143
+        }
+      },
+      "geometry_sha256": "1f2638a66f89982207eb203d918acbdb56f50240bedee8e4d76a518e06c24fcb",
+      "motion_sha256": "e76de166f45a97009ff45f575c0f6054dd2621e3352571001850f7937a1a96ea"
+    },
+    {
+      "frame": 41,
+      "source_frame": 41,
+      "seconds": 1.3666666666666667,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 8.048941176470588,
+        "y": 7.591152941176514,
+        "zoom": 1.11392
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        193.47222222222223,
+        470
+      ],
+      "actor_bounds_logical": [
+        163.45797277833157,
+        342.5561996241748,
+        220.1090109741001,
+        471.7968115388235
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -5.139817411764688,
+          "ty": -9.568647529411733,
+          "rotation": 0,
+          "sx": 1.0205056,
+          "sy": 1.0205056
+        },
+        "0.48": {
+          "tx": -13.706179764705903,
+          "ty": -25.51639341176477,
+          "rotation": 0,
+          "sx": 1.0546816,
+          "sy": 1.0546816
+        },
+        "1": {
+          "tx": -28.554541176470593,
+          "ty": -53.15915294117653,
+          "rotation": 0,
+          "sx": 1.11392,
+          "sy": 1.11392
+        },
+        "1.4": {
+          "tx": -39.97635764705883,
+          "ty": -74.42281411764715,
+          "rotation": 0,
+          "sx": 1.159488,
+          "sy": 1.159488
+        }
+      },
+      "geometry_sha256": "6cb906193279da05b74e28cc1dd83b20455cf9ca2268dadbc0d2113e04aeb66b",
+      "motion_sha256": "9b5fff44d4dcd45121d55cd6d4ff6b0fb73c56b64f23564bba6066a73af1fc29"
+    },
+    {
+      "frame": 42,
+      "source_frame": 42,
+      "seconds": 1.4,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 8.485594237695095,
+        "y": 7.722148859543803,
+        "zoom": 1.1226530612244898
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        194.59766763848398,
+        470
+      ],
+      "actor_bounds_logical": [
+        164.65619399120138,
+        342.0718335462208,
+        220.56006091491395,
+        472.2882121608643
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -5.501366146458574,
+          "ty": -10.221007202881122,
+          "rotation": 0,
+          "sx": 1.022077551020408,
+          "sy": 1.022077551020408
+        },
+        "0.48": {
+          "tx": -14.670309723889556,
+          "ty": -27.25601920768305,
+          "rotation": 0,
+          "sx": 1.058873469387755,
+          "sy": 1.058873469387755
+        },
+        "1": {
+          "tx": -30.563145258103262,
+          "ty": -56.78337334933973,
+          "rotation": 0,
+          "sx": 1.1226530612244898,
+          "sy": 1.1226530612244898
+        },
+        "1.4": {
+          "tx": -42.78840336134456,
+          "ty": -79.49672268907561,
+          "rotation": 0,
+          "sx": 1.1717142857142857,
+          "sy": 1.1717142857142857
+        }
+      },
+      "geometry_sha256": "6d79b8e8349743d1c898bbe845099a33854099cab33751846e017e99d01ddfd8",
+      "motion_sha256": "2589d0460a3c7ebc363325acf4c9a99ee2c5c8621614ea8c2372b27e52e749a4"
+    },
+    {
+      "frame": 43,
+      "source_frame": 43,
+      "seconds": 1.4333333333333333,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 8.929594237695088,
+        "y": 7.855348859543818,
+        "zoom": 1.1315330612244898
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        195.71047942986718,
+        470
+      ],
+      "actor_bounds_logical": [
+        165.87045427475857,
+        341.3498519856763,
+        220.70510349291715,
+        472.7878808808644
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -5.868998146458573,
+          "ty": -10.884343202881125,
+          "rotation": 0,
+          "sx": 1.023675951020408,
+          "sy": 1.023675951020408
+        },
+        "0.48": {
+          "tx": -15.650661723889552,
+          "ty": -29.02491520768306,
+          "rotation": 0,
+          "sx": 1.063135869387755,
+          "sy": 1.063135869387755
+        },
+        "1": {
+          "tx": -32.605545258103255,
+          "ty": -60.46857334933974,
+          "rotation": 0,
+          "sx": 1.1315330612244898,
+          "sy": 1.1315330612244898
+        },
+        "1.4": {
+          "tx": -45.64776336134455,
+          "ty": -84.65600268907563,
+          "rotation": 0,
+          "sx": 1.1841462857142857,
+          "sy": 1.1841462857142857
+        }
+      },
+      "geometry_sha256": "dee8d1c4007ca65bf799c4d318f0e5298fb49798cc668714860912a6b5f8b9aa",
+      "motion_sha256": "c1ee08db80b865027cd487db67db58d79a38131dc71c8f412036b37ee2e01538"
+    },
+    {
+      "frame": 44,
+      "source_frame": 44,
+      "seconds": 1.4666666666666666,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 9.378002400960368,
+        "y": 7.989871308523441,
+        "zoom": 1.1405012244897959
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        196.80822805312602,
+        470
+      ],
+      "actor_bounds_logical": [
+        167.07530320961519,
+        340.46102067752855,
+        220.6500838112845,
+        473.2925104596398
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -6.240280105642262,
+          "ty": -11.554264998799544,
+          "rotation": 0,
+          "sx": 1.0252902204081633,
+          "sy": 1.0252902204081633
+        },
+        "0.48": {
+          "tx": -16.640746948379352,
+          "ty": -30.81137333013209,
+          "rotation": 0,
+          "sx": 1.067440587755102,
+          "sy": 1.067440587755102
+        },
+        "1": {
+          "tx": -34.66822280912362,
+          "ty": -64.19036110444179,
+          "rotation": 0,
+          "sx": 1.1405012244897959,
+          "sy": 1.1405012244897959
+        },
+        "1.4": {
+          "tx": -48.53551193277306,
+          "ty": -89.86650554621848,
+          "rotation": 0,
+          "sx": 1.1967017142857141,
+          "sy": 1.1967017142857141
+        }
+      },
+      "geometry_sha256": "c9c68d7750ef91dadd448bdf091242a798ec7586b191fd348d4d6dfcd1d62cd6",
+      "motion_sha256": "8bb8d88659a56984c737752a680d98c3c58a442e2f1b45960a4717ce4eb42ddb"
+    },
+    {
+      "frame": 45,
+      "source_frame": 45,
+      "seconds": 1.5,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 9.82787995198083,
+        "y": 8.124834573829556,
+        "zoom": 1.1494987755102042
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        197.8884839650146,
+        470
+      ],
+      "actor_bounds_logical": [
+        168.25210763643764,
+        339.5393830226464,
+        220.59488383577428,
+        473.7987936580071
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -6.612778717887157,
+          "ty": -12.226382060024005,
+          "rotation": 0,
+          "sx": 1.0269097795918367,
+          "sy": 1.0269097795918367
+        },
+        "0.48": {
+          "tx": -17.63407658103242,
+          "ty": -32.60368549339735,
+          "rotation": 0,
+          "sx": 1.071759412244898,
+          "sy": 1.071759412244898
+        },
+        "1": {
+          "tx": -36.737659543817585,
+          "ty": -67.92434477791123,
+          "rotation": 0,
+          "sx": 1.1494987755102042,
+          "sy": 1.1494987755102042
+        },
+        "1.4": {
+          "tx": -51.4327233613446,
+          "ty": -95.09408268907568,
+          "rotation": 0,
+          "sx": 1.2092982857142858,
+          "sy": 1.2092982857142858
+        }
+      },
+      "geometry_sha256": "67d9f68d8bbf7e5fe148d6b12e5a1e74fed726ac263f8f4cbaa69a0fadd82dbb",
+      "motion_sha256": "efb7bb7b662933bdd58cc65e7f8072bf95792b34794ee858f7efb167bc5a2224"
+    },
+    {
+      "frame": 46,
+      "source_frame": 46,
+      "seconds": 1.5333333333333334,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 10.276288115246075,
+        "y": 8.259357022809114,
+        "zoom": 1.1584669387755102
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        198.948817622287,
+        470
+      ],
+      "actor_bounds_logical": [
+        169.35908291766546,
+        338.6636958013579,
+        221.06461902684197,
+        474.3034232367827
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -6.9840606770708415,
+          "ty": -12.896303855942413,
+          "rotation": 0,
+          "sx": 1.028524048979592,
+          "sy": 1.028524048979592
+        },
+        "0.48": {
+          "tx": -18.624161805522203,
+          "ty": -34.39014361584635,
+          "rotation": 0,
+          "sx": 1.076064130612245,
+          "sy": 1.076064130612245
+        },
+        "1": {
+          "tx": -38.800337094837914,
+          "ty": -71.6461325330132,
+          "rotation": 0,
+          "sx": 1.1584669387755102,
+          "sy": 1.1584669387755102
+        },
+        "1.4": {
+          "tx": -54.32047193277306,
+          "ty": -100.30458554621845,
+          "rotation": 0,
+          "sx": 1.2218537142857142,
+          "sy": 1.2218537142857142
+        }
+      },
+      "geometry_sha256": "958da3cee1441d8ea4bb1cdab6e09f2b54441ad271d6b0f29c96ab8c62dc2f21",
+      "motion_sha256": "271c97495c1d74f1df4ef75de42aa996c8d44a1598216e1e1de460b3591d0c11"
+    },
+    {
+      "frame": 47,
+      "source_frame": 47,
+      "seconds": 1.5666666666666667,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 10.720288115246102,
+        "y": 8.392557022809129,
+        "zoom": 1.1673469387755102
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        199.98679948169743,
+        470
+      ],
+      "actor_bounds_logical": [
+        170.33218589726934,
+        337.89159162676617,
+        222.43612634300118,
+        474.8030919567827
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -7.3516926770708455,
+          "ty": -13.559639855942416,
+          "rotation": 0,
+          "sx": 1.030122448979592,
+          "sy": 1.030122448979592
+        },
+        "0.48": {
+          "tx": -19.604513805522217,
+          "ty": -36.15903961584635,
+          "rotation": 0,
+          "sx": 1.080326530612245,
+          "sy": 1.080326530612245
+        },
+        "1": {
+          "tx": -40.84273709483794,
+          "ty": -75.33133253301321,
+          "rotation": 0,
+          "sx": 1.1673469387755102,
+          "sy": 1.1673469387755102
+        },
+        "1.4": {
+          "tx": -57.1798319327731,
+          "ty": -105.46386554621846,
+          "rotation": 0,
+          "sx": 1.2342857142857142,
+          "sy": 1.2342857142857142
+        }
+      },
+      "geometry_sha256": "16d544f61bf30f2f610a84b4ac9818f3507e5416f5ee675471cd0bb873222550",
+      "motion_sha256": "0d503bf3c4d0c6f736caaf06c0d50c748ccccaf644685f7cd0e6ec0709cb02d5"
+    },
+    {
+      "frame": 48,
+      "source_frame": 48,
+      "seconds": 1.6,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 11.156941176470575,
+        "y": 8.523552941176483,
+        "zoom": 1.17608
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        201.0,
+        470
+      ],
+      "actor_bounds_logical": [
+        171.19959288902632,
+        337.28217440690395,
+        223.70315280194436,
+        475.2944925788235
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -7.7132414117646855,
+          "ty": -14.211999529411727,
+          "rotation": 0,
+          "sx": 1.0316944,
+          "sy": 1.0316944
+        },
+        "0.48": {
+          "tx": -20.568643764705897,
+          "ty": -37.89866541176475,
+          "rotation": 0,
+          "sx": 1.0845184,
+          "sy": 1.0845184
+        },
+        "1": {
+          "tx": -42.85134117647058,
+          "ty": -78.95555294117648,
+          "rotation": 0,
+          "sx": 1.17608,
+          "sy": 1.17608
+        },
+        "1.4": {
+          "tx": -59.991877647058814,
+          "ty": -110.5377741176471,
+          "rotation": 0,
+          "sx": 1.246512,
+          "sy": 1.246512
+        }
+      },
+      "geometry_sha256": "071ef0510c33aa5e816eace2ea3282e62d64b1cd1d0406982c37cac718f1bee7",
+      "motion_sha256": "24be01678c66542a2fa7ce24c1198e25a8cd9cb0268908129890c3b726221f97"
+    },
+    {
+      "frame": 49,
+      "source_frame": 49,
+      "seconds": 1.6333333333333333,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 11.583308523409361,
+        "y": 8.651463145258063,
+        "zoom": 1.1846073469387755
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        201.97222222222223,
+        470
+      ],
+      "actor_bounds_logical": [
+        171.84187141257462,
+        336.7900945196549,
+        224.73985309816896,
+        475.7743178637215
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -8.066273575029989,
+          "ty": -14.848992345738239,
+          "rotation": 0,
+          "sx": 1.0332293224489795,
+          "sy": 1.0332293224489795
+        },
+        "0.48": {
+          "tx": -21.510062866746694,
+          "ty": -39.59731292196876,
+          "rotation": 0,
+          "sx": 1.0886115265306122,
+          "sy": 1.0886115265306122
+        },
+        "1": {
+          "tx": -44.812630972388945,
+          "ty": -82.49440192076824,
+          "rotation": 0,
+          "sx": 1.1846073469387755,
+          "sy": 1.1846073469387755
+        },
+        "1.4": {
+          "tx": -62.737683361344516,
+          "ty": -115.49216268907554,
+          "rotation": 0,
+          "sx": 1.2584502857142856,
+          "sy": 1.2584502857142856
+        }
+      },
+      "geometry_sha256": "ff1f0d73a812e7b483a2fe742e7997deeae54adad3f170ae03df824ffb310cc4",
+      "motion_sha256": "de9eb51fb8ca5c008f3f9f07b4987a42f26e5c3ccc07afe57d2d9e955ff1e09b"
+    },
+    {
+      "frame": 50,
+      "source_frame": 50,
+      "seconds": 1.6666666666666667,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 11.996451380552223,
+        "y": 8.775406002400947,
+        "zoom": 1.1928702040816326
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        202.88888888888889,
+        470
+      ],
+      "actor_bounds_logical": [
+        172.3564261093453,
+        336.4027367717828,
+        225.63566247221442,
+        476.23926057229295
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -8.40835586074429,
+          "ty": -15.466227774309703,
+          "rotation": 0,
+          "sx": 1.0347166367346938,
+          "sy": 1.0347166367346938
+        },
+        "0.48": {
+          "tx": -22.422282295318134,
+          "ty": -41.24327406482593,
+          "rotation": 0,
+          "sx": 1.0925776979591837,
+          "sy": 1.0925776979591837
+        },
+        "1": {
+          "tx": -46.71308811524609,
+          "ty": -85.92348763505397,
+          "rotation": 0,
+          "sx": 1.1928702040816326,
+          "sy": 1.1928702040816326
+        },
+        "1.4": {
+          "tx": -65.39832336134452,
+          "ty": -120.29288268907558,
+          "rotation": 0,
+          "sx": 1.2700182857142857,
+          "sy": 1.2700182857142857
+        }
+      },
+      "geometry_sha256": "0af5cac288fd5ef3282580f4e3dc9462ba8ac12ad5a1e7d45e8ecf4e8b7a4c83",
+      "motion_sha256": "1ff34968929412d042597cbeab5bbfdef183c3673ebc45f7685926f96cbc47b2"
+    },
+    {
+      "frame": 51,
+      "source_frame": 51,
+      "seconds": 1.7,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 12.393430972388929,
+        "y": 8.894499879951956,
+        "zoom": 1.2008097959183675
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        203.75,
+        470
+      ],
+      "actor_bounds_logical": [
+        172.76577413678038,
+        336.06496012740735,
+        226.40863379611318,
+        476.68601346535416
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -8.737054962785116,
+          "ty": -16.05931528451382,
+          "rotation": 0,
+          "sx": 1.0361457632653062,
+          "sy": 1.0361457632653062
+        },
+        "0.48": {
+          "tx": -23.298813234093615,
+          "ty": -42.82484075870345,
+          "rotation": 0,
+          "sx": 1.0963887020408163,
+          "sy": 1.0963887020408163
+        },
+        "1": {
+          "tx": -48.53919423769507,
+          "ty": -89.21841824729893,
+          "rotation": 0,
+          "sx": 1.2008097959183675,
+          "sy": 1.2008097959183675
+        },
+        "1.4": {
+          "tx": -67.9548719327731,
+          "ty": -124.90578554621851,
+          "rotation": 0,
+          "sx": 1.2811337142857144,
+          "sy": 1.2811337142857144
+        }
+      },
+      "geometry_sha256": "4bc0baba8b80dd406cede83a36f455967989f06d6e2d30450f924e165a806a79",
+      "motion_sha256": "ec26afb75712f7526c181eee71a470823fdbdd3120889b2a01a190573c5d2fa2"
+    },
+    {
+      "frame": 52,
+      "source_frame": 52,
+      "seconds": 1.7333333333333334,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 12.771308523409342,
+        "y": 9.007863145258103,
+        "zoom": 1.2083673469387755
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        204.55555555555554,
+        470
+      ],
+      "actor_bounds_logical": [
+        173.08276070110256,
+        335.68525018589935,
+        228.0774617511241,
+        477.11126930372143
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -9.04993757503002,
+          "ty": -16.623864345738323,
+          "rotation": 0,
+          "sx": 1.0375061224489797,
+          "sy": 1.0375061224489797
+        },
+        "0.48": {
+          "tx": -24.133166866746684,
+          "ty": -44.330304921968775,
+          "rotation": 0,
+          "sx": 1.1000163265306122,
+          "sy": 1.1000163265306122
+        },
+        "1": {
+          "tx": -50.27743097238893,
+          "ty": -92.35480192076828,
+          "rotation": 0,
+          "sx": 1.2083673469387755,
+          "sy": 1.2083673469387755
+        },
+        "1.4": {
+          "tx": -70.38840336134449,
+          "ty": -129.29672268907558,
+          "rotation": 0,
+          "sx": 1.2917142857142856,
+          "sy": 1.2917142857142856
+        }
+      },
+      "geometry_sha256": "22224471f0746041067125664085b6cfbe901527652877f8e078291731962e15",
+      "motion_sha256": "182469761bd86f7a24c97e5ad0ba823c88841d23fbdea94ea0614af7f0f60d59"
+    },
+    {
+      "frame": 53,
+      "source_frame": 53,
+      "seconds": 1.7666666666666666,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 13.12714525810323,
+        "y": 9.114614165666273,
+        "zoom": 1.215484081632653
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        205.30555555555554,
+        470
+      ],
+      "actor_bounds_logical": [
+        173.3369996817462,
+        335.2976339756106,
+        229.2510706965508,
+        477.51172084821127
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -9.344570391356534,
+          "ty": -17.155484427370933,
+          "rotation": 0,
+          "sx": 1.0387871346938775,
+          "sy": 1.0387871346938775
+        },
+        "0.48": {
+          "tx": -24.91885437695077,
+          "ty": -45.74795847298919,
+          "rotation": 0,
+          "sx": 1.1034323591836734,
+          "sy": 1.1034323591836734
+        },
+        "1": {
+          "tx": -51.91427995198079,
+          "ty": -95.3082468187275,
+          "rotation": 0,
+          "sx": 1.215484081632653,
+          "sy": 1.215484081632653
+        },
+        "1.4": {
+          "tx": -72.6799919327731,
+          "ty": -133.43154554621853,
+          "rotation": 0,
+          "sx": 1.3016777142857143,
+          "sy": 1.3016777142857143
+        }
+      },
+      "geometry_sha256": "969fede6462c4d60821dfb1bf8ade4ca382aeeb620ef59e72fcf9e98eb276199",
+      "motion_sha256": "467c4c6b15368478f1e229671ee9a9bf13c253b7e74f5cf0ebca11e216551b4c"
+    },
+    {
+      "frame": 54,
+      "source_frame": 54,
+      "seconds": 1.8,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 13.458002400960387,
+        "y": 9.213871308523347,
+        "zoom": 1.222101224489796
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        206.0,
+        470
+      ],
+      "actor_bounds_logical": [
+        173.54691251691662,
+        334.9066386107214,
+        229.85555585366836,
+        477.88406085963993
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -9.618520105642272,
+          "ty": -17.64978499879954,
+          "rotation": 0,
+          "sx": 1.0399782204081633,
+          "sy": 1.0399782204081633
+        },
+        "0.48": {
+          "tx": -25.649386948379338,
+          "ty": -47.06609333013199,
+          "rotation": 0,
+          "sx": 1.106608587755102,
+          "sy": 1.106608587755102
+        },
+        "1": {
+          "tx": -53.43622280912366,
+          "ty": -98.05436110444174,
+          "rotation": 0,
+          "sx": 1.222101224489796,
+          "sy": 1.222101224489796
+        },
+        "1.4": {
+          "tx": -74.8107119327731,
+          "ty": -137.2761055462184,
+          "rotation": 0,
+          "sx": 1.3109417142857143,
+          "sy": 1.3109417142857143
+        }
+      },
+      "geometry_sha256": "00534075ea4b01f4eb2472c3f6b62c11db9f72450e777acf94307395fb172e4c",
+      "motion_sha256": "90e0714c97f16b07441f69a8402bdd37a15bc3cd6349a3a726ee3317ee0cb0d7"
+    },
+    {
+      "frame": 55,
+      "source_frame": 55,
+      "seconds": 1.8333333333333333,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 13.760941176470585,
+        "y": 9.304752941176476,
+        "zoom": 1.22816
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        206.63888888888889,
+        470
+      ],
+      "actor_bounds_logical": [
+        173.72412006042163,
+        334.51015061185706,
+        230.0127020145848,
+        478.2249820988235
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -9.869353411764688,
+          "ty": -18.102375529411727,
+          "rotation": 0,
+          "sx": 1.0410688,
+          "sy": 1.0410688
+        },
+        "0.48": {
+          "tx": -26.318275764705874,
+          "ty": -48.273001411764696,
+          "rotation": 0,
+          "sx": 1.1095168,
+          "sy": 1.1095168
+        },
+        "1": {
+          "tx": -54.82974117647056,
+          "ty": -100.56875294117644,
+          "rotation": 0,
+          "sx": 1.22816,
+          "sy": 1.22816
+        },
+        "1.4": {
+          "tx": -76.7616376470588,
+          "ty": -140.79625411764704,
+          "rotation": 0,
+          "sx": 1.319424,
+          "sy": 1.319424
+        }
+      },
+      "geometry_sha256": "d958d3ca22ba5333dcc6a1e8929da81cdab8a35b582410e0b9894b568c7a3b04",
+      "motion_sha256": "8b62f3586ed2ca370972356e4333f014091e8b6772d1accee98d1bc92119ccc9"
+    },
+    {
+      "frame": 56,
+      "source_frame": 56,
+      "seconds": 1.8666666666666667,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 14.033022809123615,
+        "y": 9.38637743097241,
+        "zoom": 1.2336016326530612
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        207.22222222222223,
+        470
+      ],
+      "actor_bounds_logical": [
+        173.8768388574679,
+        334.1136368496027,
+        229.82977710298172,
+        478.5311773265786
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -10.094637003601438,
+          "ty": -18.50886548859545,
+          "rotation": 0,
+          "sx": 1.042048293877551,
+          "sy": 1.042048293877551
+        },
+        "0.48": {
+          "tx": -26.91903200960384,
+          "ty": -49.35697463625454,
+          "rotation": 0,
+          "sx": 1.1121287836734695,
+          "sy": 1.1121287836734695
+        },
+        "1": {
+          "tx": -56.08131668667463,
+          "ty": -102.82703049219688,
+          "rotation": 0,
+          "sx": 1.2336016326530612,
+          "sy": 1.2336016326530612
+        },
+        "1.4": {
+          "tx": -78.51384336134447,
+          "ty": -143.95784268907562,
+          "rotation": 0,
+          "sx": 1.3270422857142856,
+          "sy": 1.3270422857142856
+        }
+      },
+      "geometry_sha256": "6ef39203b14c8bca7281aa2ae6db764efada2935fbca61a731ce09939e1045ec",
+      "motion_sha256": "3fd5068bc71e25ba905d11948ace8245e7f74795677e58ef60ef071e762d51c5"
+    },
+    {
+      "frame": 57,
+      "source_frame": 57,
+      "seconds": 1.9,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 14.271308523409383,
+        "y": 9.457863145258095,
+        "zoom": 1.2383673469387755
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        207.75,
+        470
+      ],
+      "actor_bounds_logical": [
+        174.01043257625503,
+        333.7270449164177,
+        229.39992397900727,
+        478.79933930372147
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -10.291937575030001,
+          "ty": -18.864864345738262,
+          "rotation": 0,
+          "sx": 1.0429061224489795,
+          "sy": 1.0429061224489795
+        },
+        "0.48": {
+          "tx": -27.445166866746696,
+          "ty": -50.30630492196876,
+          "rotation": 0,
+          "sx": 1.1144163265306122,
+          "sy": 1.1144163265306122
+        },
+        "1": {
+          "tx": -57.17743097238897,
+          "ty": -104.80480192076828,
+          "rotation": 0,
+          "sx": 1.2383673469387755,
+          "sy": 1.2383673469387755
+        },
+        "1.4": {
+          "tx": -80.04840336134455,
+          "ty": -146.7267226890756,
+          "rotation": 0,
+          "sx": 1.3337142857142856,
+          "sy": 1.3337142857142856
+        }
+      },
+      "geometry_sha256": "2bb86dbfa2060f6c1a2884a904a9ffa640cc371cd1ab7988387b28d55f74be4d",
+      "motion_sha256": "313aca3bfe51fd35de363edec82f6208f652d5c0dd0ac6a06636d73fbb48c924"
+    },
+    {
+      "frame": 58,
+      "source_frame": 58,
+      "seconds": 1.9333333333333333,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 14.472859543817515,
+        "y": 9.518328451380485,
+        "zoom": 1.2423983673469388
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        208.22222222222223,
+        470
+      ],
+      "actor_bounds_logical": [
+        174.12802604000007,
+        333.36212585255345,
+        229.63927890589994,
+        479.0261607910685
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -10.45882181992796,
+          "ty": -19.16598157022806,
+          "rotation": 0,
+          "sx": 1.043631706122449,
+          "sy": 1.043631706122449
+        },
+        "0.48": {
+          "tx": -27.890191519807907,
+          "ty": -51.10928418727486,
+          "rotation": 0,
+          "sx": 1.1163512163265306,
+          "sy": 1.1163512163265306
+        },
+        "1": {
+          "tx": -58.10456566626649,
+          "ty": -106.47767539015598,
+          "rotation": 0,
+          "sx": 1.2423983673469388,
+          "sy": 1.2423983673469388
+        },
+        "1.4": {
+          "tx": -81.34639193277309,
+          "ty": -149.0687455462184,
+          "rotation": 0,
+          "sx": 1.3393577142857143,
+          "sy": 1.3393577142857143
+        }
+      },
+      "geometry_sha256": "e265060669f463d2935031e1cc2ca59ee8da04bad5133861a25cfe70ba34d4da",
+      "motion_sha256": "be3961876e006068ee469eaa834de8039d5fee77ca224f8561dd49509c640579"
+    },
+    {
+      "frame": 59,
+      "source_frame": 59,
+      "seconds": 1.9666666666666666,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 14.634737094837915,
+        "y": 9.566891716686662,
+        "zoom": 1.2456359183673469
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        208.63888888888889,
+        470
+      ],
+      "actor_bounds_logical": [
+        174.23110589528085,
+        333.030516058584,
+        229.88398146622626,
+        479.20833454943585
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -10.592856432172875,
+          "ty": -19.407826631452597,
+          "rotation": 0,
+          "sx": 1.0442144653061225,
+          "sy": 1.0442144653061225
+        },
+        "0.48": {
+          "tx": -28.247617152460982,
+          "ty": -51.75420435054023,
+          "rotation": 0,
+          "sx": 1.1179052408163266,
+          "sy": 1.1179052408163266
+        },
+        "1": {
+          "tx": -58.84920240096036,
+          "ty": -107.8212590636254,
+          "rotation": 0,
+          "sx": 1.2456359183673469,
+          "sy": 1.2456359183673469
+        },
+        "1.4": {
+          "tx": -82.38888336134448,
+          "ty": -150.94976268907556,
+          "rotation": 0,
+          "sx": 1.3438902857142856,
+          "sy": 1.3438902857142856
+        }
+      },
+      "geometry_sha256": "19b7b432f83ae750bd40549a993ac45d7fb461306d80892b3bde6befcb3b8441",
+      "motion_sha256": "8e69b9b5c681d24ac58a93a55898b1d452426b12d9100404bc417802970e0d6f"
+    },
+    {
+      "frame": 60,
+      "source_frame": 60,
+      "seconds": 2.0,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 14.754002400960378,
+        "y": 9.60267130852344,
+        "zoom": 1.248021224489796
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        209.0,
+        470
+      ],
+      "actor_bounds_logical": [
+        174.32005512910794,
+        332.7426036136277,
+        230.07865790106248,
+        479.3425533396399
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -10.691608105642239,
+          "ty": -19.58600899879949,
+          "rotation": 0,
+          "sx": 1.0446438204081632,
+          "sy": 1.0446438204081632
+        },
+        "0.48": {
+          "tx": -28.510954948379343,
+          "ty": -52.22935733013205,
+          "rotation": 0,
+          "sx": 1.119050187755102,
+          "sy": 1.119050187755102
+        },
+        "1": {
+          "tx": -59.39782280912364,
+          "ty": -108.81116110444181,
+          "rotation": 0,
+          "sx": 1.248021224489796,
+          "sy": 1.248021224489796
+        },
+        "1.4": {
+          "tx": -83.15695193277307,
+          "ty": -152.33562554621847,
+          "rotation": 0,
+          "sx": 1.3472297142857141,
+          "sy": 1.3472297142857141
+        }
+      },
+      "geometry_sha256": "e155959747020b4d18d21e255068f76173360ef662c89bbac9baa92ecaaebafa",
+      "motion_sha256": "bc15460cb389c46b8a88bcde24cd38d1b0d393db599536e7e104f4c363f31983"
+    },
+    {
+      "frame": 61,
+      "source_frame": 61,
+      "seconds": 2.033333333333333,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 14.82771668667467,
+        "y": 9.624785594237705,
+        "zoom": 1.2494955102040817
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        209.30555555555554,
+        470
+      ],
+      "actor_bounds_logical": [
+        174.39459652626866,
+        332.5070382764525,
+        230.22062998635724,
+        479.42550992249693
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -10.752643534213666,
+          "ty": -19.696138141656622,
+          "rotation": 0,
+          "sx": 1.0449091918367346,
+          "sy": 1.0449091918367346
+        },
+        "0.48": {
+          "tx": -28.67371609123651,
+          "ty": -52.52303504441781,
+          "rotation": 0,
+          "sx": 1.1197578448979593,
+          "sy": 1.1197578448979593
+        },
+        "1": {
+          "tx": -59.73690852340937,
+          "ty": -109.42298967587037,
+          "rotation": 0,
+          "sx": 1.2494955102040817,
+          "sy": 1.2494955102040817
+        },
+        "1.4": {
+          "tx": -83.63167193277313,
+          "ty": -153.19218554621855,
+          "rotation": 0,
+          "sx": 1.3492937142857144,
+          "sy": 1.3492937142857144
+        }
+      },
+      "geometry_sha256": "63fb2dcf474762dc79de21f4b776390751fff5b77df5d78674c7a20c92912673",
+      "motion_sha256": "bc5c975f31c537cdcf143d139f8f70928626363fddee7bdb1f0725dbe72a37ab"
+    },
+    {
+      "frame": 62,
+      "source_frame": 62,
+      "seconds": 2.066666666666667,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 14.852941176470589,
+        "y": 9.632352941176471,
+        "zoom": 1.25
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        209.55555555555554,
+        470
+      ],
+      "actor_bounds_logical": [
+        174.45414214837393,
+        332.3306888405234,
+        230.30662150209835,
+        479.45389705882354
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -10.773529411764693,
+          "ty": -19.733823529411737,
+          "rotation": 0,
+          "sx": 1.045,
+          "sy": 1.045
+        },
+        "0.48": {
+          "tx": -28.7294117647059,
+          "ty": -52.62352941176475,
+          "rotation": 0,
+          "sx": 1.12,
+          "sy": 1.12
+        },
+        "1": {
+          "tx": -59.85294117647059,
+          "ty": -109.63235294117646,
+          "rotation": 0,
+          "sx": 1.25,
+          "sy": 1.25
+        },
+        "1.4": {
+          "tx": -83.79411764705884,
+          "ty": -153.48529411764707,
+          "rotation": 0,
+          "sx": 1.35,
+          "sy": 1.35
+        }
+      },
+      "geometry_sha256": "3385ab7097f144772a9ec01417f2e0cf2f9ea984922bb33106fb970d7c9f702a",
+      "motion_sha256": "67e885cdf5e01d0960fee37d92a1dfa79569948cb1496c30e20ba6c8a541c4cb"
+    },
+    {
+      "frame": 63,
+      "source_frame": 63,
+      "seconds": 2.1,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 14.852941176470589,
+        "y": 9.632352941176471,
+        "zoom": 1.25
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        209.75,
+        470
+      ],
+      "actor_bounds_logical": [
+        174.47576556414876,
+        332.18660838962046,
+        230.33423999751977,
+        479.45389705882354
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -10.773529411764693,
+          "ty": -19.733823529411737,
+          "rotation": 0,
+          "sx": 1.045,
+          "sy": 1.045
+        },
+        "0.48": {
+          "tx": -28.7294117647059,
+          "ty": -52.62352941176475,
+          "rotation": 0,
+          "sx": 1.12,
+          "sy": 1.12
+        },
+        "1": {
+          "tx": -59.85294117647059,
+          "ty": -109.63235294117646,
+          "rotation": 0,
+          "sx": 1.25,
+          "sy": 1.25
+        },
+        "1.4": {
+          "tx": -83.79411764705884,
+          "ty": -153.48529411764707,
+          "rotation": 0,
+          "sx": 1.35,
+          "sy": 1.35
+        }
+      },
+      "geometry_sha256": "1e52ed8bdb6b491f1a8447ea95254c167bf4a90d4879bf163886d143ab0ccb29",
+      "motion_sha256": "d92ddfa174034bf8280f49d3a90302be340f4cc2fbd0398deed00121b8cab1e1"
+    },
+    {
+      "frame": 64,
+      "source_frame": 64,
+      "seconds": 2.1333333333333333,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 14.852941176470589,
+        "y": 9.632352941176471,
+        "zoom": 1.25
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        209.88888888888889,
+        470
+      ],
+      "actor_bounds_logical": [
+        174.43495351927302,
+        332.0439735865406,
+        230.3011520384474,
+        479.45389705882354
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -10.773529411764693,
+          "ty": -19.733823529411737,
+          "rotation": 0,
+          "sx": 1.045,
+          "sy": 1.045
+        },
+        "0.48": {
+          "tx": -28.7294117647059,
+          "ty": -52.62352941176475,
+          "rotation": 0,
+          "sx": 1.12,
+          "sy": 1.12
+        },
+        "1": {
+          "tx": -59.85294117647059,
+          "ty": -109.63235294117646,
+          "rotation": 0,
+          "sx": 1.25,
+          "sy": 1.25
+        },
+        "1.4": {
+          "tx": -83.79411764705884,
+          "ty": -153.48529411764707,
+          "rotation": 0,
+          "sx": 1.35,
+          "sy": 1.35
+        }
+      },
+      "geometry_sha256": "0f56f870b6aba21bef6d15b3c1a9e06028c8cf70e6652cab7c3dc6f5c3a93a0b",
+      "motion_sha256": "e54148e065f787987ce6748ed73e45a9f974f6e12e7c36fda6766fe09a1f9242"
+    },
+    {
+      "frame": 65,
+      "source_frame": 65,
+      "seconds": 2.1666666666666665,
+      "shot": "entrance_push",
+      "behavior": "push_in",
+      "cut": false,
+      "camera": {
+        "x": 14.852941176470589,
+        "y": 9.632352941176471,
+        "zoom": 1.25
+      },
+      "target_world": [
+        230.0,
+        415.0
+      ],
+      "target_depth": 0.85,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        230.0,
+        415.0
+      ],
+      "focal_screen": [
+        228.0,
+        410.0
+      ],
+      "desired_screen": [
+        228.0,
+        410.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        209.97222222222223,
+        470
+      ],
+      "actor_bounds_logical": [
+        174.32864571344763,
+        331.90201778618666,
+        230.20388678330087,
+        479.45389705882354
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -10.773529411764693,
+          "ty": -19.733823529411737,
+          "rotation": 0,
+          "sx": 1.045,
+          "sy": 1.045
+        },
+        "0.48": {
+          "tx": -28.7294117647059,
+          "ty": -52.62352941176475,
+          "rotation": 0,
+          "sx": 1.12,
+          "sy": 1.12
+        },
+        "1": {
+          "tx": -59.85294117647059,
+          "ty": -109.63235294117646,
+          "rotation": 0,
+          "sx": 1.25,
+          "sy": 1.25
+        },
+        "1.4": {
+          "tx": -83.79411764705884,
+          "ty": -153.48529411764707,
+          "rotation": 0,
+          "sx": 1.35,
+          "sy": 1.35
+        }
+      },
+      "geometry_sha256": "4f9b7377f6e77b5cd793c2036557d5a33a1fe40579ae51951c49e6955a699227",
+      "motion_sha256": "f82c652ec59dc16826d007f8029fcdd5abf09e723538c4959b856d1363e9857f"
+    },
+    {
+      "frame": 66,
+      "source_frame": 66,
+      "seconds": 2.2,
+      "shot": "reaction",
+      "behavior": "reaction",
+      "cut": true,
+      "camera": {
+        "x": 61.39999999999998,
+        "y": 24.839999999999975,
+        "zoom": 1.38
+      },
+      "target_world": [
+        210.0,
+        470
+      ],
+      "target_depth": 1,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        210.0,
+        418.0
+      ],
+      "focal_screen": [
+        160.0,
+        400.0
+      ],
+      "desired_screen": [
+        160.0,
+        400.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        210.0,
+        470
+      ],
+      "actor_bounds_logical": [
+        128.5434175153182,
+        310.45653870580617,
+        190.24065309345298,
+        473.51122
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -23.363999999999997,
+          "ty": -31.831200000000003,
+          "rotation": 0,
+          "sx": 1.0684,
+          "sy": 1.0684
+        },
+        "0.48": {
+          "tx": -62.30399999999997,
+          "ty": -84.88319999999993,
+          "rotation": 0,
+          "sx": 1.1824,
+          "sy": 1.1824
+        },
+        "1": {
+          "tx": -129.79999999999995,
+          "ty": -176.83999999999992,
+          "rotation": 0,
+          "sx": 1.38,
+          "sy": 1.38
+        },
+        "1.4": {
+          "tx": -181.7199999999999,
+          "ty": -247.57599999999988,
+          "rotation": 0,
+          "sx": 1.5319999999999998,
+          "sy": 1.5319999999999998
+        }
+      },
+      "geometry_sha256": "e620fa3d1fb8b3bfe3a46a257a836730804663c1625ab03062617e4d54c64ba7",
+      "motion_sha256": "e15ad8cc780f0ecf259e10f68bc51eb0fe1f67c13d3c0ff7a6fad6b19e110796"
+    },
+    {
+      "frame": 67,
+      "source_frame": 67,
+      "seconds": 2.2333333333333334,
+      "shot": "reaction",
+      "behavior": "reaction",
+      "cut": false,
+      "camera": {
+        "x": 61.39999999999998,
+        "y": 24.839999999999975,
+        "zoom": 1.38
+      },
+      "target_world": [
+        210.0,
+        470
+      ],
+      "target_depth": 1,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        210.0,
+        418.0
+      ],
+      "focal_screen": [
+        160.0,
+        400.0
+      ],
+      "desired_screen": [
+        160.0,
+        400.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        210.0,
+        470
+      ],
+      "actor_bounds_logical": [
+        128.51246628206096,
+        310.4326593375204,
+        190.21368516203822,
+        473.51122
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -23.363999999999997,
+          "ty": -31.831200000000003,
+          "rotation": 0,
+          "sx": 1.0684,
+          "sy": 1.0684
+        },
+        "0.48": {
+          "tx": -62.30399999999997,
+          "ty": -84.88319999999993,
+          "rotation": 0,
+          "sx": 1.1824,
+          "sy": 1.1824
+        },
+        "1": {
+          "tx": -129.79999999999995,
+          "ty": -176.83999999999992,
+          "rotation": 0,
+          "sx": 1.38,
+          "sy": 1.38
+        },
+        "1.4": {
+          "tx": -181.7199999999999,
+          "ty": -247.57599999999988,
+          "rotation": 0,
+          "sx": 1.5319999999999998,
+          "sy": 1.5319999999999998
+        }
+      },
+      "geometry_sha256": "649ae869d36517b35548ca001b23c3860763d70539bae3a932f3d1d6c0f8c588",
+      "motion_sha256": "b992e3f88c0ade49f45f2f59ff3ddd2e479430e8037a8d750190d261c0ee8854"
+    },
+    {
+      "frame": 68,
+      "source_frame": 68,
+      "seconds": 2.2666666666666666,
+      "shot": "reaction",
+      "behavior": "reaction",
+      "cut": false,
+      "camera": {
+        "x": 61.39999999999998,
+        "y": 24.839999999999975,
+        "zoom": 1.38
+      },
+      "target_world": [
+        210.0,
+        470
+      ],
+      "target_depth": 1,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        210.0,
+        418.0
+      ],
+      "focal_screen": [
+        160.0,
+        400.0
+      ],
+      "desired_screen": [
+        160.0,
+        400.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        210.0,
+        470
+      ],
+      "actor_bounds_logical": [
+        128.22688361293507,
+        310.4437533298454,
+        189.93049674145664,
+        473.51122
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -23.363999999999997,
+          "ty": -31.831200000000003,
+          "rotation": 0,
+          "sx": 1.0684,
+          "sy": 1.0684
+        },
+        "0.48": {
+          "tx": -62.30399999999997,
+          "ty": -84.88319999999993,
+          "rotation": 0,
+          "sx": 1.1824,
+          "sy": 1.1824
+        },
+        "1": {
+          "tx": -129.79999999999995,
+          "ty": -176.83999999999992,
+          "rotation": 0,
+          "sx": 1.38,
+          "sy": 1.38
+        },
+        "1.4": {
+          "tx": -181.7199999999999,
+          "ty": -247.57599999999988,
+          "rotation": 0,
+          "sx": 1.5319999999999998,
+          "sy": 1.5319999999999998
+        }
+      },
+      "geometry_sha256": "3fa262f024a6bd7b67e8ce322d3c5719872215f5f951f3f057c99afcfeb4412d",
+      "motion_sha256": "c03638f8463eed9b280e8b7ff95ad4b1578bf73d6f2f0ab4d162c914ad7e5836"
+    },
+    {
+      "frame": 69,
+      "source_frame": 69,
+      "seconds": 2.3,
+      "shot": "reaction",
+      "behavior": "reaction",
+      "cut": false,
+      "camera": {
+        "x": 61.39999999999998,
+        "y": 24.839999999999975,
+        "zoom": 1.38
+      },
+      "target_world": [
+        210.0,
+        470
+      ],
+      "target_depth": 1,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        210.0,
+        418.0
+      ],
+      "focal_screen": [
+        160.0,
+        400.0
+      ],
+      "desired_screen": [
+        160.0,
+        400.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        210.0,
+        470
+      ],
+      "actor_bounds_logical": [
+        127.20949783340546,
+        310.6092781090368,
+        188.91947500356846,
+        473.51122
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -23.363999999999997,
+          "ty": -31.831200000000003,
+          "rotation": 0,
+          "sx": 1.0684,
+          "sy": 1.0684
+        },
+        "0.48": {
+          "tx": -62.30399999999997,
+          "ty": -84.88319999999993,
+          "rotation": 0,
+          "sx": 1.1824,
+          "sy": 1.1824
+        },
+        "1": {
+          "tx": -129.79999999999995,
+          "ty": -176.83999999999992,
+          "rotation": 0,
+          "sx": 1.38,
+          "sy": 1.38
+        },
+        "1.4": {
+          "tx": -181.7199999999999,
+          "ty": -247.57599999999988,
+          "rotation": 0,
+          "sx": 1.5319999999999998,
+          "sy": 1.5319999999999998
+        }
+      },
+      "geometry_sha256": "d99b41a4ee858ca5f65be7bed136be2b94cf7aa337a0c01663231c87e585daa7",
+      "motion_sha256": "5d35737e8a8f2c4da68d063846a6e07d47545ea595a951565d72024efc1ca662"
+    },
+    {
+      "frame": 70,
+      "source_frame": 70,
+      "seconds": 2.3333333333333335,
+      "shot": "reaction",
+      "behavior": "reaction",
+      "cut": false,
+      "camera": {
+        "x": 61.39999999999998,
+        "y": 24.839999999999975,
+        "zoom": 1.38
+      },
+      "target_world": [
+        210.0,
+        470
+      ],
+      "target_depth": 1,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        210.0,
+        418.0
+      ],
+      "focal_screen": [
+        160.0,
+        400.0
+      ],
+      "desired_screen": [
+        160.0,
+        400.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        210.0,
+        470
+      ],
+      "actor_bounds_logical": [
+        125.312442785224,
+        310.993576268485,
+        196.2057561428089,
+        473.51122
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -23.363999999999997,
+          "ty": -31.831200000000003,
+          "rotation": 0,
+          "sx": 1.0684,
+          "sy": 1.0684
+        },
+        "0.48": {
+          "tx": -62.30399999999997,
+          "ty": -84.88319999999993,
+          "rotation": 0,
+          "sx": 1.1824,
+          "sy": 1.1824
+        },
+        "1": {
+          "tx": -129.79999999999995,
+          "ty": -176.83999999999992,
+          "rotation": 0,
+          "sx": 1.38,
+          "sy": 1.38
+        },
+        "1.4": {
+          "tx": -181.7199999999999,
+          "ty": -247.57599999999988,
+          "rotation": 0,
+          "sx": 1.5319999999999998,
+          "sy": 1.5319999999999998
+        }
+      },
+      "geometry_sha256": "9bccd82fba62cac860ae4ee77069b9e5162cf682c68d3449299dab6a1543b67e",
+      "motion_sha256": "f71057043a5539ab43a373b84bc27b222e2324cd1edfdd8ea12c043f19794a85"
+    },
+    {
+      "frame": 71,
+      "source_frame": 71,
+      "seconds": 2.3666666666666667,
+      "shot": "reaction",
+      "behavior": "reaction",
+      "cut": false,
+      "camera": {
+        "x": 61.39999999999998,
+        "y": 24.839999999999975,
+        "zoom": 1.38
+      },
+      "target_world": [
+        210.0,
+        470
+      ],
+      "target_depth": 1,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        210.0,
+        418.0
+      ],
+      "focal_screen": [
+        160.0,
+        400.0
+      ],
+      "desired_screen": [
+        160.0,
+        400.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        210.0,
+        470
+      ],
+      "actor_bounds_logical": [
+        122.95283057601505,
+        311.4665549540077,
+        202.57072015249526,
+        473.51122
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -23.363999999999997,
+          "ty": -31.831200000000003,
+          "rotation": 0,
+          "sx": 1.0684,
+          "sy": 1.0684
+        },
+        "0.48": {
+          "tx": -62.30399999999997,
+          "ty": -84.88319999999993,
+          "rotation": 0,
+          "sx": 1.1824,
+          "sy": 1.1824
+        },
+        "1": {
+          "tx": -129.79999999999995,
+          "ty": -176.83999999999992,
+          "rotation": 0,
+          "sx": 1.38,
+          "sy": 1.38
+        },
+        "1.4": {
+          "tx": -181.7199999999999,
+          "ty": -247.57599999999988,
+          "rotation": 0,
+          "sx": 1.5319999999999998,
+          "sy": 1.5319999999999998
+        }
+      },
+      "geometry_sha256": "20b707baccb6ac1483b16748d7d660b2159cf3b8e3c6ecae8d37e83bb7a85f92",
+      "motion_sha256": "42d0435cd927be9c4aa77f130afa15f937ee7126556fb3f289be247010b16c4d"
+    },
+    {
+      "frame": 72,
+      "source_frame": 72,
+      "seconds": 2.4,
+      "shot": "reaction",
+      "behavior": "reaction",
+      "cut": false,
+      "camera": {
+        "x": 61.39999999999998,
+        "y": 24.839999999999975,
+        "zoom": 1.38
+      },
+      "target_world": [
+        210.0,
+        470
+      ],
+      "target_depth": 1,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        210.0,
+        418.0
+      ],
+      "focal_screen": [
+        160.0,
+        400.0
+      ],
+      "desired_screen": [
+        160.0,
+        400.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        210.0,
+        470
+      ],
+      "actor_bounds_logical": [
+        121.12056615107677,
+        311.83706680058356,
+        202.72488974455916,
+        473.51122
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -23.363999999999997,
+          "ty": -31.831200000000003,
+          "rotation": 0,
+          "sx": 1.0684,
+          "sy": 1.0684
+        },
+        "0.48": {
+          "tx": -62.30399999999997,
+          "ty": -84.88319999999993,
+          "rotation": 0,
+          "sx": 1.1824,
+          "sy": 1.1824
+        },
+        "1": {
+          "tx": -129.79999999999995,
+          "ty": -176.83999999999992,
+          "rotation": 0,
+          "sx": 1.38,
+          "sy": 1.38
+        },
+        "1.4": {
+          "tx": -181.7199999999999,
+          "ty": -247.57599999999988,
+          "rotation": 0,
+          "sx": 1.5319999999999998,
+          "sy": 1.5319999999999998
+        }
+      },
+      "geometry_sha256": "43eeb56ac0d80057dcc97b1f62907db3a3f8f23558549ca971bafdf36455057c",
+      "motion_sha256": "d07599fdf9fac799ed35a29fd5bd5ca5a0e0b660d50e98e6b5ef50d0e9f69530"
+    },
+    {
+      "frame": 73,
+      "source_frame": 73,
+      "seconds": 2.433333333333333,
+      "shot": "reaction",
+      "behavior": "reaction",
+      "cut": false,
+      "camera": {
+        "x": 61.39999999999998,
+        "y": 24.839999999999975,
+        "zoom": 1.38
+      },
+      "target_world": [
+        210.0,
+        470
+      ],
+      "target_depth": 1,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        210.0,
+        418.0
+      ],
+      "focal_screen": [
+        160.0,
+        400.0
+      ],
+      "desired_screen": [
+        160.0,
+        400.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        210.0,
+        470
+      ],
+      "actor_bounds_logical": [
+        120.29505105472725,
+        311.9940626972007,
+        202.50971596629088,
+        473.51122
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -23.363999999999997,
+          "ty": -31.831200000000003,
+          "rotation": 0,
+          "sx": 1.0684,
+          "sy": 1.0684
+        },
+        "0.48": {
+          "tx": -62.30399999999997,
+          "ty": -84.88319999999993,
+          "rotation": 0,
+          "sx": 1.1824,
+          "sy": 1.1824
+        },
+        "1": {
+          "tx": -129.79999999999995,
+          "ty": -176.83999999999992,
+          "rotation": 0,
+          "sx": 1.38,
+          "sy": 1.38
+        },
+        "1.4": {
+          "tx": -181.7199999999999,
+          "ty": -247.57599999999988,
+          "rotation": 0,
+          "sx": 1.5319999999999998,
+          "sy": 1.5319999999999998
+        }
+      },
+      "geometry_sha256": "dc20580cf2758aad21d41732458efc0466365a3a3b5652ea50f5ec4546fc6bc9",
+      "motion_sha256": "f9bc81b2ecd3aad628eda889a37c2cde504cb07385dc996a961cfa9841c19823"
+    },
+    {
+      "frame": 74,
+      "source_frame": 74,
+      "seconds": 2.466666666666667,
+      "shot": "reaction",
+      "behavior": "reaction",
+      "cut": false,
+      "camera": {
+        "x": 61.39999999999998,
+        "y": 24.839999999999975,
+        "zoom": 1.38
+      },
+      "target_world": [
+        210.0,
+        470
+      ],
+      "target_depth": 1,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        210.0,
+        418.0
+      ],
+      "focal_screen": [
+        160.0,
+        400.0
+      ],
+      "desired_screen": [
+        160.0,
+        400.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        210.0,
+        470
+      ],
+      "actor_bounds_logical": [
+        120.17450987773839,
+        311.99804656577857,
+        202.41686643535812,
+        473.51122
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -23.363999999999997,
+          "ty": -31.831200000000003,
+          "rotation": 0,
+          "sx": 1.0684,
+          "sy": 1.0684
+        },
+        "0.48": {
+          "tx": -62.30399999999997,
+          "ty": -84.88319999999993,
+          "rotation": 0,
+          "sx": 1.1824,
+          "sy": 1.1824
+        },
+        "1": {
+          "tx": -129.79999999999995,
+          "ty": -176.83999999999992,
+          "rotation": 0,
+          "sx": 1.38,
+          "sy": 1.38
+        },
+        "1.4": {
+          "tx": -181.7199999999999,
+          "ty": -247.57599999999988,
+          "rotation": 0,
+          "sx": 1.5319999999999998,
+          "sy": 1.5319999999999998
+        }
+      },
+      "geometry_sha256": "604e8f657414773c312ea7edfa41b2b64f6352f276f562f228e76d4480d9e48b",
+      "motion_sha256": "69b992e9562d925b84d36c938ab9c054f41fa60e47500fa6f2a7a6f86376b28c"
+    },
+    {
+      "frame": 75,
+      "source_frame": 75,
+      "seconds": 2.5,
+      "shot": "reaction",
+      "behavior": "reaction",
+      "cut": false,
+      "camera": {
+        "x": 61.39999999999998,
+        "y": 24.839999999999975,
+        "zoom": 1.38
+      },
+      "target_world": [
+        210.0,
+        470
+      ],
+      "target_depth": 1,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        210.0,
+        418.0
+      ],
+      "focal_screen": [
+        160.0,
+        400.0
+      ],
+      "desired_screen": [
+        160.0,
+        400.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        210.0,
+        470
+      ],
+      "actor_bounds_logical": [
+        120.17676895364201,
+        312.01835585673524,
+        202.4278721737771,
+        473.51122
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -23.363999999999997,
+          "ty": -31.831200000000003,
+          "rotation": 0,
+          "sx": 1.0684,
+          "sy": 1.0684
+        },
+        "0.48": {
+          "tx": -62.30399999999997,
+          "ty": -84.88319999999993,
+          "rotation": 0,
+          "sx": 1.1824,
+          "sy": 1.1824
+        },
+        "1": {
+          "tx": -129.79999999999995,
+          "ty": -176.83999999999992,
+          "rotation": 0,
+          "sx": 1.38,
+          "sy": 1.38
+        },
+        "1.4": {
+          "tx": -181.7199999999999,
+          "ty": -247.57599999999988,
+          "rotation": 0,
+          "sx": 1.5319999999999998,
+          "sy": 1.5319999999999998
+        }
+      },
+      "geometry_sha256": "f30d45fdbe1606338eacb6bd3d7cce63bcfbd53e7637565a02d6a2b038020d98",
+      "motion_sha256": "14ab2aaf19ccedcc9c6091d29ff43cd9065afb17f8ec3f1ecbe9f3b1c87cfad8"
+    },
+    {
+      "frame": 76,
+      "source_frame": 76,
+      "seconds": 2.533333333333333,
+      "shot": "reaction",
+      "behavior": "reaction",
+      "cut": false,
+      "camera": {
+        "x": 61.39999999999998,
+        "y": 24.839999999999975,
+        "zoom": 1.38
+      },
+      "target_world": [
+        210.0,
+        470
+      ],
+      "target_depth": 1,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        210.0,
+        418.0
+      ],
+      "focal_screen": [
+        160.0,
+        400.0
+      ],
+      "desired_screen": [
+        160.0,
+        400.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        210.0,
+        470
+      ],
+      "actor_bounds_logical": [
+        120.18686904986207,
+        312.0748605336694,
+        202.43871342488072,
+        473.51122
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -23.363999999999997,
+          "ty": -31.831200000000003,
+          "rotation": 0,
+          "sx": 1.0684,
+          "sy": 1.0684
+        },
+        "0.48": {
+          "tx": -62.30399999999997,
+          "ty": -84.88319999999993,
+          "rotation": 0,
+          "sx": 1.1824,
+          "sy": 1.1824
+        },
+        "1": {
+          "tx": -129.79999999999995,
+          "ty": -176.83999999999992,
+          "rotation": 0,
+          "sx": 1.38,
+          "sy": 1.38
+        },
+        "1.4": {
+          "tx": -181.7199999999999,
+          "ty": -247.57599999999988,
+          "rotation": 0,
+          "sx": 1.5319999999999998,
+          "sy": 1.5319999999999998
+        }
+      },
+      "geometry_sha256": "10c6cb9059c74af80e5f346b3f6563e6ae85eee1f4e014deccb25dda0136c6a7",
+      "motion_sha256": "f3905aabb64331b8a03a26d110ed9d4969110bb90fafa2d1d92f80c5ccf702f7"
+    },
+    {
+      "frame": 77,
+      "source_frame": 77,
+      "seconds": 2.566666666666667,
+      "shot": "reaction",
+      "behavior": "reaction",
+      "cut": false,
+      "camera": {
+        "x": 61.39999999999998,
+        "y": 24.839999999999975,
+        "zoom": 1.38
+      },
+      "target_world": [
+        210.0,
+        470
+      ],
+      "target_depth": 1,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        210.0,
+        418.0
+      ],
+      "focal_screen": [
+        160.0,
+        400.0
+      ],
+      "desired_screen": [
+        160.0,
+        400.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        210.0,
+        470
+      ],
+      "actor_bounds_logical": [
+        120.20179012860198,
+        312.15043618336085,
+        202.44937284497993,
+        473.51122
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -23.363999999999997,
+          "ty": -31.831200000000003,
+          "rotation": 0,
+          "sx": 1.0684,
+          "sy": 1.0684
+        },
+        "0.48": {
+          "tx": -62.30399999999997,
+          "ty": -84.88319999999993,
+          "rotation": 0,
+          "sx": 1.1824,
+          "sy": 1.1824
+        },
+        "1": {
+          "tx": -129.79999999999995,
+          "ty": -176.83999999999992,
+          "rotation": 0,
+          "sx": 1.38,
+          "sy": 1.38
+        },
+        "1.4": {
+          "tx": -181.7199999999999,
+          "ty": -247.57599999999988,
+          "rotation": 0,
+          "sx": 1.5319999999999998,
+          "sy": 1.5319999999999998
+        }
+      },
+      "geometry_sha256": "b797f3166db76b3ec155945f2b71de78fcdf851430029d86e58196831de37ddf",
+      "motion_sha256": "7706a05dcf3154ce2bbe5466ab5b1fcf6f87c85b5d22feccaf209409338c8638"
+    },
+    {
+      "frame": 78,
+      "source_frame": 78,
+      "seconds": 2.6,
+      "shot": "reaction",
+      "behavior": "reaction",
+      "cut": false,
+      "camera": {
+        "x": 61.39999999999998,
+        "y": 24.839999999999975,
+        "zoom": 1.38
+      },
+      "target_world": [
+        210.0,
+        470
+      ],
+      "target_depth": 1,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        210.0,
+        418.0
+      ],
+      "focal_screen": [
+        160.0,
+        400.0
+      ],
+      "desired_screen": [
+        160.0,
+        400.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        210.0,
+        470
+      ],
+      "actor_bounds_logical": [
+        120.21854049959173,
+        312.2295902671579,
+        202.4598333812764,
+        473.51122
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -23.363999999999997,
+          "ty": -31.831200000000003,
+          "rotation": 0,
+          "sx": 1.0684,
+          "sy": 1.0684
+        },
+        "0.48": {
+          "tx": -62.30399999999997,
+          "ty": -84.88319999999993,
+          "rotation": 0,
+          "sx": 1.1824,
+          "sy": 1.1824
+        },
+        "1": {
+          "tx": -129.79999999999995,
+          "ty": -176.83999999999992,
+          "rotation": 0,
+          "sx": 1.38,
+          "sy": 1.38
+        },
+        "1.4": {
+          "tx": -181.7199999999999,
+          "ty": -247.57599999999988,
+          "rotation": 0,
+          "sx": 1.5319999999999998,
+          "sy": 1.5319999999999998
+        }
+      },
+      "geometry_sha256": "7cb1ba8d8cb326a1c26cbbed1b49b3fd1c110e474a3a6b5f6c581014b2f71890",
+      "motion_sha256": "ac583940986d6fd7b8d04b41cc32db8a839a523697c1a368d2e4df02bdcf00d9"
+    },
+    {
+      "frame": 79,
+      "source_frame": 79,
+      "seconds": 2.6333333333333333,
+      "shot": "reaction",
+      "behavior": "reaction",
+      "cut": false,
+      "camera": {
+        "x": 61.39999999999998,
+        "y": 24.839999999999975,
+        "zoom": 1.38
+      },
+      "target_world": [
+        210.0,
+        470
+      ],
+      "target_depth": 1,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        210.0,
+        418.0
+      ],
+      "focal_screen": [
+        160.0,
+        400.0
+      ],
+      "desired_screen": [
+        160.0,
+        400.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        210.0,
+        470
+      ],
+      "actor_bounds_logical": [
+        120.82003253737112,
+        312.11753330525045,
+        202.84717854827713,
+        473.51122
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -23.363999999999997,
+          "ty": -31.831200000000003,
+          "rotation": 0,
+          "sx": 1.0684,
+          "sy": 1.0684
+        },
+        "0.48": {
+          "tx": -62.30399999999997,
+          "ty": -84.88319999999993,
+          "rotation": 0,
+          "sx": 1.1824,
+          "sy": 1.1824
+        },
+        "1": {
+          "tx": -129.79999999999995,
+          "ty": -176.83999999999992,
+          "rotation": 0,
+          "sx": 1.38,
+          "sy": 1.38
+        },
+        "1.4": {
+          "tx": -181.7199999999999,
+          "ty": -247.57599999999988,
+          "rotation": 0,
+          "sx": 1.5319999999999998,
+          "sy": 1.5319999999999998
+        }
+      },
+      "geometry_sha256": "a9d7e420c2168cd9b9e874967577fb7508b208d6ca0a8499a9e7cdb66aafe8ab",
+      "motion_sha256": "375418339b56212752a22f75dda8f03a0d1e08a82f8b10dc94ad0204e280a039"
+    },
+    {
+      "frame": 80,
+      "source_frame": 80,
+      "seconds": 2.6666666666666665,
+      "shot": "reaction",
+      "behavior": "reaction",
+      "cut": false,
+      "camera": {
+        "x": 61.39999999999998,
+        "y": 24.839999999999975,
+        "zoom": 1.38
+      },
+      "target_world": [
+        210.0,
+        470
+      ],
+      "target_depth": 1,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        210.0,
+        418.0
+      ],
+      "focal_screen": [
+        160.0,
+        400.0
+      ],
+      "desired_screen": [
+        160.0,
+        400.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        210.0,
+        470
+      ],
+      "actor_bounds_logical": [
+        122.29972534619284,
+        311.71444274506837,
+        203.336972141925,
+        473.51122
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -23.363999999999997,
+          "ty": -31.831200000000003,
+          "rotation": 0,
+          "sx": 1.0684,
+          "sy": 1.0684
+        },
+        "0.48": {
+          "tx": -62.30399999999997,
+          "ty": -84.88319999999993,
+          "rotation": 0,
+          "sx": 1.1824,
+          "sy": 1.1824
+        },
+        "1": {
+          "tx": -129.79999999999995,
+          "ty": -176.83999999999992,
+          "rotation": 0,
+          "sx": 1.38,
+          "sy": 1.38
+        },
+        "1.4": {
+          "tx": -181.7199999999999,
+          "ty": -247.57599999999988,
+          "rotation": 0,
+          "sx": 1.5319999999999998,
+          "sy": 1.5319999999999998
+        }
+      },
+      "geometry_sha256": "bcf009ef4320d97643347460cd916bc323e1d8a064759d35eeb134c1181edf4c",
+      "motion_sha256": "46a1de7b0fe2bf95ccbb7342b2bae0aa1c7c138a7a61252cd1ef8a7912d291c2"
+    },
+    {
+      "frame": 81,
+      "source_frame": 81,
+      "seconds": 2.7,
+      "shot": "reaction",
+      "behavior": "reaction",
+      "cut": false,
+      "camera": {
+        "x": 61.39999999999998,
+        "y": 24.839999999999975,
+        "zoom": 1.38
+      },
+      "target_world": [
+        210.0,
+        470
+      ],
+      "target_depth": 1,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        210.0,
+        418.0
+      ],
+      "focal_screen": [
+        160.0,
+        400.0
+      ],
+      "desired_screen": [
+        160.0,
+        400.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        210.0,
+        470
+      ],
+      "actor_bounds_logical": [
+        124.23237880603047,
+        311.17433563755344,
+        200.38720035423634,
+        473.51122
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -23.363999999999997,
+          "ty": -31.831200000000003,
+          "rotation": 0,
+          "sx": 1.0684,
+          "sy": 1.0684
+        },
+        "0.48": {
+          "tx": -62.30399999999997,
+          "ty": -84.88319999999993,
+          "rotation": 0,
+          "sx": 1.1824,
+          "sy": 1.1824
+        },
+        "1": {
+          "tx": -129.79999999999995,
+          "ty": -176.83999999999992,
+          "rotation": 0,
+          "sx": 1.38,
+          "sy": 1.38
+        },
+        "1.4": {
+          "tx": -181.7199999999999,
+          "ty": -247.57599999999988,
+          "rotation": 0,
+          "sx": 1.5319999999999998,
+          "sy": 1.5319999999999998
+        }
+      },
+      "geometry_sha256": "816d3431fc4651dd4ffc837ad1d44d0a537b41f4bbf547b741e7c5f49d3d7803",
+      "motion_sha256": "47a7d26b5953a1bde4e4ad44cedb76ac9d5cf254ad8227428e6e1b4099c63f05"
+    },
+    {
+      "frame": 82,
+      "source_frame": 82,
+      "seconds": 2.7333333333333334,
+      "shot": "reaction",
+      "behavior": "reaction",
+      "cut": false,
+      "camera": {
+        "x": 61.39999999999998,
+        "y": 24.839999999999975,
+        "zoom": 1.38
+      },
+      "target_world": [
+        210.0,
+        470
+      ],
+      "target_depth": 1,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        210.0,
+        418.0
+      ],
+      "focal_screen": [
+        160.0,
+        400.0
+      ],
+      "desired_screen": [
+        160.0,
+        400.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        210.0,
+        470
+      ],
+      "actor_bounds_logical": [
+        126.15642344935864,
+        310.65715277189025,
+        192.81731811388445,
+        473.51122
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -23.363999999999997,
+          "ty": -31.831200000000003,
+          "rotation": 0,
+          "sx": 1.0684,
+          "sy": 1.0684
+        },
+        "0.48": {
+          "tx": -62.30399999999997,
+          "ty": -84.88319999999993,
+          "rotation": 0,
+          "sx": 1.1824,
+          "sy": 1.1824
+        },
+        "1": {
+          "tx": -129.79999999999995,
+          "ty": -176.83999999999992,
+          "rotation": 0,
+          "sx": 1.38,
+          "sy": 1.38
+        },
+        "1.4": {
+          "tx": -181.7199999999999,
+          "ty": -247.57599999999988,
+          "rotation": 0,
+          "sx": 1.5319999999999998,
+          "sy": 1.5319999999999998
+        }
+      },
+      "geometry_sha256": "8c178d38fa0698e7c50a2e0e9bf2f494798defcd8a7f5b2c4347fd4f81d4a503",
+      "motion_sha256": "a95561e004c73762e3c006585a36837bbdd8df9e9d9ed887ef191f43006ac912"
+    },
+    {
+      "frame": 83,
+      "source_frame": 83,
+      "seconds": 2.7666666666666666,
+      "shot": "reaction",
+      "behavior": "reaction",
+      "cut": false,
+      "camera": {
+        "x": 61.39999999999998,
+        "y": 24.839999999999975,
+        "zoom": 1.38
+      },
+      "target_world": [
+        210.0,
+        470
+      ],
+      "target_depth": 1,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        210.0,
+        418.0
+      ],
+      "focal_screen": [
+        160.0,
+        400.0
+      ],
+      "desired_screen": [
+        160.0,
+        400.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        210.0,
+        470
+      ],
+      "actor_bounds_logical": [
+        127.61987034776962,
+        310.2838156327086,
+        189.38477224153834,
+        473.51122
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -23.363999999999997,
+          "ty": -31.831200000000003,
+          "rotation": 0,
+          "sx": 1.0684,
+          "sy": 1.0684
+        },
+        "0.48": {
+          "tx": -62.30399999999997,
+          "ty": -84.88319999999993,
+          "rotation": 0,
+          "sx": 1.1824,
+          "sy": 1.1824
+        },
+        "1": {
+          "tx": -129.79999999999995,
+          "ty": -176.83999999999992,
+          "rotation": 0,
+          "sx": 1.38,
+          "sy": 1.38
+        },
+        "1.4": {
+          "tx": -181.7199999999999,
+          "ty": -247.57599999999988,
+          "rotation": 0,
+          "sx": 1.5319999999999998,
+          "sy": 1.5319999999999998
+        }
+      },
+      "geometry_sha256": "fb0b38a50f315aa641fe2e5f1d62ec48fc4dc6306d3cb469dfe995f1198928f9",
+      "motion_sha256": "321869d5df47ba6272002da59bb8852a7a6986ad6882b419cd5185d5d4d62a3b"
+    },
+    {
+      "frame": 84,
+      "source_frame": 84,
+      "seconds": 2.8,
+      "shot": "reaction",
+      "behavior": "reaction",
+      "cut": false,
+      "camera": {
+        "x": 61.39999999999998,
+        "y": 24.839999999999975,
+        "zoom": 1.38
+      },
+      "target_world": [
+        210.0,
+        470
+      ],
+      "target_depth": 1,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        210.0,
+        418.0
+      ],
+      "focal_screen": [
+        160.0,
+        400.0
+      ],
+      "desired_screen": [
+        160.0,
+        400.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        210.0,
+        470
+      ],
+      "actor_bounds_logical": [
+        128.20312100670597,
+        310.13323418565847,
+        189.9706014982995,
+        473.51122
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -23.363999999999997,
+          "ty": -31.831200000000003,
+          "rotation": 0,
+          "sx": 1.0684,
+          "sy": 1.0684
+        },
+        "0.48": {
+          "tx": -62.30399999999997,
+          "ty": -84.88319999999993,
+          "rotation": 0,
+          "sx": 1.1824,
+          "sy": 1.1824
+        },
+        "1": {
+          "tx": -129.79999999999995,
+          "ty": -176.83999999999992,
+          "rotation": 0,
+          "sx": 1.38,
+          "sy": 1.38
+        },
+        "1.4": {
+          "tx": -181.7199999999999,
+          "ty": -247.57599999999988,
+          "rotation": 0,
+          "sx": 1.5319999999999998,
+          "sy": 1.5319999999999998
+        }
+      },
+      "geometry_sha256": "6b9ec9135c1f08f40e1c36b189a2f67a36259b9414a47f5f3a006436fe2311bb",
+      "motion_sha256": "4a5d2d43fb8c42eac6a2a3fefe8bcab6f3800754f58982c51d79b7879f7c940a"
+    },
+    {
+      "frame": 85,
+      "source_frame": 85,
+      "seconds": 2.8333333333333335,
+      "shot": "reaction",
+      "behavior": "reaction",
+      "cut": false,
+      "camera": {
+        "x": 61.39999999999998,
+        "y": 24.839999999999975,
+        "zoom": 1.38
+      },
+      "target_world": [
+        210.0,
+        470
+      ],
+      "target_depth": 1,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        210.0,
+        418.0
+      ],
+      "focal_screen": [
+        160.0,
+        400.0
+      ],
+      "desired_screen": [
+        160.0,
+        400.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        210.0,
+        470
+      ],
+      "actor_bounds_logical": [
+        128.25578805383694,
+        310.12462673879975,
+        190.0160871185716,
+        473.51122
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -23.363999999999997,
+          "ty": -31.831200000000003,
+          "rotation": 0,
+          "sx": 1.0684,
+          "sy": 1.0684
+        },
+        "0.48": {
+          "tx": -62.30399999999997,
+          "ty": -84.88319999999993,
+          "rotation": 0,
+          "sx": 1.1824,
+          "sy": 1.1824
+        },
+        "1": {
+          "tx": -129.79999999999995,
+          "ty": -176.83999999999992,
+          "rotation": 0,
+          "sx": 1.38,
+          "sy": 1.38
+        },
+        "1.4": {
+          "tx": -181.7199999999999,
+          "ty": -247.57599999999988,
+          "rotation": 0,
+          "sx": 1.5319999999999998,
+          "sy": 1.5319999999999998
+        }
+      },
+      "geometry_sha256": "15231a9eb793c3b157925bc18c7290083a35ac539dc816642fae61f5fdf230ea",
+      "motion_sha256": "3f378821d878358172a888630bc7134b8be30e23d5583f77e9e11da249a86fdd"
+    },
+    {
+      "frame": 86,
+      "source_frame": 86,
+      "seconds": 2.8666666666666667,
+      "shot": "reaction",
+      "behavior": "reaction",
+      "cut": false,
+      "camera": {
+        "x": 61.39999999999998,
+        "y": 24.839999999999975,
+        "zoom": 1.38
+      },
+      "target_world": [
+        210.0,
+        470
+      ],
+      "target_depth": 1,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        210.0,
+        418.0
+      ],
+      "focal_screen": [
+        160.0,
+        400.0
+      ],
+      "desired_screen": [
+        160.0,
+        400.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        210.0,
+        470
+      ],
+      "actor_bounds_logical": [
+        128.06859789131406,
+        310.1918400345935,
+        189.81453581600326,
+        473.51122
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -23.363999999999997,
+          "ty": -31.831200000000003,
+          "rotation": 0,
+          "sx": 1.0684,
+          "sy": 1.0684
+        },
+        "0.48": {
+          "tx": -62.30399999999997,
+          "ty": -84.88319999999993,
+          "rotation": 0,
+          "sx": 1.1824,
+          "sy": 1.1824
+        },
+        "1": {
+          "tx": -129.79999999999995,
+          "ty": -176.83999999999992,
+          "rotation": 0,
+          "sx": 1.38,
+          "sy": 1.38
+        },
+        "1.4": {
+          "tx": -181.7199999999999,
+          "ty": -247.57599999999988,
+          "rotation": 0,
+          "sx": 1.5319999999999998,
+          "sy": 1.5319999999999998
+        }
+      },
+      "geometry_sha256": "2c054c2c7bc90788c75d39206057a1f255a800782a6eda634a220f6d049e2ab2",
+      "motion_sha256": "fb6bc0d918472ca387fd24ccb8602696d8446a5a7cd90ded6a96913b19613eee"
+    },
+    {
+      "frame": 87,
+      "source_frame": 87,
+      "seconds": 2.9,
+      "shot": "reaction",
+      "behavior": "reaction",
+      "cut": false,
+      "camera": {
+        "x": 61.39999999999998,
+        "y": 24.839999999999975,
+        "zoom": 1.38
+      },
+      "target_world": [
+        210.0,
+        470
+      ],
+      "target_depth": 1,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        210.0,
+        418.0
+      ],
+      "focal_screen": [
+        160.0,
+        400.0
+      ],
+      "desired_screen": [
+        160.0,
+        400.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        210.0,
+        470
+      ],
+      "actor_bounds_logical": [
+        127.13472425524952,
+        310.43584382856426,
+        188.86921858095062,
+        473.51122
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -23.363999999999997,
+          "ty": -31.831200000000003,
+          "rotation": 0,
+          "sx": 1.0684,
+          "sy": 1.0684
+        },
+        "0.48": {
+          "tx": -62.30399999999997,
+          "ty": -84.88319999999993,
+          "rotation": 0,
+          "sx": 1.1824,
+          "sy": 1.1824
+        },
+        "1": {
+          "tx": -129.79999999999995,
+          "ty": -176.83999999999992,
+          "rotation": 0,
+          "sx": 1.38,
+          "sy": 1.38
+        },
+        "1.4": {
+          "tx": -181.7199999999999,
+          "ty": -247.57599999999988,
+          "rotation": 0,
+          "sx": 1.5319999999999998,
+          "sy": 1.5319999999999998
+        }
+      },
+      "geometry_sha256": "4f2cf56a90b4b670f91420d8eba4a8a284e1125fdf73ec127a070d0b0e5a2efe",
+      "motion_sha256": "12d246e6f59ff36bd526739afce186610392ffdc5622004b6f5998da4d0559b4"
+    },
+    {
+      "frame": 88,
+      "source_frame": 88,
+      "seconds": 2.933333333333333,
+      "shot": "reaction",
+      "behavior": "reaction",
+      "cut": false,
+      "camera": {
+        "x": 61.39999999999998,
+        "y": 24.839999999999975,
+        "zoom": 1.38
+      },
+      "target_world": [
+        210.0,
+        470
+      ],
+      "target_depth": 1,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        210.0,
+        418.0
+      ],
+      "focal_screen": [
+        160.0,
+        400.0
+      ],
+      "desired_screen": [
+        160.0,
+        400.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        210.0,
+        470
+      ],
+      "actor_bounds_logical": [
+        125.2903736716076,
+        310.9017688844917,
+        195.99847332817012,
+        473.51122
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -23.363999999999997,
+          "ty": -31.831200000000003,
+          "rotation": 0,
+          "sx": 1.0684,
+          "sy": 1.0684
+        },
+        "0.48": {
+          "tx": -62.30399999999997,
+          "ty": -84.88319999999993,
+          "rotation": 0,
+          "sx": 1.1824,
+          "sy": 1.1824
+        },
+        "1": {
+          "tx": -129.79999999999995,
+          "ty": -176.83999999999992,
+          "rotation": 0,
+          "sx": 1.38,
+          "sy": 1.38
+        },
+        "1.4": {
+          "tx": -181.7199999999999,
+          "ty": -247.57599999999988,
+          "rotation": 0,
+          "sx": 1.5319999999999998,
+          "sy": 1.5319999999999998
+        }
+      },
+      "geometry_sha256": "2c11458369f1a5ae99a7e4b6e7161392ccab5ec8e85556338bfd9c72427bae70",
+      "motion_sha256": "f64d1d4df35859268e505030481607d8b7892f52d1b2803455f3e49e10e2f1a2"
+    },
+    {
+      "frame": 89,
+      "source_frame": 89,
+      "seconds": 2.966666666666667,
+      "shot": "reaction",
+      "behavior": "reaction",
+      "cut": false,
+      "camera": {
+        "x": 61.39999999999998,
+        "y": 24.839999999999975,
+        "zoom": 1.38
+      },
+      "target_world": [
+        210.0,
+        470
+      ],
+      "target_depth": 1,
+      "velocity_world_per_second": 0.0,
+      "focal_world": [
+        210.0,
+        418.0
+      ],
+      "focal_screen": [
+        160.0,
+        400.0
+      ],
+      "desired_screen": [
+        160.0,
+        400.0
+      ],
+      "tracking_error_logical": 0.0,
+      "actor_world": [
+        210.0,
+        470
+      ],
+      "actor_bounds_logical": [
+        122.95130297446312,
+        311.4398439746648,
+        202.5519396357112,
+        473.51122
+      ],
+      "node_bounds_logical": null,
+      "framing": "full",
+      "foreground_bbox_overlap_upper": 0.0,
+      "intentional_foreground_overlap": true,
+      "projection_by_depth": {
+        "0": {
+          "tx": 0.0,
+          "ty": 0.0,
+          "rotation": 0,
+          "sx": 1.0,
+          "sy": 1.0
+        },
+        "0.18": {
+          "tx": -23.363999999999997,
+          "ty": -31.831200000000003,
+          "rotation": 0,
+          "sx": 1.0684,
+          "sy": 1.0684
+        },
+        "0.48": {
+          "tx": -62.30399999999997,
+          "ty": -84.88319999999993,
+          "rotation": 0,
+          "sx": 1.1824,
+          "sy": 1.1824
+        },
+        "1": {
+          "tx": -129.79999999999995,
+          "ty": -176.83999999999992,
+          "rotation": 0,
+          "sx": 1.38,
+          "sy": 1.38
+        },
+        "1.4": {
+          "tx": -181.7199999999999,
+          "ty": -247.57599999999988,
+          "rotation": 0,
+          "sx": 1.5319999999999998,
+          "sy": 1.5319999999999998
+        }
+      },
+      "geometry_sha256": "9f5a4b18eebb2e0fabdad75ac2d2e54748e706c2fb5fd35175e8320bf6d78cb7",
+      "motion_sha256": "a6c87625816bfb1a83191fac1fbbc935ed53142fd3412d8189f99ec148d1504a"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "baseline": "ca35dad8a006d04601db0d0885b6484348c8f54f",
+  "changed_existing_files": [
+    "AGENTS.md",
+    "README.md",
+    "src/reelforge/scenes/graph.py"
+  ],
+  "protected_files_compared_exactly": 61,
+  "all_862_accepted_tests_unchanged": true,
+  "protected_implementation_unchanged": true,
+  "only_existing_runtime_edit": "scenes/graph.py optional camera_override; same previous default camera_at path"
+}

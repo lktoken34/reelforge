@@ -1,0 +1,43 @@
+........................................................................ [  7%]
+........................................................................ [ 15%]
+........................................................................ [ 23%]
+........................................................................ [ 30%]
+........................................................................ [ 38%]
+........................................................................ [ 46%]
+........................................................................ [ 53%]
+........................................................................ [ 61%]
+........................................................................ [ 69%]
+........................................................................ [ 77%]
+........................................................................ [ 84%]
+........................................................................ [ 92%]
+........................................F..............................  [100%]
+=================================== FAILURES ===================================
+___________ test_two_audio_jobs_persistently_clean_after_native_work ___________
+
+tmp_path = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/pytest-phase6b/test_two_audio_jobs_persistent0')
+workflow = (<module 'render_audio_story' from '/workspace/scratch/ade48aa5d272/reelforge-phase6b/tools/render_audio_story.py'>, S...(character='rowan_01', action='idle', direction='right', speed=1.0, expression='calm', intensity=1.0)),), audio=None)])
+
+    def test_two_audio_jobs_persistently_clean_after_native_work(tmp_path, workflow):
+        _, _, run, _ = workflow
+        outputs = []
+        for i in range(2):
+            out = tmp_path / f"audio-{i}"
+            report = run(out)
+            assert report["transaction_clean"]
+            outputs.append(out)
+            rc, _, _ = run_bounded(
+                ["ffmpeg", "-v", "error", "-i", str(out / "story.mp4"), "-f", "null", "-"]
+            )
+            assert rc == 0
+            for previous in outputs:
+>               assert not list(previous.glob(".reelforge-audio-*"))
+E               AssertionError: assert not [PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/pytest-phase6b/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-nvrgbd52')]
+E                +  where [PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/pytest-phase6b/test_two_audio_jobs_persistent0/audio-0/.reelforge-audio-nvrgbd52')] = list(<generator object Path.glob at 0x7f42695e6ac0>)
+E                +    where <generator object Path.glob at 0x7f42695e6ac0> = glob('.reelforge-audio-*')
+E                +      where glob = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/pytest-phase6b/test_two_audio_jobs_persistent0/audio-0').glob
+
+tests/test_transaction_cleanup.py:220: AssertionError
+- generated xml file: /workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase6b/tests.xml -
+=========================== short test summary info ============================
+FAILED tests/test_transaction_cleanup.py::test_two_audio_jobs_persistently_clean_after_native_work
+1 failed, 934 passed in 149.69s (0:02:29)

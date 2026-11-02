@@ -1,0 +1,23 @@
+{
+  "outside_checkout": "/tmp",
+  "cairo_available": false,
+  "installed_module": "/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/phase6b-wheel-smoke/lib/python3.12/site-packages/reelforge/direction/__init__.py",
+  "schema_version": "urn:reelforge:direction-0.1",
+  "studies": {
+    "settlement_escape": {
+      "shots": 2,
+      "frames_inspected": 90,
+      "max_tracking_error_logical": 0.0
+    },
+    "shelter_discovery": {
+      "shots": 3,
+      "frames_inspected": 90,
+      "max_tracking_error_logical": 0.0
+    },
+    "woodland_suspense": {
+      "shots": 3,
+      "frames_inspected": 90,
+      "max_tracking_error_logical": 0.0
+    }
+  }
+}

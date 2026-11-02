@@ -1,0 +1,99 @@
+{
+  "policy": "One attempt per job; no retries",
+  "jobs": [
+    {
+      "command": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/.venv/bin/python",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/tools/direction.py",
+        "render",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/examples/direction/woodland_suspense.json",
+        "--output-dir",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase6b/proofs/woodland_suspense_stills",
+        "--stills-only"
+      ],
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"report\": \"/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase6b/proofs/woodland_suspense_stills\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/.venv/bin/python",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/tools/direction.py",
+        "render",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/examples/direction/woodland_suspense.json",
+        "--output-dir",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase6b/proofs/woodland_suspense_video"
+      ],
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"report\": \"/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase6b/proofs/woodland_suspense_video\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/.venv/bin/python",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/tools/direction.py",
+        "render",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/examples/direction/settlement_escape.json",
+        "--output-dir",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase6b/proofs/settlement_escape_stills",
+        "--stills-only"
+      ],
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"report\": \"/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase6b/proofs/settlement_escape_stills\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/.venv/bin/python",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/tools/direction.py",
+        "render",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/examples/direction/settlement_escape.json",
+        "--output-dir",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase6b/proofs/settlement_escape_video"
+      ],
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"report\": \"/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase6b/proofs/settlement_escape_video\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/.venv/bin/python",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/tools/direction.py",
+        "render",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/examples/direction/shelter_discovery.json",
+        "--output-dir",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase6b/proofs/shelter_discovery_stills",
+        "--stills-only"
+      ],
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"report\": \"/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase6b/proofs/shelter_discovery_stills\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/.venv/bin/python",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/tools/direction.py",
+        "render",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/examples/direction/shelter_discovery.json",
+        "--output-dir",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase6b/proofs/shelter_discovery_video"
+      ],
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"report\": \"/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase6b/proofs/shelter_discovery_video\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/.venv/bin/python",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/tools/direction.py",
+        "render",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/examples/direction/woodland_suspense.json",
+        "--output-dir",
+        "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase6b/proofs/woodland_repeat"
+      ],
+      "returncode": 0,
+      "stdout": "{\"success\": true, \"report\": \"/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase6b/proofs/woodland_repeat\"}\n",
+      "stderr": ""
+    }
+  ]
+}

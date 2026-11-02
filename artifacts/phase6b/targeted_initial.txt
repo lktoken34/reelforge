@@ -1,0 +1,125 @@
+............................................................FFF...EEs.   [100%]
+==================================== ERRORS ====================================
+____ ERROR at setup of test_native_free_schema_inspection_and_strict_loader ____
+
+self = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/pytest-direction-dev')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/pytest-direction-dev'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1311: FileNotFoundError
+____________ ERROR at setup of test_invalid_render_has_no_artifacts ____________
+
+self = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/pytest-direction-dev')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase6b/outputs/pytest-direction-dev'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1311: FileNotFoundError
+=================================== FAILURES ===================================
+_________________ test_out_of_order_geometry_and_frame_guards __________________
+
+plans = {'settlement_escape': Direction(title='Settlement Escape', compiled=CompiledScene(scene=Scene(title='Settlement Escape... hold_in=0, hold_out=4, framing='full', margin=8.0, foreground='declared_overlap', continuity='intentional_reframe')))}
+
+    def test_out_of_order_geometry_and_frame_guards(plans):
+        p = plans["woodland_suspense"]
+        seen = {}
+        for f in [89, 0, 23, 24, 59, 60, 45, 0, 89, 24]:
+            commands = direction_frame(p, f)
+            assert f not in seen or commands == seen[f]
+            seen[f] = commands
+        for f in [-1, 90, True, 1.5]:
+            with pytest.raises(InputError):
+>               direction_frame(p, f)
+
+tests/test_direction.py:199: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/reelforge/direction/sampling.py:77: in direction_frame
+    return tuple(c for layer in direction_layers(plan, frame) for c in layer.commands)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/reelforge/direction/sampling.py:71: in direction_layers
+    character_override=actor_override(plan, frame),
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/reelforge/direction/sampling.py:63: in actor_override
+    x, commands = actor_commands(p, frame / 30)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/reelforge/blocking/sampling.py:91: in commands
+    s, clock, pose, feet, secondary, x, facing, fade = sample(plan, t)
+                                                       ^^^^^^^^^^^^^^^
+src/reelforge/blocking/sampling.py:35: in sample
+    feet = contact_targets(t, clock, stepper=route_step)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+seconds = -0.03333333333333333
+clock = RouteClock(segments=(Segment(id='walk', start=9, end=54, mode='walk', x0=140, x1=180, y=550, v0=0, v1=35, facing='righ...), (3.5, 7, 109.0, 0.62, 19.0), (3.5, -7, 91.0, 0.62, 19.0), (4.0, 7, 109.0, 0.62, 19.0), (4.0, -7, 91.0, 0.62, 19.0)))
+
+    def contact_targets(seconds: float, clock: LocomotionClock = CLOCK, *, stepper=step):
+        finite(seconds)
+        if not 0 <= seconds <= 600:
+>           raise RenderError("Contact time must be 0..600")
+E           reelforge.rendering.model.RenderError: Contact time must be 0..600
+
+src/reelforge/characters/transition.py:87: RenderError
+____________ test_reject_framing_pan_speed_continuity_and_occlusion ____________
+
+data = {'base': {'actor_id': 'rowan', 'base': {'base': {'art_direction': {'atmosphere': 0.7, 'lighting': 'dusk'}, 'compositio...inuity': 'intentional_reframe', 'end_frame': 90, 'foreground': 'declared_overlap', ...}], 'title': 'Woodland Suspense'}
+
+    def test_reject_framing_pan_speed_continuity_and_occlusion(data):
+        cases = [
+            ({"screen": [16, 520]}, "DIRECTION_FRAMING"),
+            ({"offset_start": [-100, 0], "offset_end": [100, 0]}, "DIRECTION_SPEED"),
+        ]
+        for change, code in cases:
+            d = copy.deepcopy(data)
+            d["shots"][1].update(change)
+            with pytest.raises(InputError) as e:
+                compile_direction(d)
+            assert e.value.issue.code == code
+        d = copy.deepcopy(data)
+        d["shots"][1]["continuity"] = "matched"
+>       with pytest.raises(InputError) as e:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'reelforge.core.errors.InputError'>
+
+tests/test_direction.py:215: Failed
+___________________ test_declared_crop_and_unreadable_object ___________________
+
+data = {'base': {'actor_id': 'rowan', 'base': {'base': {'art_direction': {'atmosphere': 0.7, 'lighting': 'dusk'}, 'compositio...inuity': 'intentional_reframe', 'end_frame': 90, 'foreground': 'declared_overlap', ...}], 'title': 'Woodland Suspense'}
+plans = {'settlement_escape': Direction(title='Settlement Escape', compiled=CompiledScene(scene=Scene(title='Settlement Escape... hold_in=0, hold_out=4, framing='full', margin=8.0, foreground='declared_overlap', continuity='intentional_reframe')))}
+
+    def test_declared_crop_and_unreadable_object(data, plans):
+        d = copy.deepcopy(data)
+        d["shots"][0].update(screen=[180, 635] if False else [180, 624], framing="full")
+        with pytest.raises(InputError):
+            compile_direction(d)
+        d["shots"][0]["framing"] = "feet_crop"
+        # Width/head remain protected; foot crop is an explicit narrow exception.
+        assert compile_direction(d)
+        d = copy.deepcopy(data)
+        d["shots"][2].update(offset_start=[100, 100], offset_end=[100, 100], framing="offscreen")
+>       with pytest.raises(InputError) as e:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'reelforge.core.errors.InputError'>
+
+tests/test_direction.py:236: Failed
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_direction.py:287: optional Cairo/FFmpeg
+ERROR tests/test_direction.py::test_native_free_schema_inspection_and_strict_loader
+ERROR tests/test_direction.py::test_invalid_render_has_no_artifacts - FileNot...
+FAILED tests/test_direction.py::test_out_of_order_geometry_and_frame_guards
+FAILED tests/test_direction.py::test_reject_framing_pan_speed_continuity_and_occlusion
+FAILED tests/test_direction.py::test_declared_crop_and_unreadable_object - Fa...
+3 failed, 64 passed, 1 skipped, 2 errors in 23.42s

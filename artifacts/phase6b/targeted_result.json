@@ -1,0 +1,7 @@
+{
+  "command": ".venv/bin/python -m pytest tests/test_direction.py --basetemp outputs/pytest-direction-final-targeted -q",
+  "exit_code": 0,
+  "passed": 73,
+  "seconds": 27.33,
+  "native_optional_tests_executed": 2
+}

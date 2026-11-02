@@ -1,0 +1,159 @@
+{
+  "schema_version": "direction-0.1",
+  "title": "Settlement Escape",
+  "base": {
+    "schema_version": "blocking-0.1",
+    "title": "Settlement escape \u2014 accelerate and depart",
+    "base": {
+      "schema_version": "environment-0.1",
+      "title": "Settlement Street \u2014 seed 33",
+      "family": "settlement_street",
+      "seed": 33,
+      "composition": {
+        "density": 2,
+        "path_alignment": 0,
+        "structure": 0.7,
+        "framing": 0.8,
+        "detail": "rich"
+      },
+      "art_direction": {
+        "lighting": "dusk",
+        "atmosphere": 0.7
+      },
+      "rowan": {
+        "enabled": true,
+        "action": "look_around",
+        "side": "left"
+      }
+    },
+    "actor_id": "rowan",
+    "support_id": "ground",
+    "corridor": "level_field",
+    "start": {
+      "position": [
+        118,
+        550
+      ],
+      "facing": "right"
+    },
+    "camera": "exit_right",
+    "segments": [
+      {
+        "id": "walk",
+        "start_frame": 0,
+        "end_frame": 21,
+        "mode": "walk",
+        "destination": [
+          128.5,
+          550
+        ],
+        "end_speed": 30,
+        "facing": "right",
+        "acting": "none",
+        "expression": "concerned"
+      },
+      {
+        "id": "accelerate",
+        "start_frame": 21,
+        "end_frame": 36,
+        "mode": "run",
+        "destination": [
+          156,
+          550
+        ],
+        "end_speed": 80,
+        "facing": "right",
+        "acting": "none",
+        "expression": "determined"
+      },
+      {
+        "id": "escape",
+        "start_frame": 36,
+        "end_frame": 90,
+        "mode": "run",
+        "destination": [
+          300,
+          550
+        ],
+        "end_speed": 80,
+        "facing": "right",
+        "acting": "none",
+        "expression": "determined"
+      }
+    ]
+  },
+  "shots": [
+    {
+      "id": "follow_acceleration",
+      "start_frame": 0,
+      "end_frame": 64,
+      "behavior": "follow",
+      "target": {
+        "kind": "actor",
+        "id": "rowan"
+      },
+      "track": true,
+      "look_ahead_seconds": 0.22,
+      "zoom": [
+        1.05,
+        1.13
+      ],
+      "offset_start": [
+        0,
+        0
+      ],
+      "offset_end": [
+        0,
+        0
+      ],
+      "screen": [
+        138,
+        540
+      ],
+      "hold_in_frames": 0,
+      "hold_out_frames": 0,
+      "framing": "full",
+      "safe_margin": 8,
+      "foreground": "declared_overlap",
+      "continuity": "intentional_reframe"
+    },
+    {
+      "id": "let_him_go",
+      "start_frame": 64,
+      "end_frame": 90,
+      "behavior": "suspense_hold",
+      "target": {
+        "kind": "point",
+        "position": [
+          240,
+          520
+        ],
+        "depth": 1
+      },
+      "track": false,
+      "look_ahead_seconds": 0,
+      "zoom": [
+        1.13,
+        1.13
+      ],
+      "offset_start": [
+        0,
+        0
+      ],
+      "offset_end": [
+        0,
+        0
+      ],
+      "screen": [
+        280,
+        520
+      ],
+      "hold_in_frames": 0,
+      "hold_out_frames": 0,
+      "framing": "offscreen",
+      "safe_margin": 8,
+      "foreground": "declared_overlap",
+      "continuity": "intentional_reframe"
+    }
+  ]
+}

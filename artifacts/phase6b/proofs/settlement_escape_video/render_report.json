@@ -1,0 +1,893 @@
+{
+  "scope": "Experimental scene-0.1 development proof; no deployment approval",
+  "success": true,
+  "stills_only": false,
+  "cleanup_error": null,
+  "versions": {
+    "pycairo": "1.29.2",
+    "cairo": "1.18.0"
+  },
+  "scene": {
+    "schema_version": "scene-0.1",
+    "title": "Settlement Escape",
+    "frame": 0,
+    "hierarchy": [
+      {
+        "id": "root",
+        "parent": null,
+        "kind": "root",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": null,
+        "depth": null
+      },
+      {
+        "id": "layer_sky",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_sky",
+        "depth": 0
+      },
+      {
+        "id": "sky",
+        "parent": "layer_sky",
+        "kind": "background",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_sky",
+        "depth": 0
+      },
+      {
+        "id": "layer_backdrop",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_backdrop",
+        "depth": 0.18
+      },
+      {
+        "id": "backdrop",
+        "parent": "layer_backdrop",
+        "kind": "background",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_backdrop",
+        "depth": 0.18
+      },
+      {
+        "id": "layer_ground",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_ground",
+        "depth": 1
+      },
+      {
+        "id": "ground",
+        "parent": "layer_ground",
+        "kind": "environment",
+        "world": {
+          "x": 180.0,
+          "y": 510.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_ground",
+        "depth": 1
+      },
+      {
+        "id": "layer_distance",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_distance",
+        "depth": 0.48
+      },
+      {
+        "id": "distance",
+        "parent": "layer_distance",
+        "kind": "background",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_distance",
+        "depth": 0.48
+      },
+      {
+        "id": "layer_objects",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "building_left_0",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 35.00720233901919,
+          "y": 375.4866685867922,
+          "scale": 0.6145189334042083,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "building_right_0",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 334.5664716196955,
+          "y": 375.7831368462033,
+          "scale": 0.63387793291742,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "building_right_1",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 343.5256422356173,
+          "y": 397.2561374729856,
+          "scale": 0.6990444163093209,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "building_left_1",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 39.93763638744326,
+          "y": 404.1820491980046,
+          "scale": 0.7292334976882323,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "building_left_2",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 65.3006176308237,
+          "y": 426.20990662669243,
+          "scale": 0.8021393944987845,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "building_right_2",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 354.0231787276574,
+          "y": 427.2819835695268,
+          "scale": 0.8405534011353435,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "building_left_4",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 64.9462531348699,
+          "y": 468.1094675550801,
+          "scale": 1.0110728869187127,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "street_barrel",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 306.0,
+          "y": 470.0,
+          "scale": 0.8,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "building_right_4",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 365.46814932222196,
+          "y": 473.0398784339975,
+          "scale": 1.022082381578683,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "regrowth",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 350.0,
+          "y": 475.0,
+          "scale": 0.38,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "street_crate",
+        "parent": "layer_objects",
+        "kind": "asset",
+        "world": {
+          "x": 95.0,
+          "y": 500.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_objects",
+        "depth": 1
+      },
+      {
+        "id": "layer_people",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_people",
+        "depth": 1
+      },
+      {
+        "id": "rowan",
+        "parent": "layer_people",
+        "kind": "character",
+        "world": {
+          "x": 222.08652814355816,
+          "y": 525.0,
+          "scale": 0.47,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_people",
+        "depth": 1
+      },
+      {
+        "id": "layer_foreground",
+        "parent": "root",
+        "kind": "layer",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_foreground",
+        "depth": 1.4
+      },
+      {
+        "id": "foreground",
+        "parent": "layer_foreground",
+        "kind": "asset",
+        "world": {
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 1,
+          "angle": 0
+        },
+        "visible": true,
+        "layer": "layer_foreground",
+        "depth": 1.4
+      }
+    ],
+    "painter_ids": [
+      "sky",
+      "backdrop",
+      "ground",
+      "distance",
+      "building_left_0",
+      "building_right_0",
+      "building_right_1",
+      "building_left_1",
+      "building_left_2",
+      "building_right_2",
+      "building_left_4",
+      "street_barrel",
+      "building_right_4",
+      "regrowth",
+      "street_crate",
+      "rowan",
+      "foreground"
+    ],
+    "path_allowance": 2408,
+    "operation_allowance": 42400,
+    "character_ground_contacts": {
+      "rowan": {
+        "ground_id": "ground",
+        "world": [
+          222.08652814355816,
+          525.0
+        ],
+        "screen": [
+          222.08652814355816,
+          525.0
+        ]
+      }
+    },
+    "camera": {
+      "x": 0,
+      "y": 0,
+      "zoom": 1
+    }
+  },
+  "frames": 90,
+  "source_pixel_sha256": {
+    "0": "ae293fcd6ea3ab9cda7a8a87afd2c7d62d664316fe1c6e69fde51d2c70caad0d",
+    "1": "c42d18a6bc556dd69ac4e55cf4c632e79658945b3f38b0078863c4237d42d5ce",
+    "2": "fdd74fda951a0700c91b16a053099bdec933fcf034482d83ddabeac1a4164881",
+    "3": "79d6d996bd75278347514272899c3ec089cc25bc9fea9cae99f65c60b89ebeb8",
+    "4": "a140de2800c3a6c1b2363861108f05f07463fcc26005d6facd8c67165f966bb7",
+    "5": "174d0e70a3a2934fab75507fe03c6b55338592f675c506ccbf591cb8cc08bd03",
+    "6": "7114a36848c795040827070f6b72ac0747eaa931adb188900b8f1c5b6f6cc031",
+    "7": "92672f5156f2a8f3084fdddad44cb72d6e71ad5ea70662a32b37575e74b86600",
+    "8": "8dc2f240d796bbf8a7ebf437995e39e5803749abbe15abb4d2373f626306bad7",
+    "9": "63570624315597578c2e441cfdb7f9655ed92a289c7d0626ea3bcf1e4c839f61",
+    "10": "eb2ae286d207c663a9b564d9af6fa603164b5a851c00736c27702e6e2078cba3",
+    "11": "be5b2cf179e1ca861863aa98a02af2c6c207fb0e3dc7283c176302eb31e175a7",
+    "12": "72dadd9debf8e5fccd0e082334e709e9354d16c34fb58ed8ad1b0e86dcea9433",
+    "13": "3bc6ee948351df28065a85faa1076f10830990872a844f047fe708369559c3ac",
+    "14": "2ecb433d1d3f9bc6a92a92a660c2df3802023a02ad292d698ded0d980f32e2e2",
+    "15": "48377a5d06415761124cb603f87d093f875819261b15acc6b3035756267ab9aa",
+    "16": "543f48f9bb3d2f40ffb21ec9e522fbf1c468719e324148ac73004fed2d9ae296",
+    "17": "c5f5f4d6ad3563214dd47346a62059f6bcac6d8d74a1b8a03b63d3c2cf243554",
+    "18": "c57bccf7749e1ff106a42fb77e29dfcb1ccec6ef6fa100e6566e81f29b062124",
+    "19": "269d8ddfc8ff158258bf0046c6638ca5c08fdab769a34843081b57aad3affd86",
+    "20": "4d6bdbc27b61c6c71024f9d73fdfe9e6538ac66ea8498a3b10a012b63e94468b",
+    "21": "1196a8a49a03845db03c5d4e59d0ba44a12c07b7f6c9680674452837d35ae5fd",
+    "22": "77df366ff1b06a07cb74d6025f61b8cd6cfe4761247e1162e2aea89df48a1a50",
+    "23": "e2ed8059e7e9b51bdc0f2771c54151e70640cf8b1e2621508fb5f7d08202c91c",
+    "24": "6555fca0f560dc47e1104256c2510843a04db194d4eee21390912cc2b2608749",
+    "25": "ecf5085b9f8c32a9468306aa9bb3ec296ec0ee9f75bda379339bc329f7d5bea7",
+    "26": "a297d91ed3b8a23ac6329d177175b1f9d1161fe4c986262c07ceecb6ed76cea5",
+    "27": "204b3988bfdd6d8a4b8063143624bb43d6262d3141a0ecec91dea065be726c2b",
+    "28": "643b0f85fa88c24937d644ba780bb9e47fced470cc065c228add83e53ab53d8f",
+    "29": "663e87d333c8ccaba43711971ce5afd44ba0baefcb11a3c2bff13f9b1da6dfe5",
+    "30": "ae607112de7e088d329823b8a600aa7c5ec1522c0d7fa3e7295b989475fec430",
+    "31": "7f33e4f72f44017e5e94434067ae8aff6df7185ea5a3eb3cd0e60ccc2bbdfd92",
+    "32": "899cdfc07448b677200f97cbe7fbdc86badda5222fd1508bbcbb5dfa1d34ae2c",
+    "33": "747939633f2178f6b49c1e37a5c6bba0b904f10099add21e69534b33edd6a41f",
+    "34": "4e135264fda7ae22f1843f15af37a221f7ce124c405e866c556009ec31d70c4f",
+    "35": "81593917383b1fa5bfb32c34704681cd8b3dc510e31cf5b1c23625121873edb8",
+    "36": "c3fe74f4c28e963ea6fbf07a99d152317abeb14c3f364aab79a7465b9862b446",
+    "37": "1250269606a8f069f19918f92235007f280d60b42b88fcff83bf1cc8545053c7",
+    "38": "65b81bfe72622291b380f83955fbe68cd3a59e85113e864c29d4acb059207b40",
+    "39": "3f14c7f636ca6520b575fdb20d6d02be34fc4e727c82cbad5717fe9c8928bd75",
+    "40": "a6cc4eeeeb34d35150580b852cf12bcfa171800efd739c43db195ce2f7f206aa",
+    "41": "bf4262b859d05f7726f7040902cbfb25d6f8cc128912b398e22905dde47dd8e8",
+    "42": "fc833be10691828be510925ecf41596e41de4a04ed22f18b9cecb285c8e45d28",
+    "43": "4a676e4148b5b15e192d80a21ec2bc3f58c5b7a8eefcc2ae4dcabf6a1089a2d9",
+    "44": "8be68f4332c36a33ecbcb2501b4c1f85f010568842e33a1a0ae57d4324f3ac5c",
+    "45": "9a120d78f306df8097ed1c81b1cc0b05f281bd4217ca7388af6f7808ff070c5d",
+    "46": "e71a301a6b8548e6a0857c822d71bcafacc9bf3c06415a9d5d9c3b7ae6d2e573",
+    "47": "005e2f55955e574348d734ce460bd5aa02c41919ef67dad1924a096dea2ddac3",
+    "48": "e8c2d6e09ab71ffffe4bf20acc10a81db33a3d794fd39ce5952cf440e7820773",
+    "49": "1c95f767c8a96456dd4471e3c9f62ca2d044454442c164cb4a9f638312d17e30",
+    "50": "ea40bb1d86ca9f3fbaa272f559c980be1198defbf76b4ade128e3c12fc4e232b",
+    "51": "1ef8b4d4e7ee1afd85cf172973f2c45f09fbeca3ce4c891cce7d7118ac2548ec",
+    "52": "8feec068d7dd1c9d484b698b5a6fd0102699506bc9a08919993e0a52983dd425",
+    "53": "65f5bc50619d400abc37ded2141b56a00de116785092ed4982b0bc10ae0dca5f",
+    "54": "14c8a4cec7681fdcef288588bc9a9974f4900a96a227b6ba57bd438387614faa",
+    "55": "286c78e7105387aafdd2f05efeb179b9b22ff378dbb082498be5d86f1492fb0d",
+    "56": "e7fbfc3a06245a9b354e48998d6106584c6a3788f9fce37b0789217ef868dfd0",
+    "57": "453dcc327235c4c6184bd8f23b1309f53a8210af8599049de8a8b70964a0fc41",
+    "58": "3c4f3d03f8565083b5fe9c97c4066e97d3b4cc8e93a95cd1388a5531345f7e39",
+    "59": "343bbb563ca5fd322b463c6ccb28d76cf1bd9c8faf5ac0bb88d97edbbda0331a",
+    "60": "55cc00babc2f75cca895e372120acc599c16b0617c0daf696538b061cdb49e40",
+    "61": "54fa36876077cfed0cb2261a55a2ed62ff136fd57ec4f9eb2e4c0feaa89d1908",
+    "62": "95b895a988ff182ff48b01c6356e0248569f30d71dbd4cdb9a3add9f0b7152d1",
+    "63": "ac683907c60753f9b35a44ceab518430d8511732dc87bbf4f846fa8838b3fa9e",
+    "64": "a53a04f1f44209f6fc026a812633bc73ce31383f1e9250e3d26992f555454275",
+    "65": "df0d165a33daf205e07bce82d10a796a82ceaf2e3c861a39045d8db0564d2ebb",
+    "66": "dcbbbbafc2490989c761eaee300fef8b3c7be172f81a998f990f2835aac0a4fa",
+    "67": "4fedd2401ad1e2a8fa309d596be86bc2289cd08336636aba2e374170edaeb531",
+    "68": "401c3b2eec7b305c3f27e5170bf3e9a882b1739469c4622906070322f7419434",
+    "69": "ac01c7d38000822675c93f6fa8d892579b7575282b76aaace612dabcd8983a9b",
+    "70": "231c68503f77f983dbc4fd365c9cbc0676b7e18d5b927ac8beeb89ddb38c6914",
+    "71": "2c68cc7cdb5cd4cb4f1e2a5f6d70554f79068b06f77a1c228243df8bd6b1d545",
+    "72": "05e81dc4c1b032cca15766ad1fe688885e6c8bfeea2bf21ae84b499a6cef24f5",
+    "73": "66c51bc0270f5268eb37826729fe0efa839423a61eff905833ef0de89d82614c",
+    "74": "705bb58fe6976f1f3c191a861d04b8fbcb4697402b31fe563bb09ec0399daec0",
+    "75": "a15cca3e88c530b62974da8e65d25e7feba71b2a94df75cf27eda3b27224b833",
+    "76": "06acfb0b1c6c269c4542f2d1b96ee2aa9a423019a0bc3ecdf86b85dfa8f87e89",
+    "77": "bd8681e3c3d7d471effa0be136e1a4a7429c1df5ba7896c026a5610580381a02",
+    "78": "4b2be0a0dd015f7777abe7f96db4ee69a206b5834d180b096d3a991b3538a8eb",
+    "79": "0ad11fe60197a591569c76d1727371f559985cad350cb3d62aa1f602ae0b61e5",
+    "80": "c3a877152bd235ae3c81401bfff2fa9c40799e2c0b9682dc86e214c5f17593d4",
+    "81": "75dd4616bbffa9c18a1531ffe7d42794b2985bb7500304b0e4b9a2bcaba0156a",
+    "82": "59394f8f14b73e6540f0a59c9c1fe1664fc66e8bc27ae6218d3043d900766a27",
+    "83": "9041b103cfb14dce5d2ea1fa7bda293ecea7d07405a4a7123c9235c131959309",
+    "84": "350f89c1cde8c0aa3c0277969e861ad4b7bc40f69aaf31e0ed7153653a4c7c2e",
+    "85": "6c8f14c7b952dfe5749e2b86364e68d9143dc1d242481c0b0d18aba8137fc045",
+    "86": "9542882a71381e32166243a669226616765154155522c7dfe2d575b67e732cdd",
+    "87": "24d4cdf48526deb2fe51482d8e9020849af3927ac6f0bd3d6970b2697d19c4ce",
+    "88": "74af49a5aed8ecc1436ea26de28fbc4a0dbef6cdb5c9f9797bf7e268b7e8b7c0",
+    "89": "eedf51314933f7f442545d94f48ca3de07ea48d2444623c9e28380ceadf49cee"
+  },
+  "maximum_paths": 613,
+  "maximum_ops": 3431,
+  "timings": {
+    "geometry_seconds": 0.9905913119996512,
+    "raster_seconds": 2.1639491600001293,
+    "stream_seconds": 0.9423797390011259
+  },
+  "wall_seconds": 6.3488916009998775,
+  "encoded_fps": 19.911605766922808,
+  "cpu_seconds": {
+    "parent": 4.990397522,
+    "children_user": 3.5048779999999997,
+    "children_system": 0.394958
+  },
+  "memory": {
+    "oom_telemetry_continuous": true,
+    "memory_policy": "strict",
+    "observed_memory_sources": [
+      "guest_and_cgroup"
+    ],
+    "initial_memory": {
+      "host": {
+        "MemTotal": 10451423232,
+        "MemAvailable": 9725050880,
+        "SwapTotal": 0,
+        "SwapFree": 0
+      },
+      "cgroup_root": "/sys/fs/cgroup",
+      "cgroup": {
+        "memory.max": 8589934592,
+        "memory.current": 1059983360,
+        "memory.peak": 1293033472,
+        "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+        "memory.swap.max": "max",
+        "memory.swap.current": 0,
+        "cpu.max": "800000 100000"
+      },
+      "effective_available_bytes": 7529951232,
+      "memory_policy": "strict",
+      "fallback_enabled": false,
+      "fallback_used": false,
+      "memory_source": "guest_and_cgroup",
+      "controller_state": "observable",
+      "constraints": [
+        {
+          "path": "/sys/fs/cgroup",
+          "limit": 8589934592,
+          "usage": 1059983360
+        }
+      ],
+      "observations": {
+        "/proc/meminfo": {
+          "status": "present",
+          "value": "MemTotal:       10206468 kB\nMemFree:         8835248 kB\nMemAvailable:    9497120 kB\nBuffers:           12304 kB\nCached:           881528 kB\nSwapCached:            0 kB\nActive:           128376 kB\nInactive:         856772 kB\nActive(anon):         92 kB\nInactive(anon):   121140 kB\nActive(file):     128284 kB\nInactive(file):   735632 kB\nUnevictable:       29924 kB\nMlocked:               0 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              5920 kB\nWriteback:             0 kB\nAnonPages:        121432 kB\nMapped:            72960 kB\nShmem:                12 kB\nKReclaimable:      54112 kB\nSlab:              99208 kB\nSReclaimable:      54112 kB\nSUnreclaim:        45096 kB\nKernelStack:        3296 kB\nPageTables:         3656 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103232 kB\nCommitted_AS:     494368 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4584 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:       79872 kB\nDirectMap2M:     3422208 kB\nDirectMap1G:    17825792 kB"
+        },
+        "/proc/self/cgroup": {
+          "status": "present",
+          "value": "0::/"
+        },
+        "/proc/self/mountinfo": {
+          "status": "present",
+          "value": "93 63 0:27 / / rw,nosuid,nodev,relatime - overlay overlay rw,lowerdir=/run/kata-containers/erofs-multi-layer/7a1d8336a6b044ffb802a9d6d0f7ef36/lower-0,upperdir=/run/kata-containers/erofs-multi-layer/7a1d8336a6b044ffb802a9d6d0f7ef36/upper/upper,workdir=/run/kata-containers/erofs-multi-layer/7a1d8336a6b044ffb802a9d6d0f7ef36/upper/work,index=off,metacopy=off\n94 93 0:30 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw\n95 94 0:31 /null /proc/keys rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n96 94 0:31 /null /proc/timer_list rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n97 94 0:30 /bus /proc/bus ro,nosuid,nodev,relatime - proc proc rw\n98 94 0:30 /fs /proc/fs ro,nosuid,nodev,relatime - proc proc rw\n99 94 0:30 /irq /proc/irq ro,nosuid,nodev,relatime - proc proc rw\n100 94 0:30 /sys /proc/sys ro,nosuid,nodev,relatime - proc proc rw\n101 93 0:31 / /dev rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n102 101 0:32 / /dev/pts rw,nosuid,nodev,noexec,relatime - devpts devpts rw,gid=5,mode=620,ptmxmode=666\n103 101 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw\n104 101 0:25 / /dev/mqueue rw,nosuid,nodev,noexec,relatime - mqueue mqueue rw\n105 93 0:20 / /sys ro,nosuid,nodev,noexec,relatime - sysfs sysfs rw\n106 105 0:24 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup2 rw,nsdelegate\n107 101 0:36 / /dev rw,nosuid,nodev,relatime - tmpfs tmpfs rw,mode=755\n108 107 0:31 /null /dev/null rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n109 107 0:31 /zero /dev/zero rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n110 107 0:31 /full /dev/full rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n111 107 0:31 /random /dev/random rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n112 107 0:31 /urandom /dev/urandom rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n113 107 0:31 /tty /dev/tty rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n114 107 0:37 / /dev/pts rw,nosuid,noexec,relatime - devpts devpts rw,mode=620,ptmxmode=666\n115 107 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw"
+        },
+        "/proc/cgroups": {
+          "status": "present",
+          "value": "#subsys_name\thierarchy\tnum_cgroups\tenabled\ncpu\t0\t4\t1\ncpuacct\t0\t4\t1\nblkio\t0\t4\t1\ndevices\t0\t4\t1\nfreezer\t0\t4\t1\nnet_cls\t0\t4\t1\nperf_event\t0\t4\t1\nnet_prio\t0\t4\t1\nhugetlb\t0\t4\t1\npids\t0\t4\t1"
+        },
+        "/sys/fs/cgroup/cgroup.controllers": {
+          "status": "present",
+          "value": "cpuset cpu io memory hugetlb pids"
+        },
+        "/sys/fs/cgroup/memory.max": {
+          "status": "present",
+          "value": "8589934592"
+        },
+        "/sys/fs/cgroup/memory.current": {
+          "status": "present",
+          "value": "1059983360"
+        },
+        "/sys/fs/cgroup/memory.peak": {
+          "status": "present",
+          "value": "1293033472"
+        },
+        "/sys/fs/cgroup/memory.events": {
+          "status": "present",
+          "value": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+        },
+        "/sys/fs/cgroup/memory.swap.max": {
+          "status": "present",
+          "value": "max"
+        },
+        "/sys/fs/cgroup/memory.swap.current": {
+          "status": "present",
+          "value": "0"
+        },
+        "/sys/fs/cgroup/cpu.max": {
+          "status": "present",
+          "value": "800000 100000"
+        }
+      },
+      "errors": [],
+      "limitations": [
+        "Visible namespaces cannot prove absence of hidden ancestor limits.",
+        "Guest availability may change suddenly with ballooning/external contention.",
+        "Software RSS/reserve monitoring is not a dedicated memory cgroup."
+      ],
+      "kernel_memory_controller": null,
+      "controller_version": "v2"
+    },
+    "final_memory": {
+      "host": {
+        "MemTotal": 10451423232,
+        "MemAvailable": 9736892416,
+        "SwapTotal": 0,
+        "SwapFree": 0
+      },
+      "cgroup_root": "/sys/fs/cgroup",
+      "cgroup": {
+        "memory.max": 8589934592,
+        "memory.current": 1062158336,
+        "memory.peak": 1293033472,
+        "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+        "memory.swap.max": "max",
+        "memory.swap.current": 0,
+        "cpu.max": "800000 100000"
+      },
+      "effective_available_bytes": 7527776256,
+      "memory_policy": "strict",
+      "fallback_enabled": false,
+      "fallback_used": false,
+      "memory_source": "guest_and_cgroup",
+      "controller_state": "observable",
+      "constraints": [
+        {
+          "path": "/sys/fs/cgroup",
+          "limit": 8589934592,
+          "usage": 1062158336
+        }
+      ],
+      "observations": {
+        "/proc/meminfo": {
+          "status": "present",
+          "value": "MemTotal:       10206468 kB\nMemFree:         8846080 kB\nMemAvailable:    9508684 kB\nBuffers:           12304 kB\nCached:           882244 kB\nSwapCached:            0 kB\nActive:           129088 kB\nInactive:         858444 kB\nActive(anon):         92 kB\nInactive(anon):   122808 kB\nActive(file):     128996 kB\nInactive(file):   735636 kB\nUnevictable:       29956 kB\nMlocked:              32 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:              5736 kB\nWriteback:             0 kB\nAnonPages:        123036 kB\nMapped:            73472 kB\nShmem:                12 kB\nKReclaimable:      54140 kB\nSlab:              99064 kB\nSReclaimable:      54140 kB\nSUnreclaim:        44924 kB\nKernelStack:        3344 kB\nPageTables:         3692 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5103232 kB\nCommitted_AS:     514720 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        4648 kB\nVmallocChunk:          0 kB\nPercpu:             2592 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:       79872 kB\nDirectMap2M:     3422208 kB\nDirectMap1G:    17825792 kB"
+        },
+        "/proc/self/cgroup": {
+          "status": "present",
+          "value": "0::/"
+        },
+        "/proc/self/mountinfo": {
+          "status": "present",
+          "value": "93 63 0:27 / / rw,nosuid,nodev,relatime - overlay overlay rw,lowerdir=/run/kata-containers/erofs-multi-layer/7a1d8336a6b044ffb802a9d6d0f7ef36/lower-0,upperdir=/run/kata-containers/erofs-multi-layer/7a1d8336a6b044ffb802a9d6d0f7ef36/upper/upper,workdir=/run/kata-containers/erofs-multi-layer/7a1d8336a6b044ffb802a9d6d0f7ef36/upper/work,index=off,metacopy=off\n94 93 0:30 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw\n95 94 0:31 /null /proc/keys rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n96 94 0:31 /null /proc/timer_list rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n97 94 0:30 /bus /proc/bus ro,nosuid,nodev,relatime - proc proc rw\n98 94 0:30 /fs /proc/fs ro,nosuid,nodev,relatime - proc proc rw\n99 94 0:30 /irq /proc/irq ro,nosuid,nodev,relatime - proc proc rw\n100 94 0:30 /sys /proc/sys ro,nosuid,nodev,relatime - proc proc rw\n101 93 0:31 / /dev rw,nosuid,nodev - tmpfs tmpfs rw,size=65536k,mode=755\n102 101 0:32 / /dev/pts rw,nosuid,nodev,noexec,relatime - devpts devpts rw,gid=5,mode=620,ptmxmode=666\n103 101 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw\n104 101 0:25 / /dev/mqueue rw,nosuid,nodev,noexec,relatime - mqueue mqueue rw\n105 93 0:20 / /sys ro,nosuid,nodev,noexec,relatime - sysfs sysfs rw\n106 105 0:24 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup2 rw,nsdelegate\n107 101 0:36 / /dev rw,nosuid,nodev,relatime - tmpfs tmpfs rw,mode=755\n108 107 0:31 /null /dev/null rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n109 107 0:31 /zero /dev/zero rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n110 107 0:31 /full /dev/full rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n111 107 0:31 /random /dev/random rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n112 107 0:31 /urandom /dev/urandom rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n113 107 0:31 /tty /dev/tty rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n114 107 0:37 / /dev/pts rw,nosuid,noexec,relatime - devpts devpts rw,mode=620,ptmxmode=666\n115 107 0:26 / /dev/shm rw,nosuid,nodev,relatime - tmpfs shm rw"
+        },
+        "/proc/cgroups": {
+          "status": "present",
+          "value": "#subsys_name\thierarchy\tnum_cgroups\tenabled\ncpu\t0\t4\t1\ncpuacct\t0\t4\t1\nblkio\t0\t4\t1\ndevices\t0\t4\t1\nfreezer\t0\t4\t1\nnet_cls\t0\t4\t1\nperf_event\t0\t4\t1\nnet_prio\t0\t4\t1\nhugetlb\t0\t4\t1\npids\t0\t4\t1"
+        },
+        "/sys/fs/cgroup/cgroup.controllers": {
+          "status": "present",
+          "value": "cpuset cpu io memory hugetlb pids"
+        },
+        "/sys/fs/cgroup/memory.max": {
+          "status": "present",
+          "value": "8589934592"
+        },
+        "/sys/fs/cgroup/memory.current": {
+          "status": "present",
+          "value": "1062158336"
+        },
+        "/sys/fs/cgroup/memory.peak": {
+          "status": "present",
+          "value": "1293033472"
+        },
+        "/sys/fs/cgroup/memory.events": {
+          "status": "present",
+          "value": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+        },
+        "/sys/fs/cgroup/memory.swap.max": {
+          "status": "present",
+          "value": "max"
+        },
+        "/sys/fs/cgroup/memory.swap.current": {
+          "status": "present",
+          "value": "0"
+        },
+        "/sys/fs/cgroup/cpu.max": {
+          "status": "present",
+          "value": "800000 100000"
+        }
+      },
+      "errors": [],
+      "limitations": [
+        "Visible namespaces cannot prove absence of hidden ancestor limits.",
+        "Guest availability may change suddenly with ballooning/external contention.",
+        "Software RSS/reserve monitoring is not a dedicated memory cgroup."
+      ],
+      "kernel_memory_controller": null,
+      "controller_version": "v2"
+    },
+    "initial_renderer_rss_bytes": 27271168,
+    "final_renderer_rss_bytes": 29306880,
+    "renderer_peak_rss_bytes": 32960512,
+    "waited_child_max_rss_bytes": 72036352,
+    "encoder_peak_rss_bytes": 69894144,
+    "all_children_peak_rss_bytes": 72257536,
+    "estimated_simultaneous_tree_peak_rss_bytes": 102834176,
+    "sampling_interval_seconds": 0.01,
+    "samples": 448,
+    "job_budget_bytes": 268435456,
+    "reserve_bytes": 67108864,
+    "limit_reason": null,
+    "minimum_effective_available_bytes": 7474565120,
+    "maximum_effective_available_bytes": 7529951232,
+    "memory_observations": 46,
+    "minimum_workspace_free_bytes": 63281033216,
+    "disk_reserve_bytes": 67108864,
+    "wall_seconds": 6.343157036999855,
+    "caveat": "Sampled sum of RSS can miss transient peaks and double-count shared pages; cgroup counters are shared, not a dedicated job limit."
+  },
+  "observability": {
+    "policy": "strict",
+    "initial_source": "guest_and_cgroup",
+    "final_source": "guest_and_cgroup",
+    "fallback_enabled": false,
+    "fallback_used": false,
+    "oom_counters_available": true,
+    "oom_event_delta": {
+      "low": 0,
+      "high": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0
+    },
+    "oom_events_changed": false,
+    "sufficient_for_technical_validation": true,
+    "limitations": [],
+    "deployment_gate_approved": false
+  },
+  "verification": {
+    "passed": true,
+    "mp4_top_level_boxes": [
+      "ftyp",
+      "moov",
+      "free",
+      "mdat"
+    ],
+    "metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_tag_string": "avc1",
+          "width": 720,
+          "height": 1280,
+          "pix_fmt": "yuv420p",
+          "avg_frame_rate": "30/1",
+          "nb_read_frames": "90"
+        }
+      ],
+      "format": {
+        "duration": "3.000000",
+        "size": "733083"
+      }
+    },
+    "decoded_frames": 90,
+    "unique_decoded_frames": 90,
+    "decoded_rgb_sha256": [
+      "6b21d44a3d8a8854055fe6911b4397059634bcd3c9d1bdefbb29ced913f5655d",
+      "1f03b2c30960aaee43475e52eece1e19ba823b64dad4013ed77c4a5e5a85f9c6",
+      "4b23591bb72d5037e8899953f9890fd6027fcec7617348c9e43d57f2ebb0f0d5",
+      "8f50d9b4ca13aed7526f9e1b6050dbe64f6ac634c0890679b06f9ece5f93be4f",
+      "ad5db42f2269d24a70e9baa006c3c97a96997033417bba8eb5a28d087a35037d",
+      "43fe8013781a4cd60bc3f49b0855971de2c90d00fb4b7a7c7e21184c41d0d5f6",
+      "36b0968749a78242658fc938677548bf9c8f6770c078f9616c905d73fc252f6b",
+      "0b7a9f8ef41ccee3f0e1f6eccc6c11ef76eef450ee831e906f7eeaf5c1a6ef38",
+      "cdfea1dd807900de525e2f6cc57aa123bf239c2fb5d19066dd2434965b2b2113",
+      "7ad0b4fa89c78fdab555ac9e961d5bfdb4ff28a6d052c90f45421f4ae490b654",
+      "d330065f862ab3db9557a4cd6b40b08f3f2f660dc97b4de7ec95cb95f6330bb0",
+      "071c07677a7fabaa8d26f0137dd9af9957a6c3f8d635c90140e5ca797bfc0fc6",
+      "04eaa9413e002edc25f1d490521bd3b58a4429db70bb4357a71fb164d6b71349",
+      "464ec9e32040eb0a33a0851cadd13277215e30d30040a004e1a91be7605a0308",
+      "88425c375d008f181c1d16a296e8b46abb229c2c372576350a1c95cedabe8895",
+      "7f28de76f665e07cc53d221d0f5bf69f3eaa188896f1bb52b98ede80b6c7764a",
+      "3366fdb302eed36d0d51593868561f9a5757408bbba7557314218e504ba027ea",
+      "79abab8f88588c3682aabf07990828e27b3d4c1a2bdc1aecb5869e27a891dc73",
+      "11198434023452384269a8d7a87b64124d99843d7ce001fa8fda904825d6e47d",
+      "da958bb9f6ea692c7fc7404005aa5c53877d782bd1b03c40d961ed6682230708",
+      "e0dac5c6b8226b07625803ad1258f4462f8ad86b4aa2f1aaaf4bddf3f96caa36",
+      "aca92a25cb0863feef66d55213ae2de81246ed3f25eb916bfb5297e5d4a2910e",
+      "2c761c501dcc71c71a8eda67527a3bf274d995fa5773a1eab214cc8d96084e0f",
+      "17d3fd73aeaf2ac8a96746f5ab72588ef775fd58a49a7272652df7fd6dfbdd48",
+      "db330fd7be98a680f05d306b9b810f1bf4d918ff1bda89bed5a4d14a813ed78e",
+      "fa04112a8db538c28263358544139f87693cff756fcf666fa4e9a3fda1722994",
+      "3075e4aef76921179775b250180215fb3bb8e6ebc3d4c5e3835fbdbe0de5a820",
+      "a9c82a1a583e24ccc3e7df45a17f375e5013ece05bf36a6a73b7b757b085a8b6",
+      "c1d19c1f2424b0c0078d6ad6a4460920e33de6ceb9a11fdc447dc67bbe8ed0c0",
+      "9e43893a01656bbb57de5baa29f190fea32e312ebe4dc2c407687ca2ba38cb30",
+      "684cbc383d16b0de9fbb99d0cdf673e755c29890bdb06ccdf91e1d66858ec479",
+      "83d69347aabaaa31fe3b3b5796474e38bd92390e6f0b1840e35e9f0d5dfb902e",
+      "e6f5976b6ecd312f9d5ea457dec347a86aa0e2f596eec1f64c42a2f981316277",
+      "a55e7ae3e8dc446fd520e790aacca9b19d48a634a95d91a587b226aeefe5467f",
+      "23a0aad26e8c1ecab0ff98aca4726c7e7cf0be966b09f677440cb0e5187db7ea",
+      "51e06fffb6f211e27593640f1f03c8d30ae357c04c7eea0f14eb8b53b0246d0a",
+      "8ec99c24d7dcfdc0c6816f582fc830a19720837859f79b4a3f2e60cdf85273c2",
+      "98d93bcd1a28716a2ea91c0a26c89af79d244299744d54fb5907a404fc03400e",
+      "0c1876056a6e16c8e701861804193a06d62fcedbd7af1e4dff436e4eb72c335d",
+      "187fba87d499ca90c66aaf967f4a24002d39b9a0048b63736de22bd8a5bdae11",
+      "b92c42466f3c5fec941b2a66c750589ce82ec962a5c0b0ca5fec882722cc2cb9",
+      "9ebfd543a74e8165bf1279929bc185c3abb2865fe2a4633aae3071697952a992",
+      "b4bceee3f293fdc443c1e7ba3b39cd4abcae6b20bff96544c99d5c81098769d5",
+      "bf66196ce96a9bb81ce5880296a78eae661e29c5039a272720da456fc7dff8c7",
+      "4c2a6287daa893ad2ad8debe7db446ee4a882f221bf207411fb258294c6e2cf4",
+      "80779cddc7422bd40acd59297fbde6158bd0cb141bab7f013924c167a6b73ffd",
+      "b6650af14067414fa82220229075f0fa8fee8f8b40d9fe55dff95f66be007717",
+      "c17d186b12a598c2c8d9baea20a7e78c7a1d132ae82fa13a82cf7576e59deef5",
+      "47725d7ba534b80a4d7b350ffea655ade5d463db3a0a8ee94755b464ef9831bb",
+      "5a03fe0f8dd368283f08b7326d67c6e23707c575274fecf6512d3d75401253bc",
+      "1c12ad3c34b5754d1ac30e4b4a3265daa520e735cd1310904f93392f8a5837b3",
+      "73b4c7931c6d0e612a5844cd309dc682dbdab46fde4a7949e9fbabaaca4bdc08",
+      "99c91a73773cd7c2d401add96022e1b05aa8f7502551945143aed236df4db0df",
+      "f98d8631851a38df00adfe2e1bb28a86abf9bcf1fe385a1aacda12b640b400dc",
+      "5dc7144900c599b4b4fea60012b848f4bbf3df6631f76095854c47c44e143f1b",
+      "ace345525d9d00a667fd270e60fe9a81ea2c7f052fb247ef6ca59388cce3eb63",
+      "2e4dd66b55b9e3b13fe5db258d9bd70093ebb727ec8832a3e2382982212de7cd",
+      "3b283f6a917f4279fc4dba9153f7efd883bb831f89d021f103e0af62f1aa4af4",
+      "1dc17e1aa263e80f0fc1510cc6aedbf71e1aa857854747c817f4ecfcc12203ef",
+      "788f21ae7a6415408b4970bdfe94ae77bfdc40dbd65d78d9d4dd0423933e8205",
+      "5f6c69d3e559d606f9174e7b425612b32a51c1b617c498a688e2e1b317baef51",
+      "20617977343cc60ffd2003082e56b15541bbd2b66ae95942e32e6e7a03d342fd",
+      "46bbc311eac6659aa9691a8c8d6c7a1221b6a515fc6e86d90c685ccd2bfae8d1",
+      "56aa7e165e5970966ae4dc2b409b299641806422f0f219d52a9f74073f2f02a1",
+      "c00354110ca3b3b7a555976237505b71030e9f613dac6f7c1ab021b049c7b560",
+      "181865e13de8f84be8851021844978bb6f9d6cf23cc1739016318e83f92ffc8c",
+      "1a0c5a72d08268410e3041458c26fb7aa484469253c6dac676c114e5c3cf3459",
+      "fad17773ae87e1ddbbc0307bb80d778375c35efa5ed8c7e814442dea3110e23c",
+      "515464e9e401d7e265f85a7541cb05155e4ce345cd681a40986a8340e3ea0784",
+      "5388a76c61b3842fb053e3a9af61f1e4b6bcd99b434192f26c4dd2fd3342a165",
+      "da93a3f204a2eb152f852f97d6f890e6a2bdc7715df97392d4f0ada7d3ab265c",
+      "18bfd32272d8b6c4fed10796585a1801d7507b908f36a408e60abb3705fed47b",
+      "dff5ba44b8b88a2896ec0ab58ba1194c50a69a1c477873920bfda85dd8b57c8f",
+      "93345c92a41d73aa557b28dc16e7f3e4231668a4cff51f53d9f1b1e55bd64891",
+      "2df6a5af921270a5d25cea0a8ec8ca68731088df504008e111656dbcf7cc8994",
+      "9f52c19fc74dd9cc54a5d2313b24c9aadb769ccc87f2ffa4c8f402e36e5fa270",
+      "1bff5bd04b86f8cf1ba0fb54994205494092f6775a7e296d340f645a88c7a911",
+      "3d3229d683f2dd8f1e31407bfb9f731ce6a9a2fe97c93f40d0b0e478e8488caa",
+      "84ee65637e4395bae5c714780d347a3f6a5dd78bf8afb28e9dd97c2359b18bc0",
+      "9ee771f62e42507aac2604f2e2578ea55060335fb02ecb93b25e2f2d882420c4",
+      "714f31ff631b8f42d712bf03d5356025f88c222ce7960c41a1ee2eff810b9b67",
+      "58317d7f59ab3a7278d9ba90e3fcf9c4b5dd4050b901db6d72f2fea5bd33e06c",
+      "1f8a8c922eddb6184baed0842bf02f8448aba9aa204c514795af81953a1a8e10",
+      "7c88d315d7c01a53c85061b513fcac1a61b57a1ca8ef279227805b72595e3c09",
+      "db5268279df0a42b0b14c3b380d1365d2d7bd085ac136b5fa20d482763f43d11",
+      "5856a518380d1ec782ecc5d4cc8ef0a9de5df8f007f76a4dd99e2a04ff24ad30",
+      "b624ce67127f12e8ccc73c99fa6e84785246da0c5ca3448600a51840561c7d0f",
+      "d295eeab80133f0b5b97dc5cf627621e4264c4dc3057f14917ee3f8d097c9830",
+      "193cf1e14c4e5986ee49f6d4e92f478bb4275701ff4f170200673b8b8e9dbb5e",
+      "37e345dbadf4b1e84254e5355412d12b441672551642f58174cb36ce6da1479a"
+    ],
+    "decode_exit_status": 0,
+    "decode_command": [
+      "/usr/bin/ffmpeg",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-xerror",
+      "-err_detect",
+      "explode",
+      "-threads",
+      "1",
+      "-i",
+      "/workspace/scratch/ade48aa5d272/reelforge-phase6b/artifacts/phase6b/proofs/settlement_escape_video/scene.mp4",
+      "-map",
+      "0:v:0",
+      "-an",
+      "-sn",
+      "-dn",
+      "-threads:v",
+      "1",
+      "-filter_threads",
+      "1",
+      "-pix_fmt",
+      "rgb24",
+      "-fps_mode",
+      "passthrough",
+      "-f",
+      "framehash",
+      "-hash",
+      "sha256",
+      "pipe:1"
+    ],
+    "comparison_scope": "Exact decoded RGB24 hashes on the same native FFmpeg build"
+  },
+  "live_surfaces_after": 0,
+  "surface_bytes_after": 0
+}

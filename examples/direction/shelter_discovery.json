@@ -1,0 +1,225 @@
+{
+  "schema_version": "direction-0.1",
+  "title": "Shelter Discovery",
+  "base": {
+    "schema_version": "blocking-0.1",
+    "title": "Shelter approach \u2014 stop and look back",
+    "base": {
+      "schema_version": "environment-0.1",
+      "title": "Rocky Shelter \u2014 seed 417",
+      "family": "rocky_shelter",
+      "seed": 417,
+      "composition": {
+        "density": 2,
+        "path_alignment": 0,
+        "structure": 0.7,
+        "framing": 0.8,
+        "detail": "rich"
+      },
+      "art_direction": {
+        "lighting": "dusk",
+        "atmosphere": 0.7
+      },
+      "rowan": {
+        "enabled": true,
+        "action": "look_around",
+        "side": "left"
+      }
+    },
+    "actor_id": "rowan",
+    "support_id": "ground",
+    "corridor": "level_field",
+    "start": {
+      "position": [
+        165,
+        470
+      ],
+      "facing": "right"
+    },
+    "camera": "locked",
+    "segments": [
+      {
+        "id": "observe",
+        "start_frame": 0,
+        "end_frame": 6,
+        "mode": "idle",
+        "destination": [
+          165,
+          470
+        ],
+        "end_speed": 0,
+        "facing": "right",
+        "acting": "idle",
+        "expression": "concerned"
+      },
+      {
+        "id": "approach",
+        "start_frame": 6,
+        "end_frame": 48,
+        "mode": "walk",
+        "destination": [
+          201,
+          470
+        ],
+        "end_speed": 30,
+        "facing": "right",
+        "acting": "none",
+        "expression": "concerned"
+      },
+      {
+        "id": "brake",
+        "start_frame": 48,
+        "end_frame": 66,
+        "mode": "stop",
+        "destination": [
+          210,
+          470
+        ],
+        "end_speed": 0,
+        "facing": "right",
+        "acting": "none",
+        "expression": "concerned"
+      },
+      {
+        "id": "look_back",
+        "start_frame": 66,
+        "end_frame": 84,
+        "mode": "idle",
+        "destination": [
+          210,
+          470
+        ],
+        "end_speed": 0,
+        "facing": "right",
+        "acting": "react",
+        "expression": "concerned"
+      },
+      {
+        "id": "hold",
+        "start_frame": 84,
+        "end_frame": 90,
+        "mode": "idle",
+        "destination": [
+          210,
+          470
+        ],
+        "end_speed": 0,
+        "facing": "right",
+        "acting": "react",
+        "expression": "concerned"
+      }
+    ]
+  },
+  "shots": [
+    {
+      "id": "wide_apron",
+      "start_frame": 0,
+      "end_frame": 24,
+      "behavior": "establishing",
+      "target": {
+        "kind": "point",
+        "position": [
+          180,
+          470
+        ],
+        "depth": 1
+      },
+      "track": false,
+      "look_ahead_seconds": 0,
+      "zoom": [
+        1,
+        1
+      ],
+      "offset_start": [
+        0,
+        0
+      ],
+      "offset_end": [
+        0,
+        0
+      ],
+      "screen": [
+        180,
+        470
+      ],
+      "hold_in_frames": 0,
+      "hold_out_frames": 0,
+      "framing": "full",
+      "safe_margin": 8,
+      "foreground": "declared_overlap",
+      "continuity": "intentional_reframe"
+    },
+    {
+      "id": "entrance_push",
+      "start_frame": 24,
+      "end_frame": 66,
+      "behavior": "push_in",
+      "target": {
+        "kind": "point",
+        "position": [
+          230,
+          415
+        ],
+        "depth": 0.85
+      },
+      "track": false,
+      "look_ahead_seconds": 0,
+      "zoom": [
+        1.04,
+        1.25
+      ],
+      "offset_start": [
+        0,
+        0
+      ],
+      "offset_end": [
+        0,
+        0
+      ],
+      "screen": [
+        228,
+        410
+      ],
+      "hold_in_frames": 3,
+      "hold_out_frames": 3,
+      "framing": "full",
+      "safe_margin": 8,
+      "foreground": "declared_overlap",
+      "continuity": "intentional_reframe"
+    },
+    {
+      "id": "reaction",
+      "start_frame": 66,
+      "end_frame": 90,
+      "behavior": "reaction",
+      "target": {
+        "kind": "actor",
+        "id": "rowan"
+      },
+      "track": false,
+      "look_ahead_seconds": 0,
+      "zoom": [
+        1.38,
+        1.38
+      ],
+      "offset_start": [
+        0,
+        -52
+      ],
+      "offset_end": [
+        0,
+        -52
+      ],
+      "screen": [
+        160,
+        400
+      ],
+      "hold_in_frames": 4,
+      "hold_out_frames": 4,
+      "framing": "full",
+      "safe_margin": 8,
+      "foreground": "declared_overlap",
+      "continuity": "intentional_reframe"
+    }
+  ]
+}

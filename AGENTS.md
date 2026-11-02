@@ -137,3 +137,15 @@ and exactly one final full local-suite attempt; retain restoration failures with
 Publication uses one standard CI run, not a separate diagnostic branch by default.
 No delegation, GitHub push, deployment, Muse Spark or Phase 6B is authorized.
 Stop after the local commit and complete Phase 6A Git archive for independent review.
+
+## Current Phase 6B assignment
+
+Phase 6A passed normal GitHub CI (862 tests); approved baseline
+ca35dad8a006d04601db0d0885b6484348c8f54f. Explicit Phase 6B authorization supersedes
+historical phase-stop notes above. Work only on direction-0.1 cinematography on
+phase6b-cinematic-direction; read docs/CINEMATIC_DIRECTION.md and docs/PHASE6B_REPORT.md.
+Preserve all accepted tests, contracts, rig, locomotion, audio, media, transaction and
+resource semantics. Use targeted development tests and at most one final local full-suite
+attempt; retain host restoration failures without retrying. Publication uses one normal CI
+run. No delegation, GitHub push, deployment, Muse Spark, Phase 6C or Phase 7 is authorized.
+Stop after the local commit and complete committed ZIP for independent review.

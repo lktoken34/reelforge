@@ -251,3 +251,12 @@ The installed production episode CLI remains unchanged and not render-ready.
 stopping, acting and stationary facing changes over accepted scenes/environments and
 JSON-authored props. Discover with `python tools/blocking.py capabilities`; see
 [the motion and resource evidence](docs/PHASE6A_REPORT.md). Production remains not render-ready.
+
+### Experimental Phase 6B cinematic direction
+
+`direction-0.1` films one accepted continuous world with bounded establishing, follow,
+push-in, reaction, object-reveal and suspense-hold shots. Camera cuts retain global motion
+and environment time. Read [CINEMATIC_DIRECTION.md](docs/CINEMATIC_DIRECTION.md), copy
+`examples/direction/woodland_suspense.json`, and use `python tools/direction.py capabilities`,
+`schema`, `validate`, `inspect`, `frame` and `render`. The installed production CLI remains
+unchanged. See [PHASE6B_REPORT.md](docs/PHASE6B_REPORT.md) for evidence and limitations.

@@ -200,9 +200,13 @@ def camera_at(compiled: CompiledScene, frame: int) -> Camera:
 
 
 def evaluate_layers(
-    compiled: CompiledScene, frame: int, *, character_override: CharacterFrame | None = None
+    compiled: CompiledScene,
+    frame: int,
+    *,
+    character_override: CharacterFrame | None = None,
+    camera_override: Camera | None = None,
 ) -> tuple[EvaluatedLayer, ...]:
-    camera = camera_at(compiled, frame)
+    camera = camera_at(compiled, frame) if camera_override is None else camera_override
     scene = compiled.scene
     lookup = {n.id: n for n in scene.nodes}
     resolved = {n.id: n for n in compiled.hierarchy}
