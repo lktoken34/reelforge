@@ -4,12 +4,11 @@ Defines isolated pose constructors (rest, hands_up, crouch, jump_apex, land)
 and the 30-frame deterministic animation timeline sampler.
 """
 
-import math
 from dataclasses import dataclass
 
 from reelforge.characters.rig import Pose, Rigid
 
-from .rig import UPPER_ARM, UPPER_LEG, solve_vertical_leg_ik
+from .rig import solve_vertical_leg_ik
 
 GROUND_Y = 530.0
 CHAR_SCALE = 1.30
@@ -83,7 +82,9 @@ def pose_hands_up(raise_amount: float = 1.0) -> Pose:
     )
 
 
-def pose_crouch(compression_ratio: float = 0.65, torso_lean: float = 0.12, arm_back: float = 0.80) -> Pose:
+def pose_crouch(
+    compression_ratio: float = 0.65, torso_lean: float = 0.12, arm_back: float = 0.80
+) -> Pose:
     """Pre-jump anticipation crouch with deeply bent knees and feet pinned flat."""
     target_dy = REST_LEG_LENGTH * compression_ratio
     hip_angle, knee_angle, ankle_angle = solve_vertical_leg_ik(target_dy)

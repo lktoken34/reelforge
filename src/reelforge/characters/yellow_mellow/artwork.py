@@ -4,13 +4,11 @@ Pure vector geometry rendering via ReelForge DrawPath, PathOp, LinearGradient,
 Color and Stroke primitives. Implements parent-child skeletal transformation mapping.
 """
 
-import math
 from dataclasses import dataclass, replace
 
 from reelforge.characters.rig import Pose, Skeleton
 from reelforge.rendering.diagnostic import color, ellipse
 from reelforge.rendering.model import (
-    Color,
     DrawPath,
     LinearGradient,
     PathOp,

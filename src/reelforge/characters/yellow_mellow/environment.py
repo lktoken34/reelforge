@@ -5,16 +5,12 @@ Color and Stroke primitives. Provides layered background, midground, and
 foreground depth stages with dynamic contact shadow support.
 """
 
-import math
-
 from reelforge.rendering.diagnostic import color, ellipse
 from reelforge.rendering.model import (
-    Color,
     DrawPath,
     LinearGradient,
     PathOp,
     Stroke,
-    Transform,
     finite,
 )
 
@@ -117,7 +113,10 @@ def make_moon_layer() -> tuple[DrawPath, ...]:
         # Solid lunar body
         shape(
             ellipse(mx, my, mr, mr),
-            LinearGradient((mx - mr, my - mr), (mx + mr, my + mr), ((0.0, MOON_WHITE), (1.0, MOON_SILVER))),
+            LinearGradient(
+                (mx - mr, my - mr), (mx + mr, my + mr),
+                ((0.0, MOON_WHITE), (1.0, MOON_SILVER)),
+            ),
             stroke_color=color("c8daf2", 0.5),
             stroke_width=1.0,
         ),
@@ -138,7 +137,8 @@ def make_city_skyline() -> tuple[DrawPath, ...]:
         ("M", 0, 440),
         ("L", 0, 340), ("L", 28, 340), ("L", 28, 310), ("L", 42, 310), ("L", 42, 340),
         ("L", 65, 340), ("L", 65, 325), ("L", 80, 325), ("L", 80, 355),
-        ("L", 110, 355), ("L", 110, 295), ("L", 125, 295), ("L", 130, 270), ("L", 135, 295), ("L", 145, 295), ("L", 145, 360),
+        ("L", 110, 355), ("L", 110, 295), ("L", 125, 295),
+        ("L", 130, 270), ("L", 135, 295), ("L", 145, 295), ("L", 145, 360),
         ("L", 175, 360), ("L", 175, 320), ("L", 195, 320), ("L", 195, 360),
         ("L", 220, 360), ("L", 220, 305), ("L", 240, 305), ("L", 240, 350),
         ("L", 280, 350), ("L", 280, 330), ("L", 305, 330), ("L", 305, 355),
@@ -172,7 +172,11 @@ def make_city_skyline() -> tuple[DrawPath, ...]:
     cmds.append(
         shape(
             path(("M", 0, 390), ("L", 360, 390), ("L", 360, 460), ("L", 0, 460), ("Z",)),
-            LinearGradient((180, 390), (180, 460), ((0.0, color("281d3b", 0.0)), (0.6, HAZE_VIOLET), (1.0, color("1c2436", 0.8)))),
+            LinearGradient(
+                (180, 390), (180, 460),
+                ((0.0, color("281d3b", 0.0)), (0.6, HAZE_VIOLET),
+                 (1.0, color("1c2436", 0.8))),
+            ),
         )
     )
     
@@ -205,14 +209,21 @@ def make_observatory_layer() -> tuple[DrawPath, ...]:
                 ("C", 15, 355, 105, 355, 105, 415),
                 ("Z",),
             ),
-            LinearGradient((60, 360), (60, 415), ((0.0, DOME_RIM), (0.35, DOME_MAIN), (1.0, DOME_DARK))),
+            LinearGradient(
+                (60, 360), (60, 415),
+                ((0.0, DOME_RIM), (0.35, DOME_MAIN), (1.0, DOME_DARK)),
+            ),
             stroke_color=DOME_DARK,
             stroke_width=1.2,
         )
     )
     # Dome structural ribs
-    cmds.append(line(path(("M", 38, 415), ("C", 40, 375, 60, 365, 60, 365)), paint=DOME_RIB, width=1.1))
-    cmds.append(line(path(("M", 82, 415), ("C", 80, 375, 60, 365, 60, 365)), paint=DOME_RIB, width=1.1))
+    cmds.append(
+        line(path(("M", 38, 415), ("C", 40, 375, 60, 365, 60, 365)), paint=DOME_RIB, width=1.1)
+    )
+    cmds.append(
+        line(path(("M", 82, 415), ("C", 80, 375, 60, 365, 60, 365)), paint=DOME_RIB, width=1.1)
+    )
     
     # Telescope Slit / Shutter opening
     cmds.append(
@@ -233,7 +244,10 @@ def make_observatory_layer() -> tuple[DrawPath, ...]:
                 ("L", 62, 400),
                 ("Z",),
             ),
-            LinearGradient((56, 400), (94, 355), ((0.0, TELESCOPE_BRONZE), (0.6, TELESCOPE_HIGHLIGHT), (1.0, DOME_DARK))),
+            LinearGradient(
+                (56, 400), (94, 355),
+                ((0.0, TELESCOPE_BRONZE), (0.6, TELESCOPE_HIGHLIGHT), (1.0, DOME_DARK)),
+            ),
             stroke_color=DOME_DARK,
             stroke_width=1.0,
         )
@@ -255,12 +269,16 @@ def make_railing_and_floor() -> tuple[DrawPath, ...]:
     
     # Stanchions / vertical posts
     for rx in range(15, 355, 38):
-        cmds.append(line(path(("M", rx, rail_y_top), ("L", rx, rail_y_base)), paint=RAIL_DARK, width=2.0))
+        cmds.append(
+            line(path(("M", rx, rail_y_top), ("L", rx, rail_y_base)), paint=RAIL_DARK, width=2.0)
+        )
         # Moonlight rim on top cap of post
         cmds.append(DrawPath(ellipse(rx, rail_y_top, 1.8, 1.2), RAIL_TOP))
     
     # Horizontal rails
-    cmds.append(line(path(("M", 0, rail_y_mid), ("L", 360, rail_y_mid)), paint=RAIL_DARK, width=1.5))
+    cmds.append(
+        line(path(("M", 0, rail_y_mid), ("L", 360, rail_y_mid)), paint=RAIL_DARK, width=1.5)
+    )
     cmds.append(line(path(("M", 0, rail_y_top), ("L", 360, rail_y_top)), paint=RAIL_TOP, width=2.0))
     
     # 2. Rooftop floor slab
@@ -286,7 +304,9 @@ def make_railing_and_floor() -> tuple[DrawPath, ...]:
     for hy in (488, 508, 532, 562, 600, 640):
         cmds.append(line(path(("M", 0, hy), ("L", 360, hy)), paint=ROOF_LINE, width=1.2))
         # Subtle moonlight edge highlight on tiles
-        cmds.append(line(path(("M", 0, hy + 1), ("L", 360, hy + 1)), paint=ROOF_MOONSHINE, width=0.8))
+        cmds.append(
+            line(path(("M", 0, hy + 1), ("L", 360, hy + 1)), paint=ROOF_MOONSHINE, width=0.8)
+        )
     
     # Perspective diagonal seams
     vp_x, vp_y = 180.0, 390.0
@@ -297,7 +317,9 @@ def make_railing_and_floor() -> tuple[DrawPath, ...]:
         # Start at rail_y_base
         t_start = (rail_y_base - vp_y) / dy
         x_start = vp_x + t_start * dx
-        cmds.append(line(path(("M", x_start, rail_y_base), ("L", bx, 640)), paint=ROOF_LINE, width=1.0))
+        cmds.append(
+            line(path(("M", x_start, rail_y_base), ("L", bx, 640)), paint=ROOF_LINE, width=1.0)
+        )
     
     return tuple(cmds)
 

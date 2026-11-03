@@ -6,8 +6,8 @@ reusable pose objects, and inverse kinematics for planted foot constraints.
 
 import math
 
-from reelforge.characters.rig import Joint, Pose, Rigid, Skeleton
-from reelforge.rendering.model import RenderError, finite
+from reelforge.characters.rig import Joint, Skeleton
+from reelforge.rendering.model import finite
 
 UPPER_LEG = 24.0
 LOWER_LEG = 24.0
