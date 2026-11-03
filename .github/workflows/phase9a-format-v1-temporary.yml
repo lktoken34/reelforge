@@ -1,31 +1,38 @@
-name: Phase9A V1 formatter (temporary)
+name: Phase9A V1 formatting publisher (temporary)
 on:
   push:
     branches: [mvp-yellow-mellow-integration]
 permissions:
-  contents: read
+  contents: write
 jobs:
-  format-v1:
+  format-and-publish:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
       - uses: astral-sh/setup-uv@v6
         with:
           version: '0.13.4'
           python-version: '3.12'
       - run: uv sync --frozen
-      - name: Format precisely four legacy V1 files
+      - name: Format four V1 files and publish one commit
+        shell: bash
         run: |
-          uv run --frozen ruff format src/reelforge/characters/yellow_mellow/artwork.py src/reelforge/characters/yellow_mellow/environment.py src/reelforge/characters/yellow_mellow/poses.py src/reelforge/characters/yellow_mellow/rig.py
-          uv run --frozen ruff check src/reelforge/characters/yellow_mellow/artwork.py src/reelforge/characters/yellow_mellow/environment.py src/reelforge/characters/yellow_mellow/poses.py src/reelforge/characters/yellow_mellow/rig.py
-          uv run --frozen ruff format --check src/reelforge/characters/yellow_mellow/artwork.py src/reelforge/characters/yellow_mellow/environment.py src/reelforge/characters/yellow_mellow/poses.py src/reelforge/characters/yellow_mellow/rig.py
-      - uses: actions/upload-artifact@v4
-        with:
-          name: phase9a-v1-formatted-4-files
-          path: |
+          set -euo pipefail
+          files=(
             src/reelforge/characters/yellow_mellow/artwork.py
             src/reelforge/characters/yellow_mellow/environment.py
             src/reelforge/characters/yellow_mellow/poses.py
             src/reelforge/characters/yellow_mellow/rig.py
-          retention-days: 1
-          if-no-files-found: error
+          )
+          uv run --frozen ruff format "${files[@]}"
+          uv run --frozen ruff check "${files[@]}"
+          uv run --frozen ruff format --check "${files[@]}"
+          git diff --check
+          git add -- "${files[@]}"
+          git diff --cached --check
+          test "$(git diff --cached --name-only | wc -l)" -eq 4
+          git diff --cached --name-only
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m "Apply Ruff formatting to Yellow Mellow V1 four-file lint repair"
+          git push origin HEAD:refs/heads/mvp-yellow-mellow-integration
