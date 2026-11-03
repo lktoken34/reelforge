@@ -1,0 +1,31 @@
+name: Phase9A V1 formatter (temporary)
+on:
+  push:
+    branches: [mvp-yellow-mellow-integration]
+permissions:
+  contents: read
+jobs:
+  format-v1:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: '0.13.4'
+          python-version: '3.12'
+      - run: uv sync --frozen
+      - name: Format precisely four legacy V1 files
+        run: |
+          uv run --frozen ruff format src/reelforge/characters/yellow_mellow/artwork.py src/reelforge/characters/yellow_mellow/environment.py src/reelforge/characters/yellow_mellow/poses.py src/reelforge/characters/yellow_mellow/rig.py
+          uv run --frozen ruff check src/reelforge/characters/yellow_mellow/artwork.py src/reelforge/characters/yellow_mellow/environment.py src/reelforge/characters/yellow_mellow/poses.py src/reelforge/characters/yellow_mellow/rig.py
+          uv run --frozen ruff format --check src/reelforge/characters/yellow_mellow/artwork.py src/reelforge/characters/yellow_mellow/environment.py src/reelforge/characters/yellow_mellow/poses.py src/reelforge/characters/yellow_mellow/rig.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: phase9a-v1-formatted-4-files
+          path: |
+            src/reelforge/characters/yellow_mellow/artwork.py
+            src/reelforge/characters/yellow_mellow/environment.py
+            src/reelforge/characters/yellow_mellow/poses.py
+            src/reelforge/characters/yellow_mellow/rig.py
+          retention-days: 1
+          if-no-files-found: error
