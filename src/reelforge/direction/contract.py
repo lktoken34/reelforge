@@ -111,7 +111,7 @@ def compile_direction(data: object) -> Direction:
     blocking = None
     try:
         version = base.get("schema_version")
-        if version == "blocking-0.1":
+        if version in ("blocking-0.1", "blocking-0.2"):
             blocking = compile_blocking(base)
             compiled = blocking.compiled
         elif version == "scene-0.1":

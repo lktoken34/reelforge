@@ -1,0 +1,33 @@
+{
+  "contract": "episode-0.2",
+  "success": true,
+  "frames": 450,
+  "file_size_bytes": 2563070,
+  "render_encode_seconds": 52.218802283,
+  "encoded_fps": 8.61758562674845,
+  "maximum_paths_per_frame": 847,
+  "maximum_ops_per_frame": 7479,
+  "live_surfaces_after": 0,
+  "surface_bytes_after": 0,
+  "transaction_clean": true,
+  "editorial_cuts": [
+    90,
+    180,
+    270,
+    360
+  ],
+  "audio_streams": 0,
+  "exact_video_pts": true,
+  "decoded_frames": 450,
+  "unique_decoded_frames": 450,
+  "mem_job_budget_bytes": 268435456,
+  "mem_reserve_bytes": 67108864,
+  "mem_renderer_peak_rss_bytes": 43094016,
+  "mem_encoder_peak_rss_bytes": 0,
+  "mem_all_children_peak_rss_bytes": 91512832,
+  "mem_estimated_simultaneous_tree_peak_rss_bytes": 131174400,
+  "mem_oom_telemetry_continuous": true,
+  "mem_limit_reason": null,
+  "mem_memory_policy": "strict",
+  "mem_wall_seconds": 71.232706821
+}

@@ -1,0 +1,133 @@
+{
+  "frames": 450,
+  "seconds": 15.0,
+  "aspect_ratio": "9:16",
+  "dimensions": [
+    720,
+    1280
+  ],
+  "streams": [
+    "H.264/yuv420p",
+    "AAC-LC/48000/stereo"
+  ],
+  "video_pts_exact": true,
+  "cuts": [
+    {
+      "frame": 90,
+      "before_pts": "89/30",
+      "after_pts": "3",
+      "sample": 144000
+    },
+    {
+      "frame": 180,
+      "before_pts": "179/30",
+      "after_pts": "6",
+      "sample": 288000
+    },
+    {
+      "frame": 270,
+      "before_pts": "269/30",
+      "after_pts": "9",
+      "sample": 432000
+    },
+    {
+      "frame": 360,
+      "before_pts": "359/30",
+      "after_pts": "12",
+      "sample": 576000
+    }
+  ],
+  "video_bitstream_unchanged": true,
+  "all_decoded_video_hashes_equal": true,
+  "effective_samples_per_channel": 720000,
+  "decoded_samples_per_channel": 720896,
+  "padding_samples": 896,
+  "cue_timing": [
+    {
+      "asset_id": "diag_opening",
+      "start_frame": 0,
+      "scheduled_start_sample": 0,
+      "trim_start_frame": 0,
+      "trim_end_frame": 36,
+      "effective_samples": 57600,
+      "isolated_mixed_window": true,
+      "reference_audible_start_sample": 10,
+      "decoded_audible_start_sample": 8,
+      "onset_error_samples": -2,
+      "onset_error_ms": -0.041666666666666664
+    },
+    {
+      "asset_id": "diag_fence",
+      "start_frame": 45,
+      "scheduled_start_sample": 72000,
+      "trim_start_frame": 0,
+      "trim_end_frame": 12,
+      "effective_samples": 19200,
+      "isolated_mixed_window": true,
+      "reference_audible_start_sample": 72023,
+      "decoded_audible_start_sample": 72023,
+      "onset_error_samples": 0,
+      "onset_error_ms": 0.0
+    },
+    {
+      "asset_id": "diag_fence",
+      "start_frame": 135,
+      "scheduled_start_sample": 216000,
+      "trim_start_frame": 0,
+      "trim_end_frame": 12,
+      "effective_samples": 19200,
+      "isolated_mixed_window": true,
+      "reference_audible_start_sample": 216023,
+      "decoded_audible_start_sample": 216023,
+      "onset_error_samples": 0,
+      "onset_error_ms": 0.0
+    },
+    {
+      "asset_id": "diag_suspense",
+      "start_frame": 255,
+      "scheduled_start_sample": 408000,
+      "trim_start_frame": 0,
+      "trim_end_frame": 54,
+      "effective_samples": 86400,
+      "isolated_mixed_window": true,
+      "reference_audible_start_sample": 408020,
+      "decoded_audible_start_sample": 408020,
+      "onset_error_samples": 0,
+      "onset_error_ms": 0.0
+    },
+    {
+      "asset_id": "diag_fence",
+      "start_frame": 420,
+      "scheduled_start_sample": 672000,
+      "trim_start_frame": 0,
+      "trim_end_frame": 12,
+      "effective_samples": 19200,
+      "isolated_mixed_window": true,
+      "reference_audible_start_sample": 672023,
+      "decoded_audible_start_sample": 672024,
+      "onset_error_samples": 1,
+      "onset_error_ms": 0.020833333333333332
+    }
+  ],
+  "audible_drift_samples": 1,
+  "audible_drift_ms": 0.020833333333333332,
+  "mix": {
+    "samples_per_channel": 720000,
+    "peak": 0.07200046628713608,
+    "rms": 0.014721877000584903,
+    "energy": 312.0964738853051,
+    "sha256": "4431ac850095912dea293149f3387fd9ac5455a68d92145513f64b480b91d82a"
+  },
+  "decoded_pcm": {
+    "samples_per_channel": 720896,
+    "peak": 0.07345587015151978,
+    "rms": 0.014686717872624527,
+    "energy": 310.99407572281007,
+    "sha256": "a8a3a232fe945b4fbc1c61cf00e29689c5e58ba2b446ed2a974bb3f25afa9ff1"
+  },
+  "original_job_success": true,
+  "transaction_clean_at_return": true,
+  "retired_path_now_present": false,
+  "scope": "Later restoration is failure evidence; original job statuses preserved; no sweep",
+  "deployment_gate_approved": false
+}

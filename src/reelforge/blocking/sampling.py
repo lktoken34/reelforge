@@ -2,6 +2,7 @@
 
 import math
 from dataclasses import asdict, replace
+from weakref import WeakKeyDictionary
 
 from reelforge.characters.contact import ease, plant_feet
 from reelforge.characters.presets import SKELETON, CharacterPreset, blend, sample_pose
@@ -35,11 +36,15 @@ def sample(plan, t):
     feet = contact_targets(t, clock, stepper=route_step)
     pose, distance = transition_pose(t, clock, feet=feet)
     weight = 0.0
+    # The Rowan route proxy drives camera tracking and contact validation for every character;
+    # its facial expression is never drawn (a non-Rowan character supplies its own face via the
+    # per-frame override), so use a Rowan-valid expression for the proxy preset.
+    proxy_expression = s.expression if plan.character == "rowan_01" else "concerned"
     if s.mode in ("idle", "turn") and s.acting in ("look_around", "react"):
         weight = ease((t - s.start / 30) / 0.2)
         if s.end < 90:
             weight *= ease((s.end / 30 - t) / 0.2)
-        preset = CharacterPreset(action=s.acting, expression=s.expression)
+        preset = CharacterPreset(action=s.acting, expression=proxy_expression)
         acting = sample_pose(preset, t - s.start / 30, travel=False)
         body = blend(pose, acting, weight)
         body = Pose(Rigid(body.root.x + distance, body.root.y), body.angles)
@@ -87,8 +92,52 @@ def crop(plan):
     return Placement(73.6, -44, 1.08) if plan.camera == "exit_right" else Placement()
 
 
+_YM_DRAWERS: "WeakKeyDictionary" = WeakKeyDictionary()
+
+
+def _segment_specs(plan):
+    from reelforge.characters.yellow_mellow_v2.episode import SegmentSpec
+
+    specs = []
+    for seg in plan.segments:
+        distance = (seg.x1 - seg.x0) / plan.scale
+        specs.append(
+            SegmentSpec(
+                start=seg.start,
+                end=seg.end,
+                mode=seg.mode,
+                acting=seg.acting,
+                expression=seg.expression,
+                facing=seg.facing,
+                distance_units=distance,
+            )
+        )
+    return tuple(specs)
+
+
+def _yellow_mellow_drawer(plan):
+    """Build (and cache) one V2 drawer per plan. The frozen Plan is a weak-ref key, so the
+    cached Performance is released when the plan is. Bounded: one Performance per live plan,
+    each with V2's own documented 48-entry primary cache."""
+    drawer = _YM_DRAWERS.get(plan)
+    if drawer is None:
+        from reelforge.characters.yellow_mellow_v2.episode import build_drawer
+
+        drawer = build_drawer(_segment_specs(plan))
+        _YM_DRAWERS[plan] = drawer
+    return drawer
+
+
 def commands(plan, t):
     s, clock, pose, feet, secondary, x, facing, fade = sample(plan, t)
+    if plan.character != "rowan_01":
+        frame = int(round(t * 30))
+        frame = max(0, min(89, frame))
+        local = _yellow_mellow_drawer(plan).commands(frame, facing)
+        if s.mode == "turn" and fade > 0:
+            other = _yellow_mellow_drawer(plan).commands(frame, s.facing)
+            local = other if fade >= 1 else opacity(local, 1 - fade) + opacity(other, fade)
+        return x, grade_character(local, plan.compiled.scene.warmth, plan.compiled.scene.atmosphere)
 
     def draw(direction):
         sign = 1 if direction == "right" else -1

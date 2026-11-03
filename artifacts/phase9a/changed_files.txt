@@ -1,0 +1,24 @@
+# Phase 9A changed and added source files (vs start-of-task snapshot)
+
+## Added (6)
+- examples/episodes/yellow_mellow_orchard.json
+- examples/episodes/yellow_mellow_quickstart.json
+- src/reelforge/characters/registry.py
+- src/reelforge/characters/yellow_mellow_v2/episode.py
+- tests/test_yellow_mellow_integration.py
+- tools/build_yellow_mellow_episode.py
+
+## Modified (11)
+- src/reelforge/blocking/contract.py
+- src/reelforge/blocking/sampling.py
+- src/reelforge/direction/contract.py
+- src/reelforge/episodes/contract.py
+- src/reelforge/episodes/schema.py
+- src/reelforge/episodes/workflow.py
+- src/reelforge/reels/workflow.py
+- src/reelforge/scenes/assets.py
+- src/reelforge/scenes/contract.py
+- src/reelforge/storyboards/compiler.py
+- tools/episode.py
+
+## Unchanged tracked files: 279

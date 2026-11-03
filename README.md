@@ -285,3 +285,11 @@ narration or deployment approval is claimed. The installed production CLI is unc
 the traced engine parent and its supervised native children under diagnostic confinement.
 The specific external writer remains unidentified; this host's cleanup gate remains blocked.
 Runtime code, tests, contracts and all original Phase 7B audiovisual evidence are unchanged.
+
+### Working vertical episode MVP
+
+Create a3–30-second9:16 MP4 from ordered storyboards and global registered audio with
+`python tools/episode.py render examples/episodes/relay_to_shelter.json --output-dir outputs/new-reel`.
+Create the outputs parent first. See [the authoring workflow](docs/EPISODES.md). The15-second
+example uses labelled diagnostic tones. Segment boundaries are explicit editorial cuts.
+Target deployment and the known development-host cleanup-restoration issue remain separate gates.

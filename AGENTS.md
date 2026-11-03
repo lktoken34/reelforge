@@ -182,3 +182,13 @@ unknown and this host cleanup gate still fails. No production runtime fix is jus
 native_directory_guard is diagnostic only, never a manifest capability or production policy.
 No old-path deletion/reacquisition, assertion changes, proof-movie regeneration, full-suite
 reruns, delegation, GitHub push, CI or deployment. Stop after verified local export/review.
+
+## Phase 8 vertical reel MVP
+
+Explicit user authorization supersedes earlier phase-stop/push prohibitions only for this MVP.
+Base f5b689af1eb720303b3b819a3ec32a6b86818d50; work/push only phase8-vertical-reel-mvp.
+Use episode-0.1:1..10 accepted90-frame segments and one global AudioPlan. Read docs/EPISODES.md.
+Keep all legacy contracts/assertions and strict resource/ownership policy. No rigs, backend,
+environment redesign or deployment. One demo render, targeted tests, one normal CI gate after
+publication, no automatic retries for green results. Preserve existing evidence and report
+host restoration failures honestly. Stop after MVP demonstration and independent review.

@@ -1,0 +1,65 @@
+{
+  "run_airborne_frames": [
+    278,
+    279,
+    280,
+    281,
+    288,
+    289,
+    290,
+    294,
+    298
+  ],
+  "run_max_clearance_units": 5.37,
+  "jump_airborne_frames": [
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169
+  ],
+  "jump_max_clearance_units": 38.97,
+  "jack_max_clearance_units": 3.2,
+  "jump_pelvis_min_max": [
+    37.9,
+    79.49
+  ],
+  "camera_x_start_end": [
+    8.0,
+    -401.4
+  ],
+  "pelvis_world_x_start_end": [
+    0.0,
+    -194.9
+  ],
+  "walk_peak_speed_u_per_frame": 1.55,
+  "run_peak_speed_u_per_frame": 3.3,
+  "character_height_fraction_of_frame": [
+    [
+      0,
+      0.534
+    ],
+    [
+      60,
+      0.556
+    ],
+    [
+      162,
+      0.646
+    ],
+    [
+      449,
+      0.535
+    ]
+  ]
+}

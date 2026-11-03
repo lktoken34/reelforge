@@ -5,7 +5,12 @@ import math
 from dataclasses import dataclass
 from pathlib import Path
 
-from reelforge.characters.presets import EXPRESSIONS
+from reelforge.characters.registry import (
+    DEFAULT_CHARACTER,
+    character_ids,
+    character_info,
+    is_registered,
+)
 from reelforge.contracts.project import load_project, project_digest
 from reelforge.core.errors import InputError, Issue
 from reelforge.direction.contract import BEHAVIORS, Direction, compile_direction
@@ -181,7 +186,13 @@ def compile_storyboard(data: object) -> Storyboard:
     ):
         fail("/world", "Embed one accepted scene/environment/composition; no includes")
     rowan = d["rowan"]
-    fields(rowan, {"actor_id", "support_id", "start"}, "/rowan")
+    # Backward compatible: "character" is optional and defaults to rowan_01, so every existing
+    # storyboard-0.1 manifest keeps selecting Rowan with identical behavior.
+    fields(rowan, {"actor_id", "support_id", "start"}, "/rowan", optional=("character",))
+    character = rowan.get("character", DEFAULT_CHARACTER)
+    if not isinstance(character, str) or not is_registered(character):
+        fail("/rowan/character", "Select a registered character: " + ", ".join(character_ids()))
+    expressions = character_info(character).expressions
     name(rowan["actor_id"], "/rowan/actor_id")
     name(rowan["support_id"], "/rowan/support_id")
     fields(rowan["start"], {"position", "facing"}, "/rowan/start")
@@ -314,7 +325,7 @@ def compile_storyboard(data: object) -> Storyboard:
         if action in ("walk_to", "run_to"):
             required.add("end_speed")
         fields(a, required, p + "/action")
-        choice(a["expression"], EXPRESSIONS, p + "/action/expression")
+        choice(a["expression"], expressions, p + "/action/expression")
         if (kind in ("react", "escape") or action == "react") and b["frames"] < 12:
             fail(p + "/frames", "Reaction/escape requires >=12 frames", "STORYBOARD_TIMELINE")
         xx = number(a["end_x"], 0, 640, p + "/action/end_x") if "end_x" in a else x
@@ -379,7 +390,7 @@ def compile_storyboard(data: object) -> Storyboard:
     if used_views != set(view_defs):
         fail("/views", "Every view must be allocated to at least one beat", "STORYBOARD_REFERENCE")
     blocking = dict(
-        schema_version="blocking-0.1",
+        schema_version="blocking-0.1" if character == DEFAULT_CHARACTER else "blocking-0.2",
         title=title,
         base=d["world"],
         actor_id=rowan["actor_id"],
@@ -389,6 +400,8 @@ def compile_storyboard(data: object) -> Storyboard:
         camera="locked",
         segments=segments,
     )
+    if character != DEFAULT_CHARACTER:
+        blocking["character"] = character
     shots = []
     for group in groups:
         start, end = beats[group[0]].start, beats[group[-1]].end

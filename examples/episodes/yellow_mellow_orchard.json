@@ -1,0 +1,2265 @@
+{
+  "schema_version": "episode-0.2",
+  "title": "Yellow Mellow: The Orchard Trail",
+  "segments": [
+    {
+      "id": "something_in_the_orchard",
+      "storyboard": {
+        "schema_version": "storyboard-0.1",
+        "title": "Something in the orchard",
+        "description": "Mellow walks the dusk trail and notices something by the far tree.",
+        "world": {
+          "schema_version": "scene-0.1",
+          "title": "Orchard trail at dusk",
+          "output": {
+            "width": 720,
+            "height": 1280,
+            "fps": 30,
+            "frames": 90,
+            "codec": "h264",
+            "pixel_format": "yuv420p"
+          },
+          "camera": "gentle_drift",
+          "art_direction": {
+            "warmth": 0.7,
+            "atmosphere": 0.7,
+            "breeze": 0.4
+          },
+          "nodes": [
+            {
+              "id": "root",
+              "kind": "root",
+              "parent": null,
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              }
+            },
+            {
+              "id": "sky_layer",
+              "kind": "layer",
+              "parent": "root",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "depth": 0
+            },
+            {
+              "id": "sky",
+              "kind": "background",
+              "parent": "sky_layer",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "asset_id": "dusk_sky_01",
+              "variant": "default"
+            },
+            {
+              "id": "distance",
+              "kind": "layer",
+              "parent": "root",
+              "order": 1,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "depth": 0.18
+            },
+            {
+              "id": "hills",
+              "kind": "background",
+              "parent": "distance",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 180,
+                "y": 360,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "asset_id": "distant_hills_01",
+              "variant": "default"
+            },
+            {
+              "id": "terrain",
+              "kind": "layer",
+              "parent": "root",
+              "order": 2,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "depth": 1
+            },
+            {
+              "id": "ground",
+              "kind": "environment",
+              "parent": "terrain",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 155,
+                "y": 515,
+                "scale": 1.15,
+                "rotation_degrees": 0
+              },
+              "asset_id": "orchard_ground_01",
+              "variant": "default"
+            },
+            {
+              "id": "structures",
+              "kind": "layer",
+              "parent": "root",
+              "order": 3,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "depth": 0.85
+            },
+            {
+              "id": "people",
+              "kind": "layer",
+              "parent": "root",
+              "order": 5,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "depth": 1
+            },
+            {
+              "id": "mellow",
+              "kind": "character",
+              "parent": "people",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 243,
+                "y": 535,
+                "scale": 0.47,
+                "rotation_degrees": 0.0
+              },
+              "asset_id": "yellow_mellow_v2",
+              "variant": "default",
+              "character": {
+                "character": "yellow_mellow_v2",
+                "action": "idle",
+                "expression": "neutral"
+              },
+              "ground_id": "ground"
+            },
+            {
+              "id": "foreground",
+              "kind": "layer",
+              "parent": "root",
+              "order": 6,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "depth": 1.4
+            },
+            {
+              "id": "left_grove",
+              "kind": "group",
+              "parent": "structures",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 28,
+                "y": 425,
+                "scale": 0.9,
+                "rotation_degrees": 0
+              }
+            },
+            {
+              "id": "near_tree",
+              "kind": "asset",
+              "parent": "left_grove",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "asset_id": "orchard_tree_01",
+              "variant": "broad"
+            },
+            {
+              "id": "far_tree",
+              "kind": "asset",
+              "parent": "left_grove",
+              "order": 1,
+              "visible": true,
+              "transform": {
+                "x": 58,
+                "y": -28,
+                "scale": 0.63,
+                "rotation_degrees": -3
+              },
+              "asset_id": "orchard_tree_01",
+              "variant": "compact"
+            },
+            {
+              "id": "right_grove",
+              "kind": "group",
+              "parent": "structures",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 326,
+                "y": 452,
+                "scale": 1,
+                "rotation_degrees": 0
+              }
+            },
+            {
+              "id": "right_tree",
+              "kind": "asset",
+              "parent": "right_grove",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1.05,
+                "rotation_degrees": 0
+              },
+              "asset_id": "orchard_tree_01",
+              "variant": "lean"
+            },
+            {
+              "id": "fence",
+              "kind": "asset",
+              "parent": "structures",
+              "order": 2,
+              "visible": true,
+              "transform": {
+                "x": 119,
+                "y": 439,
+                "scale": 0.65,
+                "rotation_degrees": 0
+              },
+              "asset_id": "fence_01",
+              "variant": "default"
+            },
+            {
+              "id": "framing_left",
+              "kind": "asset",
+              "parent": "foreground",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": -6,
+                "y": 624,
+                "scale": 1.8,
+                "rotation_degrees": 0
+              },
+              "asset_id": "orchard_tree_01",
+              "variant": "broad"
+            },
+            {
+              "id": "framing_right",
+              "kind": "asset",
+              "parent": "foreground",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 385,
+                "y": 610,
+                "scale": 1.7,
+                "rotation_degrees": 0
+              },
+              "asset_id": "orchard_tree_01",
+              "variant": "windswept"
+            }
+          ]
+        },
+        "rowan": {
+          "actor_id": "mellow",
+          "support_id": "ground",
+          "character": "yellow_mellow_v2",
+          "start": {
+            "position": [
+              140,
+              535
+            ],
+            "facing": "right"
+          }
+        },
+        "subjects": [
+          {
+            "id": "mellow",
+            "target": {
+              "kind": "actor",
+              "id": "mellow"
+            }
+          },
+          {
+            "id": "trail",
+            "target": {
+              "kind": "point",
+              "position": [
+                210,
+                500
+              ],
+              "depth": 1.0
+            }
+          },
+          {
+            "id": "glimmer",
+            "target": {
+              "kind": "node",
+              "id": "right_tree"
+            }
+          }
+        ],
+        "views": [
+          {
+            "id": "trail_push",
+            "kind": "push_in",
+            "subject": "trail",
+            "zoom": [
+              1.08,
+              1.22
+            ],
+            "screen": [
+              250,
+              500
+            ],
+            "offset_start": [
+              0,
+              0
+            ],
+            "offset_end": [
+              70,
+              0
+            ],
+            "lead_seconds": 0.0,
+            "hold": [
+              6,
+              12
+            ],
+            "crop": "full",
+            "foreground": "clear",
+            "cut": "matched"
+          }
+        ],
+        "pattern": "discovery_reaction",
+        "beats": [
+          {
+            "id": "enter",
+            "type": "establish",
+            "frames": 9,
+            "subject": "trail",
+            "view": "trail_push",
+            "action": {
+              "kind": "idle",
+              "expression": "neutral"
+            },
+            "description": "Mellow arrives on the orchard trail."
+          },
+          {
+            "id": "walk_in",
+            "type": "approach",
+            "frames": 36,
+            "subject": "glimmer",
+            "view": "trail_push",
+            "action": {
+              "kind": "walk_to",
+              "expression": "curious",
+              "end_x": 180,
+              "end_speed": 35
+            },
+            "description": "A curious walk up the trail."
+          },
+          {
+            "id": "spot",
+            "type": "discover",
+            "frames": 12,
+            "subject": "glimmer",
+            "view": "trail_push",
+            "action": {
+              "kind": "stop_at",
+              "expression": "curious",
+              "end_x": 187
+            },
+            "description": "Something catches the eye by the right tree."
+          },
+          {
+            "id": "wonder",
+            "type": "react",
+            "frames": 18,
+            "subject": "glimmer",
+            "view": "trail_push",
+            "action": {
+              "kind": "look_around",
+              "expression": "curious"
+            },
+            "description": "A visible curious look around."
+          },
+          {
+            "id": "hold_wonder",
+            "type": "hold",
+            "frames": 15,
+            "subject": "glimmer",
+            "view": "trail_push",
+            "action": {
+              "kind": "look_around",
+              "expression": "curious"
+            },
+            "description": "Holds on the discovery."
+          }
+        ]
+      }
+    },
+    {
+      "id": "closer_to_the_glimmer",
+      "storyboard": {
+        "schema_version": "storyboard-0.1",
+        "title": "Closer to the glimmer",
+        "description": "Mellow creeps up to the spot and is startled by what is there.",
+        "world": {
+          "schema_version": "scene-0.1",
+          "title": "Orchard trail at dusk",
+          "output": {
+            "width": 720,
+            "height": 1280,
+            "fps": 30,
+            "frames": 90,
+            "codec": "h264",
+            "pixel_format": "yuv420p"
+          },
+          "camera": "gentle_drift",
+          "art_direction": {
+            "warmth": 0.7,
+            "atmosphere": 0.7,
+            "breeze": 0.4
+          },
+          "nodes": [
+            {
+              "id": "root",
+              "kind": "root",
+              "parent": null,
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              }
+            },
+            {
+              "id": "sky_layer",
+              "kind": "layer",
+              "parent": "root",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "depth": 0
+            },
+            {
+              "id": "sky",
+              "kind": "background",
+              "parent": "sky_layer",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "asset_id": "dusk_sky_01",
+              "variant": "default"
+            },
+            {
+              "id": "distance",
+              "kind": "layer",
+              "parent": "root",
+              "order": 1,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "depth": 0.18
+            },
+            {
+              "id": "hills",
+              "kind": "background",
+              "parent": "distance",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 180,
+                "y": 360,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "asset_id": "distant_hills_01",
+              "variant": "default"
+            },
+            {
+              "id": "terrain",
+              "kind": "layer",
+              "parent": "root",
+              "order": 2,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "depth": 1
+            },
+            {
+              "id": "ground",
+              "kind": "environment",
+              "parent": "terrain",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 155,
+                "y": 515,
+                "scale": 1.15,
+                "rotation_degrees": 0
+              },
+              "asset_id": "orchard_ground_01",
+              "variant": "default"
+            },
+            {
+              "id": "structures",
+              "kind": "layer",
+              "parent": "root",
+              "order": 3,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "depth": 0.85
+            },
+            {
+              "id": "people",
+              "kind": "layer",
+              "parent": "root",
+              "order": 5,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "depth": 1
+            },
+            {
+              "id": "mellow",
+              "kind": "character",
+              "parent": "people",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 243,
+                "y": 535,
+                "scale": 0.47,
+                "rotation_degrees": 0.0
+              },
+              "asset_id": "yellow_mellow_v2",
+              "variant": "default",
+              "character": {
+                "character": "yellow_mellow_v2",
+                "action": "idle",
+                "expression": "curious"
+              },
+              "ground_id": "ground"
+            },
+            {
+              "id": "foreground",
+              "kind": "layer",
+              "parent": "root",
+              "order": 6,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "depth": 1.4
+            },
+            {
+              "id": "left_grove",
+              "kind": "group",
+              "parent": "structures",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 28,
+                "y": 425,
+                "scale": 0.9,
+                "rotation_degrees": 0
+              }
+            },
+            {
+              "id": "near_tree",
+              "kind": "asset",
+              "parent": "left_grove",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "asset_id": "orchard_tree_01",
+              "variant": "broad"
+            },
+            {
+              "id": "far_tree",
+              "kind": "asset",
+              "parent": "left_grove",
+              "order": 1,
+              "visible": true,
+              "transform": {
+                "x": 58,
+                "y": -28,
+                "scale": 0.63,
+                "rotation_degrees": -3
+              },
+              "asset_id": "orchard_tree_01",
+              "variant": "compact"
+            },
+            {
+              "id": "right_grove",
+              "kind": "group",
+              "parent": "structures",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 326,
+                "y": 452,
+                "scale": 1,
+                "rotation_degrees": 0
+              }
+            },
+            {
+              "id": "right_tree",
+              "kind": "asset",
+              "parent": "right_grove",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1.05,
+                "rotation_degrees": 0
+              },
+              "asset_id": "orchard_tree_01",
+              "variant": "lean"
+            },
+            {
+              "id": "fence",
+              "kind": "asset",
+              "parent": "structures",
+              "order": 2,
+              "visible": true,
+              "transform": {
+                "x": 119,
+                "y": 439,
+                "scale": 0.65,
+                "rotation_degrees": 0
+              },
+              "asset_id": "fence_01",
+              "variant": "default"
+            },
+            {
+              "id": "framing_left",
+              "kind": "asset",
+              "parent": "foreground",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": -6,
+                "y": 624,
+                "scale": 1.8,
+                "rotation_degrees": 0
+              },
+              "asset_id": "orchard_tree_01",
+              "variant": "broad"
+            },
+            {
+              "id": "framing_right",
+              "kind": "asset",
+              "parent": "foreground",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 385,
+                "y": 610,
+                "scale": 1.7,
+                "rotation_degrees": 0
+              },
+              "asset_id": "orchard_tree_01",
+              "variant": "windswept"
+            }
+          ]
+        },
+        "rowan": {
+          "actor_id": "mellow",
+          "support_id": "ground",
+          "character": "yellow_mellow_v2",
+          "start": {
+            "position": [
+              165,
+              535
+            ],
+            "facing": "right"
+          }
+        },
+        "subjects": [
+          {
+            "id": "mellow",
+            "target": {
+              "kind": "actor",
+              "id": "mellow"
+            }
+          },
+          {
+            "id": "glimmer",
+            "target": {
+              "kind": "point",
+              "position": [
+                240,
+                470
+              ],
+              "depth": 1.0
+            }
+          },
+          {
+            "id": "beyond",
+            "target": {
+              "kind": "point",
+              "position": [
+                245,
+                430
+              ],
+              "depth": 0.85
+            }
+          }
+        ],
+        "views": [
+          {
+            "id": "approach_push",
+            "kind": "push_in",
+            "subject": "glimmer",
+            "zoom": [
+              1.05,
+              1.24
+            ],
+            "screen": [
+              250,
+              470
+            ],
+            "offset_start": [
+              0,
+              0
+            ],
+            "offset_end": [
+              0,
+              0
+            ],
+            "lead_seconds": 0.0,
+            "hold": [
+              6,
+              16
+            ],
+            "crop": "full",
+            "foreground": "clear",
+            "cut": "matched"
+          }
+        ],
+        "pattern": "approach_suspense",
+        "beats": [
+          {
+            "id": "ready",
+            "type": "establish",
+            "frames": 6,
+            "subject": "glimmer",
+            "view": "approach_push",
+            "action": {
+              "kind": "idle",
+              "expression": "curious"
+            },
+            "description": ""
+          },
+          {
+            "id": "creep",
+            "type": "approach",
+            "frames": 36,
+            "subject": "glimmer",
+            "view": "approach_push",
+            "action": {
+              "kind": "walk_to",
+              "expression": "curious",
+              "end_x": 201,
+              "end_speed": 30
+            },
+            "description": "A careful approach."
+          },
+          {
+            "id": "arrive",
+            "type": "approach",
+            "frames": 18,
+            "subject": "glimmer",
+            "view": "approach_push",
+            "action": {
+              "kind": "stop_at",
+              "expression": "excited",
+              "end_x": 210
+            },
+            "description": "Stops right at the spot."
+          },
+          {
+            "id": "pause",
+            "type": "hold",
+            "frames": 12,
+            "subject": "beyond",
+            "view": "approach_push",
+            "action": {
+              "kind": "idle",
+              "expression": "excited"
+            },
+            "description": "A held, eager pause."
+          },
+          {
+            "id": "startle",
+            "type": "react",
+            "frames": 18,
+            "subject": "beyond",
+            "view": "approach_push",
+            "action": {
+              "kind": "react",
+              "expression": "surprised"
+            },
+            "description": "Something startles Mellow."
+          }
+        ]
+      }
+    },
+    {
+      "id": "back_down_the_trail",
+      "storyboard": {
+        "schema_version": "storyboard-0.1",
+        "title": "Down the trail",
+        "description": "A worried look, then Mellow runs to clear the area.",
+        "world": {
+          "schema_version": "scene-0.1",
+          "title": "Orchard trail at dusk",
+          "output": {
+            "width": 720,
+            "height": 1280,
+            "fps": 30,
+            "frames": 90,
+            "codec": "h264",
+            "pixel_format": "yuv420p"
+          },
+          "camera": "gentle_drift",
+          "art_direction": {
+            "warmth": 0.7,
+            "atmosphere": 0.7,
+            "breeze": 0.4
+          },
+          "nodes": [
+            {
+              "id": "root",
+              "kind": "root",
+              "parent": null,
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              }
+            },
+            {
+              "id": "sky_layer",
+              "kind": "layer",
+              "parent": "root",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "depth": 0
+            },
+            {
+              "id": "sky",
+              "kind": "background",
+              "parent": "sky_layer",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "asset_id": "dusk_sky_01",
+              "variant": "default"
+            },
+            {
+              "id": "distance",
+              "kind": "layer",
+              "parent": "root",
+              "order": 1,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "depth": 0.18
+            },
+            {
+              "id": "hills",
+              "kind": "background",
+              "parent": "distance",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 180,
+                "y": 360,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "asset_id": "distant_hills_01",
+              "variant": "default"
+            },
+            {
+              "id": "terrain",
+              "kind": "layer",
+              "parent": "root",
+              "order": 2,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "depth": 1
+            },
+            {
+              "id": "ground",
+              "kind": "environment",
+              "parent": "terrain",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 155,
+                "y": 515,
+                "scale": 1.15,
+                "rotation_degrees": 0
+              },
+              "asset_id": "orchard_ground_01",
+              "variant": "default"
+            },
+            {
+              "id": "structures",
+              "kind": "layer",
+              "parent": "root",
+              "order": 3,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "depth": 0.85
+            },
+            {
+              "id": "people",
+              "kind": "layer",
+              "parent": "root",
+              "order": 5,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "depth": 1
+            },
+            {
+              "id": "mellow",
+              "kind": "character",
+              "parent": "people",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 243,
+                "y": 535,
+                "scale": 0.47,
+                "rotation_degrees": 0.0
+              },
+              "asset_id": "yellow_mellow_v2",
+              "variant": "default",
+              "character": {
+                "character": "yellow_mellow_v2",
+                "action": "idle",
+                "expression": "concerned"
+              },
+              "ground_id": "ground"
+            },
+            {
+              "id": "foreground",
+              "kind": "layer",
+              "parent": "root",
+              "order": 6,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "depth": 1.4
+            },
+            {
+              "id": "left_grove",
+              "kind": "group",
+              "parent": "structures",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 28,
+                "y": 425,
+                "scale": 0.9,
+                "rotation_degrees": 0
+              }
+            },
+            {
+              "id": "near_tree",
+              "kind": "asset",
+              "parent": "left_grove",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "asset_id": "orchard_tree_01",
+              "variant": "broad"
+            },
+            {
+              "id": "far_tree",
+              "kind": "asset",
+              "parent": "left_grove",
+              "order": 1,
+              "visible": true,
+              "transform": {
+                "x": 58,
+                "y": -28,
+                "scale": 0.63,
+                "rotation_degrees": -3
+              },
+              "asset_id": "orchard_tree_01",
+              "variant": "compact"
+            },
+            {
+              "id": "right_grove",
+              "kind": "group",
+              "parent": "structures",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 326,
+                "y": 452,
+                "scale": 1,
+                "rotation_degrees": 0
+              }
+            },
+            {
+              "id": "right_tree",
+              "kind": "asset",
+              "parent": "right_grove",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1.05,
+                "rotation_degrees": 0
+              },
+              "asset_id": "orchard_tree_01",
+              "variant": "lean"
+            },
+            {
+              "id": "fence",
+              "kind": "asset",
+              "parent": "structures",
+              "order": 2,
+              "visible": true,
+              "transform": {
+                "x": 119,
+                "y": 439,
+                "scale": 0.65,
+                "rotation_degrees": 0
+              },
+              "asset_id": "fence_01",
+              "variant": "default"
+            },
+            {
+              "id": "framing_left",
+              "kind": "asset",
+              "parent": "foreground",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": -6,
+                "y": 624,
+                "scale": 1.8,
+                "rotation_degrees": 0
+              },
+              "asset_id": "orchard_tree_01",
+              "variant": "broad"
+            },
+            {
+              "id": "framing_right",
+              "kind": "asset",
+              "parent": "foreground",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 385,
+                "y": 610,
+                "scale": 1.7,
+                "rotation_degrees": 0
+              },
+              "asset_id": "orchard_tree_01",
+              "variant": "windswept"
+            }
+          ]
+        },
+        "rowan": {
+          "actor_id": "mellow",
+          "support_id": "ground",
+          "character": "yellow_mellow_v2",
+          "start": {
+            "position": [
+              140,
+              535
+            ],
+            "facing": "right"
+          }
+        },
+        "subjects": [
+          {
+            "id": "mellow",
+            "target": {
+              "kind": "actor",
+              "id": "mellow"
+            }
+          },
+          {
+            "id": "clearing",
+            "target": {
+              "kind": "point",
+              "position": [
+                180,
+                500
+              ],
+              "depth": 1.0
+            }
+          },
+          {
+            "id": "shadow",
+            "target": {
+              "kind": "point",
+              "position": [
+                265,
+                420
+              ],
+              "depth": 0.85
+            }
+          }
+        ],
+        "views": [
+          {
+            "id": "hold_wide",
+            "kind": "establishing",
+            "subject": "clearing",
+            "zoom": [
+              1.06,
+              1.06
+            ],
+            "screen": [
+              180,
+              500
+            ],
+            "offset_start": [
+              0,
+              0
+            ],
+            "offset_end": [
+              0,
+              0
+            ],
+            "lead_seconds": 0.0,
+            "hold": [
+              0,
+              0
+            ],
+            "crop": "full",
+            "foreground": "clear",
+            "cut": "matched"
+          },
+          {
+            "id": "run_follow",
+            "kind": "follow",
+            "subject": "mellow",
+            "zoom": [
+              1.12,
+              1.12
+            ],
+            "screen": [
+              175,
+              560
+            ],
+            "offset_start": [
+              0,
+              0
+            ],
+            "offset_end": [
+              0,
+              0
+            ],
+            "lead_seconds": 0.16,
+            "hold": [
+              0,
+              0
+            ],
+            "crop": "full",
+            "foreground": "clear",
+            "cut": "matched"
+          }
+        ],
+        "pattern": "threat_escape",
+        "beats": [
+          {
+            "id": "brace",
+            "type": "establish",
+            "frames": 6,
+            "subject": "clearing",
+            "view": "hold_wide",
+            "action": {
+              "kind": "idle",
+              "expression": "concerned"
+            },
+            "description": ""
+          },
+          {
+            "id": "edge_up",
+            "type": "approach",
+            "frames": 27,
+            "subject": "clearing",
+            "view": "hold_wide",
+            "action": {
+              "kind": "walk_to",
+              "expression": "concerned",
+              "end_x": 168.5,
+              "end_speed": 40
+            },
+            "description": "A wary step forward."
+          },
+          {
+            "id": "decide",
+            "type": "discover",
+            "frames": 12,
+            "subject": "shadow",
+            "view": "hold_wide",
+            "action": {
+              "kind": "stop_at",
+              "expression": "determined",
+              "end_x": 176.5
+            },
+            "description": "Mellow steels up."
+          },
+          {
+            "id": "scan",
+            "type": "react",
+            "frames": 15,
+            "subject": "shadow",
+            "view": "hold_wide",
+            "action": {
+              "kind": "react",
+              "expression": "concerned"
+            },
+            "description": "A worried reaction to a shadow."
+          },
+          {
+            "id": "bolt",
+            "type": "escape",
+            "frames": 30,
+            "subject": "clearing",
+            "view": "run_follow",
+            "action": {
+              "kind": "run_to",
+              "expression": "determined",
+              "end_x": 216.5,
+              "end_speed": 80
+            },
+            "description": "A decisive run down the trail."
+          }
+        ]
+      }
+    },
+    {
+      "id": "catching_breath",
+      "storyboard": {
+        "schema_version": "storyboard-0.1",
+        "title": "Catching breath",
+        "description": "Mellow eases to a safe spot and relaxes.",
+        "world": {
+          "schema_version": "scene-0.1",
+          "title": "Orchard trail at dusk",
+          "output": {
+            "width": 720,
+            "height": 1280,
+            "fps": 30,
+            "frames": 90,
+            "codec": "h264",
+            "pixel_format": "yuv420p"
+          },
+          "camera": "gentle_drift",
+          "art_direction": {
+            "warmth": 0.7,
+            "atmosphere": 0.7,
+            "breeze": 0.4
+          },
+          "nodes": [
+            {
+              "id": "root",
+              "kind": "root",
+              "parent": null,
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              }
+            },
+            {
+              "id": "sky_layer",
+              "kind": "layer",
+              "parent": "root",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "depth": 0
+            },
+            {
+              "id": "sky",
+              "kind": "background",
+              "parent": "sky_layer",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "asset_id": "dusk_sky_01",
+              "variant": "default"
+            },
+            {
+              "id": "distance",
+              "kind": "layer",
+              "parent": "root",
+              "order": 1,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "depth": 0.18
+            },
+            {
+              "id": "hills",
+              "kind": "background",
+              "parent": "distance",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 180,
+                "y": 360,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "asset_id": "distant_hills_01",
+              "variant": "default"
+            },
+            {
+              "id": "terrain",
+              "kind": "layer",
+              "parent": "root",
+              "order": 2,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "depth": 1
+            },
+            {
+              "id": "ground",
+              "kind": "environment",
+              "parent": "terrain",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 155,
+                "y": 515,
+                "scale": 1.15,
+                "rotation_degrees": 0
+              },
+              "asset_id": "orchard_ground_01",
+              "variant": "default"
+            },
+            {
+              "id": "structures",
+              "kind": "layer",
+              "parent": "root",
+              "order": 3,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "depth": 0.85
+            },
+            {
+              "id": "people",
+              "kind": "layer",
+              "parent": "root",
+              "order": 5,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "depth": 1
+            },
+            {
+              "id": "mellow",
+              "kind": "character",
+              "parent": "people",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 243,
+                "y": 535,
+                "scale": 0.47,
+                "rotation_degrees": 0.0
+              },
+              "asset_id": "yellow_mellow_v2",
+              "variant": "default",
+              "character": {
+                "character": "yellow_mellow_v2",
+                "action": "idle",
+                "expression": "determined"
+              },
+              "ground_id": "ground"
+            },
+            {
+              "id": "foreground",
+              "kind": "layer",
+              "parent": "root",
+              "order": 6,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "depth": 1.4
+            },
+            {
+              "id": "left_grove",
+              "kind": "group",
+              "parent": "structures",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 28,
+                "y": 425,
+                "scale": 0.9,
+                "rotation_degrees": 0
+              }
+            },
+            {
+              "id": "near_tree",
+              "kind": "asset",
+              "parent": "left_grove",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "asset_id": "orchard_tree_01",
+              "variant": "broad"
+            },
+            {
+              "id": "far_tree",
+              "kind": "asset",
+              "parent": "left_grove",
+              "order": 1,
+              "visible": true,
+              "transform": {
+                "x": 58,
+                "y": -28,
+                "scale": 0.63,
+                "rotation_degrees": -3
+              },
+              "asset_id": "orchard_tree_01",
+              "variant": "compact"
+            },
+            {
+              "id": "right_grove",
+              "kind": "group",
+              "parent": "structures",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 326,
+                "y": 452,
+                "scale": 1,
+                "rotation_degrees": 0
+              }
+            },
+            {
+              "id": "right_tree",
+              "kind": "asset",
+              "parent": "right_grove",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1.05,
+                "rotation_degrees": 0
+              },
+              "asset_id": "orchard_tree_01",
+              "variant": "lean"
+            },
+            {
+              "id": "fence",
+              "kind": "asset",
+              "parent": "structures",
+              "order": 2,
+              "visible": true,
+              "transform": {
+                "x": 119,
+                "y": 439,
+                "scale": 0.65,
+                "rotation_degrees": 0
+              },
+              "asset_id": "fence_01",
+              "variant": "default"
+            },
+            {
+              "id": "framing_left",
+              "kind": "asset",
+              "parent": "foreground",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": -6,
+                "y": 624,
+                "scale": 1.8,
+                "rotation_degrees": 0
+              },
+              "asset_id": "orchard_tree_01",
+              "variant": "broad"
+            },
+            {
+              "id": "framing_right",
+              "kind": "asset",
+              "parent": "foreground",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 385,
+                "y": 610,
+                "scale": 1.7,
+                "rotation_degrees": 0
+              },
+              "asset_id": "orchard_tree_01",
+              "variant": "windswept"
+            }
+          ]
+        },
+        "rowan": {
+          "actor_id": "mellow",
+          "support_id": "ground",
+          "character": "yellow_mellow_v2",
+          "start": {
+            "position": [
+              165,
+              535
+            ],
+            "facing": "right"
+          }
+        },
+        "subjects": [
+          {
+            "id": "mellow",
+            "target": {
+              "kind": "actor",
+              "id": "mellow"
+            }
+          },
+          {
+            "id": "home",
+            "target": {
+              "kind": "point",
+              "position": [
+                210,
+                500
+              ],
+              "depth": 1.0
+            }
+          },
+          {
+            "id": "calm",
+            "target": {
+              "kind": "point",
+              "position": [
+                215,
+                450
+              ],
+              "depth": 0.85
+            }
+          }
+        ],
+        "views": [
+          {
+            "id": "settle_push",
+            "kind": "push_in",
+            "subject": "home",
+            "zoom": [
+              1.0,
+              1.2
+            ],
+            "screen": [
+              210,
+              500
+            ],
+            "offset_start": [
+              0,
+              0
+            ],
+            "offset_end": [
+              0,
+              0
+            ],
+            "lead_seconds": 0.0,
+            "hold": [
+              6,
+              18
+            ],
+            "crop": "full",
+            "foreground": "clear",
+            "cut": "matched"
+          }
+        ],
+        "pattern": "approach_suspense",
+        "beats": [
+          {
+            "id": "slow",
+            "type": "establish",
+            "frames": 6,
+            "subject": "home",
+            "view": "settle_push",
+            "action": {
+              "kind": "idle",
+              "expression": "determined"
+            },
+            "description": ""
+          },
+          {
+            "id": "ease_in",
+            "type": "approach",
+            "frames": 36,
+            "subject": "home",
+            "view": "settle_push",
+            "action": {
+              "kind": "walk_to",
+              "expression": "happy",
+              "end_x": 201,
+              "end_speed": 30
+            },
+            "description": "A relieved walk to a safe spot."
+          },
+          {
+            "id": "stand",
+            "type": "approach",
+            "frames": 18,
+            "subject": "home",
+            "view": "settle_push",
+            "action": {
+              "kind": "stop_at",
+              "expression": "happy",
+              "end_x": 210
+            },
+            "description": "Settles, safe again."
+          },
+          {
+            "id": "breathe",
+            "type": "hold",
+            "frames": 12,
+            "subject": "calm",
+            "view": "settle_push",
+            "action": {
+              "kind": "idle",
+              "expression": "happy"
+            },
+            "description": "A calm, happy pause."
+          },
+          {
+            "id": "relief",
+            "type": "react",
+            "frames": 18,
+            "subject": "calm",
+            "view": "settle_push",
+            "action": {
+              "kind": "look_around",
+              "expression": "happy"
+            },
+            "description": "Looks around, relieved."
+          }
+        ]
+      }
+    },
+    {
+      "id": "a_good_find",
+      "storyboard": {
+        "schema_version": "storyboard-0.1",
+        "title": "A good find",
+        "description": "Mellow returns, realizes all is well, and ends on a confident note.",
+        "world": {
+          "schema_version": "scene-0.1",
+          "title": "Orchard trail at dusk",
+          "output": {
+            "width": 720,
+            "height": 1280,
+            "fps": 30,
+            "frames": 90,
+            "codec": "h264",
+            "pixel_format": "yuv420p"
+          },
+          "camera": "gentle_drift",
+          "art_direction": {
+            "warmth": 0.7,
+            "atmosphere": 0.7,
+            "breeze": 0.4
+          },
+          "nodes": [
+            {
+              "id": "root",
+              "kind": "root",
+              "parent": null,
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              }
+            },
+            {
+              "id": "sky_layer",
+              "kind": "layer",
+              "parent": "root",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "depth": 0
+            },
+            {
+              "id": "sky",
+              "kind": "background",
+              "parent": "sky_layer",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "asset_id": "dusk_sky_01",
+              "variant": "default"
+            },
+            {
+              "id": "distance",
+              "kind": "layer",
+              "parent": "root",
+              "order": 1,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "depth": 0.18
+            },
+            {
+              "id": "hills",
+              "kind": "background",
+              "parent": "distance",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 180,
+                "y": 360,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "asset_id": "distant_hills_01",
+              "variant": "default"
+            },
+            {
+              "id": "terrain",
+              "kind": "layer",
+              "parent": "root",
+              "order": 2,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "depth": 1
+            },
+            {
+              "id": "ground",
+              "kind": "environment",
+              "parent": "terrain",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 155,
+                "y": 515,
+                "scale": 1.15,
+                "rotation_degrees": 0
+              },
+              "asset_id": "orchard_ground_01",
+              "variant": "default"
+            },
+            {
+              "id": "structures",
+              "kind": "layer",
+              "parent": "root",
+              "order": 3,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "depth": 0.85
+            },
+            {
+              "id": "people",
+              "kind": "layer",
+              "parent": "root",
+              "order": 5,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "depth": 1
+            },
+            {
+              "id": "mellow",
+              "kind": "character",
+              "parent": "people",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 243,
+                "y": 535,
+                "scale": 0.47,
+                "rotation_degrees": 0.0
+              },
+              "asset_id": "yellow_mellow_v2",
+              "variant": "default",
+              "character": {
+                "character": "yellow_mellow_v2",
+                "action": "idle",
+                "expression": "happy"
+              },
+              "ground_id": "ground"
+            },
+            {
+              "id": "foreground",
+              "kind": "layer",
+              "parent": "root",
+              "order": 6,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "depth": 1.4
+            },
+            {
+              "id": "left_grove",
+              "kind": "group",
+              "parent": "structures",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 28,
+                "y": 425,
+                "scale": 0.9,
+                "rotation_degrees": 0
+              }
+            },
+            {
+              "id": "near_tree",
+              "kind": "asset",
+              "parent": "left_grove",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1,
+                "rotation_degrees": 0
+              },
+              "asset_id": "orchard_tree_01",
+              "variant": "broad"
+            },
+            {
+              "id": "far_tree",
+              "kind": "asset",
+              "parent": "left_grove",
+              "order": 1,
+              "visible": true,
+              "transform": {
+                "x": 58,
+                "y": -28,
+                "scale": 0.63,
+                "rotation_degrees": -3
+              },
+              "asset_id": "orchard_tree_01",
+              "variant": "compact"
+            },
+            {
+              "id": "right_grove",
+              "kind": "group",
+              "parent": "structures",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 326,
+                "y": 452,
+                "scale": 1,
+                "rotation_degrees": 0
+              }
+            },
+            {
+              "id": "right_tree",
+              "kind": "asset",
+              "parent": "right_grove",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 0,
+                "y": 0,
+                "scale": 1.05,
+                "rotation_degrees": 0
+              },
+              "asset_id": "orchard_tree_01",
+              "variant": "lean"
+            },
+            {
+              "id": "fence",
+              "kind": "asset",
+              "parent": "structures",
+              "order": 2,
+              "visible": true,
+              "transform": {
+                "x": 119,
+                "y": 439,
+                "scale": 0.65,
+                "rotation_degrees": 0
+              },
+              "asset_id": "fence_01",
+              "variant": "default"
+            },
+            {
+              "id": "framing_left",
+              "kind": "asset",
+              "parent": "foreground",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": -6,
+                "y": 624,
+                "scale": 1.8,
+                "rotation_degrees": 0
+              },
+              "asset_id": "orchard_tree_01",
+              "variant": "broad"
+            },
+            {
+              "id": "framing_right",
+              "kind": "asset",
+              "parent": "foreground",
+              "order": 0,
+              "visible": true,
+              "transform": {
+                "x": 385,
+                "y": 610,
+                "scale": 1.7,
+                "rotation_degrees": 0
+              },
+              "asset_id": "orchard_tree_01",
+              "variant": "windswept"
+            }
+          ]
+        },
+        "rowan": {
+          "actor_id": "mellow",
+          "support_id": "ground",
+          "character": "yellow_mellow_v2",
+          "start": {
+            "position": [
+              140,
+              535
+            ],
+            "facing": "right"
+          }
+        },
+        "subjects": [
+          {
+            "id": "mellow",
+            "target": {
+              "kind": "actor",
+              "id": "mellow"
+            }
+          },
+          {
+            "id": "path",
+            "target": {
+              "kind": "point",
+              "position": [
+                210,
+                500
+              ],
+              "depth": 1.0
+            }
+          },
+          {
+            "id": "prize",
+            "target": {
+              "kind": "node",
+              "id": "right_tree"
+            }
+          }
+        ],
+        "views": [
+          {
+            "id": "close_push",
+            "kind": "push_in",
+            "subject": "path",
+            "zoom": [
+              1.05,
+              1.2
+            ],
+            "screen": [
+              250,
+              500
+            ],
+            "offset_start": [
+              0,
+              0
+            ],
+            "offset_end": [
+              55,
+              0
+            ],
+            "lead_seconds": 0.0,
+            "hold": [
+              6,
+              14
+            ],
+            "crop": "full",
+            "foreground": "clear",
+            "cut": "matched"
+          }
+        ],
+        "pattern": "discovery_reaction",
+        "beats": [
+          {
+            "id": "glance",
+            "type": "establish",
+            "frames": 9,
+            "subject": "path",
+            "view": "close_push",
+            "action": {
+              "kind": "idle",
+              "expression": "happy"
+            },
+            "description": ""
+          },
+          {
+            "id": "step_up",
+            "type": "approach",
+            "frames": 36,
+            "subject": "prize",
+            "view": "close_push",
+            "action": {
+              "kind": "walk_to",
+              "expression": "excited",
+              "end_x": 180,
+              "end_speed": 35
+            },
+            "description": "An eager step toward the tree."
+          },
+          {
+            "id": "realize",
+            "type": "discover",
+            "frames": 12,
+            "subject": "prize",
+            "view": "close_push",
+            "action": {
+              "kind": "stop_at",
+              "expression": "excited",
+              "end_x": 187
+            },
+            "description": "A happy realization."
+          },
+          {
+            "id": "cheer",
+            "type": "react",
+            "frames": 18,
+            "subject": "prize",
+            "view": "close_push",
+            "action": {
+              "kind": "look_around",
+              "expression": "happy"
+            },
+            "description": "A bright look around."
+          },
+          {
+            "id": "end_pose",
+            "type": "hold",
+            "frames": 15,
+            "subject": "prize",
+            "view": "close_push",
+            "action": {
+              "kind": "look_around",
+              "expression": "determined"
+            },
+            "description": "Ends on a confident, settled note."
+          }
+        ]
+      }
+    }
+  ],
+  "audio": null
+}

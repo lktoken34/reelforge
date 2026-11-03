@@ -4,7 +4,13 @@ import math
 from dataclasses import dataclass, replace
 from pathlib import Path
 
-from reelforge.characters.presets import EXPRESSIONS
+from reelforge.characters.registry import (
+    DEFAULT_CHARACTER,
+    asset_id_for,
+    character_ids,
+    character_info,
+    is_registered,
+)
 from reelforge.contracts.project import load_project
 from reelforge.core.errors import InputError, Issue
 from reelforge.geometry.composition import compile_composition, validate_composition
@@ -57,26 +63,34 @@ class Plan:
     corridor: tuple
     support: tuple
     start_facing: str
+    character: str = "rowan_01"
 
 
 def compile_blocking(data) -> Plan:
-    fields(
-        data,
-        {
-            "schema_version",
-            "title",
-            "base",
-            "actor_id",
-            "support_id",
-            "corridor",
-            "start",
-            "camera",
-            "segments",
-        },
-        "",
-    )
-    if data["schema_version"] != "blocking-0.1":
-        fail("/schema_version", "Use blocking-0.1")
+    required = {
+        "schema_version",
+        "title",
+        "base",
+        "actor_id",
+        "support_id",
+        "corridor",
+        "start",
+        "camera",
+        "segments",
+    }
+    # Backward compatible: "character" is optional. blocking-0.1 manifests omit it (Rowan);
+    # blocking-0.2 manifests may select a registered character.
+    if not isinstance(data, dict) or not required <= set(data) <= required | {"character"}:
+        fail("", "Supply exactly " + ", ".join(sorted(required)) + "; optional: character")
+    version = data["schema_version"]
+    if version not in ("blocking-0.1", "blocking-0.2"):
+        fail("/schema_version", "Use blocking-0.1 or blocking-0.2")
+    if "character" in data and version == "blocking-0.1":
+        fail("/character", "The character field requires blocking-0.2")
+    character = data.get("character", DEFAULT_CHARACTER)
+    if not isinstance(character, str) or not is_registered(character):
+        fail("/character", f"Select a registered character: {sorted(character_ids())}")
+    expressions = character_info(character).expressions
     if not isinstance(data["title"], str) or not data["title"].strip() or len(data["title"]) > 120:
         fail("/title", "Use nonblank title <=120 characters")
     base = data["base"]
@@ -111,13 +125,18 @@ def compile_blocking(data) -> Plan:
     world = {r.id: r for r in compiled.hierarchy}
     actor = lookup.get(actor_id)
     ground = lookup.get(support_id)
+    expected_asset = asset_id_for(character)
     if (
         actor is None
         or actor.kind != "character"
-        or actor.asset_id != "rowan_01"
+        or actor.asset_id != expected_asset
         or sum(n.kind == "character" for n in lookup.values()) != 1
     ):
-        fail("/actor_id", "Select the single accepted Rowan character", "BLOCKING_REFERENCE")
+        fail(
+            "/actor_id",
+            f"Select the single accepted {character} character asset {expected_asset!r}",
+            "BLOCKING_REFERENCE",
+        )
     if actor.ground_id != support_id or ground is None:
         fail(
             "/support_id", "Select the actor’s existing trusted ground binding", "BLOCKING_SUPPORT"
@@ -209,7 +228,7 @@ def compile_blocking(data) -> Plan:
             fail(p + "/mode", "Use idle/walk/run/stop/turn")
         if r["facing"] not in ("left", "right"):
             fail(p + "/facing", "Use left/right")
-        if r["expression"] not in EXPRESSIONS:
+        if r["expression"] not in expressions:
             fail(p + "/expression", "Select an accepted expression")
         if r["acting"] not in ("idle", "look_around", "react", "none"):
             fail(p + "/acting", "Use idle/look_around/react/none")
@@ -322,6 +341,7 @@ def compile_blocking(data) -> Plan:
         corridor,
         support,
         start["facing"],
+        character,
     )
     from .sampling import validate_contacts
 

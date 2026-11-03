@@ -1,0 +1,113 @@
+{
+  "file": "YellowMellow_V2_Animation_Showcase.mp4",
+  "frames_rendered": 450,
+  "render_seconds": 12.979,
+  "render_fps": 34.67,
+  "peak_rss_mb": 29.2,
+  "max_draw_commands_per_frame": 309,
+  "surface_state_after_render": {
+    "allocated_bytes": 0,
+    "active_surfaces": 0
+  },
+  "sample_surface_sha256": [
+    [
+      0,
+      "6ae94658d396a6f2f534072c22a4a196e40f3537171cc98e08fb04d68516730c"
+    ],
+    [
+      50,
+      "82c17a24004c265c5ca43106fe1ea4f8bce44bab44d811fdb92662960274c47e"
+    ],
+    [
+      100,
+      "c41bdaaacd8684f5e3fea7109280b8b0f45a0a44a149e51837991d424110d99f"
+    ],
+    [
+      150,
+      "6247cc4881b11c0dd2f1774d0a2acf4aa65cf9ac416627090a5c328df274d235"
+    ],
+    [
+      200,
+      "61f11504205f2f851044b9c7ef714b00e5b0590c0febf26bb5c2caa675504a18"
+    ],
+    [
+      250,
+      "5b471f231d8e8024d739115027bba57682e57e29d2569a94f9504e22b29eacb4"
+    ],
+    [
+      300,
+      "434838eb1896bc9a0aa8c9f3bebd2c94b05c1b84198aecdfeb51e9da63b292b1"
+    ],
+    [
+      350,
+      "e6964192d826064191ee871d97b2a69f86c1e0d9b10ff8f48713c162d46c4431"
+    ],
+    [
+      400,
+      "77e3b64aea3f8cbd58b315c0d564a03693bf193a05d19208767170d88f20fb8c"
+    ]
+  ],
+  "verify_video": {
+    "passed": true,
+    "mp4_top_level_boxes": [
+      "ftyp",
+      "moov",
+      "free",
+      "mdat"
+    ],
+    "metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_tag_string": "avc1",
+          "width": 720,
+          "height": 1280,
+          "pix_fmt": "yuv420p",
+          "avg_frame_rate": "30/1",
+          "nb_read_frames": "450"
+        }
+      ],
+      "format": {
+        "duration": "15.000000",
+        "size": "3743059"
+      }
+    },
+    "decoded_frames": 450,
+    "unique_decoded_frames": 450,
+    "decode_exit_status": 0,
+    "decode_command": [
+      "/usr/bin/ffmpeg",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-xerror",
+      "-err_detect",
+      "explode",
+      "-threads",
+      "1",
+      "-i",
+      "outputs/yellow_mellow_v2/final/YellowMellow_V2_Animation_Showcase.mp4",
+      "-map",
+      "0:v:0",
+      "-an",
+      "-sn",
+      "-dn",
+      "-threads:v",
+      "1",
+      "-filter_threads",
+      "1",
+      "-pix_fmt",
+      "rgb24",
+      "-fps_mode",
+      "passthrough",
+      "-f",
+      "framehash",
+      "-hash",
+      "sha256",
+      "pipe:1"
+    ],
+    "comparison_scope": "Exact decoded RGB24 hashes on the same native FFmpeg build"
+  },
+  "unique_decoded_frames": 450
+}

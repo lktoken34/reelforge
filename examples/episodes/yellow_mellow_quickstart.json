@@ -1,0 +1,99 @@
+{
+  "schema_version": "episode-0.2",
+  "title": "Yellow Mellow: Two-Shot Quickstart",
+  "segments": [
+    {
+      "id": "stroll",
+      "storyboard": {
+        "schema_version": "storyboard-0.1",
+        "title": "A quiet stroll",
+        "description": "Yellow Mellow walks up the orchard trail and pauses, curious. Authored entirely in JSON: select the character with rowan.character, pick V2 expressions, and reuse the registered orchard scene. No Python is edited.",
+        "world": {
+          "schema_version": "scene-0.1",
+          "title": "Orchard trail at dusk",
+          "output": {"width": 720, "height": 1280, "fps": 30, "frames": 90, "codec": "h264", "pixel_format": "yuv420p"},
+          "camera": "gentle_drift",
+          "art_direction": {"warmth": 0.7, "atmosphere": 0.7, "breeze": 0.4},
+          "nodes": [
+            {"id": "root", "kind": "root", "parent": null, "order": 0, "visible": true, "transform": {"x": 0, "y": 0, "scale": 1, "rotation_degrees": 0}},
+            {"id": "sky_layer", "kind": "layer", "parent": "root", "order": 0, "visible": true, "transform": {"x": 0, "y": 0, "scale": 1, "rotation_degrees": 0}, "depth": 0},
+            {"id": "sky", "kind": "background", "parent": "sky_layer", "order": 0, "visible": true, "transform": {"x": 0, "y": 0, "scale": 1, "rotation_degrees": 0}, "asset_id": "dusk_sky_01", "variant": "default"},
+            {"id": "distance", "kind": "layer", "parent": "root", "order": 1, "visible": true, "transform": {"x": 0, "y": 0, "scale": 1, "rotation_degrees": 0}, "depth": 0.18},
+            {"id": "hills", "kind": "background", "parent": "distance", "order": 0, "visible": true, "transform": {"x": 180, "y": 360, "scale": 1, "rotation_degrees": 0}, "asset_id": "distant_hills_01", "variant": "default"},
+            {"id": "terrain", "kind": "layer", "parent": "root", "order": 2, "visible": true, "transform": {"x": 0, "y": 0, "scale": 1, "rotation_degrees": 0}, "depth": 1},
+            {"id": "ground", "kind": "environment", "parent": "terrain", "order": 0, "visible": true, "transform": {"x": 155, "y": 515, "scale": 1.15, "rotation_degrees": 0}, "asset_id": "orchard_ground_01", "variant": "default"},
+            {"id": "people", "kind": "layer", "parent": "root", "order": 5, "visible": true, "transform": {"x": 0, "y": 0, "scale": 1, "rotation_degrees": 0}, "depth": 1},
+            {"id": "mellow", "kind": "character", "parent": "people", "order": 0, "visible": true, "transform": {"x": 243, "y": 535, "scale": 0.47, "rotation_degrees": 0}, "asset_id": "yellow_mellow_v2", "variant": "default", "character": {"character": "yellow_mellow_v2", "action": "idle", "expression": "curious"}, "ground_id": "ground"}
+          ]
+        },
+        "rowan": {
+          "actor_id": "mellow",
+          "support_id": "ground",
+          "character": "yellow_mellow_v2",
+          "start": {"position": [140, 535], "facing": "right"}
+        },
+        "subjects": [
+          {"id": "mellow", "target": {"kind": "actor", "id": "mellow"}},
+          {"id": "trail", "target": {"kind": "point", "position": [210, 500], "depth": 1.0}}
+        ],
+        "views": [
+          {"id": "trail_push", "kind": "push_in", "subject": "trail", "zoom": [1.08, 1.22], "screen": [250, 500], "offset_start": [0, 0], "offset_end": [70, 0], "lead_seconds": 0.0, "hold": [6, 12], "crop": "full", "foreground": "clear", "cut": "matched"}
+        ],
+        "pattern": "discovery_reaction",
+        "beats": [
+          {"id": "enter", "type": "establish", "frames": 9, "subject": "trail", "view": "trail_push", "action": {"kind": "idle", "expression": "neutral"}, "description": "Mellow arrives."},
+          {"id": "walk_in", "type": "approach", "frames": 36, "subject": "trail", "view": "trail_push", "action": {"kind": "walk_to", "expression": "curious", "end_x": 180, "end_speed": 35}, "description": "A curious walk."},
+          {"id": "spot", "type": "discover", "frames": 12, "subject": "trail", "view": "trail_push", "action": {"kind": "stop_at", "expression": "curious", "end_x": 187}, "description": "Notices something."},
+          {"id": "wonder", "type": "react", "frames": 18, "subject": "trail", "view": "trail_push", "action": {"kind": "look_around", "expression": "excited"}, "description": "An excited look."},
+          {"id": "hold", "type": "hold", "frames": 15, "subject": "trail", "view": "trail_push", "action": {"kind": "look_around", "expression": "happy"}, "description": "Holds, happy."}
+        ]
+      }
+    },
+    {
+      "id": "settle",
+      "storyboard": {
+        "schema_version": "storyboard-0.1",
+        "title": "Settling in",
+        "description": "A second shot: approach and a determined hold. Same JSON-only authoring.",
+        "world": {
+          "schema_version": "scene-0.1",
+          "title": "Orchard trail at dusk",
+          "output": {"width": 720, "height": 1280, "fps": 30, "frames": 90, "codec": "h264", "pixel_format": "yuv420p"},
+          "camera": "gentle_drift",
+          "art_direction": {"warmth": 0.72, "atmosphere": 0.68, "breeze": 0.35},
+          "nodes": [
+            {"id": "root", "kind": "root", "parent": null, "order": 0, "visible": true, "transform": {"x": 0, "y": 0, "scale": 1, "rotation_degrees": 0}},
+            {"id": "sky_layer", "kind": "layer", "parent": "root", "order": 0, "visible": true, "transform": {"x": 0, "y": 0, "scale": 1, "rotation_degrees": 0}, "depth": 0},
+            {"id": "sky", "kind": "background", "parent": "sky_layer", "order": 0, "visible": true, "transform": {"x": 0, "y": 0, "scale": 1, "rotation_degrees": 0}, "asset_id": "dusk_sky_01", "variant": "default"},
+            {"id": "terrain", "kind": "layer", "parent": "root", "order": 2, "visible": true, "transform": {"x": 0, "y": 0, "scale": 1, "rotation_degrees": 0}, "depth": 1},
+            {"id": "ground", "kind": "environment", "parent": "terrain", "order": 0, "visible": true, "transform": {"x": 155, "y": 515, "scale": 1.15, "rotation_degrees": 0}, "asset_id": "orchard_ground_01", "variant": "default"},
+            {"id": "people", "kind": "layer", "parent": "root", "order": 5, "visible": true, "transform": {"x": 0, "y": 0, "scale": 1, "rotation_degrees": 0}, "depth": 1},
+            {"id": "mellow", "kind": "character", "parent": "people", "order": 0, "visible": true, "transform": {"x": 243, "y": 535, "scale": 0.47, "rotation_degrees": 0}, "asset_id": "yellow_mellow_v2", "variant": "default", "character": {"character": "yellow_mellow_v2", "action": "idle", "expression": "determined"}, "ground_id": "ground"}
+          ]
+        },
+        "rowan": {
+          "actor_id": "mellow",
+          "support_id": "ground",
+          "character": "yellow_mellow_v2",
+          "start": {"position": [165, 535], "facing": "right"}
+        },
+        "subjects": [
+          {"id": "mellow", "target": {"kind": "actor", "id": "mellow"}},
+          {"id": "home", "target": {"kind": "point", "position": [210, 500], "depth": 1.0}}
+        ],
+        "views": [
+          {"id": "settle_push", "kind": "push_in", "subject": "home", "zoom": [1.0, 1.2], "screen": [210, 500], "offset_start": [0, 0], "offset_end": [0, 0], "lead_seconds": 0.0, "hold": [6, 18], "crop": "full", "foreground": "clear", "cut": "matched"}
+        ],
+        "pattern": "approach_suspense",
+        "beats": [
+          {"id": "slow", "type": "establish", "frames": 6, "subject": "home", "view": "settle_push", "action": {"kind": "idle", "expression": "determined"}, "description": ""},
+          {"id": "ease_in", "type": "approach", "frames": 36, "subject": "home", "view": "settle_push", "action": {"kind": "walk_to", "expression": "happy", "end_x": 201, "end_speed": 30}, "description": "Relieved walk."},
+          {"id": "stand", "type": "approach", "frames": 18, "subject": "home", "view": "settle_push", "action": {"kind": "stop_at", "expression": "happy", "end_x": 210}, "description": "Settles."},
+          {"id": "breathe", "type": "hold", "frames": 12, "subject": "home", "view": "settle_push", "action": {"kind": "idle", "expression": "happy"}, "description": "Calm pause."},
+          {"id": "relief", "type": "react", "frames": 18, "subject": "home", "view": "settle_push", "action": {"kind": "look_around", "expression": "determined"}, "description": "Confident look."}
+        ]
+      }
+    }
+  ],
+  "audio": null
+}

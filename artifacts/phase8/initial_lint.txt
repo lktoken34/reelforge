@@ -1,0 +1,84 @@
+E501 Line too long (104 > 100)
+  --> src/reelforge/episodes/contract.py:93:101
+   |
+91 |             'acting_continuity_across_segments':False,
+92 |             'segments':[{'id':s.id,'start_frame':i*90,'end_frame':(i+1)*90,
+93 |                          'storyboard':inspect_beats(s.storyboard)} for i,s in enumerate(plan.segments)]}
+   |                                                                                                     ^^^^
+94 |     if frame is not None:
+95 |         segment,local=frame_origin(plan,frame)
+   |
+
+E501 Line too long (101 > 100)
+  --> src/reelforge/episodes/contract.py:98:101
+   |
+96 |         result.update(global_frame=frame,global_sample=frame*1600,segment_id=segment.id,
+97 |                       local_frame=local,visual=inspect_frame(segment.storyboard,local),
+98 |                       active_cues=[c for c in cues if c['start_sample']<=frame*1600<c['end_sample']])
+   |                                                                                                     ^
+99 |     return result
+   |
+
+E501 Line too long (101 > 100)
+  --> src/reelforge/episodes/workflow.py:28:101
+   |
+26 |     max_paths=max_ops=0
+27 |     with FFmpegEncoder(output/'scene.mp4',width=720,height=1280,frames=plan.frames,
+28 |                        staging_directory=encoder_staging,cancelled=cancelled,timeout=300) as encoder:
+   |                                                                                                     ^
+29 |         with renderer.surface(720,1280) as surface:
+30 |             for frame in range(plan.frames):
+   |
+
+E501 Line too long (109 > 100)
+  --> src/reelforge/episodes/workflow.py:50:101
+   |
+48 |             'surface_bytes_after':0,'encoder_cleanup_deferred_to_job_owner':True,
+49 |             'editorial_cuts':[90*i for i in range(1,len(plan.segments))],
+50 |             'encoding':'One continuous stream; absolute video PTS, local storyboard clocks at explicit cuts'}
+   |                                                                                                     ^^^^^^^^^
+   |
+
+E501 Line too long (108 > 100)
+  --> src/reelforge/reels/contract.py:62:101
+   |
+62 | def metadata_plan(plan: AudioRequest, registry: AudioRegistry, frames: int = 90) -> tuple[ResolvedCue, ...]:
+   |                                                                                                     ^^^^^^^^
+63 |     try:
+64 |         return registry.resolve(plan.audio, frames, validate_media=False)
+   |
+
+E501 Line too long (102 > 100)
+   --> src/reelforge/reels/workflow.py:195:101
+    |
+193 |                 tick = time.perf_counter()
+194 |                 resolved = registry.resolve(
+195 |                     plan.audio, frames, cancelled=cancellation, validation_root=private / "validation"
+    |                                                                                                     ^^
+196 |                 )
+197 |                 snapshots = {}
+    |
+
+E501 Line too long (103 > 100)
+   --> src/reelforge/reels/workflow.py:234:101
+    |
+232 |                 current_stage = "mix"
+233 |                 tick = time.perf_counter()
+234 |                 result["mix"] = mix_pcm(resolved, frames, snapshots, reference, cancelled=cancellation)
+    |                                                                                                     ^^^
+235 |                 stages[current_stage] = time.perf_counter() - tick
+236 |                 sample(current_stage)
+    |
+
+E501 Line too long (126 > 100)
+   --> tools/episode.py:111:101
+    |
+109 |                 }
+110 |                 if args.command == "validate"
+111 |                 else inspect_episode(plan, AudioRegistry(args.registry_root), args.frame if args.command == "frame" else None)
+    |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+112 |             )
+113 |     except InputError as error:
+    |
+
+Found 10 errors (2 fixed, 8 remaining).

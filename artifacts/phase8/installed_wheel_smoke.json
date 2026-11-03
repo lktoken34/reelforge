@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "installed_module": "/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/phase8-wheel-smoke/lib/python3.12/site-packages/reelforge/episodes/contract.py",
+  "cairo_available": false,
+  "PATH": "empty",
+  "frames": 450,
+  "cut_frame_inspections": 10,
+  "native_imports_during_planning": false
+}

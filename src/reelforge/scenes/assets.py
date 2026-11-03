@@ -43,11 +43,38 @@ ASSETS = (
     Asset("fence_01", "asset", ("default",), 32, 300),
     Asset("foreground_boughs_01", "environment", ("default",), 320, 4000, False, (180, 640)),
     Asset("rowan_01", "character", ("default",), 256, 6000, True),
+    # Yellow Mellow V2 character asset. Its per-frame artwork is supplied by a trusted override
+    # (blocking/direction), never by the static scene recipe; the envelope reserves enough
+    # path/op budget for the V2 vector character plus its contact shadows.
+    Asset("yellow_mellow_v2", "character", ("default",), 384, 9000, True),
 )
 
 
 def asset_by_id(asset_id: str) -> Asset | None:
     return next((a for a in ASSETS if a.id == asset_id), None)
+
+
+def _yellow_mellow_static(character) -> tuple[DrawPath, ...]:
+    """Neutral standing Yellow Mellow at the ground origin (static scene fallback)."""
+    from reelforge.characters.yellow_mellow_v2.artwork import (
+        Placement as YMPlacement,
+    )
+    from reelforge.characters.yellow_mellow_v2.artwork import (
+        character_commands,
+        contact_shadows,
+    )
+    from reelforge.characters.yellow_mellow_v2.character import CharacterFrame
+    from reelforge.characters.yellow_mellow_v2.episode import DEFAULT_DRAW_SCALE, resolve_expression
+    from reelforge.characters.yellow_mellow_v2.expressions import expression as ym_expression
+    from reelforge.characters.yellow_mellow_v2.rig import evaluate, standing_pose
+
+    direction = getattr(character, "direction", "right")
+    sign = 1 if direction == "right" else -1
+    state = evaluate(standing_pose(0.0, 0.25 * sign))
+    face = ym_expression(resolve_expression(character.expression))
+    cf = CharacterFrame(0, "idle", state, face, 0.0)
+    placement = YMPlacement(0.0, 0.0, DEFAULT_DRAW_SCALE, sign)
+    return contact_shadows(cf.state, placement) + character_commands(cf.state, cf.face, placement)
 
 
 def cost(commands: tuple[DrawPath, ...]) -> tuple[int, int]:
@@ -89,6 +116,11 @@ def recipe(
             direction=character.direction,
             secondary=preset_secondary(character, seconds),
         )
+        commands = polish.grade_character(commands, warmth, atmosphere)
+    elif asset.id == "yellow_mellow_v2" and character is not None:
+        # Static fallback only: a neutral standing pose at the ground origin. The episode/
+        # blocking path always supplies a per-frame override instead of this recipe.
+        commands = _yellow_mellow_static(character)
         commands = polish.grade_character(commands, warmth, atmosphere)
     else:
         raise ValueError("Unregistered trusted recipe or missing character preset")

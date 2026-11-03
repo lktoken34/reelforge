@@ -2,6 +2,7 @@
 
 from dataclasses import asdict, dataclass
 from pathlib import Path
+from typing import Protocol
 
 from reelforge.audio.registry import AudioRegistry, ResolvedCue
 from reelforge.contracts.project import load_project
@@ -15,6 +16,11 @@ from reelforge.storyboards.compiler import (
     inspect_frame,
     inspect_plans,
 )
+
+
+class AudioRequest(Protocol):
+    title: str
+    audio: AudioPlan
 
 
 @dataclass(frozen=True)
@@ -53,9 +59,11 @@ def load_reel(path: Path) -> Reel:
     return compile_reel(load_project(path))
 
 
-def metadata_plan(plan: Reel, registry: AudioRegistry) -> tuple[ResolvedCue, ...]:
+def metadata_plan(
+    plan: AudioRequest, registry: AudioRegistry, frames: int = 90
+) -> tuple[ResolvedCue, ...]:
     try:
-        return registry.resolve(plan.audio, 90, validate_media=False)
+        return registry.resolve(plan.audio, frames, validate_media=False)
     except OperationError as error:
         raise InputError(Issue(error.code, "/audio", str(error))) from error
 

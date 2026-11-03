@@ -1,0 +1,42 @@
+{
+  "frames_checked": 9,
+  "all_match": true,
+  "results": [
+    {
+      "frame": 400,
+      "match": true
+    },
+    {
+      "frame": 350,
+      "match": true
+    },
+    {
+      "frame": 300,
+      "match": true
+    },
+    {
+      "frame": 250,
+      "match": true
+    },
+    {
+      "frame": 200,
+      "match": true
+    },
+    {
+      "frame": 150,
+      "match": true
+    },
+    {
+      "frame": 100,
+      "match": true
+    },
+    {
+      "frame": 50,
+      "match": true
+    },
+    {
+      "frame": 0,
+      "match": true
+    }
+  ]
+}

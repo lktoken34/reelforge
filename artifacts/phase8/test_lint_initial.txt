@@ -1,0 +1,255 @@
+E701 Multiple statements on one line (colon)
+  --> tests/test_episodes.py:40:25
+   |
+38 | def test_strict_episode_rejections(data,path,value):
+39 |     item=data
+40 |     for key in path[:-1]:item=item[key]
+   |                         ^
+41 |     item[path[-1]]=value
+42 |     with pytest.raises(InputError):compile_episode(data)
+   |
+
+E701 Multiple statements on one line (colon)
+  --> tests/test_episodes.py:42:35
+   |
+40 |     for key in path[:-1]:item=item[key]
+41 |     item[path[-1]]=value
+42 |     with pytest.raises(InputError):compile_episode(data)
+   |                                   ^
+   |
+
+E501 Line too long (114 > 100)
+  --> tests/test_episodes.py:47:101
+   |
+45 | @pytest.mark.parametrize('level',['root','segment','storyboard'])
+46 | def test_unknown_fields(data,level):
+47 |     item=data if level=='root' else data['segments'][0] if level=='segment' else data['segments'][0]['storyboard']
+   |                                                                                                     ^^^^^^^^^^^^^^
+48 |     item['command']='shell'
+49 |     with pytest.raises(InputError):compile_episode(data)
+   |
+
+E701 Multiple statements on one line (colon)
+  --> tests/test_episodes.py:49:35
+   |
+47 |     item=data if level=='root' else data['segments'][0] if level=='segment' else data['segments'][0]['storyboard']
+48 |     item['command']='shell'
+49 |     with pytest.raises(InputError):compile_episode(data)
+   |                                   ^
+   |
+
+E701 Multiple statements on one line (colon)
+  --> tests/test_episodes.py:54:50
+   |
+52 | def test_duplicate_ids_and_nested_error_path(data):
+53 |     data['segments'].append(copy.deepcopy(data['segments'][0]))
+54 |     with pytest.raises(InputError,match='unique'):compile_episode(data)
+   |                                                  ^
+55 |     data['segments'][1]['id']='next'
+56 |     data['segments'][1]['storyboard']['beats'][0]['frames']=-1
+   |
+
+E701 Multiple statements on one line (colon)
+  --> tests/test_episodes.py:57:45
+   |
+55 |     data['segments'][1]['id']='next'
+56 |     data['segments'][1]['storyboard']['beats'][0]['frames']=-1
+57 |     with pytest.raises(InputError) as caught:compile_episode(data)
+   |                                             ^
+58 |     assert caught.value.issue.path.startswith('/segments/1/storyboard/beats')
+   |
+
+E501 Line too long (113 > 100)
+  --> tests/test_episodes.py:63:101
+   |
+61 | @pytest.mark.parametrize('count',[1,5,10])
+62 | def test_bounds_and_global_audio(data,count):
+63 |     data['segments']=[{'id':f'segment_{i}','storyboard':data['segments'][0]['storyboard']} for i in range(count)]
+   |                                                                                                     ^^^^^^^^^^^^^
+64 |     data['audio']['narration']['start_frame']=count*90-1
+65 |     plan=compile_episode(data)
+   |
+
+E701 Multiple statements on one line (colon)
+  --> tests/test_episodes.py:72:35
+   |
+70 |         segment,local=frame_origin(plan,frame)
+71 |         assert segment.id==f'segment_{frame//90}' and local==frame%90
+72 |     with pytest.raises(InputError):frame_origin(plan,plan.frames)
+   |                                   ^
+73 |     with pytest.raises(InputError):frame_origin(plan,True)
+   |
+
+E701 Multiple statements on one line (colon)
+  --> tests/test_episodes.py:73:35
+   |
+71 |         assert segment.id==f'segment_{frame//90}' and local==frame%90
+72 |     with pytest.raises(InputError):frame_origin(plan,plan.frames)
+73 |     with pytest.raises(InputError):frame_origin(plan,True)
+   |                                   ^
+   |
+
+E701 Multiple statements on one line (colon)
+  --> tests/test_episodes.py:92:35
+   |
+90 |     # Semantic validation checks the actual requested episode length, not schema's maximum.
+91 |     d['audio']['cues'][0]['start_frame']=899
+92 |     with pytest.raises(InputError):compile_episode(d)
+   |                                   ^
+   |
+
+E501 Line too long (104 > 100)
+   --> tests/test_episodes.py:114:101
+    |
+112 |     calls=[]
+113 |     real=AudioRegistry.resolve
+114 |     monkeypatch.setattr(AudioRegistry,'resolve',lambda self,p,f,**k:real(self,p,f,validate_media=False))
+    |                                                                                                     ^^^^
+115 |     def mix(cues,frames,snapshots,output,**kwargs):
+116 |         calls.append(('mix',frames));output.write_bytes(b'pcm');return {'samples':frames*1600}
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_episodes.py:116:37
+    |
+114 |     monkeypatch.setattr(AudioRegistry,'resolve',lambda self,p,f,**k:real(self,p,f,validate_media=False))
+115 |     def mix(cues,frames,snapshots,output,**kwargs):
+116 |         calls.append(('mix',frames));output.write_bytes(b'pcm');return {'samples':frames*1600}
+    |                                     ^
+117 |     def mux(video,pcm,output,frames,**kwargs):
+118 |         calls.append(('mux',frames));output.write_bytes(b'verified');return []
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_episodes.py:116:64
+    |
+114 |     monkeypatch.setattr(AudioRegistry,'resolve',lambda self,p,f,**k:real(self,p,f,validate_media=False))
+115 |     def mix(cues,frames,snapshots,output,**kwargs):
+116 |         calls.append(('mix',frames));output.write_bytes(b'pcm');return {'samples':frames*1600}
+    |                                                                ^
+117 |     def mux(video,pcm,output,frames,**kwargs):
+118 |         calls.append(('mux',frames));output.write_bytes(b'verified');return []
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_episodes.py:118:37
+    |
+116 |         calls.append(('mix',frames));output.write_bytes(b'pcm');return {'samples':frames*1600}
+117 |     def mux(video,pcm,output,frames,**kwargs):
+118 |         calls.append(('mux',frames));output.write_bytes(b'verified');return []
+    |                                     ^
+119 |     def audio(video,final,ref,decoded,cues,frames,**kwargs):
+120 |         calls.append(('audio_verify',frames));return {'passed':True}
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_episodes.py:118:69
+    |
+116 |         calls.append(('mix',frames));output.write_bytes(b'pcm');return {'samples':frames*1600}
+117 |     def mux(video,pcm,output,frames,**kwargs):
+118 |         calls.append(('mux',frames));output.write_bytes(b'verified');return []
+    |                                                                     ^
+119 |     def audio(video,final,ref,decoded,cues,frames,**kwargs):
+120 |         calls.append(('audio_verify',frames));return {'passed':True}
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_episodes.py:120:46
+    |
+118 |         calls.append(('mux',frames));output.write_bytes(b'verified');return []
+119 |     def audio(video,final,ref,decoded,cues,frames,**kwargs):
+120 |         calls.append(('audio_verify',frames));return {'passed':True}
+    |                                              ^
+121 |     def verify(path,**kwargs):
+122 |         calls.append(('video_verify',kwargs['frames']));return {'decoded_rgb_sha256':['same']}
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_episodes.py:122:56
+    |
+120 |         calls.append(('audio_verify',frames));return {'passed':True}
+121 |     def verify(path,**kwargs):
+122 |         calls.append(('video_verify',kwargs['frames']));return {'decoded_rgb_sha256':['same']}
+    |                                                        ^
+123 |     def streams(path,event,frames):
+124 |         calls.append(('stream_verify',frames));return {'exact_video_pts':True}
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_episodes.py:124:47
+    |
+122 |         calls.append(('video_verify',kwargs['frames']));return {'decoded_rgb_sha256':['same']}
+123 |     def streams(path,event,frames):
+124 |         calls.append(('stream_verify',frames));return {'exact_video_pts':True}
+    |                                               ^
+125 |     monkeypatch.setattr(workflow,'mix_pcm',mix);monkeypatch.setattr(workflow,'mux_audio',mux)
+126 |     monkeypatch.setattr(workflow,'verify_audio',audio);monkeypatch.setattr(workflow,'verify_video',verify)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_episodes.py:125:48
+    |
+123 |     def streams(path,event,frames):
+124 |         calls.append(('stream_verify',frames));return {'exact_video_pts':True}
+125 |     monkeypatch.setattr(workflow,'mix_pcm',mix);monkeypatch.setattr(workflow,'mux_audio',mux)
+    |                                                ^
+126 |     monkeypatch.setattr(workflow,'verify_audio',audio);monkeypatch.setattr(workflow,'verify_video',verify)
+127 |     monkeypatch.setattr(workflow,'stream_check',streams)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_episodes.py:126:55
+    |
+124 |         calls.append(('stream_verify',frames));return {'exact_video_pts':True}
+125 |     monkeypatch.setattr(workflow,'mix_pcm',mix);monkeypatch.setattr(workflow,'mux_audio',mux)
+126 |     monkeypatch.setattr(workflow,'verify_audio',audio);monkeypatch.setattr(workflow,'verify_video',verify)
+    |                                                       ^
+127 |     monkeypatch.setattr(workflow,'stream_check',streams)
+128 |     def renderer(plan,output,**kwargs):
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_episodes.py:129:50
+    |
+127 |     monkeypatch.setattr(workflow,'stream_check',streams)
+128 |     def renderer(plan,output,**kwargs):
+129 |         calls.append(('render_once',plan.frames));output.mkdir();(output/'scene.mp4').write_bytes(b'video')
+    |                                                  ^
+130 |         return {'success':True,'verification':{'decoded_rgb_sha256':['same']}}
+131 |     return calls,renderer
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_episodes.py:129:65
+    |
+127 |     monkeypatch.setattr(workflow,'stream_check',streams)
+128 |     def renderer(plan,output,**kwargs):
+129 |         calls.append(('render_once',plan.frames));output.mkdir();(output/'scene.mp4').write_bytes(b'video')
+    |                                                                 ^
+130 |         return {'success':True,'verification':{'decoded_rgb_sha256':['same']}}
+131 |     return calls,renderer
+    |
+
+E501 Line too long (116 > 100)
+   --> tests/test_episodes.py:141:101
+    |
+139 |                              registry_root=ASSETS,contract_version='episode-0.1')
+140 |     assert result['success'] and result['contract']=='episode-0.1' and result['frames']==450
+141 |     assert calls==[(name,450) for name in ('render_once','mix','mux','audio_verify','video_verify','stream_verify')]
+    |                                                                                                     ^^^^^^^^^^^^^^^^
+142 |     assert result['mix']['samples']==720000
+143 |     assert result['transaction_clean']
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_episodes.py:151:18
+    |
+149 |     _,renderer=fake_pipeline
+150 |     plan=load_episode(ROOT/'examples/episodes/relay_to_shelter.json')
+151 |     event=Event();event.set()
+    |                  ^
+152 |     with pytest.raises(OperationError,match='cancelled'):
+153 |         workflow.render_av(plan,tmp_path/'cancelled',frames=450,visual_plan=plan,
+    |
+
+Found 24 errors.

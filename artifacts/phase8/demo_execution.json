@@ -1,0 +1,14 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "tools/episode.py",
+    "render",
+    "examples/episodes/relay_to_shelter.json",
+    "--output-dir",
+    "artifacts/phase8/demo"
+  ],
+  "render_attempts": 1,
+  "retries": 0,
+  "exit_code": 0,
+  "wall_seconds": 32.784983680000096
+}

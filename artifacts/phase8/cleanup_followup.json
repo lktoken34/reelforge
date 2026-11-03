@@ -1,0 +1,7 @@
+{
+  "transaction_path": "/workspace/scratch/ade48aa5d272/reelforge-phase8/artifacts/phase8/demo/.reelforge-audio-g0i1afz3",
+  "clean_at_job_return": true,
+  "retired_path_present": false,
+  "historical_host_blocker_resolved": false,
+  "scope": "Read-only follow-up after native decoding and package work; no sweep or reacquisition"
+}

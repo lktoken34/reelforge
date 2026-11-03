@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="27" failures="0" skipped="0" tests="86" time="29.308" timestamp="2026-11-02T14:21:01.634510-06:00" hostname="f6dce7befb11"><testcase classname="tests.test_episodes" name="test_strict_episode_rejections[path0-episode-9]" time="0.002" /><testcase classname="tests.test_episodes" name="test_strict_episode_rejections[path1- ]" time="0.002" /><testcase classname="tests.test_episodes" name="test_strict_episode_rejections[path2-False]" time="0.002" /><testcase classname="tests.test_episodes" name="test_strict_episode_rejections[path3-value3]" time="0.001" /><testcase classname="tests.test_episodes" name="test_strict_episode_rejections[path4-value4]" time="0.001" /><testcase classname="tests.test_episodes" name="test_strict_episode_rejections[path5-include.json]" time="0.001" /><testcase classname="tests.test_episodes" name="test_strict_episode_rejections[path6-../outside]" time="0.002" /><testcase classname="tests.test_episodes" name="test_strict_episode_rejections[path7-None]" time="0.001" /><testcase classname="tests.test_episodes" name="test_strict_episode_rejections[path8-None]" time="0.630" /><testcase classname="tests.test_episodes" name="test_strict_episode_rejections[path9-90]" time="0.756" /><testcase classname="tests.test_episodes" name="test_strict_episode_rejections[path10-True]" time="0.674" /><testcase classname="tests.test_episodes" name="test_strict_episode_rejections[path11-value11]" time="0.627" /><testcase classname="tests.test_episodes" name="test_strict_episode_rejections[path12-0.81]" time="0.633" /><testcase classname="tests.test_episodes" name="test_strict_episode_rejections[path13-https://a.wav]" time="0.702" /><testcase classname="tests.test_episodes" name="test_unknown_fields[root]" time="0.002" /><testcase classname="tests.test_episodes" name="test_unknown_fields[segment]" time="0.002" /><testcase classname="tests.test_episodes" name="test_unknown_fields[storyboard]" time="0.003" /><testcase classname="tests.test_episodes" name="test_duplicate_ids_and_nested_error_path" time="1.308" /><testcase classname="tests.test_episodes" name="test_bounds_and_global_audio[1]" time="0.665" /><testcase classname="tests.test_episodes" name="test_bounds_and_global_audio[5]" time="3.368" /><testcase classname="tests.test_episodes" name="test_bounds_and_global_audio[10]" time="6.523" /><testcase classname="tests.test_episodes" name="test_schema_demo_and_cross_cut_sound" time="6.503" /><testcase classname="tests.test_episodes" name="test_metadata_only_without_native_modules" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'&quot;">self = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_episodes" name="test_episode_uses_one_render_one_mix_and_global_length" time="0.000"><error message="failed on setup with &quot;FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'&quot;">self = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_episodes" name="test_episode_cancel_and_tmp_workspace_are_not_bypassed" time="0.000"><error message="failed on setup with &quot;FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'&quot;">self = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_reels" name="test_rejects_invalid_contract[path0-reel-9]" time="0.002" /><testcase classname="tests.test_reels" name="test_rejects_invalid_contract[path1- ]" time="0.002" /><testcase classname="tests.test_reels" name="test_rejects_invalid_contract[path2-1]" time="0.002" /><testcase classname="tests.test_reels" name="test_rejects_invalid_contract[path3-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx]" time="0.002" /><testcase classname="tests.test_reels" name="test_rejects_invalid_contract[path4-None]" time="0.001" /><testcase classname="tests.test_reels" name="test_rejects_invalid_contract[path5-None]" time="0.002" /><testcase classname="tests.test_reels" name="test_rejects_invalid_contract[path6-44100]" time="0.002" /><testcase classname="tests.test_reels" name="test_rejects_invalid_contract[path7-True]" time="0.001" /><testcase classname="tests.test_reels" name="test_rejects_invalid_contract[path8-64000]" time="0.002" /><testcase classname="tests.test_reels" name="test_rejects_invalid_contract[path9-mp3]" time="0.002" /><testcase classname="tests.test_reels" name="test_rejects_invalid_contract[path10-../take.wav]" time="0.002" /><testcase classname="tests.test_reels" name="test_rejects_invalid_contract[path11-https://a.wav]" time="0.002" /><testcase classname="tests.test_reels" name="test_rejects_invalid_contract[path12-90]" time="0.002" /><testcase classname="tests.test_reels" name="test_rejects_invalid_contract[path13--1]" time="0.001" /><testcase classname="tests.test_reels" name="test_rejects_invalid_contract[path14-True]" time="0.001" /><testcase classname="tests.test_reels" name="test_rejects_invalid_contract[path15-0.0]" time="0.002" /><testcase classname="tests.test_reels" name="test_rejects_invalid_contract[path16-900]" time="0.001" /><testcase classname="tests.test_reels" name="test_rejects_invalid_contract[path17-0]" time="0.002" /><testcase classname="tests.test_reels" name="test_rejects_invalid_contract[path18-0.81]" time="0.002" /><testcase classname="tests.test_reels" name="test_rejects_invalid_contract[path19-True]" time="0.002" /><testcase classname="tests.test_reels" name="test_rejects_invalid_contract[path20-nan]" time="0.001" /><testcase classname="tests.test_reels" name="test_rejects_invalid_contract[path21-volume=1]" time="0.002" /><testcase classname="tests.test_reels" name="test_rejects_invalid_contract[path22-value22]" time="0.002" /><testcase classname="tests.test_reels" name="test_rejects_invalid_contract[path23-story-0.2]" time="0.003" /><testcase classname="tests.test_reels" name="test_unknown_fields_rejected[path0]" time="0.002" /><testcase classname="tests.test_reels" name="test_unknown_fields_rejected[path1]" time="0.002" /><testcase classname="tests.test_reels" name="test_unknown_fields_rejected[path2]" time="0.002" /><testcase classname="tests.test_reels" name="test_unknown_fields_rejected[path3]" time="0.003" /><testcase classname="tests.test_reels" name="test_empty_audio_and_nested_error_path" time="0.004" /><testcase classname="tests.test_reels" name="test_schema_and_exact_accepted_storyboard[silent_signal]" time="1.063" /><testcase classname="tests.test_reels" name="test_schema_and_exact_accepted_storyboard[abandoned_settlement]" time="0.941" /><testcase classname="tests.test_reels" name="test_schema_and_exact_accepted_storyboard[shelter_entrance]" time="0.847" /><testcase classname="tests.test_reels" name="test_metadata_asset_admission[missing]" time="0.591" /><testcase classname="tests.test_reels" name="test_metadata_asset_admission[role]" time="0.623" /><testcase classname="tests.test_reels" name="test_metadata_asset_admission[trim]" time="0.676" /><testcase classname="tests.test_reels" name="test_metadata_asset_admission[overlap]" time="0.688" /><testcase classname="tests.test_reels" name="test_inspection_is_metadata_only_and_cut_does_not_reset_audio" time="0.000"><error message="failed on setup with &quot;FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'&quot;">self = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_reels" name="test_planning_imports_no_native_or_process_modules" time="0.808" /><testcase classname="tests.test_reels" name="test_one_owner_publication_and_no_clobber" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'&quot;">self = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_reels" name="test_failed_stage_never_publishes[mix_pcm]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'&quot;">self = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_reels" name="test_failed_stage_never_publishes[mux_audio]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'&quot;">self = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_reels" name="test_failed_stage_never_publishes[verify_audio]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'&quot;">self = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_reels" name="test_failed_stage_never_publishes[verify_video]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'&quot;">self = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_reels" name="test_failed_stage_never_publishes[stream_check]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'&quot;">self = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_reels" name="test_cancellation_across_stages[render]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'&quot;">self = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_reels" name="test_cancellation_across_stages[mix_pcm]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'&quot;">self = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_reels" name="test_cancellation_across_stages[mux_audio]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'&quot;">self = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_reels" name="test_cancellation_across_stages[verify_audio]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'&quot;">self = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_reels" name="test_cancellation_across_stages[verify_video]" time="0.000"><error message="failed on setup with &quot;FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'&quot;">self = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_reels" name="test_cancellation_across_stages[stream_check]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'&quot;">self = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_reels" name="test_cancelled_before_output" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'&quot;">self = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_reels" name="test_snapshot_hash_failure" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'&quot;">self = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_reels" name="test_restoration_is_failure_not_a_sweep[after_publish]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'&quot;">self = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_reels" name="test_restoration_is_failure_not_a_sweep[before_publish]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'&quot;">self = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_reels" name="test_resource_refusal[memory]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'&quot;">self = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_reels" name="test_resource_refusal[storage]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'&quot;">self = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_reels" name="test_actual_audio_mix_mux_video_preservation" time="0.000"><error message="failed on setup with &quot;FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'&quot;">self = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_reels" name="test_full_registry_validation_still_requires_wav" time="0.000"><error message="failed on setup with &quot;FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'&quot;">self = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_reels" name="test_publication_race_preserves_foreign_file" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'&quot;">self = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_reels" name="test_borrowed_encoder_failure_reaps_without_owning_root[False]" time="0.000"><error message="failed on setup with &quot;FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'&quot;">self = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_reels" name="test_borrowed_encoder_failure_reaps_without_owning_root[True]" time="0.000"><error message="failed on setup with &quot;FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'&quot;">self = PosixPath('/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/ade48aa5d272/reelforge-phase8/outputs/pytest-phase8-targeted'
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py:1311: FileNotFoundError</error></testcase></testsuite></testsuites>

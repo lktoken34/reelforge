@@ -72,6 +72,38 @@ class Scene:
     nodes: tuple[Node, ...]
 
 
+@dataclass(frozen=True)
+class CharacterRef:
+    """Minimal stationary descriptor for a registered non-Rowan character scene node.
+
+    The full per-frame animation is supplied by the storyboard/blocking override; this only
+    records the registered character id, a stationary action and an expression so a static scene
+    inspection can draw a neutral standing pose.
+    """
+
+    character: str
+    action: str
+    expression: str
+    direction: str = "right"
+
+
+def _non_rowan_character(data, asset_id: str, path: str) -> CharacterRef:
+    from reelforge.characters.registry import character_info, is_registered
+
+    if not is_registered(asset_id):
+        fail(path, f"Unknown registered character asset {asset_id!r}", "SCENE_ASSET")
+    info = character_info(asset_id)
+    if not isinstance(data, dict) or set(data) != {"character", "action", "expression"}:
+        fail(path, "Supply exactly character, action, expression")
+    if data["character"] != asset_id:
+        fail(path + "/character", f"Character must equal the node asset id {asset_id!r}")
+    if data["action"] not in ("idle", "look_around", "look", "react"):
+        fail(path + "/action", "Scene nodes are stationary: idle/look_around/look/react")
+    if data["expression"] not in info.expressions:
+        fail(path + "/expression", f"Select a registered expression for {asset_id}")
+    return CharacterRef(asset_id, data["action"], data["expression"])
+
+
 def validate_scene(data) -> Scene:
     fields(data, {"schema_version", "title", "output", "camera", "art_direction", "nodes"}, "")
     if data["schema_version"] != "scene-0.1":
@@ -138,14 +170,22 @@ def validate_scene(data) -> Scene:
                 fail(p + "/variant", f"Trusted variants: {asset.variants}")
         if kind == "character":
             identifier(record["ground_id"], p + "/ground_id")
-            try:
-                character = CharacterPreset.from_data(record["character"])
-            except (TypeError, ValueError) as error:
-                fail(p + "/character", str(error))
-            if character.action not in ("idle", "look_around", "react"):
-                fail(
-                    p + "/character/action", "Scene-0.1 supports stationary idle/look_around/react"
-                )
+            asset_id = record["asset_id"]
+            if asset_id == "rowan_01":
+                try:
+                    character = CharacterPreset.from_data(record["character"])
+                except (TypeError, ValueError) as error:
+                    fail(p + "/character", str(error))
+                if character.action not in ("idle", "look_around", "react"):
+                    fail(
+                        p + "/character/action",
+                        "Scene-0.1 supports stationary idle/look_around/react",
+                    )
+            else:
+                # Non-Rowan registered characters are drawn by a trusted per-frame override
+                # (blocking/direction), not the static scene recipe. The scene node only needs a
+                # minimal stationary descriptor; the full animation comes from the storyboard.
+                character = _non_rowan_character(record["character"], asset_id, p + "/character")
         nodes.append(
             Node(
                 record["id"],

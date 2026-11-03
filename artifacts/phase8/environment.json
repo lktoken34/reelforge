@@ -1,0 +1,7 @@
+{
+  "python": "3.12.14",
+  "pycairo": "1.29.2",
+  "cairo": "1.18.0",
+  "native_binding_sha256": "d4205b2347015bfdb07f5c2bd39d21db23d35988b80837b0937ba29c990283cd",
+  "setup": "Frozen base dependencies installed; reused byte-identical approved Pycairo binary because fresh renderer sync lacked pkg-config; dependency pins unchanged"
+}

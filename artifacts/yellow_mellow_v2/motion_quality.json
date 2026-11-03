@@ -1,0 +1,494 @@
+{
+  "units": "character units (x2.3 logical px, x4.6 output px)",
+  "tolerances": {
+    "ground_contact": 0.15,
+    "slide": 0.05,
+    "penetration": 0.05
+  },
+  "summary": {
+    "frames": 450,
+    "all_joint_transforms_finite": true,
+    "max_planted_contact_slide_units": 0.0383,
+    "planted_slide_events_over_tolerance": 0,
+    "max_ground_penetration_units": 0.0,
+    "max_leg_reach_error_units": 0.0,
+    "clamped_channel_frames": {},
+    "knee_flip_events": [],
+    "thigh_projected_length_range": [
+      18.99,
+      22.0,
+      22.0
+    ],
+    "shin_projected_length_range": [
+      17.82,
+      21.0,
+      21.0
+    ],
+    "neck_head_distance_range": [
+      13.85,
+      16.15,
+      15.0
+    ],
+    "airborne_frames_total": 39,
+    "max_joint_step_units": 29.406,
+    "blink_frames": 28
+  },
+  "sections": [
+    {
+      "frames": [
+        0,
+        44
+      ],
+      "section": "Idle, blink, smile, one-hand wave",
+      "actions": [
+        "idle",
+        "wave"
+      ],
+      "airborne_frames": 0,
+      "landings": {
+        "near": [],
+        "far": []
+      },
+      "near_shoulder_range": [
+        0.26,
+        0.32
+      ],
+      "far_shoulder_range": [
+        -2.21,
+        -0.15
+      ],
+      "elbow_range": [
+        -0.4,
+        1.27
+      ],
+      "arm_shoulder_correlation": 0.931,
+      "min_hip_ankle": 41.87,
+      "pelvis_height_range": [
+        50.4,
+        50.73
+      ],
+      "travel_units": 0.11,
+      "max_speed_units_per_frame": 0.092,
+      "max_joint_step": 21.243,
+      "expressions_eye_scale_range": [
+        1.0,
+        1.02
+      ]
+    },
+    {
+      "frames": [
+        45,
+        89
+      ],
+      "section": "Raise both hands, lower naturally",
+      "actions": [
+        "hands_down",
+        "hands_up"
+      ],
+      "airborne_frames": 0,
+      "landings": {
+        "near": [],
+        "far": []
+      },
+      "near_shoulder_range": [
+        0.1,
+        2.42
+      ],
+      "far_shoulder_range": [
+        -2.42,
+        -0.19
+      ],
+      "elbow_range": [
+        -0.35,
+        1.1
+      ],
+      "arm_shoulder_correlation": -0.732,
+      "min_hip_ankle": 40.23,
+      "pelvis_height_range": [
+        48.75,
+        52.41
+      ],
+      "travel_units": -0.08,
+      "max_speed_units_per_frame": 0.098,
+      "max_joint_step": 18.917,
+      "expressions_eye_scale_range": [
+        1.02,
+        1.32
+      ]
+    },
+    {
+      "frames": [
+        90,
+        134
+      ],
+      "section": "Look right, point, curiosity",
+      "actions": [
+        "look",
+        "point"
+      ],
+      "airborne_frames": 0,
+      "landings": {
+        "near": [],
+        "far": []
+      },
+      "near_shoulder_range": [
+        0.3,
+        0.81
+      ],
+      "far_shoulder_range": [
+        -2.81,
+        -0.3
+      ],
+      "elbow_range": [
+        -1.3,
+        1.0
+      ],
+      "arm_shoulder_correlation": -0.991,
+      "min_hip_ankle": 41.72,
+      "pelvis_height_range": [
+        50.23,
+        50.67
+      ],
+      "travel_units": 0.19,
+      "max_speed_units_per_frame": 0.093,
+      "max_joint_step": 17.328,
+      "expressions_eye_scale_range": [
+        1.02,
+        1.1
+      ]
+    },
+    {
+      "frames": [
+        135,
+        194
+      ],
+      "section": "Crouch, jump, land, absorb",
+      "actions": [
+        "jump"
+      ],
+      "airborne_frames": 15,
+      "landings": {
+        "near": [
+          170
+        ],
+        "far": [
+          170
+        ]
+      },
+      "near_shoulder_range": [
+        0.2,
+        2.42
+      ],
+      "far_shoulder_range": [
+        -2.42,
+        -0.2
+      ],
+      "elbow_range": [
+        -0.55,
+        0.55
+      ],
+      "arm_shoulder_correlation": -0.999,
+      "min_hip_ankle": 29.03,
+      "pelvis_height_range": [
+        37.9,
+        79.49
+      ],
+      "travel_units": 0.0,
+      "max_speed_units_per_frame": 0.0,
+      "max_joint_step": 23.593,
+      "expressions_eye_scale_range": [
+        1.1,
+        1.45
+      ]
+    },
+    {
+      "frames": [
+        195,
+        254
+      ],
+      "section": "Turn and walk with planted feet",
+      "actions": [
+        "locomotion"
+      ],
+      "airborne_frames": 0,
+      "landings": {
+        "near": [
+          230
+        ],
+        "far": [
+          213,
+          246
+        ]
+      },
+      "near_shoulder_range": [
+        -0.05,
+        0.8
+      ],
+      "far_shoulder_range": [
+        -0.85,
+        0.23
+      ],
+      "elbow_range": [
+        -0.44,
+        0.44
+      ],
+      "arm_shoulder_correlation": -0.649,
+      "min_hip_ankle": 35.21,
+      "pelvis_height_range": [
+        48.29,
+        50.79
+      ],
+      "travel_units": -63.39,
+      "max_speed_units_per_frame": 1.55,
+      "max_joint_step": 23.395,
+      "expressions_eye_scale_range": [
+        1.02,
+        1.2
+      ]
+    },
+    {
+      "frames": [
+        255,
+        314
+      ],
+      "section": "Accelerate into a run, decelerate, stop",
+      "actions": [
+        "locomotion"
+      ],
+      "airborne_frames": 9,
+      "landings": {
+        "near": [
+          261,
+          282,
+          296,
+          303
+        ],
+        "far": [
+          272,
+          291,
+          299,
+          310
+        ]
+      },
+      "near_shoulder_range": [
+        -0.28,
+        1.09
+      ],
+      "far_shoulder_range": [
+        -1.21,
+        0.3
+      ],
+      "elbow_range": [
+        -1.55,
+        1.55
+      ],
+      "arm_shoulder_correlation": -0.801,
+      "min_hip_ankle": 18.4,
+      "pelvis_height_range": [
+        45.3,
+        50.79
+      ],
+      "travel_units": -131.2,
+      "max_speed_units_per_frame": 3.3,
+      "max_joint_step": 11.919,
+      "expressions_eye_scale_range": [
+        0.98,
+        1.02
+      ]
+    },
+    {
+      "frames": [
+        315,
+        359
+      ],
+      "section": "Jumping jacks",
+      "actions": [
+        "jumping_jack"
+      ],
+      "airborne_frames": 15,
+      "landings": {
+        "near": [
+          325,
+          331,
+          337,
+          343,
+          348,
+          354
+        ],
+        "far": [
+          325,
+          331,
+          337,
+          343,
+          348,
+          354
+        ]
+      },
+      "near_shoulder_range": [
+        0.3,
+        2.49
+      ],
+      "far_shoulder_range": [
+        -2.49,
+        -0.3
+      ],
+      "elbow_range": [
+        -0.3,
+        0.35
+      ],
+      "arm_shoulder_correlation": -1.0,
+      "min_hip_ankle": 37.55,
+      "pelvis_height_range": [
+        44.11,
+        54.27
+      ],
+      "travel_units": 0.09,
+      "max_speed_units_per_frame": 0.048,
+      "max_joint_step": 29.406,
+      "expressions_eye_scale_range": [
+        0.98,
+        0.98
+      ]
+    },
+    {
+      "frames": [
+        360,
+        404
+      ],
+      "section": "Squat, stand, stretch overhead",
+      "actions": [
+        "squat",
+        "stretch"
+      ],
+      "airborne_frames": 0,
+      "landings": {
+        "near": [],
+        "far": []
+      },
+      "near_shoulder_range": [
+        0.3,
+        2.57
+      ],
+      "far_shoulder_range": [
+        -2.57,
+        -0.3
+      ],
+      "elbow_range": [
+        -0.12,
+        0.7
+      ],
+      "arm_shoulder_correlation": -1.0,
+      "min_hip_ankle": 25.4,
+      "pelvis_height_range": [
+        33.9,
+        53.06
+      ],
+      "travel_units": 0.0,
+      "max_speed_units_per_frame": 0.0,
+      "max_joint_step": 16.031,
+      "expressions_eye_scale_range": [
+        0.95,
+        0.98
+      ]
+    },
+    {
+      "frames": [
+        405,
+        449
+      ],
+      "section": "Celebration bounce, confident pose",
+      "actions": [
+        "dance"
+      ],
+      "airborne_frames": 0,
+      "landings": {
+        "near": [],
+        "far": []
+      },
+      "near_shoulder_range": [
+        0.7,
+        2.35
+      ],
+      "far_shoulder_range": [
+        -2.35,
+        -0.7
+      ],
+      "elbow_range": [
+        -1.55,
+        0.95
+      ],
+      "arm_shoulder_correlation": 0.597,
+      "min_hip_ankle": 37.54,
+      "pelvis_height_range": [
+        48.1,
+        50.86
+      ],
+      "travel_units": 0.0,
+      "max_speed_units_per_frame": 0.808,
+      "max_joint_step": 21.711,
+      "expressions_eye_scale_range": [
+        0.95,
+        1.02
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "frame": 45,
+      "section": "Raise both hands, lower naturally",
+      "max_joint_step_at_boundary": 0.832,
+      "median_step_nearby": 4.101,
+      "ratio": 0.2
+    },
+    {
+      "frame": 90,
+      "section": "Look right, point, curiosity",
+      "max_joint_step_at_boundary": 0.59,
+      "median_step_nearby": 1.019,
+      "ratio": 0.58
+    },
+    {
+      "frame": 135,
+      "section": "Crouch, jump, land, absorb",
+      "max_joint_step_at_boundary": 5.101,
+      "median_step_nearby": 10.763,
+      "ratio": 0.47
+    },
+    {
+      "frame": 195,
+      "section": "Turn and walk with planted feet",
+      "max_joint_step_at_boundary": 0.197,
+      "median_step_nearby": 1.244,
+      "ratio": 0.16
+    },
+    {
+      "frame": 255,
+      "section": "Accelerate into a run, decelerate, stop",
+      "max_joint_step_at_boundary": 6.485,
+      "median_step_nearby": 5.627,
+      "ratio": 1.15
+    },
+    {
+      "frame": 315,
+      "section": "Jumping jacks",
+      "max_joint_step_at_boundary": 1.321,
+      "median_step_nearby": 1.471,
+      "ratio": 0.9
+    },
+    {
+      "frame": 360,
+      "section": "Squat, stand, stretch overhead",
+      "max_joint_step_at_boundary": 0.081,
+      "median_step_nearby": 5.03,
+      "ratio": 0.02
+    },
+    {
+      "frame": 405,
+      "section": "Celebration bounce, confident pose",
+      "max_joint_step_at_boundary": 1.287,
+      "median_step_nearby": 3.557,
+      "ratio": 0.36
+    }
+  ],
+  "slide_events": []
+}

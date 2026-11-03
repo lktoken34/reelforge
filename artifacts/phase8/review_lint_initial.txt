@@ -1,0 +1,10 @@
+E501 Line too long (134 > 100)
+  --> tools/review_episode.py:63:101
+   |
+61 |         'deployment_gate_approved':False}
+62 |     (OUT/'technical_verification.json').write_text(json.dumps(summary,indent=2)+'\n')
+63 |     print(json.dumps({k:summary[k] for k in ['frames','effective_samples_per_channel','padding_samples','retired_path_now_present']}))
+   |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+
+Found 1 error.
