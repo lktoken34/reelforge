@@ -91,11 +91,26 @@ def make_starfield() -> tuple[DrawPath, ...]:
     """Scatters code-defined star specks across the upper heavens."""
     # Deterministic fixed star coordinates (x, y, radius, alpha)
     stars_data = (
-        (25, 45, 1.2, 0.8), (48, 85, 0.9, 0.5), (82, 35, 1.5, 0.9), (115, 70, 0.8, 0.4),
-        (138, 25, 1.1, 0.7), (165, 90, 0.7, 0.5), (195, 40, 1.3, 0.85), (220, 65, 0.8, 0.4),
-        (35, 140, 1.0, 0.6), (70, 175, 0.7, 0.4), (110, 130, 1.2, 0.75), (145, 160, 0.9, 0.5),
-        (15, 210, 0.8, 0.4), (55, 240, 1.1, 0.6), (95, 220, 0.7, 0.5), (320, 40, 1.4, 0.8),
-        (345, 80, 0.9, 0.6), (335, 160, 1.1, 0.7), (350, 220, 0.8, 0.5), (180, 130, 0.7, 0.4),
+        (25, 45, 1.2, 0.8),
+        (48, 85, 0.9, 0.5),
+        (82, 35, 1.5, 0.9),
+        (115, 70, 0.8, 0.4),
+        (138, 25, 1.1, 0.7),
+        (165, 90, 0.7, 0.5),
+        (195, 40, 1.3, 0.85),
+        (220, 65, 0.8, 0.4),
+        (35, 140, 1.0, 0.6),
+        (70, 175, 0.7, 0.4),
+        (110, 130, 1.2, 0.75),
+        (145, 160, 0.9, 0.5),
+        (15, 210, 0.8, 0.4),
+        (55, 240, 1.1, 0.6),
+        (95, 220, 0.7, 0.5),
+        (320, 40, 1.4, 0.8),
+        (345, 80, 0.9, 0.6),
+        (335, 160, 1.1, 0.7),
+        (350, 220, 0.8, 0.5),
+        (180, 130, 0.7, 0.4),
     )
     cmds = []
     for x, y, r, a in stars_data:
@@ -114,7 +129,8 @@ def make_moon_layer() -> tuple[DrawPath, ...]:
         shape(
             ellipse(mx, my, mr, mr),
             LinearGradient(
-                (mx - mr, my - mr), (mx + mr, my + mr),
+                (mx - mr, my - mr),
+                (mx + mr, my + mr),
                 ((0.0, MOON_WHITE), (1.0, MOON_SILVER)),
             ),
             stroke_color=color("c8daf2", 0.5),
@@ -131,55 +147,107 @@ def make_moon_layer() -> tuple[DrawPath, ...]:
 def make_city_skyline() -> tuple[DrawPath, ...]:
     """Generates two silhouette skyline tiers with glowing window specks and haze."""
     cmds = []
-    
+
     # Layer 1: Distant City Tier
     dist_skyline = (
         ("M", 0, 440),
-        ("L", 0, 340), ("L", 28, 340), ("L", 28, 310), ("L", 42, 310), ("L", 42, 340),
-        ("L", 65, 340), ("L", 65, 325), ("L", 80, 325), ("L", 80, 355),
-        ("L", 110, 355), ("L", 110, 295), ("L", 125, 295),
-        ("L", 130, 270), ("L", 135, 295), ("L", 145, 295), ("L", 145, 360),
-        ("L", 175, 360), ("L", 175, 320), ("L", 195, 320), ("L", 195, 360),
-        ("L", 220, 360), ("L", 220, 305), ("L", 240, 305), ("L", 240, 350),
-        ("L", 280, 350), ("L", 280, 330), ("L", 305, 330), ("L", 305, 355),
-        ("L", 330, 355), ("L", 330, 315), ("L", 360, 315), ("L", 360, 440),
-        ("Z",)
+        ("L", 0, 340),
+        ("L", 28, 340),
+        ("L", 28, 310),
+        ("L", 42, 310),
+        ("L", 42, 340),
+        ("L", 65, 340),
+        ("L", 65, 325),
+        ("L", 80, 325),
+        ("L", 80, 355),
+        ("L", 110, 355),
+        ("L", 110, 295),
+        ("L", 125, 295),
+        ("L", 130, 270),
+        ("L", 135, 295),
+        ("L", 145, 295),
+        ("L", 145, 360),
+        ("L", 175, 360),
+        ("L", 175, 320),
+        ("L", 195, 320),
+        ("L", 195, 360),
+        ("L", 220, 360),
+        ("L", 220, 305),
+        ("L", 240, 305),
+        ("L", 240, 350),
+        ("L", 280, 350),
+        ("L", 280, 330),
+        ("L", 305, 330),
+        ("L", 305, 355),
+        ("L", 330, 355),
+        ("L", 330, 315),
+        ("L", 360, 315),
+        ("L", 360, 440),
+        ("Z",),
     )
     cmds.append(shape(path(*dist_skyline), DISTANT_CITY))
-    
+
     # Tiny warm glowing windows on distant towers
     for wx, wy in (
-        (34, 320), (34, 328), (118, 305), (118, 315), (118, 325),
-        (185, 330), (185, 340), (228, 315), (228, 325), (290, 338),
+        (34, 320),
+        (34, 328),
+        (118, 305),
+        (118, 315),
+        (118, 325),
+        (185, 330),
+        (185, 340),
+        (228, 315),
+        (228, 325),
+        (290, 338),
     ):
         cmds.append(DrawPath(ellipse(wx, wy, 1.4, 2.0), DISTANT_WINDOW))
-    
+
     # Layer 2: Midground City Tier (Darker, closer)
     mid_skyline = (
         ("M", 0, 455),
-        ("L", 0, 385), ("L", 35, 385), ("L", 35, 365), ("L", 55, 365), ("L", 55, 395),
-        ("L", 85, 395), ("L", 85, 350), ("L", 100, 350), ("L", 100, 390),
-        ("L", 150, 390), ("L", 150, 340), ("L", 170, 340), ("L", 170, 395),
-        ("L", 205, 395), ("L", 205, 370), ("L", 230, 370), ("L", 230, 400),
-        ("L", 260, 400), ("L", 260, 355), ("L", 275, 355), ("L", 275, 395),
-        ("L", 310, 395), ("L", 310, 365), ("L", 335, 365), ("L", 335, 400),
-        ("L", 360, 400), ("L", 360, 455),
-        ("Z",)
+        ("L", 0, 385),
+        ("L", 35, 385),
+        ("L", 35, 365),
+        ("L", 55, 365),
+        ("L", 55, 395),
+        ("L", 85, 395),
+        ("L", 85, 350),
+        ("L", 100, 350),
+        ("L", 100, 390),
+        ("L", 150, 390),
+        ("L", 150, 340),
+        ("L", 170, 340),
+        ("L", 170, 395),
+        ("L", 205, 395),
+        ("L", 205, 370),
+        ("L", 230, 370),
+        ("L", 230, 400),
+        ("L", 260, 400),
+        ("L", 260, 355),
+        ("L", 275, 355),
+        ("L", 275, 395),
+        ("L", 310, 395),
+        ("L", 310, 365),
+        ("L", 335, 365),
+        ("L", 335, 400),
+        ("L", 360, 400),
+        ("L", 360, 455),
+        ("Z",),
     )
     cmds.append(shape(path(*mid_skyline), MID_CITY))
-    
+
     # Atmospheric fog haze across horizon
     cmds.append(
         shape(
             path(("M", 0, 390), ("L", 360, 390), ("L", 360, 460), ("L", 0, 460), ("Z",)),
             LinearGradient(
-                (180, 390), (180, 460),
-                ((0.0, color("281d3b", 0.0)), (0.6, HAZE_VIOLET),
-                 (1.0, color("1c2436", 0.8))),
+                (180, 390),
+                (180, 460),
+                ((0.0, color("281d3b", 0.0)), (0.6, HAZE_VIOLET), (1.0, color("1c2436", 0.8))),
             ),
         )
     )
-    
+
     return tuple(cmds)
 
 
@@ -210,7 +278,8 @@ def make_observatory_layer() -> tuple[DrawPath, ...]:
                 ("Z",),
             ),
             LinearGradient(
-                (60, 360), (60, 415),
+                (60, 360),
+                (60, 415),
                 ((0.0, DOME_RIM), (0.35, DOME_MAIN), (1.0, DOME_DARK)),
             ),
             stroke_color=DOME_DARK,
@@ -224,7 +293,7 @@ def make_observatory_layer() -> tuple[DrawPath, ...]:
     cmds.append(
         line(path(("M", 82, 415), ("C", 80, 375, 60, 365, 60, 365)), paint=DOME_RIB, width=1.1)
     )
-    
+
     # Telescope Slit / Shutter opening
     cmds.append(
         shape(
@@ -232,7 +301,7 @@ def make_observatory_layer() -> tuple[DrawPath, ...]:
             color("080a12"),
         )
     )
-    
+
     # Refractor Telescope barrel extending outward toward moon
     # Angled ~35 degrees up-right
     cmds.append(
@@ -245,7 +314,8 @@ def make_observatory_layer() -> tuple[DrawPath, ...]:
                 ("Z",),
             ),
             LinearGradient(
-                (56, 400), (94, 355),
+                (56, 400),
+                (94, 355),
                 ((0.0, TELESCOPE_BRONZE), (0.6, TELESCOPE_HIGHLIGHT), (1.0, DOME_DARK)),
             ),
             stroke_color=DOME_DARK,
@@ -254,19 +324,19 @@ def make_observatory_layer() -> tuple[DrawPath, ...]:
     )
     # Telescope lens rim
     cmds.append(line(path(("M", 87, 354), ("L", 95, 361)), paint=WHITE, width=1.4))
-    
+
     return tuple(cmds)
 
 
 def make_railing_and_floor() -> tuple[DrawPath, ...]:
     """Generates the rooftop floor with perspective seams and metal perimeter railing."""
     cmds = []
-    
+
     # 1. Rooftop safety railing
     rail_y_top = 445.0
     rail_y_mid = 458.0
     rail_y_base = 472.0
-    
+
     # Stanchions / vertical posts
     for rx in range(15, 355, 38):
         cmds.append(
@@ -274,13 +344,13 @@ def make_railing_and_floor() -> tuple[DrawPath, ...]:
         )
         # Moonlight rim on top cap of post
         cmds.append(DrawPath(ellipse(rx, rail_y_top, 1.8, 1.2), RAIL_TOP))
-    
+
     # Horizontal rails
     cmds.append(
         line(path(("M", 0, rail_y_mid), ("L", 360, rail_y_mid)), paint=RAIL_DARK, width=1.5)
     )
     cmds.append(line(path(("M", 0, rail_y_top), ("L", 360, rail_y_top)), paint=RAIL_TOP, width=2.0))
-    
+
     # 2. Rooftop floor slab
     cmds.append(
         shape(
@@ -298,7 +368,7 @@ def make_railing_and_floor() -> tuple[DrawPath, ...]:
             ),
         )
     )
-    
+
     # Perspective tile lines (receding toward central vanishing point)
     # Horizontal seams
     for hy in (488, 508, 532, 562, 600, 640):
@@ -307,7 +377,7 @@ def make_railing_and_floor() -> tuple[DrawPath, ...]:
         cmds.append(
             line(path(("M", 0, hy + 1), ("L", 360, hy + 1)), paint=ROOF_MOONSHINE, width=0.8)
         )
-    
+
     # Perspective diagonal seams
     vp_x, vp_y = 180.0, 390.0
     for bx in (-40, 30, 100, 180, 260, 330, 400):
@@ -320,7 +390,7 @@ def make_railing_and_floor() -> tuple[DrawPath, ...]:
         cmds.append(
             line(path(("M", x_start, rail_y_base), ("L", bx, 640)), paint=ROOF_LINE, width=1.0)
         )
-    
+
     return tuple(cmds)
 
 
@@ -335,15 +405,15 @@ def make_contact_shadow(
     clamped_alpha = max(0.0, min(1.0, alpha))
     if clamped_alpha < 0.02:
         return ()
-    
+
     rx_far = 14.0 * scale
     ry_far = 3.6 * scale
     rx_near = 16.0 * scale
     ry_near = 4.0 * scale
-    
+
     shadow_col = color("04060a", clamped_alpha)
     shadow_soft = color("04060a", clamped_alpha * 0.45)
-    
+
     return (
         # Soft outer penumbra
         DrawPath(ellipse(char_x - 7, char_y + 1, rx_far * 1.35, ry_far * 1.35), shadow_soft),

@@ -208,6 +208,7 @@ SHORTS_COMMANDS = (
     line(path(("M", 13, 0), ("L", 13.5, 11)), paint=WHITE, width=1.0),
 )
 
+
 # 5. Limbs and End Effectors
 def make_sleeve(side_sign: float = 1.0) -> tuple[DrawPath, ...]:
     """Baggy yellow hoodie sleeve at upper shoulder."""
@@ -279,11 +280,11 @@ def make_face_features(
 ) -> tuple[DrawPath, ...]:
     """Generates glowing white oval eyes, expressive eyebrows, and cute mouth."""
     finite(eye_scale, brow_lift, mouth_open)
-    
+
     # 1. Eyes (Bright glowing white ovals)
     ew = 2.4 * eye_scale
     eh = 3.6 * eye_scale
-    
+
     eyes = (
         # Soft outer moonlight aura
         DrawPath(ellipse(-6.5, -2, ew * 1.35, eh * 1.35), WHITE_AURA),
@@ -292,14 +293,14 @@ def make_face_features(
         DrawPath(ellipse(-6.5, -2, ew, eh), WHITE_GLOW),
         DrawPath(ellipse(6.5, -2, ew, eh), WHITE_GLOW),
     )
-    
+
     # 2. White Eyebrows
     by = -9 - brow_lift
     brows = (
         line(path(("M", -10, by + 1), ("L", -3.5, by - 0.5)), paint=WHITE, width=1.5),
         line(path(("M", 3.5, by - 0.5), ("L", 10, by + 1)), paint=WHITE, width=1.5),
     )
-    
+
     # 3. Small cute stylized mouth
     if expression == "excited" or mouth_open > 0.3:
         mouth = (
@@ -327,7 +328,7 @@ def make_face_features(
                 width=1.0,
             ),
         )
-    
+
     return eyes + brows + mouth
 
 
@@ -339,7 +340,7 @@ def build_yellow_mellow_parts(
 ) -> tuple[Part, ...]:
     """Assembles all character parts mapped to skeletal joints in drawing order."""
     face_cmds = HEAD_BASE + make_face_features(expression, eye_scale, brow_lift, mouth_open)
-    
+
     return (
         # Background limbs (far side)
         Part("far_hip", 10, THIGH_COMMANDS),
@@ -379,10 +380,10 @@ def draw_yellow_mellow(
     finite(*position, scale, eye_scale, brow_lift, mouth_open)
     if not 0.1 <= scale <= 4.0:
         raise RenderError("Character scale must be within [0.1, 4.0]")
-    
+
     worlds = skeleton.evaluate(pose)
     parts = build_yellow_mellow_parts(expression, eye_scale, brow_lift, mouth_open)
-    
+
     commands = []
     for part in sorted(parts, key=lambda p: p.order):
         if part.joint not in worlds:
@@ -402,5 +403,5 @@ def draw_yellow_mellow(
                     ),
                 )
             )
-    
+
     return tuple(commands)

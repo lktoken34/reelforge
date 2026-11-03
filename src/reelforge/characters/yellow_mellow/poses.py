@@ -13,7 +13,7 @@ from .rig import solve_vertical_leg_ik
 GROUND_Y = 530.0
 CHAR_SCALE = 1.30
 HIP_LOCAL_Y = 4.0
-REST_LEG_LENGTH = 48.0   # 24 upper + 24 lower
+REST_LEG_LENGTH = 48.0  # 24 upper + 24 lower
 # Standing root Y so foot (hip 4 + leg 48 = 52) lands exactly at GROUND_Y:
 REST_ROOT_Y = GROUND_Y - (HIP_LOCAL_Y + REST_LEG_LENGTH) * CHAR_SCALE  # 530 - 52 * 1.3 = 462.4
 
@@ -52,13 +52,13 @@ def pose_rest() -> Pose:
 def pose_hands_up(raise_amount: float = 1.0) -> Pose:
     """Expressive hands-raised pose with both shoulders rotated upward symmetrically."""
     u = smooth_step(raise_amount)
-    near_sh = 0.08 - 2.08 * u      # Rotates up-right to -2.00 rad
-    far_sh = -0.08 + 2.08 * u      # Rotates up-left to +2.00 rad
-    near_el = 0.05 - 0.45 * u      # Curves inward
-    far_el = -0.05 + 0.45 * u      # Curves inward
-    neck_angle = -0.12 * u         # Tilts back/up
+    near_sh = 0.08 - 2.08 * u  # Rotates up-right to -2.00 rad
+    far_sh = -0.08 + 2.08 * u  # Rotates up-left to +2.00 rad
+    near_el = 0.05 - 0.45 * u  # Curves inward
+    far_el = -0.05 + 0.45 * u  # Curves inward
+    neck_angle = -0.12 * u  # Tilts back/up
     head_angle = -0.10 * u
-    
+
     return Pose(
         root=Rigid(0.0, 0.0, 0.0),
         angles=(
@@ -88,7 +88,7 @@ def pose_crouch(
     """Pre-jump anticipation crouch with deeply bent knees and feet pinned flat."""
     target_dy = REST_LEG_LENGTH * compression_ratio
     hip_angle, knee_angle, ankle_angle = solve_vertical_leg_ik(target_dy)
-    
+
     return Pose(
         root=Rigid(0.0, 0.0, 0.0),
         angles=(
@@ -144,7 +144,7 @@ def pose_land(compression_ratio: float = 0.75) -> Pose:
     target_dy = REST_LEG_LENGTH * compression_ratio
     hip_angle, knee_angle, ankle_angle = solve_vertical_leg_ik(target_dy)
     comp_norm = 1.0 - compression_ratio
-    
+
     return Pose(
         root=Rigid(0.0, 0.0, 0.0),
         angles=(
@@ -186,9 +186,9 @@ def sample_jump_animation(frame: int) -> FrameAnimationState:
     """Evaluates the exact 30-frame animation state for frame 0..29."""
     if not 0 <= frame <= 29:
         raise ValueError(f"Frame must be 0..29, got {frame}")
-    
+
     x_center = 180.0
-    
+
     # --- PHASE 1: Frames 0..5 (Standing & Raising Hands) ---
     if frame <= 5:
         u = frame / 5.0
@@ -205,25 +205,25 @@ def sample_jump_animation(frame: int) -> FrameAnimationState:
             shadow_scale=1.0,
             shadow_alpha=0.45,
         )
-    
+
     # --- PHASE 2: Frames 6..11 (Anticipation Crouch) ---
     elif frame <= 11:
         u = (frame - 5) / 6.0
         e = smooth_step(u)
         crouch_drop = 22.0 * e  # Drops root by up to 22 units
         root_y = REST_ROOT_Y + crouch_drop
-        
+
         # Calculate exact target_dy in local character units so feet stay at GROUND_Y
         world_hip_y = root_y + HIP_LOCAL_Y * CHAR_SCALE
         local_dy = (GROUND_Y - world_hip_y) / CHAR_SCALE
         hip_angle, knee_angle, ankle_angle = solve_vertical_leg_ik(local_dy)
-        
+
         arm_back = 0.80 * e
         near_sh = (0.08 - 2.08) * (1.0 - e) + arm_back * e
         far_sh = (-0.08 + 2.08) * (1.0 - e) - arm_back * e
         near_el = 0.05 * (1.0 - e) + 0.85 * e
         far_el = -0.05 * (1.0 - e) - 0.85 * e
-        
+
         pose = Pose(
             root=Rigid(0.0, 0.0, 0.0),
             angles=(
@@ -245,7 +245,7 @@ def sample_jump_animation(frame: int) -> FrameAnimationState:
                 ("near_foot", ankle_angle),
             ),
         )
-        
+
         return FrameAnimationState(
             frame=frame,
             char_pos=(x_center, root_y),
@@ -257,7 +257,7 @@ def sample_jump_animation(frame: int) -> FrameAnimationState:
             shadow_scale=1.0 + 0.15 * e,
             shadow_alpha=0.45 + 0.08 * e,
         )
-    
+
     # --- PHASE 3: Frames 12..20 (The Jump / Airborne Phase) ---
     elif frame <= 20:
         # Parabolic jump trajectory: apex at F=16
@@ -265,18 +265,18 @@ def sample_jump_animation(frame: int) -> FrameAnimationState:
         tau = max(-1.0, min(1.0, tau))
         jump_height = 56.0 * (1.0 - tau * tau)  # Peaks at 56 units
         root_y = REST_ROOT_Y - jump_height
-        
+
         air_factor = smooth_step(jump_height / 56.0)
-        
+
         tuck_hip = 0.35 * air_factor
         tuck_knee = -0.70 * air_factor
         tuck_ankle = 0.35 * air_factor
-        
+
         near_sh = -2.15 * air_factor + 0.40 * (1.0 - air_factor)
         far_sh = 2.15 * air_factor - 0.40 * (1.0 - air_factor)
         near_el = -0.35 * air_factor + 0.50 * (1.0 - air_factor)
         far_el = 0.35 * air_factor - 0.50 * (1.0 - air_factor)
-        
+
         pose = Pose(
             root=Rigid(0.0, 0.0, 0.0),
             angles=(
@@ -298,10 +298,10 @@ def sample_jump_animation(frame: int) -> FrameAnimationState:
                 ("near_foot", tuck_ankle),
             ),
         )
-        
+
         shadow_s = 1.0 - 0.35 * air_factor
         shadow_a = 0.45 - 0.28 * air_factor
-        
+
         return FrameAnimationState(
             frame=frame,
             char_pos=(x_center, root_y),
@@ -313,7 +313,7 @@ def sample_jump_animation(frame: int) -> FrameAnimationState:
             shadow_scale=shadow_s,
             shadow_alpha=shadow_a,
         )
-    
+
     # --- PHASE 4: Frames 21..26 (Landing & Impact Cushioning) ---
     elif frame <= 26:
         if frame <= 23:
@@ -324,19 +324,19 @@ def sample_jump_animation(frame: int) -> FrameAnimationState:
             u = (frame - 23) / 3.0
             e = smooth_step(u)
             comp_drop = 16.0 * (1.0 - e)
-        
+
         root_y = REST_ROOT_Y + comp_drop
         world_hip_y = root_y + HIP_LOCAL_Y * CHAR_SCALE
         local_dy = (GROUND_Y - world_hip_y) / CHAR_SCALE
         hip_angle, knee_angle, ankle_angle = solve_vertical_leg_ik(local_dy)
-        
+
         comp_norm = comp_drop / 16.0
-        
+
         near_sh = -0.45 * comp_norm
         far_sh = 0.45 * comp_norm
         near_el = 0.60 * comp_norm
         far_el = -0.60 * comp_norm
-        
+
         pose = Pose(
             root=Rigid(0.0, 0.0, 0.0),
             angles=(
@@ -358,7 +358,7 @@ def sample_jump_animation(frame: int) -> FrameAnimationState:
                 ("near_foot", ankle_angle),
             ),
         )
-        
+
         return FrameAnimationState(
             frame=frame,
             char_pos=(x_center, root_y),
@@ -370,7 +370,7 @@ def sample_jump_animation(frame: int) -> FrameAnimationState:
             shadow_scale=1.0 + 0.12 * comp_norm,
             shadow_alpha=0.45 + 0.05 * comp_norm,
         )
-    
+
     # --- PHASE 5: Frames 27..29 (Recovery & Rest Settle) ---
     else:
         pose = pose_rest()
