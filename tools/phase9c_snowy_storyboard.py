@@ -511,8 +511,10 @@ def render_still(renderer, sb_dict, frame, out_png):
     return len(cmds), sb, inspect_frame(sb.direction, frame)
 
 
-def contact_report(sb, frames=range(60, 90)):
+def contact_report(sb, frames=None):
     """Fingertip vs beacon socket over the activate beat, in world and output pixels."""
+    if frames is None:
+        frames = range(60, 90)
     plan = sb.direction.blocking
     node = next(r for r in sb.direction.compiled.hierarchy if r.id == "beacon")
     sx, sy = node.world.point(*BEACON_SOCKET)
