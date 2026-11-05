@@ -24,15 +24,17 @@ encoder and the V1 environment layers. No core ReelForge module was modified.
 from reelforge.characters.yellow_mellow_v2 import ActionRequest, Stage, YellowMellowV2
 from reelforge.characters.yellow_mellow_v2.environment import observatory_background
 
-mellow = YellowMellowV2(facing=0.25)          # 0.25 = front, slightly turned right
-show = mellow.animate([
-    ActionRequest("wave", 30, expression="happy", params={"hand": "far"}),
-    ActionRequest("hands_up", 25, expression="excited"),
-    ActionRequest("walk", 60, expression="happy", params={"direction": "right"}),
-    ActionRequest("run", 45, expression="determined", params={"stop": True}),
-    ActionRequest("dance", 45, expression="happy"),
-])
-stage = Stage(x=180, ground_y=575, scale=2.3)     # logical 360x640 frame units
+mellow = YellowMellowV2(facing=0.25)  # 0.25 = front, slightly turned right
+show = mellow.animate(
+    [
+        ActionRequest("wave", 30, expression="happy", params={"hand": "far"}),
+        ActionRequest("hands_up", 25, expression="excited"),
+        ActionRequest("walk", 60, expression="happy", params={"direction": "right"}),
+        ActionRequest("run", 45, expression="determined", params={"stop": True}),
+        ActionRequest("dance", 45, expression="happy"),
+    ]
+)
+stage = Stage(x=180, ground_y=575, scale=2.3)  # logical 360x640 frame units
 commands = observatory_background(0.0, 575) + show.draw(frame=40, stage=stage)
 # renderer.draw(surface, commands, background=..., logical_size=(360, 640))
 ```

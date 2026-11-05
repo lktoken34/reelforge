@@ -18,8 +18,7 @@ from reelforge.rendering.model import Color, DrawPath, rectangle
 renderer = CairoRenderer(max_surface_bytes=32 * 1024 * 1024)
 commands = (DrawPath(rectangle(20, 20, 120, 80), fill=Color(0.2, 0.8, 0.9, 0.6)),)
 with renderer.surface(360, 640) as surface:
-    renderer.draw(surface, commands, background=Color(0.03, 0.05, 0.10),
-                  logical_size=(360, 640))
+    renderer.draw(surface, commands, background=Color(0.03, 0.05, 0.10), logical_size=(360, 640))
     surface.write_png(Path("diagnostic.png"))
 # Surface is finished, pixel storage released, accounting returns to zero.
 ```

@@ -144,11 +144,10 @@ def compile_blocking(data) -> Plan:
     asset = asset_by_id(ground.asset_id) or next(
         (g.asset for g in compiled.generated if g.asset.id == ground.asset_id), None
     )
-    if (
-        asset is None
-        or asset.id not in ("orchard_ground_01", "generated_ground")
-        or asset.support_envelope is None
-    ):
+    # Registered walkable ground assets. Additive: orchard and generated ground keep their exact
+    # behavior; frost_ridge_01 (Phase 9C) is a new trusted level support plane for snowy stories.
+    WALKABLE_GROUND = ("orchard_ground_01", "generated_ground", "frost_ridge_01")
+    if asset is None or asset.id not in WALKABLE_GROUND or asset.support_envelope is None:
         fail("/support_id", "Decorative/authored assets do not support motion", "BLOCKING_SUPPORT")
     a, g = world[actor_id], world[support_id]
     if (
@@ -165,7 +164,11 @@ def compile_blocking(data) -> Plan:
         fail("/actor_id", "Supported motion scale .35.. .75")
     if data["corridor"] != "level_field":
         fail("/corridor", "Only trusted level_field corridor is supported", "BLOCKING_SUPPORT")
-    local = (-115, -45, 125, 60) if asset.id == "generated_ground" else (-140, 0, 140, 70)
+    corridors = {
+        "generated_ground": (-115, -45, 125, 60),
+        "frost_ridge_01": (-150, -30, 150, 90),
+    }
+    local = corridors.get(asset.id, (-140, 0, 140, 70))
 
     def box(bounds):
         left, t, r, b = bounds
@@ -230,8 +233,14 @@ def compile_blocking(data) -> Plan:
             fail(p + "/facing", "Use left/right")
         if r["expression"] not in expressions:
             fail(p + "/expression", "Select an accepted expression")
-        if r["acting"] not in ("idle", "look_around", "react", "none"):
-            fail(p + "/acting", "Use idle/look_around/react/none")
+        if r["acting"] not in ("idle", "look_around", "react", "activate", "none"):
+            fail(p + "/acting", "Use idle/look_around/react/activate/none")
+        if r["acting"] == "activate":
+            # Additive (Phase 9C): only characters that register an activate performance.
+            if "activate" not in character_info(character).scene_actions:
+                fail(p + "/acting", f"{character} has no registered activate performance")
+            if r["end_frame"] - r["start_frame"] < 18:
+                fail(p, "Activate needs at least 18 frames", "BLOCKING_TIMELINE")
         xx, yy = point(r["destination"], p + "/destination")
         end_speed = number(r["end_speed"], 0, 90, p + "/end_speed")
         if yy != y:

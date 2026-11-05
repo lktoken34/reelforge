@@ -1388,6 +1388,120 @@ class LocomotionClip(Clip):
         return adjust(base, mouth_open=0.15 * g)
 
 
+# ---------------------------------------------------------------- reach / activate
+FINGERTIP = (0.0, 13.5)  # wrist-local tip of the "point" hand (artwork.hand_commands)
+ACTIVATE_REACH = 34.0  # default fingertip target, canonical units forward of the pelvis
+ACTIVATE_HEIGHT = 34.0  # default fingertip target height above the ground
+ACTIVATE_TOLERANCE = 0.5  # maximum accepted fingertip residual, canonical units
+
+
+def fingertip(state, side: str = "near") -> tuple[float, float]:
+    """Canonical position of the pointing fingertip for a solved rig state.
+
+    Canonical space: pelvis at x=0, +x toward the facing direction, ground at y=0, y down.
+    """
+    return state.joints[f"{side}_wrist"].point(FINGERTIP)
+
+
+def solve_reach(
+    body: MellowPose, target: tuple[float, float], side: str = "near"
+) -> tuple[ArmPose, float]:
+    """Deterministic two-angle arm solve placing the fingertip on ``target``.
+
+    Bounded coarse-to-fine grid over (forward swing, elbow flex) of the sagittal arm, inside the
+    rig's joint limits. Returns the arm pose and the residual distance in canonical units, so a
+    caller can prove contact instead of assuming it. No randomness, no iteration state.
+    """
+    from .rig import evaluate
+
+    best = (math.inf, 0.0, 0.0)
+    lo_f, hi_f, lo_e, hi_e = -0.6, 2.6, 0.0, 2.3
+    for _ in range(4):
+        steps = 16
+        for i in range(steps + 1):
+            fwd = lo_f + (hi_f - lo_f) * i / steps
+            for j in range(steps + 1):
+                flex = lo_e + (hi_e - lo_e) * j / steps
+                arm = swing_arm(side, fwd, flex, out=0.05, wrist=0.15, hand="point")
+                state = evaluate(replace(body, **{f"{side}_arm": arm}))
+                x, y = fingertip(state, side)
+                d = math.hypot(x - target[0], y - target[1])
+                if d < best[0]:
+                    best = (d, fwd, flex)
+        _, f0, e0 = best
+        span_f, span_e = (hi_f - lo_f) / 4, (hi_e - lo_e) / 4
+        lo_f, hi_f = f0 - span_f, f0 + span_f
+        lo_e, hi_e = max(0.0, e0 - span_e), min(2.5, e0 + span_e)
+    d, fwd, flex = best
+    return swing_arm(side, fwd, flex, out=0.05, wrist=0.15, hand="point"), d
+
+
+class ActivateClip(KeyedClip):
+    """Crouch, lean in, reach out and press a control at a fixed canonical target."""
+
+    name = "activate"
+
+    def __init__(self, start, duration, keys, residual: float, target: tuple[float, float]):
+        super().__init__(start, duration, keys, face_fn=_activate_face, no_blink=(0, duration))
+        self.residual = residual
+        self.target = target
+
+
+def _activate_face(t, base):
+    return adjust(base, brow_tilt=-0.25, upper_lid=0.15)
+
+
+def activate(
+    start: ClipStart,
+    duration: int,
+    *,
+    reach: float = ACTIVATE_REACH,
+    height: float = ACTIVATE_HEIGHT,
+    depth: float = 14.0,
+    hand: str = "near",
+) -> Clip:
+    """Examine-and-activate: crouch, look down, reach and press a control, hold the press.
+
+    The fingertip lands on canonical ``(reach, -height)`` (forward of the pelvis, above ground)
+    at the press key and stays there through the hold; ``ActivateClip.residual`` reports the
+    solved fingertip error. The prop is not known to the rig: callers stage the control at the
+    target and verify the residual.
+    """
+    finite(reach, height, depth)
+    side = _pick_side(hand)
+    if type(duration) is not int or duration < 18:
+        raise RenderError("activate needs at least 18 frames")
+    if not 20 <= reach <= 60 or not 15 <= height <= 55 or not 4 <= depth <= 20:
+        raise RenderError("activate reach 20..60, height 15..55, depth 4..20 units")
+    other = "far" if side == "near" else "near"
+    p0 = upright(start.pose)
+    body = replace(
+        p0,
+        # Turn three-quarter toward the control (same side): the sagittal reach is defined there.
+        facing=0.92 * p0.sign,
+        pelvis_height=STAND_PELVIS - depth,
+        squash=-0.04,
+        spine=0.27,
+        chest=0.1,
+        neck=0.12,
+        head=0.24,
+        look_x=0.7,
+        look_y=0.85,
+        **{f"{other}_arm": ArmPose(0.55, 0.9, 0.25, "open")},
+    )
+    target = (reach, -height)
+    press_arm, residual = solve_reach(body, target, side)
+    hover_arm, _ = solve_reach(body, (reach - 2.0, -height - 8.0), side)
+    if residual > ACTIVATE_TOLERANCE:
+        raise RenderError(f"activate target unreachable (residual {residual:.2f} units)")
+    bend = replace(body, **{f"{side}_arm": ArmPose(0.6, 1.0, 0.2, "point")})
+    hover = replace(body, **{f"{side}_arm": hover_arm})
+    press = replace(body, **{f"{side}_arm": press_arm})
+    a, b, c = duration * 0.3, duration * 0.48, duration * 0.58
+    keys = [(a, bend), (b, hover), (c, press), (float(duration), press)]
+    return ActivateClip(start, duration, keys, residual, target)
+
+
 LOCOMOTION_ACTIONS = ("walk", "run", "start_walk", "stop")
 
 PRESETS: dict[str, Callable[..., Clip]] = {
@@ -1410,6 +1524,7 @@ PRESETS: dict[str, Callable[..., Clip]] = {
     "dance": dance,
     "confident": confident,
     "turn": turn,
+    "activate": activate,
 }
 
 PRESET_DOCS = {
@@ -1434,6 +1549,8 @@ PRESET_DOCS = {
     " beat_frames, finish",
     "confident": "Hands on hips, chest out.",
     "turn": "Turn on planted feet. params: to front|left|right",
+    "activate": "Crouch, lean in, reach and press a control at a fixed fingertip target. params:"
+    " reach 20..60, height 15..55, depth 4..20, hand near|far",
     "walk": "Walk (merged with neighbouring locomotion). params: direction, speed 0.5..1.4,"
     " stop bool",
     "run": "Run with flight phase (merged). params: direction, speed 0.6..1.3, stop bool",

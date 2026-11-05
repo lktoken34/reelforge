@@ -36,6 +36,8 @@ ACTING_TO_ACTION = {
     "idle": "idle",
     "look_around": "look",
     "react": "surprise",
+    # Phase 9C: examine-and-press at the registered fingertip target (motions.activate).
+    "activate": "activate",
     "none": None,
 }
 
@@ -149,6 +151,16 @@ class YellowMellowDrawer:
                 f"Yellow Mellow segment must animate exactly 90 frames, got {self._perf.frames}"
             )
         self._draw_scale = draw_scale
+
+    @property
+    def draw_scale(self) -> float:
+        return self._draw_scale
+
+    def sample(self, frame: int):
+        """The solved V2 CharacterFrame for a local frame (used to measure prop contact)."""
+        if type(frame) is not int or not 0 <= frame < 90:
+            raise RenderError("Yellow Mellow drawer frame must be an integer 0..89")
+        return self._perf.sample(frame)
 
     def commands(self, frame: int, direction: str) -> tuple[DrawPath, ...]:
         if type(frame) is not int or not 0 <= frame < 90:

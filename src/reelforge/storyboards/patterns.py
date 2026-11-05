@@ -33,11 +33,11 @@ BEAT_ACTIONS = {
     "establish": ("idle", "look_around", "walk_to"),
     "discover": ("idle", "look_around", "stop_at"),
     "approach": ("walk_to", "stop_at"),
-    "react": ("react", "look_around"),
+    "react": ("react", "look_around", "activate"),
     "escape": ("run_to",),
-    "hold": ("idle", "look_around", "react"),
+    "hold": ("idle", "look_around", "react", "activate"),
 }
-ACTIONS = ("idle", "look_around", "react", "walk_to", "stop_at", "run_to")
+ACTIONS = ("idle", "look_around", "react", "activate", "walk_to", "stop_at", "run_to")
 
 
 def pattern_capabilities() -> list[dict]:

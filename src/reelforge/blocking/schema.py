@@ -57,7 +57,9 @@ def blocking_schema():
                             "destination": point,
                             "end_speed": number(0, 90),
                             "facing": facing,
-                            "acting": {"enum": ["idle", "look_around", "react", "none"]},
+                            "acting": {
+                                "enum": ["idle", "look_around", "react", "activate", "none"]
+                            },
                             "expression": {"enum": list(EXPRESSIONS)},
                         }
                     ),

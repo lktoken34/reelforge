@@ -13,7 +13,25 @@ from reelforge.procedural.contract import validate_environment
 from reelforge.scenes.contract import identifier, validate_scene
 from reelforge.scenes.graph import CompiledScene, compile_scene
 
-BEHAVIORS = ("establishing", "follow", "push_in", "reaction", "object_reveal", "suspense_hold")
+BEHAVIORS = (
+    "establishing",
+    "follow",
+    "push_in",
+    "reaction",
+    "object_reveal",
+    "suspense_hold",
+    "close_up",
+)
+ZOOM_RANGE = (0.9, 1.7)
+# Additive (Phase 9C): only the close_up behavior may magnify further. Every other behavior keeps
+# the original 0.9..1.7 bound; all per-frame safety checks still apply to close-ups.
+CLOSE_UP_ZOOM_RANGE = (0.9, 5.0)
+
+
+def zoom_range(behavior: str) -> tuple[float, float]:
+    return CLOSE_UP_ZOOM_RANGE if behavior == "close_up" else ZOOM_RANGE
+
+
 FRAMINGS = ("full", "feet_crop", "offscreen")
 MAX_SHOTS = 6
 # Predeclared tolerances in logical units (output pixels = 2 * logical).
@@ -210,7 +228,7 @@ def compile_direction(data: object) -> Direction:
             fail(p, "Tracking/look-ahead requires a Phase 6A moving actor")
         if lead and not track:
             fail(p, "Look-ahead requires tracking")
-        zoom = point(r["zoom"], 0.9, 1.7, p + "/zoom")
+        zoom = point(r["zoom"], *zoom_range(behavior), p + "/zoom")
         a = point(r["offset_start"], -100, 100, p + "/offset_start")
         b = point(r["offset_end"], -100, 100, p + "/offset_end")
         screen = point(r["screen"], 16, 624, p + "/screen")
@@ -235,6 +253,13 @@ def compile_direction(data: object) -> Direction:
             fail(p + "/zoom", "Establishing zoom <=1.15")
         if behavior == "suspense_hold" and (track or a != b or zoom[0] != zoom[1]):
             fail(p, "Suspense hold requires stationary camera endpoints")
+        if behavior == "close_up":
+            if framing == "full":
+                fail(p + "/framing", "Close-up crops the figure; use feet_crop or offscreen")
+            if kind == "actor" and not track:
+                fail(p + "/track", "An actor close-up must track the actor")
+            if kind == "point":
+                fail(p + "/target", "Close-up targets the actor or a visible object node")
         shots.append(
             Shot(
                 name,

@@ -1,7 +1,7 @@
 """Native-free discoverable storyboard structure; semantic compiler admission remains required."""
 
 from reelforge.characters.presets import EXPRESSIONS
-from reelforge.direction.contract import BEHAVIORS
+from reelforge.direction.contract import BEHAVIORS, CLOSE_UP_ZOOM_RANGE
 from reelforge.direction.schema import direction_schema
 from reelforge.geometry.schema import array, number, obj
 
@@ -55,7 +55,8 @@ def storyboard_schema() -> dict:
                             "id": identity,
                             "kind": {"enum": list(BEHAVIORS)},
                             "subject": identity,
-                            "zoom": array(number(0.9, 1.7), 2, 2),
+                            # 0.9..1.7 for every behavior except close_up (compiler-enforced).
+                            "zoom": array(number(*CLOSE_UP_ZOOM_RANGE), 2, 2),
                             "screen": {
                                 "type": "array",
                                 "prefixItems": [number(16, 344), number(16, 624)],

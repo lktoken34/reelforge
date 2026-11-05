@@ -1,0 +1,141 @@
+{
+  "deliverable": "YellowMellow_60s_MVP.mp4",
+  "note": "Corrected reel: identical duplicate shots removed via per-occurrence staging variants in the planner/storylib. Original preserved as YellowMellow_60s_MVP_original.mp4.",
+  "duplicate_shot_fix": {
+    "before_unique_decoded_frames": 1710,
+    "after_decoded_frames": 1800,
+    "after_unique_decoded_frames": 1800,
+    "mechanism": "planner assigns a distinct validated staging variant to each repeated (preset, environment); no random noise or fake uniqueness"
+  },
+  "media_verification": {
+    "checks": {
+      "1800_frames_header": true,
+      "1800_frames_decoded": true,
+      "duration_60_000": true,
+      "resolution_720x1280": true,
+      "fps_30": true,
+      "one_h264_stream": true,
+      "yuv420p": true,
+      "no_audio_stream": true,
+      "no_decode_errors": true,
+      "timestamps_continuous": true,
+      "no_black_sampled_frames": true,
+      "all_segments_distinct": true
+    },
+    "all_checks_passed": true,
+    "decoded_frames": 1800,
+    "duration_s": 60.0,
+    "resolution": [
+      720,
+      1280
+    ],
+    "codec": "h264",
+    "pix_fmt": "yuv420p",
+    "avg_frame_rate": "30/1",
+    "audio_streams": 0,
+    "editorial_cuts": [
+      90,
+      180,
+      270,
+      360,
+      450,
+      540,
+      630,
+      720,
+      810,
+      900,
+      990,
+      1080,
+      1170,
+      1260,
+      1350,
+      1440,
+      1530,
+      1620,
+      1710
+    ],
+    "distinct_sampled_frames": 20,
+    "size_bytes": 11917100
+  },
+  "production_workflow": {
+    "success": true,
+    "frames": 1800,
+    "seconds": 60.0,
+    "chunks": 2,
+    "chunk_boundaries": [
+      900
+    ],
+    "decoded_frames": 1800,
+    "unique_decoded_frames": 1800,
+    "assembly_frame_hash_match": true,
+    "exact_video_pts": true
+  },
+  "resources_development_host": {
+    "per_chunk_peak_rss_bytes": [
+      138633216,
+      142716928
+    ],
+    "max_chunk_peak_rss_bytes": 142716928,
+    "job_budget_bytes": 268435456,
+    "reserve_bytes": 67108864,
+    "render_wall_seconds": 220.929,
+    "caveat": "Development-host figures; each 10-segment chunk renders in its own audited 256 MiB-budget transaction; not a target-VM certification."
+  },
+  "output_protection": {
+    "default_no_clobber": true,
+    "overwrite_flag": "--overwrite",
+    "atomic_publish": "temp .partial file then replace",
+    "work_dir_transaction": "render_production owns a private no-clobber work directory"
+  },
+  "audio": {
+    "one_command_mvp_silent": true,
+    "audio_streams": 0,
+    "separate_audio_path": "episode-0.1 + register_audio.py + tools/episode.py render"
+  },
+  "planner_difference": {
+    "prompt_A": "Yellow Mellow finds an emergency signal in the snowy mountains.",
+    "prompt_B": "Yellow Mellow explores an orchard, discovers something unusual, and runs to safety.",
+    "environments_A": [
+      "frost_peak"
+    ],
+    "environments_B": [
+      "orchard"
+    ],
+    "presets_A": [
+      "establish",
+      "reaction",
+      "investigate",
+      "threat",
+      "resolve"
+    ],
+    "presets_B": [
+      "establish",
+      "reaction",
+      "reaction",
+      "travel_run",
+      "reaction"
+    ],
+    "scene_assets_A": [
+      "answer_light_01",
+      "beacon_01",
+      "frost_foreground_01",
+      "frost_peaks_01",
+      "frost_ridge_01",
+      "frost_rocks_01",
+      "frost_sky_01",
+      "pine_snow_01",
+      "yellow_mellow_v2"
+    ],
+    "scene_assets_B": [
+      "distant_hills_01",
+      "dusk_sky_01",
+      "fence_01",
+      "orchard_ground_01",
+      "orchard_tree_01",
+      "yellow_mellow_v2"
+    ],
+    "beacon_in_A": true,
+    "beacon_in_B": false,
+    "materially_different": true
+  }
+}

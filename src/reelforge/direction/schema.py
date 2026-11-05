@@ -5,7 +5,7 @@ from reelforge.geometry.schema import array, number, obj
 from reelforge.procedural.schema import environment_schema
 from reelforge.scenes.schema import scene_schema
 
-from .contract import BEHAVIORS, FRAMINGS
+from .contract import BEHAVIORS, CLOSE_UP_ZOOM_RANGE, FRAMINGS
 
 
 def direction_schema() -> dict:
@@ -75,7 +75,8 @@ def direction_schema() -> dict:
                             },
                             "track": {"type": "boolean"},
                             "look_ahead_seconds": number(0, 0.35),
-                            "zoom": array(number(0.9, 1.7), 2, 2),
+                            # 0.9..1.7 for every behavior except close_up (contract-enforced).
+                            "zoom": array(number(*CLOSE_UP_ZOOM_RANGE), 2, 2),
                             "offset_start": offset,
                             "offset_end": offset,
                             "screen": {

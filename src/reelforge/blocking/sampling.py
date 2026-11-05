@@ -128,6 +128,24 @@ def _yellow_mellow_drawer(plan):
     return drawer
 
 
+def fingertip_world(plan, frame: int, side: str = "near") -> tuple[float, float]:
+    """World (scene logical) position of a non-Rowan actor's pointing fingertip.
+
+    Uses the exact placement chain of ``commands``: route x and plan.y, the plan scale, the
+    character draw scale and the drawn facing. Lets callers verify contact with a prop socket.
+    """
+    from reelforge.characters.yellow_mellow_v2.motions import fingertip
+
+    if plan.character == "rowan_01":
+        raise ValueError("Fingertip measurement is defined for Yellow Mellow V2 only")
+    _, _, _, _, _, x, facing, _ = sample(plan, frame / 30)
+    drawer = _yellow_mellow_drawer(plan)
+    cx, cy = fingertip(drawer.sample(frame).state, side)
+    sign = 1 if facing == "right" else -1
+    k = plan.scale * drawer.draw_scale
+    return x + sign * k * cx, plan.y + k * cy
+
+
 def commands(plan, t):
     s, clock, pose, feet, secondary, x, facing, fade = sample(plan, t)
     if plan.character != "rowan_01":

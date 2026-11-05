@@ -13,7 +13,7 @@ from reelforge.characters.registry import (
 )
 from reelforge.contracts.project import load_project, project_digest
 from reelforge.core.errors import InputError, Issue
-from reelforge.direction.contract import BEHAVIORS, Direction, compile_direction
+from reelforge.direction.contract import BEHAVIORS, Direction, compile_direction, zoom_range
 from reelforge.direction.sampling import camera_at
 from reelforge.direction.sampling import inspect_frame as inspect_camera
 from reelforge.scenes.contract import identifier
@@ -257,7 +257,7 @@ def compile_storyboard(data: object) -> Storyboard:
         ref = name(v["subject"], p + "/subject")
         if ref not in subject_defs:
             fail(p + "/subject", "Select a local subject ID", "STORYBOARD_REFERENCE")
-        pair(v["zoom"], 0.9, 1.7, p + "/zoom")
+        pair(v["zoom"], *zoom_range(v["kind"]), p + "/zoom")
         pair(v["screen"], 16, 624, p + "/screen")
         if v["screen"][0] > 344:
             fail(p + "/screen/0", "Screen X must be 16..344")
@@ -413,7 +413,9 @@ def compile_storyboard(data: object) -> Storyboard:
                 end_frame=end,
                 behavior=v["kind"],
                 target=subject_defs[v["subject"]],
-                track=v["kind"] == "follow",
+                # A close-up on the actor tracks it; a close-up on an object node is static.
+                track=v["kind"] == "follow"
+                or (v["kind"] == "close_up" and subject_defs[v["subject"]]["kind"] == "actor"),
                 look_ahead_seconds=v["lead_seconds"],
                 zoom=v["zoom"],
                 offset_start=v["offset_start"],
